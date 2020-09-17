@@ -56,3 +56,8 @@ See [SAI collection map examples with keys, values, and entries](https://docs.da
 ## TinkerPop changes for DSE 6.8.4
 
 DataStax Enterprise (DSE) 6.8.4 includes all changes from previous DSE versions. See TinkerPop [upgrade documentation](http://tinkerpop.apache.org/docs/3.4.5/upgrade/#_upgrading_for_users) for all changes.
+
+
+## Release notes for previous versions
+Release notes for previous DSE patch releases can be found here:
+https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html#RNdse
