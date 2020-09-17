@@ -11,43 +11,43 @@
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.49
 
-## 6.8.4 DSE Compaction
+## DSE 6.8.4 Compaction
 
 * Fixes compaction getting stuck on acquiring references for non-existing sstables. (DB-4290)
 
 
-## 6.8.4 DSE CQL
+## DSE 6.8.4 CQL
 
 * Distributes Netty connections more uniformly across TPC cores (DB-4683)
 
 
-## 6.8.4 DSE MessagingService
+## DSE 6.8.4 MessagingService
 
 * Distributes Netty connections more uniformly across TPC cores (DB-4683)
 
 
-## 6.8.4 DSE Deprecated: Core
+## DSE 6.8.4 Deprecated: Core
 
 * Adds TTL and TimeWindowCompactionStrategy (TWCS) to system_distributed.repair_history and system_distributed.parent_repair_history tables.  (DB-2009)
 
 
-## 6.8.4 DSE Core
+## DSE 6.8.4 Core
 
 * DNS Service Discovery is now a part of the DSE/LDAP integration. (DSP-11450)
 * New system property to cap the maximum amount of memory used by bloom filters: {{-Dcassandra.max_bf_memory_mb}}. By default, this is _unlimited_. (DSP-21344)
 
 
-## 6.8.4 DSE Security
+## DSE 6.8.4 Security
 
 * DNS Service Discovery is now a part of the DSE/LDAP integration. (DSP-11450)
 
 
-## 6.8.4 DSE DSEFS
+## DSE 6.8.4 DSEFS
 
 *  DSEFS waits for a schema agreement before starting and issuing the first CQL query. (DSP-20743)
 
 
-## 6.8.4 DSE Indexing
+## DSE 6.8.4 Indexing
 
 * Storage-Attached Indexing (SAI) adds support for creating multiple SAI indexes on the same collection map column. 
 See [SAI collection map examples with keys, values, and entries](https://docs.datastax.com/en/storage-attached-index/6.8/sai/saiUsing.html#saiUsing__saiUsingCollectionsExamples). (DSP-21306)
