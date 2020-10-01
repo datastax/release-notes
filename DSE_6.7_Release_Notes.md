@@ -30,7 +30,7 @@
 * New system property to cap the maximum amount of memory used by bloom filters: -Dcassandra.max_bf_memory_mb (DSP-21371)
 * (6.7 only) jackson-databind upgraded to 2.9.10.4  (DSP-21257)
 * Fix node restart issue after dropping a PointType column. (DSP-21326)
-* Fix New system property to cap the maximum amount of memory used by bloom filters: {{-Dcassandra.max_bf_memory_mb}}. By default, this is _unlimited_. (DSP-21344)
+* Fix New system property to cap the maximum amount of memory used by bloom filters: -Dcassandra.max_bf_memory_mb. By default, this is _unlimited_. (DSP-21344)
 
 
 ## DSE 6.7.11 Spark
