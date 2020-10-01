@@ -2,10 +2,10 @@
 
 
 
-# Release notes for DataStax Enterprise 6.7.11
+## Release notes for DataStax Enterprise 6.7.11
 10 October 2020
 
-# Components versions for DSE 6.7.11
+## Components versions for DSE 6.7.11
 
    * Apache Solr™ 6.0.1.2.2791
    * Apache Spark™ 2.2.3.15
