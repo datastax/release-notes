@@ -2,7 +2,7 @@
 
 
 
-## Release notes for DataStax Enterprise 6.7.11
+## DataStax Enterprise 6.7.11
 10 October 2020
 
 ## Components versions for DSE 6.7.11
