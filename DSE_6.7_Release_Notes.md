@@ -17,34 +17,34 @@
 
 ## DSE 6.7.11 Cassandra
 
-* Fixes LDAP user permissions problem following LDAP server restart. (DSP-21284)
+* Fix LDAP user permissions problem following LDAP server restart. (DSP-21284)
 
 
 ## DSE 6.7.11 Security
 
-* Fixes LDAP user permissions problem following LDAP server restart. (DSP-21284)
+* Fix LDAP user permissions problem following LDAP server restart. (DSP-21284)
 
 
 ## DSE 6.7.11 Core
 
 * New system property to cap the maximum amount of memory used by bloom filters: -Dcassandra.max_bf_memory_mb (DSP-21371)
 * (6.7 only) jackson-databind upgraded to 2.9.10.4  (DSP-21257)
-* Fixes node restart issue after dropping a PointType column. (DSP-21326)
-* Fix:New system property to cap the maximum amount of memory used by bloom filters: {{-Dcassandra.max_bf_memory_mb}}. By default, this is _unlimited_. This should be added to https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/config/cassandraSystemProperties.html page. (DSP-21344)
+* Fix node restart issue after dropping a PointType column. (DSP-21326)
+* Fix New system property to cap the maximum amount of memory used by bloom filters: {{-Dcassandra.max_bf_memory_mb}}. By default, this is _unlimited_. (DSP-21344)
 
 
 ## DSE 6.7.11 Spark
 
-* fix: Spark Application contacting Nodes in Non Local DC  (DSP-19961)
+* Fix Spark Application contacting Nodes in Non Local DC  (DSP-19961)
 
 ## DSE 6.7.11 Backup and Restore
 
-* snapshot schema.cql files will now contain IF NOT EXISTS clause for CREATE TYPE statements (DB-4685)
+* Snapshot schema.cql files will now contain IF NOT EXISTS clause for CREATE TYPE statements (DB-4685)
 
 
 ## DSE 6.7.11 Compaction
 
-* Fixes a problem where races in notifying compaction strategies of added and removed sstables can cause compaction to try to use non-existing sstables and repeatedly fail to make progress. (DB-4711)
+* Fix a problem where races in notifying compaction strategies of added and removed sstables can cause compaction to try to use non-existing sstables and repeatedly fail to make progress. (DB-4711)
 
 
 ## DSE 6.7.11 Local Write-Read Paths
