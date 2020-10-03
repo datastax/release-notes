@@ -3,7 +3,7 @@
 
 
 ## DataStax Enterprise 6.7.11
-10 October 2020
+1 October 2020
 
 ## Components versions for DSE 6.7.11
 
