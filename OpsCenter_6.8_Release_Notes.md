@@ -1,10 +1,12 @@
 # Release notes for OpsCenter
 
 ## OpsCenter 6.8.5
+19 October 2020
 
 * Fixed a problem preventing point in time restores using a snapshot on a destination. (OPSC-16739)
 
-## OpsCenter 6.8.4 
+## OpsCenter 6.8.4
+18 September 2020
 
 * Restored support for DSE 5.1. (OPSC-16640)
 * Added support for SAI metrics. (OPSC-16650)
@@ -49,7 +51,8 @@
 ## OpsCenter 6.8.4 Monitoring
 
 * Added support for DataStax Graph. (OPSC-14700)
-* Added chrony output to the diagnostic tarball. (OPSC-16560)
+* Added chrony output to the diagnostic tarball.
+ (OPSC-16560)
 * Fixed an issue where the diagnostic tarball download link would be incorrect when behind a proxy with a subpath. (OPSC-15566)
 * Fixed check-2i-cardinality warning caused by OpsCenter backup_reports index. (OPSC-15895)
 * Fixed an issue that could cause OpsCenter to failover during a diagnostics tarball collection. (OPSC-16228)
@@ -58,7 +61,8 @@
 
 ## OpsCenter 6.8.4 Provisioning
 
-* Fixed OpsCenter and LCM workflows that resulted in seemingly identical clusters. (OPSC-16520)
+* Fixed OpsCenter and LCM workflows that resulted in seemingly identical clusters.
+ (OPSC-16520)
 * Fixed LCM config rendering for dse-env.sh when using custom-env-vars. (OPSC-16629)
 
 
