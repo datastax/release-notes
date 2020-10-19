@@ -1,10 +1,12 @@
 # Release notes for OpsCenter
 
 ## OpsCenter 6.8.5
+10 October 2020
 
 * Fixed a problem preventing point in time restores using a snapshot on a destination. (OPSC-16739)
 
 ## OpsCenter 6.8.4 
+18 September 2020
 
 * Restored support for DSE 5.1. (OPSC-16640)
 * Added support for SAI metrics. (OPSC-16650)
