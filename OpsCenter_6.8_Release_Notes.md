@@ -1,5 +1,8 @@
-# Release notes for OpsCenter 6.8.4
+# Release notes for OpsCenter
 
+## OpsCenter 6.8.5
+
+* Fixed a problem preventing point in time restores using a snapshot on a destination. (OPSC-16739)
 
 ## OpsCenter 6.8.4 
 
