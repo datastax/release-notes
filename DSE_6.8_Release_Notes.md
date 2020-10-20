@@ -14,7 +14,7 @@
 ## DSE 6.8.5 Backup and Restore
 
 * Server side backup and restore now supports Microsoft Azure cloud storage as a backup target. (DB-3894)
-* snapshot `schema.cql` files will now contain `IF NOT EXISTS` clause for `CREATE TYPE` statements (DB-4685)
+* Snapshot `schema.cql` files will now contain `IF NOT EXISTS` clause for `CREATE TYPE` statements (DB-4685)
 
 
 ## DSE 6.8.5 Compaction
@@ -96,13 +96,13 @@ DataStax Enterprise (DSE) 6.8.4 includes all changes from previous DSE versions.
 
 ## DSE 6.8.4 Deprecated: Core
 
-* Adds TTL and TimeWindowCompactionStrategy (TWCS) to system_distributed.repair_history and system_distributed.parent_repair_history tables.  (DB-2009)
+* Adds TTL and TimeWindowCompactionStrategy (TWCS) to `system_distributed.repair_history` and `system_distributed.parent_repair_history` tables.  (DB-2009)
 
 
 ## DSE 6.8.4 Core
 
 * DNS Service Discovery is now a part of the DSE/LDAP integration. (DSP-11450)
-* New system property to cap the maximum amount of memory used by bloom filters: {{-Dcassandra.max_bf_memory_mb}}. By default, this is _unlimited_. (DSP-21344)
+* New system property to cap the maximum amount of memory used by bloom filters: `-Dcassandra.max_bf_memory_mb`. By default, this is _unlimited_. (DSP-21344)
 
 
 ## DSE 6.8.4 Security
