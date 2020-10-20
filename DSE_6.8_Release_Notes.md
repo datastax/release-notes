@@ -60,6 +60,11 @@ No text in Doc Notes field. (DSP-21450)
 
 * fix: Spark Application contacting Nodes in Non Local DC  (DSP-19961)
 
+## TinkerPop changes for DSE 6.8.5
+
+DataStax Enterprise (DSE) 6.8.4 includes all changes from previous DSE versions. See TinkerPop [upgrade documentation](http://tinkerpop.apache.org/docs/3.4.5/upgrade/#_upgrading_for_users) for all changes.
+
+
 
 # Release notes for DataStax Enterprise version 6.8.4
 17 September 2020
