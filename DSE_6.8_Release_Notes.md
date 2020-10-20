@@ -54,7 +54,7 @@
 
 ## DSE 6.8.5 Graph
 
-No text in Doc Notes field. (DSP-21450)
+* No text in Doc Notes field. (DSP-21450)
 
 ## DSE 6.8.5 Spark
 
