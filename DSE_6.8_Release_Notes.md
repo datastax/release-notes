@@ -14,7 +14,7 @@
 ## DSE 6.8.5 Backup and Restore
 
 * Server side backup and restore now supports Microsoft Azure cloud storage as a backup target. (DB-3894)
-* snapshot schema.cql files will now contain IF NOT EXISTS clause for CREATE TYPE statements (DB-4685)
+* snapshot `schema.cql` files will now contain `IF NOT EXISTS` clause for `CREATE TYPE` statements (DB-4685)
 
 
 ## DSE 6.8.5 Compaction
@@ -54,7 +54,7 @@
 
 ## DSE 6.8.5 Graph
 
-No text in Doc Notes field. (DSP-21450)
+* No text in Doc Notes field. (DSP-21450)
 
 ## DSE 6.8.5 Spark
 
