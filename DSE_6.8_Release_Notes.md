@@ -1,3 +1,66 @@
+# Release notes for DataStax Enterprise
+
+# Release notes for DataStax Enterprise version 6.8.5
+20 October 2020
+
+   * Apache Solr™ 6.0.1.4.2794
+   * Apache Spark™ 2.4.0.16
+   * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
+   * Apache Tomcat® 8.0.53
+   * DSE Java Driver 1.10.0-dse+20200217
+   * Netty 4.1.25.7.dse
+   * Spark JobServer 0.8.0.49
+
+## DSE 6.8.5 Backup and Restore
+
+* Server side backup and restore now supports Microsoft Azure cloud storage as a backup target. (DB-3894)
+* snapshot schema.cql files will now contain IF NOT EXISTS clause for CREATE TYPE statements (DB-4685)
+
+
+## DSE 6.8.5 Compaction
+
+* Fixes a problem where races in notifying compaction strategies of added and removed sstables can cause compaction to try to use non-existing sstables and repeatedly fail to make progress. (DB-4711)
+
+
+## DSE 6.8.5 Core
+
+* Fixes node restart issue after dropping a PointType column. (DSP-21326)
+* Fix extreme local pauses on all nodes in the cluster on a node restart. (DB-4657)
+
+
+## DSE 6.8.5 Local Write-Read Paths
+
+* Improves performance of estimation of partition counts for subranges. (DB-3679)
+
+
+## DSE 6.8.5 TPC
+
+* Reverted DB-4643 which distributed single connections across multiple cores.
+
+
+## DSE 6.8.5 Virtual Tables
+
+* Fsync nodes metadata to prevent FSReadError issues on startup. (DB-4672)
+
+## DSE 6.8.5 Cassandra
+
+* Fixes LDAP user permissions problem following LDAP server restart. (DSP-21284)
+
+
+## DSE 6.8.5 Security
+
+* Fixes LDAP user permissions problem following LDAP server restart. (DSP-21284)
+
+
+## DSE 6.8.5 Graph
+
+No text in Doc Notes field. (DSP-21450)
+
+## DSE 6.8.5 Spark
+
+* fix: Spark Application contacting Nodes in Non Local DC  (DSP-19961)
+
+
 # Release notes for DataStax Enterprise version 6.8.4
 17 September 2020
 
