@@ -16,7 +16,6 @@
 * Server side backup and restore now supports Microsoft Azure cloud storage as a backup target. (DB-3894)
 * Snapshot `schema.cql` files will now contain `IF NOT EXISTS` clause for `CREATE TYPE` statements (DB-4685)
 
-
 ## DSE 6.8.5 Compaction
 
 * Fixes a problem where races in notifying compaction strategies of added and removed sstables can cause compaction to try to use non-existing sstables and repeatedly fail to make progress. (DB-4711)
@@ -58,7 +57,7 @@
 
 ## DSE 6.8.5 Spark
 
-* fix: Spark Application contacting Nodes in Non Local DC  (DSP-19961)
+* Fix: Spark Application contacting Nodes in Non Local DC  (DSP-19961)
 
 ## TinkerPop changes for DSE 6.8.5
 
