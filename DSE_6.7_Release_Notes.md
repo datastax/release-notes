@@ -1,5 +1,32 @@
 # Release notes for DataStax Enterprise 6.7
 
+## DataStax Enterprise 6.7.12
+29 October 2020
+
+## Components versions for DSE 6.7.12
+
+   * Apache Solr™ 6.0.1.2.2791
+   * Apache Spark™ 2.2.3.15
+   * Apache TinkerPop™ 3.3.7-20190521-f71ce0d7
+   * Apache Tomcat® 8.0.53
+   * DSE Java Driver 1.7.1
+   * Netty 4.1.25.7.dse
+   * Spark JobServer 0.8.0.45.2
+
+
+## DSE 6.7.12 CommitLog/Streaming
+
+* Fixed a bug where some part of the commit log might not be replayed after injecting a foreign sstable to a node or, on 6.8, after zero-copy streaming of an sstable (DB-4629)
+
+## DSE 6.7.12 core
+
+* Fix  extreme local pauses on all nodes in the cluster on a node restart (DB-4657)
+
+## DSE 6.7.12 TPC
+
+* Fixes problem in the scheduling of materialized view updates. (DB-4782)
+
+
 
 
 ## DataStax Enterprise 6.7.11
