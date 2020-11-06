@@ -1,5 +1,23 @@
 # Release notes for OpsCenter
 
+## OpsCenter 6.8.6
+
+## OpsCenter 6.8.6 Backup Service
+
+* Fixed a bug where opscenterd was not correctly waiting for schema agreement after recreating tables during a restore. (OPSC-16272)
+* Fixed issue with recreating materialized views during restore if the name needed to be in quotes. (OPSC-16476)
+
+
+## OpsCenter 6.8.6 Best Practice Service
+
+* Updated the bad filter cache size best practice rule to use new default values for search nodes. (OPSC-13688)
+
+
+## OpsCenter 6.8.6 Nodes
+
+* When creating a diagnostic tarball OpsCenter agent now passes the SSL flag to nodetool and dsetool when SSL communication has been enabled for JMX on the DSE node. (OPSC-15818)
+
+
 ## OpsCenter 6.8.5
 19 October 2020
 
