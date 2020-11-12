@@ -1,5 +1,23 @@
 # Release notes for DataStax Enterprise
 
+# Release notes for DataStax Enterprise version 6.8.6
+12 November 2020
+
+## Components versions for DSE 6.8.6
+
+   * Apache Solr™ 6.0.1.4.2794
+   * Apache Spark™ 2.4.0.16
+   * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
+   * Apache Tomcat® 8.0.53
+   * DSE Java Driver 1.10.0-dse+20200217
+   * Netty 4.1.25.7.dse
+   * Spark JobServer 0.8.0.49
+
+## DSE 6.8.6 Bootstrap
+
+* A node may be stuck in repair while joining the cluster if broadcast_address is set differently than local_address (DB-4786)
+
+
 # Release notes for DataStax Enterprise version 6.8.5
 20 October 2020
 
