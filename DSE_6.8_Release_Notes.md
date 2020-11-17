@@ -52,11 +52,6 @@ DSE 6.8.x is compatible with Apache Cassandra 3.11 and adds additional productio
 * Improves performance of estimation of partition counts for subranges. (DB-3679)
 
 
-## DSE 6.8.5 TPC
-
-* Reverted DB-4643 which distributed single connections across multiple cores.
-
-
 ## DSE 6.8.5 Virtual Tables
 
 * Fsync nodes metadata to prevent FSReadError issues on startup. (DB-4672)
@@ -113,13 +108,9 @@ DataStax Enterprise (DSE) 6.8.4 includes all changes from previous DSE versions.
 * Distributes Netty connections more uniformly across TPC cores (DB-4683)
 
 
-## DSE 6.8.4 Deprecated: Core
-
-* Adds TTL and TimeWindowCompactionStrategy (TWCS) to system_distributed.repair_history and system_distributed.parent_repair_history tables.  (DB-2009)
-
-
 ## DSE 6.8.4 Core
 
+* Adds TTL and TimeWindowCompactionStrategy (TWCS) to system_distributed.repair_history and system_distributed.parent_repair_history tables.  (DB-2009)
 * DNS Service Discovery is now a part of the DSE/LDAP integration. (DSP-11450)
 * New system property to cap the maximum amount of memory used by bloom filters: {{-Dcassandra.max_bf_memory_mb}}. By default, this is _unlimited_. (DSP-21344)
 
