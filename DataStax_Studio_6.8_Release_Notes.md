@@ -1,3 +1,17 @@
+# Release notes for DataStax Studio 6.8.6
+19 November 2020
+
+## DataStax Studio 6.8.6 IDE
+
+* Fixes a problem that can spam the log with 'No enum constant found for name' messages. (STUDIO-3174)
+
+## DataStax Studio 6.8.6 Server
+
+* Reduces advanced workload connection attempts when those workloads are not present in the cluster.  (STUDIO-3138)
+* Fixes possible errors if multiple CQL or Spark SQL cells are executed at the same time. (STUDIO-3175)
+
+(note: there was no Studio 6.8.5 release)
+
 # Release notes for DataStax Studio 6.8.4
 24 September 2020
 
