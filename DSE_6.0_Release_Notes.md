@@ -1,4 +1,5 @@
 # Release notes for DataStax Enterprise 6.0
+DSE 6.0.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 
 ## DataStax Enterprise 6.0.14
 26 October 2020

@@ -1,4 +1,5 @@
 # Release notes for DataStax Enterprise 5.1
+DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 
 ## DataStax Enterprise 5.1.20
 8 October 2020
