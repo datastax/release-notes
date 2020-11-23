@@ -1,6 +1,76 @@
 # Release notes for DataStax Enterprise
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.  
 
+
+## Release notes for DSE 6.8.7
+23 November 2020
+
+# Components versions for DSE 6.8.7
+
+   * Apache Solr™ 6.0.1.4.2794
+   * Apache Spark™ 2.4.0.16
+   * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
+   * Apache Tomcat® 8.0.53
+   * DSE Java Driver 1.10.0-dse+20200217
+   * Netty 4.1.25.7.dse
+   * Spark JobServer 0.8.0.49
+
+## DSE 6.8.7 Cassandra
+
+* Fixed a bug where the slow query log would fill with queries that do not meet the slow query threshold (DSP-21417)
+
+
+## DSE 6.8.7 Core
+
+* Fixed a bug where a single partition read might fail if the following conditions were true: 1) several sstables had the same partition level deletion info 2) some of the sstables had wide rows whereas others had not 3) the sstables in question contained range tombstone markers (DSP-21346)
+* fix a bug in `cassandra.repair.mutation_repair_rows_per_batch` setting that caused sending all repair mutations at once (DSP-21429)
+
+
+## DSE 6.8.7 Indexing
+
+* On the CQLSH CREATE CUSTOM INDEX ... WITH OPTIONS statement, SAI adds support for an ascii option. If set to true, converts alphabetic, numeric, and symbolic characters that are not in the Basic Latin Unicode block (first 127 ASCII characters) to their ASCII equivalent, if one exists. For example, the filter changes à to a. The default is false. (DSP-21409)
+* Make the SAI read path synchronous. (DSP-21451)
+* fixed "java.lang.ArithmeticException: integer overflow" printing in system.log when retrieving the SAI index segmentRowID (DSP-21522)
+
+
+## DSE 6.8.7 Graph
+
+* A meaningful error message is logged when two properties with the same name but different types are used in a single core graph. Classic graph was not affected. (DSP-21490)
+
+
+## DSE 6.8.7 Security
+
+* Optimized retrieval when memberof_search used the wrong attribute to retrieve groups of the user. (DSP-21537)
+
+
+## DSE 6.8.7 Backup and Restore
+
+* Multi-datacenter backup and restore, new CompositeStore type of backup store. (DB-4489)
+* Adds the possibility to restore a backup marked as INCOMPLETE by using the new FORCE RESTORE statement.
+
+
+## DSE 6.8.7 CommitLog
+
+* addressed a bug where a CommitLogReplayException is caused by a bad header but correct CRC after restart (DB-3996)
+* fixed a bug where some part of the commit log might not be replayed after injecting a foreign sstable to a node or, on 6.8, after zero-copy streaming of an sstable (DB-4629)
+
+
+## DSE 6.8.7 Streaming
+
+* fixed an issue where zero copy streaming could cause file descriptor leakage (DB-4594)
+
+
+## DSE 6.8.7 Tools
+
+* SStableloader now uses native_transport_port_ssl over native_transport_port when passed a config file with the property set (DB-4632)
+
+## DSE 6.8.7 TPC
+
+* Fixed memory leak in Netty resulting in OOM. (DB-4664)
+* Fixes a problem in the scheduling and counting of active materialized view updates that could cause too many to be executed concurrently, overwhelming the node. (DB-4782)
+
+
+
 # Release notes for DataStax Enterprise version 6.8.6
 12 November 2020
 
