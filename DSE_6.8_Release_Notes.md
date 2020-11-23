@@ -22,15 +22,18 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 ## DSE 6.8.7 Core
 
-* Fixed a bug where a single partition read might fail if the following conditions were true: 1) several sstables had the same partition level deletion info 2) some of the sstables had wide rows whereas others had not 3) the sstables in question contained range tombstone markers (DSP-21346)
-* fix a bug in `cassandra.repair.mutation_repair_rows_per_batch` setting that caused sending all repair mutations at once (DSP-21429)
+* Fixed a bug where a single partition read might fail if the following conditions were true:
+    1) several sstables had the same partition level deletion info 
+    2) some of the sstables had wide rows whereas others had not 
+    3) the sstables in question contained range tombstone markers (DSP-21346)
+* Fixed a bug in `cassandra.repair.mutation_repair_rows_per_batch` setting that caused sending all repair mutations at once (DSP-21429)
 
 
 ## DSE 6.8.7 Indexing
 
-* On the CQLSH CREATE CUSTOM INDEX ... WITH OPTIONS statement, SAI adds support for an ascii option. If set to true, converts alphabetic, numeric, and symbolic characters that are not in the Basic Latin Unicode block (first 127 ASCII characters) to their ASCII equivalent, if one exists. For example, the filter changes à to a. The default is false. (DSP-21409)
+* On the CQLSH `CREATE CUSTOM INDEX ... WITH OPTIONS` statement, SAI adds support for an ascii option. If set to `true`, converts alphabetic, numeric, and symbolic characters that are not in the Basic Latin Unicode block (first 127 ASCII characters) to their ASCII equivalent, if one exists. For example, the filter changes à to a. The default is `false`. (DSP-21409)
 * Make the SAI read path synchronous. (DSP-21451)
-* fixed "java.lang.ArithmeticException: integer overflow" printing in system.log when retrieving the SAI index segmentRowID (DSP-21522)
+* Fixed "java.lang.ArithmeticException: integer overflow" printing in `system.log` when retrieving the SAI index `segmentRowID` (DSP-21522)
 
 
 ## DSE 6.8.7 Graph
@@ -40,34 +43,34 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 ## DSE 6.8.7 Security
 
-* Optimized retrieval when memberof_search used the wrong attribute to retrieve groups of the user. (DSP-21537)
+* Optimized retrieval when `memberof_search` used the wrong attribute to retrieve groups of the user. (DSP-21537)
 
 
 ## DSE 6.8.7 Backup and Restore
 
-* Multi-datacenter backup and restore, new CompositeStore type of backup store. (DB-4489)
-* Adds the possibility to restore a backup marked as INCOMPLETE by using the new FORCE RESTORE statement.
+* Multi-datacenter backup and restore, new `CompositeStore` type of backup store. (DB-4489)
+* Adds the possibility to restore a backup marked as `INCOMPLETE` by using the new `FORCE RESTORE` statement.
 
 
 ## DSE 6.8.7 CommitLog
 
-* addressed a bug where a CommitLogReplayException is caused by a bad header but correct CRC after restart (DB-3996)
-* fixed a bug where some part of the commit log might not be replayed after injecting a foreign sstable to a node or, on 6.8, after zero-copy streaming of an sstable (DB-4629)
+* Addressed a bug where a "CommitLogReplayException" is caused by a bad header but correct CRC after restart (DB-3996)
+* Fixed a bug where some part of the commit log might not be replayed after injecting a foreign sstable to a node or, on 6.8, after zero-copy streaming of an sstable (DB-4629)
 
 
 ## DSE 6.8.7 Streaming
 
-* fixed an issue where zero copy streaming could cause file descriptor leakage (DB-4594)
+* Fixed an issue where zero copy streaming could cause file descriptor leakage (DB-4594)
 
 
 ## DSE 6.8.7 Tools
 
-* SStableloader now uses native_transport_port_ssl over native_transport_port when passed a config file with the property set (DB-4632)
+* SStableloader now uses `native_transport_port_ssl` over `native_transport_port` when passed a config file with the property set (DB-4632)
 
 ## DSE 6.8.7 TPC
 
 * Fixed memory leak in Netty resulting in OOM. (DB-4664)
-* Fixes a problem in the scheduling and counting of active materialized view updates that could cause too many to be executed concurrently, overwhelming the node. (DB-4782)
+* Fixed a problem in the scheduling and counting of active materialized view updates that could cause too many to be executed concurrently, overwhelming the node. (DB-4782)
 
 
 
@@ -113,8 +116,8 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 ## DSE 6.8.5 Core
 
-* Fixes node restart issue after dropping a PointType column. (DSP-21326)
-* Fix extreme local pauses on all nodes in the cluster on a node restart. (DB-4657)
+* Fixed node restart issue after dropping a PointType column. (DSP-21326)
+* Fixed extreme local pauses on all nodes in the cluster on a node restart. (DB-4657)
 
 
 ## DSE 6.8.5 Local Write-Read Paths
@@ -142,7 +145,7 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 ## DSE 6.8.5 Spark
 
-* fix: Spark Application contacting Nodes in Non Local DC  (DSP-19961)
+* Fix: Spark Application contacting Nodes in Non Local DC  (DSP-19961)
 
 ## TinkerPop changes for DSE 6.8.5
 
@@ -180,9 +183,9 @@ DataStax Enterprise (DSE) 6.8.4 includes all changes from previous DSE versions.
 
 ## DSE 6.8.4 Core
 
-* Adds TTL and TimeWindowCompactionStrategy (TWCS) to system_distributed.repair_history and system_distributed.parent_repair_history tables.  (DB-2009)
+* Adds TTL and TimeWindowCompactionStrategy (TWCS) to `system_distributed.repair_history` and `system_distributed.parent_repair_history` tables.  (DB-2009)
 * DNS Service Discovery is now a part of the DSE/LDAP integration. (DSP-11450)
-* New system property to cap the maximum amount of memory used by bloom filters: {{-Dcassandra.max_bf_memory_mb}}. By default, this is _unlimited_. (DSP-21344)
+* New system property to cap the maximum amount of memory used by bloom filters: `-Dcassandra.max_bf_memory_mb}`. By default, this is _unlimited_. (DSP-21344)
 
 
 ## DSE 6.8.4 Security
