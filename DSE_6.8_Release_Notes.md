@@ -2,10 +2,10 @@
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.  
 
 
-## Release notes for DSE 6.8.7
+# Release notes for DSE 6.8.7
 23 November 2020
 
-# Components versions for DSE 6.8.7
+## Components versions for DSE 6.8.7
 
    * Apache Solr™ 6.0.1.4.2794
    * Apache Spark™ 2.4.0.16
