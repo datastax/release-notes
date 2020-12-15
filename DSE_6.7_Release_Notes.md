@@ -1,5 +1,5 @@
 # Release notes for DataStax Enterprise 6.7
-DSE 6.7.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
+DSE 6.7.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (*) (if any) are known to be updated since the prior patch version.
 
 ## DataStax Enterprise 6.7.12
 29 October 2020

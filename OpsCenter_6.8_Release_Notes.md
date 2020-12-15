@@ -1,6 +1,7 @@
 # Release notes for OpsCenter
 
 ## OpsCenter 6.8.6
+06 November 2020
 
 ## OpsCenter 6.8.6 Backup Service
 
