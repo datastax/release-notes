@@ -3,7 +3,7 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 
 ## Release notes for DSE 6.8.8
-15 November 2020
+15 December 2020
 
 ## Components versions for DSE 6.8.8
 
