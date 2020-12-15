@@ -2,6 +2,44 @@
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.  
 
 
+## Release notes for DSE 6.8.8
+15 November 2020
+
+## Components versions for DSE 6.8.8
+
+   * Apache Solr™ 6.0.1.4.2814
+   * Apache Spark™ 2.4.0.16
+   * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
+   * Apache Tomcat® 8.0.53
+   * DSE Java Driver 1.10.0-dse+20200217
+   * Netty 4.1.25.7.dse
+   * Spark JobServer 0.8.0.49
+
+## DSE 6.8.8 Backup and Restore
+
+* During Backup Service startup, to avoid stalling during service initialization, check cluster readiness in response to endpoint "on alive" events. (DB-4818)
+
+## DSE 6.8.8 Management API
+
+* Fixed an issue in DSE that prevented the Management API to work with DSE versions 6.8.5 - 6.8.7 (DSP-21607)
+
+
+## DSE 6.8.8 Indexing
+
+* The issue: When flushing text column indexes, the internal ordering of terms can be processed out of order causing an "java.lang.AssertionError: Incremental trie requires sorted keys" error. When this happens, all flushing of indexes involved in this transaction is aborted and the indexes are marked non-queryable. Recovering from this issue involves either rebuilding the indexes or restarting the nodes. (DSP-21580)
+* Fixes a performance regression in SAI for versions 6.8.6 and 6.8.7 regarding MultiRangeReadCommand. (DSP-21601)
+
+
+## DSE 6.8.8 Search
+
+* A system property "dse.solr.fuzzy.max.expansion" was added which allows the user to define a custom number of fuzzy query expansions. The maximal possible value is 1024. When unset, the default number of max expansions is 50. (DSP-21605)
+
+
+## DSE 6.8.8 Spark
+
+* Adjust available framework values for  --framework parameter. (DSP-21500)
+
+
 # Release notes for DSE 6.8.7
 23 November 2020
 
