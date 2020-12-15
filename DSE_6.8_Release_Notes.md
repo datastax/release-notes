@@ -1,5 +1,5 @@
 # Release notes for DataStax Enterprise
-DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.  
+DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (*) (if any) are known to be updated since the prior patch version.
 
 
 ## Release notes for DSE 6.8.8
@@ -7,7 +7,7 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 ## Components versions for DSE 6.8.8
 
-   * Apache Solr™ 6.0.1.4.2814
+   * Apache Solr™ 6.0.1.4.2814*
    * Apache Spark™ 2.4.0.16
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.0.53
@@ -26,18 +26,18 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 ## DSE 6.8.8 Indexing
 
-* The issue: When flushing text column indexes, the internal ordering of terms can be processed out of order causing an "java.lang.AssertionError: Incremental trie requires sorted keys" error. When this happens, all flushing of indexes involved in this transaction is aborted and the indexes are marked non-queryable. Recovering from this issue involves either rebuilding the indexes or restarting the nodes. (DSP-21580)
-* Fixes a performance regression in SAI for versions 6.8.6 and 6.8.7 regarding MultiRangeReadCommand. (DSP-21601)
+* The issue: When flushing text column indexes, the internal ordering of terms can be processed out of order causing an "*java.lang.AssertionError: Incremental trie requires sorted keys*" error. When this happens, all flushing of indexes involved in this transaction is aborted and the indexes are marked non-queryable. Recovering from this issue involves either rebuilding the indexes or restarting the nodes. (DSP-21580)
+* Fixes a performance regression in SAI for versions 6.8.6 and 6.8.7 regarding *MultiRangeReadCommand*. (DSP-21601)
 
 
 ## DSE 6.8.8 Search
 
-* A system property "dse.solr.fuzzy.max.expansion" was added which allows the user to define a custom number of fuzzy query expansions. The maximal possible value is 1024. When unset, the default number of max expansions is 50. (DSP-21605)
+* A system property `dse.solr.fuzzy.max.expansion` was added which allows the user to define a custom number of fuzzy query expansions. The maximal possible value is 1024. When unset, the default number of max expansions is 50. (DSP-21605)
 
 
 ## DSE 6.8.8 Spark
 
-* Adjust available framework values for  --framework parameter. (DSP-21500)
+* Adjust available framework values for `--framework` parameter. (DSP-21500)
 
 
 # Release notes for DSE 6.8.7
