@@ -43,6 +43,8 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 * Adjust available framework values for `--framework` parameter. (DSP-21500)
 
 
+## NOTE: Due to a serious bug which affects DSE 6.8.7 and DSE 6.8.8, we recommend against upgrading to these versions at this time.  If you have already upgraded to these versions, please EITHER set zerocopy_streaming_enabled=false in the cassandra.yaml and perform a rolling restart AND/OR run “upgradesstables” on all nodes in your cluster before adding new nodes, running repair, or restoring from backups.  This bug will be addressed in DSE 6.8.9.  
+
 # Release notes for DSE 6.8.7
 23 November 2020
 
