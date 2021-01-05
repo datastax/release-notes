@@ -1,12 +1,10 @@
 # Release notes for DataStax Enterprise
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (*) (if any) are known to be updated since the prior patch version.
 
-
-## NOTE: Due to a serious bug which affects DSE 6.8.7 and DSE 6.8.8, we recommend against upgrading to these versions at this time.  If you have already upgraded to these versions, please EITHER set zerocopy_streaming_enabled=false in the cassandra.yaml and perform a rolling restart AND/OR run “upgradesstables” on all nodes in your cluster before adding new nodes, running repair, or restoring from backups.  This bug will be addressed in DSE 6.8.9.  
-
-
 ## Release notes for DSE 6.8.8
 15 December 2020
+
+:warning: **NOTE**: Due to a serious bug which affects DSE `6.8.7` and DSE `6.8.8`, we recommend against upgrading to these versions at this time.  If you have already upgraded to these versions, please _EITHER_ set `zerocopy_streaming_enabled=false` in the `cassandra.yaml` and perform a rolling restart AND/OR run `upgradesstables` on all nodes in your cluster before adding new nodes, running repair, or restoring from backups.  This bug will be addressed in DSE `6.8.9`.
 
 ## Components versions for DSE 6.8.8
 
@@ -40,13 +38,12 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 ## DSE 6.8.8 Spark
 
-* Adjust available framework values for `--framework` parameter. (DSP-21500)
-
-
-## NOTE: Due to a serious bug which affects DSE 6.8.7 and DSE 6.8.8, we recommend against upgrading to these versions at this time.  If you have already upgraded to these versions, please EITHER set zerocopy_streaming_enabled=false in the cassandra.yaml and perform a rolling restart AND/OR run “upgradesstables” on all nodes in your cluster before adding new nodes, running repair, or restoring from backups.  This bug will be addressed in DSE 6.8.9.  
+* Adjust available framework values for `--framework` parameter. (DSP-21500) 
 
 # Release notes for DSE 6.8.7
 23 November 2020
+
+:warning: **NOTE**: Due to a serious bug which affects DSE `6.8.7` and DSE `6.8.8`, we recommend against upgrading to these versions at this time.  If you have already upgraded to these versions, please _EITHER_ set `zerocopy_streaming_enabled=false` in the `cassandra.yaml` and perform a rolling restart AND/OR run `upgradesstables` on all nodes in your cluster before adding new nodes, running repair, or restoring from backups.  This bug will be addressed in DSE `6.8.9`.
 
 ## Components versions for DSE 6.8.7
 
