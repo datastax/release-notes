@@ -1,10 +1,38 @@
 # Release notes for DataStax Enterprise
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (*) (if any) are known to be updated since the prior patch version.
 
-## Release notes for DSE 6.8.8
+# Release notes for DSE 6.8.9
+7 January 2021
+
+## Component versions for DSE 6.8.9
+
+   * Apache Solr™ 6.0.1.4.2814
+   * Apache Spark™ 2.4.0.16
+   * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
+   * Apache Tomcat® 8.0.53
+   * DSE Java Driver 1.10.0-dse+20200217
+   * Netty 4.1.25.7.dse
+   * Spark JobServer 0.8.0.49
+
+## DSE 6.8.9 Streaming
+
+* Addresses a severe issue where streaming an older file format to a new node could crash sending and receiving nodes. (DB-4846)
+
+
+## DSE 6.8.9 Core
+
+* Add support for multiple authorization sources (LDAP + DSE Internal) (DSP-14233)
+
+
+## DSE 6.8.9 SparkConnector
+
+* Fixed direct join optimization for spark sql. (DSP-21498)
+
+
+# Release notes for DSE 6.8.8
 15 December 2020
 
-:warning: **NOTE**: Due to a serious bug which affects DSE `6.8.7` and DSE `6.8.8`, we recommend against upgrading to these versions at this time.  If you have already upgraded to these versions, please _EITHER_ set `zerocopy_streaming_enabled=false` in the `cassandra.yaml` and perform a rolling restart AND/OR run `upgradesstables` on all nodes in your cluster before adding new nodes, running repair, or restoring from backups.  This bug will be addressed in DSE `6.8.9`.
+:warning: **NOTE**: Due to a serious bug which affects DSE `6.8.7` and DSE `6.8.8`, these releases have been retracted.  We recommend against upgrading to these versions at this time.  If you have already upgraded to these versions, please _EITHER_ set `zerocopy_streaming_enabled=false` in the `cassandra.yaml` and perform a rolling restart AND/OR run `upgradesstables` on all nodes in your cluster before adding new nodes, running repair, or restoring from backups.  This bug has been addressed in DSE `6.8.9`. All features and fixes for 6.8.8 and 6.8.7 are present in 6.8.9.
 
 ## Components versions for DSE 6.8.8
 
@@ -43,7 +71,7 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 # Release notes for DSE 6.8.7
 23 November 2020
 
-:warning: **NOTE**: Due to a serious bug which affects DSE `6.8.7` and DSE `6.8.8`, we recommend against upgrading to these versions at this time.  If you have already upgraded to these versions, please _EITHER_ set `zerocopy_streaming_enabled=false` in the `cassandra.yaml` and perform a rolling restart AND/OR run `upgradesstables` on all nodes in your cluster before adding new nodes, running repair, or restoring from backups.  This bug will be addressed in DSE `6.8.9`.
+:warning: **NOTE**: Due to a serious bug which affects DSE `6.8.7` and DSE `6.8.8`, these releases have been retracted.  We recommend against upgrading to these versions at this time.  If you have already upgraded to these versions, please _EITHER_ set `zerocopy_streaming_enabled=false` in the `cassandra.yaml` and perform a rolling restart AND/OR run `upgradesstables` on all nodes in your cluster before adding new nodes, running repair, or restoring from backups.  This bug has been addressed in DSE `6.8.9`. All features and fixes for 6.8.8 and 6.8.7 are present in 6.8.9.
 
 ## Components versions for DSE 6.8.7
 
