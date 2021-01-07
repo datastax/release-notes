@@ -1,6 +1,48 @@
 # Release notes for OpsCenter
 
-## OpsCenter 6.8.6
+# Release notes for 6.8.9
+7 January 2021
+
+
+## OpsCenter Core 6.8.9 
+
+* Introduced a new require_two_way_ssl config option in the cluster conf file indicating if one-way or two-way SSL / host certificate validation has been enabled for client to node encryption. Default value is "False" which indicates one-way SSL certificate validation. (OPSC-14627)
+* Fixed an issue preventing the update of cluster display name when authentication is enabled. (OPSC-16555)
+* Increased the default diagnostic tarball download timeout from 2 minutes to 10 minutes. (OPSC-16679)
+* Fixed an issue with ssl communication between opscenterd and the agents in newer versions of Java 8. (OPSC-16778)
+
+
+## OpsCenter 6.8.9 Backup Service
+
+* Updated backup of commit logs while the agent is running to be batched instead of transferring one at a time. (OPSC-15890)
+* Fixed a bug that sometimes caused commit logs to be moved from staging to storage even though the transfer to the destination failed. (OPSC-15897)
+* Improved messaging between the agent and OpsCenter during backups to reduce the memory usage. (OPSC-16772)
+
+
+## OpsCenter 6.8.9 Core
+
+* Upgraded the logic for redaction of sensitive information in the diagnostic tarball to provide better coverage. (OPSC-16765)
+* Corrected an issue were using LCM to edit dse.yaml would sometimes result in a missing closing bracket. (OPSC-16636)
+
+
+## OpsCenter 6.8.9 Platform
+
+* Added an entry "7.8.x" for RedHat Enterprise in the platforms definition file. (OPSC-16710)
+
+
+## OpsCenter 6.8.9 Repair Service
+
+* Changed repair service property incremental_repair_tables default to be empty. (OPSC-15858)
+
+
+## OpsCenter 6.8.9 UI
+
+* Fixed Repair service status under Repair Service settings tab after re-enabling the repair service (OPSC-16723)
+
+
+
+
+# OpsCenter 6.8.6
 06 November 2020
 
 ## OpsCenter 6.8.6 Backup Service
