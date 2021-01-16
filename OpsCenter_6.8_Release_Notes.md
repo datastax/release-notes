@@ -1,16 +1,22 @@
 # Release notes for OpsCenter
 
+# Release notes for 6.8.10
+15 January 2021
+
+## OpsCenter Core 6.8.10
+
+* Refactored the ssl parameters for connecting to Cassandra with client to node encryption. This fixed a bug for configurations where only the keystore was
+specified. The `require_two_way_ssl` config parameter has been removed and the case it was introduced for will now be handled automatically. (OPSC-16802)
+
 # Release notes for 6.8.9
 7 January 2021
 
-
 ## OpsCenter Core 6.8.9 
 
-* Introduced a new require_two_way_ssl config option in the cluster conf file indicating if one-way or two-way SSL / host certificate validation has been enabled for client to node encryption. Default value is "False" which indicates one-way SSL certificate validation. (OPSC-14627)
+* Introduced a new `require_two_way_ssl` config option in the cluster conf file indicating if one-way or two-way SSL / host certificate validation has been enabled for client to node encryption. Default value is "False" which indicates one-way SSL certificate validation. (OPSC-14627)
 * Fixed an issue preventing the update of cluster display name when authentication is enabled. (OPSC-16555)
 * Increased the default diagnostic tarball download timeout from 2 minutes to 10 minutes. (OPSC-16679)
 * Fixed an issue with ssl communication between opscenterd and the agents in newer versions of Java 8. (OPSC-16778)
-
 
 ## OpsCenter 6.8.9 Backup Service
 
@@ -18,31 +24,24 @@
 * Fixed a bug that sometimes caused commit logs to be moved from staging to storage even though the transfer to the destination failed. (OPSC-15897)
 * Improved messaging between the agent and OpsCenter during backups to reduce the memory usage. (OPSC-16772)
 
-
 ## OpsCenter 6.8.9 Core
 
 * Upgraded the logic for redaction of sensitive information in the diagnostic tarball to provide better coverage. (OPSC-16765)
 * Corrected an issue were using LCM to edit dse.yaml would sometimes result in a missing closing bracket. (OPSC-16636)
 
-
 ## OpsCenter 6.8.9 Platform
 
 * Added an entry "7.8.x" for RedHat Enterprise in the platforms definition file. (OPSC-16710)
-
 
 ## OpsCenter 6.8.9 Repair Service
 
 * Changed repair service property incremental_repair_tables default to be empty. (OPSC-15858)
 
-
 ## OpsCenter 6.8.9 UI
 
 * Fixed Repair service status under Repair Service settings tab after re-enabling the repair service (OPSC-16723)
 
-
-
-
-# OpsCenter 6.8.6
+# Release notes for OpsCenter 6.8.6
 06 November 2020
 
 ## OpsCenter 6.8.6 Backup Service
@@ -50,16 +49,13 @@
 * Fixed a bug where opscenterd was not correctly waiting for schema agreement after recreating tables during a restore. (OPSC-16272)
 * Fixed issue with recreating materialized views during restore if the name needed to be in quotes. (OPSC-16476)
 
-
 ## OpsCenter 6.8.6 Best Practice Service
 
 * Updated the bad filter cache size best practice rule to use new default values for search nodes. (OPSC-13688)
 
-
 ## OpsCenter 6.8.6 Nodes
 
 * When creating a diagnostic tarball OpsCenter agent now passes the SSL flag to nodetool and dsetool when SSL communication has been enabled for JMX on the DSE node. (OPSC-15818)
-
 
 ## OpsCenter 6.8.5
 19 October 2020
@@ -89,7 +85,6 @@
 * Added a config parameter to skip verification of files after a backup completes. (OPSC-16656)
 * Fixed an issue that prevented the backup and restore of tables using storage attached indexes. (OPSC-16673)
 
-
 ## OpsCenter 6.8.4 Core
 
 * Permissions are now more restrictive on the SSL directory for package installs. (OPSC-16136)
@@ -103,11 +98,9 @@
 * DataStax Agent now cleans up diagnostic tarball files on disk after transfer. (OPSC-16507)
 * Fixed an issue where OpsCenter user interface session caches were invalidated but not cleaned up properly. (OPSC-16572)
 
-
 ## OpsCenter 6.8.4 CVE
 
 * Fixed issues in how OpsCenter generates redirect responses during login. (OPSC-16011)
-
 
 ## OpsCenter 6.8.4 Monitoring
 
@@ -119,19 +112,16 @@
 * Fixed an issue that could cause OpsCenter to failover during a diagnostics tarball collection. (OPSC-16228)
 * Improved the performance of the metric fetcher when querying values from the storage cluster. (OPSC-16559)
 
-
 ## OpsCenter 6.8.4 Provisioning
 
 * Fixed OpsCenter and LCM workflows that resulted in seemingly identical clusters.
  (OPSC-16520)
 * Fixed LCM config rendering for dse-env.sh when using custom-env-vars. (OPSC-16629)
 
-
 ## OpsCenter 6.8.4 Repair Service
 
 * When DSR isn't in use don't open connection pool just to close it. (OPSC-16351)
 * Only count unique repair scopes when calculating repair backpressure (OPSC-16592)
-
 
 ## OpsCenter 6.8.4 UI
 
