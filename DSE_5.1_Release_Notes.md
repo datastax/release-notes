@@ -7,10 +7,10 @@ DataStax Enterprise 5.1.21
 ## Components versions for DSE 5.1.21
 
    * Apache Solr™ 6.0.1.0.2810
-   * Apache Spark™ 2.0.2.38
+   * Apache Spark™ 2.0.2.38&ast;
    * Apache TinkerPop™ 3.2.11-20200603-0524f70f
    * Apache Tomcat® 8.0.53
-   * DSE Java Driver 1.8.3-dse+20201217
+   * DSE Java Driver 1.8.3-dse+20201217&ast;
    * Netty 4.0.54.1.dse
    * Spark JobServer 0.6.2.240
 
@@ -21,7 +21,6 @@ DataStax Enterprise 5.1.21
 
 ## 5.1.21 DSE Core
 
-* Fix for DESCRIBE TYPES in cqlsh (DSP-21667)
 * add support for multiple authentication sources (LDAP + DSE Internal) (DSP-14233)
 * Addressed several Jackson databind vulnerabilities by upgrading jackson-databind to version 2.9.10.8 in DSE 5.1.21, 6.0.15 and 6.7.13 and version 2.10.5.1 in DSP 6.8.10. (DSP-21503) (DSP-21503)
 
@@ -50,10 +49,6 @@ DataStax Enterprise 5.1.21
 * DSE Spark supports connections to Astra clusters (DSP-21510)
 
 ## 5.1.21 DSE CommitLog
-
-* fixed a bug where some part of the commit log might not be replayed after injecting a foreign sstable to a node or, on 6.8, after zero-copy streaming of an sstable (DB-4629)
-
-## 5.1.21 DSE Streaming
 
 * fixed a bug where some part of the commit log might not be replayed after injecting a foreign sstable to a node or, on 6.8, after zero-copy streaming of an sstable (DB-4629)
 
