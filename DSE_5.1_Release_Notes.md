@@ -1,5 +1,71 @@
 # Release notes for DataStax Enterprise 5.1
-DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (*) (if any) are known to be updated since the prior patch version.
+DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
+
+DataStax Enterprise 5.1.21
+5 February 2021
+
+## Components versions for DSE 5.1.21
+
+   * Apache Solr™ 6.0.1.0.2810
+   * Apache Spark™ 2.0.2.38
+   * Apache TinkerPop™ 3.2.11-20200603-0524f70f
+   * Apache Tomcat® 8.0.53
+   * DSE Java Driver 1.8.3-dse+20201217
+   * Netty 4.0.54.1.dse
+   * Spark JobServer 0.6.2.240
+
+## 5.1.21 DSE Cassandra
+
+* Fix for DESCRIBE TYPES in cqlsh (DSP-21667)
+
+
+## 5.1.21 DSE Core
+
+* Fix for DESCRIBE TYPES in cqlsh (DSP-21667)
+* add support for multiple authentication sources (LDAP + DSE Internal) (DSP-14233)
+* Addressed several Jackson databind vulnerabilities by upgrading jackson-databind to version 2.9.10.8 in DSE 5.1.21, 6.0.15 and 6.7.13 and version 2.10.5.1 in DSP 6.8.10. (DSP-21503) (DSP-21503)
+
+
+## 5.1.21 DSE Spark
+
+* Update Jetty to 9.4.34.v20201102 and update Spark Version to 2.0.2.38 (DSP-21506)
+
+
+## 5.1.21 DSE DSEFS
+
+* Backport fsck throttling and LocationService to 5.1.21 (DSP-21258)
+
+
+## 5.1.21 DSE Search
+
+* A system property dse.solr.fuzzy.max.expansion was added. The property allows to workaround (DSP-21605)
+
+## 5.1.21 DSE Security
+
+* When optimized group retrieval was used in {{memberof_search}} mode ({{ldap_options.all_parent_groups_search_type}} parameter in {{dse.yaml}}), DSE confused attributes specified by {{ldap_options.user_memberof_attribute}} and {{ldap_options.all_parent_groups_memberof_attribute}} making the optimized search work only in case both attributes were set to the same value. (DSP-21537)
+
+
+## 5.1.21 DSE SparkConnector
+
+* DSE Spark supports connections to Astra clusters (DSP-21510)
+
+## 5.1.21 DSE CommitLog
+
+* fixed a bug where some part of the commit log might not be replayed after injecting a foreign sstable to a node or, on 6.8, after zero-copy streaming of an sstable (DB-4629)
+
+## 5.1.21 DSE Streaming
+
+* fixed a bug where some part of the commit log might not be replayed after injecting a foreign sstable to a node or, on 6.8, after zero-copy streaming of an sstable (DB-4629)
+
+## 5.1.21 DSE Repair
+
+* fixed a bug when in rare cases a terminated repair session would leak on-heap memory (DB-4833)
+
+## 5.1.21 DSE Tools
+
+* SSTablePartitions tool will no longer fail with "histogram overflowed" when its working for the server code (DB-2952)
+* SStableloader now uses native_transport_port_ssl over native_transport_port when passed a config file with the property set (DB-4632)
+
 
 ## DataStax Enterprise 5.1.20
 8 October 2020
