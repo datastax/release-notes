@@ -3,6 +3,7 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 ## DataStax Enterprise 5.1.21
 5 February 2021
+NOTE: this release has been retracted due to a bug involving DSE Spark.  This will be addressed shortly and all of these fixes will be included in DSE 5.1.22.
 
 ## Components versions for DSE 5.1.21
 
