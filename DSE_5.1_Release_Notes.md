@@ -1,11 +1,45 @@
 # Release notes for DataStax Enterprise 5.1
 DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+
+# DataStax Enterprise 5.1.22
+12 February 2021
+
+## Components versions for DSE 5.1.21
+
+   * Apache Solr™ 6.0.1.0.2810
+   * Apache Spark™ 2.0.2.38
+   * Apache TinkerPop™ 3.2.11-20200603-0524f70f
+   * Apache Tomcat® 8.0.53
+   * DSE Java Driver 1.8.3-dse+20201217
+   * Netty 4.0.54.1.dse
+   * Spark JobServer 0.6.2.240
+
+
+## DSE 5.1.22 Auth
+
+* Works around a bug (JDK-8148854) in JDK 1.8u282.  (DB-4884)
+* Fixed an issue where "Failed to check permissions org.apache.cassandra.exceptions.InvalidRequestException: Key may not be empty" would appear excessively in logs. (DB-4806)
+
+
+## DSE 5.1.22 CVE
+
+* Update Tomcat version 8.0.53 to 8.5.61 (DSP-21394)
+
+
+## DSE 5.1.22 Search
+
+* Fixed a bug where FilterCache warmup triggered by node health change can block GossipStage-1 thread for several seconds (DSP-21674)
+
+## DSE 5.1.22 Spark
+
+*  Fix: Spark Master fails to start if keystore (used by web UI) contains more than one certificate (DSP-21703)
+
+
+
 # DataStax Enterprise 5.1.21
 5 February 2021
-NOTE: this release has been retracted due to a bug involving DSE Spark.  This will be addressed shortly and all of these fixes will be included in DSE 5.1.22.
-
-:warning: **NOTE**: This release has been retracted due to a bug involving DSE Spark.  This will be addressed shortly and all of these fixes will be included in DSE 5.1.22.
+:warning: **NOTE**: This release was retracted due to a bug involving DSE Spark.  
 
 ## Components versions for DSE 5.1.21
 
