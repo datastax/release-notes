@@ -1,9 +1,11 @@
 # Release notes for DataStax Enterprise 5.1
 DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
-## DataStax Enterprise 5.1.21
+# DataStax Enterprise 5.1.21
 5 February 2021
 NOTE: this release has been retracted due to a bug involving DSE Spark.  This will be addressed shortly and all of these fixes will be included in DSE 5.1.22.
+
+:warning: **NOTE**: This release has been retracted due to a bug involving DSE Spark.  This will be addressed shortly and all of these fixes will be included in DSE 5.1.22.
 
 ## Components versions for DSE 5.1.21
 
@@ -22,7 +24,7 @@ NOTE: this release has been retracted due to a bug involving DSE Spark.  This wi
 ## 5.1.21 DSE Core
 
 * Add support for multiple authentication sources (LDAP + DSE Internal) (DSP-14233)
-* Addressed several Jackson databind vulnerabilities by upgrading _jackson-databind_ to version `2.9.10.8` in DSE `5.1.21`, `6.0.15` and `6.7.13` and version `2.10.5.1` in DSP `6.8.10`. (DSP-21503)
+* Addressed several Jackson databind vulnerabilities by upgrading _jackson-databind_ to version `2.9.10.8` in DSE `5.1.21`, `6.0.15` and `6.7.13` and version `2.10.5.1` in DSE `6.8.10`. (DSP-21503)
 
 ## 5.1.21 DSE Spark
 
@@ -58,7 +60,7 @@ NOTE: this release has been retracted due to a bug involving DSE Spark.  This wi
 * SStableloader now uses `native_transport_port_ssl` over `native_transport_port` when passed a config file with the property set (DB-4632)
 
 
-## DataStax Enterprise 5.1.20
+# DataStax Enterprise 5.1.20
 8 October 2020
 
 ## Components versions for DSE 5.1.20
@@ -103,7 +105,7 @@ NOTE: this release has been retracted due to a bug involving DSE Spark.  This wi
 DataStax Enterprise (DSE) DSE 5.1.20 includes all changes from previous DSE versions. See TinkerPop [upgrade documentation](http://tinkerpop.apache.org/docs/3.2.11/upgrade/#_upgrading_for_users) for all changes.
 
 
-## Release notes for previous versions
+# Release notes for previous versions
 Release notes for previous DSE patch releases can be found here:
 https://docs.datastax.com/en/dse/5.1/dse-admin/datastax_enterprise/releaseNotes/RNdse.html#RNdse
 

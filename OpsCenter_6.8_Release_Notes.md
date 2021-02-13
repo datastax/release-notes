@@ -1,5 +1,37 @@
 # Release notes for OpsCenter
 
+# Release notes for 6.8.11
+12 February 2021 
+
+## 6.8.11 OpsCenter Core
+
+* Added DSE 6.8.0 jvm files to the diagnostic tarball. (OPSC-16602)
+* Update definition file for `10-statsd.conf` so the "host" field will now be treated as a string. (OPSC-16782)
+
+## 6.8.11 OpsCenter Backup Service
+
+* Added additional logging when transferring backup data to a destination fails. Also moved some verbose agent logging from debug to trace. (OPSC-16803)
+* Updated OpsCenter to be aware of the new sstable format introduced in DSE 6.8.9 (OPSC-16815)
+
+## 6.8.11 OpsCenter Best Practice Service
+
+* DSE and Cassandra system keyspaces were removed from wide partition check best practice rule. (OPSC-12790)
+* Provided a config value `ignore_allow_filtering_tables` in `opscenterd.conf` where a list of *keyspace.table* can be provided to make `ALLOW FILTERING` best practice rule ignore them. (OPSC-14785)
+* Changed Best Practice Rule definition for "low" importance rules to change "alert-level" from *alert* to *warn*. This will reduce alert notifications for low importance best practice rules. (OPSC-16587)
+
+## 6.8.11 OpsCenter Provisioning
+
+* Introduced default value as `null` for `ldap_options.all_parent_groups_search_type` in `dse.yaml` (OPSC-16747)
+
+## 6.8.11 OpsCenter Repair Service
+
+* Introduced a new `ignore_schema_addition_events_for_repair_service` config parameter. When set to `True` schema change events will no longer cause the repair service to restart. (OPSC-15991)
+* The `dse_perf` keyspace and it's tables ignored by the repair service will no longer be considered for `gc_grace_seconds` value calculation in the repair service UI. (OPSC-16249)
+
+## 6.8.11 OpsCenter UI
+
+* Changed label of the link from "Remove" to "Clear" on the notification when an activity completes. (OPSC-14823)
+
 # Release notes for 6.8.10
 15 January 2021
 
