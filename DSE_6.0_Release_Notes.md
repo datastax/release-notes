@@ -5,7 +5,7 @@ DSE 6.0.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 # DataStax Enterprise 6.0.15
 12 February 2021
 
-# Components versions for DSE 6.0.15
+## Components versions for DSE 6.0.15
    * Apache Solr™ 6.0.1.1.2811&ast;
    * Apache Spark™ 2.2.3.17&ast;
    * Apache TinkerPop™ 3.3.7-20190521-f71ce0d7
