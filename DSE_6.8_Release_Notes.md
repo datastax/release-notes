@@ -1,5 +1,94 @@
 # Release notes for DataStax Enterprise
-DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (*) (if any) are known to be updated since the prior patch version.
+DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
+
+# Release notes for DSE 6.8.10
+11 March 2021
+
+## Components versions for DSE 6.8.10
+
+   * Apache Solr™ 6.0.1.4.2814
+   * Apache Spark™ 2.4.0.18
+   * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
+   * Apache Tomcat® 8.0.53
+   * DSE Java Driver 1.10.0-dse+20200217
+   * Netty 4.1.25.7.dse
+   * Spark JobServer 0.8.0.49
+
+## DSE 6.8.10 Auth
+
+* works around a bug in JDK 1.8u282 (JDK-8260018) (DB-4884)
+
+
+## DSE 6.8.10 Bootstrap
+
+* fixes a Null Pointer Excpetion in Gossip when upgrading from 5.1 to 6.8.6 (DB-4810)
+
+
+## DSE 6.8.10 Configuration
+
+* During package upgrade yum and apt managers overwrite unedited old jvm.options file. (DB-4705)
+
+
+## DSE 6.8.10 core
+
+* Fixes a problem where FSReadError during streaming could causes DSE to shutdown (DB-4878)
+
+
+## DSE 6.8.10 Distributed Read/Write
+
+* Port fix of CVE-2020-17516 onto DSE 6.8 (DB-4923)
+
+
+## DSE 6.8.10 Local Write-Read Paths
+
+* Dropped messages metrics calculation doesn't cause assertion errors when dropped messages contain remote batch mutation. (DB-3905)
+
+
+## DSE 6.8.10 Tools
+
+* SSTablePartitions tool will no longer fail with "histogram overflowed" when its working for the server code (DB-2952)
+
+
+## DSE 6.8.10 Cassandra
+
+* Fixes a problem where sstablescrub could not fix a corrupted file (DSP-21672)
+
+
+## DSE 6.8.10 Core
+
+* Addressed several Jackson databind vulnerabilities by upgrading jackson-databind to version 2.9.10.8 in DSE 5.1.21, 6.0.15 and 6.7.13 and version 2.10.5.1 in DSP 6.8.10. (DSP-21503) (DSP-21503)
+* fixes a problem where nodetool rebuild could fail intermittently with zerocopy streaming enabled (DSP-21564)
+
+
+
+## DSE 6.8.10 Spark
+
+* Update Jetty to 9.4.34.v20201102 and update Spark Versions: DSE 5.1: 2.0.2.38; DSE 6.0: 2.2.3.16; DSE 6.7: 2.2.3.16; DSE 6.8: 2.4.0.17 (DSP-21506)
+* SCC by default enables direct join optimization only when size_estimates for both tables are available.  (DSP-21628)
+* fix: Spark Master fails to start if keystore (used by web UI) contains more than one certificate (DSP-21703)
+
+
+## DSE 6.8.10 Graph
+
+* Both graph engines now accept either {{byte[]}} or {{ByteBuffer}} for blob-typed property values. (DSP-21643)
+
+
+## DSE 6.8.10 Indexing
+
+* index segments are now merged into a single segment, after the index build. (DSP-19608)
+
+
+## DSE 6.8.10 Search
+
+* fixes a problem where lucene threads were getting interrupted, causing problems with solr cores (DSP-21339)
+* search queries will no longer fail when querying clustering columns of certain types on which the order is reversed (DSP-21363)
+
+
+## DSE 6.8.10 SparkConnector
+
+* Spark Cassandra Connector supports Storage Attached Indexes (SAI). The connector pushes down predicates defined on columns with SAI indexes.  (DSP-21655)
+* DSE Spark supports connections to Astra clusters  (DSP-21510)
+
 
 # Release notes for DSE 6.8.9
 7 January 2021
@@ -36,7 +125,7 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 ## Components versions for DSE 6.8.8
 
-   * Apache Solr™ 6.0.1.4.2814*
+   * Apache Solr™ 6.0.1.4.2814&ast;
    * Apache Spark™ 2.4.0.16
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.0.53
@@ -55,8 +144,8 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 ## DSE 6.8.8 Indexing
 
-* The issue: When flushing text column indexes, the internal ordering of terms can be processed out of order causing an "*java.lang.AssertionError: Incremental trie requires sorted keys*" error. When this happens, all flushing of indexes involved in this transaction is aborted and the indexes are marked non-queryable. Recovering from this issue involves either rebuilding the indexes or restarting the nodes. (DSP-21580)
-* Fixes a performance regression in SAI for versions 6.8.6 and 6.8.7 regarding *MultiRangeReadCommand*. (DSP-21601)
+* The issue: When flushing text column indexes, the internal ordering of terms can be processed out of order causing an "&ast;java.lang.AssertionError: Incremental trie requires sorted keys&ast;" error. When this happens, all flushing of indexes involved in this transaction is aborted and the indexes are marked non-queryable. Recovering from this issue involves either rebuilding the indexes or restarting the nodes. (DSP-21580)
+* Fixes a performance regression in SAI for versions 6.8.6 and 6.8.7 regarding &ast;MultiRangeReadCommand&ast;. (DSP-21601)
 
 
 ## DSE 6.8.8 Search
