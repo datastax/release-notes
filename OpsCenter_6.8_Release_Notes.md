@@ -1,5 +1,22 @@
 # Release notes for OpsCenter
 
+# Release notes for 6.8.12
+22 March 2021
+
+## 6.8.12 DSE Core
+
+* Updated Jackson Databind version from 2.10.2 to 2.10.5.1  (OPSC-16804)
+* Systemd service files added for opscenterd and agents (OPSC-8299)
+* Added the force_https_redirects config parameter in the authentication section of opscenterd.conf to force redirects from opscenterd to use https for situations where opscenterd is behind a proxy that handles encryption. (OPSC-16805)
+
+## 6.8.12 DSE NodeSync
+
+* Changed the labels from Enabled to Activated and from Disabled to Deactivated (OPSC-14220)
+
+## 6.8.12 DSE Provisioning
+
+* Removed default values from Inter-node-messaging options non-required fields in dse.yaml definitions (OPSC-16659)
+
 # Release notes for 6.8.11
 12 February 2021 
 
