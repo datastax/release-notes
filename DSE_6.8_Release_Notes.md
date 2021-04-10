@@ -1,6 +1,54 @@
 # Release notes for DataStax Enterprise
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for DSE 6.8.11
+9 April 2021
+
+## Components versions for DSE 6.8.11
+
+   * Apache Solr™ 6.0.1.4.2814
+   * Apache Spark™ 2.4.0.18
+   * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
+   * Apache Tomcat® 8.5.61
+   * DSE Java Driver 1.10.0-dse+20200217
+   * Netty 4.1.25.7.dse
+   * Spark JobServer 0.8.0.50
+
+## DSE 6.8.11 Auth
+
+* Fixes an issue where a login attempt with missing credentials logged a misleading warning message with stack trace instead of an error message about the missing username or password. (DB-4806)
+
+
+## DSE 6.8.11 Legacy Repair
+
+* Fixes a bug when in rare cases a terminated repair session would leak on-heap memory (DB-4833)
+
+
+## DSE 6.8.11 Streaming
+
+* Print a timestamp when nodetool exits due to an error (DB-4826)
+
+## DSE 6.8.11 Cassandra
+
+* Data export from cqlsh is now less noisy in the logs (DSP-21494)
+* Fixes intermittent ERROR: java.util.ConcurrentModificationException at org.apache.cassandra.transport.CBUtil.writeStringList (DSP-21336)
+* Fix for DESCRIBE TYPES in cqlsh (DSP-21667)
+* Add asynchronous update to KMIP key cache to fix blocking of commit log (DSP-20582)
+* Fixes CVE-2020-1945 affecting Apache Ant (DSP-21716)
+* Fixes SRCCLR-SID-22742: Insecure Input Validation Vulnerability in the Apache Commons Codec library (DSP-21747)
+* Update tomcat version 8.0.53 to 8.5.61 (DSP-21394)
+
+
+## DSE 6.8.11 Search
+
+* Fixes a bug where FilterCache warmup triggered by node health change can block GossipStage-1 thread for several seconds (DSP-21674)
+
+
+## DSE 6.8.11 Spark
+
+* Fixes CVE-2014-0114, CVE-2014-0114 (DSP-21668)
+
+
 # Release notes for DSE 6.8.10
 11 March 2021
 
