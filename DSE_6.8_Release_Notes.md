@@ -31,6 +31,9 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 * Fixes SRCCLR-SID-22742: Insecure Input Validation Vulnerability in the Apache Commons Codec library (DSP-21747)
 * Update Tomcat version 8.0.53 to 8.5.61 (fixes CVE-2002-0493 CVE-2009-3548 CVE-2013-2185 CVE-2016-1240 CVE-2016-5018 CVE-2016-5388 CVE-2016-6796 CVE-2016-6797 CVE-2016-8745 CVE-2016-9774 CVE-2016-9775 CVE-2020-8022) (DSP-21394)
 
+## DSE 6.8.11 Indexing
+* Fixes a severe issue where flushing an empty MemtableIndex causes the index to not be queryable (DB-4934)
+
 ## DSE 6.8.11 Search
 * Fixes a bug where FilterCache warmup triggered by node health change can block GossipStage-1 thread for several seconds (DSP-21674)
 
