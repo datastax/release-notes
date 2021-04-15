@@ -20,6 +20,11 @@ DSE 6.0.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 ## DSE 6.0.15 CommitLog
 * Addressed a bug where a `CommitLogReplayException` is caused by a bad header but correct CRC after restart (DB-3996)
 
+
+## DSE 6.0.15 CommitLog
+
+* Fixed a bug where some part of the commit log might not be replayed after injecting a foreign SSTable to a node or, on 6.8, after zero-copy streaming of an SSTable (DB-4629)
+
 ## DSE 6.0.15 Local Write-Read Paths
 * Dropped messages metrics calculation doesn't cause assertion errors when dropped messages contain remote batch mutation. (DB-3905)
 
@@ -75,11 +80,6 @@ DSE 6.0.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 ## DSE 6.0.14 Backup and Restore
 
 * Snapshot `schema.cql` files now contain `IF NOT EXISTS` clause for `CREATE TYPE` statements (DB-4685)
-
-
-## DSE 6.0.14 CommitLog
-
-* Fixed a bug where some part of the commit log might not be replayed after injecting a foreign SSTable to a node or, on 6.8, after zero-copy streaming of an SSTable (DB-4629)
 
 
 ## DSE 6.0.14 Compaction

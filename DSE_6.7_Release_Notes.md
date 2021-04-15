@@ -1,5 +1,5 @@
 # Release notes for DataStax Enterprise 6.7
-DSE 6.7.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (*) (if any) are known to be updated since the prior patch version.
+DSE 6.7.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
 # DataStax Enterprise 6.7.13
 5 March 2021
@@ -17,11 +17,14 @@ DSE 6.7.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 * Fixes an issue where a login attempt with missing credentials logged a misleading warning message with stack trace instead of an error message about the missing username or password. (DB-4806)
 * Works around a bug in JDK 1.8u282 (JDK-8260018) (DB-4884)
 
-## DSE 6.7.13 CommitLog
+## DSE 6.7.13 CommitLog/Streaming
 * Addressed a bug where a *CommitLogReplayException* is caused by a bad header but correct CRC after restart (DB-3996)
+* Fixed a bug where some part of the commit log might not be replayed after injecting a foreign sstable to a node or, on 6.8, after zero-copy streaming of an sstable (DB-4629)
+
 
 ## DSE 6.7.13 Distributed Read/Write
 * Applied fix for CVE-2020-17516 (DB-4897)
+
 
 ## DSE 6.7.13 Repair
 * Fixed a bug when in rare cases a terminated repair session would leak on-heap memory (DB-4833)
@@ -80,9 +83,6 @@ DSE 6.7.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
    * DSE Java Driver 1.7.1
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.45.2
-
-## DSE 6.7.12 CommitLog/Streaming
-* Fixed a bug where some part of the commit log might not be replayed after injecting a foreign sstable to a node or, on 6.8, after zero-copy streaming of an sstable (DB-4629)
 
 ## DSE 6.7.12 core
 * Fix  extreme local pauses on all nodes in the cluster on a node restart (DB-4657)
