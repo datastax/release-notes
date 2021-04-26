@@ -1,7 +1,7 @@
 # Release notes for DataStax Enterprise
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
-# Release notes for DSE 6.8.11
+# Release notes for DSE 6.8.12
 26 April 2021
 
 ## Components versions for DSE 6.8.12
@@ -14,21 +14,21 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.50
 
-## 6.8.12 DSE CQL
+## DSE 6.8.12 CQL
 
 * Fix an error in cqlsh encoding unicode in multi-line statements (DB-4855)
 * Make cqlsh prefer newer TLS versions. (DB-4966)
 
-## 6.8.12 DSE Cassandra
+## DSE 6.8.12 Cassandra
 
 * Address a problem where new or rebooted nodes may not be able to gossip with peers. (DSP-21753)
 
-## 6.8.12 DSE CVE
+## DSE 6.8.12 CVE
 
 * Upgrade apache commons-compress to address CVE-2019-12402 (DSP-21679)
 * Update tomcat version 8.5.61 to 8.5.65 (DSP-21798)
 
-## 6.8.12 DSE Search
+## DSE 6.8.12 Search
 
 * Fixed a bug where under heavy load solr query worker threads would use 100% CPU due to contention on thread local map (DSP-21746)
 
