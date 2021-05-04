@@ -4,6 +4,8 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 # DataStax Enterprise 5.1.23
 3 May 2021
 
+:warning: **NOTE**: Due to a serious bug which affects DSE `5.1.23`, this release has been retracted.  We recommend against upgrading to this version at this time. This bug will be addressed in DSE `5.1.24`. All features and fixes for `5.1.23` will be present in `5.1.24`.
+
 ## Components versions for DSE 5.1.23
    * Apache Solr™ 6.0.1.0.2841&ast;
    * Apache Spark™ 2.0.2.42&ast;
