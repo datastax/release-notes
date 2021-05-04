@@ -1,6 +1,72 @@
 # Release notes for DataStax Enterprise 5.1
 DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# DataStax Enterprise 5.1.23
+3 May 2021
+
+## Components versions for DSE 5.1.23
+
+   * Apache Solr™ 6.0.1.0.2841
+   * Apache Spark™ 2.0.2.42
+   * Apache TinkerPop™ 3.2.11-20200603-0524f70f
+   * Apache Tomcat® 8.5.65
+   * DSE Java Driver 1.8.3-dse+20201217
+   * Netty 4.0.54.1.dse
+   * Spark JobServer 0.6.2.240
+
+## DSE 5.1.23 Core
+
+* Adds a new flag -t <number of days> for sstablescrub to update deletion times which are in the future. It accepts a command-line argument: -t <number of days>. All deletion times further in the future than the given number of days will be reset to the current time. (DB-4912)
+* Add asynchronous update to KMIP key cache to fix blocking of commit log (DSP-20582)
+
+## DSE 5.1.23 CQL
+
+* Fix an error in cqlsh encoding unicode in multi-line statements (DB-4855)
+* Make cqlsh prefer newer TLS versions. (DB-4966)
+
+
+## DSE 5.1.23 Schema
+
+* CDC property per table is now propagated regardless CDC is enabled in yaml or not. CDC property is not propagated when there are nodes running C&ast; 3.0 or DSE 5.0 in the cluster (upgrade state). During the upgrade we also prohibit toggling CDC property on per-table basis. (DB-4926)
+
+
+## DSE 5.1.23 SSTables
+
+* Fixes a problem with nulls in tuples in the byte-comparable translation (i.e. sstables in bti format) as well as the comparator (i.e. sstables in big format, see CASSANDRA-19538). (DB-4813)
+
+
+## DSE 5.1.23 Streaming
+
+* Print a timestamp when nodetool exits due to an error (DB-4826)
+
+
+## DSE 5.1.23 Cassandra
+
+* Data export from cqlsh is now less noisy in the logs (DSP-21494)
+
+
+## DSE 5.1.23 Security
+
+* Add asynchronous update to KMIP key cache to fix blocking of commit log (DSP-20582)
+* Fixes an issue where a user-defined function can be defined without arguments and then cannot be read when listing UDFs.   (DSP-21791)
+
+
+## DSE 5.1.23 CVE
+
+* Upgrade apache commons-compress to address CVE-2019-12402 (DSP-21679)
+* Addresses CVE-2018-11796, CVE-2018-11761, CVE-2019-10094, CVE-2019-10088 in the Apache Tika library. (DSP-21689)
+* Update tomcat version 8.5.61 to 8.5.65 (DSP-21798)
+* Applied fix for CVE-2020-17516 (DB-4897)
+* Fixed CVE-2020-1945 affecting Apache Ant (DSP-21716)
+* Fixes SRCCLR-SID-22742: Insecure Input Validation Vulnerability in the Apache Commons Codec library (DSP-21747)
+
+
+## DSE 5.1.23 Search
+
+* Fixed a bug where FilterCache warmup triggered by node health change can block GossipStage-1 thread for several seconds (DSP-21674)
+* Fixed a bug where under heavy load solr query worker threads would use 100% CPU due to contention on thread local map (DSP-21746)
+
+
 # DataStax Enterprise 5.1.22
 12 February 2021
 
