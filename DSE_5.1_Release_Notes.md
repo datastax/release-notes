@@ -48,6 +48,7 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 ## DSE 5.1.23 Search
 * Fixed a bug where FilterCache warmup triggered by node health change can block GossipStage-1 thread for several seconds (DSP-21674)
 * Fixed a bug where under heavy load solr query worker threads would use 100% CPU due to contention on thread local map (DSP-21746)
+* A new jvm option is added: “dse.search.fc.warmup”: AUTO, ALWAYS & NEVER.  Warmup will be disabled for cases when it’s either set to NEVER or set to AUTO with Non-Static type for cover finder & Vnodes are enabled. For all other scenarios, it will be enabled. (DSP-21813)
 
 # DataStax Enterprise 5.1.22
 12 February 2021
