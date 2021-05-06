@@ -1,12 +1,10 @@
 # Release notes for DataStax Enterprise 5.1
 DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
-
 # DataStax Enterprise 5.1.24
 6 May 2021
 
 ## Components versions for DSE 5.1.24
-
    * Apache Solr™ 6.0.1.0.2841
    * Apache Spark™ 2.0.2.42
    * Apache TinkerPop™ 3.2.11-20200603-0524f70f
@@ -15,16 +13,14 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
    * Netty 4.0.54.1.dse
    * Spark JobServer 0.6.2.240
 
-
 ## DSE 5.1.24 Core
 * Fixed a potential issue that users may have tombstone deletion time in the future updated to the current time if they run `nodetool scrub`. (DB-4982)
 * Fixed an issue with DSE daemon unable to stop after the default timeout expired. The issue only happened in the systems that use package install and init.d, such as centos. (DSP-21804)
 
-
 # DataStax Enterprise 5.1.23
 3 May 2021
 
-:warning: **NOTE**: Due to a serious bug which affects DSE `5.1.23`, this release has been retracted.  We recommend against upgrading to this version at this time. This bug will be addressed in DSE `5.1.24`. All features and fixes for `5.1.23` will be present in `5.1.24`.
+:warning: **NOTE**: Due to a bug which affects DSE `5.1.23`, this release has been retracted.  We recommend against upgrading to this version at this time. This bug is already addressed in DSE `5.1.24`. All features and fixes for `5.1.23` are present in `5.1.24`.
 
 ## Components versions for DSE 5.1.23
    * Apache Solr™ 6.0.1.0.2841&ast;
