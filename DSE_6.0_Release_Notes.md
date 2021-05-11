@@ -1,6 +1,96 @@
 # Release notes for DataStax Enterprise 6.0
 DSE 6.0.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# DataStax Enterprise 6.0.16
+11 May 2021
+
+Note: DSE 6.0.16 is the final release of the 6.0.x line.  Please consider upgrading to DSE 6.8 for our latest features and patches.
+
+## Components versions for DSE 6.0.16
+
+   * Apache Solr™ 6.0.1.1.2838
+   * Apache Spark™ 2.2.3.18
+   * Apache TinkerPop™ 3.3.7-20190521-f71ce0d7
+   * Apache Tomcat® 8.5.65
+   * DSE Java Driver 1.8.3-dse+20201217
+   * Netty 4.1.25.7.dse
+   * Spark JobServer 0.8.0.45.3
+
+## DSE 6.0.16 Auth
+
+* Fixes an issue where a login attempt with missing credentials logged a misleading warning message with stack trace instead of an error message about the missing username or password. (DB-4806)
+
+
+## DSE 6.0.16 CQL
+
+* Fix an error in cqlsh encoding unicode in multi-line statements (DB-4855)
+* Make cqlsh prefer newer TLS versions. (DB-4966)
+
+
+## DSE 6.0.16 Distributed Read/Write
+
+* Applied fix for CVE-2020-17516 (DB-4897)
+* Single node crash will no longer result in downtime with write in multi-DC setup when "dse.write.forwarding.disabled.consistency.levels" property is set for relevant Consistency Levels. (DB-2410)
+
+
+## DSE 6.0.16 Legacy Repair
+
+* Fixed a bug when in rare cases a terminated repair session would leak on-heap memory (DB-4833)
+
+
+## DSE 6.0.16 SSTables
+
+* Fixes a problem with nulls in tuples in the byte-comparable translation (i.e. sstables in bti format) as well as the comparator (i.e. sstables in big format, see CASSANDRA-19538). (DB-4813)
+
+
+## DSE 6.0.16 AOSS
+
+* AOSS returns additional parameter in ‘status' endpoint: “connection_hostname“. The new parameter is a FQDN of the node hosting AOSS, it may be used for connections (instead of connection_address) if needed. (DSP-21811)
+
+
+## DSE 6.0.16 Cassandra
+
+* Data export from cqlsh is now less noisy in the logs (DSP-21494)
+* Fixed intermittent ERROR: java.util.ConcurrentModificationException at org.apache.cassandra.transport.CBUtil.writeStringList (DSP-21336)
+* Fix for DESCRIBE TYPES in cqlsh (DSP-21667)
+
+
+## DSE 6.0.16 Core
+
+* Fixes SRCCLR-SID-22742: Insecure Input Validation Vulnerability in the Apache Commons Codec library (DSP-21747)
+* Fixed an issue with DSE daemon unable to stop after the default timeout expired. The issue only happened in the systems that use package install and init.d, such as centos. (DSP-21804)
+* Print a timestamp when nodetool exits due to an error (DB-4826)
+
+## DSE 6.0.16 Security
+
+* Add asynchronous update to KMIP key cache to fix blocking of commit log (DSP-20582)
+
+
+## DSE 6.0.16 Hadoop
+
+* fixed CVE-2020-1945 affecting Apache Ant (DSP-21716)
+
+
+## DSE 6.0.16 CVE
+
+* Update tomcat version 8.0.53 to 8.5.61 (DSP-21394)
+* upgrade apache commons-compress to address CVE-2019-12402 (DSP-21679)
+* fixed CVE-2018-17197 affecting Apache Tika (DSP-21680)
+* Addresses CVE-2018-11796, CVE-2018-11761, CVE-2019-10094, CVE-2019-10088 in the Apache Tika library. (DSP-21689)
+* Update tomcat version 8.5.61 to 8.5.65 (DSP-21798)
+
+
+## DSE 6.0.16 Search
+
+* Fixed a bug where FilterCache warmup triggered by node health change can block GossipStage-1 thread for several seconds (DSP-21674)
+* Fixed a bug where under heavy load solr query worker threads would use 100% CPU due to contention on thread local map (DSP-21746)
+* A new jvm option is added: “dse.search.fc.warmup”: AUTO, ALWAYS & NEVER.  (DSP-21813)
+
+
+## DSE 6.0.16 Spark
+
+* Fixed CVE-2014-0114, CVE-2014-0114 (DSP-21668)
+
 
 # DataStax Enterprise 6.0.15
 12 February 2021
