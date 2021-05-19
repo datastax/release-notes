@@ -1,6 +1,44 @@
 # Release notes for DataStax Enterprise
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for DSE 6.8.13
+18 May 2021
+
+# Components versions for DSE 6.8.13
+
+   * Apache Solr™ 6.0.1.4.2840
+   * Apache Spark™ 2.4.0.18
+   * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
+   * Apache Tomcat® 8.5.65
+   * DSE Java Driver 1.10.0-dse+20210424
+   * Netty 4.1.25.7.dse
+   * Spark JobServer 0.8.0.50
+
+## DSE 6.8.13 Compaction
+
+* Fixes a problem with the cursor compaction implementation used by the Unified Compaction Strategy where overlapping tombstone ranges could result in invalid partitions. Also makes scrub correctly fix such partitions and adds an option to disable the cursor compaction implementation. (DB-4980)
+
+
+## DSE 6.8.13 AOSS
+
+* AOSS returns additional parameter in ‘status' endpoint: “connection_hostname“. The new parameter is a FQDN of the node hosting AOSS, it may be used for connections (instead of connection_address) if needed. (DSP-21811)
+
+
+## DSE 6.8.13 Core
+
+* Fixed an issue with DSE daemon being unable to stop after the default timeout expired. This issue only affected systems that use package install and init.d, such as centos. (DSP-21804)
+
+
+## DSE 6.8.13 Graph
+
+* Fixes a problem where the Gremlin phrase() predicate may not match Solr results for equivalent search. (DSP-21724)
+
+
+## DSE 6.8.13 Search
+
+* A new jvm option is added: “dse.search.fc.warmup”: AUTO, ALWAYS & NEVER.  (DSP-21813)
+
+
 # Release notes for DSE 6.8.12
 26 April 2021
 
