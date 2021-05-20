@@ -1,55 +1,77 @@
 # Release notes for OpsCenter
 
-# Release notes for 6.8.12
+# Release notes for OpsCenter 6.8.13
+20 May 2021
+
+## OpsCenter 6.8.13 Backup Service
+
+* Optimized communication between OpsCenter and agents for restores. (OPSC-16790)
+* Fixed a bug preventing the backup of some tables using SAI. (OPSC-16919)
+
+## OpsCenter 6.8.13 Best Practice Service
+
+* Fixed a bug in the best practice rule "Require Oracle HotSpot or OpenJDK" that caused some versions of OpenJDK to be marked as invalid. (OPSC-16834)
+
+## OpsCenter 6.8.13 Core 
+
+* Added nodetool cfhistograms command to data collector. (OPSC-7376)
+* Using the secret_key_file for the key while taking backup of tables with system_info_encryption is enabled. (OPSC-16198)
+* Improve diagnostic tarball generation to prevent the creation of multiple diagnostic tarballs in concurrent requests. (OPSC-16684)
+* Improved password obfuscation in the diagnostic tarball.  (OPSC-16786)
+* Improved error handling in diagnostic tarball password obfuscation script. (OPSC-16846)
+* Updated ring-jetty-adapter version from 1.5.0 to 1.9.1 so that Jetty version will be updated to 9.4.x (OPSC-16931)
+* DataStax branding refresh on the OpsCenter landing page for login, dashboard and Life Cycle Manager (LCM) pages (OPSC-16851)
+
+# Release notes for OpsCenter 6.8.12
 22 March 2021
 
-## 6.8.12 DSE Core
+## OpsCenter 6.8.12 Core
 
 * Updated Jackson Databind version from 2.10.2 to 2.10.5.1  (OPSC-16804)
 * Systemd service files added for opscenterd and agents (OPSC-8299)
 * Added the force_https_redirects config parameter in the authentication section of opscenterd.conf to force redirects from opscenterd to use https for situations where opscenterd is behind a proxy that handles encryption. (OPSC-16805)
 
-## 6.8.12 DSE NodeSync
+## OpsCenter 6.8.12 NodeSync
 
 * Changed the labels from Enabled to Activated and from Disabled to Deactivated (OPSC-14220)
 
-## 6.8.12 DSE Provisioning
+## OpsCenter 6.8.12 Provisioning
 
 * Removed default values from Inter-node-messaging options non-required fields in dse.yaml definitions (OPSC-16659)
 
 # Release notes for 6.8.11
 12 February 2021 
 
-## 6.8.11 OpsCenter Core
+## OpsCenter 6.8.11 Core
 
 * Added DSE 6.8.0 jvm files to the diagnostic tarball. (OPSC-16602)
 * Update definition file for `10-statsd.conf` so the "host" field will now be treated as a string. (OPSC-16782)
 
-## 6.8.11 OpsCenter Backup Service
+## OpsCenter 6.8.11 Backup Service
 
 * Added additional logging when transferring backup data to a destination fails. Also moved some verbose agent logging from debug to trace. (OPSC-16803)
 * Updated OpsCenter to be aware of the new sstable format introduced in DSE 6.8.9 (OPSC-16815)
 
-## 6.8.11 OpsCenter Best Practice Service
+## OpsCenter 6.8.11 Best Practice Service
 
 * DSE and Cassandra system keyspaces were removed from wide partition check best practice rule. (OPSC-12790)
 * Provided a config value `ignore_allow_filtering_tables` in `opscenterd.conf` where a list of *keyspace.table* can be provided to make `ALLOW FILTERING` best practice rule ignore them. (OPSC-14785)
 * Changed Best Practice Rule definition for "low" importance rules to change "alert-level" from *alert* to *warn*. This will reduce alert notifications for low importance best practice rules. (OPSC-16587)
 
-## 6.8.11 OpsCenter Provisioning
+## OpsCenter 6.8.11 Provisioning
 
 * Introduced default value as `null` for `ldap_options.all_parent_groups_search_type` in `dse.yaml` (OPSC-16747)
 
-## 6.8.11 OpsCenter Repair Service
+## OpsCenter 6.8.11 Repair Service
 
 * Introduced a new `ignore_schema_addition_events_for_repair_service` config parameter. When set to `True` schema change events will no longer cause the repair service to restart. (OPSC-15991)
 * The `dse_perf` keyspace and it's tables ignored by the repair service will no longer be considered for `gc_grace_seconds` value calculation in the repair service UI. (OPSC-16249)
 
-## 6.8.11 OpsCenter UI
+## OpsCenter 6.8.11 UI
 
 * Changed label of the link from "Remove" to "Clear" on the notification when an activity completes. (OPSC-14823)
 
-# Release notes for 6.8.10
+# Release notes for OpsCenter 6.8.10
 15 January 2021
 
 ## OpsCenter Core 6.8.10
@@ -57,7 +79,7 @@
 * Refactored the ssl parameters for connecting to Cassandra with client to node encryption. This fixed a bug for configurations where only the keystore was
 specified. The `require_two_way_ssl` config parameter has been removed and the case it was introduced for will now be handled automatically. (OPSC-16802)
 
-# Release notes for 6.8.9
+# Release notes for OpsCenter 6.8.9
 7 January 2021
 
 ## OpsCenter Core 6.8.9 
