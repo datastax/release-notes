@@ -13,9 +13,6 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.50
 
-## DSE 6.8.13 Compaction
-* Fixes a problem with the cursor compaction implementation used by the Unified Compaction Strategy where overlapping tombstone ranges could result in invalid partitions. Also makes scrub correctly fix such partitions and adds an option to disable the cursor compaction implementation. (DB-4980)
-
 ## DSE 6.8.13 AOSS
 * AOSS returns additional parameter in `status` `endpoint: "connection_hostname"`. The new parameter is a FQDN of the node hosting AOSS, it may be used for connections (instead of connection_address) if needed. (DSP-21811)
 
