@@ -1,7 +1,7 @@
 # Release notes for OpsCenter
 
 # Release notes for OpsCenter 6.8.13
-20 May 2021
+Coming soon...
 
 ## OpsCenter 6.8.13 Backup Service
 
