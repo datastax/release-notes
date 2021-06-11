@@ -14,21 +14,15 @@ Luna Streaming Distribution 2.6.2 1.0.x is compatible with Apache Pulsar&trade; 
    
 *Note:* The DataStax Luna Streaming Distribution is designed for Java 11. However, because the product releases Docker images, you do not need to install Java (8 or 11) in advance. Java 11 is bundled in the Docker image.   
 
-<<<<<<< HEAD:Luna_Streaming_1.0_Release_Notes.md
-
-## Luna Streaming Distribution 1.0.1
+## Luna Streaming Distribution 2.6.2 1.0.1
 
 This is an hotfix release that addresses a security issue.
 
 * [61da3c12d0a](https://github.com/datastax/pulsar/commit/61da3c12d0a) Disallow parsing of token with none signature in authenticateToken (#9172) 
 
-## Luna Streaming Distribution 1.0.0
-=======
 ## Luna Streaming Distribution 2.6.2 1.0.0
->>>>>>> Start Release notes for Luna Streaming 2.7.2 1.0.0 and rename 2.6.2 file:Luna_Streaming_262_Release_Notes.md
 
 This is the initial release of the DataStax Luna Streaming Distribution. This release contains all of the commits included in the Apache Pulsar v2.6.2 release plus the following changes specific to Luna Streaming:
-
 
 * [cc5b83663d2](https://github.com/datastax/pulsar/commit/cc5b83663d2) - update LICENSE for presto 334 upversion
 * [cebcc97f33a](https://github.com/datastax/pulsar/commit/cebcc97f33a) - suppress nashorn warning in JDK11 runtime
