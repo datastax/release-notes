@@ -1,10 +1,10 @@
 # Release notes for DataStax Luna Streaming Distribution
 Luna Streaming Distribution 2.7.2 is compatible with Apache Pulsar&trade; 2.7.2.
 
-# Release notes for Luna Streaming Distribution 1.0.0
+# Release notes for Luna Streaming Distribution 2.7.2
 11 June 2021
 
-## Component versions for Luna Streaming Distribution 1.0.0
+## Component versions for Luna Streaming Distribution 2.7.2
 
    * Apache Pulsar 2.7.2
    * DataStax Pulsar Admin Console 1.0.0
@@ -23,7 +23,7 @@ This release adds these features to the original Apache Pulsar 2.7.2 release:
  
 *Note:* The DataStax Luna Streaming Distribution is designed for Java 11. However, because the product releases Docker images, you do not need to install Java (8 or 11) in advance. Java 11 is bundled in the Docker image.
 
-## Upgrade Considerations
+## Upgrade Considerations for Luna Streaming Distribution 2.7.2
 
 This is the first Luna Streaming release that uses non-root containers for enhanced security. When upgrading from a previous version (for example, 2.6.2_1.0.1) files created while running that version will have root permissions and will not be readable by containers running the new version.
 
