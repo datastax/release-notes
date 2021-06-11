@@ -35,3 +35,10 @@ This is the initial release of the DataStax Luna Streaming Distribution. This re
 * [81710076ff4](https://github.com/datastax/pulsar/commit/81710076ff4) - Update command descriptions from old 'property/cluster/namespace' format to current 'tenant/namespace' format
 * [dbe1feeb394](https://github.com/datastax/pulsar/commit/dbe1feeb394) - Update "sample" tenant on standalone to stop using old property/cluster/namespace naming convention.
 * [4bb90560ad7](https://github.com/datastax/pulsar/commit/4bb90560ad7) - Changing default function subscription to be function name, not FQFN
+
+
+## Luna Streaming Distribution 1.0.1
+
+This is an hotfix release that addresses a security issue.
+
+61da3c12d0a Disallow parsing of token with none signature in authenticateToken (#9172) 
