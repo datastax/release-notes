@@ -1,14 +1,14 @@
 # Release notes for DataStax Luna Streaming Distribution
 Luna Streaming Distribution 2.7.2 is compatible with Apache Pulsar&trade; 2.7.2.
 
-# Release notes for Luna Streaming Distribution 1.0.0
+# Release notes for Luna Streaming Distribution 2.7.2
 11 June 2021
 
-## Component versions for Luna Streaming Distribution 1.0.0
+## Component versions for Luna Streaming Distribution 2.7.2
 
    * Apache Pulsar 2.7.2
    * DataStax Pulsar Admin Console 1.0.0
-   * DataStax Pulsar Heartbeat 1.0.0
+   * DataStax Pulsar Heartbeat 1.0.2
    * DataStax Apache Pulsar Cassandra Sink 1.4.0
    * DataStax Apache Pulsar Cassandra Source 0.1.0
    * DataStax Burnell 1.0.0
@@ -21,11 +21,23 @@ This release adds these features to the original Apache Pulsar 2.7.2 release:
    * Dependency upgrades (for security, stability and performances)
    * An Enhanced ElasticSearch Pulsar IO Sink  
  
-*Note:* The DataStax Luna Streaming Distribution is designed for Java 11. However, because the product releases Docker images, you do not need to install Java (8 or 11) in advance. Java 11 is bundled in the Docker image.   
+*Note:* The DataStax Luna Streaming Distribution is designed for Java 11. However, because the product releases Docker images, you do not need to install Java (8 or 11) in advance. Java 11 is bundled in the Docker image.
+
+## Upgrade Considerations for Luna Streaming Distribution 2.7.2
+
+This is the first Luna Streaming release that uses non-root containers for enhanced security. When upgrading from a previous version (for example, 2.6.2_1.0.1) files created while running that version will have root permissions and will not be readable by containers running the new version.
+
+To fix this, you can manually log into the ZooKeeper, BookKeeper, and Function Worker containers and make sure that all files in the `/pulsar/data/` and `pulsar/logs` directories are owned by UID 10000 (user pulsar). The group ID of the files should also be set to GID 10001 (group pulsar). Here is an example command:
+
+```
+chown -R 10000:10001 /pulsar/data
+```
+
+If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
 ## Luna Streaming Distribution 2.7.2 1.0.0
 
-List of most notable commits:
+This release is based on the [Apache Pulsar 2.7.2 release](https://pulsar.apache.org/release-notes/#272-mdash-2021-05-11-a-id272a). In addition to the contents of that release, it includes the following notable commits:
 
 * [24787c7902d](https://github.com/datastax/pulsar/commit/24787c7902d) function container run as group 10001 mount function user token from k8s secret as 400 permission for rootless container
 * [b3271b3ef34](https://github.com/datastax/pulsar/commit/b3271b3ef34) Add workaround for failing PulsarFunctionsJavaProcessTest on JDK11 (#10566)
