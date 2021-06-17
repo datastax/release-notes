@@ -1,10 +1,39 @@
 # Release notes for DataStax Enterprise 6.7
 DSE 6.7.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+**NOTE**: DSE `6.7.x` line has [EOL date of December 12, 2021](https://www.datastax.com/legal/supported-software).  Please consider upgrading to [DSE 6.8](./DSE_6.8_Release_Notes.md) for our latest features and patches.
+
+# DataStax Enterprise 6.7.15
+17 June 2021
+
+## Components versions for DSE 6.7.15
+   * Apache Solr™ 6.0.1.2.2839
+   * Apache Spark™ 2.2.3.18
+   * Apache TinkerPop™ 3.3.7-20190521-f71ce0d7
+   * Apache Tomcat® 8.5.65
+   * DSE Java Driver 1.8.3-dse+20201217
+   * Netty 4.1.25.7.dse
+   * Spark JobServer 0.8.0.45.3
+
+## 6.7.15 DSE CVE
+* Upgraded jetty version from 9.4.34.v20201102 to 9.4.41.v20210516 (DSP-21684, DSP-21687)
+
+## 6.7.15 DSE Search
+* Fix for a bug where in rare cases search query routing might start to spin endlessly for a particular query (DSP-21838)
+
+## 6.7.15 DSE Core
+* Adding a new flag `-t <number of days>` for `sstablescrub` to update deletion times which are in the future. It accepts a command-line argument: `-t <number of days>`. All deletion times further in the future than the given number of days will be reset to the current time. Also fixed a potential issue that users may have the deletion time in the future updated to the current time if they run `nodetool scrub`. (DB-4964)
+
+## 6.7.15 DSE CQL
+* Added unit test cases for logic cqlsh TLS version. (DB-4979)
+
+## 6.7.15 DSE SSTables
+* When the Bloom filter is recreated due to FP chance change, sstable metadata is loaded and re-written in order to update validation metadata with the new fp chance. However, the loaded metadata lacked compaction metadata, so when rewritten, compaction metadata got truncated. (DB-5005)
+
 # DataStax Enterprise 6.7.14
 17 May 2021
 
-# Components versions for DSE 6.7.14
+## Components versions for DSE 6.7.14
    * Apache Solr™ 6.0.1.2.2839&ast;
    * Apache Spark™ 2.2.3.18&ast;
    * Apache TinkerPop™ 3.3.7-20190521-f71ce0d7
