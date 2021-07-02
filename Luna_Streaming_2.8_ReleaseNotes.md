@@ -1,10 +1,10 @@
 # Release notes for DataStax Luna Streaming Distribution
 Luna Streaming Distribution 2.8.0 is compatible with Apache Pulsar&trade; 2.8.0.
 
-# Release notes for Luna Streaming Distribution 2.7.2
+# Release notes for Luna Streaming Distribution 2.8.0
 30 June 2021
 
-## Component versions for Luna Streaming Distribution 2.7.2
+## Component versions for Luna Streaming Distribution 2.8.0
 
    * Apache Pulsar 2.8.0
    * DataStax Pulsar Admin Console 1.0.0
@@ -33,9 +33,9 @@ The source code for these versions of Apache Pulsar and Apache BookKeeper code i
    * https://github.com/datastax/pulsar
    * https://github.com/datastax/bookkeeper
 
-## Upgrade Considerations for Luna Streaming Distribution 2.7.2
+## Upgrade Considerations for Luna Streaming Distribution 2.8.0
 
-As Luna Streming 2.7 servies, this Luna Streaming release that uses non-root containers for enhanced security. When upgrading from a previous version (for example, 2.6.2_1.0.1) files created while running that version will have root permissions and will not be readable by containers running the new version.
+As Luna Streaming 2.7 this release uses non-root containers for enhanced security. When upgrading from a previous version (for example, 2.6.2_1.0.1) files created while running that version will have root permissions and will not be readable by containers running the new version.
 
 To fix this, you can manually log into the ZooKeeper, BookKeeper, and Function Worker containers and make sure that all files in the `/pulsar/data/` and `pulsar/logs` directories are owned by UID 10000 (user pulsar). The group ID of the files should also be set to GID 10001 (group pulsar). Here is an example command:
 
