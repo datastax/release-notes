@@ -47,7 +47,7 @@ If you are are using the Luna Streaming Helm chart, you can enable automatic rep
 
 ## Luna Streaming Distribution 2.8.0 1.0.0
 
-This release is based on the [Apache Pulsar 2.8.2 release](https://pulsar.apache.org/release-notes/#280-mdash-2021-06-12-a-id280a). In addition to the contents of that release, it includes the following notable commits:
+This release is based on the [Apache Pulsar 2.8.0 release](https://pulsar.apache.org/release-notes/#280-mdash-2021-06-12-a-id280a). In addition to the contents of that release, it includes the following notable commits:
 
 * [66fb63324b4](https://github.com/datastax/pulsar/commit/66fb63324b4) Use Released DataStax BookKeeper 4.14.1.1.0.0 - with security updates
 * [7544cfb65b3](https://github.com/datastax/pulsar/commit/7544cfb65b3) [Broker/Bookie] Set -Dio.netty.tryReflectionSetAccessible=true for pulsar processes
