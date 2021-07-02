@@ -35,6 +35,32 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
+## Luna Streaming Distribution 2.7.2 1.1.0
+
+This is a major release for 2.7.2 release line.
+From this version the base docker image is adoptopenjdk:11-jdk that is based on Ubuntu
+in order to have a better security baseline for OS libraries.
+We are also upgrading Python from 3.7 to 3.8.
+
+List of most notable commits:
+
+* [21a93e98f89](https://github.com/datastax/pulsar/commit/21a93e98f89) Postgres WAL does not truncate / confirmed_flush_lsn dows not change. Downgrading debezium to the same version as apache. (#4)
+* [282f8319c8e](https://github.com/datastax/pulsar/commit/282f8319c8e) Use the subscription name defined in function details in the Pulsar Functions Python instance
+* [b2e95a64572](https://github.com/datastax/pulsar/commit/b2e95a64572) Enable Function subscription naming workaround when activated
+* [653aeca2739](https://github.com/datastax/pulsar/commit/653aeca2739) Revert "Changing default function subscription to be function name, not FQFN"
+* [105a1d3ecb0](https://github.com/datastax/pulsar/commit/105a1d3ecb0) [Security] Use adoptopenjdk:11-jdk base image for Pulsar docker images
+
+## Luna Streaming Distribution 2.7.2 1.0.1
+
+This is a bugfix release that fixes problems around Memory usage in the Debezium connector, Pulsar Functions and
+in automatic stuck subscription recovery. 
+
+List of most notable commits:
+
+* [318295e2c56](https://github.com/datastax/pulsar/commit/318295e2c56) Java Client: KeyValueSchema with AutoConsume component - make it work if the topic is still not initialized
+* [a40bcce12cd](https://github.com/datastax/pulsar/commit/a40bcce12cd) [pulsar-broker] Handle NPE in unblock stuck subscrption task when dispatcher is not created (#10430)
+* [70556e58c02](https://github.com/datastax/pulsar/commit/70556e58c02) [Broker] Fix direct memory leak in getLastMessageId (#10977)
+
 ## Luna Streaming Distribution 2.7.2 1.0.0
 
 This release is based on the [Apache Pulsar 2.7.2 release](https://pulsar.apache.org/release-notes/#272-mdash-2021-05-11-a-id272a). In addition to the contents of that release, it includes the following notable commits:
@@ -121,29 +147,3 @@ This release is based on the [Apache Pulsar 2.7.2 release](https://pulsar.apache
 * [830d79803e3](https://github.com/datastax/pulsar/commit/830d79803e3) Switch Docker image to Java 11
 * [d6f953893fa](https://github.com/datastax/pulsar/commit/d6f953893fa) upgrade presto version to 334 and JDK11
 * [65a1acd7334](https://github.com/datastax/pulsar/commit/65a1acd7334) auth token for debezium and kafka connect adaptor
-
-## Luna Streaming Distribution 2.7.2 1.0.1
-
-This is a bugfix release that fixes problems around Memory usage in the Debezium connector, Pulsar Functions and
-in automatic stuck subscription recovery. 
-
-List of most notable commits:
-
-* [318295e2c56](https://github.com/datastax/pulsar/commit/318295e2c56) Java Client: KeyValueSchema with AutoConsume component - make it work if the topic is still not initialized
-* [a40bcce12cd](https://github.com/datastax/pulsar/commit/a40bcce12cd) [pulsar-broker] Handle NPE in unblock stuck subscrption task when dispatcher is not created (#10430)
-* [70556e58c02](https://github.com/datastax/pulsar/commit/70556e58c02) [Broker] Fix direct memory leak in getLastMessageId (#10977)
-
-## Luna Streaming Distribution 2.7.2 1.1.0
-
-This is a major release for 2.7.2 release line.
-From this version the base docker image is adoptopenjdk:11-jdk that is based on Ubuntu
-in order to have a better security baseline for OS libraries.
-We are also upgrading Python from 3.7 to 3.8.
-
-List of most notable commits:
-
-* [21a93e98f89](https://github.com/datastax/pulsar/commit/21a93e98f89) Postgres WAL does not truncate / confirmed_flush_lsn dows not change. Downgrading debezium to the same version as apache. (#4)
-* [282f8319c8e](https://github.com/datastax/pulsar/commit/282f8319c8e) Use the subscription name defined in function details in the Pulsar Functions Python instance
-* [b2e95a64572](https://github.com/datastax/pulsar/commit/b2e95a64572) Enable Function subscription naming workaround when activated
-* [653aeca2739](https://github.com/datastax/pulsar/commit/653aeca2739) Revert "Changing default function subscription to be function name, not FQFN"
-* [105a1d3ecb0](https://github.com/datastax/pulsar/commit/105a1d3ecb0) [Security] Use adoptopenjdk:11-jdk base image for Pulsar docker images
