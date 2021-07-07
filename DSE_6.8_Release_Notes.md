@@ -1,6 +1,53 @@
 # Release notes for DataStax Enterprise
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.8.14
+07 July 2021
+
+## 6.8.14 DSE Platform
+* Provide DSE support for Ubuntu 20.04 (Focal) (DSP-21330)
+
+# Components versions for DSE 6.8.14
+   * Apache Solr™ 6.0.1.4.2840
+   * Apache Spark™ 2.4.0.18
+   * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
+   * Apache Tomcat® 8.5.65
+   * DSE Java Driver 1.10.0-dse+20210424
+   * Netty 4.1.25.7.dse
+   * Spark JobServer 0.8.0.50
+
+## 6.8.14 DSE Cassandra
+* Added warning message in case of dse start failure due to this issue (DSP-21795)
+
+## 6.8.14 DSE Core
+* fix concurrent modification exception in consistent replace (DSP-21836)
+
+## 6.8.14 DSE CVE
+* Upgraded version of resteasy to 4.6.0.Final (DSP-21683)
+* Upgraded jetty version from 9.4.34.v20201102 to 9.4.41.v20210516 (DSP-21684, DSP-21687)
+
+## 6.8.14 DSE Search
+* fixed a bug where in rare cases search query routing might start to spin endlessly for a particular query (DSP-21838)
+
+## 6.8.14 DSE Security
+* This fixes an issue in the LDAP group_search_filter default value that meant that group hierarchies were not being loaded if the group_search_filter was not explicitly set in the dse.yaml. (DSP-21874)
+
+## 6.8.14 DSE Auth
+* Removed a possible false-positives error message in the log that would cause confusion when multiple authentication schemes are defined.
+ (DB-5015)
+
+## 6.8.14 DSE CQL
+* Added unit Testcases for logic cqlsh TLS version. (DB-4979)
+
+## 6.8.14 DSE SSTables
+* When the Bloom filter is recreated due to FP chance change, sstable metadata is loaded and re-written in order to update validation metadata with the new fp chance. However, the loaded metadata lacked compaction metadata, so when rewritten, compaction metadata got truncated.  (DB-5005)
+
+## 6.8.14 DSE Streaming
+* Fix nodetool not able to setstreamthroughput and setinterdcstreamthroughput (DB-4940)
+
+## 6.8.14 DSE Tools
+* Updated the python driver version used by cqlsh from 3.24.0 to 3.25.0 (DB-4978)
+
 # Release notes for DSE 6.8.13
 18 May 2021
 
