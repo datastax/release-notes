@@ -7,6 +7,8 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 ## 6.8.14 DSE Platform
 * Provide DSE support for Ubuntu 20.04 (Focal) (DSP-21330)
 
+  Please note that certification was done using Python 2.7 and Python 2.7 needs to be available on the target system.
+
 # Components versions for DSE 6.8.14
    * Apache Solr™ 6.0.1.4.2840
    * Apache Spark™ 2.4.0.18
