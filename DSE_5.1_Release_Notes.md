@@ -5,7 +5,7 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 16 July 2021
 
 ## 5.1.25 DSE Platform
-* Provide DSE support for Ubuntu 20.04 (Focal) (DSP-21330)
+* Provide DSE support for Ubuntu 20.04 (Focal) (DSP-21330). Please note that certification was done using Python 2.7 and Python 2.7 needs to be available on the target system.
 
 # Components versions for DSE 5.1.25
    * Apache Solr™ 6.0.1.0.2841
@@ -17,23 +17,23 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
    * Spark JobServer 0.6.2.240
 
 ## 5.1.25 DSE Auth
-* Removed a possible false-positives error message in the log that would cause confusion when multiple authentication schemes are defined.
+* Removed a possible false-positive error message in the log that would cause confusion when multiple authentication schemes are defined.
  (DB-5015)
 
 ## 5.1.25 DSE CQL
-* Added unit Testcases for logic cqlsh TLS version. (DB-4979)
+* Added unit test cases for logic cqlsh TLS version. (DB-4979)
 
 ## 5.1.25 DSE Cassandra
 * Added warning message in case of dse start failure due to this issue (DSP-21795)
 
 ## 5.1.25 DSE CVE
-* Upgraded jetty version from 9.4.34.v20201102 to 9.4.41.v20210516 (DSP-21684, DSP-21687)
+* Upgraded jetty version from `9.4.34.v20201102` to `9.4.41.v20210516` (DSP-21684, DSP-21687)
 
 ## 5.1.25 DSE Search
-* fixed a bug where in rare cases search query routing might start to spin endlessly for a particular query (DSP-21838)
+* Fixed a bug where in rare cases search query routing might start to spin endlessly for a particular query (DSP-21838)
 
 ## 5.1.25 DSE Security
-* This fixes an issue in the LDAP group_search_filter default value that meant that group hierarchies were not being loaded if the group_search_filter was not explicitly set in the dse.yaml. (DSP-21874)
+* Fixed an issue in the LDAP `group_search_filter` default value that meant that group hierarchies were not being loaded if the `group_search_filter` was not explicitly set in the dse.yaml. (DSP-21874)
 
 # DataStax Enterprise 5.1.24
 6 May 2021
