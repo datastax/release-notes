@@ -5,9 +5,7 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 07 July 2021
 
 ## 6.8.14 DSE Platform
-* Provide DSE support for Ubuntu 20.04 (Focal) (DSP-21330)
-
-  Please note that certification was done using Python 2.7 and Python 2.7 needs to be available on the target system.
+* Provide DSE support for Ubuntu 20.04 (Focal) (DSP-21330). Please note that certification was done using Python 2.7 and Python 2.7 needs to be available on the target system.
 
 # Components versions for DSE 6.8.14
    * Apache Solr™ 6.0.1.4.2840
@@ -22,20 +20,20 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 * Added warning message in case of dse start failure due to this issue (DSP-21795)
 
 ## 6.8.14 DSE Core
-* fix concurrent modification exception in consistent replace (DSP-21836)
+* Fixed concurrent modification exception in consistent replace (DSP-21836)
 
 ## 6.8.14 DSE CVE
-* Upgraded version of resteasy to 4.6.0.Final (DSP-21683)
-* Upgraded jetty version from 9.4.34.v20201102 to 9.4.41.v20210516 (DSP-21684, DSP-21687)
+* Upgraded version of resteasy to `4.6.0.Final` (DSP-21683)
+* Upgraded jetty version from `9.4.34.v20201102` to `9.4.41.v20210516` (DSP-21684, DSP-21687)
 
 ## 6.8.14 DSE Search
-* fixed a bug where in rare cases search query routing might start to spin endlessly for a particular query (DSP-21838)
+* Fixed a bug where in rare cases search query routing might start to spin endlessly for a particular query (DSP-21838)
 
 ## 6.8.14 DSE Security
-* This fixes an issue in the LDAP group_search_filter default value that meant that group hierarchies were not being loaded if the group_search_filter was not explicitly set in the dse.yaml. (DSP-21874)
+* Fixed an issue in the LDAP `group_search_filter` default value that meant that group hierarchies were not being loaded if the `group_search_filter` was not explicitly set in the dse.yaml. (DSP-21874)
 
 ## 6.8.14 DSE Auth
-* Removed a possible false-positives error message in the log that would cause confusion when multiple authentication schemes are defined.
+* Removed a possible false-positive error message in the log that would cause confusion when multiple authentication schemes are defined.
  (DB-5015)
 
 ## 6.8.14 DSE CQL
@@ -45,10 +43,10 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 * When the Bloom filter is recreated due to FP chance change, sstable metadata is loaded and re-written in order to update validation metadata with the new fp chance. However, the loaded metadata lacked compaction metadata, so when rewritten, compaction metadata got truncated.  (DB-5005)
 
 ## 6.8.14 DSE Streaming
-* Fix nodetool not able to setstreamthroughput and setinterdcstreamthroughput (DB-4940)
+* Fixed nodetool not able to `setstreamthroughput` and `setinterdcstreamthroughput` (DB-4940)
 
 ## 6.8.14 DSE Tools
-* Updated the python driver version used by cqlsh from 3.24.0 to 3.25.0 (DB-4978)
+* Updated the python driver version used by cqlsh from `3.24.0` to `3.25.0` (DB-4978)
 
 # Release notes for DSE 6.8.13
 18 May 2021
@@ -69,7 +67,7 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 * Fixed an issue with DSE daemon being unable to stop after the default timeout expired. This issue only affected systems that use package install and init.d, such as centos. (DSP-21804)
 
 ## DSE 6.8.13 Graph
-* Fixes a problem where the Gremlin `phrase()` predicate may not match Solr results for equivalent search. (DSP-21724)
+* Fixed a problem where the Gremlin `phrase()` predicate may not match Solr results for equivalent search. (DSP-21724)
 
 ## DSE 6.8.13 Search
 * A new JVM option is added: `dse.search.fc.warmup`: `AUTO`, `ALWAYS` & `NEVER`.  (DSP-21813)
@@ -87,7 +85,7 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
    * Spark JobServer 0.8.0.50
 
 ## DSE 6.8.12 CQL
-* Fix an error in cqlsh encoding unicode in multi-line statements (DB-4855)
+* Fixed an error in cqlsh encoding unicode in multi-line statements (DB-4855)
 * Make cqlsh prefer newer TLS versions. (DB-4966)
 
 ## DSE 6.8.12 Cassandra
