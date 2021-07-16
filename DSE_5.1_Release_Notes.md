@@ -1,6 +1,40 @@
 # Release notes for DataStax Enterprise 5.1
 DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# DataStax Enterprise 5.1.25
+16 July 2021
+
+## 5.1.25 DSE Platform
+* Provide DSE support for Ubuntu 20.04 (Focal) (DSP-21330)
+
+# Components versions for DSE 5.1.25
+   * Apache Solr™ 6.0.1.0.2841
+   * Apache Spark™ 2.0.2.42
+   * Apache TinkerPop™ 3.2.11-20210601-6b27fbde
+   * Apache Tomcat® 8.5.65
+   * DSE Java Driver 1.8.3-dse+20201217
+   * Netty 4.0.54.1.dse
+   * Spark JobServer 0.6.2.240
+
+## 5.1.25 DSE Auth
+* Removed a possible false-positives error message in the log that would cause confusion when multiple authentication schemes are defined.
+ (DB-5015)
+
+## 5.1.25 DSE CQL
+* Added unit Testcases for logic cqlsh TLS version. (DB-4979)
+
+## 5.1.25 DSE Cassandra
+* Added warning message in case of dse start failure due to this issue (DSP-21795)
+
+## 5.1.25 DSE CVE
+* Upgraded jetty version from 9.4.34.v20201102 to 9.4.41.v20210516 (DSP-21684, DSP-21687)
+
+## 5.1.25 DSE Search
+* fixed a bug where in rare cases search query routing might start to spin endlessly for a particular query (DSP-21838)
+
+## 5.1.25 DSE Security
+* This fixes an issue in the LDAP group_search_filter default value that meant that group hierarchies were not being loaded if the group_search_filter was not explicitly set in the dse.yaml. (DSP-21874)
+
 # DataStax Enterprise 5.1.24
 6 May 2021
 
