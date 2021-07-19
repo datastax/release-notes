@@ -24,7 +24,7 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 * Added unit test cases for logic cqlsh TLS version. (DB-4979)
 
 ## 5.1.25 DSE Cassandra
-* Added warning message in case of dse start failure due to this issue (DSP-21795)
+* Added warning message in case of cases where dse was started with duplicated -Xmx options when used in jvm-server.options (DSP-21795)
 
 ## 5.1.25 DSE CVE
 * Upgraded jetty version from `9.4.34.v20201102` to `9.4.41.v20210516` (DSP-21684, DSP-21687)
