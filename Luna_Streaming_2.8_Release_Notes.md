@@ -45,6 +45,47 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
+## Luna Streaming Distribution 2.8.0 1.1.0
+
+This release is based on the [Apache Pulsar 2.8.0 release](https://pulsar.apache.org/release-notes/#280-mdash-2021-06-12-a-id280a).
+
+This is a major release on Luna Streaming 2.8.0 release line.
+
+Most notably:
+- It contains upgrades to third party libraries for known CVEs (Netty, Apache Commons Compress, OkHttp3)
+- It fixes a problem with Bookies on TLS (anticipated from Apache BookKeeper 4.15.0-SNAPSHOT) 
+- It upgrades Debezium to 1.5.4
+- It fix a problem on deploying Pulsar Functions with parallelism > 1
+- It contains a BETA version of KOP (Kafka On Pulsar)
+
+In addition to the contents of that release and of Luna Streaming 2.8.0 1.0.0, it includes the following notable commits:
+
+* [ac9115b6625](https://github.com/datastax/pulsar/commit/ac9115b6625) Upgrade BookKeeper to DataStax version 4.14.1.1.0.1 - fix TLS issues on Pulsar
+* [210b4d9cf6f](https://github.com/datastax/pulsar/commit/210b4d9cf6f) Fix issue with NarUnpacker that causes races and files getting overridden
+* [180fc7ac013](https://github.com/datastax/pulsar/commit/180fc7ac013) Upgrade Netty tcnative to 2.0.40.Final which is compatible with 4.1.66.Final
+* [f3bf0047eb2](https://github.com/datastax/pulsar/commit/f3bf0047eb2) [Security] Upgrade commons-compress to 1.21
+* [32729193e9d](https://github.com/datastax/pulsar/commit/32729193e9d) Upgrade Netty to 4.1.66.Final
+* [f08d76d1875](https://github.com/datastax/pulsar/commit/f08d76d1875) [broker] Fix issue that message ordering could be broken when redelivering messages on Key_Shared subscription (#10762)
+* [f3e0c929560](https://github.com/datastax/pulsar/commit/f3e0c929560) Upgrade Debezium to v.1.5.4 (last buildable with Java 8)
+* [246174afb2c](https://github.com/datastax/pulsar/commit/246174afb2c) Debezium: Make pulsar.auth.token optional (and make Integration Tests pass)
+* [5445344cfd5](https://github.com/datastax/pulsar/commit/5445344cfd5) Debezium integration tests   - check for flush lsn updates
+* [9574034675f](https://github.com/datastax/pulsar/commit/9574034675f) Implement createIndexIfNeeded option and upgrade ES container in tests
+* [72bd887c495](https://github.com/datastax/pulsar/commit/72bd887c495) Fix ES Sink and remove debug
+* [17cd5299931](https://github.com/datastax/pulsar/commit/17cd5299931) Fix Avro dep in ESSink
+* [f5838dda8ab](https://github.com/datastax/pulsar/commit/f5838dda8ab) Include common-io in java function instance (#10939)
+* [e8bd9a5bd8c](https://github.com/datastax/pulsar/commit/e8bd9a5bd8c) Add AVRO in compile scope
+* [be81cd3ddc1](https://github.com/datastax/pulsar/commit/be81cd3ddc1) Port ElasticSearch Sink Tests from ASF Pulsar PR
+* [d9f6a9de592](https://github.com/datastax/pulsar/commit/d9f6a9de592) Make MetadataCacheTest reliable. (#10877)
+* [a7b274bb563](https://github.com/datastax/pulsar/commit/a7b274bb563) Add dependency management rule for com.squareup.okhttp3:logging-interceptor
+* [7b00aa43956](https://github.com/datastax/pulsar/commit/7b00aa43956) Bump version to 2.8.0.1.0.1-SNAPSHOT
+* [929050dce5a](https://github.com/datastax/pulsar/commit/929050dce5a) [Security] Upgrade OkHttp3 version to 5.0.0-alpha.2 to address CVE-2021-0341
+* [359d6efad68](https://github.com/datastax/pulsar/commit/359d6efad68) LS-130 Pulsar SQL fails to start in lunastreaming-all:2.8.0_1.0.0
+* [863bd9b9162](https://github.com/datastax/pulsar/commit/863bd9b9162) Enhanced ES-sink connector
+* [827327d8f49](https://github.com/datastax/pulsar/commit/827327d8f49) [Broker] Fix the backlog issue with --precise-backlog=true (#10966)
+* [21d19810f3c](https://github.com/datastax/pulsar/commit/21d19810f3c) Do not expose meaningless stats for consumer. (#11005)
+* [07524f377ed](https://github.com/datastax/pulsar/commit/07524f377ed) Fixed using CommandSubscribe.getConsumerName() without checking (#11199)
+
+
 ## Luna Streaming Distribution 2.8.0 1.0.0
 
 This release is based on the [Apache Pulsar 2.8.0 release](https://pulsar.apache.org/release-notes/#280-mdash-2021-06-12-a-id280a). In addition to the contents of that release, it includes the following notable commits:
