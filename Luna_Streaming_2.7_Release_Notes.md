@@ -35,6 +35,19 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
+
+## Luna Streaming Distribution 2.7.2 1.1.1
+
+This is a bugfix release that fixes problems around Pulsar Functions, Data Retention, the Enhanced ElasticSearch Sink, Key_Shared Subscriptions and Performances on JDK11. 
+
+List of most notable commits:
+
+* [bfa30dd49d0](https://github.com/datastax/pulsar/commit/bfa30dd49d0) [broker] Fix issue that message ordering could be broken when redelivering messages on Key_Shared subscription (#10762)
+* [278e217726b](https://github.com/datastax/pulsar/commit/278e217726b) Fix issue with NarUnpacker that causes races and files getting overridden
+* [e1bc601c73c](https://github.com/datastax/pulsar/commit/e1bc601c73c) Fix retention size policy delete too much ledgers (#11242)
+* [7ba63e3a673](https://github.com/datastax/pulsar/commit/7ba63e3a673) Add stripNulls setting to avoid null in Elasticsearch (#5)
+* [255a96f0394](https://github.com/datastax/pulsar/commit/255a96f0394) [Broker/Bookie] Set -Dio.netty.tryReflectionSetAccessible=true for pulsar processes (#11138)
+
 ## Luna Streaming Distribution 2.7.2 1.1.0
 
 This is a major release for 2.7.2 release line.
