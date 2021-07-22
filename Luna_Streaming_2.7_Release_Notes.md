@@ -35,6 +35,14 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
+## Luna Streaming Distribution 2.7.2 1.1.2
+
+This is a bugfix release that fixes problems about Geo Replication and it contains the upgrade of Debezium library
+
+List of most notable commits:
+
+* [b09ad5a3712](https://github.com/datastax/pulsar/commit/b09ad5a3712) [Broker] Fix replicated subscriptions direct memory leak
+* [0f4b69129fd](https://github.com/datastax/pulsar/commit/0f4b69129fd) Upgrade Debezium to v.1.5.4 (last buildable with Java 8) (#6)
 
 ## Luna Streaming Distribution 2.7.2 1.1.1
 
