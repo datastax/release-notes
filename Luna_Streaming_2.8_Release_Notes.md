@@ -51,6 +51,15 @@ If you are upgrading from Apache Pulsar 2.7.0 or Luna Streaming 2.7.2 you may ne
 This is because there is a breaking API change in Apache Pulsar 2.8.0 (and so in Luna Streaming 2.8.0) related to the SchemaInfo java class.
 More context [here](https://github.com/apache/pulsar/issues/11338).
 
+## Luna Streaming Distribution 2.8.0 1.1.1
+
+This is a bugfix release that fixes problems about Geo Replication.
+It also includes the ALPHA version of the [OpenID Authentication plugin](https://github.com/datastax/pulsar-openid-connect-plugin).
+
+List of most notable commits:
+
+* [272c180f2da](https://github.com/datastax/pulsar/commit/272c180f2da) [Broker] Fix replicated subscriptions direct memory leak
+
 ## Luna Streaming Distribution 2.8.0 1.1.0
 
 This release is based on the [Apache Pulsar 2.8.0 release](https://pulsar.apache.org/release-notes/#280-mdash-2021-06-12-a-id280a).
