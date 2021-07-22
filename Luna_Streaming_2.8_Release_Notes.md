@@ -61,7 +61,7 @@ Most notably:
 - It contains upgrades to third party libraries for known CVEs (Netty, Apache Commons Compress, OkHttp3)
 - It fixes a problem with Bookies on TLS (anticipated from Apache BookKeeper 4.15.0-SNAPSHOT) 
 - It upgrades Debezium to 1.5.4
-- It fix a problem on deploying Pulsar Functions with parallelism > 1
+- It fixes a problem on deploying Pulsar Functions with parallelism > 1
 - It contains a BETA version of KOP (Kafka On Pulsar)
 
 In addition to the contents of that release and of Luna Streaming 2.8.0 1.0.0, it includes the following notable commits:
