@@ -47,7 +47,7 @@ If you are are using the Luna Streaming Helm chart, you can enable automatic rep
 
 ## Upgrade Considerations for custom Pulsar Functions and Pulsar IO Connectors
 
-If you are upgrading from Apache Pulsar 2.7.0 or Luna Streaming 2.7.2 you may need to recompile your Pulsar Functions or Pulsar IO Connectors using Apache Pulsar 2.8.0 as dependency in certain cases.
+If you are upgrading from Apache Pulsar 2.7.0 or Luna Streaming 2.7.2 you may need to recompile your Pulsar Functions or Pulsar IO Connectors using Apache Pulsar 2.8.0 as a dependency in certain cases.
 This is because there is a breaking API change in Apache Pulsar 2.8.0 (and so in Luna Streaming 2.8.0) related to the SchemaInfo java class.
 More context [here](https://github.com/apache/pulsar/issues/11338).
 
@@ -145,4 +145,3 @@ This release is based on the [Apache Pulsar 2.8.0 release](https://pulsar.apache
 * [674508ae9b3](https://github.com/datastax/pulsar/commit/674508ae9b3) Always return from trigger even if read from output topic times out
 * [ee864abc3d5](https://github.com/datastax/pulsar/commit/ee864abc3d5) update ds distro required io connectors
 * [be602b9855b](https://github.com/datastax/pulsar/commit/be602b9855b) auth token for debezium and kafka connect adaptor
-
