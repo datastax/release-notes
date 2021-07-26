@@ -37,7 +37,7 @@ If you are are using the Luna Streaming Helm chart, you can enable automatic rep
 
 ## Luna Streaming Distribution 2.7.2 1.1.3
 
-This is a bugfix release that add automatic update (at build time) of Ubuntu system components in order to address security issues caused
+This is a bugfix release that adds automatic updating (at build time) of Ubuntu system components in order to address security issues caused
 by third party dependencies imported inside the docker images.
 
 List of most notable commits:
