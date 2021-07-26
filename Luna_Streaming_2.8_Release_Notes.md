@@ -53,7 +53,7 @@ More context [here](https://github.com/apache/pulsar/issues/11338).
 
 ## Luna Streaming Distribution 2.8.0 1.1.2
 
-This is a bugfix release that add automatic update (at build time) of Ubuntu system components in order to address security issues caused
+This is a bugfix release that adds automatic updating (at build time) of Ubuntu system components in order to address security issues caused
 by third party dependencies imported inside the docker images.
 
 List of most notable commits:
