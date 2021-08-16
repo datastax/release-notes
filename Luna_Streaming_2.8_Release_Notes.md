@@ -51,6 +51,15 @@ If you are upgrading from Apache Pulsar 2.7.0 or Luna Streaming 2.7.2 you may ne
 This is because there is a breaking API change in Apache Pulsar 2.8.0 (and so in Luna Streaming 2.8.0) related to the SchemaInfo java class.
 More context [here](https://github.com/apache/pulsar/issues/11338).
 
+## Luna Streaming Distribution 2.8.0 1.1.2
+
+This is a bugfix release that adds automatic updating (at build time) of Ubuntu system components in order to address security issues caused
+by third party dependencies imported inside the docker images.
+
+List of most notable commits:
+
+* [e0b83008b28](https://github.com/datastax/pulsar/commit/e0b83008b28) [Security] Install Ubuntu updates while building docker image
+
 ## Luna Streaming Distribution 2.8.0 1.1.1
 
 This is a bugfix release that fixes problems about Geo Replication.

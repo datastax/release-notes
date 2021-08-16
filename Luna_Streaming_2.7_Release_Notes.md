@@ -35,6 +35,15 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
+## Luna Streaming Distribution 2.7.2 1.1.3
+
+This is a bugfix release that adds automatic updating (at build time) of Ubuntu system components in order to address security issues caused
+by third party dependencies imported inside the docker images.
+
+List of most notable commits:
+
+* [00b4dd439fc](https://github.com/datastax/pulsar/commit/00b4dd439fc) [Security] Install Ubuntu updates while building docker image
+
 ## Luna Streaming Distribution 2.7.2 1.1.2
 
 This is a bugfix release that fixes problems about Geo Replication and it contains the upgrade of Debezium library
