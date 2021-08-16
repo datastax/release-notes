@@ -51,6 +51,14 @@ If you are upgrading from Apache Pulsar 2.7.0 or Luna Streaming 2.7.2 you may ne
 This is because there is a breaking API change in Apache Pulsar 2.8.0 (and so in Luna Streaming 2.8.0) related to the SchemaInfo java class.
 More context [here](https://github.com/apache/pulsar/issues/11338).
 
+## Luna Streaming Distribution 2.8.0 1.1.3
+
+This is a bugfix release that upgrates Jetty to latest available version 9.4.43.v20210629.
+
+List of most notable commits:
+
+* [9140c12d79a](https://github.com/datastax/pulsar/commit/9140c12d79a) [Security] Upgrade Jetty to 9.4.43.v20210629 (#11660)
+
 ## Luna Streaming Distribution 2.8.0 1.1.2
 
 This is a bugfix release that adds automatic updating (at build time) of Ubuntu system components in order to address security issues caused
