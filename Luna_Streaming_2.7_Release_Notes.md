@@ -35,6 +35,14 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
+## Luna Streaming Distribution 2.7.2 1.1.4
+
+This is a bugfix release that upgrades a third party library, Jetty, to the latest version 9.4.43.v20210629.
+
+List of most notable commits:
+
+* [c76d7d20b01](https://github.com/datastax/pulsar/commit/c76d7d20b01) [Security] Upgrade Jetty to 9.4.43.v20210629 (#11660)
+
 ## Luna Streaming Distribution 2.7.2 1.1.3
 
 This is a bugfix release that adds automatic updating (at build time) of Ubuntu system components in order to address security issues caused
