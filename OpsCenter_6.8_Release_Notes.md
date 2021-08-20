@@ -1,5 +1,31 @@
 # Release notes for OpsCenter
 
+# Release notes for 6.8.15
+19 Aug 2021
+
+## 6.8.15 DSE Backup Service
+* Fixed the restore of Transparent Data Encryption (TDE) enabled tables and keyspaces. (OPSC-16845)
+* Improved communication between agents and Opscenter. (OPSC-16939)
+
+## 6.8.15 DSE Monitoring
+* The solr query metrics - mbean data - update, merge, query, commit, search index pool, stall and filtercache metrics are added as opscenter metrics. (OPSC-14846)
+
+## 6.8.15 DSE NodeSync
+* Disable the nodesync refresh by modifying environment requirements in the `[nodesync]` section. (OPSC-16968)
+
+## 6.8.15 DSE UI
+* Fixed issue of unavailability of SAI related metrics. (OPSC-16903)
+
+## 6.8.15 DSE
+* Added new config `single_session_per_user` in authentication section so by setting it to `True` with `enabled` option will enable the single session per user under different browsers. (OPSC-16830)
+* Improved the look up of snapshots from other locations to ensure all snapshots are listed when snapshots differ based on datacenter. (OPSC-16985)
+* Added a template for sending messages over slack webhooks. (OPSC-16535)
+* Introduced new config flag `ssl_redirect` to disable port 8888 when ssl is enabled. (OPSC-16928)
+* Fixed DSE startup failure during PIT restore. (OPSC-16942)
+* Added support for the `clusters/datacenters/nodes` with non-default ssh port while importing into the LCM. (OPSC-16953)
+* Permissions to `/etc/opscenter/` path for other users is restricted. (OPSC-16976)
+* Updated backup destination logic to be datacenter aware. (OPSC-16984)
+
 # Release notes for OpsCenter 6.8.14
 04 June 2021
 
