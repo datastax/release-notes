@@ -35,6 +35,17 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
+## Luna Streaming Distribution 2.7.2 1.1.5
+
+This is a bugfix release that allows you to run Pulsar while disabling non-TLS service ports and it fixes a problem with KEY_BASED BatchBulder in Pulsar IO.
+
+List of most notable commits:
+
+* [e365009b561](https://github.com/datastax/pulsar/commit/e365009b561) [Broker] Call .release() when discarding entry to prevent direct memory leak (#11748)
+* [cffa69d5215](https://github.com/datastax/pulsar/commit/cffa69d5215) [Broker] Handle NPE when full key range isn't covered with active consumers (#11749)
+* [e1498a0a86b](https://github.com/datastax/pulsar/commit/e1498a0a86b) [Broker] Support disabling non-TLS service ports (#11681)
+* [36312027240](https://github.com/datastax/pulsar/commit/36312027240) Support setting KEY_BASED batch builder for Pulsar Sinks
+
 ## Luna Streaming Distribution 2.7.2 1.1.4
 
 This is a bugfix release that upgrades a third party library, Jetty, to the latest version 9.4.43.v20210629.

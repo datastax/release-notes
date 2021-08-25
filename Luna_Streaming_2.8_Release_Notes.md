@@ -51,6 +51,18 @@ If you are upgrading from Apache Pulsar 2.7.0 or Luna Streaming 2.7.2 you may ne
 This is because there is a breaking API change in Apache Pulsar 2.8.0 (and so in Luna Streaming 2.8.0) related to the SchemaInfo java class.
 More context [here](https://github.com/apache/pulsar/issues/11338).
 
+## Luna Streaming Distribution 2.8.0 1.1.4
+
+This is a bugfix release that allows you to run Pulsar while disabling non-TLS service ports and it fixes a problem with KEY_BASED BatchBulder in Pulsar IO.
+
+List of most notable commits:
+
+* [e97d53283a2](https://github.com/datastax/pulsar/commit/e97d53283a2) [Broker] Call .release() when discarding entry to prevent direct memory leak (#11748)
+* [968432ca056](https://github.com/datastax/pulsar/commit/968432ca056) [Broker] Handle NPE when full key range isn't covered with active consumers (#11749)
+* [79db72e9e3e](https://github.com/datastax/pulsar/commit/79db72e9e3e) [Functions] Support KEY_BASED batch builder for Java based functions and sources
+* [a547b20b09c](https://github.com/datastax/pulsar/commit/a547b20b09c) [Broker] Support disabling non-TLS service ports (#11681)
+* [550e6e1346a](https://github.com/datastax/pulsar/commit/550e6e1346a) [Transaction] Fix the transaction marker does not deleted as expect. (#11126)
+
 ## Luna Streaming Distribution 2.8.0 1.1.3
 
 This is a bugfix release that upgrates Jetty to latest available version 9.4.43.v20210629.
