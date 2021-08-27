@@ -1,13 +1,39 @@
 # Release notes for DataStax Enterprise 6.8
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.8.15
+26 August 2021
+
+## Components versions for DSE 6.8.15
+
+   * Apache Solr™ 6.0.1.4.2840
+   * Apache Spark™ 2.4.0.18
+   * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
+   * Apache Tomcat® 8.5.65
+   * DSE Java Driver 1.10.0-dse+20210424
+   * Netty 4.1.25.7.dse
+   * Spark JobServer 0.8.0.50
+
+## 6.8.15 DSE CVE
+
+* upgraded Bootstrap version from 3.1.1 to 3.4.1, upgraded Flask from 0.10.1 to 1.1.4. (DSP-21682)
+* Upgraded version of directory-ldap-api from DSE 1.0.0.2.dse to OSS 1.0.3 (DSP-21758)
+
+## 6.8.15 DSE Spark
+
+* Spark had an unused dependency on azure-storage-blob jar files version 12.4.0 which was removed from Azure repos. This fix removes the dependency. (DSP-21978)
+
+## 6.8.15 DSE TPC
+
+Execution of the back pressure task can be rejected in TPC, leading to the back pressure job being dropped entirely and then deadlocking. This was fixed by properly rescheduling the task. (DB-5027)
+
 # Release notes for 6.8.14
 07 July 2021
 
 ## 6.8.14 DSE Platform
 * Provide DSE support for Ubuntu 20.04 (Focal) (DSP-21330). Please note that certification was done using Python 2.7 and Python 2.7 needs to be available on the target system.
 
-# Components versions for DSE 6.8.14
+## Components versions for DSE 6.8.14
    * Apache Solr™ 6.0.1.4.2840
    * Apache Spark™ 2.4.0.18
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
@@ -51,7 +77,7 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 # Release notes for DSE 6.8.13
 18 May 2021
 
-# Components versions for DSE 6.8.13
+## Components versions for DSE 6.8.13
    * Apache Solr™ 6.0.1.4.2840
    * Apache Spark™ 2.4.0.18
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
