@@ -1,5 +1,11 @@
 # Release notes for DataStax Enterprise 6.8
-DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
+DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version. 
+
+# Addition to Release Notes for 6.8.15
+31 August 2021
+
+## 6.8.15 DSE Platform
+* Provide DSE support for Centos8, Red Hat Enterprise Linux 8 and Oracle Linux (DSP-19104). Please note that certification was done using Python 2.7 and Python 2.7 needs to be available on the target system. SparkR version included in DSE 6.8.15 is not compatible with the default R version >= 4.0.0.
 
 # Release notes for 6.8.15
 26 August 2021
