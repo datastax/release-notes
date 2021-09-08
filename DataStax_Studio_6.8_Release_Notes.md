@@ -1,5 +1,19 @@
 # Release notes for DataStax Studio 6.8
 
+# Release notes for DataStax Studio 6.8.15
+10 September 2021
+
+## Studio 6.8.15 Client
+* Add Kerberos authentication support for CQL connections. (STUDIO-1685)
+* Add ability to clone Notebooks and Connection Configurations. (STUDIO-2857)
+* Correct filtering of system keyspaces that belong to DSE Classic Graphs. (STUDIO-3194)
+* Remove warning about `SELECT` permissions on `system_auth.roles` when connected to Astra. (STUDIO-3191)
+
+## Studio 6.8.15 Server
+* Add a configuration option, `querySystemAuthEnabled`, that determines if the `system_auth.roles` table should be queried by the Studio server to get metadata information about user roles. When this option value is set `false`, Studio will not to query the table at all, eliminating DSE audit log entries when the connected Studio user does not have `SELECT` permission to `system_auth.roles`. (STUDIO-3192)
+
+(:information_source: **Note**: there were no Studio 6.8.12, 6.8.13 or 6.1.14 releases)
+
 # Release notes for DataStax Studio 6.8.11
 03 May 2021
 
