@@ -1,13 +1,30 @@
 # Release notes for DataStax Enterprise 5.1
 DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# DataStax Enterprise 5.1.26
+21 September 2021
+
+## 5.1.26 DSE core
+* Added check against the negative value in local stream throughput (stream_throughput_outbound_megabits_per_sec) and inter dc stream throughput (inter_dc_stream_throughput_outbound_megabits_per_sec) (DB-5010)
+
+## 5.1.26 DSE SSTables
+* Backported fixes from CASSANDRA-15595 that prevent IllegalBound exceptions in tables with huge data and CASSANDRA-15869 that fixes MemoryOutputStream overflow on large bloom filters. (DB-5035)
+
+## 5.1.26 DSE CVE
+* Upgraded Tomcat version from 8.5.65 to 8.5.70 to fix CVE-2021-33037. (DSP-21996)
+* Upgraded Bootstrap version from 3.1.1 to 3.4.1 and Flask from 0.10.1 to 1.1.4 to fix CVE-2019-8331, CVE-2016-10735, CVE-2018-1000656, and CVE-2019-1010083. (DSP-21682)
+* Ported fix from SOLR-12514 to dse lucene-Solr to fix CVE-2018-11802. (DSP-21685)
+* Upgraded version of PDFBox and FontBox to 2.0.24, and version of JempBox to 1.8.16 to fix CVE-2018-8036 and CVE-2018-11797. (DSP-21688)
+* Upgraded version of directory-ldap-api from DSE 1.0.0.2.dse to OSS 1.0.3 to fix CVE-2018-1337. (DSP-21758)
+* Upgraded version of groovy to 2.4.21 (DSE 5.1/6.0/67) and to 2.5.14 (DSE 6.8) to fix CVE-2020-17521. (DSP-21767)
+
 # DataStax Enterprise 5.1.25
 16 July 2021
 
 ## 5.1.25 DSE Platform
 * Provide DSE support for Ubuntu 20.04 (Focal) (DSP-21330). Please note that certification was done using Python 2.7 and Python 2.7 needs to be available on the target system.
 
-# Components versions for DSE 5.1.25
+## Components versions for DSE 5.1.25
    * Apache Solr™ 6.0.1.0.2841
    * Apache Spark™ 2.0.2.42
    * Apache TinkerPop™ 3.2.11-20210601-6b27fbde
