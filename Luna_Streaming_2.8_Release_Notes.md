@@ -24,7 +24,7 @@ This release adds these features to the original Apache Pulsar 2.8.0 release:
    * An Enhanced ElasticSearch Pulsar IO Sink  
    * An Enhanced version of Apache BookKeeper 4.14.2 with security fixes
    * Pulsar IO source for Debezium Oracle
-   * [Pulsar Proxy extensions](https://github.com/apache/pulsar/pull/11838) feature 
+   * [Pulsar Proxy extensions](https://github.com/apache/pulsar/wiki/PIP-99%3A-Pulsar-Proxy-Extensions) feature 
  
 *Note:* The DataStax Luna Streaming Distribution is designed for Java 11. However, because the product releases Docker images, you do not need to install Java (8 or 11) in advance. Java 11 is bundled in the Docker image.
 
@@ -57,7 +57,7 @@ More context [here](https://github.com/apache/pulsar/issues/11338).
 
 This release contains some bugfixes and a couple of relevant improvements, most notably:
 - New Debezium Oracle source
-- [Pulsar Proxy extensions](https://github.com/apache/pulsar/pull/11838) (from Apache Pulsar 2.9.0)
+- [Pulsar Proxy extensions](https://github.com/apache/pulsar/wiki/PIP-99%3A-Pulsar-Proxy-Extensions) (from Apache Pulsar 2.9.0)
 - Netty upgrade to 4.1.68.Final
 - BookKeeper upgrade to 4.14.2 
 
