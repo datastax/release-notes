@@ -9,10 +9,10 @@ Luna Streaming Distribution 2.8.0 is compatible with Apache Pulsar&trade; 2.8.0.
    * Apache Pulsar 2.8.0
    * DataStax Pulsar Admin Console 1.0.0
    * DataStax Pulsar Heartbeat 1.0.2
-   * DataStax Apache Pulsar Cassandra Sink 1.4.0
-   * DataStax Apache Pulsar Cassandra Source 0.1.0
+   * DataStax Apache Pulsar Cassandra Sink 1.5.0
+   * DataStax Apache Pulsar Cassandra Source 0.2.5
    * DataStax Burnell 1.0.0
-   * Apache BookKeeper 14.1.1
+   * Apache BookKeeper 14.4.2
  
 This release adds these features to the original Apache Pulsar 2.8.0 release:
   
@@ -22,7 +22,9 @@ This release adds these features to the original Apache Pulsar 2.8.0 release:
    * Docker images based on Ubuntu (instead of Debian based images in Pulsar 2.8.0, for security reasons)
    * Dependency upgrades (for security, stability and performances)
    * An Enhanced ElasticSearch Pulsar IO Sink  
-   * An Enhanced version of Apache BookKeeper 4.14.1 with security fixes
+   * An Enhanced version of Apache BookKeeper 4.14.2 with security fixes
+   * Pulsar IO source for Debezium Oracle
+   * [Pulsar Proxy extensions](https://github.com/apache/pulsar/pull/11838) feature 
  
 *Note:* The DataStax Luna Streaming Distribution is designed for Java 11. However, because the product releases Docker images, you do not need to install Java (8 or 11) in advance. Java 11 is bundled in the Docker image.
 
@@ -53,10 +55,11 @@ More context [here](https://github.com/apache/pulsar/issues/11338).
 
 ## Luna Streaming Distribution 2.8.0 1.1.5
 
-This is a bugfix release, the most notably features are:
+This release contains some bugfixes and a couple of relevant improvements, most notably:
 - New Debezium Oracle source
-- Proxy extensions (from Apache Pulsar 2.9.0)
-- Netty upgrade 
+- [Pulsar Proxy extensions](https://github.com/apache/pulsar/pull/11838) (from Apache Pulsar 2.9.0)
+- Netty upgrade to 4.1.68.Final
+- BookKeeper upgrade to 4.14.2 
 
 List of most notable commits:
 
