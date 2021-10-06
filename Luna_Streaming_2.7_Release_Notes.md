@@ -35,6 +35,19 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
+## Luna Streaming Distribution 2.7.2 1.1.6
+
+This is a bugfix release and enhance the support for some Pulsar IO connectors with the usage of native Avro Schema.
+
+List of most notable commits:
+
+* [a931bf276a5](https://github.com/datastax/pulsar/commit/a931bf276a5) Remove Pulsar Dashboard
+* [8d0a967ff25](https://github.com/datastax/pulsar/commit/8d0a967ff25) [Pulsar IO] ElasticSearch Sink: support Fixed and ENUM datatypes
+* [4f7c838a160](https://github.com/datastax/pulsar/commit/4f7c838a160) ElasticSearch Sink: handle Cassandra cql_varint and cql_decimal logical types - add support for dealing with custom logical types 'cql_varint' and 'cql_decimal' - add test case for 'cql_duration'
+* [c1c297f916c](https://github.com/datastax/pulsar/commit/c1c297f916c) [Issue 11007]  add a version of AUTO_PRODUCE_BYTES that doesn't validate the message in `encode` (#11238)
+* [49874b2937c](https://github.com/datastax/pulsar/commit/49874b2937c) Forbid to read other topic's data in managedLedger layer (#11912)
+
+
 ## Luna Streaming Distribution 2.7.2 1.1.5
 
 This is a bugfix release that allows you to run Pulsar while disabling non-TLS service ports and it fixes a problem with KEY_BASED BatchBulder in Pulsar IO.
