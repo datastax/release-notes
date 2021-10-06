@@ -9,10 +9,10 @@ Luna Streaming Distribution 2.8.0 is compatible with Apache Pulsar&trade; 2.8.0.
    * Apache Pulsar 2.8.0
    * DataStax Pulsar Admin Console 1.0.0
    * DataStax Pulsar Heartbeat 1.0.2
-   * DataStax Apache Pulsar Cassandra Sink 1.4.0
-   * DataStax Apache Pulsar Cassandra Source 0.1.0
+   * DataStax Apache Pulsar Cassandra Sink 1.5.0
+   * DataStax Apache Pulsar Cassandra Source 0.2.5
    * DataStax Burnell 1.0.0
-   * Apache BookKeeper 14.1.1
+   * Apache BookKeeper 4.14.2
  
 This release adds these features to the original Apache Pulsar 2.8.0 release:
   
@@ -22,7 +22,9 @@ This release adds these features to the original Apache Pulsar 2.8.0 release:
    * Docker images based on Ubuntu (instead of Debian based images in Pulsar 2.8.0, for security reasons)
    * Dependency upgrades (for security, stability and performances)
    * An Enhanced ElasticSearch Pulsar IO Sink  
-   * An Enhanced version of Apache BookKeeper 4.14.1 with security fixes
+   * An Enhanced version of Apache BookKeeper 4.14.2 with security fixes
+   * Pulsar IO source for Debezium Oracle
+   * [Pulsar Proxy extensions](https://github.com/apache/pulsar/wiki/PIP-99%3A-Pulsar-Proxy-Extensions) feature 
  
 *Note:* The DataStax Luna Streaming Distribution is designed for Java 11. However, because the product releases Docker images, you do not need to install Java (8 or 11) in advance. Java 11 is bundled in the Docker image.
 
@@ -50,6 +52,39 @@ If you are are using the Luna Streaming Helm chart, you can enable automatic rep
 If you are upgrading from Apache Pulsar 2.7.0 or Luna Streaming 2.7.2 you may need to recompile your Pulsar Functions or Pulsar IO Connectors using Apache Pulsar 2.8.0 as a dependency in certain cases.
 This is because there is a breaking API change in Apache Pulsar 2.8.0 (and so in Luna Streaming 2.8.0) related to the SchemaInfo java class.
 More context [here](https://github.com/apache/pulsar/issues/11338).
+
+## Luna Streaming Distribution 2.8.0 1.1.5
+
+This release contains some bugfixes and a couple of relevant improvements, most notably:
+- New Debezium Oracle source
+- [Pulsar Proxy extensions](https://github.com/apache/pulsar/wiki/PIP-99%3A-Pulsar-Proxy-Extensions) (from Apache Pulsar 2.9.0)
+- Netty upgrade to 4.1.68.Final
+- BookKeeper upgrade to 4.14.2 
+
+List of most notable commits:
+
+* [bad1f7057f9](https://github.com/datastax/pulsar/commit/bad1f7057f9) Update BK dependency to Apache 4.14.2
+* [0660316ceca](https://github.com/datastax/pulsar/commit/0660316ceca) Upgrade netty to 4.1.68.Final (#12218)
+* [dc7af79db0f](https://github.com/datastax/pulsar/commit/dc7af79db0f) [Pulsar IO] ElasticSearch Sink: support Fixed and ENUM datatypes
+* [7b86934429f](https://github.com/datastax/pulsar/commit/7b86934429f) Debezium Oracle Source (#11520)
+* [b3ddb476354](https://github.com/datastax/pulsar/commit/b3ddb476354) make KafkaSourceRecord ack() async to avoid deadlock (#11435)
+* [2d42f0f35d1](https://github.com/datastax/pulsar/commit/2d42f0f35d1) [pulsar-io] pass the pulsar service url to debezium source for history database (#11251)
+* [cb2ba71c30f](https://github.com/datastax/pulsar/commit/cb2ba71c30f) PIP-85: [pulsar-io] pass pulsar client via context to connector (#11056)
+* [b3917afe046](https://github.com/datastax/pulsar/commit/b3917afe046) [Issue 11689][Client] Fixed block forever bug in Consumer.batchReceive (#11691)
+* [84d78b4c091](https://github.com/datastax/pulsar/commit/84d78b4c091) Handle receiveAsync() failures in MultiTopicsConsumer (#11843)
+* [96da2c4b663](https://github.com/datastax/pulsar/commit/96da2c4b663) [Client] Fix endless receiveAsync loop in MultiTopicsConsumer (#12044)
+* [196cd08ae3e](https://github.com/datastax/pulsar/commit/196cd08ae3e) Fixed accessing MessageImpl after it was enqueued on user queue (#11824)
+* [f4ef4f326a9](https://github.com/datastax/pulsar/commit/f4ef4f326a9) [Issue 11007]  add a version of AUTO_PRODUCE_BYTES that doesn't validate the message in `encode` (#11238)
+* [1ec194cd07b](https://github.com/datastax/pulsar/commit/1ec194cd07b) Fixed KCA Sink handling of Json and Avro; support for kafka connectors that overload task.preCommit() directly (#11905)
+* [7cbea875fa7](https://github.com/datastax/pulsar/commit/7cbea875fa7) Avoid to infinitely split bundle (#11937)
+* [49be8b85ac2](https://github.com/datastax/pulsar/commit/49be8b85ac2) Fix wrong key-hash selector used for new consumers after all the previous consumers disconnected (#12035)
+* [98ef811a699](https://github.com/datastax/pulsar/commit/98ef811a699) Fix the topic in fenced state and can not recover. (#11737)
+* [10e74d9ecc0](https://github.com/datastax/pulsar/commit/10e74d9ecc0) fix parseMessageMetadata error cause by not skip broker entry metadata (#10968)
+* [d4197345496](https://github.com/datastax/pulsar/commit/d4197345496) Forbid to read other topic's data in managedLedger layer (#11912)
+* [7e99a6a86e1](https://github.com/datastax/pulsar/commit/7e99a6a86e1) Fixed Proxy leaking outbound connections (#11848)
+* [42cf81bd613](https://github.com/datastax/pulsar/commit/42cf81bd613) PIP-99 Pulsar Proxy Protocol Handlers
+
+
 
 ## Luna Streaming Distribution 2.8.0 1.1.4
 
