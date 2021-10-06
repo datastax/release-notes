@@ -12,7 +12,7 @@ Luna Streaming Distribution 2.8.0 is compatible with Apache Pulsar&trade; 2.8.0.
    * DataStax Apache Pulsar Cassandra Sink 1.5.0
    * DataStax Apache Pulsar Cassandra Source 0.2.5
    * DataStax Burnell 1.0.0
-   * Apache BookKeeper 14.4.2
+   * Apache BookKeeper 4.14.2
  
 This release adds these features to the original Apache Pulsar 2.8.0 release:
   
