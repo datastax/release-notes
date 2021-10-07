@@ -2,39 +2,32 @@
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version. 
 
 # Release notes for 6.8.16
-
 7 October 2021
 
 ## Components versions for DSE 6.8.16
-
-   * Apache Solr™ 6.0.1.4.2887
+   * Apache Solr™ 6.0.1.4.2887&ast;
    * Apache Spark™ 2.4.0.18
-   * Apache TinkerPop™ 3.4.5-20210816-c28c0de2
-   * Apache Tomcat® 8.5.70
+   * Apache TinkerPop™ 3.4.5-20210816-c28c0de2&ast;
+   * Apache Tomcat® 8.5.70&ast;
    * DSE Java Driver 1.10.0-dse+20210424
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.50
 
 ## 6.8.16 DSE Cassandra
-
 * The Change Data Capture (CDC) is now near real time as in Cassandra 4.x. Active commitlog segments can be processed from the CDC raw directory defined in your `cassandra.yaml` without flushing tables. It also allows you to read the last mutation form the most recent commitlog file. See the [Datastax Change Data Capture documentation page](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/config/configCDCLogging.html) for more details. (DSP-21992)
 
 ## 6.8.16 DSE core
-
 * Added check against the negative value in local stream throughput `stream_throughput_outbound_megabits_per_sec` and inter dc stream throughput `inter_dc_stream_throughput_outbound_megabits_per_sec` (DB-5010)
 * Fixes output of compaction file progress. (DB-5028)
 
 ## 6.8.16 DSE Local Write-Read Paths
-
 * Resolves a TPC weakness with large rows and collections, where DSE 6 would repeatedly attempt to read the same row and create a lot of on-heap garbage. (DB-3962)
 
 ## 6.8.16 DSE CVE
-
 * Ported fix from SOLR-12514 to dse lucene-Solr to fix CVE-2018-11802. (DSP-21685)
 * Upgraded version of PDFBox and FontBox to 2.0.24, and version of JempBox to 1.8.16 to fix CVE-2018-8036 and CVE-2018-11797. (DSP-21688)
 * Upgraded version of groovy to 2.4.21 (DSE 5.1/6.0/67) and to 2.5.14 (DSE 6.8) to fix CVE-2020-17521. (DSP-21767)
 * Upgraded version of Tomcat from 8.5.65 to 8.5.70 to fix CVE-2021-33037. (DSP-21996)
-
 
 # Addition to Release Notes for 6.8.15
 31 August 2021
