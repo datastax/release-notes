@@ -35,6 +35,17 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
+## Luna Streaming Distribution 2.7.2 1.1.7
+
+This release allows Datastax to publish Luna Streaming artifacts with the proprietary groupId "com.datastax.oss"; also it contains bugfixes and lib updates.
+
+List of most notable commits:
+
+* [1e4b53bbc52](https://github.com/datastax/pulsar/commit/1e4b53bbc52) Upgrading Debezium to 1.7 (#12295)
+* [f741cade4f2](https://github.com/datastax/pulsar/commit/f741cade4f2) New distro groupId 'com.datastax.oss'
+* [df2ac59e5e2](https://github.com/datastax/pulsar/commit/df2ac59e5e2) [Proxy] set default httpProxyTimeout to 5 minutes (#12299)
+* [2a31adc2089](https://github.com/datastax/pulsar/commit/2a31adc2089) [Issue-11966][pulsar-proxy] set default http proxy request timeout (#11971)
+
 ## Luna Streaming Distribution 2.7.2 1.1.6
 
 This is a bugfix release and enhance the support for some Pulsar IO connectors with the usage of native Avro Schema.
