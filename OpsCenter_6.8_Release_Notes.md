@@ -1,5 +1,21 @@
 # Release notes for OpsCenter
 
+# Release notes for OpsCenter 6.8.16
+
+## 6.8.16 DSE Backup Service
+
+* Fixed restore for a schema with restrict rows on condition is present. (OPSC-16924)
+* Fixed the restore of solr index keyspaces having capitalized table name. (OPSC-16970)
+
+## 6.8.16 DSE 
+
+* If allow_one_failure under [backup_service] in opscenterd.conf is set to true, backups where a single node failed will now be marked as a success rather than a failure. (OPSC-16961)
+* Added the new config parameter "cluster_name_restore_confirmation" to the "[ui]" section of opscenterd.conf. When set to True this will added a text field to the restore confirmation window where the user will have to type the name of the cluster before the restore will run. (OPSC-16994)
+* Making the restore progress even when the dse version can't be determined.  (OPSC-17001)
+* Removed config parameters remote_verify_initial_delay and remote_verify_max from address.yaml because they are no longer used by the code.  (OPSC-17023)
+* Fixed a bug where default values took precedence over explicit values in the [agent_config] section of the cluster config file. (OPSC-17029)
+* When downloading diagnostic tarballs with the diagnostic_tarball_lock_time feature, old diagnostic tarballs will be deleted from the disk before a new one is generated. (OPSC-16997)
+
 # Release notes for 6.8.15
 19 Aug 2021
 
