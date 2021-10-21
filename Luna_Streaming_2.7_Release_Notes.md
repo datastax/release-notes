@@ -10,7 +10,7 @@ Luna Streaming Distribution 2.7.2 is compatible with Apache Pulsar&trade; 2.7.2.
    * DataStax Pulsar Admin Console 1.0.0
    * DataStax Pulsar Heartbeat 1.0.2
    * DataStax Apache Pulsar Cassandra Sink 1.4.0
-   * DataStax Apache Pulsar Cassandra Source 0.1.0
+   * DataStax Apache Pulsar Cassandra Source 0.2.8
    * DataStax Burnell 1.0.0
  
 This release adds these features to the original Apache Pulsar 2.7.2 release:
@@ -34,6 +34,16 @@ chown -R 10000:10001 /pulsar/data
 ```
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
+
+## Luna Streaming Distribution 2.7.2 1.1.8
+
+This release contains mainly a new release of Cassandra Source Connector.
+
+List of most notable commits:
+
+* [b1c80e79894](https://github.com/datastax/pulsar/commit/b1c80e79894) [function] fix update user config (#10731)
+* [1ffa32c0c83](https://github.com/datastax/pulsar/commit/1ffa32c0c83) Remove pulsar-standalone docker image
+
 
 ## Luna Streaming Distribution 2.7.2 1.1.7
 
