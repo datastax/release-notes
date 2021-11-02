@@ -35,6 +35,18 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
+
+## Luna Streaming Distribution 2.7.2 1.1.9
+
+This is a bugfix release. It solves a problem where a Consumer could hang forever and a better error handling in the KCA functions.
+
+List of most notable commits:
+
+* [e9f59829aa0](https://github.com/datastax/pulsar/commit/e9f59829aa0) Fix IndexOutOfBoundsException in PersistentDispatcherMultipleConsumers
+* [52299cba839](https://github.com/datastax/pulsar/commit/52299cba839) Stop OffsetStore when stopping the connector (#12457)
+* [db99ab9af8d](https://github.com/datastax/pulsar/commit/db99ab9af8d) KCA doesn't handle unchecked unchecked ConnectException/KafkaException for the task, it may lead to the connector hanging (#12441)
+
+
 ## Luna Streaming Distribution 2.7.2 1.1.8
 
 This release contains mainly a new release of Cassandra Source Connector.
