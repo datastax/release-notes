@@ -1,6 +1,37 @@
 # Release notes for DataStax Enterprise 6.8
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version. 
 
+# Release notes for 6.8.17
+4 November 2021
+
+## Components versions for DSE 6.8.17
+* Apache Solr™ 6.0.1.4.2887
+* Apache Spark™ 2.4.0.18
+* Apache TinkerPop™ 3.4.5-20210816-c28c0de2
+* Apache Tomcat® 8.5.70
+* DSE Java Driver 1.10.0-dse+20210424
+* Netty 4.1.25.7.dse
+* Spark JobServer 0.8.0.50
+
+## 6.8.17 DSE Cassandra
+* Enables periodic logging of system status (default every 5 minutes, configurable)
+* Fix a possible issue that shell tool could break with `-h`/`--help` in package install
+
+## 6.8.17 DSE Core
+* Fixed a bug in the authenticator that would use the default management mode instead of the defined mode by authentication when authenticating
+* Fixes stack overflow with secondary indexes on collections
+* Fixed an issue in preloading prepared statements that queries static columns
+
+## 6.8.17 DSE Security
+* Fixes issue that when disabling `system_info_encryption` configuration in `dse.yaml`, encryption for tables in the `system_backups` keyspace would not turn off
+
+## 6.8.17 DSE CQL
+* Prints TLS protocol information when running `cqlsh` with `--debug` parameter
+
+## 6.8.17 DSE Spark/Hive
+* Fixes broken partition filtering in hive metastore leading to missing data in the spark-sql queries results for queries involving numeric partition keys or complex conditions
+
+
 # Release notes for 6.8.16
 7 October 2021
 
