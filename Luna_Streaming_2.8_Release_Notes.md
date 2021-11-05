@@ -10,7 +10,7 @@ Luna Streaming Distribution 2.8.0 is compatible with Apache Pulsar&trade; 2.8.0.
    * DataStax Pulsar Admin Console 1.0.0
    * DataStax Pulsar Heartbeat 1.0.2
    * DataStax Apache Pulsar Cassandra Sink 1.5.0
-   * DataStax Apache Pulsar Cassandra Source 0.2.5
+   * DataStax Apache Pulsar Cassandra Source 0.2.10
    * DataStax Burnell 1.0.0
    * Apache BookKeeper 4.14.2
  
@@ -52,6 +52,60 @@ If you are are using the Luna Streaming Helm chart, you can enable automatic rep
 If you are upgrading from Apache Pulsar 2.7.0 or Luna Streaming 2.7.2 you may need to recompile your Pulsar Functions or Pulsar IO Connectors using Apache Pulsar 2.8.0 as a dependency in certain cases.
 This is because there is a breaking API change in Apache Pulsar 2.8.0 (and so in Luna Streaming 2.8.0) related to the SchemaInfo java class.
 More context [here](https://github.com/apache/pulsar/issues/11338).
+
+
+## Luna Streaming Distribution 2.8.0 1.1.6
+
+This release contains several bugfixes and improvements, most notably:
+
+* Pulsar IO: Debezium upgrade to 1.7
+* Pulsar IO: Datastax Cassandra Source Connector 0.2.10
+* Better error handling for KCA based functions
+* Improvements to ensure the production order of the messages
+* Java artifacts are now available under the groupId `com.datastax.oss` (use `org.apache.pulsar` for Luna Streaming < 2.8.0.1.1.6)
+
+List of most notable commits:
+
+* [ae3cc95a406](https://github.com/datastax/pulsar/commit/ae3cc95a406) [ML] Add OpAddEntry to pendingAddEntries after the state check (#12570)
+* [111ee2dc098](https://github.com/datastax/pulsar/commit/111ee2dc098) Fix cherry-pick issue
+* [d4e5fb0da16](https://github.com/datastax/pulsar/commit/d4e5fb0da16) [managedledger] NPE on OpAddEntry while ManagedLedger is closing (#12364)
+* [eb9c46c70d3](https://github.com/datastax/pulsar/commit/eb9c46c70d3) Replace orElse with orElseGet to avoid calling too many times. (#11542) (#11542)
+* [36132a13b60](https://github.com/datastax/pulsar/commit/36132a13b60) [Branch-2.8]fix cherry-pick issue (#12397)
+* [07d164ef6d8](https://github.com/datastax/pulsar/commit/07d164ef6d8) fix cherry-pick compile issue
+* [ed6dc9fd3c6](https://github.com/datastax/pulsar/commit/ed6dc9fd3c6) [Java Client] Remove data race in MultiTopicsConsumerImpl to ensure correct message order (#12456)
+* [0e62209dc75](https://github.com/datastax/pulsar/commit/0e62209dc75) [pulsar-java-client] Auto-recovery after exception like out of direct memory (#12170)
+* [c9af4ab422b](https://github.com/datastax/pulsar/commit/c9af4ab422b) Avoid potentially blocking calls to metadata on critical threads (#12339)
+* [beb75c00b68](https://github.com/datastax/pulsar/commit/beb75c00b68) Fix message being ignored when the non-persistent topic reader reconnect. (#12348)
+* [ff16c9405c8](https://github.com/datastax/pulsar/commit/ff16c9405c8) Fix Pulsar Proxy to re-use authentication instance (#12245)
+* [8c474585b29](https://github.com/datastax/pulsar/commit/8c474585b29) [Java Client] Use failPendingMessages to ensure proper cleanup (#12259)
+* [18a4ae3c622](https://github.com/datastax/pulsar/commit/18a4ae3c622) Fix lost message issues 12221 (#12223)
+* [c5936b27dda](https://github.com/datastax/pulsar/commit/c5936b27dda) Fix deadLetterPolicy is not working with key shared subscription under partitioned topic (#12148)
+* [d467484f63d](https://github.com/datastax/pulsar/commit/d467484f63d) [Cherry-pick #11597] Use get instead of join to avoid getting stuck (#12110)
+* [1c40034e12e](https://github.com/datastax/pulsar/commit/1c40034e12e) [Client] Fix ConcurrentModificationException in sendAsync (#11884)
+* [4a31f8bc771](https://github.com/datastax/pulsar/commit/4a31f8bc771) [pulsar-functions] Pass `SubscriptionPosition` from `FunctionDetails` to `FunctionConfig` / `SinkConfig` (#11831)
+* [c29ab1687f6](https://github.com/datastax/pulsar/commit/c29ab1687f6) [Issue 11936] forget to call SendCallback on producer close (#11939)
+* [76c2bc136be](https://github.com/datastax/pulsar/commit/76c2bc136be) [function] enable protobuf-native schema support for function (#11868)
+* [c9096c18221](https://github.com/datastax/pulsar/commit/c9096c18221) Fix seek at batchIndex level receive duplicated messages (#11826)
+* [e2cd9f0a7da](https://github.com/datastax/pulsar/commit/e2cd9f0a7da) [Functions] ConcurrentHashMap should be used for caching producers (#11820)
+* [b05b7660a33](https://github.com/datastax/pulsar/commit/b05b7660a33) Failed update partition of topic (#11683)
+* [37be56ef338](https://github.com/datastax/pulsar/commit/37be56ef338) Fix race condition in concurrent schema deletion (#11606)
+* [96a17c22c9e](https://github.com/datastax/pulsar/commit/96a17c22c9e) Stop OffsetStore when stopping the connector (#12457)
+* [8dea755e3f3](https://github.com/datastax/pulsar/commit/8dea755e3f3) KCA doesn't handle unchecked unchecked ConnectException/KafkaException for the task, it may lead to the connector hanging (#12441)
+* [f34a324eb3c](https://github.com/datastax/pulsar/commit/f34a324eb3c) Bugfix: Fix rackaware placement policy init error (#12097)
+* [78984a515f4](https://github.com/datastax/pulsar/commit/78984a515f4) fix publish_time not set error when broker entry metadata enable without AppendBrokerTimestampMetadataInterceptor (#11014)
+* [3cc06b58d39](https://github.com/datastax/pulsar/commit/3cc06b58d39) Avoid adding duplicated BrokerEntryMetadata (#12018)
+* [0e95a1a1d85](https://github.com/datastax/pulsar/commit/0e95a1a1d85) Fix usage of seekAsync in MessageImpl.hasMessageAvailable and flaky-test (#10190)
+* [38ee7e29c52](https://github.com/datastax/pulsar/commit/38ee7e29c52) ManagedLedger - EntryCacheImpl - move spammy log to TRACE level
+* [9d2e30f13c7](https://github.com/datastax/pulsar/commit/9d2e30f13c7) Fix the dead lock when using hasMessageAvailableAsync and readNextAsync (#11183)
+* [429c2be2d43](https://github.com/datastax/pulsar/commit/429c2be2d43) [function] fix update user config (#10731)
+* [68534f6364d](https://github.com/datastax/pulsar/commit/68534f6364d) Upgrading Debezium to 1.7 (#12295)
+* [fb31dcc054c](https://github.com/datastax/pulsar/commit/fb31dcc054c) [Proxy] set default httpProxyTimeout to 5 minutes (#12299)
+* [375fa566cce](https://github.com/datastax/pulsar/commit/375fa566cce) [Issue-11966][pulsar-proxy] set default http proxy request timeout (#11971)
+* [6c7d07bd874](https://github.com/datastax/pulsar/commit/6c7d07bd874) New distro groupId 'com.datastax.oss'
+* [8442b563de6](https://github.com/datastax/pulsar/commit/8442b563de6) Use Public DataStax repo
+* [aafcebbc805](https://github.com/datastax/pulsar/commit/aafcebbc805) Fixed ZKSessionTest.testReacquireLocksAfterSessionLost (#11886)
+
+
 
 ## Luna Streaming Distribution 2.8.0 1.1.5
 
