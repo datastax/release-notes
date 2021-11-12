@@ -14,22 +14,22 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 * Spark JobServer 0.8.0.50
 
 ## 6.8.17 DSE Cassandra
-* Enables periodic logging of system status (default every 5 minutes, configurable)
-* Fix a possible issue that shell tool could break with `-h`/`--help` in package install
+* Enables periodic logging of system status (default every 5 minutes, configurable). (DSP-22039)
+* Fix a possible issue that shell tool could break with `-h`/`--help` in package install. (DSP-20375)
 
 ## 6.8.17 DSE Core
-* Fixed a bug in the authenticator that would use the default management mode instead of the defined mode by authentication when authenticating
-* Fixes stack overflow with secondary indexes on collections
-* Fixed an issue in preloading prepared statements that queries static columns
+* Fixed a bug in the authenticator that would use the default management mode instead of the defined mode by authentication when authenticating. (DSP-22067)
+* Fixes stack overflow with secondary indexes on collections. (DSP-22070)
+* Fixed an issue in preloading prepared statements that queries static columns. (DB-5012)
 
 ## 6.8.17 DSE Security
-* Fixes issue that when disabling `system_info_encryption` configuration in `dse.yaml`, encryption for tables in the `system_backups` keyspace would not turn off
+* Fixes issue that when disabling `system_info_encryption` configuration in `dse.yaml`, encryption for tables in the `system_backups` keyspace would not turn off. (DSP-22078)
 
 ## 6.8.17 DSE CQL
-* Prints TLS protocol information when running `cqlsh` with `--debug` parameter
+* Prints TLS protocol information when running `cqlsh` with `--debug` parameter. (DB-4981)
 
 ## 6.8.17 DSE Spark/Hive
-* Fixes broken partition filtering in hive metastore leading to missing data in the spark-sql queries results for queries involving numeric partition keys or complex conditions
+* Fixes broken partition filtering in hive metastore leading to missing data in the spark-sql queries results for queries involving numeric partition keys or complex conditions. (DSP-21651)
 
 
 # Release notes for 6.8.16
