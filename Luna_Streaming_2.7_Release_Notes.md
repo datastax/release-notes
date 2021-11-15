@@ -35,6 +35,13 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
+## Luna Streaming Distribution 2.7.2 1.1.11
+
+This is a bugfix release
+
+* [6c534d36b98](https://github.com/datastax/pulsar/commit/6c534d36b98) checkout function completeablefuture null pointer
+* [3cd6a9917dc](https://github.com/datastax/pulsar/commit/3cd6a9917dc) log function completableFuture throwable and protect results
+* [3c9c6518a2e](https://github.com/datastax/pulsar/commit/3c9c6518a2e) Fix issues in advanceNonDurableCursors (#10667)
 
 ## Luna Streaming Distribution 2.7.2 1.1.10
 
