@@ -35,10 +35,39 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
+## Luna Streaming Distribution 2.7.2 1.1.14
+
+This is a bugfix release that fixes some problems about cursors management and fixes the Java client being stuck using `Reader#hasMessageAvailable()` method in some unusual scenario.
+
+List of most notable commits:
+
+* [6b653b8848e](https://github.com/datastax/pulsar/commit/6b653b8848e) [pulsar-broker] handle NPE when check active consumer in stats (#12214)
+* [c4c0b6de659](https://github.com/datastax/pulsar/commit/c4c0b6de659) Trim deleted entries after recover cursor. (#4987)
+* [9e4d78a9b0d](https://github.com/datastax/pulsar/commit/9e4d78a9b0d) Fix repeated iterator generation (#10722)
+* [4c83db232eb](https://github.com/datastax/pulsar/commit/4c83db232eb) Fix inconsistent behavior in LongPairRangeSet (#10713)
+* [0bc72513893](https://github.com/datastax/pulsar/commit/0bc72513893) Fix NPE when filtering read entries (#10704)
+* [d8acfd136c1](https://github.com/datastax/pulsar/commit/d8acfd136c1) Fix hasMessageAvailable return true but can't read message (#10414)
+* [56d19855268](https://github.com/datastax/pulsar/commit/56d19855268) [Broker] Fix producer getting incorrectly removed from topic's producers map (#12846)
+
+## Luna Streaming Distribution 2.7.2 1.1.13
+
+This is a bugfix release.
+
+List of most notable commits:
+* [562688f027d](https://github.com/datastax/pulsar/commit/562688f027d) Producer getting producer busy is removing existing producer from list (#11804)
+
+## Luna Streaming Distribution 2.7.2 1.1.12
+
+This release improve logging on Pulsar Functions.
+
+List of most notable commits:
+* [05d4590cb1e](https://github.com/datastax/pulsar/commit/05d4590cb1e) Functions - add debug information
+
 ## Luna Streaming Distribution 2.7.2 1.1.11
 
-This is a bugfix release
+This is a bugfix release.
 
+List of most notable commits:
 * [6c534d36b98](https://github.com/datastax/pulsar/commit/6c534d36b98) checkout function completeablefuture null pointer
 * [3cd6a9917dc](https://github.com/datastax/pulsar/commit/3cd6a9917dc) log function completableFuture throwable and protect results
 * [3c9c6518a2e](https://github.com/datastax/pulsar/commit/3c9c6518a2e) Fix issues in advanceNonDurableCursors (#10667)
@@ -47,6 +76,7 @@ This is a bugfix release
 
 This is a bugfix release. It contains enhancement about Pulsar Functions.
 
+List of most notable commits:
 * [72e63fe766b](https://github.com/datastax/pulsar/commit/72e63fe766b) Functions: add -Dio.netty.tryReflectionSetAccessible=true to Java functions #12624
 * [c3ecd979767](https://github.com/datastax/pulsar/commit/c3ecd979767) Pulsar Functions: detect .nar files and prevent spammy logs on functions boot (#13)
 * [da2dd3c850c](https://github.com/datastax/pulsar/commit/da2dd3c850c) [Functions] Prevent NPE while stopping a non started Pulsar LogAppender
