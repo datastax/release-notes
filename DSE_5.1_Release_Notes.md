@@ -1,8 +1,49 @@
 # Release notes for DataStax Enterprise 5.1
 DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+
+# DataStax Enterprise 5.1.27
+26 November 2021
+
+# Components versions for DSE 5.1.27
+   * Apache Solr™ 6.0.1.0.2882
+   * Apache Spark™ 2.0.2.42
+   * Apache TinkerPop™ 3.2.11-20210716-faea8d16
+   * Apache Tomcat® 8.5.70
+   * DSE Java Driver 1.8.3-dse+20201217
+   * Netty 4.0.54.1.dse
+   * Spark JobServer 0.6.2.240
+
+## 5.1.27 DSE Cassandra
+* Enables periodic logging of system status (default every 5 minutes, configurable). (DSP-22039)
+* Fix a possible issue that shell tool could break with `-h`/`--help` in package install. (DSP-20375)
+
+## 5.1.27 DSE core
+* Port CASSANDRA-16671: Cassandra can return no row when the row columns have been deleted. Issue not reproduced on 5.1 but brings code to parity with OSS version. (DB-5008)
+* Port CASSANDRA-16712: DROP COMPACT STORAGE does not invalidate prepared statements as it should. (DB-5044)
+
+## 5.1.27 DSE CQL
+* Prints TLS protocol information when running cqlsh with `--debug` parameter. (DB-4981)
+
+## 5.1.27 DSE Spark
+* Storing and revoking permissions for the application owner is removed. The application owner is explicitly assumed to have these permissions (backported DSP-19393). (DSP-21740)
+* Fixed and updated javax.mail dependency to com.sun.mail. (DSP-22085)
+
+## 5.1.27 DSE Security
+* Storing and revoking permissions for the application owner is removed. The application owner is explicitly assumed to have these permissions (backported DSP-19393). (DSP-21740)
+
+
 # DataStax Enterprise 5.1.26
 21 September 2021
+
+## Components versions for DSE 5.1.26
+   * Apache Solr™ 6.0.1.0.2882&ast;
+   * Apache Spark™ 2.0.2.42
+   * Apache TinkerPop™ 3.2.11-20210716-faea8d16&ast;
+   * Apache Tomcat® 8.5.70&ast;
+   * DSE Java Driver 1.8.3-dse+20201217
+   * Netty 4.0.54.1.dse
+   * Spark JobServer 0.6.2.240
 
 ## 5.1.26 DSE core
 * Added check against the negative value in local stream throughput (stream_throughput_outbound_megabits_per_sec) and inter dc stream throughput (inter_dc_stream_throughput_outbound_megabits_per_sec) (DB-5010)
