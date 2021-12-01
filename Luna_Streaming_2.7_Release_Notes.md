@@ -35,6 +35,23 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
+## Luna Streaming Distribution 2.7.2 1.1.15
+
+This is a bugfix release that contains bugfixes and few important dependency upgrades:
+* Apache ZooKeeper from 3.5.7 to 3.5.9
+* Apache BookKeeper from 4.12.0 to 4.14.3
+* Grpc from 1.18.0 to 1.33.0
+
+List of most notable commits:
+
+* [742e246b979](https://github.com/datastax/pulsar/commit/742e246b979) Don't create AvroData for each KafkaSourceRecord (#12859)
+* [116f90eb261](https://github.com/datastax/pulsar/commit/116f90eb261) Grpc upgrade; BK upgrade for LS 2.7 (#14)
+* [2a893c99853](https://github.com/datastax/pulsar/commit/2a893c99853) Copy list of subscriptions when checking for message expiration to avoid deadlocks (#8877)
+* [31500e725b3](https://github.com/datastax/pulsar/commit/31500e725b3) Upgrade Zookeeper to 3.5.9 (#12981)
+* [b6088033cc3](https://github.com/datastax/pulsar/commit/b6088033cc3) Upgrade Zookeeper to 3.5.9
+* [3859e443b35](https://github.com/datastax/pulsar/commit/3859e443b35) Fix wrong isEmpty method of ConcurrentOpenLongPairRangeSet (#12953)
+
+
 ## Luna Streaming Distribution 2.7.2 1.1.14
 
 This is a bugfix release that fixes some problems about cursors management and fixes the Java client being stuck using `Reader#hasMessageAvailable()` method in some unusual scenario.
