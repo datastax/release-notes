@@ -53,6 +53,31 @@ If you are upgrading from Apache Pulsar 2.7.0 or Luna Streaming 2.7.2 you may ne
 This is because there is a breaking API change in Apache Pulsar 2.8.0 (and so in Luna Streaming 2.8.0) related to the SchemaInfo java class.
 More context [here](https://github.com/apache/pulsar/issues/11338).
 
+## Luna Streaming Distribution 2.8.0 1.1.7
+
+This release contains several bugfixes and improvements, most notably:
+* Dedicated Netty EventLoopGroup for Protocol Handlers and Proxy extensions
+* SchemaInfo.builder() API available again
+
+List of most notable commits:
+
+* [15d27662b19](https://github.com/datastax/pulsar/commit/15d27662b19) BookKeeper: use com.datastax.oss dependency and bump to 4.14.3.1.0.0
+* [ab7f6c1b52b](https://github.com/datastax/pulsar/commit/ab7f6c1b52b) Disable stats recorder for built-in PulsarClient (#12217)
+* [f09d0a99b29](https://github.com/datastax/pulsar/commit/f09d0a99b29) Bump BookKeeper 4.14.3 (#12906)
+* [d7848da6fba](https://github.com/datastax/pulsar/commit/d7848da6fba) Fix log level config for pulsar-admin, pulsar-client and pulsar-perf
+* [346745a6b7a](https://github.com/datastax/pulsar/commit/346745a6b7a) Fix Protocol Handlers and Proxy Extensions boot
+* [306ae24a712](https://github.com/datastax/pulsar/commit/306ae24a712) Fix ProtocolHandlers
+* [b743b765858](https://github.com/datastax/pulsar/commit/b743b765858) Fix boot of ProtocolHandlers and Proxy Extensions
+* [8ea02d6573c](https://github.com/datastax/pulsar/commit/8ea02d6573c) Issue 12668: Protocol Handlers and Proxy Extensions: ability to use a dedicated EventLoopGroup for IO (#12692)
+* [d51b0af62b2](https://github.com/datastax/pulsar/commit/d51b0af62b2) [Broker] Fix producer getting incorrectly removed from topic's producers map (#12846)
+* [d5fe86f7c3b](https://github.com/datastax/pulsar/commit/d5fe86f7c3b) Fixed used after recycle issue in OpAddEntry (#12103)
+* [8d9ab077984](https://github.com/datastax/pulsar/commit/8d9ab077984) Producer getting producer busy is removing existing producer from list (#11804)
+* [b4a00834abd](https://github.com/datastax/pulsar/commit/b4a00834abd) [ServerCnx] Close connection after receiving unexpected SendCommand (#12780)
+* [f46f54da368](https://github.com/datastax/pulsar/commit/f46f54da368) [Java Client] Let producer reconnect for state RegisteringSchema (#12781)
+* [297fbd06a20](https://github.com/datastax/pulsar/commit/297fbd06a20) [Managed Ledger] Fix the incorrect total size when BrokerEntryMetadata is enabled (#12714)
+* [643018ffef2](https://github.com/datastax/pulsar/commit/643018ffef2) Pulsar Client: restore SchemaInfo.builder() API (#12673)
+* [6d94a427871](https://github.com/datastax/pulsar/commit/6d94a427871) [ML] Avoid passing OpAddEntry across a thread boundary in asyncAddEntry (#12606)
+* [932a34cdb7d](https://github.com/datastax/pulsar/commit/932a34cdb7d) [Functions] Prevent NPE while stopping a non started Pulsar LogAppender (#12643)
 
 ## Luna Streaming Distribution 2.8.0 1.1.6
 
