@@ -35,6 +35,17 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
+## Luna Streaming Distribution 2.7.2 1.1.16
+
+This is a bugfix release that contains bugfixes and Debezium library upgrade.
+
+List of most notable commits:
+
+* [fb648384d7b](https://github.com/datastax/pulsar/commit/fb648384d7b) Fix the dead lock when using hasMessageAvailableAsync and readNextAsync (#11183)
+* [0b3172ecd10](https://github.com/datastax/pulsar/commit/0b3172ecd10) Make Consumer thread safe and lock-free (#10352)
+* [3a7e896bb2b](https://github.com/datastax/pulsar/commit/3a7e896bb2b) Upgrade debezium to 1.7.1 (#12644)
+* [04ef5ac6fa8](https://github.com/datastax/pulsar/commit/04ef5ac6fa8) k8s runtime: force deletion to avoid hung function worker during connector restart (#12504)
+
 ## Luna Streaming Distribution 2.7.2 1.1.15
 
 This is a bugfix release that contains bugfixes and few important dependency upgrades:
