@@ -1,6 +1,34 @@
 # Release notes for DataStax Enterprise 6.8
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version. 
 
+# Release notes for 6.8.18
+8 December 2021
+
+## Components versions for DSE 6.8.18
+* Apache Solr™ 6.0.1.4.2887
+* Apache Spark™ 2.4.0.18
+* Apache TinkerPop™ 3.4.5-20210816-c28c0de2
+* Apache Tomcat® 8.5.72&ast;
+* DSE Java Driver 1.10.0-dse+20210424
+* Netty 4.1.25.7.dse
+* Spark JobServer 0.8.0.50
+
+## 6.8.18 DSE Cassandra
+* Fix calculation of `CompressionMetadataOffHeapMemoryUsed` metric accessible via `nodetool tablestats` command. (DSP-22181)
+
+## 6.8.18 DSE core
+* Port and adjust CASSANDRA-16686 for DSE. (DB-5022)
+
+## 6.8.18 DSE Search
+* Upgraded version of Apache Tomcat from 8.5.70 to 8.5.72 to fix CVE-2021-42340. (DSP-22098)
+
+## 6.8.18 DSE Spark
+* Fixed and updated javax.mail dependency to com.sun.mail. (DSP-22085)
+
+## 6.8.18 DSE CVE
+* Upgraded version of Apache Tomcat from 8.5.70 to 8.5.72 to fix [CVE-2021-42340](https://nvd.nist.gov/vuln/detail/CVE-2021-42340). (DSP-22098)
+
+
 # Release notes for 6.8.17
 4 November 2021
 
