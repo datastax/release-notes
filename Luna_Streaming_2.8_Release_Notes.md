@@ -12,7 +12,7 @@ Luna Streaming Distribution 2.8.0 is compatible with Apache Pulsar&trade; 2.8.0.
    * DataStax Apache Pulsar Cassandra Sink 1.5.0
    * DataStax Apache Pulsar Cassandra Source 0.2.10
    * DataStax Burnell 1.0.0
-   * Apache BookKeeper 4.14.2
+   * Datastax BookKeeper 4.14.3.1.0.0
  
 This release adds these features to the original Apache Pulsar 2.8.0 release:
   
@@ -22,7 +22,7 @@ This release adds these features to the original Apache Pulsar 2.8.0 release:
    * Docker images based on Ubuntu (instead of Debian based images in Pulsar 2.8.0, for security reasons)
    * Dependency upgrades (for security, stability and performances)
    * An Enhanced ElasticSearch Pulsar IO Sink  
-   * An Enhanced version of Apache BookKeeper 4.14.2 with security fixes
+   * An Enhanced version of Apache BookKeeper 4.14.3 with security fixes
    * Pulsar IO source for Debezium Oracle
    * [Pulsar Proxy extensions](https://github.com/apache/pulsar/wiki/PIP-99%3A-Pulsar-Proxy-Extensions) feature 
  
