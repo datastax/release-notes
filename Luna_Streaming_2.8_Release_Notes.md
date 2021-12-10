@@ -53,6 +53,40 @@ If you are upgrading from Apache Pulsar 2.7.0 or Luna Streaming 2.7.2 you may ne
 This is because there is a breaking API change in Apache Pulsar 2.8.0 (and so in Luna Streaming 2.8.0) related to the SchemaInfo java class.
 More context [here](https://github.com/apache/pulsar/issues/11338).
 
+## Luna Streaming Distribution 2.8.0 1.1.8
+
+This release contains several bugfixes and improvements, most notably:
+* Several fixes to ensure correct message ordering processing
+* Improvements on Topic ownership load balancing
+
+List of most notable commits:
+
+* [54e3539a53b](https://github.com/datastax/pulsar/commit/54e3539a53b) [Java Client] Use epoch to version producer's cnx to prevent early de… (#12779)
+* [6b7ab4e7180](https://github.com/datastax/pulsar/commit/6b7ab4e7180) [Java Client] Improve state changes to Connecting
+* [56078dfb3f1](https://github.com/datastax/pulsar/commit/56078dfb3f1) [Java Client] Remove invalid call to Thread.currentThread().interrupt(); (#12652)
+* [4c96cb521b7](https://github.com/datastax/pulsar/commit/4c96cb521b7) Remove the uncorrect VisableTesting annotation in pulsar-client (#11784)
+* [848ce2a31bb](https://github.com/datastax/pulsar/commit/848ce2a31bb) Cleanup already deleted namespace topics. (#12597)
+* [7a3daaebee0](https://github.com/datastax/pulsar/commit/7a3daaebee0) Do not reuse the Failed OpAddEntry object. (#12993)
+* [04f640d7734](https://github.com/datastax/pulsar/commit/04f640d7734) [Issue 12723] Fix race condition in PersistentTopic#addReplicationCluster (#12729)
+* [6536bbc1713](https://github.com/datastax/pulsar/commit/6536bbc1713) revert the wrong modification in org.apache.pulsar.broker.namespace.OwnershipCache#checkOwnership (#12650)
+* [8fe8c3f2794](https://github.com/datastax/pulsar/commit/8fe8c3f2794) The count of topics on the bundle is less than 2，skip split (#12527)
+* [84d0b48a3d2](https://github.com/datastax/pulsar/commit/84d0b48a3d2) Upgrade debezium to 1.7.1 (#12644)
+* [2276fc57519](https://github.com/datastax/pulsar/commit/2276fc57519) k8s runtime: force deletion to avoid hung function worker during connector restart (#12504)
+* [3cd4d5f6546](https://github.com/datastax/pulsar/commit/3cd4d5f6546) [pulsar-broker] handle NPE when check active consumer in stats (#12214)
+* [66f587f9bc9](https://github.com/datastax/pulsar/commit/66f587f9bc9) Functions: add -Dio.netty.tryReflectionSetAccessible=true to Java functions (#12624)
+* [7474bbf7e4b](https://github.com/datastax/pulsar/commit/7474bbf7e4b) [pulsar-perf] Write histogram files for consume command (#12569)
+* [9464408ac92](https://github.com/datastax/pulsar/commit/9464408ac92) Fix retention size policy delete too much ledgers (#11242)
+* [7c9e4474c2b](https://github.com/datastax/pulsar/commit/7c9e4474c2b) suppress nashorn warning in JDK11 runtime
+* [00e9eada3c3](https://github.com/datastax/pulsar/commit/00e9eada3c3) [Functions] Fix classloader leaks (#12973)
+* [bb5bab54ae9](https://github.com/datastax/pulsar/commit/bb5bab54ae9) [Broker] Fix and improve topic ownership assignment (#13069)(#13117)
+* [370b148df85](https://github.com/datastax/pulsar/commit/370b148df85) [Broker] Fix LeaderElectionService.getCurrentLeader and add support for empheralOwner in MockZooKeeper (#13066)
+* [0a11d49287a](https://github.com/datastax/pulsar/commit/0a11d49287a) Remove -XX:-ResizePLAB JVM option which degrades performance on JDK11 (#12940)
+* [d38ca782d6b](https://github.com/datastax/pulsar/commit/d38ca782d6b) [Functions][k8s] Expose function container metrics port (#12065)
+* [96b3420cbb3](https://github.com/datastax/pulsar/commit/96b3420cbb3) Update command descriptions from old 'property/cluster/namespace' format to current 'tenant/namespace' format (#10485)
+* [85166354742](https://github.com/datastax/pulsar/commit/85166354742) Don't create AvroData for each KafkaSourceRecord (#12859)
+* [50db02ced2e](https://github.com/datastax/pulsar/commit/50db02ced2e) [OWASP] Address CVE-2020-29582 - upgrade kotlin-stdlib used by okhttp5
+* [8db20a165af](https://github.com/datastax/pulsar/commit/8db20a165af) Fix wrong isEmpty method of ConcurrentOpenLongPairRangeSet (#12953)
+ 
 ## Luna Streaming Distribution 2.8.0 1.1.7
 
 This release contains several bugfixes and improvements, most notably:
