@@ -35,6 +35,14 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
+## Luna Streaming Distribution 2.7.2 1.1.18
+
+This is a bugfix release containing important security updates.
+
+* [fb265d3cbe2](https://github.com/datastax/pulsar/commit/fb265d3cbe2) Bump log4j to 2.15.0 (#13226)
+* [f056e84d931](https://github.com/datastax/pulsar/commit/f056e84d931) [logging] Use Log4j2's BOM to ensure that Log4j2 version is consistent. Replace legacy log4j with log4j-1.2-api
+* [023fb7012fd](https://github.com/datastax/pulsar/commit/023fb7012fd) Cancel scheduled tasks when deleting ManagedLedgerImpl (#12565)
+
 ## Luna Streaming Distribution 2.7.2 1.1.17
 
 This is a bugfix release
