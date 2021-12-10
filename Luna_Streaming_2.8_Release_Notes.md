@@ -53,6 +53,15 @@ If you are upgrading from Apache Pulsar 2.7.0 or Luna Streaming 2.7.2 you may ne
 This is because there is a breaking API change in Apache Pulsar 2.8.0 (and so in Luna Streaming 2.8.0) related to the SchemaInfo java class.
 More context [here](https://github.com/apache/pulsar/issues/11338).
 
+## Luna Streaming Distribution 2.8.0 1.1.9
+
+This release contains several bugfixes and important security updates.
+
+* [a4764ff84c1](https://github.com/datastax/pulsar/commit/a4764ff84c1) Bump log4j to 2.15.0 (#13226)
+* [21a5c51e9ce](https://github.com/datastax/pulsar/commit/21a5c51e9ce) [Java Client] Send CloseProducer on timeout (#13161)
+* [8f6691c31cd](https://github.com/datastax/pulsar/commit/8f6691c31cd) Fix namespace policy override ignored when creating subscription (#12699)
+* [4f4072b5490](https://github.com/datastax/pulsar/commit/4f4072b5490) Cancel scheduled tasks when deleting ManagedLedgerImpl (#12565)
+
 ## Luna Streaming Distribution 2.8.0 1.1.8
 
 This release contains several bugfixes and improvements, most notably:
