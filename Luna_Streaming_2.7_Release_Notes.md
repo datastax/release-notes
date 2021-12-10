@@ -35,6 +35,16 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
+## Luna Streaming Distribution 2.7.2 1.1.17
+
+This is a bugfix release
+
+List of most notable commits:
+
+* [c9c541c6ad3](https://github.com/datastax/pulsar/commit/c9c541c6ad3) ManagedLedger: add more details on errors while reading from BookKeeper
+* [ccdf47697ff](https://github.com/datastax/pulsar/commit/ccdf47697ff) [admin-client] 'rebalance' command for functions worker #13169
+
+
 ## Luna Streaming Distribution 2.7.2 1.1.16
 
 This is a bugfix release that contains bugfixes and Debezium library upgrade.
