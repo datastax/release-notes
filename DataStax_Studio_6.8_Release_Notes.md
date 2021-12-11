@@ -1,5 +1,49 @@
 # Release notes for DataStax Studio 6.8
 
+# Release notes for DataStax Studio 6.8.17
+13 December 2021
+
+## Studio 6.8.17 Client
+* Adds an optional Gremlin Port field to the Connection configuration. (STUDIO-3195)
+
+## Studio 6.8.17 Server
+* Update to log4j library version to address CVE-2021-44228. (Studio-3204)
+* Improved detection of Spark SQL connection status to avoid premature connection termination. (STUDIO-3203)
+* Add configuration settings to adjust Gremlin and Spark SQL connection heartbeat and idle timeout values. (STUDIO-3202)
+```
+  connectionManagement:
+    # Graph (gremlin driver) connection heartbeat polling interval (milliseconds).
+    # The connection status is tested at the given interval to ensure it is still working.
+    # Default: 30000 (30 seconds)
+    gremlinHeartbeatIntervalMillis: 30000
+
+    # Graph (gremlin driver) connection timeout interval (milliseconds).
+    # The time interval after which the connection will be terminated if there have been
+    # no successful user or connection hearbeat queries executed.
+    # Default: 90000 (90 seconds)
+    gremlinIdleTimeoutMillis: 90000
+
+    # Spark SQL (jdbc driver) connection heartbeat polling interval (milliseconds).
+    # The connection status is tested at the given interval to ensure it is still working.
+    # Default: 30000 (30 seconds)
+    sparkHeartbeatIntervalMillis: 30000
+
+    # Spark SQL (jdbc driver) connection timeout interval (milliseconds).
+    # The time interval after which the connection will be terminated if there have been
+    # no successful user or connection hearbeat queries executed.
+    # Default: 300000 (5 minutes)
+    sparkIdleTimeoutMillis: 300000
+```
+* Improve ability to troubleshoot Graph errors by logging the remote server stack trace when the Graph gremlin driver reports a ResponseException. (STUDIO-3201)
+* Fix issue creating a Classic graph using the Create Graph dialog when connected to DSE versions 6.7 or earlier. (STUDIO-3200)
+* Fix issue processing query results when CQL Timestamp values are used as the key value for a Map. The Studio server previously returned those Map key Timestamp values formatted only to seconds precision, which could lead to duplicate values and cause no results displayed in the client. Timestamp values used as Map keys are now formatted the same as other Timestamp values (ISO-8601: yyyy-MM-dd'T'HH:mm:ss.SSSZ). (STUDIO-3199)
+* Fix error executing Spark SQL CACHE TABLE statements. (STUDIO-3198)
+* Prevent relative file access on /images requests. (STUDIO-3196)
+* Restrict notebook import URL's to use only http or https. (STUDIO-3167)
+* Prevent internal stack traces appearing in http responses. (STUDIO-3010)
+
+(:information_source: **Note**: there was no Studio 6.8.16 release)
+
 # Release notes for DataStax Studio 6.8.15
 10 September 2021
 
