@@ -35,6 +35,14 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
+## Luna Streaming Distribution 2.7.2 1.1.19
+
+This is a bugfix release containing a new configuration parameter to add JVM arguments to the Function JVM.
+
+* [9afc8474238](https://github.com/datastax/pulsar/commit/9afc8474238) Function: do not scrape metrics for dead functions and enhance logging (less stacktraces)
+* [71578261bf2](https://github.com/datastax/pulsar/commit/71578261bf2) Function: add possibility to pass additional JVM arguments to the function JVM (additionalJavaRuntimeArguments)
+
+
 ## Luna Streaming Distribution 2.7.2 1.1.18
 
 This is a bugfix release containing important security updates.
