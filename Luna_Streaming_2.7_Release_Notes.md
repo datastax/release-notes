@@ -35,9 +35,29 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
+## Luna Streaming Distribution 2.7.2 1.1.21
+
+This is a bugfix release that avoid shared subscriptions getting stuck in certains scenario.
+
+List of most notable commits:
+
+* [89e19b85bc8](https://github.com/datastax/pulsar/commit/89e19b85bc8) Shared subscription: subscription is blocked is nothing is received from BookKeeper
+
+
+## Luna Streaming Distribution 2.7.2 1.1.20
+
+This is a bugfix release containing important security updates.
+
+List of most notable commits:
+
+* [6e5ab9acb40](https://github.com/datastax/pulsar/commit/6e5ab9acb40) Bump log4j to 2.16.0 (#13277)
+
 ## Luna Streaming Distribution 2.7.2 1.1.19
 
 This is a bugfix release containing a new configuration parameter to add JVM arguments to the Function JVM.
+
+List of most notable commits:
+
 
 * [9afc8474238](https://github.com/datastax/pulsar/commit/9afc8474238) Function: do not scrape metrics for dead functions and enhance logging (less stacktraces)
 * [71578261bf2](https://github.com/datastax/pulsar/commit/71578261bf2) Function: add possibility to pass additional JVM arguments to the function JVM (additionalJavaRuntimeArguments)
@@ -46,6 +66,9 @@ This is a bugfix release containing a new configuration parameter to add JVM arg
 ## Luna Streaming Distribution 2.7.2 1.1.18
 
 This is a bugfix release containing important security updates.
+
+
+List of most notable commits:
 
 * [fb265d3cbe2](https://github.com/datastax/pulsar/commit/fb265d3cbe2) Bump log4j to 2.15.0 (#13226)
 * [f056e84d931](https://github.com/datastax/pulsar/commit/f056e84d931) [logging] Use Log4j2's BOM to ensure that Log4j2 version is consistent. Replace legacy log4j with log4j-1.2-api
