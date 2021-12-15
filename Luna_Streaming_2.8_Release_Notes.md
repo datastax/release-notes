@@ -9,8 +9,8 @@ Luna Streaming Distribution 2.8.0 is compatible with Apache Pulsar&trade; 2.8.0.
    * Apache Pulsar 2.8.0
    * DataStax Pulsar Admin Console 1.0.0
    * DataStax Pulsar Heartbeat 1.0.2
-   * DataStax Apache Pulsar Cassandra Sink 1.5.0
-   * DataStax Apache Pulsar Cassandra Source 0.2.10
+   * DataStax Apache Pulsar Cassandra Sink 1.4.0
+   * DataStax Apache Pulsar Cassandra Source 1.0.1
    * DataStax Burnell 1.0.0
    * Datastax BookKeeper 4.14.3.1.0.0
  
@@ -53,9 +53,28 @@ If you are upgrading from Apache Pulsar 2.7.0 or Luna Streaming 2.7.2 you may ne
 This is because there is a breaking API change in Apache Pulsar 2.8.0 (and so in Luna Streaming 2.8.0) related to the SchemaInfo java class.
 More context [here](https://github.com/apache/pulsar/issues/11338).
 
+## Luna Streaming Distribution 2.8.0 1.1.10
+
+This release contains several bugfixes and important security updates.
+
+List of most notable commits:
+
+* [3f0a7e255ed](https://github.com/datastax/pulsar/commit/3f0a7e255ed) Option to not upload builtin connectors to BK for k8s runtime (#12947)
+* [e0dd6b3d81e](https://github.com/datastax/pulsar/commit/e0dd6b3d81e) Bump log4j to 2.16.0 (#13277)
+* [acd92023248](https://github.com/datastax/pulsar/commit/acd92023248) [Broker] Synchronize updates to the inactiveProducers map in MessageDeduplication (#12820)
+* [2f9e3d7a064](https://github.com/datastax/pulsar/commit/2f9e3d7a064) [Broker] Fix messageDedup delete inactive producer name (#12493)
+* [7cc63d72acb](https://github.com/datastax/pulsar/commit/7cc63d72acb) [Java Client] Fix producer data race to get cnx (#13176)
+* [1f43bcce078](https://github.com/datastax/pulsar/commit/1f43bcce078) Revert "Set default root log level to debug" and make PULSAR_LOG_ROOT_LEVEL to default to PULSAR_LOG_LEVEL (#12941)
+* [fd502df4f20](https://github.com/datastax/pulsar/commit/fd502df4f20) [Perf] Evaluate the current protocol version once (#13045)
+* [d6eb15eb436](https://github.com/datastax/pulsar/commit/d6eb15eb436) Catch exceptions in scheduled tasks to prevent unintended cancellation (#12853)
+
+DataStax Apache Pulsar Cassandra Source has been upgraded to 1.0.1
+
 ## Luna Streaming Distribution 2.8.0 1.1.9
 
 This release contains several bugfixes and important security updates.
+
+List of most notable commits:
 
 * [a4764ff84c1](https://github.com/datastax/pulsar/commit/a4764ff84c1) Bump log4j to 2.15.0 (#13226)
 * [21a5c51e9ce](https://github.com/datastax/pulsar/commit/21a5c51e9ce) [Java Client] Send CloseProducer on timeout (#13161)
