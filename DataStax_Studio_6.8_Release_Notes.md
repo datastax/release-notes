@@ -1,5 +1,11 @@
 # Release notes for DataStax Studio 6.8
 
+# Release notes for DataStax Studio 6.8.18
+16 December 2021
+
+## Studio 6.8.18 Server
+* Update to log4j library version 2.16.0 to address CVE-2021-45046. (Studio-3205)
+
 # Release notes for DataStax Studio 6.8.17
 13 December 2021
 
@@ -7,7 +13,7 @@
 * Adds an optional Gremlin Port field to the Connection configuration. (STUDIO-3195)
 
 ## Studio 6.8.17 Server
-* Update to log4j library version to address CVE-2021-44228. (Studio-3204)
+* Update to log4j library version 2.15.0 to address CVE-2021-44228. (Studio-3204)
 * Improved detection of Spark SQL connection status to avoid premature connection termination. (STUDIO-3203)
 * Add configuration settings to adjust Gremlin and Spark SQL connection heartbeat and idle timeout values. (STUDIO-3202)
 ```
