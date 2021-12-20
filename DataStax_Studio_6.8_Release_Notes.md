@@ -5,7 +5,7 @@
 
 ## Studio 6.8.19 Server
 * Update to log4j library version 2.17.0 to address CVE-2021-45105. (Studio-3207)
-* Fix potential for extraneous scheduled tasks due to race conditions that can lead to random Graph or Spark SQL connection terminations. (Studio-3206)
+* Fix race condition that could lead to random Graph or Spark SQL connection terminations. (Studio-3206)
 
 # Release notes for DataStax Studio 6.8.18
 16 December 2021
