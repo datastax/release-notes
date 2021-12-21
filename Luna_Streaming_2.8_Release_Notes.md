@@ -53,6 +53,17 @@ If you are upgrading from Apache Pulsar 2.7.0 or Luna Streaming 2.7.2 you may ne
 This is because there is a breaking API change in Apache Pulsar 2.8.0 (and so in Luna Streaming 2.8.0) related to the SchemaInfo java class.
 More context [here](https://github.com/apache/pulsar/issues/11338).
 
+## Luna Streaming Distribution 2.8.0 1.1.11
+
+This is a mantenaince release containing important security updates.
+
+List of most notable commits:
+
+* [5f8dd840a22](https://github.com/datastax/pulsar/commit/5f8dd840a22) [Security] Upgrade to Log4J 2.17.0 to mitigate CVE-2021-45105
+* [0c2eaa2694f](https://github.com/datastax/pulsar/commit/0c2eaa2694f) [Client]Allow to override PULSAR_MEM settings via PULSAR_EXTRA_OPS #13381
+* [aed7cb10171](https://github.com/datastax/pulsar/commit/aed7cb10171) Function: add possibility to pass additional JVM arguments to the function JVM (additionalJavaRuntimeArguments) (#13282)
+* [0a00ae08360](https://github.com/datastax/pulsar/commit/0a00ae08360) [security] Upgrade Netty to 4.1.72 - CVE-2021-43797 (#13328)
+
 ## Luna Streaming Distribution 2.8.0 1.1.10
 
 This release contains several bugfixes and important security updates.
