@@ -35,6 +35,16 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
+## Luna Streaming Distribution 2.7.2 1.1.23
+
+This is a mantenaince release containing important security updates.
+
+List of most notable commits:
+
+* [540a3c578b6](https://github.com/datastax/pulsar/commit/540a3c578b6) [Security] Upgrade vertx to 3.9.8 to address CVE-2019-17640
+* [2e0483ac65a](https://github.com/datastax/pulsar/commit/2e0483ac65a) [security] Upgrade Netty to 4.1.72 - CVE-2021-43797 (#13328)
+* [f4ed3be0d88](https://github.com/datastax/pulsar/commit/f4ed3be0d88) [Security] Upgrade to Log4J 2.17.0 to mitigate CVE-2021-45105
+
 ## Luna Streaming Distribution 2.7.2 1.1.21
 
 This is a bugfix release that avoid shared subscriptions getting stuck in certains scenario.
