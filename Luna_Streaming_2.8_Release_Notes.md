@@ -53,6 +53,19 @@ If you are upgrading from Apache Pulsar 2.7.0 or Luna Streaming 2.7.2 you may ne
 This is because there is a breaking API change in Apache Pulsar 2.8.0 (and so in Luna Streaming 2.8.0) related to the SchemaInfo java class.
 More context [here](https://github.com/apache/pulsar/issues/11338).
 
+## Luna Streaming Distribution 2.8.0 1.1.12
+
+This is a mantenaince release containing important security updates and bugfixes.
+
+List of most notable commits:
+
+* [e9243a1e2fc](https://github.com/datastax/pulsar/commit/e9243a1e2fc) [Security] Upgrade Log4j to 2.17.1 (#13552)
+* [3a216c50723](https://github.com/datastax/pulsar/commit/3a216c50723) [testing] Make python3 the default python in java-test-image (#12130)
+* [1969a267907](https://github.com/datastax/pulsar/commit/1969a267907) [Broker] Fix race conditions in closing producers and consumers (#13428)
+* [a11da0ff73d](https://github.com/datastax/pulsar/commit/a11da0ff73d) [Broker] Fix race condition in stopping replicator while it is starting
+* [85ddf126825](https://github.com/datastax/pulsar/commit/85ddf126825) [pulsar-broker] Add stop replicator producer logic when start replicator cluster failed. (#12724)
+
+
 ## Luna Streaming Distribution 2.8.0 1.1.11
 
 This is a mantenaince release containing important security updates.
