@@ -1,7 +1,7 @@
 # Release notes for DataStax Enterprise 6.7
 DSE 6.7.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
-**NOTE**: DSE `6.7.x` line has [EOL date of December 12, 2021](https://www.datastax.com/legal/supported-software).  Please consider upgrading to [DSE 6.8](./DSE_6.8_Release_Notes.md) for our latest features and patches.
+**NOTE**: DSE `6.7.x` line has [EOL date of November 30, 2022](https://www.datastax.com/legal/supported-software).  Please consider upgrading to [DSE 6.8](./DSE_6.8_Release_Notes.md) for our latest features and patches.
 
 # DataStax Enterprise 6.7.15
 17 June 2021
