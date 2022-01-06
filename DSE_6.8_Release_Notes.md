@@ -116,6 +116,9 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 * Spark had an unused dependency on azure-storage-blob jar files version 12.4.0 which was removed from Azure repos. This fix removes the dependency. (DSP-21978)
 
+## 6.8.15 DSE Graph
+* Add option to make search queries issued by classic graph bypass `FilterCache`. (DSP-21792)
+
 ## 6.8.15 DSE TPC
 
 Execution of the back pressure task can be rejected in TPC, leading to the back pressure job being dropped entirely and then deadlocking. This was fixed by properly rescheduling the task. (DB-5027)
