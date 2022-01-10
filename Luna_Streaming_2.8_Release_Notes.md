@@ -53,6 +53,16 @@ If you are upgrading from Apache Pulsar 2.7.0 or Luna Streaming 2.7.2 you may ne
 This is because there is a breaking API change in Apache Pulsar 2.8.0 (and so in Luna Streaming 2.8.0) related to the SchemaInfo java class.
 More context [here](https://github.com/apache/pulsar/issues/11338).
 
+## Luna Streaming Distribution 2.8.0 1.1.13
+
+This is a mantenaince release containing important security updates and bugfixes.
+
+List of most notable commits:
+
+* [56f27618161](https://github.com/datastax/pulsar/commit/56f27618161) [Security] Upgrade Jackson to 2.12.6 (#13694)
+* [3db758c145c](https://github.com/datastax/pulsar/commit/3db758c145c) Upgrade Gson version 2.8.6 to 2.8.9 (#13610)
+* [33313b3e341](https://github.com/datastax/pulsar/commit/33313b3e341) Fix issues 11964, deadlock bug when use key_shared mode (#11965)
+
 ## Luna Streaming Distribution 2.8.0 1.1.12
 
 This is a mantenaince release containing important security updates and bugfixes.
