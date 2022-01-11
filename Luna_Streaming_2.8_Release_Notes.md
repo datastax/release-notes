@@ -53,6 +53,15 @@ If you are upgrading from Apache Pulsar 2.7.0 or Luna Streaming 2.7.2 you may ne
 This is because there is a breaking API change in Apache Pulsar 2.8.0 (and so in Luna Streaming 2.8.0) related to the SchemaInfo java class.
 More context [here](https://github.com/apache/pulsar/issues/11338).
 
+## Luna Streaming Distribution 2.8.0 1.1.14
+
+This is a mantenaince release containing important security updates and bugfixes.
+
+List of most notable commits:
+
+* [2e16dc236ce](https://github.com/datastax/pulsar/commit/2e16dc236ce) [Issue 13651][elastic-search] Fix Elasticsearch Sink Invalid type for uuid encoded as logical types #13652
+* [d0aa3b4a19b](https://github.com/datastax/pulsar/commit/d0aa3b4a19b) [Security] Upgrade protobuf to 3.16.1 to address CVE-2021-22569 (#13695)
+
 ## Luna Streaming Distribution 2.8.0 1.1.13
 
 This is a mantenaince release containing important security updates and bugfixes.
