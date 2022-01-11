@@ -35,6 +35,19 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
+## Luna Streaming Distribution 2.7.2 1.1.25
+
+This is a mantenaince release containing important security updates.
+
+List of most notable commits:
+
+
+* [23693c99a0c](https://github.com/datastax/pulsar/commit/23693c99a0c) [Security] Upgrade protobuf to 3.16.1 to address CVE-2021-22569 (#13695)
+* [c28ad1faadc](https://github.com/datastax/pulsar/commit/c28ad1faadc) [Security] Upgrade Jackson to 2.12.6
+* [71253df7a4b](https://github.com/datastax/pulsar/commit/71253df7a4b) Upgrade Gson version 2.8.6 to 2.8.9 (#13610)
+* [041ce94cbf7](https://github.com/datastax/pulsar/commit/041ce94cbf7) make KafkaSourceRecord ack() async to avoid deadlock (#11435) (#18)
+* [6efdde5d0cd](https://github.com/datastax/pulsar/commit/6efdde5d0cd) Fix issues 11964, deadlock bug when use key_shared mode (#11965)
+
 ## Luna Streaming Distribution 2.7.2 1.1.24
 
 This is a mantenaince release containing important security updates.
