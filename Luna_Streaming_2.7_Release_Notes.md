@@ -38,10 +38,7 @@ If you are are using the Luna Streaming Helm chart, you can enable automatic rep
 ## Packaging
 
 Luna Streaming Distribution comes with a few different packages that aim to different purposes. 
-The distributions are available as Docker images and tarballs, both of them follow the same packaging patterns.
-
-### Patterns
-
+The distributions are available as Docker images and tarballs. The docker images have the following packaging patterns:
 * **lunastreaming**: the basic Luna Streaming Distribution, **including Pulsar SQL** feature.
 * **lunastreaming-all**: it contains the basic Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
 
