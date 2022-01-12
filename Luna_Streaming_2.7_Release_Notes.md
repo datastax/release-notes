@@ -35,6 +35,16 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
+## Packaging
+
+Luna Streaming Distribution comes with a few different packages that aim to different purposes. 
+The distributions are available as Docker images and tarballs, both of them follow the same packaging patterns.
+
+### Patterns
+
+* **lunastreaming**: the basic Luna Streaming Distribution, **including Pulsar SQL** feature.
+* **lunastreaming-all**: it contains the basic Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
+
 ## Luna Streaming Distribution 2.7.2 1.1.25
 
 This is a mantenaince release containing important security updates.
