@@ -2,6 +2,28 @@
 DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
 
+# Release notes for 5.1.28
+18 January 2022
+
+## Components versions for DSE 5.1.28
+ * Apache Solr™ 6.0.1.0.2882
+ * Apache Spark™ 2.0.2.42
+ * Apache TinkerPop™ 3.2.11-20210716-faea8d16
+ * Apache Tomcat® 8.5.72&ast;
+ * DSE Java Driver 1.8.3-dse+20201217
+ * Netty 4.0.54.1.dse
+ * Spark JobServer 0.6.2.240
+
+## 5.1.28 DSE Cassandra
+* Await timeout for shutting down non periodic tasks is now configurable with the new jvm option `cassandra.non_periodic_tasks_shutdown_timeout_in_minutes`. When timeout is reached, force shutdown those tasks. (DSP-22241)
+
+## 5.1.28 DSE Upgrade
+* Retain changes to /etc/security/limits.d/cassandra.conf on yum upgrade. (DSP-21928)
+
+## 5.1.28 DSE CVE
+* Upgraded version of Apache Tomcat from 8.5.70 to 8.5.72 to fix CVE-2021-42340. (DSP-22098, [CVE-2021-42340](https://nvd.nist.gov/vuln/detail/CVE-2021-42340))
+
+
 # DataStax Enterprise 5.1.27
 26 November 2021
 
