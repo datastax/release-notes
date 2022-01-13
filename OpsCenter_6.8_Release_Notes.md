@@ -1,13 +1,30 @@
 # Release notes for OpsCenter
 
+# Release notes for OpsCenter 6.8.17
+13 Jan 2022
+
+## OpsCenter 6.8.17 Backup Service
+
+* During a restore tables will not be truncated until after opscenterd verifies there is sufficient space in the agent tmp dirs for the restore. (OPSC-16991)
+* Reintroduced agent config parameters remote_verify_initial_delay and remote_verify_max which specify an amount of time to wait before verifying file uploads during a backup to a destination. (OPSC-17040)
+* Allow the agent to skip the schema verification check during a backup if the agent is unable to get the current schema from the cassandra driver. (OPSC-17061)
+
+## OpsCenter 6.8.17 Monitoring
+
+* Agent will now include rack and datacenter in the long interval node details sent to opscenterd. Rack and datacenter information will also be included in the information updated when viewing the node details dialog. (OPSC-17073)
+
+## OpsCenter 6.8.17
+
+* Updated version of guava, jackson-databind, and javassist to fix vulnerabilities. (OPSC-16922)
+
 # Release notes for OpsCenter 6.8.16
 
-## 6.8.16 DSE Backup Service
+## OpsCenter 6.8.16 Backup Service
 
 * Fixed restore for a schema with restrict rows on condition is present. (OPSC-16924)
 * Fixed the restore of solr index keyspaces having capitalized table name. (OPSC-16970)
 
-## 6.8.16 DSE 
+## OpsCenter 6.8.16 
 
 * If allow_one_failure under [backup_service] in opscenterd.conf is set to true, backups where a single node failed will now be marked as a success rather than a failure. (OPSC-16961)
 * Added the new config parameter "cluster_name_restore_confirmation" to the "[ui]" section of opscenterd.conf. When set to True this will added a text field to the restore confirmation window where the user will have to type the name of the cluster before the restore will run. (OPSC-16994)
@@ -16,23 +33,23 @@
 * Fixed a bug where default values took precedence over explicit values in the [agent_config] section of the cluster config file. (OPSC-17029)
 * When downloading diagnostic tarballs with the diagnostic_tarball_lock_time feature, old diagnostic tarballs will be deleted from the disk before a new one is generated. (OPSC-16997)
 
-# Release notes for 6.8.15
+# Release notes for OpsCenter 6.8.15
 19 Aug 2021
 
-## 6.8.15 DSE Backup Service
+## OpsCenter 6.8.15 Backup Service
 * Fixed the restore of Transparent Data Encryption (TDE) enabled tables and keyspaces. (OPSC-16845)
 * Improved communication between agents and Opscenter. (OPSC-16939)
 
-## 6.8.15 DSE Monitoring
+## OpsCenter 6.8.15 Monitoring
 * The solr query metrics - mbean data - update, merge, query, commit, search index pool, stall and filtercache metrics are added as opscenter metrics. (OPSC-14846)
 
-## 6.8.15 DSE NodeSync
+## OpsCenter 6.8.15 NodeSync
 * Disable the nodesync refresh by modifying environment requirements in the `[nodesync]` section. (OPSC-16968)
 
-## 6.8.15 DSE UI
+## OpsCenter 6.8.15 UI
 * Fixed issue of unavailability of SAI related metrics. (OPSC-16903)
 
-## 6.8.15 DSE
+## OpsCenter 6.8.15
 * Added new config `single_session_per_user` in authentication section so by setting it to `True` with `enabled` option will enable the single session per user under different browsers. (OPSC-16830)
 * Improved the look up of snapshots from other locations to ensure all snapshots are listed when snapshots differ based on datacenter. (OPSC-16985)
 * Added a template for sending messages over slack webhooks. (OPSC-16535)
