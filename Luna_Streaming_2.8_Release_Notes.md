@@ -54,13 +54,31 @@ This is because there is a breaking API change in Apache Pulsar 2.8.0 (and so in
 More context [here](https://github.com/apache/pulsar/issues/11338).
 
 ## Luna Streaming Distribution 2.8.0 1.1.14
+This is a mantenaince release containing important security updates
 
-This is a mantenaince release containing important security updates and bugfixes.
+### Most notable commits
 
-List of most notable commits:
+* [b08c70e](https://github.com/datastax/pulsar/commit/b08c70e) Release 2.8.0.1.1.14
+* [2e16dc2](https://github.com/datastax/pulsar/commit/2e16dc2) [Issue 13651][elastic-search] Fix Elasticsearch Sink Invalid type for uuid encoded as logical types #13652
+* [d0aa3b4](https://github.com/datastax/pulsar/commit/d0aa3b4) [Security] Upgrade protobuf to 3.16.1 to address CVE-2021-22569 (#13695)
+* [b3ec494](https://github.com/datastax/pulsar/commit/b3ec494) Start release 2.8.0.1.1.14-SNAPSHOT
 
-* [2e16dc236ce](https://github.com/datastax/pulsar/commit/2e16dc236ce) [Issue 13651][elastic-search] Fix Elasticsearch Sink Invalid type for uuid encoded as logical types #13652
-* [d0aa3b4a19b](https://github.com/datastax/pulsar/commit/d0aa3b4a19b) [Security] Upgrade protobuf to 3.16.1 to address CVE-2021-22569 (#13695)
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.4.0.nar
+* pulsar-cassandra-source-1.0.1.nar
+* pulsar-io-data-generator-2.8.0.1.1.14.nar
+* pulsar-io-debezium-mongodb-2.8.0.1.1.14.nar
+* pulsar-io-debezium-mysql-2.8.0.1.1.14.nar
+* pulsar-io-debezium-oracle-2.8.0.1.1.14.nar
+* pulsar-io-debezium-postgres-2.8.0.1.1.14.nar
+* pulsar-io-elastic-search-2.8.0.1.1.14.nar
+* pulsar-io-jdbc-clickhouse-2.8.0.1.1.14.nar
+* pulsar-io-jdbc-mariadb-2.8.0.1.1.14.nar
+* pulsar-io-jdbc-postgres-2.8.0.1.1.14.nar
+* pulsar-io-jdbc-sqlite-2.8.0.1.1.14.nar
+* pulsar-io-kafka-2.8.0.1.1.14.nar
+* pulsar-io-kafka-connect-adaptor-nar-2.8.0.1.1.14.nar
+* pulsar-io-kinesis-2.8.0.1.1.14.nar
 
 ## Luna Streaming Distribution 2.8.0 1.1.13
 
