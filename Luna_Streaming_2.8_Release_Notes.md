@@ -53,6 +53,18 @@ If you are upgrading from Apache Pulsar 2.7.0 or Luna Streaming 2.7.2 you may ne
 This is because there is a breaking API change in Apache Pulsar 2.8.0 (and so in Luna Streaming 2.8.0) related to the SchemaInfo java class.
 More context [here](https://github.com/apache/pulsar/issues/11338).
 
+## Packaging
+
+Luna Streaming Distribution comes with a few different packages that aim to different purposes. 
+The distributions are available as Docker images and tarballs, both of them follow the same packaging patterns.
+
+### Patterns
+
+* **lunastreaming**: the basic Luna Streaming Distribution, **including Pulsar SQL** feature.
+* **lunastreaming-core**: the basic Luna Streaming Distribution, **without Pulsar SQL** feature. You should pick this one if you are not interested in using Pulsar SQL features.
+* **lunastreaming-all**: it contains the basic Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
+
+
 ## Luna Streaming Distribution 2.8.0 1.1.14
 This is a mantenaince release containing important security updates
 
