@@ -1,5 +1,34 @@
 # Release notes for DataStax Enterprise 6.8
-DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version. 
+DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
+
+
+# Release notes for 6.8.19
+24 January 2022
+
+## Components versions for DSE 6.8.19
+ * Apache Solr™ 6.0.1.4.2887
+ * Apache Spark™ 2.4.0.18
+ * Apache TinkerPop™ 3.4.5-20210816-c28c0de2
+ * Apache Tomcat® 8.5.72
+ * DSE Java Driver 1.10.0-dse+20210424
+ * Netty 4.1.25.7.dse
+ * Spark JobServer 0.8.0.50
+
+## 6.8.19 DSE Core
+* Fix a possible overflow with elapsed nano-time calculation in messaging queue timeout. (DSP-22011)
+
+## 6.8.19 DSE Cassandra
+* Await timeout for shutting down non periodic tasks is now configurable with the new jvm option `cassandra.non_periodic_tasks_shutdown_timeout_in_minutes`. When timeout is reached, force shutdown those tasks. (DSP-22241)
+* Lower commitlog replay sstable origin warning to info. (DSP-22270)
+* Fix the miscalculation of totalCDCSizeOnDisk. (DSP-22135)
+
+## 6.8.19 DSE Upgrade
+* Retain changes to /etc/security/limits.d/cassandra.conf on yum upgrade. (DSP-21928)
+
+## 6.8.19 DSE CVE
+* Removed unused log4j dependency to avoid false positives in vulnerability scans. (DSP-22234, [CVE-2019-17571](https://nvd.nist.gov/vuln/detail/CVE-2019-17571), [CVE-2021-4104](https://nvd.nist.gov/vuln/detail/CVE-2021-4104), [CVE-2021-44228](https://nvd.nist.gov/vuln/detail/CVE-2021-44228), [CVE-2021-45105](https://nvd.nist.gov/vuln/detail/CVE-2021-45105))
+* Upgraded version of json-smart library used by Azure blob store access from 2.3 to 2.4.7 to fix CVE-2021-27568 and CVE-2021-31684. (DSP-22186, [CVE-2021-27568](https://nvd.nist.gov/vuln/detail/CVE-2021-27568), [CVE-2021-31684](https://nvd.nist.gov/vuln/detail/CVE-2021-31684))
+
 
 # Release notes for 6.8.18
 8 December 2021
