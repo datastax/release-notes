@@ -1,5 +1,16 @@
 # Release notes for DataStax Studio 6.8
 
+# Release notes for DataStax Studio 6.8.20
+25 January 2022
+
+## Studio 6.8.20 Client
+* Improve Spark SQL CACHE/UNCACHE statement validation when prefixing a table with a database name with both persistent and temporary tables. (Studio-3198)
+
+## Studio 6.8.20 Server
+* Update to log4j library version 2.17.1 to address CVE-2021-44832. (Studio-3208)
+* Remove unused log4j 1.x artifacts from Studio distribution. (Studio-3209)
+* Fix issue with http headers running in K8s. (Studio-3210)
+
 # Release notes for DataStax Studio 6.8.19
 20 December 2021
 
