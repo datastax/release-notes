@@ -62,8 +62,64 @@ The distributions are available as Docker images and tarballs, both of them foll
 
 * **lunastreaming**: the basic Luna Streaming Distribution, **including Pulsar SQL** feature.
 * **lunastreaming-core**: the basic Luna Streaming Distribution, **without Pulsar SQL** feature. You should pick this one if you are not interested in using Pulsar SQL features.
-* **lunastreaming-all**: it contains the basic Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
+* **lunastreaming-all**: it contains the Core Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
 
+
+## Luna Streaming Distribution 2.8.0 1.1.15
+This is a mantenaince release containing important security updates.
+
+### Most notable commits
+
+* [5ea85a6](https://github.com/datastax/pulsar/commit/5ea85a6) [Issue #11351] Parallel Precise Publish Rate Limiting Fix (#11372)
+* [0f08269](https://github.com/datastax/pulsar/commit/0f08269) [issue #13351] Solving precise rate limiting does not takes effect (#11446)
+* [b197b98](https://github.com/datastax/pulsar/commit/b197b98) [configuration]exposeBunlesMetricsInPrometheus (#13460)
+* [e6a8f04](https://github.com/datastax/pulsar/commit/e6a8f04) Fix MsgDropRate missing from NonPersistentTopics stats output. (#11119)
+* [bba4cff](https://github.com/datastax/pulsar/commit/bba4cff) Non-persistent topic subscription metrics #13827
+* [1bafbfa](https://github.com/datastax/pulsar/commit/1bafbfa) Fix bundle metrics would overwrite loadbalance metrics (#13641)
+* [3bb075e](https://github.com/datastax/pulsar/commit/3bb075e) Expose broker bundles  metrics to prometheus (#12366)
+* [2dd8093](https://github.com/datastax/pulsar/commit/2dd8093) [Metrics] Add support for splitting topic and partition label in Prometheus (#12225)
+* [4cda985](https://github.com/datastax/pulsar/commit/4cda985) Expose compaction metrics to Prometheus (#11739)
+* [54b6760](https://github.com/datastax/pulsar/commit/54b6760) Add compacted topic metrics for TopicStats in CLI (#11564)
+* [4384fdc](https://github.com/datastax/pulsar/commit/4384fdc) Add offload ledger info for admin topics stats (#11465)
+* [46707b2](https://github.com/datastax/pulsar/commit/46707b2) Add metrics [AddEntryWithReplicasBytesRate] for namespace (#11472)
+* [53ff8d3](https://github.com/datastax/pulsar/commit/53ff8d3) Add metrics storageLogicalSize for the TopicStats and NamespaceStats (#11430)
+* [a00650f](https://github.com/datastax/pulsar/commit/a00650f) Fix missing replicator metrics (#11264)
+* [b034f5a](https://github.com/datastax/pulsar/commit/b034f5a) [security] pulsar-io-kafka: upgrade jakarta.el to 3.0.4 to get rid of CVE-2021-28170 #13943
+* [249ef3f](https://github.com/datastax/pulsar/commit/249ef3f) [Broker] Fix set-publish-rate when using preciseTopicPublishRateLimiterEnable=true (#10384)
+* [91e0710](https://github.com/datastax/pulsar/commit/91e0710) Upgrade JDK version for docker images: adoptopenjdk:11-jdk (11.0.9) to eclipse-temurin:11.0.13
+* [df17d07](https://github.com/datastax/pulsar/commit/df17d07) [security] pulsar-io-kafka: upgrade jersey-bean-validation to get rid CVE-2017-7536 (brought in by Hibernate Validator 5.x) (#13868)
+* [72e8ede](https://github.com/datastax/pulsar/commit/72e8ede) [security] remove Jackson ASL from kafka-connect-avro-converter-shaded (#13894)
+* [f07f91a](https://github.com/datastax/pulsar/commit/f07f91a) Fixed internal topic effect by InactiveTopicPolicy. (#13816)
+* [aa6b9ae](https://github.com/datastax/pulsar/commit/aa6b9ae) [Security] Use dependencyManagement to enforce snakeyaml version to 1.30 (#13722)
+* [48311ed](https://github.com/datastax/pulsar/commit/48311ed) Updating dependencies (guava and what brought in older guava) to get rid of the guava-related CVE-2018-10237 and CVE-2020-8908 (#13716)
+* [6deb24c](https://github.com/datastax/pulsar/commit/6deb24c) Upgraded ElasticSearch to get rid of CVEs (and switched client to OpenSearch one) (#13867)
+* [7eadbe1](https://github.com/datastax/pulsar/commit/7eadbe1) Getting rid of CVEs in batch-data-generator (#13820)
+* [4c25e83](https://github.com/datastax/pulsar/commit/4c25e83) Fix the deadlock while using zookeeper thread to create ledger (#13744)
+* [01bc5d6](https://github.com/datastax/pulsar/commit/01bc5d6) Use numeric uid in Dockerfile's USER to overcome issue with runAsNonRoot
+* [1b2b0e2](https://github.com/datastax/pulsar/commit/1b2b0e2) [security] Offloaders - get rid of several CVEs (Log4J included) (#13746)
+* [af63541](https://github.com/datastax/pulsar/commit/af63541) Fixed NPE in ProxyConnection with no auth data (#12111)
+* [01a3747](https://github.com/datastax/pulsar/commit/01a3747) Fixed ProxyConnection to check for existence of auth_data field (#12057)
+* [c4782ff](https://github.com/datastax/pulsar/commit/c4782ff) Updating dependencies to get rid of CVEs brought in with kafka and log4j-1.2 libs (#13726)
+* [936a4c8](https://github.com/datastax/pulsar/commit/936a4c8) Updated dependencies to get rid of pulsar-io/jdbc related CVE-2020-13692 (#13753)
+* [672c06e](https://github.com/datastax/pulsar/commit/672c06e) Remove kafka-connect-adaptor from the lunastreaming-all distribution
+
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.4.1-nar.nar
+* pulsar-cassandra-source-1.0.2.nar
+* pulsar-io-data-generator-2.8.0.1.1.15.nar
+* pulsar-io-debezium-mongodb-2.8.0.1.1.15.nar
+* pulsar-io-debezium-mysql-2.8.0.1.1.15.nar
+* pulsar-io-debezium-oracle-2.8.0.1.1.15.nar
+* pulsar-io-debezium-postgres-2.8.0.1.1.15.nar
+* pulsar-io-elastic-search-2.8.0.1.1.15.nar
+* pulsar-io-jdbc-clickhouse-2.8.0.1.1.15.nar
+* pulsar-io-jdbc-mariadb-2.8.0.1.1.15.nar
+* pulsar-io-jdbc-postgres-2.8.0.1.1.15.nar
+* pulsar-io-jdbc-sqlite-2.8.0.1.1.15.nar
+* pulsar-io-kafka-2.8.0.1.1.15.nar
+* pulsar-io-kinesis-2.8.0.1.1.15.nar
+* pulsar-snowflake-connector-0.1.6.nar
+* starlight-rabbitmq-1.1.3.nar
 
 ## Luna Streaming Distribution 2.8.0 1.1.14
 This is a mantenaince release containing important security updates
