@@ -64,6 +64,34 @@ The distributions are available as Docker images and tarballs, both of them foll
 * **lunastreaming-core**: the basic Luna Streaming Distribution, **without Pulsar SQL** feature. You should pick this one if you are not interested in using Pulsar SQL features.
 * **lunastreaming-all**: it contains the Core Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
 
+## Luna Streaming Distribution 2.8.0 1.1.19
+This is a mantenaince release containing bufixes about KEY_SHARED subscriptions and enhancements for Pulsar IO ElasticSearch Sink connector.
+### Most notable commits
+
+* [65269e1](https://github.com/datastax/pulsar/commit/65269e1) add non-bulk index/delete with retry (#23)
+* [ad512d6](https://github.com/datastax/pulsar/commit/ad512d6) Fix the default maxRetries=-1 (#22)
+* [df59224](https://github.com/datastax/pulsar/commit/df59224) Prevent StackOverFlowException in KEY_SHARED subscription
+* [a0354a7](https://github.com/datastax/pulsar/commit/a0354a7) Fix Issue #12885, Unordered consuming case in Key_Shared subscription (#12890)
+
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.4.1-nar.nar
+* pulsar-cassandra-source-1.0.2.nar
+* pulsar-io-data-generator-2.8.0.1.1.19.nar
+* pulsar-io-debezium-mongodb-2.8.0.1.1.19.nar
+* pulsar-io-debezium-mysql-2.8.0.1.1.19.nar
+* pulsar-io-debezium-oracle-2.8.0.1.1.19.nar
+* pulsar-io-debezium-postgres-2.8.0.1.1.19.nar
+* pulsar-io-elastic-search-2.8.0.1.1.19.nar
+* pulsar-io-jdbc-clickhouse-2.8.0.1.1.19.nar
+* pulsar-io-jdbc-mariadb-2.8.0.1.1.19.nar
+* pulsar-io-jdbc-postgres-2.8.0.1.1.19.nar
+* pulsar-io-jdbc-sqlite-2.8.0.1.1.19.nar
+* pulsar-io-kafka-2.8.0.1.1.19.nar
+* pulsar-io-kinesis-2.8.0.1.1.19.nar
+* pulsar-snowflake-connector-0.1.6.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.7.nar
+* starlight-rabbitmq-1.1.3.nar
+* pulsar-kafka-proxy-2.8.0.1.0.7.nar
 ## Luna Streaming Distribution 2.8.0 1.1.18
 This is a mantenaince release containing bugfixes and a new option in the ElasticSearch Sink connector.
 
