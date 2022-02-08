@@ -64,6 +64,32 @@ The distributions are available as Docker images and tarballs, both of them foll
 * **lunastreaming-core**: the basic Luna Streaming Distribution, **without Pulsar SQL** feature. You should pick this one if you are not interested in using Pulsar SQL features.
 * **lunastreaming-all**: it contains the Core Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
 
+## Luna Streaming Distribution 2.8.0 1.1.21
+This is a mantenaince release containing bugfixes.
+### Most notable commits
+
+* [d5ce3a0](https://github.com/datastax/pulsar/commit/d5ce3a0) AbstractMetadataStore: invalidate childrenCache correctly when node created
+* [60d462a](https://github.com/datastax/pulsar/commit/60d462a) Close the replicator and replication client when delete cluster. (#11342)
+
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.4.1-nar.nar
+* pulsar-cassandra-source-1.0.2.nar
+* pulsar-io-data-generator-2.8.0.1.1.21.nar
+* pulsar-io-debezium-mongodb-2.8.0.1.1.21.nar
+* pulsar-io-debezium-mysql-2.8.0.1.1.21.nar
+* pulsar-io-debezium-oracle-2.8.0.1.1.21.nar
+* pulsar-io-debezium-postgres-2.8.0.1.1.21.nar
+* pulsar-io-elastic-search-2.8.0.1.1.21.nar
+* pulsar-io-jdbc-clickhouse-2.8.0.1.1.21.nar
+* pulsar-io-jdbc-mariadb-2.8.0.1.1.21.nar
+* pulsar-io-jdbc-postgres-2.8.0.1.1.21.nar
+* pulsar-io-jdbc-sqlite-2.8.0.1.1.21.nar
+* pulsar-io-kafka-2.8.0.1.1.21.nar
+* pulsar-io-kinesis-2.8.0.1.1.21.nar
+* pulsar-snowflake-connector-0.1.6.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.8.nar
+* starlight-rabbitmq-2.8.0.1.1.19-ls-1.nar
+* pulsar-kafka-proxy-2.8.0.1.0.8.nar
 ## Luna Streaming Distribution 2.8.0 1.1.20
 This is a mantenaince release containing important security updates.
 ### Most notable commits
