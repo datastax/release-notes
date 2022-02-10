@@ -42,6 +42,31 @@ The distributions are available as Docker images and tarballs. The docker images
 * **lunastreaming**: the basic Luna Streaming Distribution, **including Pulsar SQL** feature.
 * **lunastreaming-all**: it contains the basic Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
 
+## Luna Streaming Distribution 2.7.2 1.1.26
+This is a mantenaince release containing important security updates.
+### Most notable commits
+
+* [a2385d9e8bb](https://github.com/datastax/pulsar/commit/a2385d9e8bb) Upgrade JDK version for docker images: 11.0.14_9-jdk
+* [541ebd28a5b](https://github.com/datastax/pulsar/commit/541ebd28a5b) Upgrade JDK version for docker images: adoptopenjdk:11-jdk (11.0.9) to eclipse-temurin:11.0.13
+* [3cb75ba5283](https://github.com/datastax/pulsar/commit/3cb75ba5283) [Proxy] Fix port exhaustion and connection issues in Pulsar Proxy (#14078)
+* [75d884bb7d6](https://github.com/datastax/pulsar/commit/75d884bb7d6) [Proxy] Remove unnecessary Pulsar Client usage from Pulsar Proxy (#13836)
+* [420a86c7cb0](https://github.com/datastax/pulsar/commit/420a86c7cb0) Use numeric uid in Dockerfile's USER to overcome issue with runAsNonRoot
+* [a7b10f60c28](https://github.com/datastax/pulsar/commit/a7b10f60c28) Remove kafka-connect-adaptor from the lunastreaming-all distribution
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.4.0.nar
+* luna-cassandra-source-1.0.2.nar
+* pulsar-io-data-generator-2.7.2.1.1.26.nar
+* pulsar-io-debezium-mongodb-2.7.2.1.1.26.nar
+* pulsar-io-debezium-mysql-2.7.2.1.1.26.nar
+* pulsar-io-debezium-postgres-2.7.2.1.1.26.nar
+* pulsar-io-elastic-search-2.7.2.1.1.26.nar
+* pulsar-io-jdbc-clickhouse-2.7.2.1.1.26.nar
+* pulsar-io-jdbc-mariadb-2.7.2.1.1.26.nar
+* pulsar-io-jdbc-postgres-2.7.2.1.1.26.nar
+* pulsar-io-jdbc-sqlite-2.7.2.1.1.26.nar
+* pulsar-io-kafka-2.7.2.1.1.26.nar
+* pulsar-io-kinesis-2.7.2.1.1.26.nar
+  
 ## Luna Streaming Distribution 2.7.2 1.1.25
 
 This is a mantenaince release containing important security updates.
