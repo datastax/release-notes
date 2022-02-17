@@ -3,6 +3,21 @@ DSE 6.7.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 **NOTE**: DSE `6.7.x` line has [EOL date of November 30, 2022](https://www.datastax.com/legal/supported-software).  Please consider upgrading to [DSE 6.8](./DSE_6.8_Release_Notes.md) for our latest features and patches.
 
+# DataStax Enterprise 6.7.16
+17 February 2022
+
+## Components versions for DSE 6.7.16
+   * Apache Solr™ 6.0.1.2.2839
+   * Apache Spark™ 2.2.3.18
+   * Apache TinkerPop™ 3.3.7-20190521-f71ce0d7
+   * Apache Tomcat® 8.5.65
+   * DSE Java Driver 1.8.3-dse+20201217
+   * Netty 4.1.25.7.dse
+   * Spark JobServer 0.8.0.45.3
+
+## 6.7.16 DSE Cassandra
+* Ported fix from CASSANDRA-17352: Remote code execution for scripted UDFs (DSP-22321, [CVE-2021-44521](https://nvd.nist.gov/vuln/detail/CVE-2021-44521))
+
 # DataStax Enterprise 6.7.15
 17 June 2021
 
