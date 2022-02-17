@@ -1,6 +1,71 @@
 # Release notes for DataStax Enterprise 6.0
 DSE 6.0.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.0.17
+18 February 2022
+
+## Components versions for DSE 6.0.17
+ * Apache Solr™ 6.0.1.1.2883&ast;
+ * Apache Spark™ 2.2.3.18
+ * Apache TinkerPop™ 3.3.11-20210727-ba40007e&ast;
+ * Apache Tomcat® 8.5.72&ast;
+ * DSE Java Driver 1.8.3-dse+20201217
+ * Netty 4.1.25.7.dse
+ * Spark JobServer 0.8.0.45.3
+
+## 6.0.17 DSE Core
+* Adds a new flag `-t <number of days>` for `sstablescrub` to update deletion times which are in the future. It accepts a command-line argument: `-t <number of days>`. All deletion times further in the future than the given number of days will be reset to the current time. Also fixed a potential issue that users may have the deletion time in the future updated to the current time if they run `nodetool scrub`. (DB-4964)
+* Added check against the negative value in local stream throughput (`stream_throughput_outbound_megabits_per_sec`) and inter dc stream throughput (`inter_dc_stream_throughput_outbound_megabits_per_sec`). (DB-5010)
+* Fixed an issue in preloading prepared statements that queries static columns. (DB-5012)
+* Port and adjust CASSANDRA-16686 for DSE. (DB-5022)
+* Fixed a bug in the authenticator that would use the default management mode instead of the defined mode by authentication when authenticating. (DSP-22067)
+* Fixes stack overflow with secondary indexes on collections. (DSP-22070)
+
+## 6.0.17 DSE Cassandra
+* Enables periodic logging of system status (default every 5 minutes, configurable). (DSP-22039)
+* Await timeout for shutting down non periodic tasks is now configurable with the new jvm option `cassandra.non_periodic_tasks_shutdown_timeout_in_minutes`. When timeout is reached, force shutdown those tasks. (DSP-22241)
+* Lower commitlog replay sstable origin warning to info. (DSP-22270)
+* Fix a possible issue that shell tool could break with `-h/--help` in package install. (DSP-20375)
+* Added warning message in case of cases where dse was started with duplicated `-Xmx` options when used in `jvm-server.options`. (DSP-21795)
+
+## 6.0.17 DSE Search
+* Fixed a bug where in rare cases search query routing might start to spin endlessly for a particular query. (DSP-21838)
+
+## 6.0.17 DSE Spark
+* Fixes broken partition filtering in hive metastore leading to missing data in the spark-sql queries results for queries involving numeric partition keys or complex conditions. (DSP-21651)
+* Fixed and updated `javax.mail` dependency to `com.sun.mail`. (DSP-22085)
+
+## 6.0.17 DSE Auth
+* Removed a possible false-positives error message in the log that would cause confusion when multiple authentication schemes are defined. (DB-5015)
+
+## 6.0.17 DSE CQL
+* Prints TLS protocol information when running cqlsh with `--debug` parameter. (DB-4981)
+
+## 6.0.17 DSE Local Write-Read Paths
+* Resolves a TPC weakness with large rows and collections, where DSE 6 would repeatedly attempt to read the same row and create a lot of on-heap garbage. (DB-3962)
+
+## 6.0.17 DSE SSTables
+* When the Bloom filter is recreated due to FP chance change, sstable metadata is loaded and re-written in order to update validation metadata with the new fp chance. However, the loaded metadata lacked compaction metadata, so when rewritten, compaction metadata got truncated. (DB-5005)
+
+## 6.0.17 DSE Upgrade
+* Retain changes to `/etc/security/limits.d/cassandra.conf` on `yum upgrade`. (DSP-21928)
+
+## 6.0.17 DSE Security
+* This fixes an issue in the LDAP `group_search_filter` default value that meant that group hierarchies were not being loaded if the `group_search_filter` was not explicitly set in the `dse.yaml`. (DSP-21874)
+
+## 6.0.17 DSE CVE
+* Upgraded Tomcat version from 8.5.65 to 8.5.70. (DSP-21996, [CVE-2021-33037](https://nvd.nist.gov/vuln/detail/CVE-2021-33037))
+* Upgraded version of Apache Tomcat from 8.5.70 to 8.5.72. (DSP-22098, [CVE-2021-42340](https://nvd.nist.gov/vuln/detail/CVE-2021-42340))
+* Upgraded Bootstrap version from 3.1.1 to 3.4.1 and Flask from 0.10.1 to 1.1.4. (DSP-21682, [CVE-2019-8331](https://nvd.nist.gov/vuln/detail/CVE-2019-8331), [CVE-2016-10735](https://nvd.nist.gov/vuln/detail/CVE-2016-10735), [CVE-2018-1000656](https://nvd.nist.gov/vuln/detail/CVE-2018-1000656), [CVE-2019-1010083](https://nvd.nist.gov/vuln/detail/CVE-2019-1010083))
+* Upgraded jetty version from 9.4.34.v20201102 to 9.4.41.v20210516. (DSP-21684, [CVE-2020-27216](https://nvd.nist.gov/vuln/detail/CVE-2020-27216))
+* Ported fix from SOLR-12514 to dse lucene-Solr. (DSP-21685, [CVE-2018-11802](https://nvd.nist.gov/vuln/detail/CVE-2018-11802))
+* Upgraded jetty version from 9.4.34.v20201102 to 9.4.41.v20210516. (DSP-21687, [CVE-2020-27218](https://nvd.nist.gov/vuln/detail/CVE-2020-27218))
+* Upgraded version of PDFBox and FontBox to 2.0.24, and version of JempBox to 1.8.16. (DSP-21688, [CVE-2018-8036](https://nvd.nist.gov/vuln/detail/CVE-2018-8036), [CVE-2018-11797](https://nvd.nist.gov/vuln/detail/CVE-2018-11797))
+* Upgraded version of directory-ldap-api from DSE 1.0.0.2.dse to OSS 1.0.3. (DSP-21758, [CVE-2018-1337](https://nvd.nist.gov/vuln/detail/CVE-2018-1337))
+* Upgraded version of groovy to 2.4.21. (DSP-21767, [CVE-2020-17521](https://nvd.nist.gov/vuln/detail/CVE-2020-17521))
+* Removed log4j 1.2.x dependency from dse-spark/client/lib and replace it with reload4j 1.2.19. (DSP-22279, [CVE-2021-44228](https://nvd.nist.gov/vuln/detail/CVE-2021-44228), [CVE-2019-17571](https://nvd.nist.gov/vuln/detail/CVE-2019-17571), [CVE-2022-23305](https://nvd.nist.gov/vuln/detail/CVE-2022-23305), [CVE-2022-23302](https://nvd.nist.gov/vuln/detail/CVE-2022-23302), [CVE-2021-4104](https://nvd.nist.gov/vuln/detail/CVE-2021-4104))
+* Ported fix from CASSANDRA-17352: Remote code execution for scripted UDFs. (DSP-22321, [CVE-2021-44521](https://nvd.nist.gov/vuln/detail/CVE-2021-44521))
+
 # DataStax Enterprise 6.0.16
 11 May 2021
 
