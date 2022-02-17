@@ -2,6 +2,21 @@
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
 
+# Release notes for 6.8.20
+17 February 2022
+
+## Components versions for DSE 6.8.20
+ * Apache Solr™ 6.0.1.4.2887
+ * Apache Spark™ 2.4.0.18
+ * Apache TinkerPop™ 3.4.5-20210816-c28c0de2
+ * Apache Tomcat® 8.5.72
+ * DSE Java Driver 1.10.0-dse+20210424
+ * Netty 4.1.25.7.dse
+ * Spark JobServer 0.8.0.50
+
+## 6.8.20 DSE Cassandra
+* Ported fix from CASSANDRA-17352: Remote code execution for scripted UDFs (DSP-22321, [CVE-2021-44521](https://nvd.nist.gov/vuln/detail/CVE-2021-44521))
+
 # Release notes for 6.8.19
 24 January 2022
 

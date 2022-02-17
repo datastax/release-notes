@@ -1,6 +1,20 @@
 # Release notes for DataStax Enterprise 5.1
 DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 5.1.29
+17 February 2022
+
+## Components versions for DSE 5.1.29
+ * Apache Solr™ 6.0.1.0.2882
+ * Apache Spark™ 2.0.2.42
+ * Apache TinkerPop™ 3.2.11-20210716-faea8d16
+ * Apache Tomcat® 8.5.72
+ * DSE Java Driver 1.8.3-dse+20201217
+ * Netty 4.0.54.1.dse
+ * Spark JobServer 0.6.2.240
+
+## 5.1.29 DSE Cassandra
+* Ported fix from CASSANDRA-17352: Remote code execution for scripted UDFs (DSP-22321, [CVE-2021-44521](https://nvd.nist.gov/vuln/detail/CVE-2021-44521))
 
 # Release notes for 5.1.28
 18 January 2022
