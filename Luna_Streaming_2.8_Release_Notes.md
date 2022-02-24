@@ -9,8 +9,8 @@ Luna Streaming Distribution 2.8.0 is compatible with Apache Pulsar&trade; 2.8.0.
    * Apache Pulsar 2.8.0
    * DataStax Pulsar Admin Console 1.0.0
    * DataStax Pulsar Heartbeat 1.0.2
-   * DataStax Apache Pulsar Cassandra Sink 1.4.0
-   * DataStax Apache Pulsar Cassandra Source 1.0.1
+   * DataStax Apache Pulsar Cassandra Sink 1.5.0
+   * DataStax Apache Pulsar Cassandra Source 1.0.2
    * DataStax Burnell 1.0.0
    * Datastax BookKeeper 4.14.3.1.0.0
  
@@ -64,6 +64,31 @@ The distributions are available as Docker images and tarballs, both of them foll
 * **lunastreaming-core**: the basic Luna Streaming Distribution, **without Pulsar SQL** feature. You should pick this one if you are not interested in using Pulsar SQL features.
 * **lunastreaming-all**: it contains the Core Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
 
+## Luna Streaming Distribution 2.8.0 1.1.23
+This is a mantenaince release containing important security updates and the upgrade of DataStax Apache Pulsar Cassandra Sink.
+### Most notable commits
+* [57aded2d6fc](https://github.com/datastax/pulsar/commit/57aded2d6fc) Bump netty version to 4.1.74.Final (#14257)
+* [c8b1e6ff4a7](https://github.com/datastax/pulsar/commit/c8b1e6ff4a7) Include correct bookkeeper jars in pulsar-client jar (#16)
+
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.5.0-nar.nar
+* pulsar-cassandra-source-1.0.2.nar
+* pulsar-io-data-generator-2.8.0.1.1.23.nar
+* pulsar-io-debezium-mongodb-2.8.0.1.1.23.nar
+* pulsar-io-debezium-mysql-2.8.0.1.1.23.nar
+* pulsar-io-debezium-oracle-2.8.0.1.1.23.nar
+* pulsar-io-debezium-postgres-2.8.0.1.1.23.nar
+* pulsar-io-elastic-search-2.8.0.1.1.23.nar
+* pulsar-io-jdbc-clickhouse-2.8.0.1.1.23.nar
+* pulsar-io-jdbc-mariadb-2.8.0.1.1.23.nar
+* pulsar-io-jdbc-postgres-2.8.0.1.1.23.nar
+* pulsar-io-jdbc-sqlite-2.8.0.1.1.23.nar
+* pulsar-io-kafka-2.8.0.1.1.23.nar
+* pulsar-io-kinesis-2.8.0.1.1.23.nar
+* pulsar-snowflake-connector-0.1.6.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.9.nar
+* starlight-rabbitmq-2.8.0.1.1.19-ls-1.nar
+* pulsar-kafka-proxy-2.8.0.1.0.9.nar
 ## Luna Streaming Distribution 2.8.0 1.1.22
 This is a mantenaince release containing important security updates.
 ### Most notable commits
