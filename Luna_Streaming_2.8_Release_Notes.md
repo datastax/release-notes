@@ -46,6 +46,9 @@ On top of that, Luna Streaming development processes are enhanced with additiona
 * Reactivity to third-party vulnerabilities. Every components is scanned and monitored daily, ensuring quick fixes in case of vulnerability disclosure.
 * Regular docker images vulnerability scan on latest Luna Streaming releases, with a well-defined release procedure.
 
+At the time of the creation of the release, all the components included in the _[all](#packaging)_ packages are scanned by [Sonatype IQ Server service](https://help.sonatype.com/iqserver) and they don't have any critical (severity 8 or higher) security issues.
+
+
 ### Upgrade considerations for Luna Streaming Distribution 2.8.0
 
 As with Luna Streaming 2.7, this release uses non-root containers for enhanced security. When upgrading from a previous version (for example, 2.6.2_1.0.1) files created while running that version will have root permissions and will not be readable by containers running the new version.
