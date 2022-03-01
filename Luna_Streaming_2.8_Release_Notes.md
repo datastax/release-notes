@@ -79,6 +79,35 @@ The distributions are available as Docker images and tarballs, both of them foll
 * **lunastreaming-all**: it contains the Core Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
 
 # Releases
+## Luna Streaming Distribution 2.8.0 1.1.24
+This is a mantenaince release containing important security updates.
+### Most notable commits
+* [635f5691a4e](https://github.com/datastax/pulsar/commit/635f5691a4e) Upgrade BK to 4.14.4 and Grpc to 1.42.1 (#13714)
+* [7953fed9ec1](https://github.com/datastax/pulsar/commit/7953fed9ec1) Remove --illegal-access errors resulting from Google Guice - Pulsar IO, Offloaders and Pulsar SQL - Bump Guice to 5.1.0 (#14300)
+* [0b6667bd91c](https://github.com/datastax/pulsar/commit/0b6667bd91c) Fix NoClassDefFoundError: com/google/inject/AbstractModule in pulsar-io/batch-data-generator and Jcloud offloader (#14150)
+* [cb37e2073be](https://github.com/datastax/pulsar/commit/cb37e2073be) Remove --illegal-access errors resulting from Google Guice (upgrade to 5.0.1) (#13810)
+* [9a098e2f17b](https://github.com/datastax/pulsar/commit/9a098e2f17b) KCA: Option to sanitize topic name for the conenctors that cannot handle pulsar topic names (#14475)
+* [dbc7dab8b01](https://github.com/datastax/pulsar/commit/dbc7dab8b01) [tools] Pulsar Client: add ability to produce KV messages (#11303)
+* [c56000e3cd2](https://github.com/datastax/pulsar/commit/c56000e3cd2) [Issue 11067][pulsar-client] Fix bin/pulsar-client produce not supporting v2 topic name through websocket (#11069)
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.5.0-nar.nar
+* pulsar-cassandra-source-1.0.2.nar
+* pulsar-io-data-generator-2.8.0.1.1.24.nar
+* pulsar-io-debezium-mongodb-2.8.0.1.1.24.nar
+* pulsar-io-debezium-mysql-2.8.0.1.1.24.nar
+* pulsar-io-debezium-oracle-2.8.0.1.1.24.nar
+* pulsar-io-debezium-postgres-2.8.0.1.1.24.nar
+* pulsar-io-elastic-search-2.8.0.1.1.24.nar
+* pulsar-io-jdbc-clickhouse-2.8.0.1.1.24.nar
+* pulsar-io-jdbc-mariadb-2.8.0.1.1.24.nar
+* pulsar-io-jdbc-postgres-2.8.0.1.1.24.nar
+* pulsar-io-jdbc-sqlite-2.8.0.1.1.24.nar
+* pulsar-io-kafka-2.8.0.1.1.24.nar
+* pulsar-io-kinesis-2.8.0.1.1.24.nar
+* pulsar-snowflake-connector-0.1.6.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.11.nar
+* starlight-rabbitmq-2.8.0.1.1.19-ls-1.nar
+* pulsar-kafka-proxy-2.8.0.1.0.11.nar
 
 ## Luna Streaming Distribution 2.8.0 1.1.23
 This is a mantenaince release containing important security updates and the upgrade of DataStax Apache Pulsar Cassandra Sink.
