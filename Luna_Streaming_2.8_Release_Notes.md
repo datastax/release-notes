@@ -79,6 +79,35 @@ The distributions are available as Docker images and tarballs, both of them foll
 * **lunastreaming-all**: it contains the Core Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
 
 # Releases
+## Luna Streaming Distribution 2.8.0 1.1.25
+This is a mantenaince release containing important stability improvements.
+### Most notable commits
+
+* [89840426590](https://github.com/datastax/pulsar/commit/89840426590) Allow Pulsar Functions localrun to exit on error (#12278)
+* [a89af949f43](https://github.com/datastax/pulsar/commit/a89af949f43) Allow Pulsar Functions / Sinks to pool messages (#11618)
+* [9b23e26eba5](https://github.com/datastax/pulsar/commit/9b23e26eba5) Fix: Cast exception occurs if function/source/sink type is ByteBuffer (#11611)
+* [24d7f357ba2](https://github.com/datastax/pulsar/commit/24d7f357ba2) KCA: Option to sanitize topic name for the conenctors that cannot handle pulsar topic names
+* [190e6504ad6](https://github.com/datastax/pulsar/commit/190e6504ad6) [Transaction] Fix topicTransactionBuffer handle null snapshot (#12758)
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.0-nar.nar
+* pulsar-cassandra-source-1.0.2.nar
+* pulsar-io-data-generator-2.8.0.1.1.25.nar
+* pulsar-io-debezium-mongodb-2.8.0.1.1.25.nar
+* pulsar-io-debezium-mysql-2.8.0.1.1.25.nar
+* pulsar-io-debezium-oracle-2.8.0.1.1.25.nar
+* pulsar-io-debezium-postgres-2.8.0.1.1.25.nar
+* pulsar-io-elastic-search-2.8.0.1.1.25.nar
+* pulsar-io-jdbc-clickhouse-2.8.0.1.1.25.nar
+* pulsar-io-jdbc-mariadb-2.8.0.1.1.25.nar
+* pulsar-io-jdbc-postgres-2.8.0.1.1.25.nar
+* pulsar-io-jdbc-sqlite-2.8.0.1.1.25.nar
+* pulsar-io-kafka-2.8.0.1.1.25.nar
+* pulsar-io-kinesis-2.8.0.1.1.25.nar
+* pulsar-snowflake-connector-0.1.6.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.12.nar
+* starlight-rabbitmq-2.8.0.1.1.19-ls-1.nar
+* pulsar-kafka-proxy-2.8.0.1.0.12.nar
+
 ## Luna Streaming Distribution 2.8.0 1.1.24
 This is a mantenaince release containing important security updates.
 ### Most notable commits
