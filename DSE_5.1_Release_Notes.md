@@ -1,6 +1,32 @@
 # Release notes for DataStax Enterprise 5.1
 DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+
+# Release notes for 5.1.30
+7 March 2022
+
+## Components versions for DSE 5.1.30
+ * Apache Solr™ 6.0.1.0.2882
+ * Apache Spark™ 2.0.2.42
+ * Apache TinkerPop™ 3.2.11-20210716-faea8d16
+ * Apache Tomcat® 8.5.72
+ * DSE Java Driver 1.8.3-dse+20201217
+ * Netty 4.0.54.1.dse
+ * Spark JobServer 0.6.2.240
+
+## 5.1.30 DSE Core
+* Introduces system property "cassandra.commitlog.skip_file_advice" that allows to skip the native call to "fadvise" with "FADV_DONTNEED" argument after the commit log is flushed. The native call is not skipped by default and therefore has no effect. (DSP-22315)
+* MemoryOnlyStrategy tables will always use mmap disk access mode, the cassandra.yaml setting will be ignored for those tables. (DSP-22246)
+
+## 5.1.30 DSE Cassandra
+* With disk_access_mode ‘auto’ (default value) DSE will map only index files on 64-bit JVM unless there is no limit for {{Djdk.nio.maxCachedBufferSize}} or {{-XX:+DisableExcplicitGC}} is set for the DSE JVM. (DSP-22079)
+* Lower commitlog replay sstable origin warning to info. (DSP-22270)
+
+## 5.1.30 DSE CVE
+* Removed log4j 1.2.x dependency from dse-spark/client/lib and replace it with reload4j 1.2.19. (DSP-22279, [CVE-2021-44228](https://nvd.nist.gov/vuln/detail/CVE-2021-44228), [CVE-2019-17571](https://nvd.nist.gov/vuln/detail/CVE-2019-17571), [CVE-2022-23305](https://nvd.nist.gov/vuln/detail/CVE-2022-23305), [CVE-2022-23302](https://nvd.nist.gov/vuln/detail/CVE-2022-23302), [CVE-2021-4104](https://nvd.nist.gov/vuln/detail/CVE-2021-4104))
+* Upgraded version of Bouncy Castle to 1.67. (DSP-22301, [CVE-2018-1000613](https://nvd.nist.gov/vuln/detail/CVE-2018-1000613), [CVE-2018-1000180](https://nvd.nist.gov/vuln/detail/CVE-2018-1000180), [CVE-2020-28052](https://nvd.nist.gov/vuln/detail/CVE-2020-28052))
+
+
 # Release notes for 5.1.29
 17 February 2022
 
