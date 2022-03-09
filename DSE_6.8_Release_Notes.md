@@ -2,6 +2,36 @@
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
 
+# Release notes for 6.8.21
+7 March 2022
+
+## Components versions for DSE 6.8.21
+ * Apache Solr™ 6.0.1.4.2887
+ * Apache Spark™ 2.4.0.18
+ * Apache TinkerPop™ 3.4.5-20210816-c28c0de2
+ * Apache Tomcat® 8.5.72
+ * DSE Java Driver 1.10.0-dse+20210424
+ * Netty 4.1.25.7.dse
+ * Spark JobServer 0.8.0.50
+
+## 6.8.21 DSE Core
+* Changes reading logic of compressed chunk offsets that are loaded from compression info for zero copied partial sstables. It results in smaller off-heap usage. (DSP-22247)
+* Adds configurable snapshot size cache speeding up the retrieval of snapshot information. (DSP-22338)
+* PKCS#11 needs Signature algorithms to be configured on some versions of Java 11 (see [https://bugs.openjdk.java.net/browse/JDK-8217611|https://bugs.openjdk.java.net/browse/JDK-8217611|smart-link]). In order to work with TLSv1.3, RSA keys in PKCS#11 key stores must have a key size of at least 4096 bits. (DSP-22276)
+* RSA Certificates for SSL on Java 11 require larger keypairs than on Java 8. Testing on Java 11 is done with 1024 bit keys instead of 512 bit keys. (DSP-22277)
+* Clean up ClientWarn State when message sending expired. (DSP-22290)
+
+## 6.8.21 DSE Graph
+* fix deletion of a dropped vertex’s incoming edges when the far side of those edges involves multiple vertex labels. (DSP-22218)
+
+## 6.8.21 DSE NodeSync
+* Fix validation age in the belated incremental NodeSync log warning. (DSP-22300)
+
+## 6.8.21 DSE CVE
+* Removed log4j 1.2.x dependency from dse-spark/client/lib and replace it with reload4j 1.2.19. (DSP-22279, [CVE-2021-44228](https://nvd.nist.gov/vuln/detail/CVE-2021-44228), [CVE-2019-17571](https://nvd.nist.gov/vuln/detail/CVE-2019-17571), [CVE-2022-23305](https://nvd.nist.gov/vuln/detail/CVE-2022-23305), [CVE-2022-23302](https://nvd.nist.gov/vuln/detail/CVE-2022-23302), [CVE-2021-4104](https://nvd.nist.gov/vuln/detail/CVE-2021-4104))
+* Upgraded version of Bouncy Castle to 1.67. (DSP-22301, [CVE-2018-1000613](https://nvd.nist.gov/vuln/detail/CVE-2018-1000613), [CVE-2018-1000180](https://nvd.nist.gov/vuln/detail/CVE-2018-1000180), [CVE-2020-28052](https://nvd.nist.gov/vuln/detail/CVE-2020-28052))
+
+
 # Release notes for 6.8.20
 17 February 2022
 
