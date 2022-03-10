@@ -1,5 +1,18 @@
 # Release notes for OpsCenter
 
+# Release notes for 6.8.18
+10 Mar 2022
+
+## 6.8.18 DSE Backup Service
+
+* When restoring from other location a host id and backup tag can now be specified. This can dramatically speed up the process of scanning a destination for snapshots. (OPSC-16989)
+* Fixed and issue that prevented the agent from retrying syncing files to a destination. (OPSC-17096)
+* Fixed a restore issue where the table truncate during a restore either wouldn't happen at all or would happen asynchronously. (OPSC-17111)
+
+## 6.8.18 DSE Core
+
+* Replaced log4j with reload4j and updated slf4j libraries to 1.7.36. (OPSC-17097)
+
 # Release notes for OpsCenter 6.8.17
 13 Jan 2022
 
