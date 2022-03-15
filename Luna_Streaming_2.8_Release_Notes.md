@@ -79,6 +79,34 @@ The distributions are available as Docker images and tarballs, both of them foll
 * **lunastreaming-all**: it contains the Core Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
 
 # Releases
+
+## Luna Streaming Distribution 2.8.0 1.1.26
+This is a mantenaince release containing important stability updates.
+### Most notable commits
+* [d8573a4d0b1](https://github.com/datastax/pulsar/commit/d8573a4d0b1) Set the ignoreUnsupportedFields default to false
+* [f8fb25ed9e2](https://github.com/datastax/pulsar/commit/f8fb25ed9e2) Remove support for CQL logical types
+* [148a0c60781](https://github.com/datastax/pulsar/commit/148a0c60781) [Branch-2.8] Fix Broker HealthCheck Endpoint Exposes Race Conditions. (#14618)
+* [0e98fbde3bd](https://github.com/datastax/pulsar/commit/0e98fbde3bd) Added Debezium Source for MS SQL Server (#12256)
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.0-nar.nar
+* pulsar-cassandra-source-1.0.2.nar
+* pulsar-io-data-generator-2.8.0.1.1.26.nar
+* pulsar-io-debezium-mongodb-2.8.0.1.1.26.nar
+* pulsar-io-debezium-mssql-2.8.0.1.1.26.nar
+* pulsar-io-debezium-mysql-2.8.0.1.1.26.nar
+* pulsar-io-debezium-oracle-2.8.0.1.1.26.nar
+* pulsar-io-debezium-postgres-2.8.0.1.1.26.nar
+* pulsar-io-elastic-search-2.8.0.1.1.26.nar
+* pulsar-io-jdbc-clickhouse-2.8.0.1.1.26.nar
+* pulsar-io-jdbc-mariadb-2.8.0.1.1.26.nar
+* pulsar-io-jdbc-postgres-2.8.0.1.1.26.nar
+* pulsar-io-jdbc-sqlite-2.8.0.1.1.26.nar
+* pulsar-io-kafka-2.8.0.1.1.26.nar
+* pulsar-io-kinesis-2.8.0.1.1.26.nar
+* pulsar-snowflake-connector-0.1.6.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.14.nar
+* starlight-rabbitmq-2.8.0.1.1.19-ls-1.nar
+* pulsar-kafka-proxy-2.8.0.1.0.14.nar
 ## Luna Streaming Distribution 2.8.0 1.1.25
 This is a mantenaince release containing important stability improvements.
 ### Most notable commits
