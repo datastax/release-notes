@@ -80,6 +80,35 @@ The distributions are available as Docker images and tarballs, both of them foll
 
 # Releases
 
+## Luna Streaming Distribution 2.8.0 1.1.27
+This is a mantenaince release containing important security and stability updates.
+### Most notable commits
+* [87a2908a02b](https://github.com/datastax/pulsar/commit/87a2908a02b) Fix Consumer listener does not respect receiver queue size (#11455)
+* [d522f6dfac9](https://github.com/datastax/pulsar/commit/d522f6dfac9) Fail proxy startup if brokerServiceURL is missing scheme (#14682)
+* [d781147616f](https://github.com/datastax/pulsar/commit/d781147616f) [pulsar-io] Elasticsearch sink support for Elastic 8 - switch to java-client (#35)
+* [f57bf7e0c62](https://github.com/datastax/pulsar/commit/f57bf7e0c62) Add support of PrometheusRawMetricsProvider for the Pulsar-Proxy
+* [a576a1b99aa](https://github.com/datastax/pulsar/commit/a576a1b99aa) Revert OkHttp3 upgrade to 5.0.0.alpha - partial porting of #13065
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.0-nar.nar
+* pulsar-cassandra-source-1.0.2.nar
+* pulsar-io-data-generator-2.8.0.1.1.27.nar
+* pulsar-io-debezium-mongodb-2.8.0.1.1.27.nar
+* pulsar-io-debezium-mssql-2.8.0.1.1.27.nar
+* pulsar-io-debezium-mysql-2.8.0.1.1.27.nar
+* pulsar-io-debezium-oracle-2.8.0.1.1.27.nar
+* pulsar-io-debezium-postgres-2.8.0.1.1.27.nar
+* pulsar-io-elastic-search-2.8.0.1.1.27.nar
+* pulsar-io-jdbc-clickhouse-2.8.0.1.1.27.nar
+* pulsar-io-jdbc-mariadb-2.8.0.1.1.27.nar
+* pulsar-io-jdbc-postgres-2.8.0.1.1.27.nar
+* pulsar-io-jdbc-sqlite-2.8.0.1.1.27.nar
+* pulsar-io-kafka-2.8.0.1.1.27.nar
+* pulsar-io-kinesis-2.8.0.1.1.27.nar
+* pulsar-snowflake-connector-0.1.6.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.14.nar
+* starlight-rabbitmq-2.8.0.1.1.19-ls-1.nar
+* pulsar-kafka-proxy-2.8.0.1.0.14.nar
+
 ## Luna Streaming Distribution 2.8.0 1.1.26
 This is a mantenaince release containing important stability updates.
 ### Most notable commits
