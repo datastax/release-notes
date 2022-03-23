@@ -80,6 +80,34 @@ The distributions are available as Docker images and tarballs, both of them foll
 
 # Releases
 
+## Luna Streaming Distribution 2.8.0 1.1.29
+This is a mantenaince release containing important stability updates.
+### Most notable commits
+* [a64222176e7](https://github.com/datastax/pulsar/commit/a64222176e7) [refactor][proxy] Refactor Proxy code and fix connection stalling by switching to auto read mode (#14713)
+* [30783d0763d](https://github.com/datastax/pulsar/commit/30783d0763d) [Proxy] Log warning when opening connection to broker fails (#14710)
+* [88023dbbd00](https://github.com/datastax/pulsar/commit/88023dbbd00) Handle kafka sinks that return immutable maps as configs (#14780)
+* [6e964907c13](https://github.com/datastax/pulsar/commit/6e964907c13) Switch BlobStoreManagedLedgerOffloader to use removeBlob
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.0-nar.nar
+* pulsar-cassandra-source-1.0.3.nar
+* pulsar-io-data-generator-2.8.0.1.1.29.nar
+* pulsar-io-debezium-mongodb-2.8.0.1.1.29.nar
+* pulsar-io-debezium-mssql-2.8.0.1.1.29.nar
+* pulsar-io-debezium-mysql-2.8.0.1.1.29.nar
+* pulsar-io-debezium-oracle-2.8.0.1.1.29.nar
+* pulsar-io-debezium-postgres-2.8.0.1.1.29.nar
+* pulsar-io-elastic-search-2.8.0.1.1.29.nar
+* pulsar-io-jdbc-clickhouse-2.8.0.1.1.29.nar
+* pulsar-io-jdbc-mariadb-2.8.0.1.1.29.nar
+* pulsar-io-jdbc-postgres-2.8.0.1.1.29.nar
+* pulsar-io-jdbc-sqlite-2.8.0.1.1.29.nar
+* pulsar-io-kafka-2.8.0.1.1.29.nar
+* pulsar-io-kinesis-2.8.0.1.1.29.nar
+* pulsar-snowflake-connector-0.1.6.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.15.nar
+* starlight-rabbitmq-2.8.0.1.1.27-ls-1.nar
+* pulsar-kafka-proxy-2.8.0.1.0.15.nar
+
 ## Luna Streaming Distribution 2.8.0 1.1.28
 This is a mantenaince release containing important stability updates about Pulsar IO Kinesis Sink connector.
 ### Most notable commits
