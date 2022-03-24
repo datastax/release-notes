@@ -80,6 +80,32 @@ The distributions are available as Docker images and tarballs, both of them foll
 
 # Releases
 
+## Luna Streaming Distribution 2.8.0 1.1.30
+This is a mantenaince release containing important stability updates.
+### Most notable commits
+* [cf13b39240b](https://github.com/datastax/pulsar/commit/cf13b39240b) [elasticsearch] support token based auth (#46)
+* [1028aa78c09](https://github.com/datastax/pulsar/commit/1028aa78c09) Tiered Storage: add debug in case of missing blob (#47)
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.0-nar.nar
+* pulsar-cassandra-source-1.0.3.nar
+* pulsar-io-data-generator-2.8.0.1.1.30.nar
+* pulsar-io-debezium-mongodb-2.8.0.1.1.30.nar
+* pulsar-io-debezium-mssql-2.8.0.1.1.30.nar
+* pulsar-io-debezium-mysql-2.8.0.1.1.30.nar
+* pulsar-io-debezium-oracle-2.8.0.1.1.30.nar
+* pulsar-io-debezium-postgres-2.8.0.1.1.30.nar
+* pulsar-io-elastic-search-2.8.0.1.1.30.nar
+* pulsar-io-jdbc-clickhouse-2.8.0.1.1.30.nar
+* pulsar-io-jdbc-mariadb-2.8.0.1.1.30.nar
+* pulsar-io-jdbc-postgres-2.8.0.1.1.30.nar
+* pulsar-io-jdbc-sqlite-2.8.0.1.1.30.nar
+* pulsar-io-kafka-2.8.0.1.1.30.nar
+* pulsar-io-kinesis-2.8.0.1.1.30.nar
+* pulsar-snowflake-connector-0.1.6.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.15.nar
+* starlight-rabbitmq-2.8.0.1.1.27-ls-1.nar
+* pulsar-kafka-proxy-2.8.0.1.0.15.nar
+
 ## Luna Streaming Distribution 2.8.0 1.1.29
 This is a mantenaince release containing important stability updates.
 ### Most notable commits
