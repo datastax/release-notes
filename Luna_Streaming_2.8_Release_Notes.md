@@ -80,6 +80,35 @@ The distributions are available as Docker images and tarballs, both of them foll
 
 # Releases
 
+## Luna Streaming Distribution 2.8.0 1.1.31
+This is a mantenaince release containing important security updates.
+### Most notable commits
+* [a45886ccfc6](https://github.com/datastax/pulsar/commit/a45886ccfc6) ElasticSearch Sink: handle concurrent index creation requests (#51)
+* [30048aa4b7c](https://github.com/datastax/pulsar/commit/30048aa4b7c) [fix][auth] Athenz: do not use uber-jar and bump to 1.10.50
+* [b8133c23328](https://github.com/datastax/pulsar/commit/b8133c23328) [fix][security] Upgrade jackson and jackson-databind (2.13.2.1) to get rid of CVE-2020-36518
+* [44d4e9cd445](https://github.com/datastax/pulsar/commit/44d4e9cd445) [security] Upgrade PostGre driver to 42.3.3 to get rid of CVE-2022-26520
+
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.1-nar.nar
+* pulsar-cassandra-source-1.0.3.nar
+* pulsar-io-data-generator-2.8.0.1.1.31.nar
+* pulsar-io-debezium-mongodb-2.8.0.1.1.31.nar
+* pulsar-io-debezium-mssql-2.8.0.1.1.31.nar
+* pulsar-io-debezium-mysql-2.8.0.1.1.31.nar
+* pulsar-io-debezium-oracle-2.8.0.1.1.31.nar
+* pulsar-io-debezium-postgres-2.8.0.1.1.31.nar
+* pulsar-io-elastic-search-2.8.0.1.1.31.nar
+* pulsar-io-jdbc-clickhouse-2.8.0.1.1.31.nar
+* pulsar-io-jdbc-mariadb-2.8.0.1.1.31.nar
+* pulsar-io-jdbc-postgres-2.8.0.1.1.31.nar
+* pulsar-io-jdbc-sqlite-2.8.0.1.1.31.nar
+* pulsar-io-kafka-2.8.0.1.1.31.nar
+* pulsar-io-kinesis-2.8.0.1.1.31.nar
+* pulsar-snowflake-connector-0.1.7.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.16.nar
+* starlight-rabbitmq-2.8.0.1.1.27-ls-1.nar
+* pulsar-kafka-proxy-2.8.0.1.0.16.nar
+
 ## Luna Streaming Distribution 2.8.0 1.1.30
 This is a mantenaince release containing important stability updates.
 ### Most notable commits
