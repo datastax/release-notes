@@ -8,7 +8,7 @@
 
 ## Studio 6.8.21 Server
 * Studio startup no longer automatically loads all notebooks to clear any cell "running" statuses remaining from before the Studio restart. Use the notebook menu action "Clear All Cell Results..." or the cell menu action "Clear Results..." to both clear cell results and the cell "running" status. A new configuration parameter, `resetRunningNotebookCellsOnStartupEnabled`, may be set to `true` or `false` (default) to control this behavior. (Studio-3215)
-* Connections to Astra using the Secure Cloud Bundle are now able to work with Graph if it is available. (Studio-3212)
+* Astra connections now work with Graph if it is available. (Studio-3212)
 
 # Release notes for DataStax Studio 6.8.20
 25 January 2022
