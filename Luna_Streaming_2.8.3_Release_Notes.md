@@ -62,7 +62,7 @@ chown -R 10000:10001 /pulsar/data
 
 If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
-If you are upgrading from Luna Streaming Distribtion 2.8.0 you don't have to do any particular action.
+If you are upgrading from Luna Streaming Distribution 2.8.0 you don't have to do any particular action.
 
 ### Upgrade considerations for custom Pulsar Functions and Pulsar IO Connectors
 
@@ -70,7 +70,7 @@ If you are upgrading from Apache Pulsar 2.7.0 or Luna Streaming 2.7.2 you may ne
 This is because there is a breaking API change in Apache Pulsar 2.8.0 (and so in Luna Streaming 2.8.0) related to the SchemaInfo java class.
 More context [here](https://github.com/apache/pulsar/issues/11338).
 
-If you are upgrading from Luna Streaming Distribtion 2.8.0 you don't have to do any particular action.
+If you are upgrading from Luna Streaming Distribution 2.8.0 you don't have to do any particular action.
 
 ### Packaging
 
