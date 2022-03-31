@@ -1,5 +1,15 @@
 # Release notes for DataStax Studio 6.8
 
+# Release notes for DataStax Studio 6.8.21
+31 March 2022
+
+## Studio 6.8.21 Client
+* Javascript library updates: bootstrap-sass 3.4.1, node-sass 4.2.0, handlebars 4.7.7, lodash 4.17.21. (Studio-3214)
+
+## Studio 6.8.21 Server
+* Studio startup no longer automatically loads all notebooks to clear any cell "running" statuses remaining from before the Studio restart. Use the notebook menu action "Clear All Cell Results..." or the cell menu action "Clear Results..." to both clear cell results and the cell "running" status. A new configuration parameter, `resetRunningNotebookCellsOnStartupEnabled`, may be set to `true` or `false` (default) to control this behavior. (Studio-3215)
+* Astra connections now work with Graph if it is available. (Studio-3212)
+
 # Release notes for DataStax Studio 6.8.20
 25 January 2022
 
