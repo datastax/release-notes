@@ -80,6 +80,37 @@ The distributions are available as Docker images and tarballs, both of them foll
 
 # Releases
 
+## Luna Streaming Distribution 2.8.0 1.1.32
+This is a mantenaince release containing important security updates.
+### Most notable commits
+* [eaadd8cd9ed](https://github.com/datastax/pulsar/commit/eaadd8cd9ed) [elasticsearch] Option to disable SSL certificate validation (#56)
+* [d40f0b54f71](https://github.com/datastax/pulsar/commit/d40f0b54f71) handle null offsets from kafka connector (#53)
+* [70f0fdddcbf](https://github.com/datastax/pulsar/commit/70f0fdddcbf) Clean up individually deleted messages before the mark-delete position (#14261)
+* [2d1f85f1144](https://github.com/datastax/pulsar/commit/2d1f85f1144) Offloader: add API to scan objects on Tiered Storage: Move to JAX-RS StreamingOutput
+* [5888bf5fbbb](https://github.com/datastax/pulsar/commit/5888bf5fbbb) [fix][kinesis] Remove internal dependency: pulsar-functions-instance (#14925)
+* [154b4507cbc](https://github.com/datastax/pulsar/commit/154b4507cbc) Offloader: add API to scan objects on Tiered Storage
+* [a8bdb63ff84](https://github.com/datastax/pulsar/commit/a8bdb63ff84) TieredStorage: add debug information (#14907)
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.1-nar.nar
+* pulsar-cassandra-source-1.0.3.nar
+* pulsar-io-data-generator-2.8.0.1.1.32.nar
+* pulsar-io-debezium-mongodb-2.8.0.1.1.32.nar
+* pulsar-io-debezium-mssql-2.8.0.1.1.32.nar
+* pulsar-io-debezium-mysql-2.8.0.1.1.32.nar
+* pulsar-io-debezium-oracle-2.8.0.1.1.32.nar
+* pulsar-io-debezium-postgres-2.8.0.1.1.32.nar
+* pulsar-io-elastic-search-2.8.0.1.1.32.nar
+* pulsar-io-jdbc-clickhouse-2.8.0.1.1.32.nar
+* pulsar-io-jdbc-mariadb-2.8.0.1.1.32.nar
+* pulsar-io-jdbc-postgres-2.8.0.1.1.32.nar
+* pulsar-io-jdbc-sqlite-2.8.0.1.1.32.nar
+* pulsar-io-kafka-2.8.0.1.1.32.nar
+* pulsar-io-kinesis-2.8.0.1.1.32.nar
+* pulsar-snowflake-connector-0.1.7.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.16.nar
+* starlight-rabbitmq-2.8.0.1.1.27-ls-1.nar
+* pulsar-kafka-proxy-2.8.0.1.0.16.nar
+
 ## Luna Streaming Distribution 2.8.0 1.1.31
 This is a mantenaince release containing important security updates.
 ### Most notable commits
