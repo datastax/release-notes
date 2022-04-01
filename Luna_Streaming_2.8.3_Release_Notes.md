@@ -212,3 +212,24 @@ This release is based on the [Apache Pulsar 2.8.3 release](https://pulsar.apache
 * [17dc4ee4328](https://github.com/datastax/pulsar/commit/17dc4ee4328) Docker image: add vim and nettools (netstat)
 * [af59594f77a](https://github.com/datastax/pulsar/commit/af59594f77a) Always return from trigger even if read from output topic times out
 * [bc54b6a688a](https://github.com/datastax/pulsar/commit/bc54b6a688a) auth token for debezium and kafka connect adaptor
+
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.1-nar.nar
+* pulsar-cassandra-source-1.0.3.nar
+* pulsar-io-data-generator-2.8.3.1.0.5.nar
+* pulsar-io-debezium-mongodb-2.8.3.1.0.5.nar
+* pulsar-io-debezium-mssql-2.8.3.1.0.5.nar
+* pulsar-io-debezium-mysql-2.8.3.1.0.5.nar
+* pulsar-io-debezium-oracle-2.8.3.1.0.5.nar
+* pulsar-io-debezium-postgres-2.8.3.1.0.5.nar
+* pulsar-io-elastic-search-2.8.3.1.0.5.nar
+* pulsar-io-jdbc-clickhouse-2.8.3.1.0.5.nar
+* pulsar-io-jdbc-mariadb-2.8.3.1.0.5.nar
+* pulsar-io-jdbc-postgres-2.8.3.1.0.5.nar
+* pulsar-io-jdbc-sqlite-2.8.3.1.0.5.nar
+* pulsar-io-kafka-2.8.3.1.0.5.nar
+* pulsar-io-kinesis-2.8.3.1.0.5.nar
+* pulsar-snowflake-connector-0.1.7.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.16.nar
+* starlight-rabbitmq-2.8.0.1.1.27-ls-1.nar
+* pulsar-kafka-proxy-2.8.0.1.0.16.nar
