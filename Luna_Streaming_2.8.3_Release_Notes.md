@@ -1,7 +1,7 @@
 # Release notes for DataStax Luna Streaming Distribution
  
 ## About DataStax Luna Streaming Distribution
-Luna Streaming Distribution 2.8.3 is compatible with Apache Pulsar&trade; 2.8.0 and subsequent.
+Luna Streaming Distribution 2.8.3 is compatible with Apache Pulsar&trade; 2.8.0 and subsequent releases.
 
 ### Components
 
@@ -30,22 +30,22 @@ This release adds these features to the original Apache Pulsar 2.8.3 release:
 
 ### Source Code of Main Components
 
-The source code for these versions of Apache Pulsar and Apache BookKeeper code is in
+The source code for these versions of Apache Pulsar and Apache BookKeeper code is available here:
    
    * https://github.com/datastax/pulsar
    * https://github.com/datastax/bookkeeper
 
 ### Security
-Luna Streaming is developed with a great attention to security.
+Luna Streaming is developed with great attention to security.
 
-Since it is based on Apache Pulsar&trade;, Luna Streaming Pulsar distribution gains all the security processes and requirements needed in the Apache Software Foundation&trade;, such as:
+Since it is based on Apache Pulsar&trade;, Luna Streaming Pulsar distribution has all the security processes and requirements required by the Apache Software Foundation&trade;, such as:
 * Peer to peer code reviews.
 * Clear process for handling possible security vulnerabilities.
 
 On top of that, Luna Streaming development processes are enhanced with additional security best practice for all the components involved:
 * Robust Continuous Integration and reproducible Release pipeline in a secure monitored environment. Such monitoring improves the overall security of the application. 
-* Reactivity to third-party vulnerabilities. Every components is scanned and monitored daily, ensuring quick fixes in case of vulnerability disclosure.
-* Regular docker images vulnerability scan on latest Luna Streaming releases, with a well-defined release procedure.
+* Reactivity to third-party vulnerabilities. Every component is scanned and monitored daily, ensuring quick fixes in case of vulnerability disclosure.
+* Regular docker images vulnerability scans on latest Luna Streaming releases, with a well-defined release procedure.
 
 At the time of the creation of the release, all the components included in the _[all](#packaging)_ packages are scanned by [Sonatype IQ Server service](https://help.sonatype.com/iqserver) and they don't have any critical (severity 8 or higher) security issues.
 
@@ -60,32 +60,53 @@ To fix this, you can manually log into the ZooKeeper, BookKeeper, and Function W
 chown -R 10000:10001 /pulsar/data
 ```
 
-If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
+If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting to solve this problem. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
-If you are upgrading from Luna Streaming Distribution 2.8.0 you don't have to do any particular action.
+If you are upgrading from Luna Streaming Distribution 2.8.0, you don't have to do any particular action.
 
 ### Upgrade considerations for custom Pulsar Functions and Pulsar IO Connectors
 
-If you are upgrading from Apache Pulsar 2.7.0 or Luna Streaming 2.7.2 you may need to recompile your Pulsar Functions or Pulsar IO Connectors using Apache Pulsar 2.8.0 as a dependency in certain cases.
-This is because there is a breaking API change in Apache Pulsar 2.8.0 (and so in Luna Streaming 2.8.0) related to the SchemaInfo java class.
+If you are upgrading from Apache Pulsar 2.7.0 or Luna Streaming 2.7.2 you may need to recompile your Pulsar Functions or Pulsar IO Connectors using Apache Pulsar 2.8.0 as a dependency.
+This is because there is a breaking API change in Apache Pulsar 2.8.0 (and therefore in Luna Streaming 2.8.0) related to the `SchemaInfo` java class.
 More context [here](https://github.com/apache/pulsar/issues/11338).
 
-If you are upgrading from Luna Streaming Distribution 2.8.0 you don't have to do any particular action.
+If you are upgrading from Luna Streaming Distribution 2.8.0, you don't have to do any particular action.
 
 ### Packaging
 
-Luna Streaming Distribution comes with a few different packages that aim to different purposes. 
-The distributions are available as Docker images and tarballs, both of them follow the same packaging patterns.
+Luna Streaming Distribution comes with different packages tooled for different purposes. 
+The distributions are available as Docker images and tarballs, and both methods follow the same packaging patterns.
 
 #### Patterns
 
-* **lunastreaming**: the basic Luna Streaming Distribution, **including Pulsar SQL** feature.
-* **lunastreaming-core**: the basic Luna Streaming Distribution, **without Pulsar SQL** feature. You should pick this one if you are not interested in using Pulsar SQL features.
-* **lunastreaming-all**: it contains the Core Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
+* **lunastreaming**: the basic Luna Streaming Distribution **including Pulsar SQL** feature.
+* **lunastreaming-core**: the basic Luna Streaming Distribution **without Pulsar SQL** feature. Pick this distribution if you don't want Pulsar SQL features.
+* **lunastreaming-all**: contains the Core Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. Pick this distribution if you want the Datastax connectors or the offloading feature.
 
-# Releases
+#### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.1-nar.nar
+* pulsar-cassandra-source-1.0.3.nar
+* pulsar-io-data-generator-2.8.3.1.0.5.nar
+* pulsar-io-debezium-mongodb-2.8.3.1.0.5.nar
+* pulsar-io-debezium-mssql-2.8.3.1.0.5.nar
+* pulsar-io-debezium-mysql-2.8.3.1.0.5.nar
+* pulsar-io-debezium-oracle-2.8.3.1.0.5.nar
+* pulsar-io-debezium-postgres-2.8.3.1.0.5.nar
+* pulsar-io-elastic-search-2.8.3.1.0.5.nar
+* pulsar-io-jdbc-clickhouse-2.8.3.1.0.5.nar
+* pulsar-io-jdbc-mariadb-2.8.3.1.0.5.nar
+* pulsar-io-jdbc-postgres-2.8.3.1.0.5.nar
+* pulsar-io-jdbc-sqlite-2.8.3.1.0.5.nar
+* pulsar-io-kafka-2.8.3.1.0.5.nar
+* pulsar-io-kinesis-2.8.3.1.0.5.nar
+* pulsar-snowflake-connector-0.1.7.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.16.nar
+* starlight-rabbitmq-2.8.0.1.1.27-ls-1.nar
+* pulsar-kafka-proxy-2.8.0.1.0.16.nar
 
-## Luna Streaming Distribution 2.8.3 1.0.5
+## Releases
+
+### Luna Streaming Distribution 2.8.3 1.0.5
 
 This release is based on the [Apache Pulsar 2.8.3 release](https://pulsar.apache.org/release-notes/#283). In addition to the contents of that release, it includes the following notable commits:
 
@@ -213,23 +234,3 @@ This release is based on the [Apache Pulsar 2.8.3 release](https://pulsar.apache
 * [af59594f77a](https://github.com/datastax/pulsar/commit/af59594f77a) Always return from trigger even if read from output topic times out
 * [bc54b6a688a](https://github.com/datastax/pulsar/commit/bc54b6a688a) auth token for debezium and kafka connect adaptor
 
-### Builtin connectors
-* cassandra-enhanced-pulsar-sink-1.6.1-nar.nar
-* pulsar-cassandra-source-1.0.3.nar
-* pulsar-io-data-generator-2.8.3.1.0.5.nar
-* pulsar-io-debezium-mongodb-2.8.3.1.0.5.nar
-* pulsar-io-debezium-mssql-2.8.3.1.0.5.nar
-* pulsar-io-debezium-mysql-2.8.3.1.0.5.nar
-* pulsar-io-debezium-oracle-2.8.3.1.0.5.nar
-* pulsar-io-debezium-postgres-2.8.3.1.0.5.nar
-* pulsar-io-elastic-search-2.8.3.1.0.5.nar
-* pulsar-io-jdbc-clickhouse-2.8.3.1.0.5.nar
-* pulsar-io-jdbc-mariadb-2.8.3.1.0.5.nar
-* pulsar-io-jdbc-postgres-2.8.3.1.0.5.nar
-* pulsar-io-jdbc-sqlite-2.8.3.1.0.5.nar
-* pulsar-io-kafka-2.8.3.1.0.5.nar
-* pulsar-io-kinesis-2.8.3.1.0.5.nar
-* pulsar-snowflake-connector-0.1.7.nar
-* pulsar-protocol-handler-kafka-2.8.0.1.0.16.nar
-* starlight-rabbitmq-2.8.0.1.1.27-ls-1.nar
-* pulsar-kafka-proxy-2.8.0.1.0.16.nar
