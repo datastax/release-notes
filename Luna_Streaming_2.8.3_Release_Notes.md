@@ -42,7 +42,7 @@ Since it is based on Apache Pulsar&trade;, Luna Streaming Pulsar distribution ha
 * Peer to peer code reviews.
 * Clear process for handling possible security vulnerabilities.
 
-On top of that, Luna Streaming development processes are enhanced with additional security best practice for all the components involved:
+On top of that, Luna Streaming development processes are enhanced with additional security best practices for all the components involved:
 * Robust Continuous Integration and reproducible Release pipeline in a secure monitored environment. Such monitoring improves the overall security of the application. 
 * Reactivity to third-party vulnerabilities. Every component is scanned and monitored daily, ensuring quick fixes in case of vulnerability disclosure.
 * Regular docker images vulnerability scans on latest Luna Streaming releases, with a well-defined release procedure.
@@ -52,15 +52,15 @@ At the time of the creation of the release, all the components included in the _
 
 ### Upgrade considerations for Luna Streaming Distribution 2.8.3
 
-As with Luna Streaming 2.7, this release uses non-root containers for enhanced security. When upgrading from a previous version (for example, 2.6.2_1.0.1) files created while running that version will have root permissions and will not be readable by containers running the new version.
+As with Luna Streaming 2.7, this release uses non-root containers for enhanced security. When upgrading from a previous version (for example, 2.6.2_1.0.1), files created while running that version will have root permissions and will not be readable by containers running the new version.
 
-To fix this, you can manually log into the ZooKeeper, BookKeeper, and Function Worker containers and make sure that all files in the `/pulsar/data/` and `pulsar/logs` directories are owned by UID 10000 (user pulsar). The group ID of the files should also be set to GID 10001 (group pulsar). Here is an example command:
+To fix this, manually log into the ZooKeeper, BookKeeper, and Function Worker containers and make sure that all files in the `/pulsar/data/` and `pulsar/logs` directories are owned by UID 10000 (user pulsar). The group ID of the files should also be set to GID 10001 (group pulsar). Here is an example command:
 
 ```
 chown -R 10000:10001 /pulsar/data
 ```
 
-If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting to solve this problem. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
+If you are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting to solve this problem. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
 If you are upgrading from Luna Streaming Distribution 2.8.0, you don't have to do any particular action.
 
