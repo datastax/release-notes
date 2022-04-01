@@ -17,9 +17,9 @@ This release adds these features to the original Apache Pulsar 2.8.0 release:
   
    * Stability improvements
    * Rootless Docker image
-   * Third party libraries updates for security fixes
+   * Third party library updates for security fixes
    * Docker images based on Ubuntu (instead of Debian based images in Pulsar 2.8.0, for security reasons)
-   * Dependency upgrades (for security, stability and performances)
+   * Dependency upgrades (for security, stability, and performance)
    * An Enhanced ElasticSearch Pulsar IO Sink  
    * An Enhanced version of Apache BookKeeper 4.14.3 with security fixes
    * Pulsar IO source for Debezium Oracle
@@ -35,53 +35,52 @@ The source code for these versions of Apache Pulsar and Apache BookKeeper code i
    * https://github.com/datastax/bookkeeper
 
 ### Security
-Luna Streaming is developed with a great attention to security.
+Luna Streaming is developed with great attention to security.
 
-Since it is based on Apache Pulsar&trade;, Luna Streaming Pulsar distribution gains all the security processes and requirements needed in the Apache Software Foundation&trade;, such as:
+Since it is based on Apache Pulsar&trade;, Luna Streaming Pulsar distribution has all the security processes and requirements required by the Apache Software Foundation&trade;, such as:
 * Peer to peer code reviews.
 * Clear process for handling possible security vulnerabilities.
 
-On top of that, Luna Streaming development processes are enhanced with additional security best practice for all the components involved:
+On top of that, Luna Streaming development processes are enhanced with additional security best practices for all the components involved:
 * Robust Continuous Integration and reproducible Release pipeline in a secure monitored environment. Such monitoring improves the overall security of the application. 
-* Reactivity to third-party vulnerabilities. Every components is scanned and monitored daily, ensuring quick fixes in case of vulnerability disclosure.
-* Regular docker images vulnerability scan on latest Luna Streaming releases, with a well-defined release procedure.
+* Reactivity to third-party vulnerabilities. Every component is scanned and monitored daily, ensuring quick fixes in case of vulnerability disclosure.
+* Regular docker images vulnerability scans on latest Luna Streaming releases, with a well-defined release procedure.
 
 At the time of the creation of the release, all the components included in the _[all](#packaging)_ packages are scanned by [Sonatype IQ Server service](https://help.sonatype.com/iqserver) and they don't have any critical (severity 8 or higher) security issues.
 
-
 ### Upgrade considerations for Luna Streaming Distribution 2.8.0
 
-As with Luna Streaming 2.7, this release uses non-root containers for enhanced security. When upgrading from a previous version (for example, 2.6.2_1.0.1) files created while running that version will have root permissions and will not be readable by containers running the new version.
+As with Luna Streaming 2.7, this release uses non-root containers for enhanced security. When upgrading from a previous version (for example, 2.6.2_1.0.1), files created while running that version will have root permissions and will not be readable by containers running the new version.
 
-To fix this, you can manually log into the ZooKeeper, BookKeeper, and Function Worker containers and make sure that all files in the `/pulsar/data/` and `pulsar/logs` directories are owned by UID 10000 (user pulsar). The group ID of the files should also be set to GID 10001 (group pulsar). Here is an example command:
+To fix this, manually log into the ZooKeeper, BookKeeper, and Function Worker containers and make sure that all files in the `/pulsar/data/` and `pulsar/logs` directories are owned by UID 10000 (user pulsar). The group ID of the files should also be set to GID 10001 (group pulsar). Here is an example command:
 
 ```
 chown -R 10000:10001 /pulsar/data
 ```
 
-If you are are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
+If you are using the Luna Streaming Helm chart, you can enable automatic repair of the permissions using the `fixRootlessPermissions` setting. For more details on this setting, go [here](https://github.com/datastax/pulsar-helm-chart).
 
 ### Upgrade considerations for custom Pulsar Functions and Pulsar IO Connectors
 
 If you are upgrading from Apache Pulsar 2.7.0 or Luna Streaming 2.7.2 you may need to recompile your Pulsar Functions or Pulsar IO Connectors using Apache Pulsar 2.8.0 as a dependency in certain cases.
-This is because there is a breaking API change in Apache Pulsar 2.8.0 (and so in Luna Streaming 2.8.0) related to the SchemaInfo java class.
+This is because there is a breaking API change in Apache Pulsar 2.8.0 (and therefore in Luna Streaming 2.8.0) related to the `SchemaInfo` java class.
 More context [here](https://github.com/apache/pulsar/issues/11338).
 
 ### Packaging
 
-Luna Streaming Distribution comes with a few different packages that aim to different purposes. 
-The distributions are available as Docker images and tarballs, both of them follow the same packaging patterns.
+Luna Streaming Distribution comes with different packages tooled for different purposes. 
+The distributions are available as Docker images and tarballs, and both methods follow the same packaging patterns.
 
 #### Patterns
 
-* **lunastreaming**: the basic Luna Streaming Distribution, **including Pulsar SQL** feature.
-* **lunastreaming-core**: the basic Luna Streaming Distribution, **without Pulsar SQL** feature. You should pick this one if you are not interested in using Pulsar SQL features.
-* **lunastreaming-all**: it contains the Core Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
+* **lunastreaming**: the basic Luna Streaming Distribution **including Pulsar SQL** feature.
+* **lunastreaming-core**: the basic Luna Streaming Distribution **without Pulsar SQL** feature. Pick this distribution if you don't need Pulsar SQL features.
+* **lunastreaming-all**: contains the Core Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. Pick this distribution if you want the Datastax connectors or the offloading feature.
 
 # Releases
 
 ## Luna Streaming Distribution 2.8.0 1.1.32
-This is a mantenaince release containing important security updates.
+This is a maintenance release containing important security updates.
 ### Most notable commits
 * [eaadd8cd9ed](https://github.com/datastax/pulsar/commit/eaadd8cd9ed) [elasticsearch] Option to disable SSL certificate validation (#56)
 * [d40f0b54f71](https://github.com/datastax/pulsar/commit/d40f0b54f71) handle null offsets from kafka connector (#53)
@@ -112,7 +111,7 @@ This is a mantenaince release containing important security updates.
 * pulsar-kafka-proxy-2.8.0.1.0.16.nar
 
 ## Luna Streaming Distribution 2.8.0 1.1.31
-This is a mantenaince release containing important security updates.
+This is a maintenance release containing important security updates.
 ### Most notable commits
 * [a45886ccfc6](https://github.com/datastax/pulsar/commit/a45886ccfc6) ElasticSearch Sink: handle concurrent index creation requests (#51)
 * [30048aa4b7c](https://github.com/datastax/pulsar/commit/30048aa4b7c) [fix][auth] Athenz: do not use uber-jar and bump to 1.10.50
@@ -141,7 +140,7 @@ This is a mantenaince release containing important security updates.
 * pulsar-kafka-proxy-2.8.0.1.0.16.nar
 
 ## Luna Streaming Distribution 2.8.0 1.1.30
-This is a mantenaince release containing important stability updates.
+This is a maintenance release containing important stability updates.
 ### Most notable commits
 * [cf13b39240b](https://github.com/datastax/pulsar/commit/cf13b39240b) [elasticsearch] support token based auth (#46)
 * [1028aa78c09](https://github.com/datastax/pulsar/commit/1028aa78c09) Tiered Storage: add debug in case of missing blob (#47)
@@ -167,7 +166,7 @@ This is a mantenaince release containing important stability updates.
 * pulsar-kafka-proxy-2.8.0.1.0.15.nar
 
 ## Luna Streaming Distribution 2.8.0 1.1.29
-This is a mantenaince release containing important stability updates.
+This is a maintenance release containing important stability updates.
 ### Most notable commits
 * [a64222176e7](https://github.com/datastax/pulsar/commit/a64222176e7) [refactor][proxy] Refactor Proxy code and fix connection stalling by switching to auto read mode (#14713)
 * [30783d0763d](https://github.com/datastax/pulsar/commit/30783d0763d) [Proxy] Log warning when opening connection to broker fails (#14710)
@@ -195,7 +194,7 @@ This is a mantenaince release containing important stability updates.
 * pulsar-kafka-proxy-2.8.0.1.0.15.nar
 
 ## Luna Streaming Distribution 2.8.0 1.1.28
-This is a mantenaince release containing important stability updates about Pulsar IO Kinesis Sink connector.
+This is a maintenance release containing important stability updates about Pulsar IO Kinesis Sink connector.
 ### Most notable commits
 * [5b3337d56b4](https://github.com/datastax/pulsar/commit/5b3337d56b4) Drop provided scope for the pulsar-functions-instance in kinesis sink (#41)
 * [f5f4e41de96](https://github.com/datastax/pulsar/commit/f5f4e41de96) fix kinesis connector's dependency issue (#12246) (#40)
@@ -221,7 +220,7 @@ This is a mantenaince release containing important stability updates about Pulsa
 * pulsar-kafka-proxy-2.8.0.1.0.15.nar
 
 ## Luna Streaming Distribution 2.8.0 1.1.27
-This is a mantenaince release containing important security and stability updates.
+This is a maintenance release containing important security and stability updates.
 ### Most notable commits
 * [87a2908a02b](https://github.com/datastax/pulsar/commit/87a2908a02b) Fix Consumer listener does not respect receiver queue size (#11455)
 * [d522f6dfac9](https://github.com/datastax/pulsar/commit/d522f6dfac9) Fail proxy startup if brokerServiceURL is missing scheme (#14682)
@@ -250,7 +249,7 @@ This is a mantenaince release containing important security and stability update
 * pulsar-kafka-proxy-2.8.0.1.0.14.nar
 
 ## Luna Streaming Distribution 2.8.0 1.1.26
-This is a mantenaince release containing important stability updates.
+This is a maintenance release containing important stability updates.
 ### Most notable commits
 * [d8573a4d0b1](https://github.com/datastax/pulsar/commit/d8573a4d0b1) Set the ignoreUnsupportedFields default to false
 * [f8fb25ed9e2](https://github.com/datastax/pulsar/commit/f8fb25ed9e2) Remove support for CQL logical types
@@ -277,7 +276,7 @@ This is a mantenaince release containing important stability updates.
 * starlight-rabbitmq-2.8.0.1.1.19-ls-1.nar
 * pulsar-kafka-proxy-2.8.0.1.0.14.nar
 ## Luna Streaming Distribution 2.8.0 1.1.25
-This is a mantenaince release containing important stability improvements.
+This is a maintenance release containing important stability improvements.
 ### Most notable commits
 
 * [89840426590](https://github.com/datastax/pulsar/commit/89840426590) Allow Pulsar Functions localrun to exit on error (#12278)
@@ -306,7 +305,7 @@ This is a mantenaince release containing important stability improvements.
 * pulsar-kafka-proxy-2.8.0.1.0.12.nar
 
 ## Luna Streaming Distribution 2.8.0 1.1.24
-This is a mantenaince release containing important security updates.
+This is a maintenance release containing important security updates.
 ### Most notable commits
 * [635f5691a4e](https://github.com/datastax/pulsar/commit/635f5691a4e) Upgrade BK to 4.14.4 and Grpc to 1.42.1 (#13714)
 * [7953fed9ec1](https://github.com/datastax/pulsar/commit/7953fed9ec1) Remove --illegal-access errors resulting from Google Guice - Pulsar IO, Offloaders and Pulsar SQL - Bump Guice to 5.1.0 (#14300)
@@ -336,7 +335,7 @@ This is a mantenaince release containing important security updates.
 * pulsar-kafka-proxy-2.8.0.1.0.11.nar
 
 ## Luna Streaming Distribution 2.8.0 1.1.23
-This is a mantenaince release containing important security updates and the upgrade of DataStax Apache Pulsar Cassandra Sink.
+This is a maintenance release containing important security updates and the upgrade of DataStax Apache Pulsar Cassandra Sink.
 ### Most notable commits
 * [57aded2d6fc](https://github.com/datastax/pulsar/commit/57aded2d6fc) Bump netty version to 4.1.74.Final (#14257)
 * [c8b1e6ff4a7](https://github.com/datastax/pulsar/commit/c8b1e6ff4a7) Include correct bookkeeper jars in pulsar-client jar (#16)
@@ -361,7 +360,7 @@ This is a mantenaince release containing important security updates and the upgr
 * starlight-rabbitmq-2.8.0.1.1.19-ls-1.nar
 * pulsar-kafka-proxy-2.8.0.1.0.9.nar
 ## Luna Streaming Distribution 2.8.0 1.1.22
-This is a mantenaince release containing important security updates.
+This is a maintenance release containing important security updates.
 ### Most notable commits
 
 * [ddb237e9464](https://github.com/datastax/pulsar/commit/ddb237e9464) [pulsar-broker] The log prints NamespaceService#isServiceUnitActive exception stack information (#13553)
@@ -392,7 +391,7 @@ This is a mantenaince release containing important security updates.
 * pulsar-kafka-proxy-2.8.0.1.0.9.nar
 
 ## Luna Streaming Distribution 2.8.0 1.1.21
-This is a mantenaince release containing bugfixes.
+This is a maintenance release containing bugfixes.
 ### Most notable commits
 
 * [d5ce3a0](https://github.com/datastax/pulsar/commit/d5ce3a0) AbstractMetadataStore: invalidate childrenCache correctly when node created
@@ -418,7 +417,7 @@ This is a mantenaince release containing bugfixes.
 * starlight-rabbitmq-2.8.0.1.1.19-ls-1.nar
 * pulsar-kafka-proxy-2.8.0.1.0.8.nar
 ## Luna Streaming Distribution 2.8.0 1.1.20
-This is a mantenaince release containing important security updates.
+This is a maintenance release containing important security updates.
 ### Most notable commits
 
 * [ef4917c](https://github.com/datastax/pulsar/commit/ef4917c) [security] Upgrade Postgre driver to 42.2.25 to get rid of CVE-2022-21724 (#14119)
@@ -444,7 +443,7 @@ This is a mantenaince release containing important security updates.
 * starlight-rabbitmq-2.8.0.1.1.19-ls-1.nar
 * pulsar-kafka-proxy-2.8.0.1.0.8.nar
 ## Luna Streaming Distribution 2.8.0 1.1.19
-This is a mantenaince release containing bufixes about KEY_SHARED subscriptions and enhancements for Pulsar IO ElasticSearch Sink connector.
+This is a maintenance release containing bufixes about KEY_SHARED subscriptions and enhancements for Pulsar IO ElasticSearch Sink connector.
 ### Most notable commits
 
 * [65269e1](https://github.com/datastax/pulsar/commit/65269e1) add non-bulk index/delete with retry (#23)
@@ -472,7 +471,7 @@ This is a mantenaince release containing bufixes about KEY_SHARED subscriptions 
 * starlight-rabbitmq-1.1.3.nar
 * pulsar-kafka-proxy-2.8.0.1.0.7.nar
 ## Luna Streaming Distribution 2.8.0 1.1.18
-This is a mantenaince release containing bugfixes and a new option in the ElasticSearch Sink connector.
+This is a maintenance release containing bugfixes and a new option in the ElasticSearch Sink connector.
 
 ### Most notable commits
 
@@ -499,7 +498,7 @@ This is a mantenaince release containing bugfixes and a new option in the Elasti
 * starlight-rabbitmq-1.1.3.nar
 * pulsar-kafka-proxy-2.8.0.1.0.7.nar
 ## Luna Streaming Distribution 2.8.0 1.1.17
-This is a mantenaince release containing important security updates.
+This is a maintenance release containing important security updates.
 
 ### Most notable commits
 
@@ -527,7 +526,7 @@ This is a mantenaince release containing important security updates.
 * pulsar-kafka-proxy-2.8.0.1.0.7.nar
 
 ## Luna Streaming Distribution 2.8.0 1.1.16
-This is a mantenaince release containing important security updates.
+This is a maintenance release containing important security updates.
 
 ### Most notable commits
 
@@ -554,7 +553,7 @@ This is a mantenaince release containing important security updates.
 * starlight-rabbitmq-1.1.3.nar
 * pulsar-kafka-proxy-2.8.0.1.0.7.nar
 ## Luna Streaming Distribution 2.8.0 1.1.15
-This is a mantenaince release containing important security updates.
+This is a maintenance release containing important security updates.
 
 ### Most notable commits
 
@@ -610,7 +609,7 @@ This is a mantenaince release containing important security updates.
 * starlight-rabbitmq-1.1.3.nar
 
 ## Luna Streaming Distribution 2.8.0 1.1.14
-This is a mantenaince release containing important security updates
+This is a maintenance release containing important security updates
 
 ### Most notable commits
 
@@ -638,7 +637,7 @@ This is a mantenaince release containing important security updates
 
 ## Luna Streaming Distribution 2.8.0 1.1.13
 
-This is a mantenaince release containing important security updates and bugfixes.
+This is a maintenance release containing important security updates and bugfixes.
 
 List of most notable commits:
 
@@ -648,7 +647,7 @@ List of most notable commits:
 
 ## Luna Streaming Distribution 2.8.0 1.1.12
 
-This is a mantenaince release containing important security updates and bugfixes.
+This is a maintenance release containing important security updates and bugfixes.
 
 List of most notable commits:
 
@@ -661,7 +660,7 @@ List of most notable commits:
 
 ## Luna Streaming Distribution 2.8.0 1.1.11
 
-This is a mantenaince release containing important security updates.
+This is a maintenance release containing important security updates.
 
 List of most notable commits:
 
