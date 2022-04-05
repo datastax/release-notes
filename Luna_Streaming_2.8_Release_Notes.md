@@ -79,6 +79,28 @@ The distributions are available as Docker images and tarballs, and both methods 
 
 # Releases
 
+## Luna Streaming Distribution 2.8.0 1.1.34
+This is a maintenance release containing connector upgrades.
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.1-nar.nar
+* pulsar-cassandra-source-1.0.4.nar
+* pulsar-io-data-generator-2.8.0.1.1.34.nar
+* pulsar-io-debezium-mongodb-2.8.0.1.1.34.nar
+* pulsar-io-debezium-mssql-2.8.0.1.1.34.nar
+* pulsar-io-debezium-mysql-2.8.0.1.1.34.nar
+* pulsar-io-debezium-oracle-2.8.0.1.1.34.nar
+* pulsar-io-debezium-postgres-2.8.0.1.1.34.nar
+* pulsar-io-elastic-search-2.8.0.1.1.34.nar
+* pulsar-io-jdbc-clickhouse-2.8.0.1.1.34.nar
+* pulsar-io-jdbc-mariadb-2.8.0.1.1.34.nar
+* pulsar-io-jdbc-postgres-2.8.0.1.1.34.nar
+* pulsar-io-jdbc-sqlite-2.8.0.1.1.34.nar
+* pulsar-io-kafka-2.8.0.1.1.34.nar
+* pulsar-io-kinesis-2.8.0.1.1.34.nar
+* pulsar-snowflake-connector-0.1.8.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.17.nar
+* starlight-rabbitmq-2.8.0.1.1.27-ls-1.nar
+* pulsar-kafka-proxy-2.8.0.1.0.17.nar
 ## Luna Streaming Distribution 2.8.0 1.1.33
 This is a maintenance release containing important stability updates.
 ### Most notable commits
