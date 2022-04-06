@@ -85,6 +85,57 @@ The distributions are available as Docker images and tarballs, and both methods 
 
 # Releases
 
+## Luna Streaming Distribution 2.8.3 1.0.6
+This is a maintenance release containing important stability and security updates.
+### Most notable commits
+* [4f09d3daa5c](https://github.com/datastax/pulsar/commit/4f09d3daa5c) Add pulsar_subscription_consumers_count metric Fix #15032
+* [fcaa26aebc9](https://github.com/datastax/pulsar/commit/fcaa26aebc9) [fix][elasticseach] ElasticSearch sink: client 'close' method is never called (#14995)
+* [335d28a4354](https://github.com/datastax/pulsar/commit/335d28a4354) KCA Sink to handle KeyValue<GenericRecord, GenericRecord>
+* [106302663de](https://github.com/datastax/pulsar/commit/106302663de) Add FULL_MESSAGE_IN_JSON_EXPAND_VALUE message format to Kinesis sink (#52)
+* [2de66504178](https://github.com/datastax/pulsar/commit/2de66504178) handle whatever KeyValue getNativeObject() returns: org.apache.pulsar.io.core.KeyValue or org.apache.pulsar.common.schema.KeyValue (#61)
+* [57762dcd540](https://github.com/datastax/pulsar/commit/57762dcd540) [ML] Fix race condition in updating lastMarkDeleteEntry field (#15031)
+* [eca591a5cee](https://github.com/datastax/pulsar/commit/eca591a5cee) [branch-2.8] Fix delete namespace issue
+* [9e22643c11b](https://github.com/datastax/pulsar/commit/9e22643c11b) Revert "Fix delete namespace issue. (#14619)"
+* [0828d655954](https://github.com/datastax/pulsar/commit/0828d655954) [kca] Fix kca cherry-pick issue (#63)
+* [24f4d6f14bc](https://github.com/datastax/pulsar/commit/24f4d6f14bc) [fix][broker] Fix potential NPE in Replicator (#15003)
+* [808728bc0d9](https://github.com/datastax/pulsar/commit/808728bc0d9) [fix][client] ConsumerBuilderImpl can not set null to deadLetterPolicy (#14980)
+* [fc6ee9cdae5](https://github.com/datastax/pulsar/commit/fc6ee9cdae5) [CI] Upgrade zlib version to 1.2.12 (#14964)
+* [36602790c70](https://github.com/datastax/pulsar/commit/36602790c70) [fix][broker] Fix wrong state for non-durable cursor (#14869)
+* [4b4978a8cfc](https://github.com/datastax/pulsar/commit/4b4978a8cfc) [fix][broker] Fix topic policy reader close bug. (#14897)
+* [e9dfffb4c05](https://github.com/datastax/pulsar/commit/e9dfffb4c05) [fix][admin] Fix NPE in PulsarAdminBuilder when the service is not set (#14769)
+* [60fc0863b3b](https://github.com/datastax/pulsar/commit/60fc0863b3b) [fix][broker] Fix cannot delete namespace with system topic (#14730)
+* [611de95bd25](https://github.com/datastax/pulsar/commit/611de95bd25) [fix][admin-cli]: Remove the trust certs check (#14764)
+* [646d9c7b8ee](https://github.com/datastax/pulsar/commit/646d9c7b8ee) Process maxRedeliverCount is 0 of DeadLeddterPolicy (#14706)
+* [08d7485fcaf](https://github.com/datastax/pulsar/commit/08d7485fcaf) Provide an accurate error message when set ``autoTopicCreation `` (#14684)
+* [9c77c25a62a](https://github.com/datastax/pulsar/commit/9c77c25a62a) [pulsar-functions] fix some IOExceptions when create functions from package URL (#14553)
+* [1dc8e6062d2](https://github.com/datastax/pulsar/commit/1dc8e6062d2) [Broker] Optimize RawReader#create when using Compactor (#14447)
+* [c7f53072eb2](https://github.com/datastax/pulsar/commit/c7f53072eb2) Fixes NPE - ``ReplicatedSubscriptionsController`` send marker message when enable deduplicated. (#14017)
+* [8cd2aaa30d0](https://github.com/datastax/pulsar/commit/8cd2aaa30d0) Set splitNamespaceBundle with `readonly=false`. (#14680)
+* [3c0f869cf67](https://github.com/datastax/pulsar/commit/3c0f869cf67) [security] Allow to config web server's cipher and protocols (#13354)
+* [09ec366082e](https://github.com/datastax/pulsar/commit/09ec366082e) Include circe-checksum in pulsar-client dependency (#60)
+* [72aae1521a1](https://github.com/datastax/pulsar/commit/72aae1521a1) [feat][broker] Full-support set ssl provider, ciphers and protocols (#14569)
+* [e5e49511a36](https://github.com/datastax/pulsar/commit/e5e49511a36) [pulsar-proxy] Fix auto-cert refresh when proxy connects to broker (#14130)
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.1-nar.nar
+* pulsar-cassandra-source-1.0.4.nar
+* pulsar-io-data-generator-2.8.3.1.0.6.nar
+* pulsar-io-debezium-mongodb-2.8.3.1.0.6.nar
+* pulsar-io-debezium-mssql-2.8.3.1.0.6.nar
+* pulsar-io-debezium-mysql-2.8.3.1.0.6.nar
+* pulsar-io-debezium-oracle-2.8.3.1.0.6.nar
+* pulsar-io-debezium-postgres-2.8.3.1.0.6.nar
+* pulsar-io-elastic-search-2.8.3.1.0.6.nar
+* pulsar-io-jdbc-clickhouse-2.8.3.1.0.6.nar
+* pulsar-io-jdbc-mariadb-2.8.3.1.0.6.nar
+* pulsar-io-jdbc-postgres-2.8.3.1.0.6.nar
+* pulsar-io-jdbc-sqlite-2.8.3.1.0.6.nar
+* pulsar-io-kafka-2.8.3.1.0.6.nar
+* pulsar-io-kinesis-2.8.3.1.0.6.nar
+* pulsar-snowflake-connector-0.1.8.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.17.nar
+* starlight-rabbitmq-2.8.0.1.1.27-ls-1.nar
+* pulsar-kafka-proxy-2.8.0.1.0.17.nar
+
 ## Luna Streaming Distribution 2.8.3 1.0.5
 
 This release is based on the [Apache Pulsar 2.8.3 release](https://pulsar.apache.org/release-notes/#283). In addition to the contents of that release, it includes the following notable commits:
