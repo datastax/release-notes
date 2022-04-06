@@ -79,6 +79,37 @@ The distributions are available as Docker images and tarballs, and both methods 
 
 # Releases
 
+## Luna Streaming Distribution 2.8.0 1.1.35
+This is a maintenance release containing important stability updates.
+### Most notable commits
+* [5e1e9e5cbfa](https://github.com/datastax/pulsar/commit/5e1e9e5cbfa) Add pulsar_subscription_consumers_count metric Fix #15032
+* [121253a57e8](https://github.com/datastax/pulsar/commit/121253a57e8) [fix][elasticseach] ElasticSearch sink: client 'close' method is never called (#14995)
+* [53a63afac1b](https://github.com/datastax/pulsar/commit/53a63afac1b) If mark-delete operation fails, mark the cursor as "dirty" (#14256)
+* [397c9102221](https://github.com/datastax/pulsar/commit/397c9102221) [ML] Fix race condition in updating lastMarkDeleteEntry field (#15031)
+* [cfe5790037b](https://github.com/datastax/pulsar/commit/cfe5790037b) KCA Sink to handle KeyValue<GenericRecord, GenericRecord>
+* [652ea0f2afa](https://github.com/datastax/pulsar/commit/652ea0f2afa) Kinesis integration tests (#62)
+* [a2e12a8eb93](https://github.com/datastax/pulsar/commit/a2e12a8eb93) Add FULL_MESSAGE_IN_JSON_EXPAND_VALUE message format to Kinesis sink (#52)
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.1-nar.nar
+* pulsar-cassandra-source-1.0.4.nar
+* pulsar-io-data-generator-2.8.0.1.1.35.nar
+* pulsar-io-debezium-mongodb-2.8.0.1.1.35.nar
+* pulsar-io-debezium-mssql-2.8.0.1.1.35.nar
+* pulsar-io-debezium-mysql-2.8.0.1.1.35.nar
+* pulsar-io-debezium-oracle-2.8.0.1.1.35.nar
+* pulsar-io-debezium-postgres-2.8.0.1.1.35.nar
+* pulsar-io-elastic-search-2.8.0.1.1.35.nar
+* pulsar-io-jdbc-clickhouse-2.8.0.1.1.35.nar
+* pulsar-io-jdbc-mariadb-2.8.0.1.1.35.nar
+* pulsar-io-jdbc-postgres-2.8.0.1.1.35.nar
+* pulsar-io-jdbc-sqlite-2.8.0.1.1.35.nar
+* pulsar-io-kafka-2.8.0.1.1.35.nar
+* pulsar-io-kinesis-2.8.0.1.1.35.nar
+* pulsar-snowflake-connector-0.1.8.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.17.nar
+* starlight-rabbitmq-2.8.0.1.1.27-ls-1.nar
+* pulsar-kafka-proxy-2.8.0.1.0.17.nar
+
 ## Luna Streaming Distribution 2.8.0 1.1.34
 This is a maintenance release containing connector upgrades.
 ### Builtin connectors
