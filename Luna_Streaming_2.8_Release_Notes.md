@@ -79,6 +79,36 @@ The distributions are available as Docker images and tarballs, and both methods 
 
 # Releases
 
+## Luna Streaming Distribution 2.8.0 1.1.37
+This is a maintenance release containing important security and stability updates.
+### Most notable commits
+* [864f303400e](https://github.com/datastax/pulsar/commit/864f303400e) [cleanup][elasticsearch] improve the mapping between records and bulk requests (#67)
+* [a949ef9ba0e](https://github.com/datastax/pulsar/commit/a949ef9ba0e) Ignore case when obfuscating passwords in python configuration scripts (#15077)
+* [c4dc27e6b3d](https://github.com/datastax/pulsar/commit/c4dc27e6b3d) Sinks: allow to reset --timeout-ms to zero
+* [bd36c6dd75b](https://github.com/datastax/pulsar/commit/bd36c6dd75b) [elasticsearch-sink] Fix memory leak while using OpenSearch High Level rest client
+* [f208f9259c5](https://github.com/datastax/pulsar/commit/f208f9259c5) Improved logic for pausing replicated subscription snapshots when no traffic (#11922)
+* [e59758b3465](https://github.com/datastax/pulsar/commit/e59758b3465) Fixes NPE - ``ReplicatedSubscriptionsController`` send marker message when enable deduplicated. (#14017)
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.1-nar.nar
+* pulsar-cassandra-source-1.0.4.nar
+* pulsar-io-data-generator-2.8.0.1.1.37.nar
+* pulsar-io-debezium-mongodb-2.8.0.1.1.37.nar
+* pulsar-io-debezium-mssql-2.8.0.1.1.37.nar
+* pulsar-io-debezium-mysql-2.8.0.1.1.37.nar
+* pulsar-io-debezium-oracle-2.8.0.1.1.37.nar
+* pulsar-io-debezium-postgres-2.8.0.1.1.37.nar
+* pulsar-io-elastic-search-2.8.0.1.1.37.nar
+* pulsar-io-jdbc-clickhouse-2.8.0.1.1.37.nar
+* pulsar-io-jdbc-mariadb-2.8.0.1.1.37.nar
+* pulsar-io-jdbc-postgres-2.8.0.1.1.37.nar
+* pulsar-io-jdbc-sqlite-2.8.0.1.1.37.nar
+* pulsar-io-kafka-2.8.0.1.1.37.nar
+* pulsar-io-kinesis-2.8.0.1.1.37.nar
+* pulsar-snowflake-connector-0.1.9.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.18.nar
+* starlight-rabbitmq-2.8.0.1.1.27-ls-1.nar
+* pulsar-kafka-proxy-2.8.0.1.0.18.nar
+  
 ## Luna Streaming Distribution 2.8.0 1.1.35
 This is a maintenance release containing important stability updates.
 ### Most notable commits
