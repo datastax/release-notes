@@ -42,6 +42,31 @@ The distributions are available as Docker images and tarballs. The docker images
 * **lunastreaming**: the basic Luna Streaming Distribution, **including Pulsar SQL** feature.
 * **lunastreaming-all**: it contains the basic Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
 
+
+## Luna Streaming Distribution 2.7.2 1.1.30
+This is a maintenance release containing important stability updates.
+### Most notable commits
+
+* [08e589d2685](https://github.com/datastax/pulsar/commit/08e589d2685) Tiered Storage: add JClouds HttpClient driver (#15105)
+* [b0586cb8fa6](https://github.com/datastax/pulsar/commit/b0586cb8fa6) Add retry to tolerate the offload index file read failure (#12452)
+* [24f5edf4ec2](https://github.com/datastax/pulsar/commit/24f5edf4ec2) Fix the read performance issue in the offload readAsync (#12443)
+* [d9b7a43b366](https://github.com/datastax/pulsar/commit/d9b7a43b366) Fix the potential race condition in the BlobStore readhandler (#12123)
+
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.4.1-nar.nar
+* luna-cassandra-source-1.0.2.nar
+* pulsar-io-data-generator-2.7.2.1.1.30.nar
+* pulsar-io-debezium-mongodb-2.7.2.1.1.30.nar
+* pulsar-io-debezium-mysql-2.7.2.1.1.30.nar
+* pulsar-io-debezium-postgres-2.7.2.1.1.30.nar
+* pulsar-io-elastic-search-2.7.2.1.1.30.nar
+* pulsar-io-jdbc-clickhouse-2.7.2.1.1.30.nar
+* pulsar-io-jdbc-mariadb-2.7.2.1.1.30.nar
+* pulsar-io-jdbc-postgres-2.7.2.1.1.30.nar
+* pulsar-io-jdbc-sqlite-2.7.2.1.1.30.nar
+* pulsar-io-kafka-2.7.2.1.1.30.nar
+* pulsar-io-kinesis-2.7.2.1.1.30.nar
+
 ## Luna Streaming Distribution 2.7.2 1.1.29
 This is a maintenance release containing important stability updates.
 ### Most notable commits
