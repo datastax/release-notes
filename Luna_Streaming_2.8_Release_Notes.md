@@ -79,6 +79,33 @@ The distributions are available as Docker images and tarballs, and both methods 
 
 # Releases
 
+## Luna Streaming Distribution 2.8.0 1.1.39
+This is a maintenance release containing important stability updates about Offloading.
+### Most notable commits
+* [5d020a46498](https://github.com/datastax/pulsar/commit/5d020a46498) Fix the read performance issue in the offload readAsync (#12443)
+* [18fc81004d7](https://github.com/datastax/pulsar/commit/18fc81004d7) Add retry to tolerate the offload index file read failure (#12452)
+* [3f71fdf522b](https://github.com/datastax/pulsar/commit/3f71fdf522b) Fix the potential race condition in the BlobStore readhandler (#12123)
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.1-nar.nar
+* pulsar-cassandra-source-1.0.4.nar
+* pulsar-io-data-generator-2.8.0.1.1.39.nar
+* pulsar-io-debezium-mongodb-2.8.0.1.1.39.nar
+* pulsar-io-debezium-mssql-2.8.0.1.1.39.nar
+* pulsar-io-debezium-mysql-2.8.0.1.1.39.nar
+* pulsar-io-debezium-oracle-2.8.0.1.1.39.nar
+* pulsar-io-debezium-postgres-2.8.0.1.1.39.nar
+* pulsar-io-elastic-search-2.8.0.1.1.39.nar
+* pulsar-io-jdbc-clickhouse-2.8.0.1.1.39.nar
+* pulsar-io-jdbc-mariadb-2.8.0.1.1.39.nar
+* pulsar-io-jdbc-postgres-2.8.0.1.1.39.nar
+* pulsar-io-jdbc-sqlite-2.8.0.1.1.39.nar
+* pulsar-io-kafka-2.8.0.1.1.39.nar
+* pulsar-io-kinesis-2.8.0.1.1.39.nar
+* pulsar-snowflake-connector-0.1.9.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.18.nar
+* starlight-rabbitmq-2.8.0.1.1.27-ls-1.nar
+* pulsar-kafka-proxy-2.8.0.1.0.18.nar
+
 
 ## Luna Streaming Distribution 2.8.0 1.1.38
 This is a maintenance release containing important stability updates.
