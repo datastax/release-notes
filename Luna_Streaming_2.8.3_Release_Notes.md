@@ -85,30 +85,33 @@ The distributions are available as Docker images and tarballs, and both methods 
 
 # Releases
 
-## Luna Streaming Distribution 2.8.0 1.1.36
-This is a maintenance release containing important stability updates.
+## Luna Streaming Distribution 2.8.3 1.0.7
+This is a maintenance release containing important security updates.
 ### Most notable commits
-* [81927aa279a](https://github.com/datastax/pulsar/commit/81927aa279a) Fix subscription consumer count
+* [b6d1967c60a](https://github.com/datastax/pulsar/commit/b6d1967c60a) Add KeyStore support in WebSocket, Function Worker HTTPS Servers
+* [e0072ba5afe](https://github.com/datastax/pulsar/commit/e0072ba5afe) [Proxy] Exit if proxy service fails to start (#15076)
+* [386e0a810a8](https://github.com/datastax/pulsar/commit/386e0a810a8) Use tlsCertRefreshCheckDurationSec instead of 0 for refresh value (#15075)
+* [3bf6f405b36](https://github.com/datastax/pulsar/commit/3bf6f405b36) Ignore case when obfuscating passwords in python configuration scripts (#15077)
 ### Builtin connectors
 * cassandra-enhanced-pulsar-sink-1.6.1-nar.nar
 * pulsar-cassandra-source-1.0.4.nar
-* pulsar-io-data-generator-2.8.0.1.1.36.nar
-* pulsar-io-debezium-mongodb-2.8.0.1.1.36.nar
-* pulsar-io-debezium-mssql-2.8.0.1.1.36.nar
-* pulsar-io-debezium-mysql-2.8.0.1.1.36.nar
-* pulsar-io-debezium-oracle-2.8.0.1.1.36.nar
-* pulsar-io-debezium-postgres-2.8.0.1.1.36.nar
-* pulsar-io-elastic-search-2.8.0.1.1.36.nar
-* pulsar-io-jdbc-clickhouse-2.8.0.1.1.36.nar
-* pulsar-io-jdbc-mariadb-2.8.0.1.1.36.nar
-* pulsar-io-jdbc-postgres-2.8.0.1.1.36.nar
-* pulsar-io-jdbc-sqlite-2.8.0.1.1.36.nar
-* pulsar-io-kafka-2.8.0.1.1.36.nar
-* pulsar-io-kinesis-2.8.0.1.1.36.nar
+* pulsar-io-data-generator-2.8.3.1.0.7.nar
+* pulsar-io-debezium-mongodb-2.8.3.1.0.7.nar
+* pulsar-io-debezium-mssql-2.8.3.1.0.7.nar
+* pulsar-io-debezium-mysql-2.8.3.1.0.7.nar
+* pulsar-io-debezium-oracle-2.8.3.1.0.7.nar
+* pulsar-io-debezium-postgres-2.8.3.1.0.7.nar
+* pulsar-io-elastic-search-2.8.3.1.0.7.nar
+* pulsar-io-jdbc-clickhouse-2.8.3.1.0.7.nar
+* pulsar-io-jdbc-mariadb-2.8.3.1.0.7.nar
+* pulsar-io-jdbc-postgres-2.8.3.1.0.7.nar
+* pulsar-io-jdbc-sqlite-2.8.3.1.0.7.nar
+* pulsar-io-kafka-2.8.3.1.0.7.nar
+* pulsar-io-kinesis-2.8.3.1.0.7.nar
 * pulsar-snowflake-connector-0.1.9.nar
-* pulsar-protocol-handler-kafka-2.8.0.1.0.17.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.18.nar
 * starlight-rabbitmq-2.8.0.1.1.27-ls-1.nar
-* pulsar-kafka-proxy-2.8.0.1.0.17.nar
+* pulsar-kafka-proxy-2.8.0.1.0.18.nar
 
 ## Luna Streaming Distribution 2.8.3 1.0.6
 This is a maintenance release containing important stability and security updates.
