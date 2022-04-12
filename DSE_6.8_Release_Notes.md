@@ -2,6 +2,54 @@
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
 
+# Release notes for 6.8.22
+11 April 2022
+
+## 6.8.22 DSE Platform
+* Introduced DSE support for Java 11 for core Cassandra workloads. Please note that DSE does not currently provide support for advanced workloads (Search, Spark and Graph) for Java 11.
+
+## Components versions for DSE 6.8.22
+ * Apache Solr™ 6.0.1.4.2887
+ * Apache Spark™ 2.4.0.18
+ * Apache TinkerPop™ 3.4.5-20220405-a52bbe2c&ast;
+ * Apache Tomcat® 8.5.75&ast;
+ * DSE Java Driver 1.10.0-dse+20210424
+ * Netty 4.1.34.3.dse&ast;
+ * Spark JobServer 0.8.0.50
+
+## 6.8.22 DSE Core
+* Added a startup check that prevents starting DSE with advanced workloads on Java 11. (DSP-22358)
+* Upgraded netty to 4.1.34 from 4.1.25. (DSP-22363)
+* Removed {{disk_cal.py}} and {{compaction-metrics.ipynb}} Python 2 tools. (DSP-22382)
+* Used azure sdk client libraries from bill of materials 1.2.0 for Azure Blob Storage backup and restore. Used okhttp based azure code http client instead of the netty based one. (DSP-22401)
+* Reduced node bootstrapping and rebuild operation time by improving the algorithm that calculates the map of streaming candidates. (DSP-22339)
+
+## 6.8.22 DSE Cassandra
+* Limited heap pressure during mutation repair for tables with materialized views by throttling number of concurrent batches (default 10). Number of batches can be controlled by new system property {{cassandra.repair.mutation_repair_max_concurrent_batches}}. Setting to 0 (zero) disables throttling and reverts behavior before this change. (DSP-22344)
+
+## 6.8.22 DSE Graph
+* Replaced log4j with reload4j in TinkerPop and bumped the version of TinkerPop. (DSP-22326)
+
+## 6.8.22 DSE NodeSync
+* Changed heap size to 512M for command line tools on Azul Zing if MAX_HEAP_SIZE is not specified. (DSP-22313)
+
+## 6.8.22 DSE Security
+* Upgraded Bouncy Castle to the latest 1.70 version. (DSP-22352)
+
+## 6.8.22 DSE Miscellaneous
+* Ported fix from DSP-22315: Option to disable call to NativeLibrary.trySkipCache. (DSP-22343)
+
+## 6.8.22 DSE CVE
+* Upgraded azure-storage-blob from 12.4.0 to 12.15.0 version. (DSP-22377, [CVE-2020-5403](https://nvd.nist.gov/vuln/detail/CVE-2020-5403))
+* Upgraded apache-commons compress library to 1.21 version. (DSP-22383, [CVE-2021-35515](https://nvd.nist.gov/vuln/detail/CVE-2021-35515), [CVE-2021-35516](https://nvd.nist.gov/vuln/detail/CVE-2021-35516), [CVE-2021-35517](https://nvd.nist.gov/vuln/detail/CVE-2021-35517), [CVE-2021-36090](https://nvd.nist.gov/vuln/detail/CVE-2021-36090))
+* Upgraded snakeyaml version to 1.30. (DSP-22386, [CVE-2017-18640](https://nvd.nist.gov/vuln/detail/CVE-2017-18640))
+* Upgraded ApacheVelocity to 2.3 version. (DSP-22387, [CVE-2020-13936](https://nvd.nist.gov/vuln/detail/CVE-2020-13936))
+* Upgraded commons-beanutils version to 1.9.4 version. (DSP-22388, [CVE-2019-10086](https://nvd.nist.gov/vuln/detail/CVE-2019-10086))
+* Upgraded Hazelcast to 5.1.1 version. (DSP-22390, [CVE-2022-0265](https://nvd.nist.gov/vuln/detail/CVE-2022-0265))
+* Upgraded logback version to 1.2.11. (DSP-22237, [CVE-2021-42550](https://nvd.nist.gov/vuln/detail/CVE-2021-42550))
+* Upgraded version of Apache Tomcat from 8.5.72 to 8.5.75. (DSP-22360, [CVE-2022-23181](https://nvd.nist.gov/vuln/detail/CVE-2022-23181))
+* Upgraded version of azure-identity from 1.1.0 to 1.4.6. (DSP-22194, [CVE-2017-1000190](https://nvd.nist.gov/vuln/detail/CVE-2017-1000190))
+
 # Release notes for 6.8.21
 7 March 2022
 
