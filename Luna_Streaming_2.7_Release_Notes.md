@@ -43,6 +43,28 @@ The distributions are available as Docker images and tarballs. The docker images
 * **lunastreaming-all**: it contains the basic Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
 
 
+## Luna Streaming Distribution 2.7.2 1.1.31
+This is a maintenance release containing important stability updates.
+### Most notable commits
+* [a62227be6fc](https://github.com/datastax/pulsar/commit/a62227be6fc) [Proxy] Exit if proxy service fails to start (#15076)
+* [88f5786a485](https://github.com/datastax/pulsar/commit/88f5786a485) [Broker][Proxy][Function worker] Fix backpressure handling in Jetty web server configuration (#14353)
+* [eef0faee1f7](https://github.com/datastax/pulsar/commit/eef0faee1f7) [ML] Fix race in persisting mark delete position
+
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.4.1-nar.nar
+* luna-cassandra-source-1.0.2.nar
+* pulsar-io-data-generator-2.7.2.1.1.31.nar
+* pulsar-io-debezium-mongodb-2.7.2.1.1.31.nar
+* pulsar-io-debezium-mysql-2.7.2.1.1.31.nar
+* pulsar-io-debezium-postgres-2.7.2.1.1.31.nar
+* pulsar-io-elastic-search-2.7.2.1.1.31.nar
+* pulsar-io-jdbc-clickhouse-2.7.2.1.1.31.nar
+* pulsar-io-jdbc-mariadb-2.7.2.1.1.31.nar
+* pulsar-io-jdbc-postgres-2.7.2.1.1.31.nar
+* pulsar-io-jdbc-sqlite-2.7.2.1.1.31.nar
+* pulsar-io-kafka-2.7.2.1.1.31.nar
+* pulsar-io-kinesis-2.7.2.1.1.31.nar
+
 ## Luna Streaming Distribution 2.7.2 1.1.30
 This is a maintenance release containing important stability updates.
 ### Most notable commits
