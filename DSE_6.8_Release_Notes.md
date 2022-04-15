@@ -20,24 +20,24 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 ## 6.8.22 DSE Core
 * Added a startup check that prevents starting DSE with advanced workloads on Java 11. (DSP-22358)
 * Upgraded netty to 4.1.34 from 4.1.25. (DSP-22363)
-* Removed {{disk_cal.py}} and {{compaction-metrics.ipynb}} Python 2 tools. (DSP-22382)
+* Removed `disk_cal.py` and `compaction-metrics.ipynb` Python 2 tools. (DSP-22382)
 * Used azure sdk client libraries from bill of materials 1.2.0 for Azure Blob Storage backup and restore. Used okhttp based azure code http client instead of the netty based one. (DSP-22401)
 * Reduced node bootstrapping and rebuild operation time by improving the algorithm that calculates the map of streaming candidates. (DSP-22339)
 
 ## 6.8.22 DSE Cassandra
-* Limited heap pressure during mutation repair for tables with materialized views by throttling number of concurrent batches (default 10). Number of batches can be controlled by new system property {{cassandra.repair.mutation_repair_max_concurrent_batches}}. Setting to 0 (zero) disables throttling and reverts behavior before this change. (DSP-22344)
+* Limited heap pressure during mutation repair for tables with materialized views by throttling number of concurrent batches (default 10). Number of batches can be controlled by new system property `cassandra.repair.mutation_repair_max_concurrent_batches`. Setting to 0 (zero) disables throttling and reverts behavior before this change. (DSP-22344)
 
 ## 6.8.22 DSE Graph
 * Replaced log4j with reload4j in TinkerPop and bumped the version of TinkerPop. (DSP-22326)
 
 ## 6.8.22 DSE NodeSync
-* Changed heap size to 512M for command line tools on Azul Zing if MAX_HEAP_SIZE is not specified. (DSP-22313)
+* Changed heap size to 512M for command line tools on Azul Zing if `MAX_HEAP_SIZE` is not specified. (DSP-22313)
 
 ## 6.8.22 DSE Security
 * Upgraded Bouncy Castle to the latest 1.70 version. (DSP-22352)
 
 ## 6.8.22 DSE Miscellaneous
-* Ported fix from DSP-22315: Option to disable call to NativeLibrary.trySkipCache. (DSP-22343)
+* Ported fix from DSP-22315: Option to disable call to `NativeLibrary.trySkipCache`. (DSP-22343)
 
 ## 6.8.22 DSE CVE
 * Upgraded azure-storage-blob from 12.4.0 to 12.15.0 version. (DSP-22377, [CVE-2020-5403](https://nvd.nist.gov/vuln/detail/CVE-2020-5403))
