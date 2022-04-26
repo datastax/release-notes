@@ -85,6 +85,51 @@ The distributions are available as Docker images and tarballs, and both methods 
 
 # Releases
 
+## Luna Streaming Distribution 2.8.3 1.0.8
+This is a maintenance release containing important security updates.
+### Most notable commits
+* [45186f76933](https://github.com/datastax/pulsar/commit/45186f76933) [fix][elasticsearch-sink] enable bulk flushing interval by default
+* [deabcd3980c](https://github.com/datastax/pulsar/commit/deabcd3980c) [Build] Use grpc-bom to align grpc library versions (#15234)
+* [4079eb949c1](https://github.com/datastax/pulsar/commit/4079eb949c1) Upgrade Netty to 4.1.76.Final, Netty Tcnative, grpc and protobuf (#15212)
+* [2a84c93d0b8](https://github.com/datastax/pulsar/commit/2a84c93d0b8) Fix topic closed normally but still call `closeFencedTopicForcefully`. (#15196) (#15202)
+* [897cd384392](https://github.com/datastax/pulsar/commit/897cd384392) [Fix][Broker] Fix race condition in `OpAddEntry` (#15233)
+* [e18ec3a3199](https://github.com/datastax/pulsar/commit/e18ec3a3199) [Broker] Make health check fail if dead locked threads are detected (#15155)
+* [346a8a954b8](https://github.com/datastax/pulsar/commit/346a8a954b8) Add a cache of versioned KeyValueSchemaImpl (#15122)
+* [d53e7761c00](https://github.com/datastax/pulsar/commit/d53e7761c00) [Proxy & Client] Configure Netty DNS resolver to match JDK DNS caching setting, share DNS resolver instance in Proxy (#15219)
+* [a83ce132255](https://github.com/datastax/pulsar/commit/a83ce132255) Improve skipping of DNS resolution when creating AuthenticationDataHttp instance (#15228)
+* [3db987762be](https://github.com/datastax/pulsar/commit/3db987762be) Skip unnecessary DNS resolution when creating AuthenticationDataHttp instance (#15221)
+* [698ba6f28ef](https://github.com/datastax/pulsar/commit/698ba6f28ef) [fix][java-client] Fix performance regression with message listener (#15162)
+* [7a40cfadcf3](https://github.com/datastax/pulsar/commit/7a40cfadcf3) [feat][elasticsearch] Add hashed id support (#72)
+* [3b045addd0f](https://github.com/datastax/pulsar/commit/3b045addd0f) [feat][elasticsearch-sink] Option to output canonical JSON (#69)
+* [45a94833142](https://github.com/datastax/pulsar/commit/45a94833142) Tiered Storage: add OkHttp based provider for JClouds (#15136)
+* [c17bd3bbc88](https://github.com/datastax/pulsar/commit/c17bd3bbc88) [ML] Follow up on race condition fixes in ManagedCursorImpl #15031 (#15067)
+* [99f1dfb04a3](https://github.com/datastax/pulsar/commit/99f1dfb04a3) handle NPE when getLeader returns null (#15058)
+* [2b5baf655fa](https://github.com/datastax/pulsar/commit/2b5baf655fa) Fix when nextValidLedger is null cause npe (#13975)
+* [27b1a53ca11](https://github.com/datastax/pulsar/commit/27b1a53ca11) [fix][broker] Return if reset in progress (#14978)
+* [0012083c78b](https://github.com/datastax/pulsar/commit/0012083c78b) [fix][pulsar-io] Fix memory leak in ElasticSearch sink
+* [880a8957bf2](https://github.com/datastax/pulsar/commit/880a8957bf2) Tiered Storage: add JClouds HttpClient driver (#68)
+
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.1-nar.nar
+* pulsar-cassandra-source-1.0.5.nar
+* pulsar-io-data-generator-2.8.3.1.0.8.nar
+* pulsar-io-debezium-mongodb-2.8.3.1.0.8.nar
+* pulsar-io-debezium-mssql-2.8.3.1.0.8.nar
+* pulsar-io-debezium-mysql-2.8.3.1.0.8.nar
+* pulsar-io-debezium-oracle-2.8.3.1.0.8.nar
+* pulsar-io-debezium-postgres-2.8.3.1.0.8.nar
+* pulsar-io-elastic-search-2.8.3.1.0.8.nar
+* pulsar-io-jdbc-clickhouse-2.8.3.1.0.8.nar
+* pulsar-io-jdbc-mariadb-2.8.3.1.0.8.nar
+* pulsar-io-jdbc-postgres-2.8.3.1.0.8.nar
+* pulsar-io-jdbc-sqlite-2.8.3.1.0.8.nar
+* pulsar-io-kafka-2.8.3.1.0.8.nar
+* pulsar-io-kinesis-2.8.3.1.0.8.nar
+* pulsar-snowflake-connector-0.1.9.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.19.nar
+* starlight-rabbitmq-2.8.0.1.1.27-ls-1.nar
+* pulsar-kafka-proxy-2.8.0.1.0.19.nar
+  
 ## Luna Streaming Distribution 2.8.3 1.0.7
 This is a maintenance release containing important security updates.
 ### Most notable commits
