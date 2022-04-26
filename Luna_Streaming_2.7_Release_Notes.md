@@ -43,6 +43,35 @@ The distributions are available as Docker images and tarballs. The docker images
 * **lunastreaming-all**: it contains the basic Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
 
 
+## Luna Streaming Distribution 2.7.2 1.1.32
+This is a maintenance release containing important security updates.
+### Most notable commits
+* [ac7cb6470b7](https://github.com/datastax/pulsar/commit/ac7cb6470b7) [Security] Exclude and remove freebuilder dependency
+* [61e974836b8](https://github.com/datastax/pulsar/commit/61e974836b8) Add public datastax repository to download BookKeeper dependencies
+* [151a986ed1c](https://github.com/datastax/pulsar/commit/151a986ed1c) BookKeeper: use com.datastax.oss dependency and bump to 4.14.4.1.0.0
+* [f47bd7a56ae](https://github.com/datastax/pulsar/commit/f47bd7a56ae) Fix topic closed normally but still call `closeFencedTopicForcefully`. (#15196) (#15202)
+* [5b34eff57b9](https://github.com/datastax/pulsar/commit/5b34eff57b9) [Fix][Broker] Fix race condition in `OpAddEntry` (#15233)
+* [6efc6a66076](https://github.com/datastax/pulsar/commit/6efc6a66076) [Broker] Make health check fail if dead locked threads are detected (#15155)
+* [f5adc17ed52](https://github.com/datastax/pulsar/commit/f5adc17ed52) [Proxy & Client] Configure Netty DNS resolver to match JDK DNS caching setting, share DNS resolver instance in Proxy (#15219)
+* [6069c79a18a](https://github.com/datastax/pulsar/commit/6069c79a18a) Improve skipping of DNS resolution when creating AuthenticationDataHttp instance (#15228)
+* [be59a4eb378](https://github.com/datastax/pulsar/commit/be59a4eb378) Skip unnecessary DNS resolution when creating AuthenticationDataHttp instance (#15221)
+* [4afb0a6728c](https://github.com/datastax/pulsar/commit/4afb0a6728c) Upgrade Netty to 4.1.76.Final, Netty Tcnative, grpc and protobuf (#15212)
+* [9feabea9b9a](https://github.com/datastax/pulsar/commit/9feabea9b9a) Allow config of IO and acceptor threads in proxy (#14054)
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.4.1-nar.nar
+* luna-cassandra-source-1.0.2.nar
+* pulsar-io-data-generator-2.7.2.1.1.32.nar
+* pulsar-io-debezium-mongodb-2.7.2.1.1.32.nar
+* pulsar-io-debezium-mysql-2.7.2.1.1.32.nar
+* pulsar-io-debezium-postgres-2.7.2.1.1.32.nar
+* pulsar-io-elastic-search-2.7.2.1.1.32.nar
+* pulsar-io-jdbc-clickhouse-2.7.2.1.1.32.nar
+* pulsar-io-jdbc-mariadb-2.7.2.1.1.32.nar
+* pulsar-io-jdbc-postgres-2.7.2.1.1.32.nar
+* pulsar-io-jdbc-sqlite-2.7.2.1.1.32.nar
+* pulsar-io-kafka-2.7.2.1.1.32.nar
+* pulsar-io-kinesis-2.7.2.1.1.32.nar
+
 ## Luna Streaming Distribution 2.7.2 1.1.31
 This is a maintenance release containing important stability updates.
 ### Most notable commits
