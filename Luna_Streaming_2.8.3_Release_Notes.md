@@ -86,7 +86,7 @@ The distributions are available as Docker images and tarballs, and both methods 
 # Releases
 
 ## Luna Streaming Distribution 2.8.3 1.0.8
-This is a maintenance release containing important security updates.
+This is a maintenance release containing important security and stability updates.
 ### Most notable commits
 * [45186f76933](https://github.com/datastax/pulsar/commit/45186f76933) [fix][elasticsearch-sink] enable bulk flushing interval by default
 * [deabcd3980c](https://github.com/datastax/pulsar/commit/deabcd3980c) [Build] Use grpc-bom to align grpc library versions (#15234)

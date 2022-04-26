@@ -79,6 +79,44 @@ The distributions are available as Docker images and tarballs, and both methods 
 
 # Releases
 
+## Luna Streaming Distribution 2.8.0 1.1.41
+This is a maintenance release containing important security and stability updates.
+### Most notable commits
+* [11088e5863b](https://github.com/datastax/pulsar/commit/11088e5863b) [fix][elasticsearch-sink] enable bulk flushing interval by default
+* [3c5a5f77e6e](https://github.com/datastax/pulsar/commit/3c5a5f77e6e) [Build] Use grpc-bom to align grpc library versions (#15234)
+* [65c2a59defc](https://github.com/datastax/pulsar/commit/65c2a59defc) Upgrade Netty to 4.1.76.Final, Netty Tcnative, grpc and protobuf (#15212)
+* [a5f57982ee2](https://github.com/datastax/pulsar/commit/a5f57982ee2) Fix topic closed normally but still call `closeFencedTopicForcefully`. (#15196) (#15202)
+* [6981c6ba1e4](https://github.com/datastax/pulsar/commit/6981c6ba1e4) [Fix][Broker] Fix race condition in `OpAddEntry` (#15233)
+* [6b163f1b4ca](https://github.com/datastax/pulsar/commit/6b163f1b4ca) [Broker] Make health check fail if dead locked threads are detected (#15155)
+* [e0eaf018e71](https://github.com/datastax/pulsar/commit/e0eaf018e71) Add a cache of versioned KeyValueSchemaImpl (#15122)
+* [daa64e13b5e](https://github.com/datastax/pulsar/commit/daa64e13b5e) [Proxy] Exit if proxy service fails to start (#15076)
+* [cb009316f63](https://github.com/datastax/pulsar/commit/cb009316f63) [Proxy & Client] Configure Netty DNS resolver to match JDK DNS caching setting, share DNS resolver instance in Proxy (#15219)
+* [ee845fb546b](https://github.com/datastax/pulsar/commit/ee845fb546b) Improve skipping of DNS resolution when creating AuthenticationDataHttp instance (#15228)
+* [34c4fb30313](https://github.com/datastax/pulsar/commit/34c4fb30313) Skip unnecessary DNS resolution when creating AuthenticationDataHttp instance (#15221)
+* [4fdb34e9797](https://github.com/datastax/pulsar/commit/4fdb34e9797) [feat][elasticsearch] Add hashed id support (#72)
+* [4c0e74cd70a](https://github.com/datastax/pulsar/commit/4c0e74cd70a) [feat][elasticsearch-sink] Option to output canonical JSON (#69)
+
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.1-nar.nar
+* pulsar-cassandra-source-1.0.5.nar
+* pulsar-io-data-generator-2.8.0.1.1.41.nar
+* pulsar-io-debezium-mongodb-2.8.0.1.1.41.nar
+* pulsar-io-debezium-mssql-2.8.0.1.1.41.nar
+* pulsar-io-debezium-mysql-2.8.0.1.1.41.nar
+* pulsar-io-debezium-oracle-2.8.0.1.1.41.nar
+* pulsar-io-debezium-postgres-2.8.0.1.1.41.nar
+* pulsar-io-elastic-search-2.8.0.1.1.41.nar
+* pulsar-io-jdbc-clickhouse-2.8.0.1.1.41.nar
+* pulsar-io-jdbc-mariadb-2.8.0.1.1.41.nar
+* pulsar-io-jdbc-postgres-2.8.0.1.1.41.nar
+* pulsar-io-jdbc-sqlite-2.8.0.1.1.41.nar
+* pulsar-io-kafka-2.8.0.1.1.41.nar
+* pulsar-io-kinesis-2.8.0.1.1.41.nar
+* pulsar-snowflake-connector-0.1.9.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.19.nar
+* starlight-rabbitmq-2.8.0.1.1.27-ls-1.nar
+* pulsar-kafka-proxy-2.8.0.1.0.19.nar
+
 ## Luna Streaming Distribution 2.8.0 1.1.40
 This is a maintenance release containing important stability updates.
 ### Most notable commits
