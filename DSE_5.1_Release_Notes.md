@@ -2,6 +2,36 @@
 DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
 
+# Release notes for 5.1.31
+11 May 2022
+
+## Components versions for DSE 5.1.31
+ * Apache Solr™ 6.0.1.0.2882
+ * Apache Spark™ 2.0.2.42
+ * Apache TinkerPop™ 3.2.11-20210716-faea8d16
+ * Apache Tomcat® 8.5.75&ast;
+ * DSE Java Driver 1.8.3-dse+20201217
+ * Netty 4.0.54.1.dse
+ * Spark JobServer 0.6.2.240
+
+## 5.1.31 DSE Core
+* Improved reading logic to ensure that sstables are not unnecessarily read for columns that are not selected. See CASSANDRA-16737. (Previously DB-4974). (DSP-22478)
+* Fixed the `URISyntaxException: Malformed IPv6 address` when using `nodetool` or `dsetool` with Java 8u331 or 11.0.15. This is due to the recent changes of JDK-8278972, in which parsing of URL Strings in Built-in JNDI Providers is more strict. (DSP-22474)
+
+## 5.1.31 DSE Cassandra
+* Greater than '>' and less than '<' operators are swapped in the slow query log for a table with DESC clustering keys (port CASSANDRA-15503). (DSP-22369)
+* Fixed a rare race condition where attempting to read from a sstable would fail with an assertion error. (DSP-22431)
+
+## 5.1.31 DSE Security
+* Upgraded Bouncy Castle to the latest 1.70 version. (DSP-22352)
+
+## 5.1.31 DSE CVE
+* Upgraded apache-commons compress library to 1.21 version. This version upgrade fixed several vulnerabilities that could be used to mount a denial of service attack against specially-crafted services that use a compress or decompress sevenz, tar, or zip package. (DSP-22383, [CVE-2021-35515](https://nvd.nist.gov/vuln/detail/CVE-2021-35515), [CVE-2021-35516](https://nvd.nist.gov/vuln/detail/CVE-2021-35516), [CVE-2021-35517](https://nvd.nist.gov/vuln/detail/CVE-2021-35517), [CVE-2021-36090](https://nvd.nist.gov/vuln/detail/CVE-2021-36090))
+* Upgraded snakeyaml version to 1.30. (DSP-22386, [CVE-2017-18640](https://nvd.nist.gov/vuln/detail/CVE-2017-18640))
+* Upgraded logback version to 1.2.11. This fixes a vulnerability affecting logback-classic and logback-core. (DSP-22237, [CVE-2021-42550](https://nvd.nist.gov/vuln/detail/CVE-2021-42550))
+* Upgraded version of Apache Tomcat from 8.5.72 to 8.5.75. (DSP-22360, [CVE-2022-23181](https://nvd.nist.gov/vuln/detail/CVE-2022-23181))
+
+
 # Release notes for 5.1.30
 7 March 2022
 
@@ -19,7 +49,7 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 * MemoryOnlyStrategy tables will always use mmap disk access mode, the cassandra.yaml setting will be ignored for those tables. (DSP-22246)
 
 ## 5.1.30 DSE Cassandra
-* With disk_access_mode ‘auto’ (default value) DSE will map only index files on 64-bit JVM unless there is no limit for {{Djdk.nio.maxCachedBufferSize}} or {{-XX:+DisableExcplicitGC}} is set for the DSE JVM. (DSP-22079)
+* With disk_access_mode ‘auto’ (default value) DSE will map only index files on 64-bit JVM unless there is no limit for `-Djdk.nio.maxCachedBufferSize` or `-XX:+DisableExcplicitGC` is set for the DSE JVM. (DSP-22079)
 * Lower commitlog replay sstable origin warning to info. (DSP-22270)
 
 ## 5.1.30 DSE CVE
