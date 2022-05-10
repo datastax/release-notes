@@ -2,6 +2,34 @@
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
 
+# Release notes for 6.8.23
+11 May 2022
+
+## Components versions for DSE 6.8.23
+ * Apache Solr™ 6.0.1.4.2919&ast;
+ * Apache Spark™ 2.4.0.18
+ * Apache TinkerPop™ 3.4.5-20220405-a52bbe2c
+ * Apache Tomcat® 8.5.75
+ * DSE Java Driver 1.10.0-dse+20210424
+ * Netty 4.1.34.3.dse
+ * Spark JobServer 0.8.0.50
+
+## 6.8.23 DSE Core
+* Improved reading logic to ensure that sstables are not unnecessarily read for columns that are not selected. See CASSANDRA-16737. (Previously DB-4974). (DSP-22478)
+* Fixed the `URISyntaxException: Malformed IPv6 address` when using `nodetool` or `dsetool` with Java 8u331 or 11.0.15. This is due to the recent changes of JDK-8278972, in which parsing of URL Strings in Built-in JNDI Providers is more strict. (DSP-22474)
+
+## 6.8.23 DSE Cassandra
+* Greater than '>' and less than '<' operators are swapped in the slow query log for a table with DESC clustering keys (port CASSANDRA-15503). (DSP-22369)
+* Fixed a rare race condition where attempting to read from a sstable would fail with an assertion error. (DSP-22431)
+
+## 6.8.23 DSE Search
+* Upgraded xmlbeans version to 4.0.0. (DSP-22379, [CVE-2021-23926](https://nvd.nist.gov/vuln/detail/CVE-2021-23926))
+* Upgraded Rome Library to `1.17.0` that uses JDOM `2.0.6.1` version. (DSP-22405, [CVE-2021-33813](https://nvd.nist.gov/vuln/detail/CVE-2021-33813))
+
+## 6.8.23 DSE Upgrade
+* Do not skip 5.1.x format sstables when running `nodetool upgradesstables` without `--include-all-sstables`. (DSP-22424)
+
+
 # Release notes for 6.8.22
 11 April 2022
 
@@ -489,7 +517,7 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
 * A system property `dse.solr.fuzzy.max.expansion` was added which allows the user to define a custom number of fuzzy query expansions. The maximal possible value is 1024. When unset, the default number of max expansions is 50. (DSP-21605)
 
 ## DSE 6.8.8 Spark
-* Adjust available framework values for `--framework` parameter. (DSP-21500) 
+* Adjust available framework values for `--framework` parameter. (DSP-21500)
 
 # Release notes for DSE 6.8.7
 23 November 2020
@@ -510,8 +538,8 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
 
 ## DSE 6.8.7 Core
 * Fixed a bug where a single partition read might fail if the following conditions were true:
-    1) several sstables had the same partition level deletion info 
-    2) some of the sstables had wide rows whereas others had not 
+    1) several sstables had the same partition level deletion info
+    2) some of the sstables had wide rows whereas others had not
     3) the sstables in question contained range tombstone markers (DSP-21346)
 * Fixed a bug in `cassandra.repair.mutation_repair_rows_per_batch` setting that caused sending all repair mutations at once (DSP-21429)
 
@@ -637,7 +665,7 @@ DataStax Enterprise (DSE) 6.8.4 includes all changes from previous DSE versions.
 *  DSEFS waits for a schema agreement before starting and issuing the first CQL query. (DSP-20743)
 
 ## DSE 6.8.4 Indexing
-* Storage-Attached Indexing (SAI) adds support for creating multiple SAI indexes on the same collection map column. 
+* Storage-Attached Indexing (SAI) adds support for creating multiple SAI indexes on the same collection map column.
 See [SAI collection map examples with keys, values, and entries](https://docs.datastax.com/en/storage-attached-index/6.8/sai/saiUsing.html#saiUsing__saiUsingCollectionsExamples). (DSP-21306)
 
 ## TinkerPop changes for DSE 6.8.4
