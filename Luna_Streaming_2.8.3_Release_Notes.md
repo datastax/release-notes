@@ -85,6 +85,50 @@ The distributions are available as Docker images and tarballs, and both methods 
 
 # Releases
 
+## Luna Streaming Distribution 2.8.3 1.0.10
+This is a maintenance release containing important security and stability updates.
+### Most notable commits
+* [0eeca05db01](https://github.com/datastax/pulsar/commit/0eeca05db01) [branch-2.8][fix][broker] Avoid heartbeat topic to offload. (#15393)
+* [0e1f95bc449](https://github.com/datastax/pulsar/commit/0e1f95bc449) [improve][broker] Support shrink for ConcurrentSortedLongPairSet  (#15354)
+* [8e054282c2d](https://github.com/datastax/pulsar/commit/8e054282c2d) [improve][broker] Use shrink map for message redelivery. (#15342)
+* [b3000209d8f](https://github.com/datastax/pulsar/commit/b3000209d8f) [C++] Wait until event loop terminates when closing the Client (#15316)
+* [cde9490e3cc](https://github.com/datastax/pulsar/commit/cde9490e3cc) [fix] [broker] Fix problem at RateLimiter#tryAcquire (#15306)
+* [b7a2630bc6d](https://github.com/datastax/pulsar/commit/b7a2630bc6d) [Functions] Check executor null when closing the FileSource (#15247)
+* [c7d980bf0ae](https://github.com/datastax/pulsar/commit/c7d980bf0ae) [fix][security] Remove log4j for CVE-2022-23307 (#15109)
+* [4eda706dd8a](https://github.com/datastax/pulsar/commit/4eda706dd8a) Reduce unnecessary expansions for ConcurrentLong map and set (#14562)
+* [0f5200fae06](https://github.com/datastax/pulsar/commit/0f5200fae06) support shrink for map or set (#14663)
+* [0a329ed4390](https://github.com/datastax/pulsar/commit/0a329ed4390) Optimize memory usage: support to  shrink for pendingAcks map (#14515)
+* [ea4f16a6278](https://github.com/datastax/pulsar/commit/ea4f16a6278) Support shrink in ConcurrentLongHashMap (#14497)
+* [decf515e8f0](https://github.com/datastax/pulsar/commit/decf515e8f0) [LoadBalance] Optimize find nics process. (#14340)
+* [80eb8e444be](https://github.com/datastax/pulsar/commit/80eb8e444be) [Proxy] Prevent leak of unreleased lookupRequestSemaphore permits (#13812)
+* [032be963d7d](https://github.com/datastax/pulsar/commit/032be963d7d) [Proxy] Remove unnecessary blocking DNS lookup in LookupProxyHandler (#15415)
+* [df4c19c2c4d](https://github.com/datastax/pulsar/commit/df4c19c2c4d) [Proxy/Client] Fix DNS server denial-of-service issue when DNS entry expires (#15403)
+* [5a89313bb7f](https://github.com/datastax/pulsar/commit/5a89313bb7f) [Broker/Client] Close connection if a ping or pong message cannot be sent (#15382)
+* [550106c45ae](https://github.com/datastax/pulsar/commit/550106c45ae) [Proxy] Fix proxy connection leak when inbound connection closes while connecting is in progress (#15366)
+  
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.1-nar.nar
+* pulsar-cassandra-source-2.0.0.nar
+* pulsar-io-data-generator-2.8.3.1.0.10.nar
+* pulsar-io-debezium-mongodb-2.8.3.1.0.10.nar
+* pulsar-io-debezium-mssql-2.8.3.1.0.10.nar
+* pulsar-io-debezium-mysql-2.8.3.1.0.10.nar
+* pulsar-io-debezium-oracle-2.8.3.1.0.10.nar
+* pulsar-io-debezium-postgres-2.8.3.1.0.10.nar
+* pulsar-io-elastic-search-2.8.3.1.0.10.nar
+* pulsar-io-jdbc-clickhouse-2.8.3.1.0.10.nar
+* pulsar-io-jdbc-mariadb-2.8.3.1.0.10.nar
+* pulsar-io-jdbc-postgres-2.8.3.1.0.10.nar
+* pulsar-io-jdbc-sqlite-2.8.3.1.0.10.nar
+* pulsar-io-kafka-2.8.3.1.0.10.nar
+* pulsar-io-kinesis-2.8.3.1.0.10.nar
+* pulsar-snowflake-connector-0.1.9.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.20.nar
+* starlight-rabbitmq-2.8.3.1.0.9-ls-0.nar
+* pulsar-kafka-proxy-2.8.0.1.0.20.nar
+
+
+
 ## Luna Streaming Distribution 2.8.3 1.0.9
 This is a maintenance release containing important stability updates.
 ### Most notable commits
