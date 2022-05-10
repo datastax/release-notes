@@ -43,6 +43,38 @@ The distributions are available as Docker images and tarballs. The docker images
 * **lunastreaming-all**: it contains the basic Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
 
 
+## Luna Streaming Distribution 2.7.2 1.1.34
+This is a maintenance release containing important security and stability updates.
+### Most notable commits
+* [78ae7d6af99](https://github.com/datastax/pulsar/commit/78ae7d6af99) Tiered Storage: add OkHttp based provider for JClouds (#15136)
+* [fc37bd34554](https://github.com/datastax/pulsar/commit/fc37bd34554) TieredStorage: add debug information (#14907)
+* [d17110a8df6](https://github.com/datastax/pulsar/commit/d17110a8df6) Don't compact healthcheck topic
+* [39d57dfe016](https://github.com/datastax/pulsar/commit/39d57dfe016) [ Issue 13479 ] Fixed internal topic effect by InactiveTopicPolicy. (#13611)
+* [60dec95d472](https://github.com/datastax/pulsar/commit/60dec95d472) [fix][broker] Avoid heartbeat topic to offload. (#15008)
+* [a1b2dc40cb9](https://github.com/datastax/pulsar/commit/a1b2dc40cb9) fix shedding heartbeat ns (#13208)
+* [e076367ad4a](https://github.com/datastax/pulsar/commit/e076367ad4a) The loadbalancer should avoid offload the heartbeat namespace (#12252)
+* [dcc07e8ebac](https://github.com/datastax/pulsar/commit/dcc07e8ebac) [Proxy] Prevent leak of unreleased lookupRequestSemaphore permits (#13812)
+* [5980cdc1097](https://github.com/datastax/pulsar/commit/5980cdc1097) [Proxy] Remove unnecessary blocking DNS lookup in LookupProxyHandler (#15415)
+* [fe789088c18](https://github.com/datastax/pulsar/commit/fe789088c18) [Proxy/Client] Fix DNS server denial-of-service issue when DNS entry expires (#15403)
+* [c0bf8f06837](https://github.com/datastax/pulsar/commit/c0bf8f06837) [Broker/Client] Close connection if a ping or pong message cannot be sent (#15382)
+* [4621ca63fca](https://github.com/datastax/pulsar/commit/4621ca63fca) [Proxy] Fix proxy connection leak when inbound connection closes while connecting is in progress (#15366)
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.4.1-nar.nar
+* luna-cassandra-source-1.0.2.nar
+* pulsar-io-data-generator-2.7.2.1.1.34.nar
+* pulsar-io-debezium-mongodb-2.7.2.1.1.34.nar
+* pulsar-io-debezium-mysql-2.7.2.1.1.34.nar
+* pulsar-io-debezium-postgres-2.7.2.1.1.34.nar
+* pulsar-io-elastic-search-2.7.2.1.1.34.nar
+* pulsar-io-jdbc-clickhouse-2.7.2.1.1.34.nar
+* pulsar-io-jdbc-mariadb-2.7.2.1.1.34.nar
+* pulsar-io-jdbc-postgres-2.7.2.1.1.34.nar
+* pulsar-io-jdbc-sqlite-2.7.2.1.1.34.nar
+* pulsar-io-kafka-2.7.2.1.1.34.nar
+* pulsar-io-kinesis-2.7.2.1.1.34.nar
+
+
+
 ## Luna Streaming Distribution 2.7.2 1.1.33
 This is a maintenance release containing important security updates.
 ### Most notable commits
