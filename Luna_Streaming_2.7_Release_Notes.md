@@ -42,6 +42,25 @@ The distributions are available as Docker images and tarballs. The docker images
 * **lunastreaming**: the basic Luna Streaming Distribution, **including Pulsar SQL** feature.
 * **lunastreaming-all**: it contains the basic Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
 
+## Luna Streaming Distribution 2.7.2 1.1.35
+This is a maintenance release containing important stability updates.
+### Most notable commits
+* [e3c7941e6c2](https://github.com/datastax/pulsar/commit/e3c7941e6c2) switch for zookeeper_server_data_size_bytes gauge, disable by default (#86)
+
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.4.1-nar.nar
+* luna-cassandra-source-1.0.2.nar
+* pulsar-io-data-generator-2.7.2.1.1.35.nar
+* pulsar-io-debezium-mongodb-2.7.2.1.1.35.nar
+* pulsar-io-debezium-mysql-2.7.2.1.1.35.nar
+* pulsar-io-debezium-postgres-2.7.2.1.1.35.nar
+* pulsar-io-elastic-search-2.7.2.1.1.35.nar
+* pulsar-io-jdbc-clickhouse-2.7.2.1.1.35.nar
+* pulsar-io-jdbc-mariadb-2.7.2.1.1.35.nar
+* pulsar-io-jdbc-postgres-2.7.2.1.1.35.nar
+* pulsar-io-jdbc-sqlite-2.7.2.1.1.35.nar
+* pulsar-io-kafka-2.7.2.1.1.35.nar
+* pulsar-io-kinesis-2.7.2.1.1.35.nar
 
 ## Luna Streaming Distribution 2.7.2 1.1.34
 This is a maintenance release containing important security and stability updates.
@@ -175,7 +194,7 @@ This is a maintenance release containing important stability updates.
 ### Most notable commits
 
 * [f72c6f2321d](https://github.com/datastax/pulsar/commit/f72c6f2321d) [ML] Fix race condition in updating lastMarkDeleteEntry field (#15031)
-* [d118f9d6834](https://github.com/datastax/pulsar/commit/d118f9d6834) If mark-delete operation fails, mark the cursor as "dirty" (#14256)
+* [d118f9d6834](https://github.com/datastax/pulsar/commit/d118f9d6834) If mark-delete operation fails, mark the cursor as \"dirty\" (#14256)
 * [f953ce4c2d3](https://github.com/datastax/pulsar/commit/f953ce4c2d3) Clean up individually deleted messages before the mark-delete position (#14261)
 ### Builtin connectors
 * cassandra-enhanced-pulsar-sink-1.4.1-nar.nar
@@ -437,7 +456,7 @@ List of most notable commits:
 
 ## Luna Streaming Distribution 2.7.2 1.1.7
 
-This release allows Datastax to publish Luna Streaming artifacts with the proprietary groupId "com.datastax.oss"; also it contains bugfixes and lib updates.
+This release allows Datastax to publish Luna Streaming artifacts with the proprietary groupId \"com.datastax.oss\"; also it contains bugfixes and lib updates.
 
 List of most notable commits:
 
@@ -520,7 +539,7 @@ List of most notable commits:
 * [21a93e98f89](https://github.com/datastax/pulsar/commit/21a93e98f89) Postgres WAL does not truncate / confirmed_flush_lsn dows not change. Downgrading debezium to the same version as apache. (#4)
 * [282f8319c8e](https://github.com/datastax/pulsar/commit/282f8319c8e) Use the subscription name defined in function details in the Pulsar Functions Python instance
 * [b2e95a64572](https://github.com/datastax/pulsar/commit/b2e95a64572) Enable Function subscription naming workaround when activated
-* [653aeca2739](https://github.com/datastax/pulsar/commit/653aeca2739) Revert "Changing default function subscription to be function name, not FQFN"
+* [653aeca2739](https://github.com/datastax/pulsar/commit/653aeca2739) Revert \"Changing default function subscription to be function name, not FQFN\"
 * [105a1d3ecb0](https://github.com/datastax/pulsar/commit/105a1d3ecb0) [Security] Use adoptopenjdk:11-jdk base image for Pulsar docker images
 
 ## Luna Streaming Distribution 2.7.2 1.0.1
@@ -542,7 +561,7 @@ This release is based on the [Apache Pulsar 2.7.2 release](https://pulsar.apache
 * [b3271b3ef34](https://github.com/datastax/pulsar/commit/b3271b3ef34) Add workaround for failing PulsarFunctionsJavaProcessTest on JDK11 (#10566)
 * [a742d138b46](https://github.com/datastax/pulsar/commit/a742d138b46) PulsarFunctionsTests - use InstanceUtils.getDefaultSubscriptionName instead of an hardcoded subscription name
 * [96afcf94d5d](https://github.com/datastax/pulsar/commit/96afcf94d5d) Docker image: add vim and nettools (netstat)
-* [1d34fa639b1](https://github.com/datastax/pulsar/commit/1d34fa639b1) Revert "[Schema] Support consume multiple schema types messages by AutoConsumeSchema (#10604)"
+* [1d34fa639b1](https://github.com/datastax/pulsar/commit/1d34fa639b1) Revert \"[Schema] Support consume multiple schema types messages by AutoConsumeSchema (#10604)\"
 * [bfb25df7a14](https://github.com/datastax/pulsar/commit/bfb25df7a14) Fix compile issue in AutoConsumeSchemaTest.java
 * [432f0960ff4](https://github.com/datastax/pulsar/commit/432f0960ff4) [ML] Cancel scheduled tasks as the first step in closing (#10739)
 * [cb0dfd7cc6d](https://github.com/datastax/pulsar/commit/cb0dfd7cc6d) [ML] Fix solution for preventing race conditions between timeout and completion (#10740)
