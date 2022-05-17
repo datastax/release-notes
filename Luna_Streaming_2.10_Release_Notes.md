@@ -14,6 +14,7 @@ Luna Streaming Distribution 2.10 is compatible with Apache Pulsar&trade; 2.10.0 
    * DataStax Apache Pulsar Cassandra Source
    * DataStax Starlight For Kafka
    * DataStax Starlight For RabbitMQ
+   * DataStax Starlight For JMS Broker filter
    * DataStax Snowflake connector
    
  
@@ -77,6 +78,40 @@ The distributions are available as Docker images and tarballs, and both methods 
 * **lunastreaming-all**: contains the Core Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. Pick this distribution if you want the Datastax connectors or the offloading feature.
 
 # Releases
+
+## Luna Streaming Distribution 2.10 0.3
+This is a maintenance release containing important stability updates.
+### Most notable commits
+* [b0a2a5e4fd0](https://github.com/datastax/pulsar/commit/b0a2a5e4fd0) fix: org.apache.kafka.connect.errors.DataException: Invalid Java object for schema with type... (#15598)
+* [8ef565e8171](https://github.com/datastax/pulsar/commit/8ef565e8171) [fix][broker] Fix deadlock in broker after race condition in topic creation failure (#15570)
+* [2dba8e8084f](https://github.com/datastax/pulsar/commit/2dba8e8084f) Offloader metrics (#13833)
+* [51e35187b50](https://github.com/datastax/pulsar/commit/51e35187b50) Pulsar Functions: allow a Function<GenericObject,?> to access the original Schema of the Message and use it (#14847)
+* [b58211de4d4](https://github.com/datastax/pulsar/commit/b58211de4d4) Fix pulsar-client-all shade - include BookKeeper libraries
+* [babea4bfb28](https://github.com/datastax/pulsar/commit/babea4bfb28) Upgrade to Datastax BookKeeper 4.14.5.1.0.0
+* [19daad5a5bb](https://github.com/datastax/pulsar/commit/19daad5a5bb) [fix][test] Add receive timeout to avoid block thread. (#15088)
+* [41417f9d8dd](https://github.com/datastax/pulsar/commit/41417f9d8dd) [WebSocket] Fix MultiTopicReader#getConsumer ClassCastException (#15534)
+
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.1-nar.nar
+* pulsar-cassandra-source-2.0.0.nar
+* pulsar-io-data-generator-2.10.0.3.nar
+* pulsar-io-debezium-mongodb-2.10.0.3.nar
+* pulsar-io-debezium-mssql-2.10.0.3.nar
+* pulsar-io-debezium-mysql-2.10.0.3.nar
+* pulsar-io-debezium-oracle-2.10.0.3.nar
+* pulsar-io-debezium-postgres-2.10.0.3.nar
+* pulsar-io-elastic-search-2.10.0.3.nar
+* pulsar-io-jdbc-clickhouse-2.10.0.3.nar
+* pulsar-io-jdbc-mariadb-2.10.0.3.nar
+* pulsar-io-jdbc-postgres-2.10.0.3.nar
+* pulsar-io-jdbc-sqlite-2.10.0.3.nar
+* pulsar-io-kafka-2.10.0.3.nar
+* pulsar-io-kinesis-2.10.0.3.nar
+* pulsar-snowflake-connector-0.1.9.nar
+* pulsar-protocol-handler-kafka-2.10.0.1.nar
+* starlight-rabbitmq-2.10.0.0.nar
+* pulsar-kafka-proxy-2.10.0.1.nar
+* pulsar-jms-2.1.0-nar.nar
 
 ## Luna Streaming Distribution 2.10 0.2
 This is a maintenance release containing important stability updates.
