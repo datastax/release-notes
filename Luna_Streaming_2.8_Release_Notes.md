@@ -79,6 +79,45 @@ The distributions are available as Docker images and tarballs, and both methods 
 
 # Releases
 
+## Luna Streaming Distribution 2.8.0 1.1.43
+This is a maintenance release containing important stability and security updates, including BookKeeper upgrade and new metrics for the offloaders.
+
+### Most notable commits
+
+* [4903733067a](https://github.com/datastax/pulsar/commit/4903733067a) fix: org.apache.kafka.connect.errors.DataException: Invalid Java object for schema with type... (#15598)
+* [c78ac334b10](https://github.com/datastax/pulsar/commit/c78ac334b10) Offloader metrics (#13833) (#83)
+* [82fe30795a3](https://github.com/datastax/pulsar/commit/82fe30795a3) Fix pulsar-client-all shade - include BookKeeper libraries
+* [12193621a3d](https://github.com/datastax/pulsar/commit/12193621a3d) Upgrade to Datastax BookKeeper 4.14.5.1.0.0
+* [1f3378ca0f0](https://github.com/datastax/pulsar/commit/1f3378ca0f0) [Websocket] Fix ``ClassCastException`` when user create ``MultiTopicReader``. (#14316)
+* [500582ff6e6](https://github.com/datastax/pulsar/commit/500582ff6e6) [branch-2.8][fix][broker] Avoid heartbeat topic to offload. (#15393)
+* [50be626bbfa](https://github.com/datastax/pulsar/commit/50be626bbfa) [Proxy] Prevent leak of unreleased lookupRequestSemaphore permits (#13812)
+* [85f07679347](https://github.com/datastax/pulsar/commit/85f07679347) [Proxy] Remove unnecessary blocking DNS lookup in LookupProxyHandler (#15415)
+* [89efbf24490](https://github.com/datastax/pulsar/commit/89efbf24490) [Proxy/Client] Fix DNS server denial-of-service issue when DNS entry expires (#15403)
+* [7cb195ae740](https://github.com/datastax/pulsar/commit/7cb195ae740) [Broker/Client] Close connection if a ping or pong message cannot be sent (#15382)
+* [cea0721cf2c](https://github.com/datastax/pulsar/commit/cea0721cf2c) [Proxy] Fix proxy connection leak when inbound connection closes while connecting is in progress (#15366)
+
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.1-nar.nar
+* pulsar-cassandra-source-2.0.0.nar
+* pulsar-io-data-generator-2.8.0.1.1.43.nar
+* pulsar-io-debezium-mongodb-2.8.0.1.1.43.nar
+* pulsar-io-debezium-mssql-2.8.0.1.1.43.nar
+* pulsar-io-debezium-mysql-2.8.0.1.1.43.nar
+* pulsar-io-debezium-oracle-2.8.0.1.1.43.nar
+* pulsar-io-debezium-postgres-2.8.0.1.1.43.nar
+* pulsar-io-elastic-search-2.8.0.1.1.43.nar
+* pulsar-io-jdbc-clickhouse-2.8.0.1.1.43.nar
+* pulsar-io-jdbc-mariadb-2.8.0.1.1.43.nar
+* pulsar-io-jdbc-postgres-2.8.0.1.1.43.nar
+* pulsar-io-jdbc-sqlite-2.8.0.1.1.43.nar
+* pulsar-io-kafka-2.8.0.1.1.43.nar
+* pulsar-io-kinesis-2.8.0.1.1.43.nar
+* pulsar-snowflake-connector-0.1.10.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.20.nar
+* starlight-rabbitmq-2.8.0.1.1.27-ls-2.nar
+* pulsar-kafka-proxy-2.8.0.1.0.20.nar
+
+
 ## Luna Streaming Distribution 2.8.0 1.1.42
 This is a maintenance release containing important stability and security updates.
 ### Most notable commits
