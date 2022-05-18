@@ -43,7 +43,7 @@ The distributions are available as Docker images and tarballs. The docker images
 * **lunastreaming-all**: it contains the basic Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
 
 ## Luna Streaming Distribution 2.7.2 1.1.36
-This is a maintenance release containing important security updates.
+This is a maintenance release containing important stability updates.
 ### Most notable commits
 * [9e93a41bc77](https://github.com/datastax/pulsar/commit/9e93a41bc77) disable alll ZK gauges by default to reduce CPU utilization (#88)
 ### Builtin connectors
