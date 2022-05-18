@@ -42,6 +42,25 @@ The distributions are available as Docker images and tarballs. The docker images
 * **lunastreaming**: the basic Luna Streaming Distribution, **including Pulsar SQL** feature.
 * **lunastreaming-all**: it contains the basic Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
 
+## Luna Streaming Distribution 2.7.2 1.1.36
+This is a maintenance release containing important security updates.
+### Most notable commits
+* [9e93a41bc77](https://github.com/datastax/pulsar/commit/9e93a41bc77) disable alll ZK gauges by default to reduce CPU utilization (#88)
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.4.1-nar.nar
+* luna-cassandra-source-1.0.2.nar
+* pulsar-io-data-generator-2.7.2.1.1.36.nar
+* pulsar-io-debezium-mongodb-2.7.2.1.1.36.nar
+* pulsar-io-debezium-mysql-2.7.2.1.1.36.nar
+* pulsar-io-debezium-postgres-2.7.2.1.1.36.nar
+* pulsar-io-elastic-search-2.7.2.1.1.36.nar
+* pulsar-io-jdbc-clickhouse-2.7.2.1.1.36.nar
+* pulsar-io-jdbc-mariadb-2.7.2.1.1.36.nar
+* pulsar-io-jdbc-postgres-2.7.2.1.1.36.nar
+* pulsar-io-jdbc-sqlite-2.7.2.1.1.36.nar
+* pulsar-io-kafka-2.7.2.1.1.36.nar
+* pulsar-io-kinesis-2.7.2.1.1.36.nar
+
 ## Luna Streaming Distribution 2.7.2 1.1.35
 This is a maintenance release containing important stability updates.
 ### Most notable commits
