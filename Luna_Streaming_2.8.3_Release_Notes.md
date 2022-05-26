@@ -85,7 +85,51 @@ The distributions are available as Docker images and tarballs, and both methods 
 * **lunastreaming-all**: contains the Core Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. Pick this distribution if you want the Datastax connectors or the offloading feature.
 
 # Releases
-
+## Luna Streaming Distribution 2.8.3 1.0.11
+This is a maintenance release containing important stability and security updates.
+### Most notable commits
+* [750e2adc59f](https://github.com/datastax/pulsar/commit/750e2adc59f) [fix][broker] Fix creating producer failure when set backlog quota. (#15663)
+* [7fa3f9888aa](https://github.com/datastax/pulsar/commit/7fa3f9888aa) Fix can not enable system topic if `AutoUpdateSchemaEnabled=false`. (#15759)
+* [97dac20d41b](https://github.com/datastax/pulsar/commit/97dac20d41b) [fix][security] Tiered storage: Upgrade Hadoop to 3.3.3 to get rid of CVE-2022-26612 (#15660)
+* [70e810acb4c](https://github.com/datastax/pulsar/commit/70e810acb4c) Support handling single role and non-jwt-token in MultiRolesTokenAuthorizationProvider (#14857)
+* [aef1c5056cf](https://github.com/datastax/pulsar/commit/aef1c5056cf) [improve][client] improve logic when ACK grouping tracker checks duplicated message id (#15465)
+* [aad94d6d9b8](https://github.com/datastax/pulsar/commit/aad94d6d9b8) [Improve][doc] Add config of IO and acceptor threads in proxy (#15340)
+* [4ef0472f9eb](https://github.com/datastax/pulsar/commit/4ef0472f9eb) [Broker] Fix typo in enum name and handle closing of the channel properly since writeAndFlush is asynchronous (#15384)
+* [0dd8f8bcb06](https://github.com/datastax/pulsar/commit/0dd8f8bcb06) [fix][broker] Fix MessageDeduplication#inactiveProducers may not be persistence correctly (#15206)
+* [5ae8b92d53d](https://github.com/datastax/pulsar/commit/5ae8b92d53d) Pulsar SQL support for Decimal data type (#15153)
+* [8e4a5b8a1f8](https://github.com/datastax/pulsar/commit/8e4a5b8a1f8) [enh][monitor]: add metrics for pulsar web service thread pool (#14742)
+* [91644b3b924](https://github.com/datastax/pulsar/commit/91644b3b924) [C++] Fix UnknownError might be returned for a partitioned producer (#15161)
+* [491b9961c2f](https://github.com/datastax/pulsar/commit/491b9961c2f) [improve][client] Avoid timertask run before previous subscribe complete. (#14818)
+* [99576fac229](https://github.com/datastax/pulsar/commit/99576fac229) [improve][offloaders] Upgrade JClouds to 2.5.0 (#15649)
+* [90f147c856e](https://github.com/datastax/pulsar/commit/90f147c856e) Upgrade Netty to 4.1.77.Final and netty-tcnative to 2.0.52.Final (#15646)
+* [1f97f23ae0e](https://github.com/datastax/pulsar/commit/1f97f23ae0e) fix: org.apache.kafka.connect.errors.DataException: Invalid Java object for schema with type... (#15598)
+* [502a8cbe87e](https://github.com/datastax/pulsar/commit/502a8cbe87e) [fix][broker] Fix deadlock in broker after race condition in topic creation failure (#15570)
+* [d057541e537](https://github.com/datastax/pulsar/commit/d057541e537) Offloader metrics (#13833)
+* [246e38e2ecd](https://github.com/datastax/pulsar/commit/246e38e2ecd) Fix pulsar-client-all shade - include BookKeeper libraries
+* [e5aebe75640](https://github.com/datastax/pulsar/commit/e5aebe75640) [fix][c++ client] avoid race condition causing double callback on close (#15508)
+* [32f6cfb2a7b](https://github.com/datastax/pulsar/commit/32f6cfb2a7b) Upgrade to Datastax BookKeeper 4.14.5.1.0.0
+* [ff9181dd847](https://github.com/datastax/pulsar/commit/ff9181dd847) [WebSocket] Fix MultiTopicReader#getConsumer ClassCastException (#15534)
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.1-nar.nar
+* pulsar-cassandra-source-2.0.0.nar
+* pulsar-io-data-generator-2.8.3.1.0.11.nar
+* pulsar-io-debezium-mongodb-2.8.3.1.0.11.nar
+* pulsar-io-debezium-mssql-2.8.3.1.0.11.nar
+* pulsar-io-debezium-mysql-2.8.3.1.0.11.nar
+* pulsar-io-debezium-oracle-2.8.3.1.0.11.nar
+* pulsar-io-debezium-postgres-2.8.3.1.0.11.nar
+* pulsar-io-elastic-search-2.8.3.1.0.11.nar
+* pulsar-io-jdbc-clickhouse-2.8.3.1.0.11.nar
+* pulsar-io-jdbc-mariadb-2.8.3.1.0.11.nar
+* pulsar-io-jdbc-postgres-2.8.3.1.0.11.nar
+* pulsar-io-jdbc-sqlite-2.8.3.1.0.11.nar
+* pulsar-io-kafka-2.8.3.1.0.11.nar
+* pulsar-io-kinesis-2.8.3.1.0.11.nar
+* pulsar-snowflake-connector-0.1.9.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.20.nar
+* starlight-rabbitmq-2.8.3.1.0.9-ls-0.nar
+* pulsar-kafka-proxy-2.8.0.1.0.20.nar
+  
 ## Luna Streaming Distribution 2.8.3 1.0.10
 This is a maintenance release containing important security and stability updates.
 ### Most notable commits
