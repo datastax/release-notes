@@ -6,7 +6,7 @@ Please consider upgrading to [DSE 6.8](./DSE_6.8_Release_Notes.md) for our lates
 
 
 # Release notes for 6.0.18
-27 May 2022
+31 May 2022
 
 ## Components versions for DSE 6.0.18
  * Apache Solr™ 6.0.1.1.2883
