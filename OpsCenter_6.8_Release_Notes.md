@@ -1,5 +1,20 @@
 # Release notes for OpsCenter
 
+# Release notes for 6.8.19
+30 May 2022
+
+## 6.8.19 DSE Backup Service
+
+* When not using sstableloader for a point in time restore, opscenterd will no longer use the host id check to ensure the topology has not changed. Instead the point in time restore call relies on the topology check already done by restores not using sstableloader. (OPSC-17120)
+
+## 6.8.19 DSE Core
+
+* Added secret reduction when including spark-alwayson-sql.conf in a diagnostic tarball. (OPSC-17141)
+
+## 6.8.19 DSE Monitoring
+
+* Fixed an issue that prevented the collection of data center based metrics. (OPSC-17016)
+
 # Release notes for 6.8.18
 10 Mar 2022
 
