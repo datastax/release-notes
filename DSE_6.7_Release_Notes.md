@@ -3,6 +3,60 @@ DSE 6.7.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 **NOTE**: DSE `6.7.x` line has [EOSL date of November 30, 2022](https://www.datastax.com/legal/supported-software).  Please consider upgrading to [DSE 6.8](./DSE_6.8_Release_Notes.md) for our latest features and patches.
 
+# Release notes for 6.7.17
+31 May 2022
+
+## Components versions for DSE 6.7.17
+ * Apache Solr™ 6.0.1.2.2886&ast;
+ * Apache Spark™ 2.2.3.18
+ * Apache TinkerPop™ 3.3.11-20210727-ba40007e&ast;
+ * Apache Tomcat® 8.5.75&ast;
+ * DSE Java Driver 1.8.3-dse+20201217
+ * Netty 4.1.25.7.dse
+ * Spark JobServer 0.8.0.45.3
+
+## 6.7.17 DSE Core
+* Improved reading logic to ensure that sstables are not unnecessarily read for columns that are not selected. See CASSANDRA-16737. (Previously DB-4974). (DSP-22478)
+* Fixed a bug that {{mode_by_authentication}} is not being picked up when using sstableloader. (DSP-22067)
+* Fixed stack overflow error with secondary indexes on collections. (DSP-22070)
+* Fixed the URISyntaxException: Malformed IPv6 address when using nodetool or dsetool with Java 8u331 or 11.0.15. This is due to the recent changes of JDK-8278972, in which parsing of URL Strings in Built-in JNDI Providers is more strict. (DSP-22474)
+
+## 6.7.17 DSE Cassandra
+* Enabled periodic logging of system status (default every 5 minutes, configurable). (DSP-22039)
+* Made await timeout for shutting down non periodic tasks configurable with the new jvm option {{cassandra.non_periodic_tasks_shutdown_timeout_in_minutes}}. When timeout is reached, force shutdown those tasks. (DSP-22241)
+* Lowered commitlog replay sstable origin warning to info. (DSP-22270)
+* Fixed -h/--help option not working in sstableloader and other tools in the package installed DSE. (DSP-20375)
+* Added warning message in case of cases where dse was started with duplicated -Xmx options when used in jvm-server.options. (DSP-21795)
+* Fixed swapped greater than ('>') and less than ('<') operators in the slow query log for a table with DESC clustering keys (port CASSANDRA-15503). (DSP-22369)
+* Fixed a rare race condition where attempting to read from a sstable would fail with an assertion error. (DSP-22431)
+
+## 6.7.17 DSE Spark
+* Fixed broken partition filtering in hive metastore leading to missing data in the spark-sql queries results for queries involving numeric partition keys or complex conditions. (DSP-21651)
+* Fixed and updated javax.mail dependency to com.sun.mail. (DSP-22085)
+
+## 6.7.17 DSE Upgrade
+* Fixed a bug of not retaining changes to /etc/security/limits.d/cassandra.conf on yum upgrade. (DSP-21928)
+
+## 6.7.17 DSE Security
+* Upgraded Bouncy Castle to the latest 1.70 version. (DSP-22352)
+* Fixed an issue in the LDAP group_search_filter default value that meant that group hierarchies were not being loaded if the group_search_filter was not explicitly set in the dse.yaml. (DSP-21874)
+
+## 6.7.17 DSE CVE
+* Upgraded apache-commons compress library to 1.21 version. This version upgrade fixed several vulnerabilities that could be used to mount a denial of service attack against specially-crafted services that use a compress or decompress sevenz, tar, or zip package. (DSP-22383, [CVE-2021-35515](https://nvd.nist.gov/vuln/detail/CVE-2021-35515), [CVE-2021-35516](https://nvd.nist.gov/vuln/detail/CVE-2021-35516), [CVE-2021-35517](https://nvd.nist.gov/vuln/detail/CVE-2021-35517), [CVE-2021-36090](https://nvd.nist.gov/vuln/detail/CVE-2021-36090))
+* Upgraded snakeyaml version to 1.30. (DSP-22386, [CVE-2017-18640](https://nvd.nist.gov/vuln/detail/CVE-2017-18640))
+* Upgraded Tomcat version from 8.5.65 to 8.5.70. (DSP-21996, [CVE-2021-33037](https://nvd.nist.gov/vuln/detail/CVE-2021-33037))
+* Updated snake yaml version 1.15 to 1.28 in TinkerPop. Updated TinkerPop version to 3.3.11-20210601-5204e405. (DSP-21395, [CVE-2017-18640](https://nvd.nist.gov/vuln/detail/CVE-2017-18640))
+* Upgraded version of Apache Tomcat from 8.5.70 to 8.5.72. (DSP-22098, [CVE-2021-42340](https://nvd.nist.gov/vuln/detail/CVE-2021-42340))
+* Upgraded Bootstrap version from 3.1.1 to 3.4.1 and Flask from 0.10.1 to 1.1.4. (DSP-21682, [CVE-2019-8331](https://nvd.nist.gov/vuln/detail/CVE-2019-8331), [CVE-2016-10735](https://nvd.nist.gov/vuln/detail/CVE-2016-10735), [CVE-2018-1000656](https://nvd.nist.gov/vuln/detail/CVE-2018-1000656), [CVE-2019-1010083](https://nvd.nist.gov/vuln/detail/CVE-2019-1010083))
+* Ported fix from SOLR-12514 to dse lucene-Solr. (DSP-21685, [CVE-2018-11802](https://nvd.nist.gov/vuln/detail/CVE-2018-11802))
+* Upgraded version of PDFBox and FontBox to 2.0.24, and version of JempBox to 1.8.16. (DSP-21688, [CVE-2018-8036](https://nvd.nist.gov/vuln/detail/CVE-2018-8036), [CVE-2018-11797](https://nvd.nist.gov/vuln/detail/CVE-2018-11797))
+* Upgraded version of directory-ldap-api from DSE 1.0.0.2.dse to OSS 1.0.3. (DSP-21758, [CVE-2018-1337](https://nvd.nist.gov/vuln/detail/CVE-2018-1337))
+* Upgraded version of groovy to 2.4.21 in DSE 5.1, 6.0, 6.7 and 2.5.14 in DSE 6.8. Upgraded version of TinkerPop to {{3.2.11-20210716-faea8d16}} in 5.1, {{3.3.11-20210727-ba40007e}} in 6.0, 6.7, and {{3.4.5-20210816-c28c0de2}} in 6.8. (DSP-21767, [CVE-2020-17521](https://nvd.nist.gov/vuln/detail/CVE-2020-17521))
+* Upgraded logback version to 1.2.11. This fixes a vulnerability affecting logback-classic and logback-core. (DSP-22237, [CVE-2021-42550](https://nvd.nist.gov/vuln/detail/CVE-2021-42550))
+* Upgraded version of Apache Tomcat from 8.5.72 to 8.5.75. (DSP-22360, [CVE-2022-23181](https://nvd.nist.gov/vuln/detail/CVE-2022-23181))
+* Removed log4j 1.2.x dependency from dse-spark/client/lib and replace it with reload4j 1.2.19. (DSP-22279, [CVE-2021-44228](https://nvd.nist.gov/vuln/detail/CVE-2021-44228), [CVE-2019-17571](https://nvd.nist.gov/vuln/detail/CVE-2019-17571), [CVE-2022-23305](https://nvd.nist.gov/vuln/detail/CVE-2022-23305), [CVE-2022-23302](https://nvd.nist.gov/vuln/detail/CVE-2022-23302), [CVE-2021-4104](https://nvd.nist.gov/vuln/detail/CVE-2021-4104))
+* Upgraded version of Bouncy Castle to 1.67. (DSP-22301, [CVE-2018-1000613](https://nvd.nist.gov/vuln/detail/CVE-2018-1000613), [CVE-2018-1000180](https://nvd.nist.gov/vuln/detail/CVE-2018-1000180), [CVE-2020-28052](https://nvd.nist.gov/vuln/detail/CVE-2020-28052))
+
 # DataStax Enterprise 6.7.16
 17 February 2022
 
