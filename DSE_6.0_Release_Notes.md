@@ -5,6 +5,36 @@ DSE 6.0.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 Please consider upgrading to [DSE 6.8](./DSE_6.8_Release_Notes.md) for our latest features and patches.
 
 
+# Release notes for 6.0.18
+31 May 2022
+
+## Components versions for DSE 6.0.18
+ * Apache Solr™ 6.0.1.1.2883
+ * Apache Spark™ 2.2.3.18
+ * Apache TinkerPop™ 3.3.11-20210727-ba40007e
+ * Apache Tomcat® 8.5.75&ast;
+ * DSE Java Driver 1.8.3-dse+20201217
+ * Netty 4.1.25.7.dse
+ * Spark JobServer 0.8.0.45.3
+
+## 6.0.18 DSE Core
+* Improved reading logic to ensure that sstables are not unnecessarily read for columns that are not selected. See CASSANDRA-16737. (Previously DB-4974). (DSP-22478)
+* Fixed the URISyntaxException: Malformed IPv6 address when using nodetool or dsetool with Java 8u331 or 11.0.15. This is due to the recent changes of JDK-8278972, in which parsing of URL Strings in Built-in JNDI Providers is more strict. (DSP-22474)
+
+## 6.0.18 DSE Cassandra
+* Fixed swapped greater than ('>') and less than ('<') operators in the slow query log for a table with DESC clustering keys (port CASSANDRA-15503). (DSP-22369)
+* Fixed a rare race condition where attempting to read from a sstable would fail with an assertion error. (DSP-22431)
+
+## 6.0.18 DSE Security
+* Upgraded Bouncy Castle to the latest 1.70 version. (DSP-22352)
+
+## 6.0.18 DSE CVE
+* Upgraded apache-commons compress library to 1.21 version. This version upgrade fixed several vulnerabilities that could be used to mount a denial of service attack against specially-crafted services that use a compress or decompress sevenz, tar, or zip package. (DSP-22383, [CVE-2021-35515](https://nvd.nist.gov/vuln/detail/CVE-2021-35515), [CVE-2021-35516](https://nvd.nist.gov/vuln/detail/CVE-2021-35516), [CVE-2021-35517](https://nvd.nist.gov/vuln/detail/CVE-2021-35517), [CVE-2021-36090](https://nvd.nist.gov/vuln/detail/CVE-2021-36090))
+* Upgraded snakeyaml version to 1.30. (DSP-22386, [CVE-2017-18640](https://nvd.nist.gov/vuln/detail/CVE-2017-18640))
+* Upgraded logback version to 1.2.11. This fixes a vulnerability affecting logback-classic and logback-core. (DSP-22237, [CVE-2021-42550](https://nvd.nist.gov/vuln/detail/CVE-2021-42550))
+* Upgraded version of Apache Tomcat from 8.5.72 to 8.5.75. (DSP-22360, [CVE-2022-23181](https://nvd.nist.gov/vuln/detail/CVE-2022-23181))
+* Upgraded version of Bouncy Castle to 1.67. (DSP-22301, [CVE-2018-1000613](https://nvd.nist.gov/vuln/detail/CVE-2018-1000613), [CVE-2018-1000180](https://nvd.nist.gov/vuln/detail/CVE-2018-1000180), [CVE-2020-28052](https://nvd.nist.gov/vuln/detail/CVE-2020-28052))
+
 # Release notes for 6.0.17
 18 February 2022
 
