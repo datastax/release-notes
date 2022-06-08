@@ -79,6 +79,69 @@ The distributions are available as Docker images and tarballs, and both methods 
 
 # Releases
 
+## Luna Streaming Distribution 2.10 0.5
+This is a maintenance release containing important stability and security updates.
+### Most notable commits
+* [bb6db424376](https://github.com/datastax/pulsar/commit/bb6db424376) [Python] Use MacOS 10.15 as the target OS version for Python wheel files (#15788)
+* [5a5030587aa](https://github.com/datastax/pulsar/commit/5a5030587aa) [Python] Adjusted script to build wheel for Python 3.7 on Mac (#15407)
+* [86cdc542c98](https://github.com/datastax/pulsar/commit/86cdc542c98) [Fix][Docker] Add write permissions to /pulsar subdirectories to enable running as non-root user (#15769)
+* [26236cd29f2](https://github.com/datastax/pulsar/commit/26236cd29f2) [fix][broker] Fix creating producer failure when set backlog quota. (#15663)
+* [a716a300415](https://github.com/datastax/pulsar/commit/a716a300415) [fix][sql] Fix the decimal type error convert in json schema (#15687)
+* [142689a902f](https://github.com/datastax/pulsar/commit/142689a902f) [fix][txn]Fix transasction ack batch message (#15875)
+* [cdb8c372909](https://github.com/datastax/pulsar/commit/cdb8c372909) [improve][tiered storage] Reduce cpu usage when offloading the ledger (#15063)
+* [ce9349ceffb](https://github.com/datastax/pulsar/commit/ce9349ceffb) [fix][broker]Fast return if ack cumulative illegal (#15695)
+* [168228c14e6](https://github.com/datastax/pulsar/commit/168228c14e6) [Revert] [#15483] Remove sensitive msg from consumer/producer stats log (#15817)
+* [7a04b7ddee7](https://github.com/datastax/pulsar/commit/7a04b7ddee7) Avoid contended synchronized block on topic load (#15883)
+* [06aa6c031e4](https://github.com/datastax/pulsar/commit/06aa6c031e4) Fix avro conversion order of registration (#15863)
+* [8130645b4c0](https://github.com/datastax/pulsar/commit/8130645b4c0) Fix NPE in MessageDeduplication. (#15820)
+* [57acd651ac5](https://github.com/datastax/pulsar/commit/57acd651ac5) fix bug in getNumberOfEntriesInStorage (#15627)
+* [df5685f8c1d](https://github.com/datastax/pulsar/commit/df5685f8c1d) Sync topicPublishRateLimiter update (#15599)
+* [f554598cc62](https://github.com/datastax/pulsar/commit/f554598cc62) [feat] [tiered-storage] Add pure S3 provider for the offloader (#15710)
+* [29dc9a7b497](https://github.com/datastax/pulsar/commit/29dc9a7b497) [fix][ML]Fix NPE when put value to `RangeCache`. (#15707)
+* [4fd06d369ae](https://github.com/datastax/pulsar/commit/4fd06d369ae) [fix][broker-common] expose configurationMetadataStore and localMetadataStore (#15661)
+* [797aa0e696b](https://github.com/datastax/pulsar/commit/797aa0e696b) [optimize][txn] Optimize transaction lowWaterMark to clean useless data faster (#15592)
+* [a86141b7a0d](https://github.com/datastax/pulsar/commit/a86141b7a0d) Use dispatchRateLimiterLock to update dispatchRateLimiter. (#15601)
+* [eef7d61efc5](https://github.com/datastax/pulsar/commit/eef7d61efc5) [cleanup] [broker] Remove useless code to avoid confusion in OpReadEntry#checkReadCompletion. (#15104)
+* [378e19b63c7](https://github.com/datastax/pulsar/commit/378e19b63c7) [Transaction] Fix cursor readPosition is bigger than maxPosition in OpReadEntry (#14667)
+* [cf7a72cba47](https://github.com/datastax/pulsar/commit/cf7a72cba47) Fix NPE when TableView handles null value message (#15951)
+* [a3370e52e29](https://github.com/datastax/pulsar/commit/a3370e52e29) Upgrade BookKeeper to 4.14.5.1.0.1
+* [f9da03ee823](https://github.com/datastax/pulsar/commit/f9da03ee823) [fix][connector] KCA sinks: fix offset mapping when sanitizeTopicName=true (#15950)
+* [a1251385cde](https://github.com/datastax/pulsar/commit/a1251385cde) Enable TCP/IP keepalive for all ZK client connections in all components (#15908)
+* [f7fa04ca2e3](https://github.com/datastax/pulsar/commit/f7fa04ca2e3) [ML] Fix race condition in getManagedLedgerInternalStats when includeLedgerMetadata=true (#15918)
+* [a52d1f99736](https://github.com/datastax/pulsar/commit/a52d1f99736) [Broker] Add timeout to closing CoordinationServiceImpl (#15777)
+* [e2dea872548](https://github.com/datastax/pulsar/commit/e2dea872548) [Broker, Functions, Websocket] Disable memory limit controller in internal Pulsar clients (#15752)
+* [d40383d6ec9](https://github.com/datastax/pulsar/commit/d40383d6ec9) [PIP-146] ManagedCursorInfo compression (#14542)
+* [9bc493ddf90](https://github.com/datastax/pulsar/commit/9bc493ddf90) PIP-105 add support for updating the Subscription properties (#15751)
+* [9f5e0732cb3](https://github.com/datastax/pulsar/commit/9f5e0732cb3) [improve][connector] JDBC sinks: support Avro specific datatypes (#15845)
+* [177a9dd36ca](https://github.com/datastax/pulsar/commit/177a9dd36ca) Configure DLog Bookie, Pulsar, and Admin clients via pass through config (#15818)
+* [b41bf129565](https://github.com/datastax/pulsar/commit/b41bf129565) Switch to rely on Netty for Hostname Verification (#15824)
+* [8988740a1cb](https://github.com/datastax/pulsar/commit/8988740a1cb) [fix][python]Fix generated Python protobuf code not compatible with latest protobuf package (#15846)
+* [0e84d66ac33](https://github.com/datastax/pulsar/commit/0e84d66ac33) [improve][connector] JDBC Sinks: support KeyValue schema (#15807)
+* [9b6d2eafcd4](https://github.com/datastax/pulsar/commit/9b6d2eafcd4) Replaced unicode 'comma and space' as single glyph with regular comma and space characters (#15461)
+
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.2-nar.nar
+* pulsar-cassandra-source-2.1.0.nar
+* pulsar-io-cloud-storage-2.10.0.4.nar
+* pulsar-io-data-generator-2.10.0.5.nar
+* pulsar-io-debezium-mongodb-2.10.0.5.nar
+* pulsar-io-debezium-mssql-2.10.0.5.nar
+* pulsar-io-debezium-mysql-2.10.0.5.nar
+* pulsar-io-debezium-oracle-2.10.0.5.nar
+* pulsar-io-debezium-postgres-2.10.0.5.nar
+* pulsar-io-elastic-search-2.10.0.5.nar
+* pulsar-io-jdbc-clickhouse-2.10.0.5.nar
+* pulsar-io-jdbc-mariadb-2.10.0.5.nar
+* pulsar-io-jdbc-postgres-2.10.0.5.nar
+* pulsar-io-jdbc-sqlite-2.10.0.5.nar
+* pulsar-io-kafka-2.10.0.5.nar
+* pulsar-io-kinesis-2.10.0.5.nar
+* pulsar-snowflake-connector-0.1.11-beta.nar
+* pulsar-protocol-handler-kafka-2.10.0.1.nar
+* starlight-rabbitmq-2.10.0.0.nar
+* pulsar-kafka-proxy-2.10.0.1.nar
+* pulsar-jms-2.4.0-nar.nar
+
 ## Luna Streaming Distribution 2.10 0.4
 This is a maintenance release containing important security and stability updates.
 ### Most notable commits
