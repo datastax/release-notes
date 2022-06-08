@@ -85,6 +85,47 @@ The distributions are available as Docker images and tarballs, and both methods 
 * **lunastreaming-all**: contains the Core Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. Pick this distribution if you want the Datastax connectors or the offloading feature.
 
 # Releases
+
+## Luna Streaming Distribution 2.8.3 1.0.12
+This is a maintenance release containing important security updates.
+### Most notable commits
+* [4152dbc600b](https://github.com/datastax/pulsar/commit/4152dbc600b) [ML] When skipping updating mark delete position, execute callback with executor to prevent deadlock (#15971)
+* [b04d782a45d](https://github.com/datastax/pulsar/commit/b04d782a45d) [fix][connector] KCA sinks: fix offset mapping when sanitizeTopicName=true (#15950)
+* [d34cdbc1b34](https://github.com/datastax/pulsar/commit/d34cdbc1b34) Fix avro conversion order of registration (#15863)
+* [cda41b207d9](https://github.com/datastax/pulsar/commit/cda41b207d9) Fix NPE in MessageDeduplication. (#15820)
+* [f86ac7519b6](https://github.com/datastax/pulsar/commit/f86ac7519b6) fix bug in getNumberOfEntriesInStorage (#15627)
+* [28b562856db](https://github.com/datastax/pulsar/commit/28b562856db) [fix][ML]Fix NPE when put value to `RangeCache`. (#15707)
+* [6a89682db0a](https://github.com/datastax/pulsar/commit/6a89682db0a) [feat] [tiered-storage] Add pure S3 provider for the offloader (#15710)
+* [33fe5191f89](https://github.com/datastax/pulsar/commit/33fe5191f89) Upgrade BookKeeper to 4.14.5.1.0.1
+* [7e5f4d5812f](https://github.com/datastax/pulsar/commit/7e5f4d5812f) Configure DLog Bookie, Pulsar, and Admin clients via pass through config (#15818)
+* [ba6f34a88ad](https://github.com/datastax/pulsar/commit/ba6f34a88ad) Switch to rely on Netty for Hostname Verification (#15824)
+* [b29cad39af0](https://github.com/datastax/pulsar/commit/b29cad39af0) [improve][broker-web&websocket&proxy&function-worker] Full-support set ssl provider, ciphers and protocols (#13740)
+* [146ad92dcd1](https://github.com/datastax/pulsar/commit/146ad92dcd1) Revert "[security] Allow to config web server's cipher and protocols (#13354)"
+* [e363fb6e42b](https://github.com/datastax/pulsar/commit/e363fb6e42b) [fix][python]Fix generated Python protobuf code not compatible with latest protobuf package (#15846)
+
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.2-nar.nar
+* pulsar-cassandra-source-2.1.0.nar
+* pulsar-io-cloud-storage-2.8.3.3.nar
+* pulsar-io-data-generator-2.8.3.1.0.12.nar
+* pulsar-io-debezium-mongodb-2.8.3.1.0.12.nar
+* pulsar-io-debezium-mssql-2.8.3.1.0.12.nar
+* pulsar-io-debezium-mysql-2.8.3.1.0.12.nar
+* pulsar-io-debezium-oracle-2.8.3.1.0.12.nar
+* pulsar-io-debezium-postgres-2.8.3.1.0.12.nar
+* pulsar-io-elastic-search-2.8.3.1.0.12.nar
+* pulsar-io-jdbc-clickhouse-2.8.3.1.0.12.nar
+* pulsar-io-jdbc-mariadb-2.8.3.1.0.12.nar
+* pulsar-io-jdbc-postgres-2.8.3.1.0.12.nar
+* pulsar-io-jdbc-sqlite-2.8.3.1.0.12.nar
+* pulsar-io-kafka-2.8.3.1.0.12.nar
+* pulsar-io-kinesis-2.8.3.1.0.12.nar
+* pulsar-snowflake-connector-0.1.11-beta.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.20.nar
+* starlight-rabbitmq-2.8.3.1.0.9-ls-0.nar
+* pulsar-kafka-proxy-2.8.0.1.0.20.nar
+
+
 ## Luna Streaming Distribution 2.8.3 1.0.11
 This is a maintenance release containing important stability and security updates.
 ### Most notable commits
