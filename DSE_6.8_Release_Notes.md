@@ -2,6 +2,37 @@
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
 
+# Release notes for 6.8.24
+15 June 2022
+
+## Components versions for DSE 6.8.24
+ * Apache Solr™ 6.0.1.4.2940&ast;
+ * Apache Spark™ 2.4.0.18
+ * Apache TinkerPop™ 3.4.5-20220405-a52bbe2c
+ * Apache Tomcat® 8.5.75
+ * DSE Java Driver 1.10.0-dse+20210424
+ * Netty 4.1.34.3.dse
+ * Spark JobServer 0.8.0.50
+
+## 6.8.24 DSE Core
+* Implemented ability to replace the `THREE` consistency level with an `ALL_BUT_ONE` consistency level. (DSP-22366)
+* Removed Netty 3.6.2 and 3.7.0. (DSP-22381, [CVE-2015-2156](https://nvd.nist.gov/vuln/detail/CVE-2015-2156))
+* Upgraded Jetty All Core to latest version (9.4.46.v20220331). (DSP-22491, [CVE-2009-4611](https://nvd.nist.gov/vuln/detail/CVE-2009-4611), [CVE-2020-27216](https://nvd.nist.gov/vuln/detail/CVE-2020-27216))
+* Upgraded Azure SDK client libraries to be based on BOM 1.2.2 to remove [CVE-2020-36518](https://nvd.nist.gov/vuln/detail/CVE-2020-36518). (DSP-22528)
+* Fixed the `TIMING` feature in cqlsh which throws a message "global name 'request_start' is not defined" when enabled. (DSP-22435)
+
+## 6.8.24 DSE Cassandra
+* Added two configurable variables `stream_outbound_permits_in_mb` and `input_stream_channel_timeout_in_ms` to allow streaming of high density of data by using [ZCS](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html#RNdse__whatsNew). (DSP-22362)
+* Fixed releasing of resources (including heap memory) for metrics removed from the registry (e.g. after table is dropped). (DSP-22516)
+* Ported [CASSANDRA-16987](https://issues.apache.org/jira/browse/CASSANDRA-16987) and fixed python version check bug in cqlsh. (DSP-22517)
+
+## 6.8.24 DSE Search
+* Upgraded solr version which uses upgraded metadata-extractor 2.18.0 and XmpCore 6.1.11 libraries. (DSP-22406, [CVE-2019-14262](https://nvd.nist.gov/vuln/detail/CVE-2019-14262))
+
+## 6.8.24 DSE Security
+* Fixed dsetool expirekey/revoke commands by using KMIP custom attributes. (DSP-22421)
+
+
 # Release notes for 6.8.23
 11 May 2022
 
@@ -15,7 +46,7 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
  * Spark JobServer 0.8.0.50
 
 ## 6.8.23 DSE Core
-* Improved reading logic to ensure that sstables are not unnecessarily read for columns that are not selected. See CASSANDRA-16737. (Previously DB-4974). (DSP-22478)
+* Improved reading logic to ensure that sstables are not unnecessarily read for columns that are not selected. See [CASSANDRA-16737](https://issues.apache.org/jira/browse/CASSANDRA-16737). (Previously DB-4974). (DSP-22478)
 * Fixed the `URISyntaxException: Malformed IPv6 address` when using `nodetool` or `dsetool` with Java 8u331 or 11.0.15. This is due to the recent changes of JDK-8278972, in which parsing of URL Strings in Built-in JNDI Providers is more strict. (DSP-22474)
 
 ## 6.8.23 DSE Cassandra
