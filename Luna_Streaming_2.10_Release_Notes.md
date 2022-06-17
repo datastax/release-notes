@@ -79,6 +79,57 @@ The distributions are available as Docker images and tarballs, and both methods 
 
 # Releases
 
+## Luna Streaming Distribution 2.10 0.6
+This is a maintenance release containing important stability and security updates.
+### Most notable commits
+* [4930f6c45c2](https://github.com/datastax/pulsar/commit/4930f6c45c2) [fix][broker]Fix topic-level replicator rate limiter not init (#15825)
+* [421bf6dc957](https://github.com/datastax/pulsar/commit/421bf6dc957) Optimize topic policy with HierarchyTopicPolicies about replicatorDispatchRate (#14161)
+* [3312986d869](https://github.com/datastax/pulsar/commit/3312986d869) [broker] Add config to allow deliverAt time to be strictly honored (#16068)
+* [8d0c054d5fc](https://github.com/datastax/pulsar/commit/8d0c054d5fc) [Issue 15896] Fix LockTimeout when storePut on the same key concurrently in RocksdbMetadataStore (#16005)
+* [0e46a881bdc](https://github.com/datastax/pulsar/commit/0e46a881bdc) Clean up C++ client curl configuration (#16064)
+* [ad3a814c37a](https://github.com/datastax/pulsar/commit/ad3a814c37a) Fix wrong response type for swagger definitions (#16022)
+* [4923e15dcaf](https://github.com/datastax/pulsar/commit/4923e15dcaf) [broker] Make invalid namespace and topic name logs more descriptive (#16047)
+* [7b556f44d70](https://github.com/datastax/pulsar/commit/7b556f44d70) [ML] When skipping updating mark delete position, execute callback with executor to prevent deadlock (#15971)
+* [790ee2f72e2](https://github.com/datastax/pulsar/commit/790ee2f72e2) [fix][admin] Fix producer/consume permission can’t get schema (#15956) (#16026)
+* [91ea44756f5](https://github.com/datastax/pulsar/commit/91ea44756f5) [broker][monitoring] add message ack rate metric for consumer (#15674)
+* [54e36a46603](https://github.com/datastax/pulsar/commit/54e36a46603) [Function] provide default error handler for function log appender (#15728)
+* [6a7d024e5fb](https://github.com/datastax/pulsar/commit/6a7d024e5fb) [fix][security] Add timeout of sync methods and avoid call sync method for AuthoriationService (#15694)
+* [64f5de79a58](https://github.com/datastax/pulsar/commit/64f5de79a58) [Broker]make revokePermissionsOnTopic method async (#14149)
+* [99f54cb8e31](https://github.com/datastax/pulsar/commit/99f54cb8e31) [cleanup][function] refine file io connector (#15250)
+* [666435c951e](https://github.com/datastax/pulsar/commit/666435c951e) [fix] [admin] fix reach max tenants error if the tenant already exists (#15961)
+* [7f08804b4cc](https://github.com/datastax/pulsar/commit/7f08804b4cc) [fix][txn] fix NPE of TransactionMetaStoreHandler (#15840)
+* [353ffcbe9f9](https://github.com/datastax/pulsar/commit/353ffcbe9f9) [feature][admin] Support to get topic properties. (#15944)
+* [f12f06750b1](https://github.com/datastax/pulsar/commit/f12f06750b1) [fix][auth] Generate correct well-known OpenID configuration URL (#15928)
+* [1146c9c7368](https://github.com/datastax/pulsar/commit/1146c9c7368) Allow PULSAR_MEM & PULSAR_GC to be Overridden in pulsar_tool_env.sh (#15868)
+* [ae7cd9c965b](https://github.com/datastax/pulsar/commit/ae7cd9c965b) [fix][pulsar] Bump pyyaml from 5.3.1 to 5.4.1 to solve CVE-2020-14343 (#15989)
+* [2889092f6d7](https://github.com/datastax/pulsar/commit/2889092f6d7) Upgrade Netty Reactive Streams to 2.0.6 (#15990)
+* [f95c371b3ff](https://github.com/datastax/pulsar/commit/f95c371b3ff) Removing log4j-1.2-api from dependencies (#15991)
+* [64d8e0c3e20](https://github.com/datastax/pulsar/commit/64d8e0c3e20) Fix: org.apache.kafka.connect.errors.DataException: Not a struct schema: Schema{ARRAY} + tests (#15988)
+
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.2-nar.nar
+* pulsar-cassandra-source-2.1.0.nar
+* pulsar-io-cloud-storage-2.10.0.4.nar
+* pulsar-io-data-generator-2.10.0.6.nar
+* pulsar-io-debezium-mongodb-2.10.0.6.nar
+* pulsar-io-debezium-mssql-2.10.0.6.nar
+* pulsar-io-debezium-mysql-2.10.0.6.nar
+* pulsar-io-debezium-oracle-2.10.0.6.nar
+* pulsar-io-debezium-postgres-2.10.0.6.nar
+* pulsar-io-elastic-search-2.10.0.6.nar
+* pulsar-io-jdbc-clickhouse-2.10.0.6.nar
+* pulsar-io-jdbc-mariadb-2.10.0.6.nar
+* pulsar-io-jdbc-postgres-2.10.0.6.nar
+* pulsar-io-jdbc-sqlite-2.10.0.6.nar
+* pulsar-io-kafka-2.10.0.6.nar
+* pulsar-io-kinesis-2.10.0.6.nar
+* pulsar-snowflake-connector-0.1.11-beta.nar
+* pulsar-transformations-1.0.0.nar
+* pulsar-protocol-handler-kafka-2.10.0.3.nar
+* starlight-rabbitmq-2.10.0.1.nar
+* pulsar-kafka-proxy-2.10.0.3.nar
+* pulsar-jms-2.4.0-nar.nar
+
 ## Luna Streaming Distribution 2.10 0.5
 This is a maintenance release containing important stability and security updates.
 ### Most notable commits
