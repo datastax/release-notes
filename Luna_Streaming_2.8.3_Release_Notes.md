@@ -86,6 +86,40 @@ The distributions are available as Docker images and tarballs, and both methods 
 
 # Releases
 
+
+## Luna Streaming Distribution 2.8.3 1.0.13
+This is a maintenance release containing important stability updates for KCA connectors.
+### Most notable commits
+* [7e66e5e5f10](https://github.com/datastax/pulsar/commit/7e66e5e5f10) [fix][connector] KCA: use reflection to get pulsar-client impl classes (#96)
+* [ddcbbdf6aa0](https://github.com/datastax/pulsar/commit/ddcbbdf6aa0) KCA: handle preCommit returning earlier offsets
+* [625da657cf5](https://github.com/datastax/pulsar/commit/625da657cf5) KCA to use index (if available) instead of sequence and to handle batched messages non-unique sequenceIds (#16098)
+* [ced9b9bbe7d](https://github.com/datastax/pulsar/commit/ced9b9bbe7d) Exposing the broker entry metadata to client (#11553)
+* [0dce444cb93](https://github.com/datastax/pulsar/commit/0dce444cb93) Allow PULSAR_MEM & PULSAR_GC to be Overridden in pulsar_tool_env.sh (#15868)
+* [d0c7aefe52b](https://github.com/datastax/pulsar/commit/d0c7aefe52b) Fix: org.apache.kafka.connect.errors.DataException: Not a struct schema: Schema{ARRAY} + tests (#15988)
+* [5595d5806ae](https://github.com/datastax/pulsar/commit/5595d5806ae) [pulsar-io] KCA: properly handle KeyValue that getNativeObject() returns: corrected type + support for KeyValue<GenericRecord, GenericRecord> (#15025)
+
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.2-nar.nar
+* pulsar-cassandra-source-2.1.0.nar
+* pulsar-io-cloud-storage-2.8.3.3.nar
+* pulsar-io-data-generator-2.8.3.1.0.13.nar
+* pulsar-io-debezium-mongodb-2.8.3.1.0.13.nar
+* pulsar-io-debezium-mssql-2.8.3.1.0.13.nar
+* pulsar-io-debezium-mysql-2.8.3.1.0.13.nar
+* pulsar-io-debezium-oracle-2.8.3.1.0.13.nar
+* pulsar-io-debezium-postgres-2.8.3.1.0.13.nar
+* pulsar-io-elastic-search-2.8.3.1.0.13.nar
+* pulsar-io-jdbc-clickhouse-2.8.3.1.0.13.nar
+* pulsar-io-jdbc-mariadb-2.8.3.1.0.13.nar
+* pulsar-io-jdbc-postgres-2.8.3.1.0.13.nar
+* pulsar-io-jdbc-sqlite-2.8.3.1.0.13.nar
+* pulsar-io-kafka-2.8.3.1.0.13.nar
+* pulsar-io-kinesis-2.8.3.1.0.13.nar
+* pulsar-snowflake-connector-0.1.14-beta.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.20.nar
+* starlight-rabbitmq-2.8.3.1.0.9-ls-0.nar
+* pulsar-kafka-proxy-2.8.0.1.0.20.nar
+
 ## Luna Streaming Distribution 2.8.3 1.0.12
 This is a maintenance release containing important security updates.
 ### Most notable commits
