@@ -79,6 +79,64 @@ The distributions are available as Docker images and tarballs, and both methods 
 
 # Releases
 
+## Luna Streaming Distribution 2.10 1.0
+This is release contains new features such as Pulsar Transforms and Pulsar Shell.
+It also contains several stability issues about transactions.
+
+### Most notable commits
+
+* [010629e5a39](https://github.com/datastax/pulsar/commit/010629e5a39) Add commons-text to LICENSE
+* [6f636a1c24e](https://github.com/datastax/pulsar/commit/6f636a1c24e) Fix JDK 11 compatibility
+* [0c81490391c](https://github.com/datastax/pulsar/commit/0c81490391c) [feature][cli] Pulsar shell - Env variables interpolation
+* [3501b0ce7d4](https://github.com/datastax/pulsar/commit/3501b0ce7d4) [feature][cli] Pulsar shell - add support for input files and pipe for running multiple commands - part 2
+* [698f225d6d2](https://github.com/datastax/pulsar/commit/698f225d6d2) [feature][cli] Pulsar Shell
+* [57b80e25f49](https://github.com/datastax/pulsar/commit/57b80e25f49) [fix][client] Fix JDK17 compatibility issue (#15964)
+* [fa3dfdd5068](https://github.com/datastax/pulsar/commit/fa3dfdd5068) [fix][functions] Handle uploading of builtin Functions to BK if uploadBuiltinSinksSources is true (#16111)
+* [8d9c008f938](https://github.com/datastax/pulsar/commit/8d9c008f938) [improve][functions] Use the classloader of the builtin Function in ThreadRuntime (#16092)
+* [80af58eaff0](https://github.com/datastax/pulsar/commit/80af58eaff0) [improve][function] Support Record<?> as WindowFunction output type (#16129)
+* [9e24d8f6b7f](https://github.com/datastax/pulsar/commit/9e24d8f6b7f) [improve][function] Allow not providing the class name when loading a Function nar file (#16079)
+* [19b36c6b830](https://github.com/datastax/pulsar/commit/19b36c6b830) [improve][broker] Reduce the consumers list sort by priority level (#16243)
+* [b4f1126b943](https://github.com/datastax/pulsar/commit/b4f1126b943) [fix][branch-2.10] Fix wrong unit of NIC speed on linux (#16166)
+* [ba6fe1213b4](https://github.com/datastax/pulsar/commit/ba6fe1213b4) [fix][txn] Ack the same batch message different batchIndex with transaction (#16032)
+* [1d34c98e87f](https://github.com/datastax/pulsar/commit/1d34c98e87f) [improvement][broker]: remove spammy log 'The count of topics on the bundle {} is less than 2, skip split!' (#16212)
+* [8926fd2df65](https://github.com/datastax/pulsar/commit/8926fd2df65) Transactions: fix race in TransactionMetaStoreHandler (#16147)
+* [4d7fe72c16c](https://github.com/datastax/pulsar/commit/4d7fe72c16c) PIP-105: new API to get subscription properties (#16095)
+* [7e7a95b67b8](https://github.com/datastax/pulsar/commit/7e7a95b67b8) [improve][function] Support Record<?> as Function output type (#16041)
+* [15722152dc3](https://github.com/datastax/pulsar/commit/15722152dc3) [improve][admin] Add option function-type to admin CLI for Functions (#16075)
+* [eb525cfabcf](https://github.com/datastax/pulsar/commit/eb525cfabcf) Use OrderedExecutor instead of OrderedScheduler for consumer dispatch (#16115)
+* [a71a2b5d57e](https://github.com/datastax/pulsar/commit/a71a2b5d57e) [improve][function] Get function class name from the NAR when using built-in functions (#15693)
+* [044c0a0a145](https://github.com/datastax/pulsar/commit/044c0a0a145) [fix][admin] Fix check on create function class name (#15700)
+* [c92e672d6d7](https://github.com/datastax/pulsar/commit/c92e672d6d7) Allow creating builtin functions in pulsar-admin CLI (#15671)
+* [450a83db0d1](https://github.com/datastax/pulsar/commit/450a83db0d1) Parse function userConfig to Map<String, Object> (#15669)
+* [03a80b0ce1b](https://github.com/datastax/pulsar/commit/03a80b0ce1b) [improve][pulsar-perf] Transactions: improve client options (#16090)
+* [870af8a495f](https://github.com/datastax/pulsar/commit/870af8a495f) [Cli tools] Disable Pulsar client memory limit by default (#15748)
+* [acd6424a03c](https://github.com/datastax/pulsar/commit/acd6424a03c) [pulsar-perf] Change the default for max-connections from 100 to 1 (#15387)
+
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.2-nar.nar
+* pulsar-cassandra-source-2.1.0.nar
+* pulsar-io-cloud-storage-2.10.0.4.nar
+* pulsar-io-data-generator-2.10.1.0.nar
+* pulsar-io-debezium-mongodb-2.10.1.0.nar
+* pulsar-io-debezium-mssql-2.10.1.0.nar
+* pulsar-io-debezium-mysql-2.10.1.0.nar
+* pulsar-io-debezium-oracle-2.10.1.0.nar
+* pulsar-io-debezium-postgres-2.10.1.0.nar
+* pulsar-io-elastic-search-2.10.1.0.nar
+* pulsar-io-jdbc-clickhouse-2.10.1.0.nar
+* pulsar-io-jdbc-mariadb-2.10.1.0.nar
+* pulsar-io-jdbc-postgres-2.10.1.0.nar
+* pulsar-io-jdbc-sqlite-2.10.1.0.nar
+* pulsar-io-kafka-2.10.1.0.nar
+* pulsar-io-kinesis-2.10.1.0.nar
+* pulsar-snowflake-connector-0.1.10.nar
+* pulsar-transformations-1.0.2.nar
+* pulsar-protocol-handler-kafka-2.10.0.3.nar
+* starlight-rabbitmq-2.10.0.1.nar
+* pulsar-kafka-proxy-2.10.0.3.nar
+* pulsar-jms-2.4.0-nar.nar
+
+
 ## Luna Streaming Distribution 2.10 0.6
 This is a maintenance release containing important stability and security updates.
 ### Most notable commits
