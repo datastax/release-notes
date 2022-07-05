@@ -159,10 +159,8 @@ DSE 6.7.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 * Addressed a bug where a *CommitLogReplayException* is caused by a bad header but correct CRC after restart (DB-3996)
 * Fixed a bug where some part of the commit log might not be replayed after injecting a foreign sstable to a node or, on 6.8, after zero-copy streaming of an sstable (DB-4629)
 
-
 ## DSE 6.7.13 Distributed Read/Write
 * Applied fix for CVE-2020-17516 (DB-4897)
-
 
 ## DSE 6.7.13 Repair
 * Fixed a bug when in rare cases a terminated repair session would leak on-heap memory (DB-4833)
@@ -189,6 +187,7 @@ DSE 6.7.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 * Add asynchronous update to KMIP key cache to fix blocking of commit log (DSP-20582)
 * Fix a bug in `cassandra.repair.mutation_repair_rows_per_batch` setting that caused sending all repair mutations at once (DSP-21429)
 * Addressed several Jackson databind vulnerabilities by upgrading `jackson-databind` to version `2.9.10.8` in DSE 5.1.21, 6.0.15 and 6.7.13 and version 2.10.5.1 in DSP 6.8.10. (DSP-21503) (DSP-21503)
+* There is a change in SSTable format and/or version. Please refer to the [compatibility documentation](https://docs.datastax.com/en/landing_page/doc/landing_page/compatibility.html#compatibility__current-software) for more details.
 
 ## DSE 6.7.13 Security
 * When optimized group retrieval was used in `memberof_search` mode (`ldap_options.all_parent_groups_search_type` parameter in `dse.yaml`), DSE confused attributes specified by `ldap_options.user_memberof_attribute` and `ldap_options.all_parent_groups_memberof_attribute` making the optimized search work only in case both attributes were set to the same value. (DSP-21537)
