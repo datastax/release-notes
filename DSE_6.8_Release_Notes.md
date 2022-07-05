@@ -523,7 +523,7 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
 # Release notes for DSE 6.8.8
 15 December 2020
 
-:warning: **NOTE**: Due to a serious bug which affects DSE `6.8.7` and DSE `6.8.8`, these releases have been retracted.  We recommend against upgrading to these versions at this time.  If you have already upgraded to these versions, please _EITHER_ set `zerocopy_streaming_enabled=false` in the `cassandra.yaml` and perform a rolling restart AND/OR run `upgradesstables` on all nodes in your cluster before adding new nodes, running repair, or restoring from backups.  This bug has been addressed in DSE `6.8.9`. All features and fixes for 6.8.8 and 6.8.7 are present in 6.8.9.
+:warning: **NOTE**: Due to a serious bug which affects DSE `6.8.7` and DSE `6.8.8`, these releases have been retracted.  We recommend against upgrading to these versions at this time.  If you have already upgraded to these versions, please _EITHER_ set `zerocopy_streaming_enabled=false` in the `cassandra.yaml` and perform a rolling restart AND/OR run `upgradesstables` on all nodes in your cluster before adding new nodes, running repair, or restoring from backups.  This bug has been addressed in DSE `6.8.9`. All features and fixes for `6.8.8` and `6.8.7` are present in `6.8.9`.
 
 ## Components versions for DSE 6.8.8
    * Apache Solr™ 6.0.1.4.2814&ast;
@@ -553,7 +553,7 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
 # Release notes for DSE 6.8.7
 23 November 2020
 
-:warning: **NOTE**: Due to a serious bug which affects DSE `6.8.7` and DSE `6.8.8`, these releases have been retracted.  We recommend against upgrading to these versions at this time.  If you have already upgraded to these versions, please _EITHER_ set `zerocopy_streaming_enabled=false` in the `cassandra.yaml` and perform a rolling restart AND/OR run `upgradesstables` on all nodes in your cluster before adding new nodes, running repair, or restoring from backups.  This bug has been addressed in DSE `6.8.9`. All features and fixes for 6.8.8 and 6.8.7 are present in 6.8.9.
+:warning: **NOTE**: Due to a serious bug which affects DSE `6.8.7` and DSE `6.8.8`, these releases have been retracted.  We recommend against upgrading to these versions at this time.  If you have already upgraded to these versions, please _EITHER_ set `zerocopy_streaming_enabled=false` in the `cassandra.yaml` and perform a rolling restart AND/OR run `upgradesstables` on all nodes in your cluster before adding new nodes, running repair, or restoring from backups.  This bug has been addressed in DSE `6.8.9`. All features and fixes for `6.8.8` and `6.8.7` are present in `6.8.9`.
 
 ## Components versions for DSE 6.8.7
    * Apache Solr™ 6.0.1.4.2794
@@ -573,6 +573,7 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
     2) some of the sstables had wide rows whereas others had not
     3) the sstables in question contained range tombstone markers (DSP-21346)
 * Fixed a bug in `cassandra.repair.mutation_repair_rows_per_batch` setting that caused sending all repair mutations at once (DSP-21429)
+* There is a change in SSTable format and/or version. Please refer to the [compatibility documentation](https://docs.datastax.com/en/landing_page/doc/landing_page/compatibility.html#compatibility__current-software) for more details.
 
 ## DSE 6.8.7 Indexing
 * On the CQLSH `CREATE CUSTOM INDEX ... WITH OPTIONS` statement, SAI adds support for an ascii option. If set to `true`, converts alphabetic, numeric, and symbolic characters that are not in the Basic Latin Unicode block (first 127 ASCII characters) to their ASCII equivalent, if one exists. For example, the filter changes à to a. The default is `false`. (DSP-21409)
@@ -580,7 +581,6 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
 * Fixed "java.lang.ArithmeticException: integer overflow" printing in `system.log` when retrieving the SAI index `segmentRowID` (DSP-21522
 
 ## DSE 6.8.7 Graph
-
 * A meaningful error message is logged when two properties with the same name but different types are used in a single core graph. Classic graph was not affected. (DSP-21490)
 
 ## DSE 6.8.7 Security
