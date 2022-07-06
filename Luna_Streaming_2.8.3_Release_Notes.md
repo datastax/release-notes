@@ -86,6 +86,34 @@ The distributions are available as Docker images and tarballs, and both methods 
 
 # Releases
 
+## Luna Streaming Distribution 2.8.3 1.0.14
+This is a maintenance release containing stability updates and connectors upgrades.
+### Most notable commits
+* [b0b33c098c4](https://github.com/datastax/pulsar/commit/b0b33c098c4) [Authorization] AuthorizationService should use provider's canLookupAsync method (#11777)
+* [dcab36b2a88](https://github.com/datastax/pulsar/commit/dcab36b2a88) Avoid AuthenticationDataSource mutation for subscription name (#16065)
+* [f6075227bc7](https://github.com/datastax/pulsar/commit/f6075227bc7) Clean up C++ client curl configuration (#16064)
+* [3bcb7f6caba](https://github.com/datastax/pulsar/commit/3bcb7f6caba) Fix wrong response type for swagger definitions (#16022)
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.3-nar.nar
+* pulsar-cassandra-source-2.1.0.nar
+* pulsar-io-cloud-storage-2.8.3.3.nar
+* pulsar-io-data-generator-2.8.3.1.0.14.nar
+* pulsar-io-debezium-mongodb-2.8.3.1.0.14.nar
+* pulsar-io-debezium-mssql-2.8.3.1.0.14.nar
+* pulsar-io-debezium-mysql-2.8.3.1.0.14.nar
+* pulsar-io-debezium-oracle-2.8.3.1.0.14.nar
+* pulsar-io-debezium-postgres-2.8.3.1.0.14.nar
+* pulsar-io-elastic-search-2.8.3.1.0.14.nar
+* pulsar-io-jdbc-clickhouse-2.8.3.1.0.14.nar
+* pulsar-io-jdbc-mariadb-2.8.3.1.0.14.nar
+* pulsar-io-jdbc-postgres-2.8.3.1.0.14.nar
+* pulsar-io-jdbc-sqlite-2.8.3.1.0.14.nar
+* pulsar-io-kafka-2.8.3.1.0.14.nar
+* pulsar-io-kinesis-2.8.3.1.0.14.nar
+* pulsar-snowflake-connector-0.1.10.nar
+* pulsar-protocol-handler-kafka-2.8.0.1.0.21.nar
+* starlight-rabbitmq-2.8.3.1.0.9-ls-1.nar
+* pulsar-kafka-proxy-2.8.0.1.0.21.nar
 
 ## Luna Streaming Distribution 2.8.3 1.0.13
 This is a maintenance release containing important stability updates for KCA connectors.
