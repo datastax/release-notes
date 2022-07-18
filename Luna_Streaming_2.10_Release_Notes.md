@@ -79,6 +79,117 @@ The distributions are available as Docker images and tarballs, and both methods 
 
 # Releases
 
+## Luna Streaming Distribution 2.10 1.1
+This is a maintenance release containing important security and stability updates.
+### Most notable commits
+* [037b9fc981d](https://github.com/datastax/pulsar/commit/037b9fc981d) Broker: fix Key_Shared dispatcher when using dispatcherDispatchMessagesInSubscriptionThread
+* [0f748e6e908](https://github.com/datastax/pulsar/commit/0f748e6e908) [enh] Broker/EntryFilter: make the delay for RESCHEDULED messages configurable (dispatcherFilterRescheduledMessageDelay) (#16602)
+* [9fafe31df54](https://github.com/datastax/pulsar/commit/9fafe31df54) Fix PersistentStickyKeyDispatcherMultipleConsumersTest
+* [cb28169717c](https://github.com/datastax/pulsar/commit/cb28169717c) [feature][connector] JDBC sinks: support upsert and row deletion (#16448)
+* [66d205ad7d4](https://github.com/datastax/pulsar/commit/66d205ad7d4) [fix][test][branch-2.10] Fix test TransactionEndToEndTest#testSendTxnMessageTimeout (only release branches) (#16570)
+* [6ae4175d3a0](https://github.com/datastax/pulsar/commit/6ae4175d3a0) Shared subscription: run filters in a separate (per-subscription) thread (dispatcherDispatchMessagesInSubscriptionThread)
+* [ab5687f2348](https://github.com/datastax/pulsar/commit/ab5687f2348) Pulsar shell: configs to manage multiple clusters/tenants
+* [d62fb98094a](https://github.com/datastax/pulsar/commit/d62fb98094a) [fix][broker] Skip reading more entries for a pending read with no more entries (#16400)
+* [7c002e6c4fb](https://github.com/datastax/pulsar/commit/7c002e6c4fb) [fix][security] Upgrade to Jetty to 9.4.48.v20220622 to get rid of CVE-2022-2047 (#16520)
+* [6a112d3bff9](https://github.com/datastax/pulsar/commit/6a112d3bff9) cherry-pick [fix][txn] fix pattern sub filter transaction system topic (#16533)
+* [2ae0ee032c3](https://github.com/datastax/pulsar/commit/2ae0ee032c3) [fix][broker] Fixed error when delayed messages trackers state grows to >1.5GB (#16490)
+* [6ab833340ba](https://github.com/datastax/pulsar/commit/6ab833340ba) Support shrink for TripleLongPriorityQueue (#15936)
+* [63980fbf058](https://github.com/datastax/pulsar/commit/63980fbf058) Pulsar Shell: fix sh command and better error message for non-interactive mode failures
+* [04610605c47](https://github.com/datastax/pulsar/commit/04610605c47) [fix][txn] Allow producer enable send timeout in transaction (#16519)
+* [c03f3cb1590](https://github.com/datastax/pulsar/commit/c03f3cb1590) Fix get non-persistent topics issue in Namespaces. (#16170) (#16514)
+* [ef16e303db7](https://github.com/datastax/pulsar/commit/ef16e303db7) [fix][broker] fix No such ledger exception (#16420)
+* [2ab1991a0de](https://github.com/datastax/pulsar/commit/2ab1991a0de) [fix][broker] Fix setManagedLedgerOffloadedReadPriority not work. (#16436)
+* [43e239ac5eb](https://github.com/datastax/pulsar/commit/43e239ac5eb) [improve][broker] Recycle OpReadEntry in some corner cases (#16399)
+* [1c28da327bf](https://github.com/datastax/pulsar/commit/1c28da327bf) [fix][C++ client] Fix the close of Client might stuck or return a wrong result (#16285)
+* [e163dc5a752](https://github.com/datastax/pulsar/commit/e163dc5a752) [fix][broker] Release the entry in getEarliestMessagePublishTimeOfPos (#16386)
+* [88c907a8743](https://github.com/datastax/pulsar/commit/88c907a8743) Exclude the Netty Reactive Stream from asynchttpclient (#16312)
+* [e8534707f76](https://github.com/datastax/pulsar/commit/e8534707f76) [improve][java-client] Improve performance of multi-topic consumer with more than one IO thread (#16336)
+* [3f0641573a9](https://github.com/datastax/pulsar/commit/3f0641573a9) [improve][java-client] Support passing existing scheduled executor providers to the client (#16334)
+* [a6d97f07848](https://github.com/datastax/pulsar/commit/a6d97f07848) [fix][flaky-test] Fix failed test NonPersistentTopicE2ETest.testGCWillDeleteSchema (#16381)
+* [25424651d65](https://github.com/datastax/pulsar/commit/25424651d65) [fix][flaky-test] Try to fix flaky test related to PersistentTopicTest.setup (#16383)
+* [643625b9b81](https://github.com/datastax/pulsar/commit/643625b9b81) [fix][flaky-test] Fix failed test PatternTopicsConsumerImplTest.testAutoSubscribePatternConsumer (#16375)
+* [23e5ccd480d](https://github.com/datastax/pulsar/commit/23e5ccd480d) [improve][broker] Use shared broker client scheduled executor provider (#16338)
+* [8611de81c4f](https://github.com/datastax/pulsar/commit/8611de81c4f) fix select broker is none (#16316)
+* [47a7368bf6c](https://github.com/datastax/pulsar/commit/47a7368bf6c) [fix][txn] Fix TopicTransactionBuffer ledger apend marker throw ManagedLedgerAlreadyClosedException (#16265)
+* [dcf80fac0f5](https://github.com/datastax/pulsar/commit/dcf80fac0f5) [improve][broker] Optimise msgOutCounter and bytesOutCounter (#16214) (#16286)
+* [a9d62b59aec](https://github.com/datastax/pulsar/commit/a9d62b59aec) [fix][broker]fix bug: fail to expose managed ledger client stats to prometheus if bookkeeperClientExposeStatsToPrometheus is true (#16219)
+* [5f8b65b70ae](https://github.com/datastax/pulsar/commit/5f8b65b70ae) [fix] [transaction] Cmd-Subscribe and Cmd-Producer will not succeed even after 100 retries (#16248)
+* [eb481fc9803](https://github.com/datastax/pulsar/commit/eb481fc9803) [improve][broker] Use LinkedHashSet for config items of type Set to preserve elements order (#16138)
+* [2b09f7d170f](https://github.com/datastax/pulsar/commit/2b09f7d170f) [fix][txn] Fix append txn message is lower than lowWaterMark decrease pendingWriteOps (#16266)
+* [d7068c1cddb](https://github.com/datastax/pulsar/commit/d7068c1cddb) fix npe when doCacheEviction (#15184)
+* [96666e1158d](https://github.com/datastax/pulsar/commit/96666e1158d) Add a cache eviction policy：Evicting cache data by the slowest markDeletedPosition (#14985)
+* [5ef2183f320](https://github.com/datastax/pulsar/commit/5ef2183f320) Extracted interface for EntryCacheManager (#15933)
+* [8a6f0fb832d](https://github.com/datastax/pulsar/commit/8a6f0fb832d) Support dynamic update cache config (#13679)
+* [9480b49fcc3](https://github.com/datastax/pulsar/commit/9480b49fcc3) [fix][broker] Do not use IO thread for consumerFlow in Shared subscription
+* [7e9dee3f928](https://github.com/datastax/pulsar/commit/7e9dee3f928) Shared subscription: improvement with offloaded ledgers
+* [d95fb1e09ed](https://github.com/datastax/pulsar/commit/d95fb1e09ed) [fix][broker] Fix RawReader out of order (#16390)
+* [c143bd97791](https://github.com/datastax/pulsar/commit/c143bd97791) Pulsar shell: symlink support
+* [52cf9e8124c](https://github.com/datastax/pulsar/commit/52cf9e8124c) Pulsar Shell: use service hostname as prompt
+* [bea45683d4e](https://github.com/datastax/pulsar/commit/bea45683d4e) Pulsar shell: use -c to specify client configuration file
+* [fc6c37b636b](https://github.com/datastax/pulsar/commit/fc6c37b636b) [cleanup] CLI: fix pulsar-websocket dependency importing only needed jars
+* [cc4c7be3916](https://github.com/datastax/pulsar/commit/cc4c7be3916) Offloaders: fix metrics - pass the Scheduler for periodic calculations - add raw brk_ledgeroffloader_read_bytes counter - fix read latency from JClouds calculation
+* [90399643a68](https://github.com/datastax/pulsar/commit/90399643a68) Fixed deadlock when checking topic ownership (#16310)
+* [52e0711d373](https://github.com/datastax/pulsar/commit/52e0711d373) Ensure ack-timeout task gets re-scheduled when there are exception in the final stage (#16337)
+* [ee1a89ccc8d](https://github.com/datastax/pulsar/commit/ee1a89ccc8d) [improve][workflow] Sync the new docbot to branch-2.10 #16288
+* [7468f8b9ea8](https://github.com/datastax/pulsar/commit/7468f8b9ea8) [fix][broker] Fix passing incorrect authentication data (#16201)
+* [b72c5089738](https://github.com/datastax/pulsar/commit/b72c5089738) Avoid AuthenticationDataSource mutation for subscription name (#16065)
+* [91ca4b4c906](https://github.com/datastax/pulsar/commit/91ca4b4c906) [fix][broker]fix npe when invoke replaceBookie. (#16239)
+* [bd7c63aec4c](https://github.com/datastax/pulsar/commit/bd7c63aec4c) [fix][broker] Fix NPE when drop backlog for time limit. (#16235)
+* [8b1d7a0c894](https://github.com/datastax/pulsar/commit/8b1d7a0c894) [improve][broker] Reduce the re-schedule message read operation for PersistentDispatcherMultipleConsumers (#16241)
+* [da72a32112c](https://github.com/datastax/pulsar/commit/da72a32112c) [improve][java-client] Replace ScheduledExecutor to improve performance of message consumption (#16236)
+* [a8695ff3aff](https://github.com/datastax/pulsar/commit/a8695ff3aff) [improve][broker] Avoid go through all the consumers to get the message ack owner (#16245)
+* [8347ed2218d](https://github.com/datastax/pulsar/commit/8347ed2218d)  [fix][broker]Fix subscribe dispathcer limiter not be initialized (#16175)
+* [17be098c6af](https://github.com/datastax/pulsar/commit/17be098c6af) [fix][broker] Fix compaction subscription acknowledge Marker msg issue. (#16205)
+* [03a9ea7bc73](https://github.com/datastax/pulsar/commit/03a9ea7bc73) [fix][tests] TieredStorageConfigurationTests - clear system properties (#15957)
+* [f26597a4002](https://github.com/datastax/pulsar/commit/f26597a4002) [fix][client] Add classLoader field for `SchemaDefinition` (#15915)
+* [e676ae08319](https://github.com/datastax/pulsar/commit/e676ae08319) [fix][broker] Fix NPE when get /admin/v2/namespaces/public/default/maxTopicsPerNamespace (#16076)
+* [25638e068be](https://github.com/datastax/pulsar/commit/25638e068be) [improve][java-client] Only trigger the batch receive timeout when having pending batch receives requests (#16160)
+* [dc27dee3ef8](https://github.com/datastax/pulsar/commit/dc27dee3ef8) [fix][Java Client] Fix thread safety issue of `LastCumulativeAck` (#16072)
+* [fbfaa516315](https://github.com/datastax/pulsar/commit/fbfaa516315) [fix][client] Fix the startMessageId can't be respected as the ChunkMessageID (#16154)
+* [208b0a8abc3](https://github.com/datastax/pulsar/commit/208b0a8abc3) Fix `messageQueue` release message issue. (#16155)
+* [21f06632351](https://github.com/datastax/pulsar/commit/21f06632351) [fix][broker][monitoring] fix message ack rate (#16108)
+* [f22a8779e31](https://github.com/datastax/pulsar/commit/f22a8779e31) [fix][txn] Fix NPE when ack message with transaction at cnx = null  (#16142)
+* [04b3a81b87b](https://github.com/datastax/pulsar/commit/04b3a81b87b) [Flakey-test] fix flaky-test RackAwareTest.testRackUpdate (#16071)
+* [5d92ad89ad7](https://github.com/datastax/pulsar/commit/5d92ad89ad7) [fix][broker] Fix create client with TLS config (#16014)
+* [6d37fb9b357](https://github.com/datastax/pulsar/commit/6d37fb9b357) [fix][broker]Fix topic policies update not check message expiry (#15941)
+* [3d8618711ea](https://github.com/datastax/pulsar/commit/3d8618711ea) [Transaction] Set TC state is Ready after open MLTransactionMetadataStore completely. (#13957)
+* [6d4487a5346](https://github.com/datastax/pulsar/commit/6d4487a5346) [improve][tests] improved flaky test runs (#16011)
+* [92a8237c0a9](https://github.com/datastax/pulsar/commit/92a8237c0a9) [ML] Fix thread safety issues in ManagedCursorContainer related to "heap" field access (#16049)
+* [ccda354b3ef](https://github.com/datastax/pulsar/commit/ccda354b3ef) [improve][broker] Avoid reconnection when a partitioned topic was created concurrently (#16043)
+* [c99b6ce0c16](https://github.com/datastax/pulsar/commit/c99b6ce0c16) rename pulsar_producer_configuration_set_crypto_failure_action to pulsar_producer_configuration_get_crypto_failure_action (#16031)
+* [85cac9f87cb](https://github.com/datastax/pulsar/commit/85cac9f87cb) [fix][client] Remove producer when close producer command is received (#16028)
+* [c3f6c48063e](https://github.com/datastax/pulsar/commit/c3f6c48063e) [fix][admin] Fix typo in validation message (#16021)
+* [65109b23256](https://github.com/datastax/pulsar/commit/65109b23256) [fix][client] Remove consumer when close consumer command is received (#15761)
+* [251d1eded27](https://github.com/datastax/pulsar/commit/251d1eded27) [Fix][broker] Fix NPE when ledger id not found in `OpReadEntry` (#15837)
+* [09cb1026fea](https://github.com/datastax/pulsar/commit/09cb1026fea) [improve][broker] Make PulsarWebResource#getOwnerFromPeerClusterList async. (#15940)
+* [4e05c32c65b](https://github.com/datastax/pulsar/commit/4e05c32c65b) [improve][cli] Pulsar shell: include pulsar-shell in released tarballs
+* [a34536e27eb](https://github.com/datastax/pulsar/commit/a34536e27eb) Pulsar shell: support comments in file
+* [83fbe08cf1c](https://github.com/datastax/pulsar/commit/83fbe08cf1c) Pulsar shell: disable jansi to avoid JVM crashes on Ubuntu
+
+### Builtin connectors
+* cassandra-enhanced-pulsar-sink-1.6.3-nar.nar
+* pulsar-cassandra-source-2.1.0.nar
+* pulsar-io-cloud-storage-2.10.0.4.nar
+* pulsar-io-data-generator-2.10.1.1.nar
+* pulsar-io-debezium-mongodb-2.10.1.1.nar
+* pulsar-io-debezium-mssql-2.10.1.1.nar
+* pulsar-io-debezium-mysql-2.10.1.1.nar
+* pulsar-io-debezium-oracle-2.10.1.1.nar
+* pulsar-io-debezium-postgres-2.10.1.1.nar
+* pulsar-io-elastic-search-2.10.1.1.nar
+* pulsar-io-jdbc-clickhouse-2.10.1.1.nar
+* pulsar-io-jdbc-mariadb-2.10.1.1.nar
+* pulsar-io-jdbc-postgres-2.10.1.1.nar
+* pulsar-io-jdbc-sqlite-2.10.1.1.nar
+* pulsar-io-kafka-2.10.1.1.nar
+* pulsar-io-kinesis-2.10.1.1.nar
+* pulsar-snowflake-connector-0.1.10.nar
+* pulsar-transformations-1.0.2.nar
+* pulsar-protocol-handler-kafka-2.10.0.3.nar
+* starlight-rabbitmq-2.10.0.1.nar
+* pulsar-kafka-proxy-2.10.0.3.nar
+* pulsar-jms-2.4.0-nar.nar
+
 ## Luna Streaming Distribution 2.10 1.0
 This is release contains new features such as Pulsar Transforms and Pulsar Shell.
 It also contains several stability issues about transactions.
