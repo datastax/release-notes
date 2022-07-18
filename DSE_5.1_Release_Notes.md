@@ -2,6 +2,42 @@
 DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
 
+# Release notes for 5.1.32
+18 July 2022
+
+## Components versions for DSE 5.1.32
+ * Apache Solr™ 6.0.1.0.2939&ast;
+ * Apache Spark™ 2.0.2.43&ast;
+ * Apache TinkerPop™ 3.2.11-20210716-faea8d16
+ * Apache Tomcat® 8.5.75
+ * DSE Java Driver 1.8.3-dse+20201217
+ * Netty 4.0.54.1.dse
+ * Spark JobServer 0.6.2.241&ast;
+
+## 5.1.32 DSE Core
+* Implemented ability to replace the THREE consistency level with an ALL_BUT_ONE consistency level. (DSP-22366)
+* Replaced `1.9.13` version of `jackson-core-asl` and `jackson-mapper-asl` to be `1.9.13.1.dse` which contains the security fix. (DSP-22389, [CVE-2019-10172](https://nvd.nist.gov/vuln/detail/CVE-2019-10172))
+* Removed dependency to Xerces2 Java XML Parser library. (DSP-22391, [CVE-2012-0881](https://nvd.nist.gov/vuln/detail/CVE-2012-0881), [CVE-2013-4002](https://nvd.nist.gov/vuln/detail/CVE-2013-4002))
+* Removed the PMD plugin from gradle config. (DSP-22575, [CVE-2019-7722](https://nvd.nist.gov/vuln/detail/CVE-2019-7722))
+* Fixed the cqlsh tool to restore the ability to use the EXECUTE AS command. (DSP-22417)
+* Fixed bug with overriding customer limits.d file if there are new values in the package upgrade. Complementary to DSP-21928. (DSP-22594)
+
+## 5.1.32 DSE Cassandra
+* Updated outdated `nofile` parameter value to `1048576` in `/etc/security/limits.d/cassandra.conf`. (DSP-21947)
+* Ported CASSANDRA-16987 and fixed python version check bug in cqlsh. (DSP-22517)
+
+## 5.1.32 DSE Search
+* Upgraded Solr libraries `metadata-extractor` to `2.18.0` and `XmpCore` to `6.1.11`. (DSP-22406, [CVE-2019-14262](https://nvd.nist.gov/vuln/detail/CVE-2019-14262))
+* Fixed parsing range queries on DSE Search indexed columns of CQL types Date and Time. (DSP-22548)
+* Changed Tomcat {{showServerInfo}} configuration parameter to {{false}} for not exposing Tomcat version in error pages. (DSP-22561)
+
+## 5.1.32 DSE Spark
+* Upgraded spark library version containing change to sanitize passwords when printing spark commands to `stderr`. (DSP-22481)
+
+## 5.1.32 DSE CVE
+* Upgraded apache-shiro used by spark-jobserver to version 1.8.0. (DSP-22579, [CVE-2021-41303](https://nvd.nist.gov/vuln/detail/CVE-2021-41303))
+
+
 # Release notes for 5.1.31
 11 May 2022
 
