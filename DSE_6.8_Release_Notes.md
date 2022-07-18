@@ -2,6 +2,52 @@
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
 
+# Release notes for 6.8.25
+18 July 2022
+
+## Components versions for DSE 6.8.25
+* Apache Solr™ 6.0.1.4.2940
+* Apache Spark™ 2.4.0.19&ast;
+* Apache TinkerPop™ 3.4.5-20220405-a52bbe2c
+* Apache Tomcat® 8.5.75
+* DSE Java Driver 1.10.0-dse-20220616&ast;
+* Netty 4.1.34.3.dse
+* Spark JobServer 0.8.0.51&ast;
+
+## 6.8.25 DSE Core
+* Upgraded DSE Java driver to `1.10.0-dse-20220616`. (DSP-22380)
+* Replaced `1.9.13` version of `jackson-core-asl` and `jackson-mapper-asl` to be `1.9.13.1.dse` which contains the security fix. (DSP-22389, [CVE-2019-10172](https://nvd.nist.gov/vuln/detail/CVE-2019-10172))
+* Removed the PMD plugin from gradle config. (DSP-22575, [CVE-2019-7722](https://nvd.nist.gov/vuln/detail/CVE-2019-7722))
+* Fixed the cqlsh tool to restore the ability to use the EXECUTE AS command. (DSP-22417)
+* Fixed bug with overriding customer limits.d file if there are new values in the package upgrade. Complementary to DSP-21928. (DSP-22594)
+
+## 6.8.25 DSE Cassandra
+* Changed outdated `nofile` parameter value to `1048576` in `/etc/security/limits.d/cassandra.conf`. (DSP-21947)
+
+## 6.8.25 DSE Search
+* Fixed parsing range queries on DSE Search indexed columns of CQL types Date and Time. (DSP-22548)
+* Added `SolrCore` index size metric. (DSP-22546)
+* Added `SolrCore` `numDocs`, `maxDoc`, and `deletedDocs` metrics. (DSP-22587)
+* Added per core DSE Search indexing status as a metric. (DSP-22592)
+* Changed Tomcat {{showServerInfo}} configuration parameter to {{false}} for not exposing Tomcat version in error pages. (DSP-22561)
+
+## 6.8.25 DSE Spark
+* Upgraded jackson and jackson-databind to 2.13.3. (DSP-22452, [CVE-2020-36518](https://nvd.nist.gov/vuln/detail/CVE-2020-36518))
+* Upgraded Spark library version containing change to sanitize passwords when printing spark commands to `stderr`. (DSP-22481)
+
+## 6.8.25 DSE Graph
+* Fixed an error when using the search index and traversing with an inequality operator such as gt or gte against Date or Time data types. (DSP-21279)
+
+## 6.8.25 DSE Management API
+* Improved Management API logic to reduce the likelihood of resource leaks when DSE is starting up. (DSP-22539)
+
+## 6.8.25 DSE Security
+* Fixed `EXECUTE AS` functionality to work with RLAC. (DSP-22508)
+
+## 6.8.25 DSE CVE
+* Upgraded apache-shiro used by spark-jobserver to version 1.8.0. (DSP-22557, [CVE-2021-41303](https://nvd.nist.gov/vuln/detail/CVE-2021-41303))
+
+
 # Release notes for 6.8.24
 15 June 2022
 
