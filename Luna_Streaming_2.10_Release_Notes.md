@@ -166,29 +166,71 @@ This is a maintenance release containing important security and stability update
 * [a34536e27eb](https://github.com/datastax/pulsar/commit/a34536e27eb) Pulsar shell: support comments in file
 * [83fbe08cf1c](https://github.com/datastax/pulsar/commit/83fbe08cf1c) Pulsar shell: disable jansi to avoid JVM crashes on Ubuntu
 
-### Builtin connectors
-* cassandra-enhanced-pulsar-sink-1.6.3-nar.nar
-* pulsar-cassandra-source-2.1.0.nar
-* pulsar-io-cloud-storage-2.10.0.4.nar
-* pulsar-io-data-generator-2.10.1.1.nar
-* pulsar-io-debezium-mongodb-2.10.1.1.nar
-* pulsar-io-debezium-mssql-2.10.1.1.nar
-* pulsar-io-debezium-mysql-2.10.1.1.nar
-* pulsar-io-debezium-oracle-2.10.1.1.nar
-* pulsar-io-debezium-postgres-2.10.1.1.nar
-* pulsar-io-elastic-search-2.10.1.1.nar
-* pulsar-io-jdbc-clickhouse-2.10.1.1.nar
-* pulsar-io-jdbc-mariadb-2.10.1.1.nar
-* pulsar-io-jdbc-postgres-2.10.1.1.nar
-* pulsar-io-jdbc-sqlite-2.10.1.1.nar
-* pulsar-io-kafka-2.10.1.1.nar
-* pulsar-io-kinesis-2.10.1.1.nar
-* pulsar-snowflake-connector-0.1.10.nar
-* pulsar-transformations-1.0.2.nar
-* pulsar-protocol-handler-kafka-2.10.0.3.nar
-* starlight-rabbitmq-2.10.0.1.nar
-* pulsar-kafka-proxy-2.10.0.3.nar
-* pulsar-jms-2.4.0-nar.nar
+### `lunastreaming-all` distribution
+<details><summary>Proxy extensions</summary>
+
+| Name | Version | Description | File | 
+| ---- | ------- | ----------- | ---- | 
+| [kafka](https://github.com/datastax/starlight-for-kafka) | 2.10.0.3 | Kafka Proxy Extension | pulsar-kafka-proxy-2.10.0.3.nar |
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | 2.10.0.1 | Starlight for RabbitMQ Proxy Extension | starlight-rabbitmq-2.10.0.1.nar |
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | 2.10.0.1 | Starlight for RabbitMQ Proxy Extension | starlight-rabbitmq-2.10.0.1.nar |
+
+</details>
+<details><summary>Protocol handlers</summary>
+
+| Name | Version | Description | File | 
+| ---- | ------- | ----------- | ---- | 
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | 2.10.0.1 | Starlight for RabbitMQ Proxy Extension | starlight-rabbitmq-2.10.0.1.nar |
+| [kafka](https://github.com/datastax/starlight-for-kafka) | 2.10.0.3 | Kafka Protocol Handler | pulsar-protocol-handler-kafka-2.10.0.3.nar |
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | 2.10.0.1 | Starlight for RabbitMQ Proxy Extension | starlight-rabbitmq-2.10.0.1.nar |
+
+</details>
+<details><summary>Filters</summary>
+
+| Name | Version | Description | File | 
+| ---- | ------- | ----------- | ---- | 
+| [jms](https://pulsar.apache.org/docs/io-connectors) | 2.4.0 | Starlight for JMS - support for server side filters | pulsar-jms-2.4.0-nar.nar |
+
+</details>
+<details><summary>Functions</summary>
+
+| Name | Version | Description | File | 
+| ---- | ------- | ----------- | ---- | 
+| [transforms](https://pulsar.apache.org/docs/io-connectors) | 1.0.2 | Transformation function | pulsar-transformations-1.0.2.nar |
+
+</details>
+<details><summary>Sinks</summary>
+
+| Name | Version | Description | File | 
+| ---- | ------- | ----------- | ---- | 
+| [cassandra-enhanced](https://github.com/datastax/pulsar-sink) | 1.6.3 | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | cassandra-enhanced-pulsar-sink-1.6.3-nar.nar |
+| [cloud-storage](https://pulsar.apache.org/docs/io-connectors) | 2.10.0.4 | Writes data into cloud storage | pulsar-io-cloud-storage-2.10.0.4.nar |
+| [data-generator](https://pulsar.apache.org/docs/io-connectors) | 2.10.1.1 | Test data generator source | pulsar-io-data-generator-2.10.1.1.nar |
+| [elastic_search](https://pulsar.apache.org/docs/io-connectors) | 2.10.1.1 | Writes data into Elastic Search | pulsar-io-elastic-search-2.10.1.1.nar |
+| [jdbc-clickhouse](https://pulsar.apache.org/docs/io-connectors) | 2.10.1.1 | JDBC sink for ClickHouse | pulsar-io-jdbc-clickhouse-2.10.1.1.nar |
+| [jdbc-mariadb](https://pulsar.apache.org/docs/io-connectors) | 2.10.1.1 | JDBC sink for MariaDB | pulsar-io-jdbc-mariadb-2.10.1.1.nar |
+| [jdbc-postgres](https://pulsar.apache.org/docs/io-connectors) | 2.10.1.1 | JDBC sink for PostgreSQL | pulsar-io-jdbc-postgres-2.10.1.1.nar |
+| [jdbc-sqlite](https://pulsar.apache.org/docs/io-connectors) | 2.10.1.1 | JDBC sink for SQLite | pulsar-io-jdbc-sqlite-2.10.1.1.nar |
+| [kafka](https://pulsar.apache.org/docs/io-connectors) | 2.10.1.1 | Kafka source and sink connector | pulsar-io-kafka-2.10.1.1.nar |
+| [kinesis](https://pulsar.apache.org/docs/io-connectors) | 2.10.1.1 | Kinesis connectors | pulsar-io-kinesis-2.10.1.1.nar |
+| [snowflake](https://github.com/datastax/snowflake-connector) | 0.1.10 | Snowflake Connector | pulsar-snowflake-connector-0.1.10.nar |
+
+</details>
+<details><summary>Sources</summary>
+
+| Name | Version | Description | File | 
+| ---- | ------- | ----------- | ---- | 
+| [cassandra-source](https://github.com/datastax/cdc-for-apache-cassandra) | 2.1.0 | Read data from Cassandra | pulsar-cassandra-source-2.1.0.nar |
+| [data-generator](https://pulsar.apache.org/docs/io-connectors) | 2.10.1.1 | Test data generator source | pulsar-io-data-generator-2.10.1.1.nar |
+| [debezium-mongodb](https://pulsar.apache.org/docs/io-connectors) | 2.10.1.1 | Debezium MongoDb Source | pulsar-io-debezium-mongodb-2.10.1.1.nar |
+| [debezium-mssql](https://pulsar.apache.org/docs/io-connectors) | 2.10.1.1 | Debezium Microsoft SQL Server Source | pulsar-io-debezium-mssql-2.10.1.1.nar |
+| [debezium-mysql](https://pulsar.apache.org/docs/io-connectors) | 2.10.1.1 | Debezium MySql Source | pulsar-io-debezium-mysql-2.10.1.1.nar |
+| [debezium-oracle](https://pulsar.apache.org/docs/io-connectors) | 2.10.1.1 | Debezium Oracle Source | pulsar-io-debezium-oracle-2.10.1.1.nar |
+| [debezium-postgres](https://pulsar.apache.org/docs/io-connectors) | 2.10.1.1 | Debezium Postgres Source | pulsar-io-debezium-postgres-2.10.1.1.nar |
+| [kafka](https://pulsar.apache.org/docs/io-connectors) | 2.10.1.1 | Kafka source and sink connector | pulsar-io-kafka-2.10.1.1.nar |
+| [kinesis](https://pulsar.apache.org/docs/io-connectors) | 2.10.1.1 | Kinesis connectors | pulsar-io-kinesis-2.10.1.1.nar |
+
+</details>
 
 ## Luna Streaming Distribution 2.10 1.0
 This is release contains new features such as Pulsar Transforms and Pulsar Shell.
