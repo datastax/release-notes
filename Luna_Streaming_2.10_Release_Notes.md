@@ -76,7 +76,7 @@ The distributions are available as Docker images and tarballs, and both methods 
 * **lunastreaming**: the basic Luna Streaming Distribution **including Pulsar SQL** feature.
 * **lunastreaming-core**: the basic Luna Streaming Distribution **without Pulsar SQL** feature. Pick this distribution if you don't need Pulsar SQL features.
 * **lunastreaming-all**: contains the Core Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. Pick this distribution if you want the Datastax connectors or the offloading feature.
-* **lunastreaming-experimental**: extends the **all** distribution with experimental features and connectors. You can find a detailed list of the experimental additions [here](Luna_Streaming_Experimental.md). This distribution is only available as a Docker image.
+* **lunastreaming-experimental**: extends the **all** distribution with experimental features and connectors. This distribution is only available as a Docker image.
 
 
 # Releases
