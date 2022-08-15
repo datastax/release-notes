@@ -11,6 +11,7 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 * Apache TinkerPop™ 3.4.5-20220405-a52bbe2c
 * Apache Tomcat® 8.5.75
 * DSE Java Driver 1.10.0-dse-20220616&ast;
+  * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 * Netty 4.1.34.3.dse
 * Spark JobServer 0.8.0.51&ast;
 
@@ -57,6 +58,7 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
  * Apache TinkerPop™ 3.4.5-20220405-a52bbe2c
  * Apache Tomcat® 8.5.75
  * DSE Java Driver 1.10.0-dse+20210424
+    * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
  * Netty 4.1.34.3.dse
  * Spark JobServer 0.8.0.50
 
@@ -88,6 +90,7 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
  * Apache TinkerPop™ 3.4.5-20220405-a52bbe2c
  * Apache Tomcat® 8.5.75
  * DSE Java Driver 1.10.0-dse+20210424
+   * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
  * Netty 4.1.34.3.dse
  * Spark JobServer 0.8.0.50
 
@@ -119,6 +122,7 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
  * Apache TinkerPop™ 3.4.5-20220405-a52bbe2c&ast;
  * Apache Tomcat® 8.5.75&ast;
  * DSE Java Driver 1.10.0-dse+20210424
+   * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
  * Netty 4.1.34.3.dse&ast;
  * Spark JobServer 0.8.0.50
 
@@ -164,6 +168,7 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
  * Apache TinkerPop™ 3.4.5-20210816-c28c0de2
  * Apache Tomcat® 8.5.72
  * DSE Java Driver 1.10.0-dse+20210424
+   * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
  * Netty 4.1.25.7.dse
  * Spark JobServer 0.8.0.50
 
@@ -194,6 +199,7 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
  * Apache TinkerPop™ 3.4.5-20210816-c28c0de2
  * Apache Tomcat® 8.5.72
  * DSE Java Driver 1.10.0-dse+20210424
+   * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
  * Netty 4.1.25.7.dse
  * Spark JobServer 0.8.0.50
 
@@ -209,6 +215,7 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
  * Apache TinkerPop™ 3.4.5-20210816-c28c0de2
  * Apache Tomcat® 8.5.72
  * DSE Java Driver 1.10.0-dse+20210424
+   * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
  * Netty 4.1.25.7.dse
  * Spark JobServer 0.8.0.50
 
@@ -237,6 +244,7 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 * Apache TinkerPop™ 3.4.5-20210816-c28c0de2
 * Apache Tomcat® 8.5.72&ast;
 * DSE Java Driver 1.10.0-dse+20210424
+  * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 * Netty 4.1.25.7.dse
 * Spark JobServer 0.8.0.50
 
@@ -265,6 +273,7 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 * Apache TinkerPop™ 3.4.5-20210816-c28c0de2
 * Apache Tomcat® 8.5.70
 * DSE Java Driver 1.10.0-dse+20210424
+  * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 * Netty 4.1.25.7.dse
 * Spark JobServer 0.8.0.50
 
@@ -296,6 +305,7 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
    * Apache TinkerPop™ 3.4.5-20210816-c28c0de2&ast;
    * Apache Tomcat® 8.5.70&ast;
    * DSE Java Driver 1.10.0-dse+20210424
+     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.50
 
@@ -325,12 +335,12 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 26 August 2021
 
 ## Components versions for DSE 6.8.15
-
    * Apache Solr™ 6.0.1.4.2840
    * Apache Spark™ 2.4.0.18
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.5.65
    * DSE Java Driver 1.10.0-dse+20210424
+     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.50
 
@@ -359,6 +369,7 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.5.65
    * DSE Java Driver 1.10.0-dse+20210424
+     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.50
 
@@ -403,6 +414,7 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.5.65
    * DSE Java Driver 1.10.0-dse+20210424
+     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.50
 
@@ -427,6 +439,7 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.5.65&ast;
    * DSE Java Driver 1.10.0-dse+20200217
+     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.50
 
@@ -454,6 +467,7 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.5.61&ast;
    * DSE Java Driver 1.10.0-dse+20200217
+     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.50&ast;
 
@@ -493,6 +507,7 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.0.53
    * DSE Java Driver 1.10.0-dse+20200217
+     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.49
 
@@ -554,6 +569,7 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.0.53
    * DSE Java Driver 1.10.0-dse+20200217
+     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.49
 
@@ -577,6 +593,7 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.0.53
    * DSE Java Driver 1.10.0-dse+20200217
+     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.49
 
@@ -607,6 +624,7 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.0.53
    * DSE Java Driver 1.10.0-dse+20200217
+     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.49
 
@@ -659,6 +677,7 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.0.53
    * DSE Java Driver 1.10.0-dse+20200217
+     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.49
 
@@ -674,6 +693,7 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.0.53
    * DSE Java Driver 1.10.0-dse+20200217
+     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.49
 
@@ -718,6 +738,7 @@ DataStax Enterprise (DSE) 6.8.4 includes all changes from previous DSE versions.
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.0.53
    * DSE Java Driver 1.10.0-dse+20200217
+     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.49
 

@@ -11,6 +11,7 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
  * Apache TinkerPop™ 3.2.11-20210716-faea8d16
  * Apache Tomcat® 8.5.75
  * DSE Java Driver 1.8.3-dse+20201217
+   * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
  * Netty 4.0.54.1.dse
  * Spark JobServer 0.6.2.241&ast;
 
@@ -47,6 +48,7 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
  * Apache TinkerPop™ 3.2.11-20210716-faea8d16
  * Apache Tomcat® 8.5.75&ast;
  * DSE Java Driver 1.8.3-dse+20201217
+   * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
  * Netty 4.0.54.1.dse
  * Spark JobServer 0.6.2.240
 
@@ -77,6 +79,7 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
  * Apache TinkerPop™ 3.2.11-20210716-faea8d16
  * Apache Tomcat® 8.5.72
  * DSE Java Driver 1.8.3-dse+20201217
+   * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
  * Netty 4.0.54.1.dse
  * Spark JobServer 0.6.2.240
 
@@ -102,6 +105,7 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
  * Apache TinkerPop™ 3.2.11-20210716-faea8d16
  * Apache Tomcat® 8.5.72
  * DSE Java Driver 1.8.3-dse+20201217
+   * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
  * Netty 4.0.54.1.dse
  * Spark JobServer 0.6.2.240
 
@@ -117,6 +121,7 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
  * Apache TinkerPop™ 3.2.11-20210716-faea8d16
  * Apache Tomcat® 8.5.72&ast;
  * DSE Java Driver 1.8.3-dse+20201217
+   * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
  * Netty 4.0.54.1.dse
  * Spark JobServer 0.6.2.240
 
@@ -139,6 +144,7 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
    * Apache TinkerPop™ 3.2.11-20210716-faea8d16
    * Apache Tomcat® 8.5.70
    * DSE Java Driver 1.8.3-dse+20201217
+     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
    * Netty 4.0.54.1.dse
    * Spark JobServer 0.6.2.240
 
@@ -170,6 +176,7 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
    * Apache TinkerPop™ 3.2.11-20210716-faea8d16&ast;
    * Apache Tomcat® 8.5.70&ast;
    * DSE Java Driver 1.8.3-dse+20201217
+     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
    * Netty 4.0.54.1.dse
    * Spark JobServer 0.6.2.240
 
@@ -199,6 +206,7 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
    * Apache TinkerPop™ 3.2.11-20210601-6b27fbde
    * Apache Tomcat® 8.5.65
    * DSE Java Driver 1.8.3-dse+20201217
+     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
    * Netty 4.0.54.1.dse
    * Spark JobServer 0.6.2.240
 
@@ -230,6 +238,7 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
    * Apache TinkerPop™ 3.2.11-20200603-0524f70f
    * Apache Tomcat® 8.5.65
    * DSE Java Driver 1.8.3-dse+20201217
+     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
    * Netty 4.0.54.1.dse
    * Spark JobServer 0.6.2.240
 
@@ -248,6 +257,7 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
    * Apache TinkerPop™ 3.2.11-20200603-0524f70f
    * Apache Tomcat® 8.5.65&ast;
    * DSE Java Driver 1.8.3-dse+20201217
+     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
    * Netty 4.0.54.1.dse
    * Spark JobServer 0.6.2.240
 
@@ -297,6 +307,7 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
    * Apache TinkerPop™ 3.2.11-20200603-0524f70f
    * Apache Tomcat® 8.0.53
    * DSE Java Driver 1.8.3-dse+20201217
+     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
    * Netty 4.0.54.1.dse
    * Spark JobServer 0.6.2.240
 
@@ -314,6 +325,7 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
    * Apache TinkerPop™ 3.2.11-20200603-0524f70f
    * Apache Tomcat® 8.0.53
    * DSE Java Driver 1.8.3-dse+20201217&ast;
+     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
    * Netty 4.0.54.1.dse
    * Spark JobServer 0.6.2.240
 
@@ -362,6 +374,7 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
    * Apache TinkerPop™ 3.2.11-20200603-0524f70f
    * Apache Tomcat® 8.0.53
    * DSE Java Driver 1.2.8
+     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
    * Netty 4.0.54.1.dse
    * Spark JobServer 0.6.2.240
 
