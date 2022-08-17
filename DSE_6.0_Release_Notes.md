@@ -13,9 +13,12 @@ Please consider upgrading to [DSE 6.8](./DSE_6.8_Release_Notes.md) for our lates
  * Apache Spark™ 2.2.3.18
  * Apache TinkerPop™ 3.3.11-20210727-ba40007e
  * Apache Tomcat® 8.5.75&ast;
- * DSE Java Driver 1.8.3-dse+20201217
+ * DSE Java Driver 1.8.3-dse+20201217 (DSE *internal-only* version)
  * Netty 4.1.25.7.dse
  * Spark JobServer 0.8.0.45.3
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## 6.0.18 DSE Core
 * Improved reading logic to ensure that sstables are not unnecessarily read for columns that are not selected. See CASSANDRA-16737. (Previously DB-4974). (DSP-22478)
@@ -43,9 +46,12 @@ Please consider upgrading to [DSE 6.8](./DSE_6.8_Release_Notes.md) for our lates
  * Apache Spark™ 2.2.3.18
  * Apache TinkerPop™ 3.3.11-20210727-ba40007e&ast;
  * Apache Tomcat® 8.5.72&ast;
- * DSE Java Driver 1.8.3-dse+20201217
+ * DSE Java Driver 1.8.3-dse+20201217 (DSE *internal-only* version)
  * Netty 4.1.25.7.dse
  * Spark JobServer 0.8.0.45.3
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## 6.0.17 DSE Core
 * Adds a new flag `-t <number of days>` for `sstablescrub` to update deletion times which are in the future. It accepts a command-line argument: `-t <number of days>`. All deletion times further in the future than the given number of days will be reset to the current time. Also fixed a potential issue that users may have the deletion time in the future updated to the current time if they run `nodetool scrub`. (DB-4964)
@@ -110,9 +116,12 @@ Please consider upgrading to [DSE 6.8](./DSE_6.8_Release_Notes.md) for our lates
    * Apache Spark™ 2.2.3.18&ast;
    * Apache TinkerPop™ 3.3.7-20190521-f71ce0d7
    * Apache Tomcat® 8.5.65&ast;
-   * DSE Java Driver 1.8.3-dse+20201217
+   * DSE Java Driver 1.8.3-dse+20201217 (DSE *internal-only* version)
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.45.3&ast;
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## DSE 6.0.16 Auth
 * Fixes an issue where a login attempt with missing credentials logged a misleading warning message with stack trace instead of an error message about the missing username or password. (DB-4806)
@@ -174,9 +183,12 @@ Please consider upgrading to [DSE 6.8](./DSE_6.8_Release_Notes.md) for our lates
    * Apache Spark™ 2.2.3.17&ast;
    * Apache TinkerPop™ 3.3.7-20190521-f71ce0d7
    * Apache Tomcat® 8.0.53
-   * DSE Java Driver 1.8.3-dse+20201217&ast;
+   * DSE Java Driver 1.8.3-dse+20201217&ast; (DSE *internal-only* version)
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.45.2
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## DSE 6.0.15 Auth
 * Works around a bug (JDK-8148854) in JDK 1.8u282.  (DB-4884)
@@ -237,9 +249,12 @@ Please consider upgrading to [DSE 6.8](./DSE_6.8_Release_Notes.md) for our lates
    * Apache Spark™ 2.2.3.15
    * Apache TinkerPop™ 3.3.7-20190521-f71ce0d7
    * Apache Tomcat® 8.0.53
-   * DSE Java Driver 1.6.10
+   * DSE Java Driver 1.6.10 (DSE *internal-only* version)
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.45.2
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## DSE 6.0.14 Backup and Restore
 

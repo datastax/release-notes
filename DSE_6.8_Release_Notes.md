@@ -1,5 +1,6 @@
 # Release notes for DataStax Enterprise 6.8
-DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
+DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. 
+Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
 
 # Release notes for 6.8.25
@@ -10,13 +11,15 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 * Apache Spark™ 2.4.0.19&ast;
 * Apache TinkerPop™ 3.4.5-20220405-a52bbe2c
 * Apache Tomcat® 8.5.75
-* DSE Java Driver 1.10.0-dse-20220616&ast;
-  * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+* DSE Java Driver 1.10.0-dse-20220616&ast; (DSE *internal-only* version)
 * Netty 4.1.34.3.dse
 * Spark JobServer 0.8.0.51&ast;
 
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
 ## 6.8.25 DSE Core
-* Upgraded DSE Java driver to `1.10.0-dse-20220616`. (DSP-22380)
+* Upgraded internally used DSE Java driver to `1.10.0-dse-20220616`. (DSP-22380) **NOTE**:
 * Replaced `1.9.13` version of `jackson-core-asl` and `jackson-mapper-asl` to be `1.9.13.1.dse` which contains the security fix. (DSP-22389, [CVE-2019-10172](https://nvd.nist.gov/vuln/detail/CVE-2019-10172))
 * Removed the PMD plugin from gradle config. (DSP-22575, [CVE-2019-7722](https://nvd.nist.gov/vuln/detail/CVE-2019-7722))
 * Fixed the cqlsh tool to restore the ability to use the EXECUTE AS command. (DSP-22417)
@@ -57,10 +60,12 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
  * Apache Spark™ 2.4.0.18
  * Apache TinkerPop™ 3.4.5-20220405-a52bbe2c
  * Apache Tomcat® 8.5.75
- * DSE Java Driver 1.10.0-dse+20210424
-    * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+ * DSE Java Driver 1.10.0-dse+20210424 (DSE *internal-only* version)
  * Netty 4.1.34.3.dse
  * Spark JobServer 0.8.0.50
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## 6.8.24 DSE Core
 * Implemented ability to replace the `THREE` consistency level with an `ALL_BUT_ONE` consistency level. (DSP-22366)
@@ -89,10 +94,12 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
  * Apache Spark™ 2.4.0.18
  * Apache TinkerPop™ 3.4.5-20220405-a52bbe2c
  * Apache Tomcat® 8.5.75
- * DSE Java Driver 1.10.0-dse+20210424
-   * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+ * DSE Java Driver 1.10.0-dse+20210424 (DSE *internal-only* version)
  * Netty 4.1.34.3.dse
  * Spark JobServer 0.8.0.50
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## 6.8.23 DSE Core
 * Improved reading logic to ensure that sstables are not unnecessarily read for columns that are not selected. See [CASSANDRA-16737](https://issues.apache.org/jira/browse/CASSANDRA-16737). (Previously DB-4974). (DSP-22478)
@@ -121,10 +128,12 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
  * Apache Spark™ 2.4.0.18
  * Apache TinkerPop™ 3.4.5-20220405-a52bbe2c&ast;
  * Apache Tomcat® 8.5.75&ast;
- * DSE Java Driver 1.10.0-dse+20210424
-   * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+ * DSE Java Driver 1.10.0-dse+20210424 (DSE *internal-only* version)
  * Netty 4.1.34.3.dse&ast;
  * Spark JobServer 0.8.0.50
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## 6.8.22 DSE Core
 * Added a startup check that prevents starting DSE with advanced workloads on Java 11. (DSP-22358)
@@ -167,10 +176,12 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
  * Apache Spark™ 2.4.0.18
  * Apache TinkerPop™ 3.4.5-20210816-c28c0de2
  * Apache Tomcat® 8.5.72
- * DSE Java Driver 1.10.0-dse+20210424
-   * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+ * DSE Java Driver 1.10.0-dse+20210424 (DSE *internal-only* version)
  * Netty 4.1.25.7.dse
  * Spark JobServer 0.8.0.50
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## 6.8.21 DSE Core
 * Changes reading logic of compressed chunk offsets that are loaded from compression info for zero copied partial sstables. It results in smaller off-heap usage. (DSP-22247)
@@ -198,10 +209,12 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
  * Apache Spark™ 2.4.0.18
  * Apache TinkerPop™ 3.4.5-20210816-c28c0de2
  * Apache Tomcat® 8.5.72
- * DSE Java Driver 1.10.0-dse+20210424
-   * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+ * DSE Java Driver 1.10.0-dse+20210424 (DSE *internal-only* version)
  * Netty 4.1.25.7.dse
  * Spark JobServer 0.8.0.50
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## 6.8.20 DSE Cassandra
 * Ported fix from CASSANDRA-17352: Remote code execution for scripted UDFs (DSP-22321, [CVE-2021-44521](https://nvd.nist.gov/vuln/detail/CVE-2021-44521))
@@ -214,10 +227,12 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
  * Apache Spark™ 2.4.0.18
  * Apache TinkerPop™ 3.4.5-20210816-c28c0de2
  * Apache Tomcat® 8.5.72
- * DSE Java Driver 1.10.0-dse+20210424
-   * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+ * DSE Java Driver 1.10.0-dse+20210424 (DSE *internal-only* version)
  * Netty 4.1.25.7.dse
  * Spark JobServer 0.8.0.50
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## 6.8.19 DSE Core
 * Fix a possible overflow with elapsed nano-time calculation in messaging queue timeout. (DSP-22011)
@@ -243,10 +258,12 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 * Apache Spark™ 2.4.0.18
 * Apache TinkerPop™ 3.4.5-20210816-c28c0de2
 * Apache Tomcat® 8.5.72&ast;
-* DSE Java Driver 1.10.0-dse+20210424
-  * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+* DSE Java Driver 1.10.0-dse+20210424 (DSE *internal-only* version)
 * Netty 4.1.25.7.dse
 * Spark JobServer 0.8.0.50
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## 6.8.18 DSE Cassandra
 * Fix calculation of `CompressionMetadataOffHeapMemoryUsed` metric accessible via `nodetool tablestats` command. (DSP-22181)
@@ -272,10 +289,12 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 * Apache Spark™ 2.4.0.18
 * Apache TinkerPop™ 3.4.5-20210816-c28c0de2
 * Apache Tomcat® 8.5.70
-* DSE Java Driver 1.10.0-dse+20210424
-  * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+* DSE Java Driver 1.10.0-dse+20210424 (DSE *internal-only* version)
 * Netty 4.1.25.7.dse
 * Spark JobServer 0.8.0.50
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## 6.8.17 DSE Cassandra
 * Enables periodic logging of system status (default every 5 minutes, configurable). (DSP-22039)
@@ -304,10 +323,12 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
    * Apache Spark™ 2.4.0.18
    * Apache TinkerPop™ 3.4.5-20210816-c28c0de2&ast;
    * Apache Tomcat® 8.5.70&ast;
-   * DSE Java Driver 1.10.0-dse+20210424
-     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+   * DSE Java Driver 1.10.0-dse+20210424 (DSE *internal-only* version)
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.50
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## 6.8.16 DSE Cassandra
 * The Change Data Capture (CDC) is now near real time as in Cassandra 4.x. Active commitlog segments can be processed from the CDC raw directory defined in your `cassandra.yaml` without flushing tables. It also allows you to read the last mutation form the most recent commitlog file. See the [Datastax Change Data Capture documentation page](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/config/configCDCLogging.html) for more details. (DSP-21992)
@@ -339,10 +360,12 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
    * Apache Spark™ 2.4.0.18
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.5.65
-   * DSE Java Driver 1.10.0-dse+20210424
-     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+   * DSE Java Driver 1.10.0-dse+20210424 (DSE *internal-only* version)
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.50
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## 6.8.15 DSE CVE
 
@@ -368,10 +391,12 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
    * Apache Spark™ 2.4.0.18
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.5.65
-   * DSE Java Driver 1.10.0-dse+20210424
-     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+   * DSE Java Driver 1.10.0-dse+20210424 (DSE *internal-only* version)
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.50
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## 6.8.14 DSE Cassandra
 * Added warning message in case of dse start failure due to this issue (DSP-21795)
@@ -413,10 +438,12 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
    * Apache Spark™ 2.4.0.18
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.5.65
-   * DSE Java Driver 1.10.0-dse+20210424
-     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+   * DSE Java Driver 1.10.0-dse+20210424 (DSE *internal-only* version)
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.50
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## DSE 6.8.13 AOSS
 * AOSS returns additional parameter in `status` `endpoint: "connection_hostname"`. The new parameter is a FQDN of the node hosting AOSS, it may be used for connections (instead of connection_address) if needed. (DSP-21811)
@@ -438,10 +465,12 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
    * Apache Spark™ 2.4.0.18
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.5.65&ast;
-   * DSE Java Driver 1.10.0-dse+20200217
-     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+   * DSE Java Driver 1.10.0-dse+20200217 (DSE *internal-only* version)
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.50
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## DSE 6.8.12 CQL
 * Fixed an error in cqlsh encoding unicode in multi-line statements (DB-4855)
@@ -466,10 +495,12 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
    * Apache Spark™ 2.4.0.18
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.5.61&ast;
-   * DSE Java Driver 1.10.0-dse+20200217
-     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+   * DSE Java Driver 1.10.0-dse+20200217 (DSE *internal-only* version)
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.50&ast;
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## DSE 6.8.11 Auth
 * Fixes an issue where a login attempt with missing credentials logged a misleading warning message with stack trace instead of an error message about the missing username or password. (DB-4806)
@@ -506,10 +537,12 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
    * Apache Spark™ 2.4.0.18&ast;
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.0.53
-   * DSE Java Driver 1.10.0-dse+20200217
-     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+   * DSE Java Driver 1.10.0-dse+20200217 (DSE *internal-only* version)
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.49
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## DSE 6.8.10 Auth
 * Works around a bug in JDK 1.8u282 (JDK-8260018) (DB-4884)
@@ -568,10 +601,12 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
    * Apache Spark™ 2.4.0.16
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.0.53
-   * DSE Java Driver 1.10.0-dse+20200217
-     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+   * DSE Java Driver 1.10.0-dse+20200217 (DSE *internal-only* version)
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.49
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## DSE 6.8.9 Streaming
 * Addresses a severe issue where streaming an older file format to a new node could crash sending and receiving nodes. (DB-4846)
@@ -592,10 +627,12 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
    * Apache Spark™ 2.4.0.16
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.0.53
-   * DSE Java Driver 1.10.0-dse+20200217
-     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+   * DSE Java Driver 1.10.0-dse+20200217 (DSE *internal-only* version)
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.49
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## DSE 6.8.8 Backup and Restore
 * During Backup Service startup, to avoid stalling during service initialization, check cluster readiness in response to endpoint "on alive" events. (DB-4818)
@@ -623,10 +660,12 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
    * Apache Spark™ 2.4.0.16
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.0.53
-   * DSE Java Driver 1.10.0-dse+20200217
-     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+   * DSE Java Driver 1.10.0-dse+20200217 (DSE *internal-only* version)
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.49
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## DSE 6.8.7 Cassandra
 * Fixed a bug where the slow query log would fill with queries that do not meet the slow query threshold (DSP-21417)
@@ -676,10 +715,12 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
    * Apache Spark™ 2.4.0.16
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.0.53
-   * DSE Java Driver 1.10.0-dse+20200217
-     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+   * DSE Java Driver 1.10.0-dse+20200217 (DSE *internal-only* version)
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.49
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## DSE 6.8.6 Bootstrap
 * A node may be stuck in repair while joining the cluster if broadcast_address is set differently than local_address (DB-4786)
@@ -692,10 +733,12 @@ Execution of the back pressure task can be rejected in TPC, leading to the back 
    * Apache Spark™ 2.4.0.16
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.0.53
-   * DSE Java Driver 1.10.0-dse+20200217
-     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+   * DSE Java Driver 1.10.0-dse+20200217 (DSE *internal-only* version)
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.49
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## DSE 6.8.5 Backup and Restore
 * Server side backup and restore now supports Microsoft Azure cloud storage as a backup target. (DB-3894)
@@ -737,10 +780,12 @@ DataStax Enterprise (DSE) 6.8.4 includes all changes from previous DSE versions.
    * Apache Spark™ 2.4.0.16
    * Apache TinkerPop™ 3.4.5-20200107-6cec00d8
    * Apache Tomcat® 8.0.53
-   * DSE Java Driver 1.10.0-dse+20200217
-     * :warning: **NOTE**: This is an *internal-only* version. If you're developing applications, please refer to the [Java Driver docmentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+   * DSE Java Driver 1.10.0-dse+20200217 (DSE *internal-only* version)
    * Netty 4.1.25.7.dse
    * Spark JobServer 0.8.0.49
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## DSE 6.8.4 Compaction
 * Fixes compaction getting stuck on acquiring references for non-existing sstables. (DB-4290)
