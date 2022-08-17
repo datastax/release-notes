@@ -82,7 +82,7 @@ The distributions are available as Docker images and tarballs, and both methods 
 # Releases
 
 ## Luna Streaming Distribution 2.10 1.3
-This is a maintenance release containing important security updates.
+This is a maintenance release containing important stability updates.
 
 ### Most notable commits
 
@@ -294,7 +294,9 @@ This is a maintenance release containing important security updates.
 </details>
 
 ## Luna Streaming Distribution 2.10 1.2
-This is a maintenance release containing important security updates.
+**NOTE: IF YOU'RE USING THIS VERSION PLEASE UPGRADE TO A NEWER ONE. VERSION 2.10 1.2 CONTAINS STABILITY ISSUES ABOUT KEY_SHARED SUBSCRIPTIONS.**
+
+This is a maintenance release containing important stability updates.
 
 ### Most notable commits
 
