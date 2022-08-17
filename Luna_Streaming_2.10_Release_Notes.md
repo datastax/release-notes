@@ -81,6 +81,268 @@ The distributions are available as Docker images and tarballs, and both methods 
 
 # Releases
 
+## Luna Streaming Distribution 2.10 1.4
+This is a maintenance release containing important security and stability updates.
+
+### Most notable commits
+* [f1caacc0794](https://github.com/datastax/pulsar/commit/f1caacc0794) [feat][connector] ElasticSearch Sink: add ignoreUnsupportedFields option
+* [fd321a75e30](https://github.com/datastax/pulsar/commit/fd321a75e30) [improve][proxy] Consolidate Netty channel flushes to mitigate syscall overhead (#16372)
+* [c2b346da480](https://github.com/datastax/pulsar/commit/c2b346da480) [cleanup][broker] Follow up on #16968 to restore some behavior in PersistentDispatcherMultipleConsumers class (#17018)
+* [bb8ef6e6665](https://github.com/datastax/pulsar/commit/bb8ef6e6665) Fix ut MessageDispatchThrottlingTest#testDispatchRateCompatibility2 (#15999)
+* [36eed47eeb9](https://github.com/datastax/pulsar/commit/36eed47eeb9) [clean][broker]Cleanup DispatchRateLimiter#onPoliciesUpdate #15986
+* [9d21e1a8a41](https://github.com/datastax/pulsar/commit/9d21e1a8a41) Upgrade DS Bookkeeper to 4.14.5.1.0.2
+* [414578b8582](https://github.com/datastax/pulsar/commit/414578b8582) [fix][broker]Prevent `StackOverFlowException` in SHARED subscription(#16968)
+* [f120e61d73c](https://github.com/datastax/pulsar/commit/f120e61d73c) [fix][security] Bump PostgreSQL version to 42.4.1(#17066)
+* [16c93e5a1a4](https://github.com/datastax/pulsar/commit/16c93e5a1a4) [improve][authentication] Support for get token from HTTP params (#16986)
+* [4d3fc2e3153](https://github.com/datastax/pulsar/commit/4d3fc2e3153) [branch-2.10][cherry-pick] Fix topic dispatch rate limiter not init on broker-level #16084 (#17000)
+* [f87e765221d](https://github.com/datastax/pulsar/commit/f87e765221d) Fix failed test introduced by cherry-pick, according to https://github.com/apache/pulsar/pull/16971/files\#diff-6e09b03081dd6077066c65b656ed10be6125d2b7fc9a12c9a78d391afbb6b081R72-R99
+* [07f90d135cf](https://github.com/datastax/pulsar/commit/07f90d135cf) [fix][client] Remove redundant check for chunked message TotalChunkMsgSize in ConsumerImpl (#16797)
+* [30ce121fd1c](https://github.com/datastax/pulsar/commit/30ce121fd1c) [improve][test] Verify the authentication data in the authorization provider (#16900)
+* [23038927125](https://github.com/datastax/pulsar/commit/23038927125) [improve][authentication] Adapt basic authentication configuration with prefix (#16935)
+* [713a9f45c57](https://github.com/datastax/pulsar/commit/713a9f45c57) [improve][authentication] Improve get the basic authentication config (#16526)
+* [f848de61bce](https://github.com/datastax/pulsar/commit/f848de61bce) [fix][function] Fix python instance not process zip file correctly (#16697)
+* [d68dd3b9d04](https://github.com/datastax/pulsar/commit/d68dd3b9d04) [fix][broker] PulsarLedgerManager to pass correct error code to BK client (#16857)
+* [eeb2ed27c95](https://github.com/datastax/pulsar/commit/eeb2ed27c95) [fix][client]Fix MaxQueueSize semaphore release leak in createOpSendMsg (#16915)
+* [12a18d57612](https://github.com/datastax/pulsar/commit/12a18d57612) fix Flaky-test: PulsarFunctionLocalRunTest.testE2EPulsarFunctionLocalRunMultipleInstance (#16872)
+* [6048307a072](https://github.com/datastax/pulsar/commit/6048307a072) [fix][broker] Upgrade log4j2 version to 2.18.0 (#16884)
+* [bbcbe080e53](https://github.com/datastax/pulsar/commit/bbcbe080e53) [fix][client]Fix client memory limit currentUsage leak and semaphore release duplicated in ProducerImpl (#16837)
+* [94968bd35c9](https://github.com/datastax/pulsar/commit/94968bd35c9) [Java Client] Send CloseConsumer on timeout (#16616)
+* [38a1e475cbd](https://github.com/datastax/pulsar/commit/38a1e475cbd) fix PatternTopicsChangedListener blocked when topic removed (#16842)
+* [1d4b4a3560f](https://github.com/datastax/pulsar/commit/1d4b4a3560f) [fix][client] Fix load trust certificate (#16789)
+* [e04377608b9](https://github.com/datastax/pulsar/commit/e04377608b9) [fix][broker] ManagedCursor: mark delete no callback when create meta-ledger fail (#16841)
+* [d09899fdbfa](https://github.com/datastax/pulsar/commit/d09899fdbfa) Forget to update memory usage when invalid message (#16835)
+* [27c49838091](https://github.com/datastax/pulsar/commit/27c49838091) [fix][broker] Avoid IllegalStateException while client_version is not set (#16788)
+* [e3f4e1f90d4](https://github.com/datastax/pulsar/commit/e3f4e1f90d4) [fix][flaky-test] Fix ClassCastException: BrokerService cannot be cast to class PulsarResources (#16821)
+* [e034160de74](https://github.com/datastax/pulsar/commit/e034160de74) [Branch-2.10][Cherry-pick] tidy update subscriptions dispatcher rate-limiter (#16778)
+* [d36c40038ab](https://github.com/datastax/pulsar/commit/d36c40038ab) [improve][broker][PIP-149]Make resetCursor async (#16355) (#16774)
+* [cb28c46c336](https://github.com/datastax/pulsar/commit/cb28c46c336) [improve][connector] add reader config to `pulsar-io-debezium` and `pulsar-io-kafka-connect-adaptor` (#16675)
+* [7fbd450ce16](https://github.com/datastax/pulsar/commit/7fbd450ce16) Fix newLookup TooManyRequestsException message (#16594)
+* [c4ad0ed3dfc](https://github.com/datastax/pulsar/commit/c4ad0ed3dfc) [fix][broker] Fix consumer does not abide by the max unacks limitation for Key_Shared subscription (#16718)
+* [e9af98ab362](https://github.com/datastax/pulsar/commit/e9af98ab362) [fix][proxy] Do not preserve host when forwarding admin requests. (#16342)
+* [622d65da6e4](https://github.com/datastax/pulsar/commit/622d65da6e4) [improve][security] Upgrade aws-java-sdk-s3 to 1.12.261 (#16684)
+* [e068ec4eba3](https://github.com/datastax/pulsar/commit/e068ec4eba3) [fix][broker] Retry to delete the namespace if new topics created during the namespace deletion (#16676)
+* [8f5dc77b9e3](https://github.com/datastax/pulsar/commit/8f5dc77b9e3) [fix][broker] Fix consumer does not abide by the max unacks limitation for Shared subscription (#16670)
+* [2365a03b848](https://github.com/datastax/pulsar/commit/2365a03b848) [fix][broker] The configuration loadBalancerNamespaceMaximumBundles is invalid (#16552)
+* [6a0f3381b9b](https://github.com/datastax/pulsar/commit/6a0f3381b9b) [fix][broker] BadVersionException when splitting bundles, delay 100ms and try again (#16612)
+* [48810e148fe](https://github.com/datastax/pulsar/commit/48810e148fe)  [improve][client] Add message key if exists to deadLetter messages (#16615)
+* [8688b6ab3ff](https://github.com/datastax/pulsar/commit/8688b6ab3ff) Update/fix Swagger Annotation for param: authoritative (#16222)
+* [bda6b605ede](https://github.com/datastax/pulsar/commit/bda6b605ede) [fix][function] Ensure bytes is a well-formed UTF-8 byte sequence when decode the `FunctionState` bytes to string (#16199)
+* [09d04c8aa01](https://github.com/datastax/pulsar/commit/09d04c8aa01) [improve][security] Add load multiple certificates support in TrustManagerProxy (#14798)
+* [fea2d3cc209](https://github.com/datastax/pulsar/commit/fea2d3cc209) [fix][flaky-test] ElasticSearchClientTests.testBulkBlocking (#16920)
+* [21e2143dfc1](https://github.com/datastax/pulsar/commit/21e2143dfc1) Add a copyPkFields option to the ES sink (#20)
+* [0d8a4b23150](https://github.com/datastax/pulsar/commit/0d8a4b23150) [fix][broker] Duplicate ByteBuffer when Caching Backlogged Consumers (#17105)
+* [71763f4867c](https://github.com/datastax/pulsar/commit/71763f4867c) [fix][broker] Fix memory leak if entry exists in cache (#16996)
+* [9817b8faed3](https://github.com/datastax/pulsar/commit/9817b8faed3) [pulsar-broker] Support caching to drain backlog consumers (#12258)
+* [ff98753da7d](https://github.com/datastax/pulsar/commit/ff98753da7d) [Pulsar Admin CLI Tool] Use NoSplitter for subscription properties
+* [e2e31876427](https://github.com/datastax/pulsar/commit/e2e31876427) PIP-187: Add API to analyze a subscription backlog and provide a accurate value
+* [6a4f773fcc1](https://github.com/datastax/pulsar/commit/6a4f773fcc1) [fix][proxy] Fix client service url (#16834)
+* [cc2b8995fa9](https://github.com/datastax/pulsar/commit/cc2b8995fa9) Fix rack awareness cache expiration race condition (#16825)
+* [c86cc77c6be](https://github.com/datastax/pulsar/commit/c86cc77c6be) [Broker] Expose topic level storage write and read rate metrics (#16855)
+
+### `lunastreaming-all` distribution
+<details><summary>Proxy extensions</summary>
+
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Proxy Extension | 2.10.0.3 | pulsar-kafka-proxy-2.10.0.3.nar |
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.0.1 | starlight-rabbitmq-2.10.0.1.nar |
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.0.1 | starlight-rabbitmq-2.10.0.1.nar |
+
+</details>
+<details><summary>Protocol handlers</summary>
+
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.0.1 | starlight-rabbitmq-2.10.0.1.nar |
+| [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Protocol Handler | 2.10.0.3 | pulsar-protocol-handler-kafka-2.10.0.3.nar |
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.0.1 | starlight-rabbitmq-2.10.0.1.nar |
+
+</details>
+<details><summary>Sinks</summary>
+
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [cassandra-enhanced](https://github.com/datastax/pulsar-sink) | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | 1.6.3 | cassandra-enhanced-pulsar-sink-1.6.3-nar.nar |
+| [cloud-storage](https://pulsar.apache.org/docs/io-connectors) | Writes data into cloud storage | 2.10.0.4 | pulsar-io-cloud-storage-2.10.0.4.nar |
+| [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.1.4 | pulsar-io-data-generator-2.10.1.4.nar |
+| [elastic_search](https://pulsar.apache.org/docs/io-connectors) | Writes data into Elastic Search | 2.10.1.4 | pulsar-io-elastic-search-2.10.1.4.nar |
+| [jdbc-clickhouse](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for ClickHouse | 2.10.1.4 | pulsar-io-jdbc-clickhouse-2.10.1.4.nar |
+| [jdbc-mariadb](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for MariaDB | 2.10.1.4 | pulsar-io-jdbc-mariadb-2.10.1.4.nar |
+| [jdbc-postgres](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for PostgreSQL | 2.10.1.4 | pulsar-io-jdbc-postgres-2.10.1.4.nar |
+| [jdbc-sqlite](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for SQLite | 2.10.1.4 | pulsar-io-jdbc-sqlite-2.10.1.4.nar |
+| [kafka](https://pulsar.apache.org/docs/io-connectors) | Kafka source and sink connector | 2.10.1.4 | pulsar-io-kafka-2.10.1.4.nar |
+| [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.10.1.4 | pulsar-io-kinesis-2.10.1.4.nar |
+| [snowflake](https://github.com/datastax/snowflake-connector) | Snowflake Connector | 0.1.10 | pulsar-snowflake-connector-0.1.10.nar |
+
+</details>
+<details><summary>Sources</summary>
+
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [cassandra-source](https://github.com/datastax/cdc-for-apache-cassandra) | Read data from Cassandra | 2.1.0 | pulsar-cassandra-source-2.1.0.nar |
+| [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.1.4 | pulsar-io-data-generator-2.10.1.4.nar |
+| [debezium-mongodb](https://pulsar.apache.org/docs/io-connectors) | Debezium MongoDb Source | 2.10.1.4 | pulsar-io-debezium-mongodb-2.10.1.4.nar |
+| [debezium-mssql](https://pulsar.apache.org/docs/io-connectors) | Debezium Microsoft SQL Server Source | 2.10.1.4 | pulsar-io-debezium-mssql-2.10.1.4.nar |
+| [debezium-mysql](https://pulsar.apache.org/docs/io-connectors) | Debezium MySql Source | 2.10.1.4 | pulsar-io-debezium-mysql-2.10.1.4.nar |
+| [debezium-oracle](https://pulsar.apache.org/docs/io-connectors) | Debezium Oracle Source | 2.10.1.4 | pulsar-io-debezium-oracle-2.10.1.4.nar |
+| [debezium-postgres](https://pulsar.apache.org/docs/io-connectors) | Debezium Postgres Source | 2.10.1.4 | pulsar-io-debezium-postgres-2.10.1.4.nar |
+| [kafka](https://pulsar.apache.org/docs/io-connectors) | Kafka source and sink connector | 2.10.1.4 | pulsar-io-kafka-2.10.1.4.nar |
+| [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.10.1.4 | pulsar-io-kinesis-2.10.1.4.nar |
+
+</details>
+<details><summary>Functions</summary>
+
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [transforms](https://pulsar.apache.org/docs/io-connectors) | Transformation function | 1.0.2 | pulsar-transformations-1.0.2.nar |
+
+</details>
+<details><summary>Filters</summary>
+
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - support for server side filters | 2.4.0 | pulsar-jms-2.4.0-nar.nar |
+
+</details>
+
+### `lunastreaming-experimental` distribution
+<details><summary>Proxy extensions</summary>
+
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Proxy Extension | 2.10.0.3 | pulsar-kafka-proxy-2.10.0.3.nar |
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.0.1 | starlight-rabbitmq-2.10.0.1.nar |
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.0.1 | starlight-rabbitmq-2.10.0.1.nar |
+
+</details>
+<details><summary>Protocol handlers</summary>
+
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.0.1 | starlight-rabbitmq-2.10.0.1.nar |
+| [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Protocol Handler | 2.10.0.3 | pulsar-protocol-handler-kafka-2.10.0.3.nar |
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.0.1 | starlight-rabbitmq-2.10.0.1.nar |
+
+</details>
+<details><summary>Sinks</summary>
+
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [cassandra-enhanced](https://github.com/datastax/pulsar-sink) | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | 1.6.3 | cassandra-enhanced-pulsar-sink-1.6.3-nar.nar |
+| [azure-docdb](https://github.com/datastax/pulsar-3rdparty-connector) | Azure DocumentDB Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-azure-documentdb-2.10.1.1.nar |
+| [azure-kusto](https://github.com/datastax/pulsar-3rdparty-connector) | Azure Data Explorer (Kusto) Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-azure-kusto-2.10.1.1.nar |
+| [bigquery](https://github.com/datastax/pulsar-3rdparty-connector) | Big Query Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-bigquery-2.10.1.1.nar |
+| [coap](https://github.com/datastax/pulsar-3rdparty-connector) | CoAP Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-coap-2.10.1.1.nar |
+| [couchbase](https://github.com/datastax/pulsar-3rdparty-connector) | Couchbase Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-couchbase-2.10.1.1.nar |
+| [datadog](https://github.com/datastax/pulsar-3rdparty-connector) | DataDog Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-datadog-2.10.1.1.nar |
+| [diffusion](https://github.com/datastax/pulsar-3rdparty-connector) | Diffusion Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-diffusion-2.10.1.1.nar |
+| [geode](https://github.com/datastax/pulsar-3rdparty-connector) | Apache Geode Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-geode-2.10.1.1.nar |
+| [hazelcast](https://github.com/datastax/pulsar-3rdparty-connector) | Hazelcast Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-hazelcast-2.10.1.1.nar |
+| [humio](https://github.com/datastax/pulsar-3rdparty-connector) | Humio Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-humio-2.10.1.1.nar |
+| [jms](https://github.com/datastax/pulsar-3rdparty-connector) | JMS Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-jms-2.10.1.1.nar |
+| [Kinetica](https://github.com/datastax/pulsar-3rdparty-connector) | Kinetica Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-kinetica-2.10.1.1.nar |
+| [kudu](https://github.com/datastax/pulsar-3rdparty-connector) | Apache Kudu Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-kudu-2.10.1.1.nar |
+| [marklogic](https://github.com/datastax/pulsar-3rdparty-connector) | MarkLogic Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-marklogic-2.10.1.1.nar |
+| [mqtt](https://github.com/datastax/pulsar-3rdparty-connector) | MQTT Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-mqtt-2.10.1.1.nar |
+| [neo4j](https://github.com/datastax/pulsar-3rdparty-connector) | Neo4J Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-neoj4-2.10.1.1.nar |
+| [newrelic](https://github.com/datastax/pulsar-3rdparty-connector) | New Relic Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-newrelic-2.10.1.1.nar |
+| [orientdb](https://github.com/datastax/pulsar-3rdparty-connector) | OrientDB Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-orientdb-2.10.1.1.nar |
+| [phoenix](https://github.com/datastax/pulsar-3rdparty-connector) | Apache Phoenix Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-phoenix-2.10.1.1.nar |
+| [plc4x](https://github.com/datastax/pulsar-3rdparty-connector) | PLC4X Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-plc4x-2.10.1.1.nar |
+| [redis](https://github.com/datastax/pulsar-3rdparty-connector) | Redis Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-redis-2.10.1.1.nar |
+| [sap-hana](https://github.com/datastax/pulsar-3rdparty-connector) | SAP HANA Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-sap-hana-2.10.1.1.nar |
+| [singlestore](https://github.com/datastax/pulsar-3rdparty-connector) | SingleStore Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-singlestore-2.10.1.1.nar |
+| [splunk](https://github.com/datastax/pulsar-3rdparty-connector) | Splunk Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-splunk-2.10.1.1.nar |
+| [xtdb](https://github.com/datastax/pulsar-3rdparty-connector) | XTDB Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-xtdb-2.10.1.1.nar |
+| [zeebe](https://github.com/datastax/pulsar-3rdparty-connector) | Zeebe Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-zeebe-2.10.1.1.nar |
+| [aerospike](https://pulsar.apache.org/docs/io-connectors) | Aerospike database sink | 2.10.1.4 | pulsar-io-aerospike-2.10.1.4.nar |
+| [batch-data-generator](https://pulsar.apache.org/docs/io-connectors) | Test batch data generator source | 2.10.1.4 | pulsar-io-batch-data-generator-2.10.1.4.nar |
+| [cloud-storage](https://pulsar.apache.org/docs/io-connectors) | Writes data into cloud storage | 2.10.0.4 | pulsar-io-cloud-storage-2.10.0.4.nar |
+| [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.1.4 | pulsar-io-data-generator-2.10.1.4.nar |
+| [elastic_search](https://pulsar.apache.org/docs/io-connectors) | Writes data into Elastic Search | 2.10.1.4 | pulsar-io-elastic-search-2.10.1.4.nar |
+| [flume](https://pulsar.apache.org/docs/io-connectors) | flume source and sink connector | 2.10.1.4 | pulsar-io-flume-2.10.1.4.nar |
+| [hbase](https://pulsar.apache.org/docs/io-connectors) | Writes data into hbase table | 2.10.1.4 | pulsar-io-hbase-2.10.1.4.nar |
+| [hdfs2](https://pulsar.apache.org/docs/io-connectors) | Writes data into HDFS 2.x | 2.10.1.4 | pulsar-io-hdfs2-2.10.1.4.nar |
+| [hdfs3](https://pulsar.apache.org/docs/io-connectors) | Writes data into HDFS 3.x | 2.10.1.4 | pulsar-io-hdfs3-2.10.1.4.nar |
+| [influxdb](https://pulsar.apache.org/docs/io-connectors) | Writes data into InfluxDB database | 2.10.1.4 | pulsar-io-influxdb-2.10.1.4.nar |
+| [jdbc-clickhouse](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for ClickHouse | 2.10.1.4 | pulsar-io-jdbc-clickhouse-2.10.1.4.nar |
+| [jdbc-mariadb](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for MariaDB | 2.10.1.4 | pulsar-io-jdbc-mariadb-2.10.1.4.nar |
+| [jdbc-postgres](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for PostgreSQL | 2.10.1.4 | pulsar-io-jdbc-postgres-2.10.1.4.nar |
+| [jdbc-sqlite](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for SQLite | 2.10.1.4 | pulsar-io-jdbc-sqlite-2.10.1.4.nar |
+| [kafka](https://pulsar.apache.org/docs/io-connectors) | Kafka source and sink connector | 2.10.1.4 | pulsar-io-kafka-2.10.1.4.nar |
+| [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.10.1.4 | pulsar-io-kinesis-2.10.1.4.nar |
+| [mongo](https://pulsar.apache.org/docs/io-connectors) | MongoDB source and sink connector | 2.10.1.4 | pulsar-io-mongo-2.10.1.4.nar |
+| [rabbitmq](https://pulsar.apache.org/docs/io-connectors) | RabbitMQ source and sink connector | 2.10.1.4 | pulsar-io-rabbitmq-2.10.1.4.nar |
+| [redis](https://pulsar.apache.org/docs/io-connectors) | Writes data into Redis | 2.10.1.4 | pulsar-io-redis-2.10.1.4.nar |
+| [solr](https://pulsar.apache.org/docs/io-connectors) | Writes data into solr collection | 2.10.1.4 | pulsar-io-solr-2.10.1.4.nar |
+| [snowflake](https://github.com/datastax/snowflake-connector) | Snowflake Connector | 0.1.10 | pulsar-snowflake-connector-0.1.10.nar |
+
+</details>
+<details><summary>Sources</summary>
+
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [azure-docdb](https://github.com/datastax/pulsar-3rdparty-connector) | Azure DocumentDB Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-azure-documentdb-2.10.1.1.nar |
+| [bigquery](https://github.com/datastax/pulsar-3rdparty-connector) | Big Query Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-bigquery-2.10.1.1.nar |
+| [coap](https://github.com/datastax/pulsar-3rdparty-connector) | CoAP Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-coap-2.10.1.1.nar |
+| [couchbase](https://github.com/datastax/pulsar-3rdparty-connector) | Couchbase Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-couchbase-2.10.1.1.nar |
+| [datadog](https://github.com/datastax/pulsar-3rdparty-connector) | DataDog Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-datadog-2.10.1.1.nar |
+| [diffusion](https://github.com/datastax/pulsar-3rdparty-connector) | Diffusion Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-diffusion-2.10.1.1.nar |
+| [geode](https://github.com/datastax/pulsar-3rdparty-connector) | Apache Geode Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-geode-2.10.1.1.nar |
+| [hazelcast](https://github.com/datastax/pulsar-3rdparty-connector) | Hazelcast Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-hazelcast-2.10.1.1.nar |
+| [humio](https://github.com/datastax/pulsar-3rdparty-connector) | Humio Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-humio-2.10.1.1.nar |
+| [jms](https://github.com/datastax/pulsar-3rdparty-connector) | JMS Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-jms-2.10.1.1.nar |
+| [Kinetica](https://github.com/datastax/pulsar-3rdparty-connector) | Kinetica Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-kinetica-2.10.1.1.nar |
+| [kudu](https://github.com/datastax/pulsar-3rdparty-connector) | Apache Kudu Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-kudu-2.10.1.1.nar |
+| [marklogic](https://github.com/datastax/pulsar-3rdparty-connector) | MarkLogic Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-marklogic-2.10.1.1.nar |
+| [mqtt](https://github.com/datastax/pulsar-3rdparty-connector) | MQTT Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-mqtt-2.10.1.1.nar |
+| [neo4j](https://github.com/datastax/pulsar-3rdparty-connector) | Neo4J Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-neoj4-2.10.1.1.nar |
+| [newrelic](https://github.com/datastax/pulsar-3rdparty-connector) | New Relic Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-newrelic-2.10.1.1.nar |
+| [orientdb](https://github.com/datastax/pulsar-3rdparty-connector) | OrientDB Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-orientdb-2.10.1.1.nar |
+| [phoenix](https://github.com/datastax/pulsar-3rdparty-connector) | Apache Phoenix Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-phoenix-2.10.1.1.nar |
+| [plc4x](https://github.com/datastax/pulsar-3rdparty-connector) | PLC4X Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-plc4x-2.10.1.1.nar |
+| [redis](https://github.com/datastax/pulsar-3rdparty-connector) | Redis Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-redis-2.10.1.1.nar |
+| [sap-hana](https://github.com/datastax/pulsar-3rdparty-connector) | SAP HANA Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-sap-hana-2.10.1.1.nar |
+| [singlestore](https://github.com/datastax/pulsar-3rdparty-connector) | SingleStore Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-singlestore-2.10.1.1.nar |
+| [splunk](https://github.com/datastax/pulsar-3rdparty-connector) | Splunk Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-splunk-2.10.1.1.nar |
+| [xtdb](https://github.com/datastax/pulsar-3rdparty-connector) | XTDB Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-xtdb-2.10.1.1.nar |
+| [zeebe](https://github.com/datastax/pulsar-3rdparty-connector) | Zeebe Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-zeebe-2.10.1.1.nar |
+| [cassandra-source](https://github.com/datastax/cdc-for-apache-cassandra) | Read data from Cassandra | 2.1.0 | pulsar-cassandra-source-2.1.0.nar |
+| [batch-data-generator](https://pulsar.apache.org/docs/io-connectors) | Test batch data generator source | 2.10.1.4 | pulsar-io-batch-data-generator-2.10.1.4.nar |
+| [canal](https://pulsar.apache.org/docs/io-connectors) | canal source and read data from mysql | 2.10.1.4 | pulsar-io-canal-2.10.1.4.nar |
+| [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.1.4 | pulsar-io-data-generator-2.10.1.4.nar |
+| [debezium-mongodb](https://pulsar.apache.org/docs/io-connectors) | Debezium MongoDb Source | 2.10.1.4 | pulsar-io-debezium-mongodb-2.10.1.4.nar |
+| [debezium-mssql](https://pulsar.apache.org/docs/io-connectors) | Debezium Microsoft SQL Server Source | 2.10.1.4 | pulsar-io-debezium-mssql-2.10.1.4.nar |
+| [debezium-mysql](https://pulsar.apache.org/docs/io-connectors) | Debezium MySql Source | 2.10.1.4 | pulsar-io-debezium-mysql-2.10.1.4.nar |
+| [debezium-oracle](https://pulsar.apache.org/docs/io-connectors) | Debezium Oracle Source | 2.10.1.4 | pulsar-io-debezium-oracle-2.10.1.4.nar |
+| [debezium-postgres](https://pulsar.apache.org/docs/io-connectors) | Debezium Postgres Source | 2.10.1.4 | pulsar-io-debezium-postgres-2.10.1.4.nar |
+| [dynamodb](https://pulsar.apache.org/docs/io-connectors) | DynamoDB connectors | 2.10.1.4 | pulsar-io-dynamodb-2.10.1.4.nar |
+| [file](https://pulsar.apache.org/docs/io-connectors) | Reads data from local filesystem | 2.10.1.4 | pulsar-io-file-2.10.1.4.nar |
+| [flume](https://pulsar.apache.org/docs/io-connectors) | flume source and sink connector | 2.10.1.4 | pulsar-io-flume-2.10.1.4.nar |
+| [kafka](https://pulsar.apache.org/docs/io-connectors) | Kafka source and sink connector | 2.10.1.4 | pulsar-io-kafka-2.10.1.4.nar |
+| [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.10.1.4 | pulsar-io-kinesis-2.10.1.4.nar |
+| [mongo](https://pulsar.apache.org/docs/io-connectors) | MongoDB source and sink connector | 2.10.1.4 | pulsar-io-mongo-2.10.1.4.nar |
+| [netty](https://pulsar.apache.org/docs/io-connectors) | Netty Tcp or Udp Source Connector | 2.10.1.4 | pulsar-io-netty-2.10.1.4.nar |
+| [nsq](https://pulsar.apache.org/docs/io-connectors) | Ingest data from an NSQ topic | 2.10.1.4 | pulsar-io-nsq-2.10.1.4.nar |
+| [rabbitmq](https://pulsar.apache.org/docs/io-connectors) | RabbitMQ source and sink connector | 2.10.1.4 | pulsar-io-rabbitmq-2.10.1.4.nar |
+| [twitter](https://pulsar.apache.org/docs/io-connectors) | Ingest data from Twitter firehose | 2.10.1.4 | pulsar-io-twitter-2.10.1.4.nar |
+
+</details>
+<details><summary>Functions</summary>
+
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [transforms](https://pulsar.apache.org/docs/io-connectors) | Transformation function | 1.0.2 | pulsar-transformations-1.0.2.nar |
+
+</details>
+<details><summary>Filters</summary>
+
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - support for server side filters | 2.4.0 | pulsar-jms-2.4.0-nar.nar |
+
+</details>
+
 ## Luna Streaming Distribution 2.10 1.3
 This is a maintenance release containing important stability updates.
 
