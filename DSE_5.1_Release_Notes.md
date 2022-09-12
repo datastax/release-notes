@@ -2,6 +2,25 @@
 DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
 
+# Release notes for 5.1.33
+12 September 2022
+
+## Components versions for DSE 5.1.33
+ * Apache Solr™ 6.0.1.0.2939
+ * Apache Spark™ 2.0.2.43
+ * Apache TinkerPop™ 3.2.11-20210716-faea8d16
+ * Apache Tomcat® 8.5.75
+ * DSE Java Driver 1.8.3-dse+20201217 (DSE *internal-only* version)
+ * Netty 4.0.54.1.dse
+ * Spark JobServer 0.6.2.241
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 5.1.33 DSE Miscellaneous
+* Made ‘nodetool status’ report the state of unreachable nodes in order to allow knowing why they are unreachable. (DSP-22648)
+
+
 # Release notes for 5.1.32
 18 July 2022
 

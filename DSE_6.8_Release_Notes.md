@@ -1,6 +1,38 @@
 # Release notes for DataStax Enterprise 6.8
-DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. 
+DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
+
+
+# Release notes for 6.8.26
+12 September 2022
+
+## Components versions for DSE 6.8.26
+ * Apache Solr™ 6.0.1.4.2940
+ * Apache Spark™ 2.4.0.19
+ * Apache TinkerPop™ 3.4.5-20220728-e115ab9a&ast;
+ * Apache Tomcat® 8.5.75
+ * DSE Java Driver 1.10.0-dse-20220616 (DSE *internal-only* version)
+ * Netty 4.1.34.3.dse
+ * Spark JobServer 0.8.0.51
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.26 DSE Core
+* Fixed a bug in streaming that could connect back using the wrong address under a specific network setup. (DSP-22585)
+
+## 6.8.26 DSE Cassandra
+* Ported CASSANDRA-15271 to make CLUSTERING ORDER validation less strict. (DSP-21801)
+* Fixed ArrayIndexOutOfBoundsException during indexing SAI with ascii option enabled. (DSP-22601)
+
+## 6.8.26 DSE Spark
+* Fixed the logic that orders columns in the SELECT list to maintain the given order of the column headers. (DSP-22420)
+
+## 6.8.26 DSE Management API
+* Fixed command injection vulnerability in management-api. (DSP-22272)
+
+## 6.8.26 DSE Miscellaneous
+* Made ‘nodetool status’ report the state of unreachable nodes in order to allow knowing why they are unreachable. (DSP-22648)
 
 
 # Release notes for 6.8.25
