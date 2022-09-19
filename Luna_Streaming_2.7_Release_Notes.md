@@ -42,6 +42,38 @@ The distributions are available as Docker images and tarballs. The docker images
 * **lunastreaming**: the basic Luna Streaming Distribution, **including Pulsar SQL** feature.
 * **lunastreaming-all**: it contains the basic Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. You should pick this if you are interested in using the Datastax connectors or the offloading feature.
 
+## Luna Streaming Distribution 2.7.2 1.1.38
+This is a maintenance release containing important security updates.
+### Most notable commits
+* [f55ce333b52](https://github.com/datastax/pulsar/commit/f55ce333b52) Configure DLog Bookie, Pulsar, and Admin clients via pass through config (#15818)
+* [40c99304390](https://github.com/datastax/pulsar/commit/40c99304390) Clean up C++ client curl configuration (#16064)
+* [aa4cf54f69c](https://github.com/datastax/pulsar/commit/aa4cf54f69c) [broker] Fixed Replicated Subscription isn't replicate new subscription when remote producer is closed (#11382)
+### `lunastreaming-all` distribution
+<details><summary>Sinks</summary>
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [cassandra-enhanced](https://github.com/datastax/pulsar-sink) | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | 1.4.1 | cassandra-enhanced-pulsar-sink-1.4.1-nar.nar |
+| [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.7.2.1.1.38 | pulsar-io-data-generator-2.7.2.1.1.38.nar |
+| [elastic_search](https://pulsar.apache.org/docs/io-connectors) | Writes data into Elastic Search | 2.7.2.1.1.38 | pulsar-io-elastic-search-2.7.2.1.1.38.nar |
+| [jdbc-clickhouse](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for ClickHouse | 2.7.2.1.1.38 | pulsar-io-jdbc-clickhouse-2.7.2.1.1.38.nar |
+| [jdbc-mariadb](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for MariaDB | 2.7.2.1.1.38 | pulsar-io-jdbc-mariadb-2.7.2.1.1.38.nar |
+| [jdbc-postgres](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for PostgreSQL | 2.7.2.1.1.38 | pulsar-io-jdbc-postgres-2.7.2.1.1.38.nar |
+| [jdbc-sqlite](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for SQLite | 2.7.2.1.1.38 | pulsar-io-jdbc-sqlite-2.7.2.1.1.38.nar |
+| [kafka](https://pulsar.apache.org/docs/io-connectors) | Kafka source and sink connector | 2.7.2.1.1.38 | pulsar-io-kafka-2.7.2.1.1.38.nar |
+| [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.7.2.1.1.38 | pulsar-io-kinesis-2.7.2.1.1.38.nar |
+</details>
+<details><summary>Sources</summary>
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [cassandra-source](https://github.com/datastax/cdc-for-apache-cassandra) | Read data from Cassandra | 1.0.2 | luna-cassandra-source-1.0.2.nar |
+| [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.7.2.1.1.38 | pulsar-io-data-generator-2.7.2.1.1.38.nar |
+| [debezium-mongodb](https://pulsar.apache.org/docs/io-connectors) | Debezium MongoDb Source | 2.7.2.1.1.38 | pulsar-io-debezium-mongodb-2.7.2.1.1.38.nar |
+| [debezium-mysql](https://pulsar.apache.org/docs/io-connectors) | Debezium MySql Source | 2.7.2.1.1.38 | pulsar-io-debezium-mysql-2.7.2.1.1.38.nar |
+| [debezium-postgres](https://pulsar.apache.org/docs/io-connectors) | Debezium Postgres Source | 2.7.2.1.1.38 | pulsar-io-debezium-postgres-2.7.2.1.1.38.nar |
+| [kafka](https://pulsar.apache.org/docs/io-connectors) | Kafka source and sink connector | 2.7.2.1.1.38 | pulsar-io-kafka-2.7.2.1.1.38.nar |
+| [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.7.2.1.1.38 | pulsar-io-kinesis-2.7.2.1.1.38.nar |
+</details>
+
 ## Luna Streaming Distribution 2.7.2 1.1.37
 This is a maintenance release containing important security updates.
 ### Most notable commits
