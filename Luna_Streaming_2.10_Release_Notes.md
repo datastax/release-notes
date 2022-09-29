@@ -106,6 +106,7 @@ This is a maintenance release containing important security and stability update
 
 ### `lunastreaming-all` distribution
 <details><summary>Sinks</summary>
+
 | Name | Description | Version | File | 
 | ---- | ----------- | ------- | ---- | 
 | [cassandra-enhanced](https://github.com/datastax/pulsar-sink) | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | 1.6.6 | cassandra-enhanced-pulsar-sink-1.6.6-nar.nar |
@@ -119,8 +120,10 @@ This is a maintenance release containing important security and stability update
 | [kafka](https://pulsar.apache.org/docs/io-connectors) | Kafka source and sink connector | 2.10.2.0 | pulsar-io-kafka-2.10.2.0.nar |
 | [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.10.2.0 | pulsar-io-kinesis-2.10.2.0.nar |
 | [snowflake](https://github.com/datastax/snowflake-connector) | Snowflake Connector | 0.1.10 | pulsar-snowflake-connector-0.1.10.nar |
+
 </details>
 <details><summary>Sources</summary>
+
 | Name | Description | Version | File | 
 | ---- | ----------- | ------- | ---- | 
 | [cassandra-source](https://github.com/datastax/cdc-for-apache-cassandra) | Read data from Cassandra | 2.2.1 | pulsar-cassandra-source-2.2.1.nar |
@@ -132,34 +135,44 @@ This is a maintenance release containing important security and stability update
 | [debezium-postgres](https://pulsar.apache.org/docs/io-connectors) | Debezium Postgres Source | 2.10.2.0 | pulsar-io-debezium-postgres-2.10.2.0.nar |
 | [kafka](https://pulsar.apache.org/docs/io-connectors) | Kafka source and sink connector | 2.10.2.0 | pulsar-io-kafka-2.10.2.0.nar |
 | [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.10.2.0 | pulsar-io-kinesis-2.10.2.0.nar |
+
 </details>
 <details><summary>Proxy extensions</summary>
+
 | Name | Description | Version | File | 
 | ---- | ----------- | ------- | ---- | 
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Proxy Extension | 2.10.0.4 | pulsar-kafka-proxy-2.10.0.4.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.0.1 | starlight-rabbitmq-2.10.0.1.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.0.1 | starlight-rabbitmq-2.10.0.1.nar |
+
 </details>
 <details><summary>Protocol handlers</summary>
+
 | Name | Description | Version | File | 
 | ---- | ----------- | ------- | ---- | 
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.0.1 | starlight-rabbitmq-2.10.0.1.nar |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Protocol Handler | 2.10.0.4 | pulsar-protocol-handler-kafka-2.10.0.4.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.0.1 | starlight-rabbitmq-2.10.0.1.nar |
+
 </details>
 <details><summary>Filters</summary>
+
 | Name | Description | Version | File | 
 | ---- | ----------- | ------- | ---- | 
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - support for server side filters | 3.0.0 | pulsar-jms-3.0.0-nar.nar |
+
 </details>
 <details><summary>Functions</summary>
+
 | Name | Description | Version | File | 
 | ---- | ----------- | ------- | ---- | 
 | [transforms](https://pulsar.apache.org/docs/io-connectors) | Transformation function | 2.0.0 | pulsar-transformations-2.0.0.nar |
+
 </details>
 
 ### `lunastreaming-experimental` distribution
 <details><summary>Sinks</summary>
+
 | Name | Description | Version | File | 
 | ---- | ----------- | ------- | ---- | 
 | [cassandra-enhanced](https://github.com/datastax/pulsar-sink) | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | 1.6.6 | cassandra-enhanced-pulsar-sink-1.6.6-nar.nar |
@@ -210,8 +223,10 @@ This is a maintenance release containing important security and stability update
 | [redis](https://pulsar.apache.org/docs/io-connectors) | Writes data into Redis | 2.10.2.0 | pulsar-io-redis-2.10.2.0.nar |
 | [solr](https://pulsar.apache.org/docs/io-connectors) | Writes data into solr collection | 2.10.2.0 | pulsar-io-solr-2.10.2.0.nar |
 | [snowflake](https://github.com/datastax/snowflake-connector) | Snowflake Connector | 0.1.10 | pulsar-snowflake-connector-0.1.10.nar |
+
 </details>
 <details><summary>Sources</summary>
+
 | Name | Description | Version | File | 
 | ---- | ----------- | ------- | ---- | 
 | [azure-docdb](https://github.com/datastax/pulsar-3rdparty-connector) | Azure DocumentDB Connector | 2.10.1.1 | pulsar-3rdparty-pulsar-connectors-azure-documentdb-2.10.1.1.nar |
@@ -258,32 +273,40 @@ This is a maintenance release containing important security and stability update
 | [nsq](https://pulsar.apache.org/docs/io-connectors) | Ingest data from an NSQ topic | 2.10.2.0 | pulsar-io-nsq-2.10.2.0.nar |
 | [rabbitmq](https://pulsar.apache.org/docs/io-connectors) | RabbitMQ source and sink connector | 2.10.2.0 | pulsar-io-rabbitmq-2.10.2.0.nar |
 | [twitter](https://pulsar.apache.org/docs/io-connectors) | Ingest data from Twitter firehose | 2.10.2.0 | pulsar-io-twitter-2.10.2.0.nar |
+
 </details>
 <details><summary>Proxy extensions</summary>
+
 | Name | Description | Version | File | 
 | ---- | ----------- | ------- | ---- | 
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Proxy Extension | 2.10.0.4 | pulsar-kafka-proxy-2.10.0.4.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.0.1 | starlight-rabbitmq-2.10.0.1.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.0.1 | starlight-rabbitmq-2.10.0.1.nar |
+
 </details>
 <details><summary>Protocol handlers</summary>
+
 | Name | Description | Version | File | 
 | ---- | ----------- | ------- | ---- | 
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.0.1 | starlight-rabbitmq-2.10.0.1.nar |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Protocol Handler | 2.10.0.4 | pulsar-protocol-handler-kafka-2.10.0.4.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.0.1 | starlight-rabbitmq-2.10.0.1.nar |
+
 </details>
 <details><summary>Filters</summary>
+
 | Name | Description | Version | File | 
 | ---- | ----------- | ------- | ---- | 
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - support for server side filters | 3.0.0 | pulsar-jms-3.0.0-nar.nar |
+
 </details>
 <details><summary>Functions</summary>
+
 | Name | Description | Version | File | 
 | ---- | ----------- | ------- | ---- | 
 | [transforms](https://pulsar.apache.org/docs/io-connectors) | Transformation function | 2.0.0 | pulsar-transformations-2.0.0.nar |
-</details>
 
+</details>
 
 ## Luna Streaming Distribution 2.10 1.7
 This is a maintenance release containing important stability and security updates.
