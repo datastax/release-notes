@@ -103,7 +103,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
 * Implemented ability to replace the `THREE` consistency level with an `ALL_BUT_ONE` consistency level. (DSP-22366)
 * Removed Netty 3.6.2 and 3.7.0. (DSP-22381, [CVE-2015-2156](https://nvd.nist.gov/vuln/detail/CVE-2015-2156))
 * Upgraded Jetty All Core to latest version (9.4.46.v20220331). (DSP-22491, [CVE-2009-4611](https://nvd.nist.gov/vuln/detail/CVE-2009-4611), [CVE-2020-27216](https://nvd.nist.gov/vuln/detail/CVE-2020-27216))
-* Upgraded Azure SDK client libraries to be based on BOM 1.2.2 to remove [CVE-2020-36518](https://nvd.nist.gov/vuln/detail/CVE-2020-36518). (DSP-22528)
+* Upgraded Azure SDK client libraries to be based on BOM 1.2.2 to remove [CVE-2020-36518](https://nvd.nist.gov/vuln/detail/CVE-2020-36518) and [CVE-2020-5404](https://nvd.nist.gov/vuln/detail/CVE-2020-5404). (DSP-22528, DSP-21781)
 * Fixed the `TIMING` feature in cqlsh which throws a message "global name 'request_start' is not defined" when enabled. (DSP-22435)
 
 ## 6.8.24 DSE Cassandra
