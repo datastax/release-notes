@@ -30,8 +30,12 @@ If you're developing applications, please refer to the [Java Driver documentatio
 ## 6.8.27 DSE Insights
 * Upgraded insightsCollectd to 0.1.4. (DSP-22739)
 
+## 6.8.27 DSEFS
+* Fixed an issue where EMPTY_LAST_CONTENT would no be written to the stream when the connection was closed. (DSP-22671)
+
 ## 6.8.27 DSE Security
 * Fixed an issue that caused authentication to fail in a cluster of analytics nodes in case of a version upgrade, where the new version of node could not authenticate requests from an old version of node. (DSP-22723)
+* Fixed an issue where InClusterAuthenticator would fail to compose and decode a token if it receives an old version token. (DSP-22723)
 
 ## 6.8.27 DSE CVE
 * Upgraded `jackson-databind` to 2.13.4. (DSP-22780, [CVE-2022-42004](https://nvd.nist.gov/vuln/detail/CVE-2022-42004))
