@@ -3,6 +3,25 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
 
+# Release notes for 6.8.28
+28 October 2022
+
+## Components versions for DSE 6.8.28
+ * Apache Solr™ 6.0.1.4.2940
+ * Apache Spark™ 2.4.0.20&ast;
+ * Apache TinkerPop™ 3.4.5-20220728-e115ab9a
+ * Apache Tomcat® 8.5.79&ast;
+ * DSE Java Driver 1.10.0-dse-20220616 (DSE *internal-only* version)
+ * Netty 4.1.78.1.dse&ast;
+ * Spark JobServer 0.8.0.51
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.28 DSE Management API
+* Fixed regression in management api in 6.8.27 by ensuring that epoll netty libraries are included. (DSP-22895)
+
+
 # Release notes for 6.8.27
 25 October 2022
 
