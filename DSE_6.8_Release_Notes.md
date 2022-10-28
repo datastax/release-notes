@@ -6,6 +6,8 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 # Release notes for 6.8.27
 25 October 2022
 
+**NOTE**: DSE 6.8.27 has a regression that hinders the use of the management api used in kubernetes. Use of DSE 6.8.27 is not adviced. DSE 6.8.28 resolves this regression.
+
 ## Components versions for DSE 6.8.27
  * Apache Solr™ 6.0.1.4.2940
  * Apache Spark™ 2.4.0.20&ast;
