@@ -1,6 +1,39 @@
 # Release notes for DataStax Enterprise 5.1
 DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 5.1.34
+14 November 2022
+
+## Components versions for DSE 5.1.34
+* Apache Solr™ 6.0.1.0.2939
+* Apache Spark™ 2.0.2.43
+* Apache TinkerPop™ 3.2.11-20210716-faea8d16
+* Apache Tomcat® 8.5.79&ast;
+* DSE Java Driver 1.8.3-dse+20201217 (DSE *internal-only* version)
+* Netty 4.0.54.1.dse
+* Spark JobServer 0.6.2.241
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 5.1.34 DSE Search
+* Fixed `dsetool core_indexing_status` to return consistent indexing status for calls issued with and without the `--all` parameter. (DSP-21594)
+
+## 5.1.34 DSE Spark
+* Fixed an issue in DSE Spark which was unable to read S3 objects with $ and = characters in the path. Updated aws-java-sdk to 1.11.892 and hadoop to 2.7.1.5. Dropped support of s3n, which is no longer undergoing active maintenance from the OSS Hadoop. (https://hadoop.apache.org/docs/current2/hadoop-aws/tools/hadoop-aws/index.html#S3N) Users are recommended to migrate to s3a instead. (DSP-22737)
+
+## 5.1.34 DSE Graph
+* Fixed permissions that allowed to drop graph tables when setting {{CREATE}} and {{ALTER}}. (DSP-22024)
+* Fixed GraphOLAP spark connection problem in multi-network cloud environments when GossipingPropertyFileSnitch (GPFS) is not used. (DSP-22707)
+
+## 5.1.34 DSE Security
+* Fixed an issue that caused authentication to fail in a cluster of analytics nodes in case of a version upgrade, where the new version of node could not authenticate requests from an old version of node. (DSP-22723)
+
+## 5.1.34 DSE CVE
+* Upgraded version of Apache Tomcat from 8.5.75 to 8.5.79. (DSP-22746, [CVE-2022-34305](https://nvd.nist.gov/vuln/detail/CVE-2022-34305), [CVE-2022-29885](https://nvd.nist.gov/vuln/detail/CVE-2022-29885))
+* Upgraded SnakeYAML to 1.33. (DSP-22773, [CVE-2022-25857](https://nvd.nist.gov/vuln/detail/CVE-2022-25857))
+* Upgraded Jetty to 9.4.49.v20220914. (DSP-22774, [CVE-2022-2048](https://nvd.nist.gov/vuln/detail/CVE-2022-2048))
+
 
 # Release notes for 5.1.33
 12 September 2022
