@@ -3,6 +3,29 @@ DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
 
+# Release notes for 6.8.29
+14 November 2022
+
+## Components versions for DSE 6.8.29
+* Apache Solr™ 6.0.1.4.2940
+* Apache Spark™ 2.4.0.21&ast;
+* Apache TinkerPop™ 3.4.5-20220728-e115ab9a
+* Apache Tomcat® 8.5.79
+* DSE Java Driver 1.10.0-dse-20220616 (DSE *internal-only* version)
+* Netty 4.1.78.1.dse
+* Spark JobServer 0.8.0.51
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.29 DSE Spark
+* Fixed an issue in DSE Spark which was unable to read S3 objects with $ and = characters in the path. Updated aws-java-sdk to 1.11.892 and hadoop to 2.7.1.5. Dropped support of s3n, which is no longer undergoing active maintenance from the OSS Hadoop. (https://hadoop.apache.org/docs/current2/hadoop-aws/tools/hadoop-aws/index.html#S3N) Users are recommended to migrate to s3a instead. (DSP-22737)
+
+## 6.8.29 DSE CVE
+* Upgraded `jackson-databind` to version `2.13.4.2`. (DSP-22905, [CVE-2022-42003](https://nvd.nist.gov/vuln/detail/CVE-2022-42003))
+* Replaced the vulnerable `woodstox-core` library used by `jackson-dataformat-xml` with version 6.4.0. (DSP-22914, [CVE-2022-40151](https://nvd.nist.gov/vuln/detail/CVE-2022-40151), [CVE-2022-40152](https://nvd.nist.gov/vuln/detail/CVE-2022-40152), [CVE-2022-40153](https://nvd.nist.gov/vuln/detail/CVE-2022-40153), [CVE-2022-40154](https://nvd.nist.gov/vuln/detail/CVE-2022-40154), [CVE-2022-40155](https://nvd.nist.gov/vuln/detail/CVE-2022-40155), [CVE-2022-40156](https://nvd.nist.gov/vuln/detail/CVE-2022-40156))
+
+
 # Release notes for 6.8.28
 28 October 2022
 
