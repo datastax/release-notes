@@ -20,14 +20,16 @@ If you're developing applications, please refer to the [Java Driver documentatio
 * Fixed `dsetool core_indexing_status` to return consistent indexing status for calls issued with and without the `--all` parameter. (DSP-21594)
 
 ## 5.1.34 DSE Spark
-* Fixed an issue in DSE Spark which was unable to read S3 objects with $ and = characters in the path. Updated aws-java-sdk to 1.11.892 and hadoop to 2.7.1.5. Dropped support of s3n, which is no longer undergoing active maintenance from the OSS Hadoop. (https://hadoop.apache.org/docs/current2/hadoop-aws/tools/hadoop-aws/index.html#S3N) Users are recommended to migrate to s3a instead. (DSP-22737)
+* Fixed an issue in DSE Spark which was unable to read S3 objects with $ and = characters in the path. (DSP-22737)
+* Dropped support of [s3n](https://hadoop.apache.org/docs/current2/hadoop-aws/tools/hadoop-aws/index.html#S3N), which is no longer undergoing active maintenance from the OSS Hadoop, and updated aws-java-sdk to 1.11.892 and hadoop to 2.7.1.5. (DSP-22737)
 
 ## 5.1.34 DSE Graph
 * Fixed permissions that allowed to drop graph tables when setting {{CREATE}} and {{ALTER}}. (DSP-22024)
 * Fixed GraphOLAP spark connection problem in multi-network cloud environments when GossipingPropertyFileSnitch (GPFS) is not used. (DSP-22707)
 
 ## 5.1.34 DSE Security
-* Fixed an issue that caused authentication to fail in a cluster of analytics nodes in case of a version upgrade, where the new version of node could not authenticate requests from an old version of node. (DSP-22723)
+Fixed an issue during DSE Spark cluster upgrade where InClusterAuthenticator would fail to compose and decode a token if it receives an old version token. (DSP-22723)
+
 
 ## 5.1.34 DSE CVE
 * Upgraded version of Apache Tomcat from 8.5.75 to 8.5.79. (DSP-22746, [CVE-2022-34305](https://nvd.nist.gov/vuln/detail/CVE-2022-34305), [CVE-2022-29885](https://nvd.nist.gov/vuln/detail/CVE-2022-29885))
