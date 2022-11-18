@@ -1,30 +1,52 @@
 # Release notes for OpsCenter
 
-# Release notes for 6.8.19
+# Release notes for OpsCenter 6.8.20
+18 Nov 2022
+
+## 6.8.20 OpsCenter Core
+
+* Fixed a problem where agents would sometimes just hang when trying to start the stomp connection to opscenterd. (OPSC-17209)
+* Basic IPv6 support. OpsCenter can now connect to clusters using IPv6. When configuring opscenterd’s [webserver] or [stomp] to listen on IPv6 a specific ip address needs to be specified. opscenterd does not support listening on ::/0. (OPSC-16694)
+
+## 6.8.20 OpsCenter Backup Service
+
+* Implemented configuration that will allow agents use rsync to transfer files to a localfs destination. This is enabled through the new address.yaml config parameter ‘use_rsync_for_localfs’. It is recommended to enable this if there are problems with the agents spawning large numbers of sub-processes when backing up to a localfs destination. (OPSC-16925)
+* Handled error when the agent moves a commit log from the staging directory to the storage directory and the file is already there. (OPSC-17089)
+
+## 6.8.20 OpsCenter Monitoring
+
+* Changed the library used for the post url alert functionality. This update allows the feature to work with IPv6. (OPSC-17202)
+
+## 6.8.20 OpsCenter Life Cycle Manager 
+
+* Basic IPv6 support for LCM. (OPSC-17225)
+
+
+# Release notes for OpsCenter 6.8.19
 30 May 2022
 
-## 6.8.19 DSE Backup Service
+## 6.8.19 OpsCenter Backup Service
 
 * When not using sstableloader for a point in time restore, opscenterd will no longer use the host id check to ensure the topology has not changed. Instead the point in time restore call relies on the topology check already done by restores not using sstableloader. (OPSC-17120)
 
-## 6.8.19 DSE Core
+## 6.8.19 OpsCenter Core
 
 * Added secret reduction when including spark-alwayson-sql.conf in a diagnostic tarball. (OPSC-17141)
 
-## 6.8.19 DSE Monitoring
+## 6.8.19 OpsCenter Monitoring
 
 * Fixed an issue that prevented the collection of data center based metrics. (OPSC-17016)
 
 # Release notes for 6.8.18
 10 Mar 2022
 
-## 6.8.18 DSE Backup Service
+## 6.8.18 OpsCenter Backup Service
 
 * When restoring from other location a host id and backup tag can now be specified. This can dramatically speed up the process of scanning a destination for snapshots. (OPSC-16989)
 * Fixed and issue that prevented the agent from retrying syncing files to a destination. (OPSC-17096)
 * Fixed a restore issue where the table truncate during a restore either wouldn't happen at all or would happen asynchronously. (OPSC-17111)
 
-## 6.8.18 DSE Core
+## 6.8.18 OpsCenter Core
 
 * Replaced log4j with reload4j and updated slf4j libraries to 1.7.36. (OPSC-17097)
 
