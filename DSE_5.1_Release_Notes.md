@@ -1,6 +1,25 @@
 # Release notes for DataStax Enterprise 5.1
 DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 5.1.35
+12 December 2022
+
+## Components versions for DSE 5.1.35
+ * Apache Solr™ 6.0.1.0.2939
+ * Apache Spark™ 2.0.2.43
+ * Apache TinkerPop™ 3.2.11-20210716-faea8d16
+ * Apache Tomcat® 8.5.79
+ * DSE Java Driver 1.8.3-dse+20201217 (DSE *internal-only* version)
+ * Netty 4.0.54.1.dse
+ * Spark JobServer 0.6.2.241
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 5.1.35 DSE Installer: Debian
+* Fixed Debian package dependencies on Python so that it can be installed on Ubuntu 22.04. (DSP-22993)
+
+
 # Release notes for 5.1.34
 14 November 2022
 
@@ -29,7 +48,6 @@ If you're developing applications, please refer to the [Java Driver documentatio
 
 ## 5.1.34 DSE Security
 Fixed an issue during DSE Spark cluster upgrade where InClusterAuthenticator would fail to compose and decode a token if it receives an old version token. (DSP-22723)
-
 
 ## 5.1.34 DSE CVE
 * Upgraded version of Apache Tomcat from 8.5.75 to 8.5.79. (DSP-22746, [CVE-2022-34305](https://nvd.nist.gov/vuln/detail/CVE-2022-34305), [CVE-2022-29885](https://nvd.nist.gov/vuln/detail/CVE-2022-29885))
