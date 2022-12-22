@@ -24,7 +24,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
 * Fixed Debian package dependencies on Python so that it can be installed on Ubuntu 22.04. (DSP-22961)
 
 ## 6.8.30 DSE CVE
-* Use com.google.cloud:libraries-bom:26.1.3 libraries for GCE backup and restore functionality. Upgraded Guava from 19.0 to 31.1-jre. (DSP-22904, [CVE-2020-8908](https://nvd.nist.gov/vuln/detail/CVE-2020-8908), [CVE-2018-10237](https://nvd.nist.gov/vuln/detail/CVE-2018-10237), [CVE-2020-7692](https://nvd.nist.gov/vuln/detail/CVE-2020-7692))
+* Use `com.google.cloud:libraries-bom:26.1.3` libraries for GCE backup and restore functionality. Upgraded Guava from 19.0 to 31.1-jre. (DSP-22904, [CVE-2020-8908](https://nvd.nist.gov/vuln/detail/CVE-2020-8908), [CVE-2018-10237](https://nvd.nist.gov/vuln/detail/CVE-2018-10237), [CVE-2020-7692](https://nvd.nist.gov/vuln/detail/CVE-2020-7692))
 * Updated Apache Ivy of DSE Spark to version 2.5.1. (DSP-22949, [CVE-2022-37865](https://nvd.nist.gov/vuln/detail/CVE-2022-37865), [CVE-2022-37866](https://nvd.nist.gov/vuln/detail/CVE-2022-37866))
 * Removed `lucene-benchmark` from `lucene-solr` as it contained unnecessary vulnerable library: `nekohtml:1.9.17`. (DSP-22902, [CVE-2022-28366](https://nvd.nist.gov/vuln/detail/CVE-2022-28366), [CVE-2022-24839](https://nvd.nist.gov/vuln/detail/CVE-2022-24839), [CVE-2022-29546](https://nvd.nist.gov/vuln/detail/CVE-2022-29546))
 
