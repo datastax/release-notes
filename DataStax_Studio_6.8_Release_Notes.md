@@ -1,5 +1,22 @@
 # Release notes for DataStax Studio 6.8
 
+# Release notes for DataStax Studio 6.8.26
+06 January 2023
+
+## Studio 6.8.26 IDE
+* Studio editor now recognizes additional table encryption options (Studio-3232):
+  * Compression classes: Encryptor, EncryptingLZ4Compressor, EncryptingDeflateCompressor, and EncryptingSnappyCompressor
+  * cipher_algorithm
+  * secret_key_strength
+  * system_key_file
+
+## Studio 6.8.26 Server
+* Fix incorrect timezone adjustment for date and timestamp results from Spark SQL queries. (Studio-3133)
+* Fix "keyspace not found" error executing a CQL statement with a mixed case keyspace name and in which Studio detects a syntax error. (Studio-3222)
+* Makes startup more resilient to unexpected errors. (Studio-3223)
+* Fix `NullPointerException` serializing notebooks due to uninitialized fields. (Studio-3224)
+* Update to Spring library version 5.3.20 to address CVE-2022-22970 and CVE-2022-22971. (Studio-3227 and Studio-2009)
+
 # Release notes for DataStax Studio 6.8.21
 31 March 2022
 
