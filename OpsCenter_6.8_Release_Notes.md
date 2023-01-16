@@ -1,5 +1,14 @@
 # Release notes for OpsCenter
 
+# Release notes for OpsCenter 6.8.23
+16 Jan 2023
+
+## 6.8.23 OpsCenter Core
+* Added stomp-setup-timeout to the address.yaml config options with a default of 30 seconds.
+  This resolves issues around initializing agent stomp connections.
+  We recommend increasing this setting to 120 seconds for large clusters. (OPSC-17235)
+
+
 # Release notes for OpsCenter 6.8.22
 14 Dec 2022
 
