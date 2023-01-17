@@ -86,6 +86,11 @@ The distributions are available as Docker images and tarballs, and both methods 
 This release is the first release based on Apache Pulsar 2.10.3. 
 However, this doesn't change the compatibility guarantee with older releases (2.10 2.x)
 
+Most relevant changes:
+- BookKeeper upgrade to 4.14.6.1.0.0 which is based on [Apache BookKeeper 4.14.6](https://bookkeeper.apache.org/release-notes#4146).
+- Group prometheus metrics: the metrics are displayed in a different order and the grouped by type.
+- Starlight for Kafka upgrade with Kafka transactions support. See the [release notes](https://github.com/datastax/starlight-for-kafka/releases/tag/v2.10.0.8).
+
 
 ### Most notable commits
 
