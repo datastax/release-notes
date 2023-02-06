@@ -1,0 +1,42 @@
+name: Release Notes Automation - product version auto tag creation
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches: ['master']
+
+jobs:
+  release_notes_auto_tag_creator:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+    steps:
+      - name: Create product release tag
+        # https://github.com/marketplace/actions/github-script
+        uses: actions/github-script@v6
+        with:
+          script: |
+            /**
+             * Automatically create tags when Release Notes PRs are merged
+             */
+
+            const pr_title = "${{ github.event.pull_request.title }}";
+            const match = pr_title.match(/^(DSE|OpsCenter|Studio|Luna Streaming)[ ]+(\d+\.\d+\.\d+(\.\d+)?)[ ]+release/i);
+            if (!match) {
+              core.warning("Auto tagging skipped as PR title doesn't match release notes regex.")
+              return
+            }
+
+            const product = match[1];
+            const version = match[2];
+
+            const product_version_tag = product.replace(' ', '').toLowerCase() + `-${version}`; 
+
+            await github.rest.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: `refs/tags/${product_version_tag}`,
+              sha: context.sha,
+            });
+
+            core.notice(`Tag "${product_version_tag}" created successfully.`);
