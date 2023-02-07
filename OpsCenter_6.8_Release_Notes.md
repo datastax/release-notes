@@ -3,6 +3,9 @@
 # Release notes for OpsCenter 6.8.23
 16 Jan 2023
 
+:warning: There's a known bug when enabling `posturl` causing OpsCenter failure to load properly.
+Users relying on this feature are recommended to use `6.8.20` or wait for the upcoming `6.8.24` which will address this issue.
+
 ## 6.8.23 OpsCenter Core
 * Added stomp-setup-timeout to the address.yaml config options with a default of 30 seconds.
   This resolves issues around initializing agent stomp connections.
@@ -12,6 +15,9 @@
 # Release notes for OpsCenter 6.8.22
 14 Dec 2022
 
+:warning: There's a known bug when enabling `posturl` causing OpsCenter failure to load properly.
+Users relying on this feature are recommended to use `6.8.20` or wait for the upcoming `6.8.24` which will address this issue.
+
 ## 6.8.22 OpsCenter Core
 * Added support for Ubuntu 22.04 (Jammy Jellyfish) package installation. (OPSC-17213)
 * Updated `sqlite-jdbc` to version 3.40.0.0. (OPSC-17237, [CVE-2019-19242](https://nvd.nist.gov/vuln/detail/CVE-2019-19242))
@@ -19,6 +25,9 @@
 
 # Release notes for OpsCenter 6.8.21
 22 Nov 2022
+
+:warning: There's a known bug when enabling `posturl` causing OpsCenter failure to load properly. 
+Users relying on this feature are recommended to use `6.8.20` or wait for the upcoming `6.8.24` which will address this issue.
 
 Maintenance release with no code changes from 6.8.20 version.
 Created to address issue that some users would see 6.8.20-rc2 as latest version instead of the official 6.8.20 release.  
