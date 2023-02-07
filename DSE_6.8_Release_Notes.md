@@ -2,6 +2,43 @@
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.8.32
+7 February 2023
+
+## Components versions for DSE 6.8.32
+ * Apache Solr™ 6.0.1.4.2947&ast;
+ * Apache Spark™ 2.4.0.24&ast;
+ * Apache TinkerPop™ 3.4.14-20230124-b2e47e9a&ast;
+ * Apache Tomcat® 8.5.84
+ * DSE Java Driver 1.10.0-dse-20220616 (DSE *internal-only* version)
+ * Netty 4.1.86.1.dse
+ * Spark JobServer 0.8.0.52
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.32 DSE Core
+* Added logging of unexpected failures in asynchronous reactive code. (DSP-23111)
+
+## 6.8.32 DSE Cassandra
+* Fixed incorrect count(*) results when hitting guardrail paging limits. (DSP-22813)
+
+## 6.8.32 DSE Search
+* Allow the use of date with time in Solr range queries on SimpleDateField fields (time will be truncated). (DSP-23085)
+
+## 6.8.32 DSE Node/DseTool
+* Fixed the CLI usage of namespace filtering in the dsetool utility. (DSP-23064)
+* Fixed the dsetool utility ‘managekmip revoke’ command to correctly set the ‘compromiseOccurrenceDate’ field. (DSP-23110)
+
+## 6.8.32 DSE Miscellaneous
+* Fixed error preventing cqlsh COPY from Mac M1 hardware. (DSP-22996)
+
+## 6.8.32 DSE CVE
+* Upgraded httpclient version to 4.5.14 version. (DSP-22831, [CVE-2020-13956](https://nvd.nist.gov/vuln/detail/CVE-2020-13956))
+* Upgraded Spark to version that is based on Hadoop 2.10.2. (DSP-22923, [CVE-2016-6811](https://nvd.nist.gov/vuln/detail/CVE-2016-6811), [CVE-2017-3162](https://nvd.nist.gov/vuln/detail/CVE-2017-3162))
+* Upgraded TinkerPop to a version that uses Hadoop 2.10.2. (DSP-23092, [CVE-2022-25168](https://nvd.nist.gov/vuln/detail/CVE-2022-25168), [CVE-2021-33036](https://nvd.nist.gov/vuln/detail/CVE-2021-33036), [CVE-2021-37404](https://nvd.nist.gov/vuln/detail/CVE-2021-37404), [CVE-2020-9492](https://nvd.nist.gov/vuln/detail/CVE-2020-9492), [CVE-2018-8009](https://nvd.nist.gov/vuln/detail/CVE-2018-8009), [CVE-2016-3086](https://nvd.nist.gov/vuln/detail/CVE-2016-3086), [CVE-2016-6811](https://nvd.nist.gov/vuln/detail/CVE-2016-6811), [CVE-2016-5393](https://nvd.nist.gov/vuln/detail/CVE-2016-5393))
+
+
 # Release notes for 6.8.31
 9 January 2023
 
