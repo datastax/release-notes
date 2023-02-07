@@ -1,6 +1,34 @@
 # Release notes for DataStax Enterprise 5.1
 DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 5.1.36
+7 February 2023
+
+## Components versions for DSE 5.1.36
+ * Apache Solr™ 6.0.1.0.2942&ast;
+ * Apache Spark™ 2.0.2.43
+ * Apache TinkerPop™ 3.2.11-20210716-faea8d16
+ * Apache Tomcat® 8.5.84&ast;
+ * DSE Java Driver 1.8.3-dse+20201217 (DSE *internal-only* version)
+ * Netty 4.0.54.1.dse
+ * Spark JobServer 0.6.2.242&ast;
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 5.1.36 DSE Search
+* Allow the use of date with time in Solr range queries on SimpleDateField fields (time will be truncated). (DSP-23085)
+
+## 5.1.36 DSE Node/DseTool
+* Fixed the CLI usage of namespace filtering in the dsetool utility. (DSP-23064)
+* Fixed the dsetool utility ‘managekmip revoke’ command to correctly set the ‘compromiseOccurrenceDate’ field. (DSP-23110)
+
+## 5.1.36 DSE CVE
+* Upgraded Apache Tomcat to version 8.5.84. (DSP-23017, [CVE-2022-34305](https://nvd.nist.gov/vuln/detail/CVE-2022-34305))
+* Upgraded httpclient version to 4.5.14 version. (DSP-22831, [CVE-2020-13956](https://nvd.nist.gov/vuln/detail/CVE-2020-13956))
+* Upgraded apache-shiro used by spark-jobserver to version 1.10.1. (DSP-23019, [CVE-2022-32532](https://nvd.nist.gov/vuln/detail/CVE-2022-32532), [CVE-2022-40664](https://nvd.nist.gov/vuln/detail/CVE-2022-40664))
+
+
 # Release notes for 5.1.35
 12 December 2022
 
