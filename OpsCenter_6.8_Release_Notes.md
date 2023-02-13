@@ -1,10 +1,18 @@
 # Release notes for OpsCenter
 
+# Release notes for OpsCenter 6.8.24
+13 Feb 2023
+
+## 6.8.24 OpsCenter Core
+* Fixed failure to connect to existing cluster when PostURL plugin was enabled. (OPSC-17262)
+* Modified PostURL plugin to accept as http success code anything in the range of 200 - 299. (OPSC-16144)
+
+
 # Release notes for OpsCenter 6.8.23
 16 Jan 2023
 
 :warning: There's a known bug when enabling `posturl` causing OpsCenter failure to load properly.
-Users relying on this feature are recommended to use `6.8.20` or wait for the upcoming `6.8.24` which will address this issue.
+Users relying on this feature should upgrade to the `6.8.24` release which addresses this issue (OPSC-17262).
 
 ## 6.8.23 OpsCenter Core
 * Added stomp-setup-timeout to the address.yaml config options with a default of 30 seconds.
@@ -16,7 +24,7 @@ Users relying on this feature are recommended to use `6.8.20` or wait for the up
 14 Dec 2022
 
 :warning: There's a known bug when enabling `posturl` causing OpsCenter failure to load properly.
-Users relying on this feature are recommended to use `6.8.20` or wait for the upcoming `6.8.24` which will address this issue.
+Users relying on this feature should upgrade to the `6.8.24` release which addresses this issue (OPSC-17262).
 
 ## 6.8.22 OpsCenter Core
 * Added support for Ubuntu 22.04 (Jammy Jellyfish) package installation. (OPSC-17213)
@@ -27,7 +35,7 @@ Users relying on this feature are recommended to use `6.8.20` or wait for the up
 22 Nov 2022
 
 :warning: There's a known bug when enabling `posturl` causing OpsCenter failure to load properly. 
-Users relying on this feature are recommended to use `6.8.20` or wait for the upcoming `6.8.24` which will address this issue.
+Users relying on this feature should upgrade to the `6.8.24` release which addresses this issue (OPSC-17262).
 
 Maintenance release with no code changes from 6.8.20 version.
 Created to address issue that some users would see 6.8.20-rc2 as latest version instead of the official 6.8.20 release.  
