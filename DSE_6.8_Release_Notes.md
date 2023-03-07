@@ -2,6 +2,41 @@
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.8.33
+6 March 2023
+
+## Components versions for DSE 6.8.33
+ * Apache Solr™ 6.0.1.4.2951&ast;
+ * Apache Spark™ 2.4.0.27&ast;
+ * Apache TinkerPop™ 3.4.14-20230215-3db1ca33&ast;
+ * Apache Tomcat® 8.5.84
+ * DSE Java Driver 1.10.0-dse-20220616 (DSE *internal-only* version)
+ * Netty 4.1.86.1.dse
+ * Spark JobServer 0.8.0.53&ast;
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.33 DSE Core
+* Exposed two configuration properties : {{-Dcassandra.counter_locks_per_core -Dcassandra.lwt_locks_per_core}} to be tuned for intensive counter batch workloads when observing WriteTimeoutExceptions.  For example, update the default of 1024 to {{-Dcassandra.lwt_locks_per_core=16384}}. (DSP-23163)
+* Fixed SAI index metrics initialization potentially causing dse start failure due to NullPointerException. (DSP-23192)
+
+## 6.8.33 DSE Miscellaneous
+* Fixed RPM package install for platforms requiring systemd services. (DSP-23146)
+
+## 6.8.33 DSE CVE
+* Upgraded libthrift to v0.9.3-1. (DSP-18096, [CVE-2018-1320](https://nvd.nist.gov/vuln/detail/CVE-2018-1320))
+* Upgraded groovy-sandbox to 1.20.1.DSE, which is a DataStax version based on OSS v1.20 that contains additional fixes. (DSP-21677, [CVE-2018-1000865](https://nvd.nist.gov/vuln/detail/CVE-2018-1000865))
+* Ported a security fix from Spark 2.4.6 that prevents RCE on unauthenticated Spark resource manager. (DSP-21782, [CVE-2020-9480](https://nvd.nist.gov/vuln/detail/CVE-2020-9480))
+* Removed Postgresql driver from spark-jobserver. (DSP-22894, [CVE-2002-21724](https://nvd.nist.gov/vuln/detail/CVE-2002-21724), [CVE-2020-13692](https://nvd.nist.gov/vuln/detail/CVE-2020-13692), [CVE-2018-10936](https://nvd.nist.gov/vuln/detail/CVE-2018-10936))
+* Upgraded insights-collectd to version 0.1.5 that removed libmodbus.so. (DSP-22809, [CVE-2022-0367](https://nvd.nist.gov/vuln/detail/CVE-2022-0367))
+* Upgraded Gson that is used in Solr to v2.10.1. (DSP-22798, [CVE-2022-25647](https://nvd.nist.gov/vuln/detail/CVE-2022-25647))
+* Upgraded Apache Derby used in Spark to v10.14.2.0. (DSP-23008, [CVE-2018-1313](https://nvd.nist.gov/vuln/detail/CVE-2018-1313))
+* Removed unused, outdated org.mortbay.jetty libraries. (DSP-23004, [CVE-2011-4461](https://nvd.nist.gov/vuln/detail/CVE-2011-4461))
+* Upgraded Jettison to 1.5.3, Xerces to 2.12.2, and Gson Hadoop to 2.10.1. Enforced the same Hadoop 2.10.2.x version for all DSE components. (DSP-23120, [CVE-2022-40149](https://nvd.nist.gov/vuln/detail/CVE-2022-40149), [CVE-2022-40150](https://nvd.nist.gov/vuln/detail/CVE-2022-40150), [CVE-2013-4002](https://nvd.nist.gov/vuln/detail/CVE-2013-4002))
+* Upgraded Jcommander used in SJK to v1.82. (DSP-21783, [SRCCLR-SID-22555](https://nvd.nist.gov/vuln/detail/SRCCLR-SID-22555))
+
+
 # Release notes for 6.8.32
 7 February 2023
 
