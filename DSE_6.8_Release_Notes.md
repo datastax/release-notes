@@ -18,8 +18,11 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## 6.8.33 DSE Core
-* Exposed two configuration properties : {{-Dcassandra.counter_locks_per_core -Dcassandra.lwt_locks_per_core}} to be tuned for intensive counter batch workloads when observing WriteTimeoutExceptions.  For example, update the default of 1024 to {{-Dcassandra.lwt_locks_per_core=16384}}. (DSP-23163)
+* Exposed two configuration properties: `-Dcassandra.counter_locks_per_core` and `-Dcassandra.lwt_locks_per_core` to be tuned for intensive counter batch workloads when observing WriteTimeoutExceptions.  For example, update the default of 1024 to `-Dcassandra.lwt_locks_per_core=16384`. (DSP-23163)
 * Fixed SAI index metrics initialization potentially causing dse start failure due to NullPointerException. (DSP-23192)
+
+## 6.8.33 DSE Platform
+* Added support for Rocky Linux 9. (DSP-22732)
 
 ## 6.8.33 DSE Miscellaneous
 * Fixed RPM package install for platforms requiring systemd services. (DSP-23146)
