@@ -261,13 +261,11 @@
 | EL | 1.0 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Elephant Bird Hadoop Compatibility | 4.3 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | empty | 1.0.0 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
-| Error Prone shaded javac | 9-dev-r4023-3 | [GPL-2.0-with-classpath-exception](https://spdx.org/licenses/GPL-2.0-with-classpath-exception.html) |
 | error-prone annotations | 2.11.0, 2.2.0 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Esri Geometry API for Java | 1.2.1 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | exp4j | 0.4.8 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Expression Language | 3.4.300 | [EPL-1.0](https://spdx.org/licenses/EPL-1.0.html) |
 | Extension Registry Support | 3.5.101 | [EPL-1.0](https://spdx.org/licenses/EPL-1.0.html) |
-| FastODS | 0.6.0 | [GPL-3.0](https://spdx.org/licenses/GPL-3.0.html) |
 | fastparse | 0.4.2 | [MIT](https://spdx.org/licenses/MIT.html) |
 | fastparse-utils | 0.4.2 | [MIT](https://spdx.org/licenses/MIT.html) |
 | Fastutil | 6.5.7 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
@@ -474,11 +472,6 @@
 | JLine | 0.9.94, 2.12, 2.14.6 | [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html) |
 | JMatIO | 1.2 | [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html) |
 | JMES Path Query library | 1.11.892 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
-| JMH Core | 1.21 | [GPL-2.0-with-classpath-exception](https://spdx.org/licenses/GPL-2.0-with-classpath-exception.html) |
-| JMH Generators: Annotation Processors | 1.21 | [GPL-2.0-with-classpath-exception](https://spdx.org/licenses/GPL-2.0-with-classpath-exception.html) |
-| JMH Generators: ASM | 1.21 | [GPL-2.0-with-classpath-exception](https://spdx.org/licenses/GPL-2.0-with-classpath-exception.html) |
-| JMH Generators: Bytecode | 1.21 | [GPL-2.0-with-classpath-exception](https://spdx.org/licenses/GPL-2.0-with-classpath-exception.html) |
-| JMH Generators: Reflection | 1.21 | [GPL-2.0-with-classpath-exception](https://spdx.org/licenses/GPL-2.0-with-classpath-exception.html) |
 | jnr-constants | 0.9.9 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | jnr-ffi | 2.1.7 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | jnr-posix | 3.0.44 | [CPL-1.0](https://spdx.org/licenses/CPL-1.0.html) |
@@ -765,4 +758,4 @@
 | zinc Persist | 1.3.0 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | zstd-jni | 1.3.2-2 | [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html) |
 
-(*) Lists licenses in use by DataStax. Versions having different licenses will report individual licenses.
+(*) Lists licenses in use by DataStax. In cases with multiple versions of a component, and the versions have different licenses, each individual license is listed.
