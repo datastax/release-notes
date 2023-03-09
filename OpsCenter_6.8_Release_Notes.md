@@ -1,5 +1,14 @@
 # Release notes for OpsCenter
 
+# Release notes for OpsCenter 6.8.25
+9 Mar 2023
+
+## 6.8.25 OpsCenter Core
+* Fixed startup issue when enabling SSL in IPv6 configurations. (OPSC-17269)
+* Fixed authentication and failover redirects in IPv6 configurations. (OPSC-17273)
+* Added sudoers permissions to start/stop datastax-agent from cassandra user without requesting for password. (OPSC-17268)
+
+
 # Release notes for OpsCenter 6.8.24
 13 Feb 2023
 
