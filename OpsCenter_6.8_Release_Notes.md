@@ -334,6 +334,9 @@ specified. The `require_two_way_ssl` config parameter has been removed and the c
 ## OpsCenter 6.8.4 UI
 * OpsCenter now cleans up directories created during a diagnostic. (OPSC-16300)
 
+## OpsCenter 6.8.0 Backup Service
+* OpsCenter now uses sha256 instead of md5 to generate a unique identifier for backup files stored on a remote destination. Because of this change the first backup after upgrading may take significantly longer and more disk space as all files will be uploaded rather than only the files since the last backup.  (OPSC-14381)
+
 # Release notes for previous versions
 Release notes for previous OpsCenter patch releases can be found here:
 https://docs.datastax.com/en/opscenter/6.8/opsc/release_notes/opscReleaseNotes_g.html
