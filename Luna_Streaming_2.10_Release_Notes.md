@@ -320,6 +320,11 @@ This is a maintenance release containing important security and stability update
 
 </details>
 
+## Luna Streaming Distribution 2.10 3.4.1
+This is a hotfix release containing the upgrade of the BigQuery Sink connector.
+Only the `-experimental` docker image has been updated.
+
+
 ## Luna Streaming Distribution 2.10 3.4
 This is a maintenance release containing important security and stability updates.
 
