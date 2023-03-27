@@ -650,9 +650,9 @@
 | rxscala | 0.26.5 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Saxon-HE | 9.9.1-5 | [MPL-2.0](https://spdx.org/licenses/MPL-2.0.html) |
 | SBinary | 0.4.4 | [MIT](https://spdx.org/licenses/MIT.html) |
-| Scala Compiler | 2.11.12, 2.12.8 | [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html) OR [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html) AND [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) OR [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
+| Scala Compiler | 2.11.12, 2.12.8 | [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html) AND [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Scala Library | 2.11.12, 2.12.8 | [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html) AND [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
-| scala-async | 0.9.6 | [CAL-1.0](https://spdx.org/licenses/CAL-1.0.html) |
+| scala-async | 0.9.6 | new-BSD |
 | scala-logging | 3.5.0 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | scala-parser-combinators | 1.0.6, 1.1.2 | [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html) AND [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | scala-xml | 1.0.5, 1.0.6 | [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html) |
