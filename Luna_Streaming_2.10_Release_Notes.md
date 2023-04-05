@@ -5,8 +5,8 @@ Luna Streaming Distribution 2.10 is compatible with Apache Pulsar&trade; 2.10.0 
 
 ### Components
 
-   * [Datastax Luna Streaming](https://github.com/datastax/pulsar) (Apache Pulsar 2.10 fork)
-   * [Datastax BookKeeper](https://github.com/datastax/bookkeeper) (Apache BookKeeper fork)
+   * [DataStax Luna Streaming](https://github.com/datastax/pulsar) (Apache Pulsar 2.10 fork)
+   * [DataStax BookKeeper](https://github.com/datastax/bookkeeper) (Apache BookKeeper fork)
    * DataStax Burnell
    * DataStax Pulsar Admin Console
    * DataStax Pulsar Heartbeat
@@ -75,7 +75,7 @@ The distributions are available as Docker images and tarballs, and both methods 
 
 * **lunastreaming**: the basic Luna Streaming Distribution **including Pulsar SQL** feature.
 * **lunastreaming-core**: the basic Luna Streaming Distribution **without Pulsar SQL** feature. Pick this distribution if you don't need Pulsar SQL features.
-* **lunastreaming-all**: contains the Core Luna Streaming Distribution, including **Pulsar Offloaders** and the **Datastax Pulsar IO Connectors** listed above. Pick this distribution if you want the Datastax connectors or the offloading feature.
+* **lunastreaming-all**: contains the Core Luna Streaming Distribution, including **Pulsar Offloaders** and the **DataStax Pulsar IO Connectors** listed above. Pick this distribution if you want the DataStax connectors or the offloading feature.
 * **lunastreaming-experimental**: extends the **all** distribution with experimental features and connectors. This distribution is only available as a Docker image.
 
 
@@ -333,7 +333,7 @@ This is a maintenance release containing important security and stability update
 * [eacedf95f9c](https://github.com/datastax/pulsar/commit/eacedf95f9c) Upgrade BookKeeper to 4.14.7.1.0.1
 * [7a5079a5978](https://github.com/datastax/pulsar/commit/7a5079a5978) [cherry-pick][branch-2.10] KCA: picking fixes from master (#19788)
 * [27800ffbd32](https://github.com/datastax/pulsar/commit/27800ffbd32) [fix][sec] Upgrade kafka client to 3.4.0 to fix CVE-2023-25194 (#19527)
-* [e707c493c80](https://github.com/datastax/pulsar/commit/e707c493c80) Upgrade Datastax BookKeeper to 4.14.7.1.0.0
+* [e707c493c80](https://github.com/datastax/pulsar/commit/e707c493c80) Upgrade DataStax BookKeeper to 4.14.7.1.0.0
 * [335ab8abd57](https://github.com/datastax/pulsar/commit/335ab8abd57) [improve][offloaders] Automatically evict Offloaded Ledgers from memory (#168)
 * [b7a6883b532](https://github.com/datastax/pulsar/commit/b7a6883b532) [fix][broker] Fix LedgerOffloaderStatsImpl singleton close method (#19666)
 * [142f2d84e3b](https://github.com/datastax/pulsar/commit/142f2d84e3b) [cherry-pick][branch-2.10] Fix deadlock causes session notification not to work (#19754) (#19768)
@@ -1578,7 +1578,7 @@ Most relevant changes:
 * [2ee664660af](https://github.com/datastax/pulsar/commit/2ee664660af) [fix][broker] Pass subName for subscription operations in ServerCnx (#19184)
 * [9920b081254](https://github.com/datastax/pulsar/commit/9920b081254) [fix][broker]optimize the shutdown sequence of broker service when it close (#16756)
 * [f6859e6b8d0](https://github.com/datastax/pulsar/commit/f6859e6b8d0) [fix][broker] Remove timestamp from Promtheus metrics (#17419) - reapply
-* [bf1729f9916](https://github.com/datastax/pulsar/commit/bf1729f9916) Upgrade Datastax BookKeeper to 4.14.6.1.0.0
+* [bf1729f9916](https://github.com/datastax/pulsar/commit/bf1729f9916) Upgrade DataStax BookKeeper to 4.14.6.1.0.0
 * [4febb562dc9](https://github.com/datastax/pulsar/commit/4febb562dc9) Bump snappy zstd version to fix CompressorCodecBackwardCompatTest on apple m1 (#15698)
 * [cc5af4f8712](https://github.com/datastax/pulsar/commit/cc5af4f8712) Debezium sources: Support loading config from secrets (#19163)
 * [32304aac9c1](https://github.com/datastax/pulsar/commit/32304aac9c1) [improve][broker] Add logs for why namespace bundle been split (#19003)
@@ -6635,7 +6635,7 @@ This is a maintenance release containing important stability updates.
 * [2dba8e8084f](https://github.com/datastax/pulsar/commit/2dba8e8084f) Offloader metrics (#13833)
 * [51e35187b50](https://github.com/datastax/pulsar/commit/51e35187b50) Pulsar Functions: allow a Function<GenericObject,?> to access the original Schema of the Message and use it (#14847)
 * [b58211de4d4](https://github.com/datastax/pulsar/commit/b58211de4d4) Fix pulsar-client-all shade - include BookKeeper libraries
-* [babea4bfb28](https://github.com/datastax/pulsar/commit/babea4bfb28) Upgrade to Datastax BookKeeper 4.14.5.1.0.0
+* [babea4bfb28](https://github.com/datastax/pulsar/commit/babea4bfb28) Upgrade to DataStax BookKeeper 4.14.5.1.0.0
 * [19daad5a5bb](https://github.com/datastax/pulsar/commit/19daad5a5bb) [fix][test] Add receive timeout to avoid block thread. (#15088)
 * [41417f9d8dd](https://github.com/datastax/pulsar/commit/41417f9d8dd) [WebSocket] Fix MultiTopicReader#getConsumer ClassCastException (#15534)
 
