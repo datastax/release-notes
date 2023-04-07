@@ -23,6 +23,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
 
 ## 6.8.33 DSE Platform
 * Added support for Rocky Linux 9. (DSP-22732)
+* Added support for Rocky Linux 8. (DSP-23170)
 
 ## 6.8.33 DSE Miscellaneous
 * Fixed RPM package install for platforms requiring systemd services. (DSP-23146)
