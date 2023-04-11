@@ -4,7 +4,7 @@
 |:-----------|:----------:|:-------------|
 | Airline - IO Library | 2.2.0 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Airline - Library | 2.2.0 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
-| Alfredo | 0.1.7.3 | UNKNOWN |
+| Alfredo | 0.1.7.3 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Amazon Ion Java | 1.0.2 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | An open source Java toolkit for Amazon S3 | 0.7.1, 0.9.0, 0.9.4 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Animal Sniffer Annotations | 1.18 | [MIT](https://spdx.org/licenses/MIT.html) |
@@ -24,7 +24,7 @@
 | Apache Avro | 1.7.4, 1.7.7 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Apache Avro IPC | 1.7.7 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Apache Avro Mapred API | 1.7.7 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
-| Apache Commons BeanUtils | 1.7.0, 1.9.3, 1.9.4 | UNKNOWN AND [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) AND [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
+| Apache Commons BeanUtils | 1.7.0, 1.9.3, 1.9.4 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Apache Commons CLI | 1.3.1 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Apache Commons Codec | 1.15 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Apache Commons Collections | 4.1 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
@@ -81,7 +81,7 @@
 | Apache Parquet Jackson | 1.7.0 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Apache ServiceMix :: Bundles :: ANTRL | 2.7.7_5 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Apache Solr (module: Solrj) | 6.0.1.0.2961 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
-| Apache Solr Web UI | 6.0.1.0.2961 | UNKNOWN |
+| Apache Solr Web UI | 6.0.1.0.2961 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Apache Thrift | 0.9.2, 0.9.3 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Apache TinkerPop :: Gremlin Console | 3.2.11-20210716-faea8d16 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Apache TinkerPop :: Gremlin Core | 3.2.11-20210716-faea8d16 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
@@ -188,7 +188,7 @@
 | ConcurrentLinkedHashMap | 1.4 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | config | 1.3.0 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | core | 1.1.1, 2.3.2 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
-| Cryptsoft KMIP | 1.7.1e | UNKNOWN |
+| Cryptsoft KMIP | 1.7.1e | Commercial license agreement with Cryptsoft |
 | Curator Client | 2.7.1 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Curator Framework | 2.7.1 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Curator Recipes | 2.7.1 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
@@ -260,7 +260,6 @@
 | htrace-core | 3.1.0-incubating | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | HttpClient | 3.1 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | HttpCore | 4.1.2, 4.4.16 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
-| IntelliJ IDEA annotations | 9.0 | UNKNOWN |
 | IO | 1.3.0 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | J2ObjC Annotations | 1.3 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Jackson | 1.9.13.1.dse | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
@@ -398,7 +397,7 @@
 | JUnitParams | 1.0.6 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | JVM Attach API | 1.2 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | JVM Integration for Metrics | 3.1.2 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
-| Jython | 2.7.1, 2.7.1b3 | [Python-2.0](https://spdx.org/licenses/Python-2.0.html) AND UNKNOWN |
+| Jython | 2.7.1, 2.7.1b3 | [Python-2.0](https://spdx.org/licenses/Python-2.0.html) |
 | kosmosfs | 0.3 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Kryo | 3.0.3 | [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html) |
 | kryo serializers | 0.37 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
@@ -466,7 +465,7 @@
 | SBinary | 0.4.4 | [MIT](https://spdx.org/licenses/MIT.html) |
 | Scala Compiler | 2.11.8, 2.12.8 | [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html) AND [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Scala Library | 2.11.8, 2.12.8 | [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html) AND [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
-| scala-async | 0.9.6 | [CAL-1.0](https://spdx.org/licenses/CAL-1.0.html) |
+| scala-async | 0.9.6 | new-BSD |
 | scala-logging | 3.5.0 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | scala-parser-combinators | 1.0.4, 1.0.6, 1.1.2 | [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html) AND [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html) AND [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | scala-xml | 1.0.2, 1.0.4, 1.0.5, 1.0.6 | [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html) |
@@ -491,8 +490,8 @@
 | Snappy for Java | 1.0.4.1, 1.1.1.6, 1.1.2.6 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | snowball-stemmer | 1.3.0.581.1 | [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html) |
 | sourcecode | 0.1.3 | [MIT](https://spdx.org/licenses/MIT.html) |
-| Spark Job Server API | 0.6.2.243 | UNKNOWN |
-| Spark Job Server Extras | 0.6.2.243 | UNKNOWN |
+| Spark Job Server API | 0.6.2.243 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
+| Spark Job Server Extras | 0.6.2.243 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Spatial4J | 0.6 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | spire | 0.7.4 | [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html) |
 | spire-macros | 0.7.4 | [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html) |
