@@ -2,6 +2,42 @@
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.8.34
+11 April 2023
+
+## Components versions for DSE 6.8.34
+ * Apache Solr™ 6.0.1.4.2959&ast;
+ * Apache Spark™ 2.4.0.27
+ * Apache TinkerPop™ 3.4.14-20230215-3db1ca33
+ * Apache Tomcat® 8.5.87&ast;
+ * DSE Java Driver 1.10.0-dse-20220616 (DSE *internal-only* version)
+ * Netty 4.1.86.1.dse
+ * Spark JobServer 0.8.0.53
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.34 DSE Core
+* Set default systemd dse.service startup timeout to 7 minutes. (DSP-23225)
+
+## 6.8.34 DSE Cassandra
+* Fixed memory leak that can happen while handling inbound large messages. (DSP-23156)
+
+## 6.8.34 DSE Search
+* Fixed race condition occurring in DSE Search with enabled real-time (RT) indexing that was causing client-side failures under query-heavy workload. (DSP-23184)
+
+## 6.8.34 DSE Build
+* Updated OS versions used to create DSE packages (Ubuntu 12.04 for `.deb` packages, and CentOS 7.9 for `.rpm` packages). (DSP-22750)
+
+## 6.8.34 DSE Security
+* Fixed regression scenario where DSE was not using keys on the KMIP server that were created either by a previous DSE version or outside of DSE. Regression was introduced in DSE v6.8.22. (DSP-23182)
+
+## 6.8.34 DSE CVE
+* Upgraded `org.json:json` to `20230227` to resolve a Denial of Service (DoS) vulnerability. In addition, upgraded `esri-geometry-api` to `2.2.4`. (DSP-23187, [CWE-400](https://nvd.nist.gov/vuln/detail/CWE-400))
+* Upgraded commons-fileupload to 1.5. Added a solrconfig.xml setting that limits the number of files allowed in multipart update requests. (DSP-23188, [CVE-2023-24998](https://nvd.nist.gov/vuln/detail/CVE-2023-24998))
+* Upgraded Apache Tomcat to version 8.5.87. (DSP-23205, [CVE-2023-24998](https://nvd.nist.gov/vuln/detail/CVE-2023-24998))
+
+
 # Release notes for 6.8.33
 6 March 2023
 
