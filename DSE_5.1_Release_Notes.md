@@ -1,6 +1,45 @@
 # Release notes for DataStax Enterprise 5.1
 DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 5.1.37
+11 April 2023
+
+## Components versions for DSE 5.1.37
+ * Apache Solr™ 6.0.1.0.2961&ast;
+ * Apache Spark™ 2.0.2.43
+ * Apache TinkerPop™ 3.2.11-20210716-faea8d16
+ * Apache Tomcat® 8.5.87&ast;
+ * DSE Java Driver 1.8.3-dse+20201217 (DSE *internal-only* version)
+ * Netty 4.0.54.1.dse
+ * Spark JobServer 0.6.2.243&ast;
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 5.1.37 DSE Core
+* Set default systemd dse.service startup timeout to 7 minutes. (DSP-23225)
+
+## 5.1.37 DSE Build
+* Updated OS versions used to create DSE packages (Ubuntu 12.04 for `.deb` packages, and CentOS 7.9 for `.rpm` packages). (DSP-22750)
+
+## 5.1.37 DSE Insights
+* Upgraded insights-collectd to version 0.1.5 that removed libmodbus.so. (DSP-22809, [CVE-2022-0367](https://nvd.nist.gov/vuln/detail/CVE-2022-0367))
+
+## 5.1.37 DSE Platform
+* Added support for Rocky Linux 8. (DSP-23209)
+* Added support for Rocky Linux 9. (DSP-23227)
+
+## 5.1.37 DSE Miscellaneous
+* Fixed RPM package install for platforms requiring systemd services. (DSP-23218)
+
+## 5.1.37 DSE CVE
+* Upgraded groovy-sandbox to 1.20.1.DSE, which is a DataStax version based on OSS v1.20 that contains additional fixes. (DSP-21677, [CVE-2018-1000865](https://nvd.nist.gov/vuln/detail/CVE-2018-1000865))
+* Upgraded `org.json:json` to `20230227` to resolve a Denial of Service (DoS) vulnerability. In addition, upgraded `esri-geometry-api` to `2.2.4`. (DSP-23187, [CWE-400](https://nvd.nist.gov/vuln/detail/CWE-400))
+* Upgraded commons-fileupload to 1.5. Added a solrconfig.xml setting that limits the number of files allowed in multipart update requests. (DSP-23188, [CVE-2023-24998](https://nvd.nist.gov/vuln/detail/CVE-2023-24998))
+* Removed Postgresql driver from spark-jobserver. (DSP-22894, [CVE-2002-21724](https://nvd.nist.gov/vuln/detail/CVE-2002-21724), [CVE-2020-13692](https://nvd.nist.gov/vuln/detail/CVE-2020-13692), [CVE-2018-10936](https://nvd.nist.gov/vuln/detail/CVE-2018-10936))
+* Upgraded Apache Tomcat to version 8.5.87. (DSP-23205, [CVE-2023-24998](https://nvd.nist.gov/vuln/detail/CVE-2023-24998))
+
+
 # Release notes for 5.1.36
 7 February 2023
 
