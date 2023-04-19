@@ -15,16 +15,16 @@
 ## 6.8.26 OpsCenter Backup Service
 * Resolved an issue with stalled backups. If OpsCenter does not receive a status update from an agent within a given timeout, OpsCenter will query the agent directly to see if the backup is complete. The backup will be marked as complete or failed based on the agent's response. The timeout can be specified in seconds using opscenterd.conf [backup_service] stomp_status_update_timeout. The default timeout is 5 minutes. (OPSC-17196)
 
-## 6.8.20 OpsCenter Monitoring
+## 6.8.26 OpsCenter Monitoring
 * Fixed an issue in the email plugin that caused dates with non-ascii characters to display incorrectly. (OPSC-17258)
 * Implemented a 'ascii_body' config option in email.conf to allow the email to be reverted to plain text if needed. (OPSC-17282)
 * Added the ability to suspend event notifications. The ui for this can be found on the alert rules management dialog. (OPSC-17067)
 * Best practice failure notifications now include the details that are displayed in the UI. (OPSC-17256)
 
-## 6.8.20 OpsCenter Life Cycle Manager
+## 6.8.26 OpsCenter Life Cycle Manager
 * LCM will no longer automatically fail when encountering an unknown operating system. (OPSC-17215)
 
-## 6.8.20 OpsCenter Platforms
+## 6.8.26 OpsCenter Platforms
 * Adds support for Red Hat Enterprise Linux 8 and Oracle Linux 8 versions. (OPSC-17110)
 * Adds support for Rocky Linux 8. (OPSC-17270)
 
