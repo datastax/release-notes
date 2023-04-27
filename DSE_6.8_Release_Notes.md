@@ -68,7 +68,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
 * Upgraded libthrift to v0.9.3-1. (DSP-18096, [CVE-2018-1320](https://nvd.nist.gov/vuln/detail/CVE-2018-1320))
 * Upgraded groovy-sandbox to 1.20.1.DSE, which is a DataStax version based on OSS v1.20 that contains additional fixes. (DSP-21677, [CVE-2018-1000865](https://nvd.nist.gov/vuln/detail/CVE-2018-1000865))
 * Ported a security fix from Spark 2.4.6 that prevents RCE on unauthenticated Spark resource manager. (DSP-21782, [CVE-2020-9480](https://nvd.nist.gov/vuln/detail/CVE-2020-9480))
-* Removed Postgresql driver from spark-jobserver. (DSP-22894, [CVE-2002-21724](https://nvd.nist.gov/vuln/detail/CVE-2002-21724), [CVE-2020-13692](https://nvd.nist.gov/vuln/detail/CVE-2020-13692), [CVE-2018-10936](https://nvd.nist.gov/vuln/detail/CVE-2018-10936))
+* Removed Postgresql driver from spark-jobserver. (DSP-22894, [CVE-2022-21724](https://nvd.nist.gov/vuln/detail/CVE-2002-21724), [CVE-2020-13692](https://nvd.nist.gov/vuln/detail/CVE-2020-13692), [CVE-2018-10936](https://nvd.nist.gov/vuln/detail/CVE-2018-10936))
 * Upgraded insights-collectd to version 0.1.5 that removed libmodbus.so. (DSP-22809, [CVE-2022-0367](https://nvd.nist.gov/vuln/detail/CVE-2022-0367))
 * Upgraded Gson that is used in Solr to v2.10.1. (DSP-22798, [CVE-2022-25647](https://nvd.nist.gov/vuln/detail/CVE-2022-25647))
 * Upgraded Apache Derby used in Spark to v10.14.2.0. (DSP-23008, [CVE-2018-1313](https://nvd.nist.gov/vuln/detail/CVE-2018-1313))
