@@ -27,6 +27,7 @@
 ## 6.8.26 OpsCenter Platforms
 * Adds support for Red Hat Enterprise Linux 8 and Oracle Linux 8 versions. (OPSC-17110)
 * Adds support for Rocky Linux 8. (OPSC-17270)
+* Adds support for Rocky Linux 9, Oracle Linux 9, and Red Hat Enterprise Linux 9. WARNING: When using ssh keys to install agents automatically or with LCM, RSA keys will not work on these platforms. Use ECDSA 256 or ED25519 256 instead. (OPSC-17286)
 
 
 # Release notes for OpsCenter 6.8.25
