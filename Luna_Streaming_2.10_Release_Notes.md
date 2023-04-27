@@ -76,10 +76,101 @@ The distributions are available as Docker images and tarballs, and both methods 
 * **lunastreaming**: the basic Luna Streaming Distribution **including Pulsar SQL** feature.
 * **lunastreaming-core**: the basic Luna Streaming Distribution **without Pulsar SQL** feature. Pick this distribution if you don't need Pulsar SQL features.
 * **lunastreaming-all**: contains the Core Luna Streaming Distribution, including **Pulsar Offloaders** and the **DataStax Pulsar IO Connectors** listed above. Pick this distribution if you want the DataStax connectors or the offloading feature.
-* **lunastreaming-experimental**: extends the **all** distribution with experimental features and connectors. This distribution is only available as a Docker image.
+* [DEPRECATED] **lunastreaming-experimental**: extends the **all** distribution with experimental features and connectors. This distribution is only available as a Docker image.
 
 
 # Releases
+
+This is a maintenance release containing important stability updates.
+
+### Most notable commits
+* [175cf7afc48](https://github.com/datastax/pulsar/commit/175cf7afc48) [improve][fn] Allow unknown fields in connectors config (#20116)
+* [6b07892eda7](https://github.com/datastax/pulsar/commit/6b07892eda7) [fix][authentication] Store the original authentication data (#19519)
+* [5c7ec68ab31](https://github.com/datastax/pulsar/commit/5c7ec68ab31) [fix][broker] Add missing catches for AssertionError
+* [8eb96c8f324](https://github.com/datastax/pulsar/commit/8eb96c8f324) [fix][fn] Supply download auth params when provided for k8s runtime (#20144)
+* [9f841a83628](https://github.com/datastax/pulsar/commit/9f841a83628) [improve] AuthenticationProviderOpenID k8s error logs (#20135)
+* [fb2c96a1ed3](https://github.com/datastax/pulsar/commit/fb2c96a1ed3) [fix][broker] Implement authenticateAsync for AuthenticationProviderList (#20132)
+* [139209a9ab3](https://github.com/datastax/pulsar/commit/139209a9ab3) [fix][proxy] Refresh auth data if ProxyLookupRequests (#20067)
+* [6332aa4ddf0](https://github.com/datastax/pulsar/commit/6332aa4ddf0) [improve][proxy] Only create ConnectionPool when needed (#20062)
+* [f8370926504](https://github.com/datastax/pulsar/commit/f8370926504) [feat] PIP-257: Add AuthenticationProviderOpenID (#19849)
+* [c2a93ec2181](https://github.com/datastax/pulsar/commit/c2a93ec2181) [feat][fn] PIP-257: Support mounting k8s ServiceAccount for OIDC auth (#19888)
+* [a1450f8c1d2](https://github.com/datastax/pulsar/commit/a1450f8c1d2) [feat][broker] PIP 97: Implement for ServerCnx (#19409)
+* [b5b252bc6b8](https://github.com/datastax/pulsar/commit/b5b252bc6b8) [feat][proxy] PIP 97: Implement for ProxyConnection (#19292)
+* [3d2839d4a3c](https://github.com/datastax/pulsar/commit/3d2839d4a3c) [fix][broker] TokenAuthenticationState: authenticate token only once (#19314)
+* [d7d38d7ab1d](https://github.com/datastax/pulsar/commit/d7d38d7ab1d) [improve][broker] ServerCnx: go to Failed state when auth fails (#19312)
+* [a347f7fe441](https://github.com/datastax/pulsar/commit/a347f7fe441) [improve][broker] Replace authenticate with authenticateAsync (#19313)
+* [82fe8a957c5](https://github.com/datastax/pulsar/commit/82fe8a957c5) [feat][broker] OneStageAuth State: move authn out of constructor (#19295)
+* [6b0a78e8657](https://github.com/datastax/pulsar/commit/6b0a78e8657) [fix][broker] Let TokenAuthState update authenticationDataSource (#19282)
+* [5e99e8add97](https://github.com/datastax/pulsar/commit/5e99e8add97) [improve][broker] Documentation for AuthenticationState contract (#19283)
+* [7b7ee933d45](https://github.com/datastax/pulsar/commit/7b7ee933d45) [cleanup][proxy] Remove unused AuthenticationDataSource variable (#19278)
+* [9645bc48442](https://github.com/datastax/pulsar/commit/9645bc48442) [feat][broker] Update AuthenticationProvider to simplify HTTP Authn (#19197)
+* [cf0f459952c](https://github.com/datastax/pulsar/commit/cf0f459952c) [improve][broker] Unreasonable AuthenticationException reference (#18502)
+* [f4c2d9dd292](https://github.com/datastax/pulsar/commit/f4c2d9dd292) [fix][broker] Fix token expiration (#16016)
+* [7e87e9dba0c](https://github.com/datastax/pulsar/commit/7e87e9dba0c) [broker][authentication]Support pass http auth status (#14044)
+* [1502a7db17a](https://github.com/datastax/pulsar/commit/1502a7db17a) [PIP 97] Update Authentication Interfaces to Include Async Authentication Methods (#12104)
+* [b47d8c63e1c](https://github.com/datastax/pulsar/commit/b47d8c63e1c) [fix][io] KCA: handle kafka sources that use commitRecord (#176 )
+
+### `lunastreaming-all` distribution
+<details><summary>Sinks</summary>
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [cassandra-enhanced](https://github.com/datastax/pulsar-sink) | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | 1.6.9 | cassandra-enhanced-pulsar-sink-1.6.9-nar.nar |
+| [cloud-storage](https://github.com/streamnative/pulsar-io-cloud-storage) | Writes data into cloud storage | 2.10.0 | pulsar-io-cloud-storage-2.10.0.nar |
+| [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.4.3 | pulsar-io-data-generator-2.10.4.3.nar |
+| [elastic_search](https://pulsar.apache.org/docs/io-connectors) | Writes data into Elastic Search | 2.10.4.3 | pulsar-io-elastic-search-2.10.4.3.nar |
+| [http](https://pulsar.apache.org/docs/io-connectors) | Writes data to an HTTP server (Webhook) | 2.10.4.3 | pulsar-io-http-2.10.4.3.nar |
+| [jdbc-clickhouse](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for ClickHouse | 2.10.4.3 | pulsar-io-jdbc-clickhouse-2.10.4.3.nar |
+| [jdbc-mariadb](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for MariaDB | 2.10.4.3 | pulsar-io-jdbc-mariadb-2.10.4.3.nar |
+| [jdbc-postgres](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for PostgreSQL | 2.10.4.3 | pulsar-io-jdbc-postgres-2.10.4.3.nar |
+| [jdbc-sqlite](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for SQLite | 2.10.4.3 | pulsar-io-jdbc-sqlite-2.10.4.3.nar |
+| [kafka](https://pulsar.apache.org/docs/io-connectors) | Kafka source and sink connector | 2.10.4.3 | pulsar-io-kafka-2.10.4.3.nar |
+| [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.10.4.3 | pulsar-io-kinesis-2.10.4.3.nar |
+| [snowflake](https://github.com/datastax/snowflake-connector) | Snowflake Connector | 0.1.13 | pulsar-snowflake-connector-0.1.13-alpha.nar |
+</details>
+<details><summary>Sources</summary>
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [cassandra-source](https://github.com/datastax/cdc-for-apache-cassandra) | Read data from Cassandra | 2.2.5 | pulsar-cassandra-source-2.2.5.nar |
+| [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.4.3 | pulsar-io-data-generator-2.10.4.3.nar |
+| [debezium-mongodb](https://pulsar.apache.org/docs/io-connectors) | Debezium MongoDb Source | 2.10.4.3 | pulsar-io-debezium-mongodb-2.10.4.3.nar |
+| [debezium-mssql](https://pulsar.apache.org/docs/io-connectors) | Debezium Microsoft SQL Server Source | 2.10.4.3 | pulsar-io-debezium-mssql-2.10.4.3.nar |
+| [debezium-mysql](https://pulsar.apache.org/docs/io-connectors) | Debezium MySql Source | 2.10.4.3 | pulsar-io-debezium-mysql-2.10.4.3.nar |
+| [debezium-oracle](https://pulsar.apache.org/docs/io-connectors) | Debezium Oracle Source | 2.10.4.3 | pulsar-io-debezium-oracle-2.10.4.3.nar |
+| [debezium-postgres](https://pulsar.apache.org/docs/io-connectors) | Debezium Postgres Source | 2.10.4.3 | pulsar-io-debezium-postgres-2.10.4.3.nar |
+| [kafka](https://pulsar.apache.org/docs/io-connectors) | Kafka source and sink connector | 2.10.4.3 | pulsar-io-kafka-2.10.4.3.nar |
+| [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.10.4.3 | pulsar-io-kinesis-2.10.4.3.nar |
+</details>
+<details><summary>Proxy extensions</summary>
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Proxy Extension | 2.10.3.7 | pulsar-kafka-proxy-2.10.3.7.nar |
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
+</details>
+<details><summary>Protocol handlers</summary>
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
+| [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Protocol Handler | 2.10.3.7 | pulsar-protocol-handler-kafka-2.10.3.7.nar |
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
+</details>
+<details><summary>CLI extensions</summary>
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [cassandra-cdc](https://pulsar.apache.org/docs/io-connectors) | Cassandra CDC - Pulsar Admin Custom Commands | 2.2.5 | pulsar-cassandra-admin-2.2.5-nar.nar |
+| [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - Pulsar Admin Custom Commands | 3.1.0 | pulsar-jms-admin-3.1.0-nar.nar |
+</details>
+<details><summary>Filters</summary>
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - support for server side filters | 3.1.0 | pulsar-jms-3.1.0-nar.nar |
+</details>
+<details><summary>Functions</summary>
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [transforms](https://pulsar.apache.org/docs/io-connectors) | Transformation function | 2.1.2 | pulsar-transformations-2.1.2.nar |
+</details>
+
 
 ## Luna Streaming Distribution 2.10 4.2
 This is a maintenance release containing important stability updates.
