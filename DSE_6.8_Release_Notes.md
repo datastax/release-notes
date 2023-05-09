@@ -2,6 +2,35 @@
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.8.35
+10 May 2023
+
+## Components versions for DSE 6.8.35
+ * Apache Solr™ 6.0.1.4.2959
+ * Apache Spark™ 2.4.0.27
+ * Apache TinkerPop™ 3.4.14-20230215-3db1ca33
+ * Apache Tomcat® 8.5.87
+ * DSE Java Driver 1.10.0-dse-20220616 (DSE *internal-only* version)
+ * Netty 4.1.86.1.dse
+ * Spark JobServer 0.8.0.53
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.35 DSE Core
+* Fixed regression in KMIP encryption introduced in DSP-22164. Moved the logic required for using old HashiVault KMIP under the feature flag `experimental_custom_attributes_mode` in dse.yaml, defined per kmip_hosts.per-kmip-group section. (DSP-23278)
+
+## 6.8.35 DSE Indexing
+* Fixed SAI numeric index validation on SSTables with over 2 billion rows. (DSP-23255)
+
+## 6.8.35 DSE Other
+* Improved CQLSH to support Python 3.11 and changed preferred interpreter from python2 to python3. Introduced CQLSH_PYTHON environment variable to allow users to specify the python interpreter used by CQLSH. (DSP-23257)
+
+## 6.8.35 DSE CVE
+* Upgraded org.codehaus.jettison:jettison library to version 1.5.4. (DSP-23254, [CVE-2023-1436](https://nvd.nist.gov/vuln/detail/CVE-2023-1436))
+* Upgraded com.google.auto.factory:auto-factory to version 1.0.1 to remove the dependency on org.eclipse.equinox. (DSP-22864, [CVE-2021-41033](https://nvd.nist.gov/vuln/detail/CVE-2021-41033))
+
+
 # Release notes for 6.8.34
 11 April 2023
 
