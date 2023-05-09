@@ -81,6 +81,76 @@ The distributions are available as Docker images and tarballs, and both methods 
 
 # Releases
 
+## Luna Streaming Distribution 2.10 4.4
+This is a maintenance release containing important updates.
+### Most notable commits
+* [02d6c16230c](https://github.com/datastax/pulsar/commit/02d6c16230c) [feat][ws] Use async auth method to support OIDC (#20238)
+* [e2e2c4ac097](https://github.com/datastax/pulsar/commit/e2e2c4ac097) [improve][io] Add ElasticSearch Sink bulk debug logs (#179)
+
+### `lunastreaming-all` distribution
+<details><summary>Sinks</summary>
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [cassandra-enhanced](https://github.com/datastax/pulsar-sink) | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | 1.6.10 | cassandra-enhanced-pulsar-sink-1.6.10-nar.nar |
+| [cloud-storage](https://github.com/streamnative/pulsar-io-cloud-storage) | Writes data into cloud storage | 2.10.0 | pulsar-io-cloud-storage-2.10.0.nar |
+| [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.4.4 | pulsar-io-data-generator-2.10.4.4.nar |
+| [elastic_search](https://pulsar.apache.org/docs/io-connectors) | Writes data into Elastic Search | 2.10.4.4 | pulsar-io-elastic-search-2.10.4.4.nar |
+| [http](https://pulsar.apache.org/docs/io-connectors) | Writes data to an HTTP server (Webhook) | 2.10.4.4 | pulsar-io-http-2.10.4.4.nar |
+| [jdbc-clickhouse](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for ClickHouse | 2.10.4.4 | pulsar-io-jdbc-clickhouse-2.10.4.4.nar |
+| [jdbc-mariadb](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for MariaDB | 2.10.4.4 | pulsar-io-jdbc-mariadb-2.10.4.4.nar |
+| [jdbc-postgres](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for PostgreSQL | 2.10.4.4 | pulsar-io-jdbc-postgres-2.10.4.4.nar |
+| [jdbc-sqlite](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for SQLite | 2.10.4.4 | pulsar-io-jdbc-sqlite-2.10.4.4.nar |
+| [kafka](https://pulsar.apache.org/docs/io-connectors) | Kafka source and sink connector | 2.10.4.4 | pulsar-io-kafka-2.10.4.4.nar |
+| [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.10.4.4 | pulsar-io-kinesis-2.10.4.4.nar |
+| [snowflake](https://github.com/datastax/snowflake-connector) | Snowflake Connector | 0.1.13 | pulsar-snowflake-connector-0.1.13-alpha.nar |
+</details>
+<details><summary>Sources</summary>
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [cassandra-source](https://github.com/datastax/cdc-for-apache-cassandra) | Read data from Cassandra | 2.2.7 | pulsar-cassandra-source-2.2.7.nar |
+| [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.4.4 | pulsar-io-data-generator-2.10.4.4.nar |
+| [debezium-mongodb](https://pulsar.apache.org/docs/io-connectors) | Debezium MongoDb Source | 2.10.4.4 | pulsar-io-debezium-mongodb-2.10.4.4.nar |
+| [debezium-mssql](https://pulsar.apache.org/docs/io-connectors) | Debezium Microsoft SQL Server Source | 2.10.4.4 | pulsar-io-debezium-mssql-2.10.4.4.nar |
+| [debezium-mysql](https://pulsar.apache.org/docs/io-connectors) | Debezium MySql Source | 2.10.4.4 | pulsar-io-debezium-mysql-2.10.4.4.nar |
+| [debezium-oracle](https://pulsar.apache.org/docs/io-connectors) | Debezium Oracle Source | 2.10.4.4 | pulsar-io-debezium-oracle-2.10.4.4.nar |
+| [debezium-postgres](https://pulsar.apache.org/docs/io-connectors) | Debezium Postgres Source | 2.10.4.4 | pulsar-io-debezium-postgres-2.10.4.4.nar |
+| [kafka](https://pulsar.apache.org/docs/io-connectors) | Kafka source and sink connector | 2.10.4.4 | pulsar-io-kafka-2.10.4.4.nar |
+| [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.10.4.4 | pulsar-io-kinesis-2.10.4.4.nar |
+</details>
+<details><summary>Proxy extensions</summary>
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Proxy Extension | 2.10.3.8 | pulsar-kafka-proxy-2.10.3.8.nar |
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
+</details>
+<details><summary>Protocol handlers</summary>
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
+| [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Protocol Handler | 2.10.3.8 | pulsar-protocol-handler-kafka-2.10.3.8.nar |
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
+</details>
+<details><summary>CLI extensions</summary>
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [cassandra-cdc](https://pulsar.apache.org/docs/io-connectors) | Cassandra CDC - Pulsar Admin Custom Commands | 2.2.5 | pulsar-cassandra-admin-2.2.5-nar.nar |
+| [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - Pulsar Admin Custom Commands | 3.1.0 | pulsar-jms-admin-3.1.0-nar.nar |
+</details>
+<details><summary>Filters</summary>
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - support for server side filters | 3.1.0 | pulsar-jms-3.1.0-nar.nar |
+</details>
+<details><summary>Functions</summary>
+| Name | Description | Version | File | 
+| ---- | ----------- | ------- | ---- | 
+| [transforms](https://pulsar.apache.org/docs/io-connectors) | Transformation function | 2.1.2 | pulsar-transformations-2.1.2.nar |
+</details>
+
+
+## Luna Streaming Distribution 2.10 4.3
+
 This is a maintenance release containing important stability updates.
 
 ### Most notable commits
