@@ -80,6 +80,7 @@ The distributions are available as Docker images and tarballs, and both methods 
 
 
 # Releases
+
 ## Luna Streaming Distribution 2.10 4.5
 This is a maintenance release containing important stability and security updates.
 ### Most notable commits
