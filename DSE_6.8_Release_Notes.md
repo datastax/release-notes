@@ -2,6 +2,41 @@
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.8.36
+12 June 2023
+
+## Components versions for DSE 6.8.36
+ * Apache Solr™ 6.0.1.4.2959
+ * Apache Spark™ 2.4.0.28&ast;
+ * Apache TinkerPop™ 3.4.14-20230523-37856751&ast;
+ * Apache Tomcat® 8.5.89&ast;
+ * DSE Java Driver 1.10.0-dse-20220616 (DSE *internal-only* version)
+ * Netty 4.1.86.1.dse
+ * Spark JobServer 0.8.0.54&ast;
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.36 DSE Core
+* Fixed compaction to ensure tombstones are not pruned for data in SSTables that are excluded from the compaction due to limited disk space. This fixes CASSANDRA-18507. (DSP-23305)
+
+## 6.8.36 DSE Cassandra
+* Improved logging around index summary building. Introduced rounding that effectively uses the `min_index_interval` option set to a multiple of 128 in the index summary building process. (DSP-23317)
+
+## 6.8.36 DSE Search
+* Fixed the bug in the Solr UI permissions when accessing segments information. It was not working with authorization enabled by implementing a  segments view when granting the `SELECT` permission on the Solr-indexed table. (DSP-22295)
+
+## 6.8.36 DSE Node/DseTool
+* Added `--key` option to dsetool encryptconfigvalue command to allow using different key than the default one. (DSP-23326)
+
+## 6.8.36 DSE Miscellaneous
+* Fixed memory leak in the chunk cache metadata caching. (DSP-23316)
+
+## 6.8.36 DSE CVE
+* Upgraded commons-net library used in Hadoop and Tinkerpop. Removed old Hadoop `1.0.3` dependency and replaced it with version universally used in DSE (`2.7.1.x` for 5.1  and `2.10.2.x` for 6.8). (DSP-23327, [CVE-2021-37533](https://nvd.nist.gov/vuln/detail/CVE-2021-37533), [CVE-2012-4449](https://nvd.nist.gov/vuln/detail/CVE-2012-4449))
+* Upgraded Apache Tomcat to version `8.5.89`. (DSP-23329, [CVE-2023-28709](https://nvd.nist.gov/vuln/detail/CVE-2023-28709))
+
+
 # Release notes for 6.8.35
 10 May 2023
 
