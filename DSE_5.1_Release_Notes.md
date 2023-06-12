@@ -1,6 +1,38 @@
 # Release notes for DataStax Enterprise 5.1
 DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 5.1.38
+12 June 2023
+
+## Components versions for DSE 5.1.38
+ * Apache Solr™ 6.0.1.0.2961
+ * Apache Spark™ 2.0.2.43
+ * Apache TinkerPop™ 3.2.11-20230523-74d884e8&ast;
+ * Apache Tomcat® 8.5.89&ast;
+ * DSE Java Driver 1.8.3-dse+20201217 (DSE *internal-only* version)
+ * Netty 4.0.54.1.dse
+ * Spark JobServer 0.6.2.243
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 5.1.38 DSE Cassandra
+* Improved logging around index summary building. Introduced rounding that effectively uses the `min_index_interval` option set to a multiple of 128 in the index summary building process. (DSP-23317)
+
+## 5.1.38 DSE Search
+* Fixed the bug in the Solr UI permissions when accessing segments information. It was not working with authorization enabled by implementing a segments view when granting the `SELECT` permission on the Solr-indexed table. (DSP-22295)
+
+## 5.1.38 DSE Node/DseTool
+* Added `--key` option to dsetool encryptconfigvalue command to allow using different key than the default one. (DSP-23326)
+
+## 5.1.38 DSE Other
+* Improved CQLSH to support Python `3.11` and changed the preferred interpreter from python2 to python3. Introduced `CQLSH_PYTHON` environment variable to allow users to specify the Python interpreter used by CQLSH. (DSP-23257)
+
+## 5.1.38 DSE CVE
+* Upgraded commons-net library used in Hadoop and Tinkerpop. Removed old Hadoop `1.0.3` dependency and replaced it with version universally used in DSE (`2.7.1.x` for 5.1  and `2.10.2.x` for 6.8). (DSP-23327, [CVE-2021-37533](https://nvd.nist.gov/vuln/detail/CVE-2021-37533), [CVE-2012-4449](https://nvd.nist.gov/vuln/detail/CVE-2012-4449))
+* Upgraded Apache Tomcat to version `8.5.89`. (DSP-23329, [CVE-2023-28709](https://nvd.nist.gov/vuln/detail/CVE-2023-28709))
+
+
 # Release notes for 5.1.37
 11 April 2023
 
