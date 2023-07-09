@@ -2,6 +2,47 @@
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.8.37
+10 July 2023
+
+## Components versions for DSE 6.8.37
+ * Apache Solr™ 6.0.1.4.2959
+ * Apache Spark™ 2.4.0.28
+ * Apache TinkerPop™ 3.4.14-20230523-37856751
+ * Apache Tomcat® 8.5.89
+ * DSE Java Driver 1.10.0-dse-20220616 (DSE *internal-only* version)
+ * Netty 4.1.86.1.dse
+ * Spark JobServer 0.8.0.54
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.37 DSE Core
+* Allowed to encrypt `kmip_host` passwords in the `dse.yaml` file. New optional parameter `password_encryption_key_name` was added to the `kmip_hosts` items. DSP-23326 enabled password encryption before placing them in `dse.yaml`. (DSP-23313)
+* Fixed the issue with dropping the UDT column, which potentially leads to a problem accessing data from the affected table after the node is restarted. (DSP-23337)
+
+## 6.8.37 DSE Cassandra
+* Fixed race condition causing sstableloader to hang when the Connections Per Host (`-cph`) value is greater than one (1). (DSP-23117)
+
+## 6.8.37 DSE Docker
+* Updated official DSE Docker image, basing it on a more current Ubuntu 20.04 (Focal Fossa) that is FIPS certified and handles multiple known CVEs. (DSP-23397)
+
+## 6.8.37 DSE Indexing
+* Improved SAI index-building process when reloading SSTables by building the indexes in parallel. (DSP-23415)
+* Reduced allocations by removing some unnecessary autoboxing from SAI range iterators. (DSP-23419)
+* Improved SAI exact match queries performance on the memtable index data by skipping unnecessary size calculations. (DSP-23280)
+* Fixed a bug in the SAI intersection comparison. (DSP-23375)
+
+## 6.8.37 DSE CVE
+* Upgraded Apache mina-core library to version 2.0.24. (DSP-23378, [CVE-2021-41973](https://nvd.nist.gov/vuln/detail/CVE-2021-41973))
+* Upgraded Azure SDK client libraries to be based on BOM 1.2.13. (DSP-23382, [CVE-2023-1370](https://nvd.nist.gov/vuln/detail/CVE-2023-1370))
+* Updated aws-java-sdk to version 1.12.486. (DSP-23383, [CVE-2022-31159](https://nvd.nist.gov/vuln/detail/CVE-2022-31159))
+* Upgraded Apache Commons libraries to recently available versions: `commons-io` to `2.11.0`, `commons-lang3` to `3.12.0`, `commons-math3` to `3.6.1`, and `commons-collection4` to `4.4`. (DSP-23384, [CVE-2021-29425](https://nvd.nist.gov/vuln/detail/CVE-2021-29425))
+* Upgraded `xerial/snappy-java` library to version `1.1.10.1`. (DSP-23391, DSP-23433, [CVE-2023-34453](https://nvd.nist.gov/vuln/detail/CVE-2023-34453), [CVE-2023-34454](https://nvd.nist.gov/vuln/detail/CVE-2023-34454), [CVE-2023-34455](https://nvd.nist.gov/vuln/detail/CVE-2023-34455))
+* Upgraded Jetty to version `9.4.51.v20230217`. (DSP-23428, [CVE-2023-26048](https://nvd.nist.gov/vuln/detail/CVE-2023-26048))
+* Removed all dependencies on Netty 3 known to have security vulnerabilities. (DSP-22562, [CVE-2019-16869](https://nvd.nist.gov/vuln/detail/CVE-2019-16869))
+
+
 # Release notes for 6.8.36
 12 June 2023
 
