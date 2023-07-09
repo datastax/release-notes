@@ -1,6 +1,33 @@
 # Release notes for DataStax Enterprise 5.1
 DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 5.1.39
+10 July 2023
+
+## Components versions for DSE 5.1.39
+ * Apache Solr™ 6.0.1.0.2961
+ * Apache Spark™ 2.0.2.43
+ * Apache TinkerPop™ 3.2.11-20230523-74d884e8
+ * Apache Tomcat® 8.5.89
+ * DSE Java Driver 1.8.3-dse+20201217 (DSE *internal-only* version)
+ * Netty 4.0.54.1.dse
+ * Spark JobServer 0.6.2.243
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 5.1.39 DSE Core
+* Allowed to encrypt `kmip_host` passwords in the dse.yaml file. New optional parameter `password_encryption_key_name` was added to the `kmip_hosts` items. DSP-23326 enabled password encryption before placing them in dse.yaml. (DSP-23313)
+
+## 5.1.39 DSE Docker
+* Updated official DSE Docker image, basing it on a more current Ubuntu 20.04 (Focal Fossa) that is FIPS certified and handles multiple known CVEs. (DSP-23397)
+
+## 5.1.39 DSE CVE
+* Upgraded Apache mina-core library to version 2.0.24. (DSP-23378, [CVE-2021-41973](https://nvd.nist.gov/vuln/detail/CVE-2021-41973))
+* Upgraded Apache Commons libraries to recently available versions: `commons-io` to `2.11.0`, `commons-lang3` to `3.12.0`, `commons-math3` to `3.6.1`, and `commons-collection4` to `4.4`. (DSP-23384, [CVE-2021-29425](https://nvd.nist.gov/vuln/detail/CVE-2021-29425))
+* Upgraded `xerial/snappy-java` library to version `1.1.10.1`. (DSP-23391, DSP-23433, [CVE-2023-34453](https://nvd.nist.gov/vuln/detail/CVE-2023-34453), [CVE-2023-34454](https://nvd.nist.gov/vuln/detail/CVE-2023-34454), [CVE-2023-34455](https://nvd.nist.gov/vuln/detail/CVE-2023-34455))
+
+
 # Release notes for 5.1.38
 12 June 2023
 
