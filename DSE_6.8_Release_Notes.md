@@ -5,6 +5,9 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 # Release notes for 6.8.37
 10 July 2023
 
+## 6.8.37 DSE Platform
+* Added support for Red Hat Enterprise Linux 9. (DSP-23229)
+
 ## Components versions for DSE 6.8.37
  * Apache Solr™ 6.0.1.4.2959
  * Apache Spark™ 2.4.0.28
