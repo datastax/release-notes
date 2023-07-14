@@ -4,6 +4,9 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 # Release notes for 5.1.39
 10 July 2023
 
+## 5.1.39 DSE Platform
+* Added support for Red Hat Enterprise Linux 9. (DSP-23444)
+
 ## Components versions for DSE 5.1.39
  * Apache Solr™ 6.0.1.0.2961
  * Apache Spark™ 2.0.2.43
