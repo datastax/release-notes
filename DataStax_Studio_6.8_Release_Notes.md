@@ -20,7 +20,7 @@
   # Default: UTC
   displayTimezone: UTC
 ```
-* When using Astra Database for DSE, graph queries will automatically be executed with local quorum consistency level. A configuration setting can be used to enable/disable this capability. (Studio-3229)
+* Graph queries will automatically be executed using consistency level `LOCAL_QUORUM` when using Astra Database for DSE. A configuration setting can be used to enable/disable this capability. (Studio-3229)
 ```
   # Use LOCAL_QUORUM consistency level when connected to Astra Database for DSE (AD4D)
   # Default: true
