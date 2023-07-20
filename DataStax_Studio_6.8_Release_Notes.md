@@ -3,7 +3,7 @@
 # Release notes for DataStax Studio 6.8.32
 24 July 2023
 
-## Studio 6.8.32 IDE
+## Studio 6.8.32 Client
 * Fix a problem in which very large Number values inside JSON results were not displayed correctly in the CQL results Details view. (Studio-3244)
 
 ## Studio 6.8.32 Server
