@@ -3,10 +3,10 @@
 # Release notes for DataStax Studio 6.8.32
 24 July 2023
 
-## Studio 6.8.26 IDE
+## Studio 6.8.32 IDE
 * Fix a problem in which very large Number values inside JSON results were not displayed correctly in the CQL results Details view. (Studio-3244)
 
-## Studio 6.8.26 Server
+## Studio 6.8.32 Server
 * Add support for Astra Vector Search databases. (Studio-3241, Studio-3242)
 * Add the ability to use an Astra database token in a connection configuration. (Studio-3246)
 * Add configuration setting to support displaying Date and Timestamp values in a specific timezone. (Studio-3237)
