@@ -285,7 +285,7 @@ specified. The `require_two_way_ssl` config parameter has been removed and the c
 * Upgraded the logic for redaction of sensitive information in the diagnostic tarball to provide better coverage. (OPSC-16765)
 * Corrected an issue were using LCM to edit dse.yaml would sometimes result in a missing closing bracket. (OPSC-16636)
 
-## OpsCenter 6.8.9 Platfor
+## OpsCenter 6.8.9 Platforms
 * Added an entry "7.8.x" for RedHat Enterprise in the platforms definition file. (OPSC-16710)
 
 ## OpsCenter 6.8.9 Repair Service
