@@ -1,5 +1,33 @@
 # Release notes for DataStax Studio 6.8
 
+# Release notes for DataStax Studio 6.8.32
+24 July 2023
+
+## Studio 6.8.32 Client
+* Fix a problem in which very large Number values inside JSON results were not displayed correctly in the CQL results Details view. (Studio-3244)
+
+## Studio 6.8.32 Server
+* Add support for Astra Vector Search databases. (Studio-3241, Studio-3242)
+* Add the ability to use an Astra database token in a connection configuration. (Studio-3246)
+* Add configuration setting to support displaying Date and Timestamp values in a specific timezone. (Studio-3237)
+```
+  # The timezone used to display Date and Timestamp values.
+  # Examples: UTC, GMT, CET, America/Los_Angeles, America/New_York, Europe/Paris, Asia/Kolkata, etc
+  # These zone ids are defined by Java in java.time.ZoneId 
+  # Some special values are also supported:
+  # * "SYSTEM" - use the default system timezone.
+  # * "TIMESTAMP" - display as timestamp value (milliseconds since epoch) 
+  # Default: UTC
+  displayTimezone: UTC
+```
+* Graph queries will automatically be executed using consistency level `LOCAL_QUORUM` when using Astra Database for DSE. A configuration setting can be used to enable/disable this capability. (Studio-3229)
+```
+  # Use LOCAL_QUORUM consistency level when connected to Astra Database for DSE (AD4D)
+  # Default: true
+  gremlinAD4DConsistencyLevelEnabled: true
+```
+* Fix a problem that caused Studio to fail to start while clearing notifications from previous releases. (Studio-3243)
+
 # Release notes for DataStax Studio 6.8.26
 06 January 2023
 
