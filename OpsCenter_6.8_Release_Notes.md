@@ -3,21 +3,28 @@
 # Release notes for 6.8.26
 18 Apr 2023
 
+:warning: In Operating Systems using OpenSSH 8+, (e.g. Ubuntu 20.04 Focal Fossa or RHEL 8),
+where `ssh-rsa` signature schemes have been deprecated, using RSA keys in LCM will report authentication
+failures (even when keys are perfectly valid). For OpsCenter 6.8.26 this issue can be work around by using
+ECDSA or ED25519 keys (OPSC-17286), or re-enabling the deprecated `ssh-rsa` signature scheme (not recommended).
+Customers are recommended to upgrade to OpsCenter 6.8.27.
+
 ## 6.8.26 OpsCenter Core
-* Removes unnecessary files from tarball packages which was causing packages failing to download due to presence of windows executables. (OPSC-17247)
-* Removes SysV scripts used to start/stop OpsCenter and DataStax Agent services. (OPSC-17291)
-* Fixes datastax-agent .deb package installation in Ubuntu 22.04. Note: with this change DataStax Agent package installation will no longer modify {{/etc/sudoers}} file to include {{/etc/sudoers.d}}. In systems where this configuration does not exist, sudoers permissions will *not* be created for DataStax Agent. (OPSC-17295)
+* Removed unnecessary files from OpsCenter tarball which was causing download failures in some environments due to presence of windows executables. (OPSC-17247)
+* Removed SysV scripts used to start/stop OpsCenter and DataStax Agent services. (OPSC-17291)
+* Fixed datastax-agent .deb package installation in Ubuntu 22.04. (OPSC-17295)
+  Note: with this change, DataStax Agent package installation will no longer modify `/etc/sudoers` file to include `/etc/sudoers.d`. In systems where this configuration does not exist, sudoers permissions will *not* be created for DataStax Agent. 
 * Updated Bouncy Castle to 1.73 version. (OPSC-17296)
 * Updated JSch library which supports newer EdDSA (Ed25519) and ECDSA (nistp256) ssh keys. (OPSC-17297)
 * Fixed missing default value for `force_https_redirects` for package installations which could cause an authentication failure. (OPSC-17287)
 * Fixed redirect issue when using Pluggable Authentication with IPv6 addresses. (OPSC-17288)
 
 ## 6.8.26 OpsCenter Backup Service
-* Resolved an issue with stalled backups. If OpsCenter does not receive a status update from an agent within a given timeout, OpsCenter will query the agent directly to see if the backup is complete. The backup will be marked as complete or failed based on the agent's response. The timeout can be specified in seconds using opscenterd.conf [backup_service] stomp_status_update_timeout. The default timeout is 5 minutes. (OPSC-17196)
+* Fixed an issue with stalled backups. If OpsCenter does not receive a status update from an agent within a given timeout, OpsCenter will query the agent directly to see if the backup is complete. The backup will be marked as complete or failed based on the agent's response. The timeout can be specified in seconds using `opscenterd.conf` `[backup_service] stomp_status_update_timeout`. The default timeout is 5 minutes. (OPSC-17196)
 
 ## 6.8.26 OpsCenter Monitoring
 * Fixed an issue in the email plugin that caused dates with non-ascii characters to display incorrectly. (OPSC-17258)
-* Implemented a 'ascii_body' config option in email.conf to allow the email to be reverted to plain text if needed. (OPSC-17282)
+* Added a `ascii_body` config option in `email.conf` to allow the email to be reverted to plain text if needed. (OPSC-17282)
 * Added the ability to suspend event notifications. The ui for this can be found on the alert rules management dialog. (OPSC-17067)
 * Best practice failure notifications now include the details that are displayed in the UI. (OPSC-17256)
 
@@ -25,9 +32,8 @@
 * LCM will no longer automatically fail when encountering an unknown operating system. (OPSC-17215)
 
 ## 6.8.26 OpsCenter Platforms
-* Adds support for Red Hat Enterprise Linux 8 and Oracle Linux 8 versions. (OPSC-17110)
-* Adds support for Rocky Linux 8. (OPSC-17270)
-* Adds support for Rocky Linux 9, Oracle Linux 9, and Red Hat Enterprise Linux 9. WARNING: When using ssh keys to install agents automatically or with LCM, RSA keys will not work on these platforms. Use ECDSA 256 or ED25519 256 instead. (OPSC-17286)
+* Added support for Red Hat Enterprise Linux (RHEL) 8, Oracle Linux 8, and Rocky Linux 8 versions. (OPSC-17110, OPSC-17270)
+* Added support for Red Hat Enterprise Linux (RHEL) 9, Oracle Linux 9, and Rocky Linux 9 versions. 
 
 
 # Release notes for OpsCenter 6.8.25
@@ -279,7 +285,7 @@ specified. The `require_two_way_ssl` config parameter has been removed and the c
 * Upgraded the logic for redaction of sensitive information in the diagnostic tarball to provide better coverage. (OPSC-16765)
 * Corrected an issue were using LCM to edit dse.yaml would sometimes result in a missing closing bracket. (OPSC-16636)
 
-## OpsCenter 6.8.9 Platfor
+## OpsCenter 6.8.9 Platforms
 * Added an entry "7.8.x" for RedHat Enterprise in the platforms definition file. (OPSC-16710)
 
 ## OpsCenter 6.8.9 Repair Service
