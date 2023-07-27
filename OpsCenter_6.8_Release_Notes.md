@@ -1,5 +1,38 @@
 # Release notes for OpsCenter
 
+# Release notes for 6.8.27
+27 Jul 2023
+
+## 6.8.27 OpsCenter Core
+
+* Fixed usage of RSA keys in platforms where `rsa-sha` algorithm have been deprecated. (OPSC-17300)
+* Fixed `datastax-agent.pid` creation/removal when starting/stopping datastax-agent service. (OPSC-17013)
+* Added the ability for disk based alerts to operate based on the function of a partition. This will make the alerts more useful in clusters where the disks for nodes are not named in a uniform manner. (OPSC-17277)
+* Added additional [SAI Per Query and Table Query metrics](https://docs.datastax.com/en/cql/astra/docs/developing/indexing/sai/monitoring.html|https://docs.datastax.com/en/cql/astra/docs/developing/indexing/sai/monitoring.html). (OPSC-17330)
+* Normalized IPv6 addresses which in some configurations could cause a mismatch between DataStax Agent and OpsCenter leading to metric dashboards not being populated. (OPSC-17205)
+* Fixed bug that caused the cleanup of commit logs on remote destinations to fail. (OPSC-17305)
+* Fixed bug when reporting for missing pluggable authentication method. (OPSC-17314)
+
+## 6.8.27 OpsCenter Life Cycle Manager
+* Added `additional-jvm-opts` to the cassandra-env.sh` definitions file for DSE 6.8 configurations. (OPSC-17331)
+
+## 6.8.27 OpsCenter Platforms
+* Updated OpsCenter Docker image to be based on a more modern Ubuntu 20.04 (Focal Fossa). (OPSC-17341)
+
+## 6.8.27 OpsCenter CVE // https://nvd.nist.gov/vuln/detail/
+* Upgraded Jackson libraries to latest version. (OPSC-17336, [CVE-2021-46877](https://nvd.nist.gov/vuln/detail/CVE-2021-46877))
+* Upgraded Bouncy Castle libraries to latest `1.75` version. (OPSC-17342, [CVE-2023-33201](https://nvd.nist.gov/vuln/detail/CVE-2023-33201))
+* Upgraded Golang compiler to `1.16.15` version. (OPSC-17343, [CVE-2018-16875](https://nvd.nist.gov/vuln/detail/CVE-2018-16875), [CVE-2021-33195](https://nvd.nist.gov/vuln/detail/CVE-2021-33195), [CVE-2022-23772](https://nvd.nist.gov/vuln/detail/CVE-2022-23772), [CVE-2019-11888](https://nvd.nist.gov/vuln/detail/CVE-2019-11888), [CVE-2021-38297](https://nvd.nist.gov/vuln/detail/CVE-2021-38297))
+* Upgraded JNR POSIX library to latest 3.1.17 version. (OPSC-17345, [CWE-416](https://cwe.mitre.org/data/definitions/416.html))
+* Upgraded `jetty-server` to `9.4.51.v20230217` version. (OPSC-17346, [CVE-2021-28165](https://nvd.nist.gov/vuln/detail/CVE-2021-28165), [CVE-2019-10247](https://nvd.nist.gov/vuln/detail/CVE-2019-10247), [CVE-2020-27218](https://nvd.nist.gov/vuln/detail/CVE-2020-27218), [CVE-2020-27223](https://nvd.nist.gov/vuln/detail/CVE-2020-27223), [CVE-2021-28169](https://nvd.nist.gov/vuln/detail/CVE-2021-28169), [CVE-2019-10241](https://nvd.nist.gov/vuln/detail/CVE-2019-10241), [CVE-2021-34428](https://nvd.nist.gov/vuln/detail/CVE-2021-34428))
+* Upgraded `jackson-datatype-jsr310` library to latest `2.9` version. (OPSC-17347, [CVE-2018-1000873](https://nvd.nist.gov/vuln/detail/CVE-2018-1000873))
+* Upgraded logback libraries to latest 1.2.12 version. (OPSC-17348, [CVE-2021-42550](https://nvd.nist.gov/vuln/detail/CVE-2021-42550))
+* Upgraded Apache Commons IO to version `2.7`. (OPSC-17349, [CVE-2021-29425](https://nvd.nist.gov/vuln/detail/CVE-2021-29425), [CWE-20](https://cwe.mitre.org/data/definitions/20.html), [CWE-22](https://cwe.mitre.org/data/definitions/22.html))
+* Upgraded `xerial/snappy-java` to version `1.1.10.1`. (OPSC-17337, [CVE-2023-34453](https://nvd.nist.gov/vuln/detail/CVE-2023-34453), [CVE-2023-34454](https://nvd.nist.gov/vuln/detail/CVE-2023-34454), [CVE-2023-34455](https://nvd.nist.gov/vuln/detail/CVE-2023-34455))
+* Upgraded `org.xerial:sqlite-jdbc` to latest version. (OPSC-17338, [CVE-2023-32697](https://nvd.nist.gov/vuln/detail/CVE-2023-32697))
+* Upgraded SnakeYAML library to latest `2.0` version. (OPSC-17339, [CVE-2022-41854](https://nvd.nist.gov/vuln/detail/CVE-2022-41854), [CVE-2022-38752](https://nvd.nist.gov/vuln/detail/CVE-2022-38752), [CVE-2022-38751](https://nvd.nist.gov/vuln/detail/CVE-2022-38751), [CVE-2022-38750](https://nvd.nist.gov/vuln/detail/CVE-2022-38750), [CVE-2022-38749](https://nvd.nist.gov/vuln/detail/CVE-2022-38749), [CVE-2022-25857](https://nvd.nist.gov/vuln/detail/CVE-2022-25857), [CVE-2022-1471](https://nvd.nist.gov/vuln/detail/CVE-2022-1471), [CVE-2017-18640](https://nvd.nist.gov/vuln/detail/CVE-2017-18640))
+
+
 # Release notes for 6.8.26
 18 Apr 2023
 
