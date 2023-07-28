@@ -8,7 +8,7 @@
 * Fixed usage of RSA keys in platforms where `rsa-sha` algorithm have been deprecated. (OPSC-17300)
 * Fixed `datastax-agent.pid` creation/removal when starting/stopping datastax-agent service. (OPSC-17013)
 * Added the ability for disk based alerts to operate based on the function of a partition. This will make the alerts more useful in clusters where the disks for nodes are not named in a uniform manner. (OPSC-17277)
-* Added additional [SAI Per Query and Table Query metrics](https://docs.datastax.com/en/cql/astra/docs/developing/indexing/sai/monitoring.html|https://docs.datastax.com/en/cql/astra/docs/developing/indexing/sai/monitoring.html). (OPSC-17330)
+* Added additional [SAI Per Query and Table Query metrics](https://docs.datastax.com/en/cql/astra/docs/developing/indexing/sai/monitoring.html). (OPSC-17330)
 * Normalized IPv6 addresses which in some configurations could cause a mismatch between DataStax Agent and OpsCenter leading to metric dashboards not being populated. (OPSC-17205)
 * Fixed bug that caused the cleanup of commit logs on remote destinations to fail. (OPSC-17305)
 * Fixed bug when reporting for missing pluggable authentication method. (OPSC-17314)
