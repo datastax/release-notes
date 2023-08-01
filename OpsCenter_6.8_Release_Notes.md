@@ -31,6 +31,7 @@
 * Upgraded `xerial/snappy-java` to version `1.1.10.1`. (OPSC-17337, [CVE-2023-34453](https://nvd.nist.gov/vuln/detail/CVE-2023-34453), [CVE-2023-34454](https://nvd.nist.gov/vuln/detail/CVE-2023-34454), [CVE-2023-34455](https://nvd.nist.gov/vuln/detail/CVE-2023-34455))
 * Upgraded `org.xerial:sqlite-jdbc` to latest version. (OPSC-17338, [CVE-2023-32697](https://nvd.nist.gov/vuln/detail/CVE-2023-32697))
 * Upgraded SnakeYAML library to latest `2.0` version. (OPSC-17339, [CVE-2022-41854](https://nvd.nist.gov/vuln/detail/CVE-2022-41854), [CVE-2022-38752](https://nvd.nist.gov/vuln/detail/CVE-2022-38752), [CVE-2022-38751](https://nvd.nist.gov/vuln/detail/CVE-2022-38751), [CVE-2022-38750](https://nvd.nist.gov/vuln/detail/CVE-2022-38750), [CVE-2022-38749](https://nvd.nist.gov/vuln/detail/CVE-2022-38749), [CVE-2022-25857](https://nvd.nist.gov/vuln/detail/CVE-2022-25857), [CVE-2022-1471](https://nvd.nist.gov/vuln/detail/CVE-2022-1471), [CVE-2017-18640](https://nvd.nist.gov/vuln/detail/CVE-2017-18640))
+* Upgraded `me.raynes:fs` library that is not longer maintained by its maintained fork `clj-commons:fs`. (OPSC-17301, [CWE-29](https://cwe.mitre.org/data/definitions/29.html))
 
 
 # Release notes for 6.8.26
