@@ -1,12 +1,20 @@
 # Release notes for OpsCenter
 
+# Release notes for 6.8.28
+3 Aug 2023
+
+## 6.8.28 OpsCenter Core
+
+* Fixed bug in DataStax Agent service causing failure to start on older platforms such as Ubuntu 18.04 or RHEL 8 (OPSC-17357).
+
+
 # Release notes for 6.8.27
 27 Jul 2023
 
 :warning: There's a known bug when starting DataStax Agent service in 
 Ubuntu 18.04 (Bionic Beaver), and in RHEL/Oracle/Rocky Linux 8 platforms.
 Later OS versions are not affected.
-Customers in those platforms are recommended to upgrade to the upcoming OpsCenter 6.8.28.
+Customers in those platforms are recommended to upgrade to OpsCenter 6.8.28.
 
 ## 6.8.27 OpsCenter Core
 
@@ -19,7 +27,7 @@ Customers in those platforms are recommended to upgrade to the upcoming OpsCente
 * Fixed bug when reporting for missing pluggable authentication method. (OPSC-17314)
 
 ## 6.8.27 OpsCenter Life Cycle Manager
-* Added `additional-jvm-opts` to the cassandra-env.sh` definitions file for DSE 6.8 configurations. (OPSC-17331)
+* Added `additional-jvm-opts` to the `cassandra-env.sh` definitions file for DSE 6.8 configurations. (OPSC-17331)
 
 ## 6.8.27 OpsCenter Platforms
 * Updated OpsCenter Docker image to be based on a more modern Ubuntu 20.04 (Focal Fossa). (OPSC-17341)
