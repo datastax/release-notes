@@ -1,12 +1,20 @@
 # Release notes for OpsCenter
 
+# Release notes for 6.8.28
+3 Aug 2023
+
+## 6.8.28 OpsCenter Core
+
+* Fixed bug in DataStax Agent service causing failure to start on older platforms such as Ubuntu 18.04 or RHEL 8 (OPSC-17357).
+
+
 # Release notes for 6.8.27
 27 Jul 2023
 
 :warning: There's a known bug when starting DataStax Agent service in 
 Ubuntu 18.04 (Bionic Beaver), and in RHEL/Oracle/Rocky Linux 8 platforms.
 Later OS versions are not affected.
-Customers in those platforms are recommended to upgrade to the upcoming OpsCenter 6.8.28.
+Customers in those platforms are recommended to upgrade to OpsCenter 6.8.28.
 
 ## 6.8.27 OpsCenter Core
 
