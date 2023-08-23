@@ -2,6 +2,9 @@
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
+
+
 # Release notes for 6.8.41
 18 December 2023
 

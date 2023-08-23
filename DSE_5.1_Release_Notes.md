@@ -1,6 +1,9 @@
 # Release notes for DataStax Enterprise 5.1
 DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+Release notes of versions prior to 5.1.20 can be found [here](https://docs.datastax.com/en/dse/5.1/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
+
+
 # Release notes for 5.1.41
 7 November 2023
 
