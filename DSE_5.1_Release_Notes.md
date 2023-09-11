@@ -1,6 +1,36 @@
 # Release notes for DataStax Enterprise 5.1
 DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any. Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 5.1.40
+11 September 2023
+
+## Components versions for DSE 5.1.40
+ * Apache Solr™ 6.0.1.0.2961
+ * Apache Spark™ 2.0.2.43
+ * Apache TinkerPop™ 3.2.11-20230523-74d884e8
+ * Apache Tomcat® 8.5.93&ast;
+ * DSE Java Driver 1.8.3-dse+20201217 (DSE *internal-only* version)
+ * Netty 4.0.54.1.dse
+ * Spark JobServer 0.6.2.243
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 5.1.40 DSE Core
+* Changed logging level from `error` to `warn` for a log message that is issued when folders are removed during a snapshot that calculates folder size. (DSP-23432)
+* Added a check to prevent running cleanup operations concurrently with operations that lead to token ownership changes, such as node addition or node decommission. Prior to this fix, running such concurrent operations could unintentionally delete valid data replicas. (DSP-23507)
+
+## 5.1.40 DSE Insights
+* Changed to use `collectd` v0.1.6 bundle based on Ubuntu:18.04. (DSP-23519)
+
+## 5.1.40 DSE Node/DseTool
+* Fixed the `nodetool repair --trace` command to prevent it from hanging when it is run on an empty keyspace or on a keyspace with nodesync-enabled tables. (DSP-23408)
+
+## 5.1.40 DSE CVE
+* Upgraded Apache Tomcat to version 8.5.93. (DSP-23522, [CVE-2023-41080](https://nvd.nist.gov/vuln/detail/CVE-2023-41080))
+* Enforced `net.sf.ehcache` library to use version 2.10.9.2 instead of 2.10.4. Removed indirect dependency on `jackson-databind` version 2.3.3. (DSP-23528)
+
+
 # Release notes for 5.1.39
 10 July 2023
 
