@@ -2,6 +2,53 @@
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.8.38
+11 September 2023
+
+## Components versions for DSE 6.8.38
+ * Apache Solr™ 6.0.1.4.2959
+ * Apache Spark™ 2.4.0.29&ast;
+ * Apache TinkerPop™ 3.4.14-20230814-301fd418&ast;
+ * Apache Tomcat® 8.5.93&ast;
+ * DSE Java Driver 1.10.0-dse-20220616 (DSE *internal-only* version)
+ * Netty 4.1.86.1.dse
+ * Spark JobServer 0.8.0.54
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.38 DSE Core
+* Changed logging level from `error` to `warn` for a log message that is issued when folders are removed during a snapshot that calculates folder size. (DSP-23432)
+* Added a check to prevent running cleanup operations concurrently with operations that lead to token ownership changes, such as node addition or node decommission. Prior to this fix, running such concurrent operations could unintentionally delete valid data replicas. (DSP-23507)
+
+## 6.8.38 DSE Cassandra
+* Changed reads from an SSTable to be delimited by and not exceed the declared row size in the row preamble. This prevents Out of Memory issues (OOM) with a corrupted SSTable. (DSP-23336)
+
+## 6.8.38 DSE Spark
+* Upgraded `snappy-java` to version 1.1.10.3. (DSP-23499)
+
+## 6.8.38 DSE Indexing
+* Improved SAI queries response time by reducing the number of skips in the predicate intersection algorithm when selectivity of predicates varies significantly. (DSP-23435)
+* Added a JVM configuration option to disable Storage Attached Index (SAI) segment compaction. Disable compaction by setting the `cassandra.sai.enable_segment_compaction` JVM flag to `false`. The default value is `true`. (DSP-23440)
+* Fixed SAI index build failure for huge SSTables. (DSP-23478)
+
+## 6.8.38 DSE Insights
+* Changed to use `collectd` v0.1.6 bundle based on Ubuntu:18.04. (DSP-23519)
+
+## 6.8.38 DSE Node/DseTool
+* Fixed the `nodetool repair --trace` command to prevent it from hanging when it is run on an empty keyspace or on a keyspace with nodesync-enabled tables. (DSP-23408)
+
+## 6.8.38 DSE Security
+* Fixed a bug where Key Management Interoperability Protocol (KMIP) server failover was not working as intended because of exceptions that changed in the KMIP client library. (DSP-23343)
+
+## 6.8.38 DSE CVE
+* Upgraded SnakeYAML library to the latest `2.0` version. (DSP-23429, [CVE-2022-1471](https://nvd.nist.gov/vuln/detail/CVE-2022-1471))
+* Upgraded `java-xmlbuilder` to version 1.3. (DSP-23489, [CVE-2014-125087](https://nvd.nist.gov/vuln/detail/CVE-2014-125087))
+* Upgraded Apache Tomcat to version 8.5.93. (DSP-23522, [CVE-2023-41080](https://nvd.nist.gov/vuln/detail/CVE-2023-41080))
+* Upgraded ‘Google Guava’ to version 32.1.2-jre to remove CVE-2023-2976. Upgraded ‘FasterXML Jackson’ libraries to version 2.13.5. (DSP-23525, [CVE-2023-2976](https://nvd.nist.gov/vuln/detail/CVE-2023-2976))
+* Enforced `net.sf.ehcache` library to use version 2.10.9.2 instead of 2.10.4. Removed indirect dependency on `jackson-databind` version 2.3.3. (DSP-23528)
+
+
 # Release notes for 6.8.37
 10 July 2023
 
