@@ -2,6 +2,25 @@
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.8.39
+9 October 2023
+
+## Components versions for DSE 6.8.39
+ * Apache Solr™ 6.0.1.4.2959
+ * Apache Spark™ 2.4.0.29
+ * Apache TinkerPop™ 3.4.14-20230814-301fd418
+ * Apache Tomcat® 8.5.93
+ * DSE Java Driver 1.10.0-dse-20220616 (DSE *internal-only* version)
+ * Netty 4.1.86.1.dse
+ * Spark JobServer 0.8.0.54
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.39 DSE Hadoop
+* Ensured that DSE uses only version 1.12.x of the `aws-sdk-java` library. Removed the dependency on version 1.11.x which also eliminated the need for the outdated and vulnerable `jackson-databind` version 2.7.6.3. (DSP-23613)
+
+
 # Release notes for 6.8.38
 11 September 2023
 
