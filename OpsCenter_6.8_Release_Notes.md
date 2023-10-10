@@ -1,5 +1,19 @@
 # Release notes for OpsCenter
 
+# Release Notes for 6.8.29
+9 Oct 2023
+
+## Backup Service
+* Added way to configure a new Azure endpoint for destinations in Azure (OPSC-17365)
+
+## Monitoring
+* Added solr and hints as options to alerts by partition function. (OPSC-17350)
+
+## Core
+* Upgrades `clj-ssh` to latest `0.6.2` version. (OPSC-17344)
+* Updated version of jackson-databind. (OPSC-17312)
+* Added an [agents] 'diagnostic_tarball_skip_instance_check' config option to allow opscenterd to skip the instance data look up when creating a diagnostic tarball as it can hang in some situations. (OPSC-17368)
+
 # Release notes for 6.8.28
 3 Aug 2023
 
