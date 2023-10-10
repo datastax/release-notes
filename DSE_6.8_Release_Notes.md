@@ -18,7 +18,7 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## 6.8.39 DSE Hadoop
-* Ensured that DSE uses only version 1.12.x of the `aws-sdk-java` library. Removed the dependency on version 1.11.x which also eliminated the need for the outdated and vulnerable `jackson-databind` version 2.7.6.3. (DSP-23613)
+* Ensured that DSE uses only version 1.12.x of the `aws-sdk-java` library. Removed the dependency on version 1.11.x which also eliminated the need for the outdated and vulnerable `jackson-databind` version 2.6.7.3. (DSP-23613)
 
 
 # Release notes for 6.8.38
