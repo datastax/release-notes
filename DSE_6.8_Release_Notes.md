@@ -2,6 +2,30 @@
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.8.40
+7 November 2023
+
+## Components versions for DSE 6.8.40
+ * Apache Solr™ 6.0.1.4.2964&ast;
+ * Apache Spark™ 2.4.0.29
+ * Apache TinkerPop™ 3.4.14-20231030-479dc6d7&ast;
+ * Apache Tomcat® 8.5.93
+ * DSE Java Driver 1.10.0-dse-20220616 (DSE *internal-only* version)
+ * Netty 4.1.100.1.dse&ast;
+ * Spark JobServer 0.8.0.54
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.40 DSE Cassandra
+* Ensured that tombstones get NodeSynced before expiring by assigning segments that have never successfully been NodeSynced an urgent priority. (DSP-23710)
+
+## 6.8.40 DSE CVE
+* Upgraded Netty to version `4.1.100.1.dse` that is based on `4.1.100.Final`. (DSP-23763, [CVE-2023-44487](https://nvd.nist.gov/vuln/detail/CVE-2023-44487), [CVE-2022-41881](https://nvd.nist.gov/vuln/detail/CVE-2022-41881), [CVE-2023-34462](https://nvd.nist.gov/vuln/detail/CVE-2023-34462))
+* Removed `htrace` coming from Hadoop libraries (see [HADOOP-17424](https://issues.apache.org/jira/browse/HADOOP-17424)). Removed `jackson-databind` version `2.4.0` that was a transitive dependency of `htrace`. (DSP-23450)
+* Removed the `htrace` version from the `lucene-solr` library. `htrace` is an unused dependency in DSE 6.8.  This removal resolved security vulnerabilities related to the `htrace` dependency, despite its being unused. (DSP-23756)
+
+
 # Release notes for 6.8.39
 9 October 2023
 
