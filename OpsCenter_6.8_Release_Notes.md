@@ -1,5 +1,23 @@
 # Release notes for OpsCenter
 
+# Release Notes for OpsCenter 6.8.30
+9 Nov 2023
+
+## Backup Service
+* Fixed bugs when running a backup using `allow_one_failure` when one agent is down. (OPSC-17371)
+* Commitlog staging files will now always overwrite commitlog storage files in case of conflict. (OPSC-17375)
+
+## Monitoring
+* Added `action_text` to values available in the email and post URL templates to provide a human readable version of the event action. (OPSC-17267)
+* Resolved subsequent ssl request failures when using posturl for alert notifications. (OPSC-17379)
+
+## UI
+* Removed banner about opscenter 6.7.0 that appears at startup (OPSC-17386)
+* Add security headers when redirecting to index.html (OPSC-17376)
+
+## Core
+* Fixed node status logic when a single node is brought online after all nodes are taken offline. (OPSC-17372)
+
 # Release Notes for 6.8.29
 9 Oct 2023
 
