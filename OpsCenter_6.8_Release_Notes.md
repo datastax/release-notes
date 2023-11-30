@@ -4,7 +4,7 @@
 29 Nov 2023
 
 ## Backup Service
-* Fixed a regression introduced in 6.8.29 that caused an Azure StorageException leading to backups to fail on Azure blob storage. This fix applies to all regions and includes also specific fixes for Azure’s China region where backup store configuration was never possible. (OPSC-17401)
+* Fixed a regression introduced in 6.8.29 that caused an Azure StorageException leading backups to fail on Azure blob storage. This fix applies to all regions and also includes specific fixes for Azure’s China region where backup store configuration was never possible. (OPSC-17401)
 * Allow users to manually truncate tables when sstableloader is not being used and show warning message for confirmation. (OPSC-17402)
 * Fixed an issue where opscenterd would error when trying to list snapshot syncs that had been cleaned up or manually deleted. When this happened the ui would display an error when trying to view the backup history. (OPSC-17414)
 
