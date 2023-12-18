@@ -2,6 +2,32 @@
 DSE 6.8.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.8.41
+18 December 2023
+
+## Components versions for DSE 6.8.41
+ * Apache Solr™ 6.0.1.4.2964
+ * Apache Spark™ 2.4.0.29
+ * Apache TinkerPop™ 3.4.14-20231030-479dc6d7
+ * Apache Tomcat® 8.5.94&ast;
+ * DSE Java Driver 1.10.0-dse-20220616 (DSE *internal-only* version)
+ * Netty 4.1.100.1.dse
+ * Spark JobServer 0.8.0.54
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.41 DSE Core
+* Fixed deadlock in indexes initialization that occurs when the same table has both a secondary index and a search index and the entries in `IndexInfo` table are missing. The deadlock is resolved by marking the SOLR index as built in a different thread than the main DSE thread. (DSP-23828)
+
+## 6.8.41 DSE NodeSync
+* Fixed the `ConcurrentModificationException` exception occurring in error during the NodeSync old validations cleanup process. (DSP-23821)
+
+## 6.8.41 DSE CVE
+* Upgraded Jetty to version `9.4.53.v20231009`. (DSP-23734, [CVE-2023-44487](https://nvd.nist.gov/vuln/detail/CVE-2023-44487))
+* Upgraded Apache Tomcat to version `8.5.94`. (DSP-23779, [CVE-2023-45648](https://nvd.nist.gov/vuln/detail/CVE-2023-45648))
+
+
 # Release notes for 6.8.40
 7 November 2023
 
