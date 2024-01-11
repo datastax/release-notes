@@ -7,7 +7,7 @@
 * Add the missing key to details-sstables so opsc won't raise an incorrect error as backup failure (OPSC-17423)
 * Improved test cases to add more value to fetch event store. (OPSC-17419)
 * Clean-up stale backup/snapshot data when previous cleanup job failed or the job failed during Sync Retry step. (OPSC-17186)
-* Fixed bugs when running a backup using {{allow_one_failure}} when one agent is down. (OPSC-17421)
+* Fixed bugs when running a backup using `{{allow_one_failure}}` when one agent is down. (OPSC-17421)
 
 ## Backup Service,UI
 * Added Commitlog backups cache refresh button in commitlogs dialog. (OPSC-17403)
