@@ -4,22 +4,17 @@
 11 Jan 2024
 
 ## Backup Service
-* Add the missing key to details-sstables so opsc won't raise an incorrect error as backup failure (OPSC-17423)
-* Improved test cases to add more value to fetch event store. (OPSC-17419)
-* Clean-up stale backup/snapshot data when previous cleanup job failed or the job failed during Sync Retry step. (OPSC-17186)
+* Resolved an error when opscenterd encounters an unexpected key when processing backup status reports from nodes. (OPSC-17423)
+* Resolved various errors that occurred after a backup sync was deleted. (OPSC-17419)
+* Backup clean up code will now run after a sync retry. (OPSC-17186)
 * Fixed bugs when running a backup using `{{allow_one_failure}}` when one agent is down. (OPSC-17421)
-
-## Backup Service,UI
 * Added Commitlog backups cache refresh button in commitlogs dialog. (OPSC-17403)
 
 ## Core
-* Publish failover and missing heartbeat after `heartbeat_reply_period` through event services (OPSC-17212)
-
-## Core,TestEng
-* Scripts for load testing stomp service (OPSC-17443)
+* Publish failover and missing heartbeat after `heartbeat_reply_period` through event service.(OPSC-17212)
 
 ## UI
-* Limit a session to a specific User Agent and IP address (OPSC-17278)
+* Limit a session to a specific user agent and IP address (OPSC-17278)
 
 # Release Notes for OpsCenter 6.8.31
 29 Nov 2023
