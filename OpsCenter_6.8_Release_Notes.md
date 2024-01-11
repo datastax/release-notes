@@ -1,5 +1,26 @@
 # Release notes for OpsCenter
 
+# Release Notes for OpsCenter 6.8.32
+11 Jan 2024
+
+## Backup Service
+* Add the missing key to details-sstables so opsc won't raise an incorrect error as backup failure (OPSC-17423)
+* Improved test cases to add more value to fetch event store. (OPSC-17419)
+* Clean stale backup/snapshot data when previous cleanup or the job failed in Sync Retry. (OPSC-17186)
+* Fixed bugs when running a backup using {{allow_one_failure}} when one agent is down. (OPSC-17421)
+
+## Backup Service,UI
+* Added Commitlog backups cache refresh button in commitlogs dialog. (OPSC-17403)
+
+## Core
+* Publish failover and missing heartbeat after heartbeat_reply_period through event services (OPSC-17212)
+
+## Core,TestEng
+* Scripts for load testing stomp service (OPSC-17443)
+
+## UI
+* Limit session to User Agent and IP (OPSC-17278)
+
 # Release Notes for OpsCenter 6.8.31
 29 Nov 2023
 
