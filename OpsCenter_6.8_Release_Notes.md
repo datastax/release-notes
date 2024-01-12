@@ -1,5 +1,21 @@
 # Release notes for OpsCenter
 
+# Release Notes for OpsCenter 6.8.32
+11 Jan 2024
+
+## Backup Service
+* Resolved an error when opscenterd encounters an unexpected key when processing backup status reports from nodes. (OPSC-17423)
+* Resolved various errors that occurred after a backup sync was deleted. (OPSC-17419)
+* Backup clean up code will now run after a sync retry. (OPSC-17186)
+* Fixed bugs when running a backup using `{{allow_one_failure}}` when one agent is down. (OPSC-17421)
+* Added Commitlog backups cache refresh button in commitlogs dialog. (OPSC-17403)
+
+## Core
+* Publish failover and missing heartbeat after `heartbeat_reply_period` through event service.(OPSC-17212)
+
+## UI
+* Limit a session to a specific user agent and IP address (OPSC-17278)
+
 # Release Notes for OpsCenter 6.8.31
 29 Nov 2023
 
