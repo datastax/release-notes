@@ -4,6 +4,34 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.42
+5 February 2024
+
+## Components versions for DSE 6.8.42
+ * Apache Solr™ 6.0.1.4.2964
+ * Apache Spark™ 2.4.0.29
+ * Apache TinkerPop™ 3.4.14-20231030-479dc6d7
+ * Apache Tomcat® 8.5.94
+ * DSE Java Driver 1.10.0-dse-20220616 (DSE *internal-only* version)
+ * Netty 4.1.100.1.dse
+ * Spark JobServer 0.8.0.54
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.42 DSE Cassandra
+* Fixed mutation size calculation formula by taking into account static column updates. Backporting CASSANDRA-15293 achieved this fix. (DSP-23933)
+* Fixed batch size guardrail to take into account the mutation primary key size. That prevents flooding the cluster with operations for tables that use the primary key without clustering columns. (DSP-23913)
+
+## 6.8.42 DSE DSEFS
+* Fixed DSEFS file path handling that could fail when using filenames containing colons. (DSP-23947)
+
+## 6.8.42 DSE Insights
+* Removed Python 2.7 libraries from `collectd`. (DSP-23764)
+
+## 6.8.42 DSE CVE
+* Upgraded the DSE 6.8 dependency on Ehcache to Terracotta's version of Ehcache v2.10.10.17.20. The Terracotta version does not include extra libraries (specifically Jackson data-bind).  The previous Ehcache v2.10.9.2 was exposing a security vulnerability CVE-2020-36518.  The vulnerability in `jackson-databind` before v2.13.0 allowed a Java StackOverflow exception and denial of service via a large depth of nested objects. (DSP-23508, [CVE-2020-36518](https://nvd.nist.gov/vuln/detail/CVE-2020-36518), [CVE-2017-17485](https://nvd.nist.gov/vuln/detail/CVE-2017-17485), [CVE-2017-7525](https://nvd.nist.gov/vuln/detail/CVE-2017-7525), [CVE-2018-11307](https://nvd.nist.gov/vuln/detail/CVE-2018-11307), [CVE-2018-7489](https://nvd.nist.gov/vuln/detail/CVE-2018-7489), [CVE-2019-16942](https://nvd.nist.gov/vuln/detail/CVE-2019-16942))
+
 
 # Release notes for 6.8.41
 18 December 2023
