@@ -3,6 +3,30 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 Release notes of versions prior to 5.1.20 can be found [here](https://docs.datastax.com/en/dse/5.1/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 5.1.42
+5 February 2024
+
+## Components versions for DSE 5.1.42
+ * Apache Solr™ 6.0.1.0.2961
+ * Apache Spark™ 2.0.2.43
+ * Apache TinkerPop™ 3.2.11-20230523-74d884e8
+ * Apache Tomcat® 8.5.94&ast;
+ * DSE Java Driver 1.8.3-dse+20201217 (DSE *internal-only* version)
+ * Netty 4.0.54.1.dse
+ * Spark JobServer 0.6.2.243
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 5.1.42 DSE Cassandra
+* Fixed mutation size calculation formula by taking into account static column updates. Backporting CASSANDRA-15293 achieved this fix. (DSP-23933)
+* Fixed batch size guardrail to take into account the mutation primary key size. That prevents flooding the cluster with operations for tables that use the primary key without clustering columns. (DSP-23913)
+
+## 5.1.42 DSE DSEFS
+* Fixed DSEFS file path handling that could fail when using filenames containing colons. (DSP-23947)
+
+## 5.1.42 DSE CVE
+* Upgraded Apache Tomcat to version 8.5.94. (DSP-23779, [CVE-2023-45648](https://nvd.nist.gov/vuln/detail/CVE-2023-45648))
 
 # Release notes for 5.1.41
 7 November 2023
