@@ -82,6 +82,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
 
 ## 5.1.39 DSE Platform
 * Added support for Red Hat Enterprise Linux 9. (DSP-23444)
+* Added support for Oracle Linux 9. (DSP-22612)
 
 ## Components versions for DSE 5.1.39
  * Apache Solr™ 6.0.1.0.2961

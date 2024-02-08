@@ -154,6 +154,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
 
 ## 6.8.37 DSE Platform
 * Added support for Red Hat Enterprise Linux 9. (DSP-23229)
+* Added support for Oracle Linux 9. (DSP-22612)
 
 ## Components versions for DSE 6.8.37
  * Apache Solr™ 6.0.1.4.2959
@@ -315,6 +316,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
 ## 6.8.33 DSE Platform
 * Added support for Rocky Linux 9. (DSP-22732)
 * Added support for Rocky Linux 8. (DSP-23170)
+* Added support for Oracle Linux 9. (DSP-22612)
 
 ## 6.8.33 DSE Miscellaneous
 * Fixed RPM package install for platforms requiring systemd services. (DSP-23146)
