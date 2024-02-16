@@ -14,10 +14,10 @@
 ## Monitoring
 * Fixed issue in diagnostic tarball generation when `{{diagnostic_tarball_skip_instance_check}}` parameter is True. (OPSC-17471)
 * Added the `{{Swap}}` value to the os-metrics memory.json file to identify if `{{Swap}}` is enabled from a diagnostics generated using OpsCenter. (OPSC-17405)
-* Resolved an issue that made it appear as if alerts were triggered on the configured threshold instead of over it. (OPSC-17446)
+* Fixed metrics computation causing alerts to be triggered when values were close but below their threshold. (OPSC-17446)
 
 ## Repair Service
-* The repair service will now automatically ignore tables using the time window compaction strategy. (OPSC-17449)
+* Improved repair service to automatically ignore tables using the time window compaction strategy. (OPSC-17449)
 
 # Release Notes for OpsCenter 6.8.32
 11 Jan 2024
