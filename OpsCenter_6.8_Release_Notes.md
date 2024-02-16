@@ -1,5 +1,24 @@
 # Release notes for OpsCenter
 
+# Release Notes for OpsCenter 6.8.33
+15 Feb 2024
+
+## Backup Service
+* Improved handling encryption keys in collision, keys from system tables will be ignored during restore. (OPSC-17115)
+
+## Core
+* Added gossip configuration files to diagnostics tarball. (OPSC-17480)
+* Added `{{alert_on_no_host_available}}` to the `{{[cassandra]}}` section of the cluster conf. When set to true an alert will be triggered if opscenterd is unable to make a cql connection to the monitored cluster. (OPSC-17398)
+* Added `{{redirect_host}}` config value to the `{{[webserver]}}` section of `{{opscenterd.conf}}` to force the hostname used in redirects. (OPSC-17265)
+
+## Monitoring
+* Fixed issue in diagnostic tarball generation when `{{diagnostic_tarball_skip_instance_check}}` parameter is True. (OPSC-17471)
+* Added the `{{Swap}}` value to the os-metrics memory.json file to identify if `{{Swap}}` is enabled from a diagnostics generated using OpsCenter. (OPSC-17405)
+* Fixed metrics computation causing alerts to be triggered when values were close but below their threshold. (OPSC-17446)
+
+## Repair Service
+* Improved repair service to automatically ignore tables using the time window compaction strategy. (OPSC-17449)
+
 # Release Notes for OpsCenter 6.8.32
 11 Jan 2024
 
