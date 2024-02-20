@@ -2,6 +2,7 @@
 
 # Release Notes for OpsCenter 6.8.33
 15 Feb 2024
+:warning: Customers using separate storage clusters are not recommended to use this release as it could break opscenterd. Please use version 6.8.32 or wait until the next release, which will be released shortly with a fix. The identified issue wouldn't impact you if there wasn't a separate storage cassandra cluster configured.
 
 ## Backup Service
 * Improved handling encryption keys in collision, keys from system tables will be ignored during restore. (OPSC-17115)
