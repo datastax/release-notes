@@ -3,6 +3,8 @@
 # Release Notes for OpsCenter 6.8.33
 15 Feb 2024
 
+:warning: Customers using a separate storage cluster for metrics are advised to not use this release as OpsCenter will fail to start. Please use version 6.8.32 or wait until the next release, which will be released shortly with a fix.
+
 ## Backup Service
 * Improved handling encryption keys in collision, keys from system tables will be ignored during restore. (OPSC-17115)
 
