@@ -4,25 +4,25 @@
 22 Feb 2024
 
 ## Core
-* Fixed OpsCenter startup failure for customers using a separate storage cluster. Added {{{{alert_on_no_host_available}}}} to the {{{{[storage_cassandra]}}}} section of the cluster conf. When set to {{true}} an alert will be triggered if opscenterd is unable to make a cql connection to the storage cluster. (OPSC-17488)
-* Added {{{{heartbeat_warn_window}}}} to the {{{{[failover]}}}} section of the opscenterd conf. When set to non zero integer value (seconds), Backup OpsCenter triggers an alert if it does not receive heartbeat from Primary OpsCenter in the given window and added {{{{heartbeat_log_level}}}} to the {{{{[failover]}}}} section of the opscenterd conf. When set to one of these values in {{{info, debug, trace}}} primary and backup OpsCenter logs all the heartbeat communication activities at the set level. (OPSC-17388)
+* Fixed OpsCenter startup failure for customers using a separate storage cluster. Added `alert_on_no_host_available` to the `[storage_cassandra]` section of the cluster conf. When set to `true` an alert will be triggered if *opscenterd* is unable to make a cql connection to the storage cluster. (OPSC-17488)
+* Added `heartbeat_warn_window` to the `[failover]` section of the `opscenterd.conf`. When set to non zero integer value (seconds), Backup OpsCenter triggers an alert if it does not receive heartbeat from Primary OpsCenter in the given window and added `heartbeat_log_level` to the `[failover]` section of the opscenterd conf. When set to one of these values in `info`, `debug`, `trace` primary and backup OpsCenter logs all the heartbeat communication activities at the set level. (OPSC-17388)
 
 # Release Notes for OpsCenter 6.8.33
 15 Feb 2024
 
-:warning: Customers using a separate storage cluster for metrics are advised to not use this release as OpsCenter will fail to start. Please use version 6.8.34 instead.
+:warning: Customers using a separate storage cluster for metrics are advised to not use this release as OpsCenter will fail to start. Please use [version `6.8.34`](#release-notes-for-opscenter-6834) instead.
 
 ## Backup Service
 * Improved handling encryption keys in collision, keys from system tables will be ignored during restore. (OPSC-17115)
 
 ## Core
 * Added gossip configuration files to diagnostics tarball. (OPSC-17480)
-* Added `{{alert_on_no_host_available}}` to the `{{[cassandra]}}` section of the cluster conf. When set to true an alert will be triggered if opscenterd is unable to make a cql connection to the monitored cluster. (OPSC-17398)
-* Added `{{redirect_host}}` config value to the `{{[webserver]}}` section of `{{opscenterd.conf}}` to force the hostname used in redirects. (OPSC-17265)
+* Added `alert_on_no_host_available` to the `[cassandra]` section of the cluster conf. When set to true an alert will be triggered if opscenterd is unable to make a cql connection to the monitored cluster. (OPSC-17398)
+* Added `redirect_host` config value to the `[webserver]` section of `opscenterd.conf` to force the hostname used in redirects. (OPSC-17265)
 
 ## Monitoring
-* Fixed issue in diagnostic tarball generation when `{{diagnostic_tarball_skip_instance_check}}` parameter is True. (OPSC-17471)
-* Added the `{{Swap}}` value to the os-metrics memory.json file to identify if `{{Swap}}` is enabled from a diagnostics generated using OpsCenter. (OPSC-17405)
+* Fixed issue in diagnostic tarball generation when `diagnostic_tarball_skip_instance_check` parameter is True. (OPSC-17471)
+* Added the `Swap` value to the os-metrics memory.json file to identify if `Swap` is enabled from a diagnostics generated using OpsCenter. (OPSC-17405)
 * Fixed metrics computation causing alerts to be triggered when values were close but below their threshold. (OPSC-17446)
 
 ## Repair Service
@@ -35,7 +35,7 @@
 * Resolved an error when opscenterd encounters an unexpected key when processing backup status reports from nodes. (OPSC-17423)
 * Resolved various errors that occurred after a backup sync was deleted. (OPSC-17419)
 * Backup clean up code will now run after a sync retry. (OPSC-17186)
-* Fixed bugs when running a backup using `{{allow_one_failure}}` when one agent is down. (OPSC-17421)
+* Fixed bugs when running a backup using `allow_one_failure` when one agent is down. (OPSC-17421)
 * Added Commitlog backups cache refresh button in commitlogs dialog. (OPSC-17403)
 
 ## Core
