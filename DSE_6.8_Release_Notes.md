@@ -4,6 +4,38 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.43
+11 March 2024
+
+## Components versions for DSE 6.8.43
+ * Apache Solr™ 6.0.1.4.2964
+ * Apache Spark™ 2.4.0.30&ast;
+ * Apache TinkerPop™ 3.4.14-20240307-bcc67d14&ast;
+ * Apache Tomcat® 8.5.94
+ * DSE Java Driver 1.10.0-dse-20240212&ast; (DSE *internal-only* version)
+ * Netty 4.1.100.1.dse
+ * Spark JobServer 0.8.0.54
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.43 DSE Cassandra
+* Reverted the regression caused by DSP-23913 which introduced a change in batch size calculation that impacts the behaviour of the batch_size guardrail. Introduced a new guardrail called `batch_size_with_pk_warn_threshold_in_kb`, `batch_size_with_pk_fail_threshold_in_kb` instead that honours the updated logic. (DSP-24011)
+
+## 6.8.43 DSE Core
+* Fixed issue causing indefinite waits during flush operations when TPC executor gets overloaded and default queue size is exceeded. (DSP-23774)
+* Modified DSE Advanced Authentication to preserve credentials cache in case of an LDAP internal error causing authentication failure. (DSP-12590)
+* Improved LDAP logging by decreasing the frequency of search reference warning messages. (DSP-21177)
+* Changed DSE Advanced Authentication to only record in audit log a login error when authentication fails due to matching credentials (and not for provider internal errors). (DSP-23952)
+
+## 6.8.43 DSE Docker
+* Upgraded JDK versions in DSE Docker images to `8u392` and `11.0.21`. (DSP-23213)
+
+## 6.8.43 DSE CVE
+* Upgraded `org.json:json` to version `20240205`. (DSP-23784, [CVE-2023-5072](https://nvd.nist.gov/vuln/detail/CVE-2023-5072))
+* Upgraded `snappy-java` to version `1.1.10.4`. (DSP-23819, [CVE-2023-43642](https://nvd.nist.gov/vuln/detail/CVE-2023-43642))
+* Upgraded `jnr-posix` to version `3.1.8`. (DSP-23820, [CWE-416](https://nvd.nist.gov/vuln/detail/CWE-416))
+
 # Release notes for 6.8.42
 5 February 2024
 
