@@ -3,6 +3,35 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 Release notes of versions prior to 5.1.20 can be found [here](https://docs.datastax.com/en/dse/5.1/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 5.1.43
+11 March 2024
+
+## Components versions for DSE 5.1.43
+ * Apache Solr™ 6.0.1.0.2961
+ * Apache Spark™ 2.0.2.43
+ * Apache TinkerPop™ 3.2.11-20230523-74d884e8
+ * Apache Tomcat® 8.5.94
+ * DSE Java Driver 1.8.3-dse+20201217 (DSE *internal-only* version)
+ * Netty 4.0.54.1.dse
+ * Spark JobServer 0.6.2.243
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 5.1.43 DSE Cassandra
+* Reverted the regression caused by DSP-23913 which introduced a change in batch size calculation that impacts the behaviour of the batch_size guardrail. Introduced a new guardrail called `batch_size_with_pk_warn_threshold_in_kb`, `batch_size_with_pk_fail_threshold_in_kb` instead that honours the updated logic. (DSP-24011)
+
+## 5.1.43 DSE Core
+* Modified DSE Advanced Authentication to preserve credentials cache in case of an LDAP internal error causing authentication failure. (DSP-12590)
+* Improved LDAP logging by decreasing the frequency of search reference warning messages. (DSP-21177)
+* Changed DSE Advanced Authentication to only record in audit log a login error when authentication fails due to matching credentials (and not for provider internal errors). (DSP-23952)
+
+## 5.1.43 DSE Docker
+* Upgraded JDK versions in DSE Docker images to `8u392` and `11.0.21`. (DSP-23213)
+
+## 5.1.43 DSE CVE
+* Upgraded org.json:json to 20240205. (DSP-23784, [CVE-2023-5072](https://nvd.nist.gov/vuln/detail/CVE-2023-5072))
+
 # Release notes for 5.1.42
 5 February 2024
 
