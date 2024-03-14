@@ -173,6 +173,7 @@ See the [environment variables](https://github.com/riptano/pulsar-distro/blob/ls
 
 ## Migrating from Luna Streaming 2.10
 - Upgrade is fully supported for all the components (connectors included).
+- Pulsar-SQL: If you're upgrading Pulsar SQL from 2.11 or earlier, you should copy config files from conf/presto to trino/conf. If you're downgrading Pulsar SQL to 2.11 or earlier from newer versions, do the vice-versa.
 - Downgrade is not supported for Bookies, rest all components support downgrade. 
   - Description -
     - Pulsar 3.1 uses RocksDB 7.x which writes in a format that is not compatible with RocksDB 6.x which is used by LunaStreaming 2.10 via Bookkeeper 4.14.
