@@ -1,11 +1,31 @@
 # Release notes for OpsCenter
 
+# Release Notes for OpsCenter 6.8.35
+22 Mar 2024
+
+## Backup Service
+* Fixed an issue with PIT restore when there is a schema mismatch. Added {{force_schema}} parameter to PIT Restore API to solve this issue. (OPSC-17486)
+* Fixed the backup process to run post-backup script after the snapshot files are synchronised to the destinations (OPSC-17483)
+* Fixed backup activity API memory and timeout issues using parameter {{backup_activity_query_batch_size}} configurable in {{[backup]}} section. (OPSC-17496)
+
+## Monitoring
+* Fixed an issue in diagnostic tarball generation to use {{dse client-tool}} instead of {{dsetool}} to list output for {{sparkmaster}}. Removed the deprecated {{listjt}} file. (OPSC-11798)
+
+## Provisioning
+* Added option to configure truststore location through LCM (OPSC-17395)
+
+## UI
+* Added {{Materialized View}} restoration progress in the restore dialog. (OPSC-17263)
+
+## Core
+* Fixed potential memory leak in the twisted library. (OPSC-17147)
+
 # Release Notes for OpsCenter 6.8.34
 22 Feb 2024
 
 ## Core
-* Fixed OpsCenter startup failure for customers using a separate storage cluster. Added `alert_on_no_host_available` to the `[storage_cassandra]` section of the cluster conf. When set to `true` an alert will be triggered if *opscenterd* is unable to make a cql connection to the storage cluster. (OPSC-17488)
-* Added `heartbeat_warn_window` to the `[failover]` section of the `opscenterd.conf`. When set to non zero integer value (seconds), Backup OpsCenter triggers an alert if it does not receive heartbeat from Primary OpsCenter in the given window and added `heartbeat_log_level` to the `[failover]` section of the opscenterd conf. When set to one of these values in `info`, `debug`, `trace` primary and backup OpsCenter logs all the heartbeat communication activities at the set level. (OPSC-17388)
+* Fixed OpsCenter startup failure for customers using a separate storage cluster. Added `alert_on_no_host_available` to the `[storage_cassandra]` section of the cluster conf. When set to `true`  triggers a message in the backup opscenter logs if *opscenterd* is unable to make a cql connection to the storage cluster. (OPSC-17488)
+* Added `heartbeat_warn_window` to the `[failover]` section of the `opscenterd.conf`. When set to non zero integer value (seconds), Backup OpsCenter triggers a message in the backup opscenter logs if it does not receive heartbeat from Primary OpsCenter in the given window and added `heartbeat_log_level` to the `[failover]` section of the opscenterd conf. When set to one of these values in `info`, `debug`, `trace` primary and backup OpsCenter logs all the heartbeat communication activities at the set level. (OPSC-17388)
 
 # Release Notes for OpsCenter 6.8.33
 15 Feb 2024
