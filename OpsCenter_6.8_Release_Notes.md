@@ -24,7 +24,7 @@
 22 Feb 2024
 
 ## Core
-* Fixed OpsCenter startup failure for customers using a separate storage cluster. Added `alert_on_no_host_available` to the `[storage_cassandra]` section of the cluster conf. When set to `true`  triggers a message in the backup opscenter logs if *opscenterd* is unable to make a cql connection to the storage cluster. (OPSC-17488)
+* Fixed OpsCenter startup failure for customers using a separate storage cluster. Added `alert_on_no_host_available` to the `[storage_cassandra]` section of the cluster configuration. A setting of `true`  triggers a message in the backup opscenter logs when *opscenterd* is unable to make a cql connection to the storage cluster. (OPSC-17488)
 * Added `heartbeat_warn_window` to the `[failover]` section of the `opscenterd.conf`. When set to non zero integer value (seconds), Backup OpsCenter triggers a message in the backup opscenter logs if it does not receive heartbeat from Primary OpsCenter in the given window and added `heartbeat_log_level` to the `[failover]` section of the opscenterd conf. When set to one of these values in `info`, `debug`, `trace` primary and backup OpsCenter logs all the heartbeat communication activities at the set level. (OPSC-17388)
 
 # Release Notes for OpsCenter 6.8.33
