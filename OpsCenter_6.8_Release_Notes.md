@@ -4,18 +4,18 @@
 22 Mar 2024
 
 ## Backup Service
-* Fixed an issue with PIT restore when there is a schema mismatch. Added {{force_schema}} parameter to PIT Restore API to solve this issue. (OPSC-17486)
+* Fixed an issue with PIT restore when there is a schema mismatch. Added `force_schema` parameter to PIT Restore API to solve this issue. (OPSC-17486)
 * Fixed the backup process to run post-backup script after the snapshot files are synchronised to the destinations (OPSC-17483)
-* Fixed backup activity API memory and timeout issues using parameter {{backup_activity_query_batch_size}} configurable in {{[backup]}} section. (OPSC-17496)
+* Fixed backup activity API memory and timeout issues using parameter `backup_activity_query_batch_size` configurable in `[backup]` section. (OPSC-17496)
 
 ## Monitoring
-* Fixed an issue in diagnostic tarball generation to use {{dse client-tool}} instead of {{dsetool}} to list output for {{sparkmaster}}. Removed the deprecated {{listjt}} file. (OPSC-11798)
+* Fixed an issue in diagnostic tarball generation to use `dse client-tool` instead of `dsetool` to list output for `sparkmaster`. Removed the deprecated `listjt` file. (OPSC-11798)
 
 ## Provisioning
 * Added option to configure truststore location through LCM (OPSC-17395)
 
 ## UI
-* Added {{Materialized View}} restoration progress in the restore dialog. (OPSC-17263)
+* Added Materialized View restoration progress in the restore dialog. (OPSC-17263)
 
 ## Core
 * Fixed potential memory leak in the twisted library. (OPSC-17147)
