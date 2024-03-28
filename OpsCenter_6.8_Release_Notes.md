@@ -3,6 +3,8 @@
 # Release Notes for OpsCenter 6.8.35
 22 Mar 2024
 
+:warning: Customers who are upgrading the OpsCenter to 6.8.35 from older versions may face issue with agent installation. This issue can be addressed by altering the cluster table in lcm.db. For details please refer to OPSC-17503.
+
 ## Backup Service
 * Fixed an issue with PIT restore when there is a schema mismatch. Added `force_schema` parameter to PIT Restore API to solve this issue. (OPSC-17486)
 * Fixed the backup process to run post-backup script after the snapshot files are synchronised to the destinations (OPSC-17483)
