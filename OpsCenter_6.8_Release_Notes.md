@@ -3,9 +3,6 @@
 # Release Notes for OpsCenter 6.8.36
 1 Apr 2024
 
-## Backup Service
-* Fixed issue with synchronizing backup jobs impacting on-server backups. (OPSC-17465)
-
 ## Monitoring,UI
 * Fixed issue with installing datastax-agent. (OPSC-17503)
 
