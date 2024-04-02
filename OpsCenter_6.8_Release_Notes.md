@@ -9,6 +9,9 @@
 ## Monitoring,UI
 * Fixed issue with installing datastax-agent. (OPSC-17503)
 
+## UI
+* Reverted the code changes made for limiting a session to a specific user agent and IP address. (OPSC-17278)
+
 # Release Notes for OpsCenter 6.8.35
 22 Mar 2024
 
