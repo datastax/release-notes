@@ -1,18 +1,29 @@
 # Release notes for OpsCenter
 
+# Release Notes for OpsCenter 6.8.36
+1 Apr 2024
+
+## Monitoring,UI
+* Fixed issue with installing datastax-agent. (OPSC-17503)
+
+## Core
+* Reverted the code changes made for limiting a session to a specific user agent and IP address. (OPSC-17278)
+
 # Release Notes for OpsCenter 6.8.35
 22 Mar 2024
 
+:warning: Customers who are upgrading the OpsCenter to 6.8.35 from older versions may face issue with agent installation. Please use [version `6.8.36`](#release-notes-for-opscenter-6836) instead.
+
 ## Backup Service
 * Fixed an issue with PIT restore when there is a schema mismatch. Added `force_schema` parameter to PIT Restore API to solve this issue. (OPSC-17486)
-* Fixed the backup process to run post-backup script after the snapshot files are synchronised to the destinations (OPSC-17483)
+* Fixed the backup process to run post-backup script after the snapshot files are synchronised to the destinations. (OPSC-17483)
 * Fixed backup activity API memory and timeout issues using parameter `backup_activity_query_batch_size` configurable in `[backup]` section. (OPSC-17496)
 
 ## Monitoring
 * Fixed an issue in diagnostic tarball generation to use `dse client-tool` instead of `dsetool` to list output for `sparkmaster`. Removed the deprecated `listjt` file. (OPSC-11798)
 
 ## Provisioning
-* Added option to configure truststore location through LCM (OPSC-17395)
+* Added option to configure truststore location through LCM. (OPSC-17395)
 
 ## UI
 * Added Materialized View restoration progress in the restore dialog. (OPSC-17263)
