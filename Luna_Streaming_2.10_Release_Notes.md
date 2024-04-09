@@ -117,7 +117,7 @@ both methods follow the same packaging patterns.
 
 # Releases
 
-# Luna Streaming 2.10.5.4
+## Luna Streaming 2.10.5.4
 This is a maintenance release containing important stability and security updates.
 
 ### Most notable commits
