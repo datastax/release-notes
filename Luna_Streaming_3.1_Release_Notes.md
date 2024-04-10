@@ -80,7 +80,6 @@ This is a maintenance release containing important stability and security update
 
 ### Most notable commits
 
-* [53b3dbd](https://github.com/datastax/pulsar/commit/53b3dbd) Disabled AlluxioSinkTest
 * [5b82329](https://github.com/datastax/pulsar/commit/5b82329) [improve][misc] Specify valid home dir for the default user in the Ubuntu based docker image (#22446)
 * [a20af42](https://github.com/datastax/pulsar/commit/a20af42) [fix][build] Fix building docker images without setting UBUNTU_MIRROR
 * [4e10b22](https://github.com/datastax/pulsar/commit/4e10b22) [fix][broker][admin] Fix cannot update properties on NonDurable subscription. (#22411)
