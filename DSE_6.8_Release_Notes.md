@@ -4,6 +4,34 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.44
+12 April 2024
+
+## Components versions for DSE 6.8.44
+ * Apache Solr™ 6.0.1.4.2964
+ * Apache Spark™ 2.4.0.30
+ * Apache TinkerPop™ 3.4.14-20240307-bcc67d14
+ * Apache Tomcat® 8.5.94
+ * DSE Java Driver 1.10.0-dse-20240212 (DSE *internal-only* version)
+ * Netty 4.1.100.1.dse
+ * Spark JobServer 0.8.0.54
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.44 DSE Cassandra
+* Fixed millisecond precision point in time restore. (DSP-23993)
+
+## 6.8.44 DSE Search
+* Fixed Solr credentials parsing. (DSP-24102)
+
+## 6.8.44 DSE Miscellaneous
+* Added support for AWS Ec2 IMDSv2. Please beware that if you use Ec2Snitch or Ec2MultiRegionSnitch, by default it will communicate with AWS IMDS of version 2. This change is transparent, there does not need anything done upon upgrade. Furthermore, IMDS of version 2 can be configured to be required in AWS EC2 console. Consult cassandra-rackdc.properties for more details. (DSP-23995)
+* Fixed nodetool viewbuildstatus to query the responsible replica. It prevents returning unknown status when system_distributed RF is smaller than the number of nodes in the cluster. (DSP-23806)
+
+## 6.8.44 DSE CVE
+* Added possibility to close/block connection per role by specifying {{connection_idle_timeout_seconds}} and {{connection_idle_behavior}} via a role custom options. (DSP-23951)
+
 # Release notes for 6.8.43
 11 March 2024
 
