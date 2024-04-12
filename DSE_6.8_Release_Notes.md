@@ -21,16 +21,14 @@ If you're developing applications, please refer to the [Java Driver documentatio
 
 ## 6.8.44 DSE Cassandra
 * Fixed millisecond precision point in time restore. (DSP-23993)
+* Added support for AWS EC2 IMDSv2. Please beware that if you use Ec2Snitch or Ec2MultiRegionSnitch, by default it will communicate with AWS IMDSv2. This change is transparent and does not need anything done upon upgrade. Consult cassandra-rackdc.properties for more details. (DSP-23995)
+* Fixed nodetool viewbuildstatus to query the responsible replica. It prevents returning unknown status when system_distributed RF is smaller than the number of nodes in the cluster. (DSP-23806)
 
 ## 6.8.44 DSE Search
 * Fixed Solr credentials parsing. (DSP-24102)
 
-## 6.8.44 DSE Miscellaneous
-* Added support for AWS Ec2 IMDSv2. Please beware that if you use Ec2Snitch or Ec2MultiRegionSnitch, by default it will communicate with AWS IMDS of version 2. This change is transparent, there does not need anything done upon upgrade. Furthermore, IMDS of version 2 can be configured to be required in AWS EC2 console. Consult cassandra-rackdc.properties for more details. (DSP-23995)
-* Fixed nodetool viewbuildstatus to query the responsible replica. It prevents returning unknown status when system_distributed RF is smaller than the number of nodes in the cluster. (DSP-23806)
-
-## 6.8.44 DSE CVE
-* Added possibility to close/block connection per role by specifying {{connection_idle_timeout_seconds}} and {{connection_idle_behavior}} via a role custom options. (DSP-23951)
+## 6.8.44 DSE Security
+* Added possibility to close/block connection per role by specifying `connection_idle_timeout_seconds` and `connection_idle_behavior` via a role custom options. (DSP-23951)
 
 # Release notes for 6.8.43
 11 March 2024
