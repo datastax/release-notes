@@ -4,6 +4,11 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.45
+22 April 2024
+
+This release has the same content as the next one 6.8.45 and it should not be used. Instead the next release should be used.
+
 # Release notes for 6.8.44
 12 April 2024
 
