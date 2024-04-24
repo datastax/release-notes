@@ -4,6 +4,27 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.46
+23 April 2024
+
+## Components versions for DSE 6.8.46
+ * Apache Solr™ 6.0.1.4.2964
+ * Apache Spark™ 2.4.0.30
+ * Apache TinkerPop™ 3.4.14-20240307-bcc67d14
+ * Apache Tomcat® 8.5.94
+ * DSE Java Driver 1.10.0-dse-20240212 (DSE *internal-only* version)
+ * Netty 4.1.100.1.dse
+ * Spark JobServer 0.8.0.54
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.46 DSE Performance
+* Changed the default location of the histogram aggregation work, offloading it by default to a thread pool different than the main one. This unblocks the TPC threads when large numbers of tables exist. (DSP-24165)
+
+# Release notes for 6.8.45
+This release is an internal DSE release identical to `6.8.46` release.
+
 # Release notes for 6.8.44
 12 April 2024
 
