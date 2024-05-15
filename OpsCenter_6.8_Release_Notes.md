@@ -8,7 +8,7 @@
 * Upgraded Azure SDK to V12. (OPSC-16414)
 * Fixed an error that could occur when syncing backup meta data from a destination to OpsCenter's backup table. (OPSC-17506)
 * Improved backup activity API and upgraded backup_reports table schema. (OPSC-17511)
-* Added Migration script to upgrade backup_reports table. Set `backup_reports_migrate_data` config to `True` to start migration, reset to `False` after the migration is completed and restart opscenter. (OPSC-17520)
+* Added Migration script to upgrade backup_reports table. Added new config `backup_reports_migrate_data` in the `[backup_service]` section of `opscenterd.conf` file.  Set this to `True` to start migration, reset to `False` after the migration is completed and restart opscenter.
 
 ## Monitoring
 * Removed unnecessary error warnings while generating diagnostic tarball. (OPSC-17517)
