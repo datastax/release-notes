@@ -4,6 +4,27 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.48
+13 May 2024
+
+## Components versions for DSE 6.8.48
+ * Apache Solr™ 6.0.1.4.2964
+ * Apache Spark™ 2.4.0.30
+ * Apache TinkerPop™ 3.4.14-20240307-bcc67d14
+ * Apache Tomcat® 8.5.94
+ * DSE Java Driver 1.10.0-dse-20240212 (DSE *internal-only* version)
+ * Netty 4.1.100.1.dse
+ * Spark JobServer 0.8.0.54
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.48 DSE Cassandra
+* Fixed `NoClassDefFoundError` in Azure backups that are configured to authenticate through a pod identity. (DSP-24143)
+
+## 6.8.48 DSE CVE
+* Upgraded to Bouncy Castle v1.78.1, its latest known version. (DSP-24188, [CVE-2024-30371](https://nvd.nist.gov/vuln/detail/CVE-2024-30371))
+
 # Release notes for 6.8.47
 25 April 2024
 
