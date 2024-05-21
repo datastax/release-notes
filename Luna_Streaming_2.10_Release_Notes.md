@@ -123,8 +123,9 @@ This is a maintenance release containing updates on pulsar-io-cloud-storage conn
 ### `lunastreaming-all` distribution
 
 <details><summary>Sinks</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-enhanced](https://github.com/datastax/pulsar-sink) | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | 1.6.11 | cassandra-enhanced-pulsar-sink-1.6.11-nar.nar |
 | [cloud-storage](https://github.com/streamnative/pulsar-io-cloud-storage) | Writes data into cloud storage | 2.10.1 | pulsar-io-cloud-storage-2.10.1.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.5.5 | pulsar-io-data-generator-2.10.5.5.nar |
@@ -139,8 +140,9 @@ This is a maintenance release containing updates on pulsar-io-cloud-storage conn
 | [snowflake](https://github.com/datastax/snowflake-connector) | Snowflake Connector | 0.1.13 | pulsar-snowflake-connector-0.1.13.nar |
 </details>
 <details><summary>Sources</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-source](https://github.com/datastax/cdc-for-apache-cassandra) | Read data from Cassandra | 2.2.9 | pulsar-cassandra-source-2.2.9.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.5.5 | pulsar-io-data-generator-2.10.5.5.nar |
 | [debezium-mongodb](https://pulsar.apache.org/docs/io-connectors) | Debezium MongoDb Source | 2.10.5.5 | pulsar-io-debezium-mongodb-2.10.5.5.nar |
@@ -152,33 +154,36 @@ This is a maintenance release containing updates on pulsar-io-cloud-storage conn
 | [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.10.5.5 | pulsar-io-kinesis-2.10.5.5.nar |
 </details>
 <details><summary>Proxy extensions</summary>
+
 | Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| ---- | ----------- | ------- | ---- |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Proxy Extension | 2.10.3.10 | pulsar-kafka-proxy-2.10.3.10.nar |
-| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 </details>
 <details><summary>Protocol handlers</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
-| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Protocol Handler | 2.10.3.10 | pulsar-protocol-handler-kafka-2.10.3.10.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 </details>
 <details><summary>CLI extensions</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-cdc](https://pulsar.apache.org/docs/io-connectors) | Cassandra CDC - Pulsar Admin Custom Commands | 2.2.5 | pulsar-cassandra-admin-2.2.5-nar.nar |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - Pulsar Admin Custom Commands | 3.1.0 | pulsar-jms-admin-3.1.0-nar.nar |
 </details>
 <details><summary>Filters</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - support for server side filters | 3.1.0 | pulsar-jms-3.1.0-nar.nar |
 </details>
 <details><summary>Functions</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [ai-tools](https://pulsar.apache.org/docs/io-connectors) | Generative AI tools | 3.1.1 | pulsar-ai-tools-3.1.1.nar |
 | [transforms](https://pulsar.apache.org/docs/io-connectors) | Transformation function | 3.1.1 | pulsar-transformations-3.1.1.nar |
 </details>
@@ -194,8 +199,9 @@ This is a maintenance release containing important stability and security update
 ### `lunastreaming-all` distribution
 
 <details><summary>Sinks</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-enhanced](https://github.com/datastax/pulsar-sink) | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | 1.6.11 | cassandra-enhanced-pulsar-sink-1.6.11-nar.nar |
 | [cloud-storage](https://github.com/streamnative/pulsar-io-cloud-storage) | Writes data into cloud storage | 2.10.0 | pulsar-io-cloud-storage-2.10.0.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.5.4 | pulsar-io-data-generator-2.10.5.4.nar |
@@ -210,8 +216,9 @@ This is a maintenance release containing important stability and security update
 | [snowflake](https://github.com/datastax/snowflake-connector) | Snowflake Connector | 0.1.13 | pulsar-snowflake-connector-0.1.13.nar |
 </details>
 <details><summary>Sources</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-source](https://github.com/datastax/cdc-for-apache-cassandra) | Read data from Cassandra | 2.2.9 | pulsar-cassandra-source-2.2.9.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.5.4 | pulsar-io-data-generator-2.10.5.4.nar |
 | [debezium-mongodb](https://pulsar.apache.org/docs/io-connectors) | Debezium MongoDb Source | 2.10.5.4 | pulsar-io-debezium-mongodb-2.10.5.4.nar |
@@ -223,33 +230,38 @@ This is a maintenance release containing important stability and security update
 | [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.10.5.4 | pulsar-io-kinesis-2.10.5.4.nar |
 </details>
 <details><summary>Proxy extensions</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Proxy Extension | 2.10.3.10 | pulsar-kafka-proxy-2.10.3.10.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 </details>
 <details><summary>Protocol handlers</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Protocol Handler | 2.10.3.10 | pulsar-protocol-handler-kafka-2.10.3.10.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 </details>
 <details><summary>CLI extensions</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-cdc](https://pulsar.apache.org/docs/io-connectors) | Cassandra CDC - Pulsar Admin Custom Commands | 2.2.5 | pulsar-cassandra-admin-2.2.5-nar.nar |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - Pulsar Admin Custom Commands | 3.1.0 | pulsar-jms-admin-3.1.0-nar.nar |
 </details>
 <details><summary>Filters</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - support for server side filters | 3.1.0 | pulsar-jms-3.1.0-nar.nar |
 </details>
 <details><summary>Functions</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [ai-tools](https://pulsar.apache.org/docs/io-connectors) | Generative AI tools | 3.1.1 | pulsar-ai-tools-3.1.1.nar |
 | [transforms](https://pulsar.apache.org/docs/io-connectors) | Transformation function | 3.1.1 | pulsar-transformations-3.1.1.nar |
 </details>
@@ -260,8 +272,9 @@ This release only contains plugins update.
 
 ### `lunastreaming-all` distribution
 <details><summary>Sinks</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-enhanced](https://github.com/datastax/pulsar-sink) | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | 1.6.11 | cassandra-enhanced-pulsar-sink-1.6.11-nar.nar |
 | [cloud-storage](https://github.com/streamnative/pulsar-io-cloud-storage) | Writes data into cloud storage | 2.10.0 | pulsar-io-cloud-storage-2.10.0.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.5.1 | pulsar-io-data-generator-2.10.5.1.nar |
@@ -276,8 +289,9 @@ This release only contains plugins update.
 | [snowflake](https://github.com/datastax/snowflake-connector) | Snowflake Connector | 0.1.13 | pulsar-snowflake-connector-0.1.13.nar |
 </details>
 <details><summary>Sources</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-source](https://github.com/datastax/cdc-for-apache-cassandra) | Read data from Cassandra | 2.2.9 | pulsar-cassandra-source-2.2.9.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.5.1 | pulsar-io-data-generator-2.10.5.1.nar |
 | [debezium-mongodb](https://pulsar.apache.org/docs/io-connectors) | Debezium MongoDb Source | 2.10.5.1 | pulsar-io-debezium-mongodb-2.10.5.1.nar |
@@ -289,33 +303,38 @@ This release only contains plugins update.
 | [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.10.5.1 | pulsar-io-kinesis-2.10.5.1.nar |
 </details>
 <details><summary>Proxy extensions</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Proxy Extension | 2.10.3.10 | pulsar-kafka-proxy-2.10.3.10.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 </details>
 <details><summary>Protocol handlers</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Protocol Handler | 2.10.3.10 | pulsar-protocol-handler-kafka-2.10.3.10.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 </details>
 <details><summary>CLI extensions</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-cdc](https://pulsar.apache.org/docs/io-connectors) | Cassandra CDC - Pulsar Admin Custom Commands | 2.2.5 | pulsar-cassandra-admin-2.2.5-nar.nar |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - Pulsar Admin Custom Commands | 3.1.0 | pulsar-jms-admin-3.1.0-nar.nar |
 </details>
 <details><summary>Filters</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - support for server side filters | 3.1.0 | pulsar-jms-3.1.0-nar.nar |
 </details>
 <details><summary>Functions</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [ai-tools](https://pulsar.apache.org/docs/io-connectors) | Generative AI tools | 3.1.7 | pulsar-ai-tools-3.1.7.nar |
 | [transforms](https://pulsar.apache.org/docs/io-connectors) | Transformation function | 3.1.1 | pulsar-transformations-3.1.1.nar |
 </details>
@@ -362,8 +381,9 @@ This is a maintenance release containing important stability and security update
 ### `lunastreaming-all` distribution
 
 <details><summary>Sinks</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-enhanced](https://github.com/datastax/pulsar-sink) | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | 1.6.11 | cassandra-enhanced-pulsar-sink-1.6.11-nar.nar |
 | [cloud-storage](https://github.com/streamnative/pulsar-io-cloud-storage) | Writes data into cloud storage | 2.10.0 | pulsar-io-cloud-storage-2.10.0.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.5.0 | pulsar-io-data-generator-2.10.5.0.nar |
@@ -378,8 +398,9 @@ This is a maintenance release containing important stability and security update
 | [snowflake](https://github.com/datastax/snowflake-connector) | Snowflake Connector | 0.1.13 | pulsar-snowflake-connector-0.1.13.nar |
 </details>
 <details><summary>Sources</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-source](https://github.com/datastax/cdc-for-apache-cassandra) | Read data from Cassandra | 2.2.9 | pulsar-cassandra-source-2.2.9.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.5.0 | pulsar-io-data-generator-2.10.5.0.nar |
 | [debezium-mongodb](https://pulsar.apache.org/docs/io-connectors) | Debezium MongoDb Source | 2.10.5.0 | pulsar-io-debezium-mongodb-2.10.5.0.nar |
@@ -391,33 +412,38 @@ This is a maintenance release containing important stability and security update
 | [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.10.5.0 | pulsar-io-kinesis-2.10.5.0.nar |
 </details>
 <details><summary>Proxy extensions</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Proxy Extension | 2.10.3.10 | pulsar-kafka-proxy-2.10.3.10.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 </details>
 <details><summary>Protocol handlers</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Protocol Handler | 2.10.3.10 | pulsar-protocol-handler-kafka-2.10.3.10.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 </details>
 <details><summary>CLI extensions</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-cdc](https://pulsar.apache.org/docs/io-connectors) | Cassandra CDC - Pulsar Admin Custom Commands | 2.2.5 | pulsar-cassandra-admin-2.2.5-nar.nar |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - Pulsar Admin Custom Commands | 3.1.0 | pulsar-jms-admin-3.1.0-nar.nar |
 </details>
 <details><summary>Filters</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - support for server side filters | 3.1.0 | pulsar-jms-3.1.0-nar.nar |
 </details>
 <details><summary>Functions</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [ai-tools](https://pulsar.apache.org/docs/io-connectors) | Generative AI tools | 3.1.1 | pulsar-ai-tools-3.1.1.nar |
 | [transforms](https://pulsar.apache.org/docs/io-connectors) | Transformation function | 3.1.1 | pulsar-transformations-3.1.1.nar |
 </details>
@@ -440,8 +466,9 @@ This is a maintenance release containing important stability and security update
 
 ### `lunastreaming-all` distribution
 <details><summary>Sinks</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-enhanced](https://github.com/datastax/pulsar-sink) | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | 1.6.11 | cassandra-enhanced-pulsar-sink-1.6.11-nar.nar |
 | [cloud-storage](https://github.com/streamnative/pulsar-io-cloud-storage) | Writes data into cloud storage | 2.10.0 | pulsar-io-cloud-storage-2.10.0.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.4.9 | pulsar-io-data-generator-2.10.4.9.nar |
@@ -456,8 +483,9 @@ This is a maintenance release containing important stability and security update
 | [snowflake](https://github.com/datastax/snowflake-connector) | Snowflake Connector | 0.1.13 | pulsar-snowflake-connector-0.1.13.nar |
 </details>
 <details><summary>Sources</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-source](https://github.com/datastax/cdc-for-apache-cassandra) | Read data from Cassandra | 2.2.9 | pulsar-cassandra-source-2.2.9.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.4.9 | pulsar-io-data-generator-2.10.4.9.nar |
 | [debezium-mongodb](https://pulsar.apache.org/docs/io-connectors) | Debezium MongoDb Source | 2.10.4.9 | pulsar-io-debezium-mongodb-2.10.4.9.nar |
@@ -469,33 +497,38 @@ This is a maintenance release containing important stability and security update
 | [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.10.4.9 | pulsar-io-kinesis-2.10.4.9.nar |
 </details>
 <details><summary>Proxy extensions</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Proxy Extension | 2.10.3.10 | pulsar-kafka-proxy-2.10.3.10.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 </details>
 <details><summary>Protocol handlers</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Protocol Handler | 2.10.3.10 | pulsar-protocol-handler-kafka-2.10.3.10.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 </details>
 <details><summary>CLI extensions</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-cdc](https://pulsar.apache.org/docs/io-connectors) | Cassandra CDC - Pulsar Admin Custom Commands | 2.2.5 | pulsar-cassandra-admin-2.2.5-nar.nar |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - Pulsar Admin Custom Commands | 3.1.0 | pulsar-jms-admin-3.1.0-nar.nar |
 </details>
 <details><summary>Filters</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - support for server side filters | 3.1.0 | pulsar-jms-3.1.0-nar.nar |
 </details>
 <details><summary>Functions</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [ai-tools](https://pulsar.apache.org/docs/io-connectors) | AI tools | 3.1.0 | pulsar-ai-tools-3.1.0.nar |
 | [transforms](https://pulsar.apache.org/docs/io-connectors) | Transformation function | 3.1.0 | pulsar-transformations-3.1.0.nar |
 </details>
@@ -513,8 +546,9 @@ This is a maintenance release containing important stability updates.
 
 ### `lunastreaming-all` distribution
 <details><summary>Sinks</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-enhanced](https://github.com/datastax/pulsar-sink) | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | 1.6.11 | cassandra-enhanced-pulsar-sink-1.6.11-nar.nar |
 | [cloud-storage](https://github.com/streamnative/pulsar-io-cloud-storage) | Writes data into cloud storage | 2.10.0 | pulsar-io-cloud-storage-2.10.0.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.4.8 | pulsar-io-data-generator-2.10.4.8.nar |
@@ -529,8 +563,9 @@ This is a maintenance release containing important stability updates.
 | [snowflake](https://github.com/datastax/snowflake-connector) | Snowflake Connector | 0.1.13 | pulsar-snowflake-connector-0.1.13.nar |
 </details>
 <details><summary>Sources</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-source](https://github.com/datastax/cdc-for-apache-cassandra) | Read data from Cassandra | 2.2.9 | pulsar-cassandra-source-2.2.9.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.4.8 | pulsar-io-data-generator-2.10.4.8.nar |
 | [debezium-mongodb](https://pulsar.apache.org/docs/io-connectors) | Debezium MongoDb Source | 2.10.4.8 | pulsar-io-debezium-mongodb-2.10.4.8.nar |
@@ -542,33 +577,38 @@ This is a maintenance release containing important stability updates.
 | [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.10.4.8 | pulsar-io-kinesis-2.10.4.8.nar |
 </details>
 <details><summary>Proxy extensions</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Proxy Extension | 2.10.3.10 | pulsar-kafka-proxy-2.10.3.10.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 </details>
 <details><summary>Protocol handlers</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Protocol Handler | 2.10.3.10 | pulsar-protocol-handler-kafka-2.10.3.10.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 </details>
 <details><summary>CLI extensions</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-cdc](https://pulsar.apache.org/docs/io-connectors) | Cassandra CDC - Pulsar Admin Custom Commands | 2.2.5 | pulsar-cassandra-admin-2.2.5-nar.nar |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - Pulsar Admin Custom Commands | 3.1.0 | pulsar-jms-admin-3.1.0-nar.nar |
 </details>
 <details><summary>Filters</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - support for server side filters | 3.1.0 | pulsar-jms-3.1.0-nar.nar |
 </details>
 <details><summary>Functions</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [ai-tools](https://pulsar.apache.org/docs/io-connectors) | AI tools | 3.0.1 | pulsar-ai-tools-3.0.1.nar |
 | [transforms](https://pulsar.apache.org/docs/io-connectors) | Transformation function | 3.0.1 | pulsar-transformations-3.0.1.nar |
 </details>
@@ -582,8 +622,9 @@ This is a maintenance release containing important updates.
 
 ### `lunastreaming-all` distribution
 <details><summary>Sinks</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-enhanced](https://github.com/datastax/pulsar-sink) | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | 1.6.11 | cassandra-enhanced-pulsar-sink-1.6.11-nar.nar |
 | [cloud-storage](https://github.com/streamnative/pulsar-io-cloud-storage) | Writes data into cloud storage | 2.10.0 | pulsar-io-cloud-storage-2.10.0.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.4.7 | pulsar-io-data-generator-2.10.4.7.nar |
@@ -598,8 +639,9 @@ This is a maintenance release containing important updates.
 | [snowflake](https://github.com/datastax/snowflake-connector) | Snowflake Connector | 0.1.13 | pulsar-snowflake-connector-0.1.13.nar |
 </details>
 <details><summary>Sources</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-source](https://github.com/datastax/cdc-for-apache-cassandra) | Read data from Cassandra | 2.2.9 | pulsar-cassandra-source-2.2.9.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.4.7 | pulsar-io-data-generator-2.10.4.7.nar |
 | [debezium-mongodb](https://pulsar.apache.org/docs/io-connectors) | Debezium MongoDb Source | 2.10.4.7 | pulsar-io-debezium-mongodb-2.10.4.7.nar |
@@ -611,33 +653,38 @@ This is a maintenance release containing important updates.
 | [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.10.4.7 | pulsar-io-kinesis-2.10.4.7.nar |
 </details>
 <details><summary>Proxy extensions</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Proxy Extension | 2.10.3.10 | pulsar-kafka-proxy-2.10.3.10.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 </details>
 <details><summary>Protocol handlers</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Protocol Handler | 2.10.3.10 | pulsar-protocol-handler-kafka-2.10.3.10.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 </details>
 <details><summary>CLI extensions</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-cdc](https://pulsar.apache.org/docs/io-connectors) | Cassandra CDC - Pulsar Admin Custom Commands | 2.2.5 | pulsar-cassandra-admin-2.2.5-nar.nar |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - Pulsar Admin Custom Commands | 3.1.0 | pulsar-jms-admin-3.1.0-nar.nar |
 </details>
 <details><summary>Filters</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - support for server side filters | 3.1.0 | pulsar-jms-3.1.0-nar.nar |
 </details>
 <details><summary>Functions</summary>
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [transforms](https://pulsar.apache.org/docs/io-connectors) | Transformation function | 2.1.2 | pulsar-transformations-2.1.2.nar |
 </details>
 
@@ -727,8 +774,8 @@ This is a maintenance release containing important stability and security update
 
 <details><summary>Sinks</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-enhanced](https://github.com/datastax/pulsar-sink) | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | 1.6.10 | cassandra-enhanced-pulsar-sink-1.6.10-nar.nar |
 | [cloud-storage](https://github.com/streamnative/pulsar-io-cloud-storage) | Writes data into cloud storage | 2.10.0 | pulsar-io-cloud-storage-2.10.0.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.4.6 | pulsar-io-data-generator-2.10.4.6.nar |
@@ -745,8 +792,8 @@ This is a maintenance release containing important stability and security update
 
 <details><summary>Sources</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-source](https://github.com/datastax/cdc-for-apache-cassandra) | Read data from Cassandra | 2.2.9 | pulsar-cassandra-source-2.2.9.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.4.6 | pulsar-io-data-generator-2.10.4.6.nar |
 | [debezium-mongodb](https://pulsar.apache.org/docs/io-connectors) | Debezium MongoDb Source | 2.10.4.6 | pulsar-io-debezium-mongodb-2.10.4.6.nar |
@@ -760,8 +807,8 @@ This is a maintenance release containing important stability and security update
 
 <details><summary>Proxy extensions</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Proxy Extension | 2.10.3.10 | pulsar-kafka-proxy-2.10.3.10.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
@@ -769,8 +816,8 @@ This is a maintenance release containing important stability and security update
 
 <details><summary>Protocol handlers</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Protocol Handler | 2.10.3.10 | pulsar-protocol-handler-kafka-2.10.3.10.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
@@ -778,23 +825,23 @@ This is a maintenance release containing important stability and security update
 
 <details><summary>CLI extensions</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-cdc](https://pulsar.apache.org/docs/io-connectors) | Cassandra CDC - Pulsar Admin Custom Commands | 2.2.5 | pulsar-cassandra-admin-2.2.5-nar.nar |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - Pulsar Admin Custom Commands | 3.1.0 | pulsar-jms-admin-3.1.0-nar.nar |
 </details>
 
 <details><summary>Filters</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - support for server side filters | 3.1.0 | pulsar-jms-3.1.0-nar.nar |
 </details>
 
 <details><summary>Functions</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [transforms](https://pulsar.apache.org/docs/io-connectors) | Transformation function | 2.1.2 | pulsar-transformations-2.1.2.nar |
 </details>
 
@@ -900,8 +947,8 @@ updates.
 
 <details><summary>Sinks</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-enhanced](https://github.com/datastax/pulsar-sink) | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | 1.6.10 | cassandra-enhanced-pulsar-sink-1.6.10-nar.nar |
 | [cloud-storage](https://github.com/streamnative/pulsar-io-cloud-storage) | Writes data into cloud storage | 2.10.0 | pulsar-io-cloud-storage-2.10.0.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.4.5 | pulsar-io-data-generator-2.10.4.5.nar |
@@ -918,8 +965,8 @@ updates.
 
 <details><summary>Sources</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-source](https://github.com/datastax/cdc-for-apache-cassandra) | Read data from Cassandra | 2.2.9 | pulsar-cassandra-source-2.2.9.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.4.5 | pulsar-io-data-generator-2.10.4.5.nar |
 | [debezium-mongodb](https://pulsar.apache.org/docs/io-connectors) | Debezium MongoDb Source | 2.10.4.5 | pulsar-io-debezium-mongodb-2.10.4.5.nar |
@@ -933,8 +980,8 @@ updates.
 
 <details><summary>Proxy extensions</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Proxy Extension | 2.10.3.9 | pulsar-kafka-proxy-2.10.3.9.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
@@ -942,8 +989,8 @@ updates.
 
 <details><summary>Protocol handlers</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Protocol Handler | 2.10.3.9 | pulsar-protocol-handler-kafka-2.10.3.9.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
@@ -951,23 +998,23 @@ updates.
 
 <details><summary>CLI extensions</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-cdc](https://pulsar.apache.org/docs/io-connectors) | Cassandra CDC - Pulsar Admin Custom Commands | 2.2.5 | pulsar-cassandra-admin-2.2.5-nar.nar |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - Pulsar Admin Custom Commands | 3.1.0 | pulsar-jms-admin-3.1.0-nar.nar |
 </details>
 
 <details><summary>Filters</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - support for server side filters | 3.1.0 | pulsar-jms-3.1.0-nar.nar |
 </details>
 
 <details><summary>Functions</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [transforms](https://pulsar.apache.org/docs/io-connectors) | Transformation function | 2.1.2 | pulsar-transformations-2.1.2.nar |
 </details>
 
@@ -987,8 +1034,8 @@ This is a maintenance release containing important updates.
 
 <details><summary>Sinks</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-enhanced](https://github.com/datastax/pulsar-sink) | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | 1.6.10 | cassandra-enhanced-pulsar-sink-1.6.10-nar.nar |
 | [cloud-storage](https://github.com/streamnative/pulsar-io-cloud-storage) | Writes data into cloud storage | 2.10.0 | pulsar-io-cloud-storage-2.10.0.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.4.4 | pulsar-io-data-generator-2.10.4.4.nar |
@@ -1005,8 +1052,8 @@ This is a maintenance release containing important updates.
 
 <details><summary>Sources</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-source](https://github.com/datastax/cdc-for-apache-cassandra) | Read data from Cassandra | 2.2.7 | pulsar-cassandra-source-2.2.7.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.4.4 | pulsar-io-data-generator-2.10.4.4.nar |
 | [debezium-mongodb](https://pulsar.apache.org/docs/io-connectors) | Debezium MongoDb Source | 2.10.4.4 | pulsar-io-debezium-mongodb-2.10.4.4.nar |
@@ -1020,8 +1067,8 @@ This is a maintenance release containing important updates.
 
 <details><summary>Proxy extensions</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Proxy Extension | 2.10.3.8 | pulsar-kafka-proxy-2.10.3.8.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
@@ -1029,8 +1076,8 @@ This is a maintenance release containing important updates.
 
 <details><summary>Protocol handlers</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Protocol Handler | 2.10.3.8 | pulsar-protocol-handler-kafka-2.10.3.8.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
@@ -1038,23 +1085,23 @@ This is a maintenance release containing important updates.
 
 <details><summary>CLI extensions</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-cdc](https://pulsar.apache.org/docs/io-connectors) | Cassandra CDC - Pulsar Admin Custom Commands | 2.2.5 | pulsar-cassandra-admin-2.2.5-nar.nar |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - Pulsar Admin Custom Commands | 3.1.0 | pulsar-jms-admin-3.1.0-nar.nar |
 </details>
 
 <details><summary>Filters</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - support for server side filters | 3.1.0 | pulsar-jms-3.1.0-nar.nar |
 </details>
 
 <details><summary>Functions</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [transforms](https://pulsar.apache.org/docs/io-connectors) | Transformation function | 2.1.2 | pulsar-transformations-2.1.2.nar |
 </details>
 
@@ -1126,8 +1173,8 @@ This is a maintenance release containing important stability updates.
 
 <details><summary>Sinks</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-enhanced](https://github.com/datastax/pulsar-sink) | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | 1.6.9 | cassandra-enhanced-pulsar-sink-1.6.9-nar.nar |
 | [cloud-storage](https://github.com/streamnative/pulsar-io-cloud-storage) | Writes data into cloud storage | 2.10.0 | pulsar-io-cloud-storage-2.10.0.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.4.3 | pulsar-io-data-generator-2.10.4.3.nar |
@@ -1144,8 +1191,8 @@ This is a maintenance release containing important stability updates.
 
 <details><summary>Sources</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-source](https://github.com/datastax/cdc-for-apache-cassandra) | Read data from Cassandra | 2.2.5 | pulsar-cassandra-source-2.2.5.nar |
 | [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.4.3 | pulsar-io-data-generator-2.10.4.3.nar |
 | [debezium-mongodb](https://pulsar.apache.org/docs/io-connectors) | Debezium MongoDb Source | 2.10.4.3 | pulsar-io-debezium-mongodb-2.10.4.3.nar |
@@ -1159,8 +1206,8 @@ This is a maintenance release containing important stability updates.
 
 <details><summary>Proxy extensions</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Proxy Extension | 2.10.3.7 | pulsar-kafka-proxy-2.10.3.7.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
@@ -1168,8 +1215,8 @@ This is a maintenance release containing important stability updates.
 
 <details><summary>Protocol handlers</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
 | [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Protocol Handler | 2.10.3.7 | pulsar-protocol-handler-kafka-2.10.3.7.nar |
 | [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.0 | starlight-rabbitmq-2.10.1.0.nar |
@@ -1177,23 +1224,23 @@ This is a maintenance release containing important stability updates.
 
 <details><summary>CLI extensions</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [cassandra-cdc](https://pulsar.apache.org/docs/io-connectors) | Cassandra CDC - Pulsar Admin Custom Commands | 2.2.5 | pulsar-cassandra-admin-2.2.5-nar.nar |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - Pulsar Admin Custom Commands | 3.1.0 | pulsar-jms-admin-3.1.0-nar.nar |
 </details>
 
 <details><summary>Filters</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - support for server side filters | 3.1.0 | pulsar-jms-3.1.0-nar.nar |
 </details>
 
 <details><summary>Functions</summary>
 
-| Name | Description | Version | File | 
-| ---- | ----------- | ------- | ---- | 
+| Name | Description | Version | File |
+| ---- | ----------- | ------- | ---- |
 | [transforms](https://pulsar.apache.org/docs/io-connectors) | Transformation function | 2.1.2 | pulsar-transformations-2.1.2.nar |
 </details>
 
