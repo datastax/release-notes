@@ -4,6 +4,45 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.49
+10 June 2024
+
+## Components versions for DSE 6.8.49
+* Apache Solr™ 6.0.1.4.2964
+* Apache Spark™ 2.4.0.30
+* Apache TinkerPop™ 3.4.14-20240307-bcc67d14
+* Apache Tomcat® 8.5.94
+* DSE Java Driver 1.10.0-dse-20240520&ast; (DSE *internal-only* version)
+* Netty 4.1.100.1.dse
+* Spark JobServer 0.8.0.54
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.49 DSE Core
+* Prevents a Java driver request timeout for `drain()` operations executed via Management API by setting the request timeout to 0. The request timeout change only affects the internal Java driver used in Management API and is only set to 0 explicitly for the `drain()` operation. (DSP-23994)
+
+## 6.8.49 DSE Cassandra
+* Secondary Index: Don't fail queries if one node is not available. (DSP-24163)
+* Fix IllegalStateException when flushing range deletes with TWCS split_during_flush=true. (DSP-21571)
+
+## 6.8.49 DSE Spark
+* Fixed, Spark-sql cast errors handling dates on joins. (DSP-24215)
+* Fixed, observe spark.directJoin and spark.directJoinSizeRatio parameters. (DSP-24258)
+
+## 6.8.49 DSE Security
+* Adds partial support for client and internode connections using TLSv1_3. (DSP-23989)
+
+## 6.8.49 DSE Docker
+* Upgraded JDK 8 and 11 versions in DSE Docker images to `8u402` and `11.0.22` respectively. (DSP-24250)
+
+## 6.8.49 DSE Driver
+* Upgrades `dse-java-driver` to handle newer versions of Guava. (DSP-24191)
+
+## 6.8.49 DSE Indexing
+* Improved performance and lowered memory use of querying data based on SAI index for a table with large partitions. (DSP-24254)
+
+
 # Release notes for 6.8.48
 13 May 2024
 
