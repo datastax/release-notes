@@ -1,5 +1,18 @@
 # Release notes for OpsCenter
 
+# Release Notes for OpsCenter 6.8.38
+28 June 2024
+
+## CVE
+* Upgraded several Node.js libraries and also upgraded Clojure version from 1.10.0 to 1.11.2. (OPSC-16083)
+* Upgraded joda-time to v2.12.7. (OPSC-17519)
+
+## UI
+* Fixed a regression introduced in 6.8.37 with `restrict_session_to_ip_and_agent` configuration setting, which did not obey the setting specified by `restrict_session_to_ip_and_agent`. (OPSC-17539)
+
+## Core
+* Fixed intermittent "No Data" issue in Dashboards for Search-Related Metrics. (OPSC-17526)
+
 # Release Notes for OpsCenter 6.8.37
 14 May 2024
 
