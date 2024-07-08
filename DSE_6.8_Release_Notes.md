@@ -4,6 +4,27 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.50
+12 July 2024
+
+## Components versions for DSE 6.8.50
+ * Apache Solr™ 6.0.1.4.2964
+ * Apache Spark™ 2.4.0.30
+ * Apache TinkerPop™ 3.4.14-20240307-bcc67d14
+ * Apache Tomcat® 8.5.94
+ * DSE Java Driver 1.10.0-dse-20240520 (DSE *internal-only* version)
+ * Netty 4.1.100.1.dse
+ * Spark JobServer 0.8.0.56&ast;
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.50 DSE Cassandra
+* Fixed the loop situation on reconnections with overloaded nodes. (DSP-24194)
+
+## 6.8.50 DSE Security
+* Added the option to temporarily lock a role after too many failed authentication requests. This feature is enabled per role through role options by setting `unauthorized_access_max_attempts` and, optionally, `unauthorized_access_lockout_duration_seconds` (default is 15 minutes). Added the configuration parameter `-Dauthentication_options.role_lockout_expire_seconds` to set the maximum retention of expired locks (default is 1 day). Allowed `the dsetool` command with its`role_locks` option to show and remove extant role locks. (DSP-23953)
+
 # Release notes for 6.8.49
 10 June 2024
 
