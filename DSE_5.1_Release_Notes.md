@@ -3,6 +3,30 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 Release notes of versions prior to 5.1.20 can be found [here](https://docs.datastax.com/en/dse/5.1/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 5.1.45
+8 July 2024
+
+## Components versions for DSE 5.1.45
+ * Apache Solr™ 6.0.1.0.2961
+ * Apache Spark™ 2.0.2.43
+ * Apache TinkerPop™ 3.2.11-20230523-74d884e8
+ * Apache Tomcat® 8.5.94
+ * DSE Java Driver 1.8.3-dse+20201217 (DSE *internal-only* version)
+ * Netty 4.0.54.1.dse
+ * Spark JobServer 0.6.2.243
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 5.1.45 DSE Cassandra
+* Added the CASSANDRA-15367 code fix to prevent Memtable memory allocations deadlock. (DSP-24176)
+
+## 5.1.45 DSE Security
+* Added the option to temporarily lock a role after too many failed authentication requests. This feature is enabled per role through role options by setting `unauthorized_access_max_attempts` and, optionally, `unauthorized_access_lockout_duration_seconds` (default is 15 minutes). Added the configuration parameter `-Dauthentication_options.role_lockout_expire_seconds` to set the maximum retention of expired locks (default is 1 day). Allowed `the dsetool` command with its`role_locks` option to show and remove extant role locks. (DSP-23953)
+
+## 5.1.45 DSE Docker
+* Upgraded JDK 8 version in DSE Docker image to `8u402` (DSP-24250)
+
 # Release notes for 5.1.44
 13 May 2024
 
