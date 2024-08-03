@@ -1,5 +1,20 @@
 # Release notes for OpsCenter
 
+# Release Notes for OpsCenter 6.8.39
+30 July 2024
+
+## Backup Service
+* Fixed the Azure SAS token expiry issue for scheduled backups with Azure as the destination. (OPSC-17565)
+
+## Best Practice Service
+* Fixed issue with best practices service for repair service that does not seem to be honoring the `ignore_keyspaces` or `ignore_tables` parameters in `[repair_service]` section. (OPSC-17195)
+
+## Provisioning
+* Fixed issue with LCM creating a certificate with a spurious backtick on the OU element. (OPSC-17510)
+
+## Core
+* Added support for DSE 6.9.x versions. (OPSC-17576)
+
 # Release Notes for OpsCenter 6.8.38
 28 June 2024
 
