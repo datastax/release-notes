@@ -20,7 +20,7 @@ jobs:
              * Automatically create tags when Release Notes PRs are merged
              */
 
-            const pr_title = "${{ github.event.pull_request.title }}";
+            const pr_title = context.payload.pull_request.title;
             const match = pr_title.match(/^(DSE|OpsCenter|Studio|Luna Streaming)[ ]+(\d+\.\d+\.\d+(\.\d+)?)[ ]+release/i);
             if (!match) {
               core.warning("Auto tagging skipped as PR title doesn't match release notes regex.")
