@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Create product release tag
         # https://github.com/marketplace/actions/github-script
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           script: |
             /**
