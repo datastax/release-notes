@@ -118,7 +118,7 @@ both methods follow the same packaging patterns.
 # Releases
 
 ## Luna Streaming Distribution 2.10.5.10
-This is a maintenance release containing important stability and security updates. It contains upgraded s4k nar files.
+This is a maintenance release containing important stability and security updates.
 
 ### Most notable commits
 * [03a4cfe](https://github.com/datastax/pulsar/commit/03a4cfe) fix: DLQ to handle bytes key properly (#306)
