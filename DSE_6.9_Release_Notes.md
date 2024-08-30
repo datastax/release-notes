@@ -2,6 +2,28 @@
 DSE 6.9.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.9.2
+30 August 2024
+
+## Components versions for DSE 6.9.2
+ * Apache Solr™ 6.0.1.5.2973
+ * Apache Spark™ 2.5.0.1
+ * Apache TinkerPop™ 3.4.15-20240705-ffb48eb3
+ * Apache Tomcat® 8.5.94
+ * DSE Java Driver 1.10.0-dse-20240621 (DSE *internal-only* version)
+ * Netty 4.1.100.1.dse
+ * Spark JobServer 0.8.0.56
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.9.2 DSE Cassandra
+* Improved `libjemalloc` detection to detect `libmalloc2` in systems where this package is present. (DSP-24402)
+
+## 6.9.2 DSE Upgrade
+* Fixed a bug in 6.9 upgrade caused by DSE nodes in mixed-version mode choosing non-compatible checksum algorithms. (DSP-24364)
+
+
 # Release notes for 6.9.1
 14 August 2024
 
