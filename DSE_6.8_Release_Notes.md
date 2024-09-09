@@ -4,6 +4,39 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.51
+9 September 2024
+
+## Components versions for DSE 6.8.51
+ * Apache Solr™ 6.0.1.4.2964
+ * Apache Spark™ 2.4.0.30
+ * Apache TinkerPop™ 3.4.14-20240307-bcc67d14
+ * Apache Tomcat® 8.5.94
+ * DSE Java Driver 1.10.0-dse-20240520 (DSE *internal-only* version)
+ * Netty 4.1.100.1.dse
+ * Spark JobServer 0.8.0.56
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.51 DSE Core
+* Fixed SSBR to prevent dropping unused UDTs on restore. (DSP-24376)
+* Fixed a bug in backup error handling that led to backups being stuck indefinitely in the running state, resulting in snapshots not getting cleaned up. (DSP-24390)
+
+## 6.8.51 DSE Cassandra
+* Improved `libjemalloc` detection to detect `libmalloc2` in systems where this package is present. (DSP-24402)
+* Fixed a race condition in disabling of in-progress compactions when interrupting compaction types are initiated. Added debug logging to help identify in-progress and interrupting compactions. (DSP-24318)
+* Improved Kerberos authentication provider for `cqlsh` by making it pluggable so you can plug in or customize how it works in your environment. (DSP-24129)
+
+## 6.8.51 DSE Classic
+
+## 6.8.51 DSE Tiered Storage
+* Fixed the NPE in TieredTableStats. Return all TieredTableStats for all initialized tables for each jmx request, uninitialized tables are ignored until they are initialized and can be identified as TieredCompactionStrategy tables. (DSP-24395)
+
+## 6.8.51 DSE CVE
+* Upgraded jetty to version `9.4.56.v20240826`. (DSP-24447, [CVE-2024-22201](https://nvd.nist.gov/vuln/detail/CVE-2024-22201))
+* Upgraded `commons-compress` to version 1.26.2. (DSP-24380, [CVE-2024-25710](https://nvd.nist.gov/vuln/detail/CVE-2024-25710))
+
 # Release notes for 6.8.50
 12 July 2024
 
