@@ -3,6 +3,25 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 Release notes of versions prior to 5.1.20 can be found [here](https://docs.datastax.com/en/dse/5.1/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 5.1.46
+9 September 2024
+
+## Components versions for DSE 5.1.46
+ * Apache Solr™ 6.0.1.0.2961
+ * Apache Spark™ 2.0.2.43
+ * Apache TinkerPop™ 3.2.11-20230523-74d884e8
+ * Apache Tomcat® 8.5.94
+ * DSE Java Driver 1.8.3-dse+20201217 (DSE *internal-only* version)
+ * Netty 4.0.54.1.dse
+ * Spark JobServer 0.6.2.243
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 5.1.46 DSE Cassandra
+* Improved `libjemalloc` detection to detect `libmalloc2` in systems where this package is present. (DSP-24402)
+* Fixed batch statement audit log recording when queries cannot be correctly decomposed. (DSP-24323)
+
 # Release notes for 5.1.45
 8 July 2024
 
