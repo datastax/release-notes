@@ -1,5 +1,16 @@
 # Release notes for OpsCenter
 
+# Release Notes for OpsCenter 6.8.40
+11 September 2024
+
+## Backup Service
+* Improved the performance of AzCopy, by introducing new customizable configuration options. Users can now use these options `azure_parallel_level`, `azure_cap_mbps`, `azcopy_concurrency_value`, `azcopy_buffer_gb` and `azcopy_log_level` to fine-tune CPU utilization, faster file transfers, and efficient memory usage of AzCopy. (OPSC-17579)
+* Added `backup_reports_migrate_data_ttl` optional config in `[backup_service]` in `opscenterd.conf` file to delete data older than ttl days. Added `backup_reports_ttl` in the same section for setting ttl, when creating records in backup reports table. (OPSC-17531)
+
+## Core
+* Fixed issues in showing the status of nodes in the ring view after a failover. (OPSC-17583)
+* Fixed issues while calculating free-space of the tmp directory when the device name contains hyphens.(OPSC-17563)
+
 # Release Notes for OpsCenter 6.8.39
 30 July 2024
 
