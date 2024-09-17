@@ -28,10 +28,11 @@ If you're developing applications, please refer to the [Java Driver documentatio
 * Fixed a race condition in disabling of in-progress compactions when interrupting compaction types are initiated. Added debug logging to help identify in-progress and interrupting compactions. (DSP-24318)
 * Improved Kerberos authentication provider for `cqlsh` by making it pluggable so you can plug in or customize how it works in your environment. (DSP-24129)
 
-## 6.8.51 DSE Classic
-
 ## 6.8.51 DSE Tiered Storage
 * Fixed the NPE in TieredTableStats. Return all TieredTableStats for all initialized tables for each jmx request, uninitialized tables are ignored until they are initialized and can be identified as TieredCompactionStrategy tables. (DSP-24395)
+
+## 6.8.51 DSE Installer: Debian
+* Updated Debian package dependencies on `libaio1` so that it can be installed on Ubuntu 24.04 (Noble Numbat). (DSP-24359)
 
 ## 6.8.51 DSE CVE
 * Upgraded jetty to version `9.4.56.v20240826`. (DSP-24447, [CVE-2024-22201](https://nvd.nist.gov/vuln/detail/CVE-2024-22201))
