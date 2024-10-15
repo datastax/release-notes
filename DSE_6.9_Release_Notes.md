@@ -15,7 +15,7 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
  * Spark JobServer 0.8.0.56
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 6.9.3 DSE Cassandra
 * Fixed sstablescrub to run with `-t` disabled by default. (DSP-24501)
