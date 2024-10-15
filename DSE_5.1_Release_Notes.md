@@ -16,7 +16,7 @@ Release notes of versions prior to 5.1.20 can be found [here](https://docs.datas
  * Spark JobServer 0.6.2.243
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.46 DSE Cassandra
 * Improved `libjemalloc` detection to detect `libmalloc2` in systems where this package is present. (DSP-24402)
@@ -35,7 +35,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
  * Spark JobServer 0.6.2.243
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.45 DSE Cassandra
 * Added the CASSANDRA-15367 code fix to prevent Memtable memory allocations deadlock. (DSP-24176)
@@ -59,7 +59,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
  * Spark JobServer 0.6.2.243
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.44 DSE Cassandra
 * Fixed millisecond precision point-in-time restore. (DSP-23993)
@@ -86,7 +86,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
  * Spark JobServer 0.6.2.243
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.43 DSE Cassandra
 * Reverted the regression caused by DSP-23913 which introduced a change in batch size calculation that impacts the behaviour of the batch_size guardrail. Introduced a new guardrail called `batch_size_with_pk_warn_threshold_in_kb`, `batch_size_with_pk_fail_threshold_in_kb` instead that honours the updated logic. (DSP-24011)
@@ -115,7 +115,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
  * Spark JobServer 0.6.2.243
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.42 DSE Cassandra
 * Fixed mutation size calculation formula by taking into account static column updates. Backporting CASSANDRA-15293 achieved this fix. (DSP-23933)
@@ -140,7 +140,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
  * Spark JobServer 0.6.2.243
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.41 DSE Cassandra
 * Backported the CASSANDRA-14415 code fix to improve the performance of `SELECT DISTINCT` queries. (DSP-23615)
@@ -159,7 +159,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
  * Spark JobServer 0.6.2.243
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.40 DSE Core
 * Changed logging level from `error` to `warn` for a log message that is issued when folders are removed during a snapshot that calculates folder size. (DSP-23432)
@@ -193,7 +193,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
  * Spark JobServer 0.6.2.243
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.39 DSE Core
 * Allowed to encrypt `kmip_host` passwords in the dse.yaml file. New optional parameter `password_encryption_key_name` was added to the `kmip_hosts` items. DSP-23326 enabled password encryption before placing them in dse.yaml. (DSP-23313)
@@ -220,7 +220,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
  * Spark JobServer 0.6.2.243
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.38 DSE Cassandra
 * Improved logging around index summary building. Introduced rounding that effectively uses the `min_index_interval` option set to a multiple of 128 in the index summary building process. (DSP-23317)
@@ -252,7 +252,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
  * Spark JobServer 0.6.2.243&ast;
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.37 DSE Core
 * Set default systemd dse.service startup timeout to 7 minutes. (DSP-23225)
@@ -291,7 +291,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
  * Spark JobServer 0.6.2.242&ast;
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.36 DSE Search
 * Allow the use of date with time in Solr range queries on SimpleDateField fields (time will be truncated). (DSP-23085)
@@ -319,7 +319,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
  * Spark JobServer 0.6.2.241
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.35 DSE Installer: Debian
 * Fixed Debian package dependencies on Python so that it can be installed on Ubuntu 22.04. (DSP-22993)
@@ -338,7 +338,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
 * Spark JobServer 0.6.2.241
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.34 DSE Search
 * Fixed `dsetool core_indexing_status` to return consistent indexing status for calls issued with and without the `--all` parameter. (DSP-21594)
@@ -373,7 +373,7 @@ Fixed an issue during DSE Spark cluster upgrade where InClusterAuthenticator wou
  * Spark JobServer 0.6.2.241
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.33 DSE Miscellaneous
 * Made ‘nodetool status’ report the state of unreachable nodes in order to allow knowing why they are unreachable. (DSP-22648)
@@ -392,7 +392,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
  * Spark JobServer 0.6.2.241&ast;
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.32 DSE Core
 * Implemented ability to replace the THREE consistency level with an ALL_BUT_ONE consistency level. (DSP-22366)
@@ -431,7 +431,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
  * Spark JobServer 0.6.2.240
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.31 DSE Core
 * Improved reading logic to ensure that sstables are not unnecessarily read for columns that are not selected. See CASSANDRA-16737. (Previously DB-4974). (DSP-22478)
@@ -464,7 +464,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
  * Spark JobServer 0.6.2.240
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.30 DSE Core
 * Introduces system property "cassandra.commitlog.skip_file_advice" that allows to skip the native call to "fadvise" with "FADV_DONTNEED" argument after the commit log is flushed. The native call is not skipped by default and therefore has no effect. (DSP-22315)
@@ -492,7 +492,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
  * Spark JobServer 0.6.2.240
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.29 DSE Cassandra
 * Ported fix from CASSANDRA-17352: Remote code execution for scripted UDFs (DSP-22321, [CVE-2021-44521](https://nvd.nist.gov/vuln/detail/CVE-2021-44521))
@@ -510,7 +510,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
  * Spark JobServer 0.6.2.240
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.28 DSE Cassandra
 * Await timeout for shutting down non periodic tasks is now configurable with the new jvm option `cassandra.non_periodic_tasks_shutdown_timeout_in_minutes`. When timeout is reached, force shutdown those tasks. (DSP-22241)
@@ -535,7 +535,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
    * Spark JobServer 0.6.2.240
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.27 DSE Cassandra
 * Enables periodic logging of system status (default every 5 minutes, configurable). (DSP-22039)
@@ -569,7 +569,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
    * Spark JobServer 0.6.2.240
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.26 DSE core
 * Added check against the negative value in local stream throughput (stream_throughput_outbound_megabits_per_sec) and inter dc stream throughput (inter_dc_stream_throughput_outbound_megabits_per_sec) (DB-5010)
@@ -601,7 +601,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
    * Spark JobServer 0.6.2.240
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.25 DSE Auth
 * Removed a possible false-positive error message in the log that would cause confusion when multiple authentication schemes are defined.
@@ -635,7 +635,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
    * Spark JobServer 0.6.2.240
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## DSE 5.1.24 Core
 * Fixed a potential issue that users may have tombstone deletion time in the future updated to the current time if they run `nodetool scrub`. (DB-4982)
@@ -656,7 +656,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
    * Spark JobServer 0.6.2.240
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## DSE 5.1.23 Core
 * Adds a new flag -t <number of days> for sstablescrub to update deletion times which are in the future. It accepts a command-line argument: -t <number of days>. All deletion times further in the future than the given number of days will be reset to the current time. (DB-4912)
@@ -708,7 +708,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
    * Spark JobServer 0.6.2.240
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## DSE 5.1.22 Spark
 * Fix: Spark Master fails to start if keystore (used by web UI) contains more than one certificate (DSP-21703)
@@ -728,7 +728,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
    * Spark JobServer 0.6.2.240
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## DSE 5.1.21 Auth
 * Works around a bug (JDK-8148854) in JDK 1.8u282.  (DB-4884)
@@ -779,7 +779,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
    * Spark JobServer 0.6.2.240
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
-If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/java-drivers.html) to choose an appropriate version.
 
 ## 5.1.20 DSE Security
 * Fixes LDAP user permissions problem following LDAP server restart. (DSP-21284)
