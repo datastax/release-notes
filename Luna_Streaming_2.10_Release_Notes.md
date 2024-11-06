@@ -130,15 +130,15 @@ This maintenance release includes important stability and security updates for L
 | ---- | ----------- |-----------|-----------------------------------------------|
 | [cassandra-enhanced](https://github.com/datastax/pulsar-sink) | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | 1.6.13    | cassandra-enhanced-pulsar-sink-1.6.13-nar.nar |
 | [cloud-storage](https://github.com/streamnative/pulsar-io-cloud-storage) | Writes data into cloud storage | 2.10.3    | pulsar-io-cloud-storage-2.10.3.nar            |
-| [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.6.1  | pulsar-io-data-generator-2.10.6.1.nar         |
-| [elastic_search](https://pulsar.apache.org/docs/io-connectors) | Writes data into Elastic Search | 2.10.6.1  | pulsar-io-elastic-search-2.10.6.1.nar         |
-| [http](https://pulsar.apache.org/docs/io-connectors) | Writes data to an HTTP server (Webhook) | 2.10.6.1  | pulsar-io-http-2.10.6.1.nar                   |
-| [jdbc-clickhouse](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for ClickHouse | 2.10.6.1  | pulsar-io-jdbc-clickhouse-2.10.6.1.nar        |
-| [jdbc-mariadb](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for MariaDB | 2.10.6.1  | pulsar-io-jdbc-mariadb-2.10.6.1.nar           |
-| [jdbc-postgres](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for PostgreSQL | 2.10.6.1  | pulsar-io-jdbc-postgres-2.10.6.1.nar          |
-| [jdbc-sqlite](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for SQLite | 2.10.6.1  | pulsar-io-jdbc-sqlite-2.10.6.1.nar            |
-| [kafka](https://pulsar.apache.org/docs/io-connectors) | Kafka source and sink connector | 2.10.6.1  | pulsar-io-kafka-2.10.6.1.nar                  |
-| [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.10.6.1  | pulsar-io-kinesis-2.10.6.1.nar                |
+| [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.6.2  | pulsar-io-data-generator-2.10.6.2.nar         |
+| [elastic_search](https://pulsar.apache.org/docs/io-connectors) | Writes data into Elastic Search | 2.10.6.2  | pulsar-io-elastic-search-2.10.6.2.nar         |
+| [http](https://pulsar.apache.org/docs/io-connectors) | Writes data to an HTTP server (Webhook) | 2.10.6.2  | pulsar-io-http-2.10.6.2.nar                   |
+| [jdbc-clickhouse](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for ClickHouse | 2.10.6.2  | pulsar-io-jdbc-clickhouse-2.10.6.2.nar        |
+| [jdbc-mariadb](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for MariaDB | 2.10.6.2  | pulsar-io-jdbc-mariadb-2.10.6.2.nar           |
+| [jdbc-postgres](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for PostgreSQL | 2.10.6.2  | pulsar-io-jdbc-postgres-2.10.6.2.nar          |
+| [jdbc-sqlite](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for SQLite | 2.10.6.2  | pulsar-io-jdbc-sqlite-2.10.6.2.nar            |
+| [kafka](https://pulsar.apache.org/docs/io-connectors) | Kafka source and sink connector | 2.10.6.2  | pulsar-io-kafka-2.10.6.2.nar                  |
+| [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.10.6.2  | pulsar-io-kinesis-2.10.6.2.nar                |
 | [snowflake](https://github.com/datastax/snowflake-connector) | Snowflake Connector | 0.1.15    | pulsar-snowflake-connector-0.1.15.nar         |
 | [lakehouse](https://github.com/streamnative/pulsar-io-lakehouse) | Lakehouse Connector | 2.10.5.17 | pulsar-io-lakehouse-2.10.5.17.nar             |
 | [lakehouse-cloud](https://github.com/streamnative/pulsar-io-lakehouse) | Lakehouse Cloud Connector | 2.10.5.17 | pulsar-io-lakehouse-2.10.5.17-cloud.nar       |
@@ -148,14 +148,14 @@ This maintenance release includes important stability and security updates for L
 | Name | Description | Version  | File                                     |
 | ---- | ----------- |----------|------------------------------------------|
 | [cassandra-source](https://github.com/datastax/cdc-for-apache-cassandra) | Read data from Cassandra | 2.3.0    | pulsar-cassandra-source-2.3.0.nar        |
-| [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.6.1 | pulsar-io-data-generator-2.10.6.1.nar    |
-| [debezium-mongodb](https://pulsar.apache.org/docs/io-connectors) | Debezium MongoDb Source | 2.10.6.1 | pulsar-io-debezium-mongodb-2.10.6.1.nar  |
-| [debezium-mssql](https://pulsar.apache.org/docs/io-connectors) | Debezium Microsoft SQL Server Source | 2.10.6.1 | pulsar-io-debezium-mssql-2.10.6.1.nar    |
-| [debezium-mysql](https://pulsar.apache.org/docs/io-connectors) | Debezium MySql Source | 2.10.6.1 | pulsar-io-debezium-mysql-2.10.6.1.nar    |
-| [debezium-oracle](https://pulsar.apache.org/docs/io-connectors) | Debezium Oracle Source | 2.10.6.1 | pulsar-io-debezium-oracle-2.10.6.1.nar   |
-| [debezium-postgres](https://pulsar.apache.org/docs/io-connectors) | Debezium Postgres Source | 2.10.6.1 | pulsar-io-debezium-postgres-2.10.6.1.nar |
-| [kafka](https://pulsar.apache.org/docs/io-connectors) | Kafka source and sink connector | 2.10.6.1 | pulsar-io-kafka-2.10.6.1.nar             |
-| [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.10.6.1 | pulsar-io-kinesis-2.10.6.1.nar           |
+| [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 2.10.6.2 | pulsar-io-data-generator-2.10.6.2.nar    |
+| [debezium-mongodb](https://pulsar.apache.org/docs/io-connectors) | Debezium MongoDb Source | 2.10.6.2 | pulsar-io-debezium-mongodb-2.10.6.2.nar  |
+| [debezium-mssql](https://pulsar.apache.org/docs/io-connectors) | Debezium Microsoft SQL Server Source | 2.10.6.2 | pulsar-io-debezium-mssql-2.10.6.2.nar    |
+| [debezium-mysql](https://pulsar.apache.org/docs/io-connectors) | Debezium MySql Source | 2.10.6.2 | pulsar-io-debezium-mysql-2.10.6.2.nar    |
+| [debezium-oracle](https://pulsar.apache.org/docs/io-connectors) | Debezium Oracle Source | 2.10.6.2 | pulsar-io-debezium-oracle-2.10.6.2.nar   |
+| [debezium-postgres](https://pulsar.apache.org/docs/io-connectors) | Debezium Postgres Source | 2.10.6.2 | pulsar-io-debezium-postgres-2.10.6.2.nar |
+| [kafka](https://pulsar.apache.org/docs/io-connectors) | Kafka source and sink connector | 2.10.6.2 | pulsar-io-kafka-2.10.6.2.nar             |
+| [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 2.10.6.2 | pulsar-io-kinesis-2.10.6.2.nar           |
 </details>
 <details><summary>Proxy extensions</summary>
 
