@@ -4,6 +4,44 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.52
+13 November 2024
+
+## Components versions for DSE 6.8.52
+* Apache Solr™ 6.0.1.4.2964
+* Apache Spark™ 2.4.0.33&ast;
+* Apache TinkerPop™ 3.4.14-20241028-e6912cf4&ast;
+* Apache Tomcat® 8.5.100&ast;
+* DSE Java Driver 1.10.0-dse-20241015&ast; (DSE *internal-only* version)
+* Netty 4.1.100.1.dse
+* Spark JobServer 0.8.0.56
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.52 DSE Core
+* Updated the JDK used to build DSE to versions `8u422` and `11.0.24`. (DSP-23997)
+
+## 6.8.52 DSE Cassandra
+* Fixed sstablescrub to run with `-t` disabled by default. (DSP-24501)
+* Added a guardrail warning for large columns in the `cassandra.yaml` file. The new field, `column_value_size_warn_threshold_in_kb`, can be used to receive warnings when a column exceeds a specified size. By default, this field is not utilized. (DSP-24384)
+
+## 6.8.52 DSE Driver
+* Updated DSE Java Driver with fix for JAVA-2738. (DSP-24514)
+* Updated DSE Java Driver with fix for JAVA-3125. (DSP-24556)
+
+## 6.8.52 DSE CVE
+* Updated the spark version to `2.4.0.31` to pull in the latest ivy library (vs 2.5.2) for a vulnerability fix. (DSP-23685, [CVE-2022-46751](https://nvd.nist.gov/vuln/detail/CVE-2022-46751))
+* Upgraded tomcat-embed-core to version `8.5.100`. (DSP-24013, [CVE-2023-46589](https://nvd.nist.gov/vuln/detail/CVE-2023-46589))
+* Upgraded nimbus-jose-jwt to `9.41.2`, json-smart to `2.5.1`, commons-lang3 to `3.17.0`, commons-io to `2.17.0`, and Azure SDK BOM to `1.2.28`. (DSP-24015, [CVE-2023-52428](https://nvd.nist.gov/vuln/detail/CVE-2023-52428))
+* Updated aws-java-sdk library from `1.12.549` to `1.12.774` to address CVE 2024-21634. (DSP-24018, [CVE-2024-21634](https://nvd.nist.gov/vuln/detail/CVE-2024-21634))
+* Upgraded Docker images to OpenJDK 1.8.0.422 and 11.0.24. (DSP-24534, [CVE-2024-21147](https://nvd.nist.gov/vuln/detail/CVE-2024-21147))
+* Upgraded orc-core from version `1.5.2` to `1.9.4`. (DSP-24538, [CVE-2024-36114](https://nvd.nist.gov/vuln/detail/CVE-2024-36114))
+* Upgraded Apache Avro to version `1.11.4`. (DSP-24540, [CVE-2024-47561](https://nvd.nist.gov/vuln/detail/CVE-2024-47561), [CVE-2023-39410](https://nvd.nist.gov/vuln/detail/CVE-2023-39410))
+* Upgraded reload4j to version `1.2.25`. (DSP-24551, [CWE-611](https://nvd.nist.gov/vuln/detail/CWE-611))
+* Upgraded Spotify DNS Wrapper Library to version 3.3.2 and dnsjava library to version 3.4.2. (DSP-24545, [CVE-2024-25638](https://nvd.nist.gov/vuln/detail/CVE-2024-25638), [CVE-2023-50868](https://nvd.nist.gov/vuln/detail/CVE-2023-50868), [CVE-2023-50387](https://nvd.nist.gov/vuln/detail/CVE-2023-50387))
+* Upgraded tika-core to version `1.28.5`. (DSP-23425, [CVE-2022-30126](https://nvd.nist.gov/vuln/detail/CVE-2022-30126), [CVE-2022-30973](https://nvd.nist.gov/vuln/detail/CVE-2022-30973))
+
 # Release notes for 6.8.51
 9 September 2024
 
