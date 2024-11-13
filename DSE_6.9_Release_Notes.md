@@ -2,6 +2,40 @@
 DSE 6.9.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.9.4
+13 November 2024
+
+## Components versions for DSE 6.9.4
+ * Apache Solr™ 6.0.1.5.2973
+ * Apache Spark™ 2.5.0.5&ast;
+ * Apache TinkerPop™ 3.4.15-20241028-a6bf761d&ast;
+ * Apache Tomcat® 8.5.100&ast;
+ * DSE Java Driver 1.10.0-dse-20241015&ast; (DSE *internal-only* version)
+ * Netty 4.1.100.1.dse
+ * Spark JobServer 0.8.0.56
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.9.4 DSE Core
+* Updated the JDK used to build DSE to versions `8u422` and `11.0.24`. (DSP-23997)
+
+## 6.9.4 DSE Docker
+* Changed DSE 6.9 images to load the OSS Management API as a Java Agent. As of DSE 6.9.3, the outdated in-tree Management API has been removed, and the OSS Management API has been bundled to replace it. (DSP-24564)
+
+## 6.9.4 DSE Driver
+* Updated DSE Java Driver with fix for JAVA-3125. (DSP-24556)
+
+## 6.9.4 DSE CVE
+* Updated the spark version to `2.4.0.31` to pull in the latest ivy library (vs 2.5.2) for a vulnerability fix. (DSP-23685, [CVE-2022-46751](https://nvd.nist.gov/vuln/detail/CVE-2022-46751))
+* Upgraded tomcat-embed-core to version `8.5.100`. (DSP-24013, [CVE-2023-46589](https://nvd.nist.gov/vuln/detail/CVE-2023-46589))
+* Upgraded nimbus-jose-jwt to `9.41.2`, json-smart to `2.5.1`, commons-lang3 to `3.17.0`, commons-io to `2.17.0`, and Azure SDK BOM to `1.2.28`. (DSP-24015, [CVE-2023-52428](https://nvd.nist.gov/vuln/detail/CVE-2023-52428))
+* Updated aws-java-sdk library from `1.12.549` to `1.12.774` to address CVE 2024-21634. (DSP-24018, [CVE-2024-21634](https://nvd.nist.gov/vuln/detail/CVE-2024-21634))
+* Upgraded orc-core from version `1.5.2` to `1.9.4`. (DSP-24538, [CVE-2024-36114](https://nvd.nist.gov/vuln/detail/CVE-2024-36114))
+* Upgraded Apache Avro to version `1.11.4`. (DSP-24540, [CVE-2024-47561](https://nvd.nist.gov/vuln/detail/CVE-2024-47561), [CVE-2023-39410](https://nvd.nist.gov/vuln/detail/CVE-2023-39410))
+* Upgraded reload4j to version `1.2.25`. (DSP-24551, [CWE-611](https://nvd.nist.gov/vuln/detail/CWE-611))
+* Upgraded tika-core to version `1.28.5`. (DSP-23425, [CVE-2022-30126](https://nvd.nist.gov/vuln/detail/CVE-2022-30126), [CVE-2022-30973](https://nvd.nist.gov/vuln/detail/CVE-2022-30973))
+
 # Release notes for 6.9.3
 14 October 2024
 
