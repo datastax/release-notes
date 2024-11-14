@@ -234,7 +234,7 @@
 | Javax Annotation API | 1.3.2 | [CDDL-1.1](https://spdx.org/licenses/CDDL-1.1.html) |
 | Javax Transaction API | 1.3 | [CDDL-1.1](https://spdx.org/licenses/CDDL-1.1.html) |
 | javax.inject | 1 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
-| JAXB API bundle for GlassFish V3 | 2.3.0 | [CDDL-1.1](https://spdx.org/licenses/CDDL-1.1.html) |
+| JAXB API bundle for GlassFish V3 | 2.3.0 | [CDDL-1.0](https://spdx.org/licenses/CDDL-1.0.html) |
 | jbool_expressions | 1.14 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | jcabi-log | 0.14 | [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html) |
 | jcabi-manifests | 1.1 | [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html) |
