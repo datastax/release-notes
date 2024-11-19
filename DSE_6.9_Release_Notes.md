@@ -19,7 +19,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
 
 ## 6.9.4 DSE Core
 * Updated the JDK used to build DSE to versions `8u422` and `11.0.24`. (DSP-23997)
-* Changed the MAX_HEAP_SIZE to avoid OOM errors with new Java11 Garbage Collector. The change is done in the following scrips: bin/dse, bin/dsetool, dse-db/bin/nodetool , resources/cassandra/bin/nodetool . (DSP-24431)
+* Changed the MAX_HEAP_SIZE to avoid OOM errors with new Java11 Garbage Collector. The change is done in the following scrips: bin/dse, bin/dsetool, resources/cassandra/bin/nodetool . (DSP-24431)
 
 ## 6.9.4 DSE Docker
 * Changed DSE 6.9 images to load the OSS Management API as a Java Agent. As of DSE 6.9.3, the outdated in-tree Management API has been removed, and the OSS Management API has been bundled to replace it. (DSP-24564)
