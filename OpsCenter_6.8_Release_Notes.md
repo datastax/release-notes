@@ -1,5 +1,20 @@
 # Release notes for OpsCenter
 
+# Release Notes for OpsCenter 6.8.41
+26 November 2024
+
+## Backup Service
+* Improved the rsync operation by getting the throttle value from destination dialog. (OPSC-17623)
+* Addressed issue with error logging in backup service. (OPSC-17034)
+* Fixed issue with s3 object store not getting cleaned up when backup.json file is missing (OPSC-17578)
+
+## UI
+* Added versioning for configuration profiles in LCM, enabled seamless comparison and tracking of changes across versions, Improved transparency and control over profile changes. (OPSC-17535)
+* Fixed authentication failures, when no default value is provided for `restrict_session_to_ip_and_agent`. (OPSC-17616)
+
+## Core
+* Fixed bug in `datastax-agent` script to prevent a non-zero exit code when PIDFILE environment variable is not set. (OPSC-17634)
+
 # Release Notes for OpsCenter 6.8.40
 11 September 2024
 
