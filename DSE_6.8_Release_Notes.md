@@ -539,7 +539,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
 * Fixed regression scenario where DSE was not using keys on the KMIP server that were created either by a previous DSE version or outside of DSE. Regression was introduced in DSE v6.8.22. (DSP-23182)
 
 ## 6.8.34 DSE CVE
-* Upgraded `org.json:json` to `20230227` to resolve a Denial of Service (DoS) vulnerability. In addition, upgraded `esri-geometry-api` to `2.2.4`. (DSP-23187, [CWE-400](https://nvd.nist.gov/vuln/detail/CWE-400))
+* Upgraded `org.json:json` to `20230227` to resolve a Denial of Service (DoS) vulnerability. Additionally, upgraded `esri-geometry-api` to `2.2.4`, which now follows the OGC and GeoJSON standard for polygon serialization. As a result, polygons' JSON representation is serialized with the exterior polygon in counterclockwise order and interior polygons (holes) in clockwise order. (DSP-23187, [CWE-400](https://nvd.nist.gov/vuln/detail/CWE-400))
 * Upgraded commons-fileupload to 1.5. Added a solrconfig.xml setting that limits the number of files allowed in multipart update requests. (DSP-23188, [CVE-2023-24998](https://nvd.nist.gov/vuln/detail/CVE-2023-24998))
 * Upgraded Apache Tomcat to version 8.5.87. (DSP-23205, [CVE-2023-24998](https://nvd.nist.gov/vuln/detail/CVE-2023-24998))
 
