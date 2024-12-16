@@ -2,6 +2,34 @@
 DSE 6.9.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.9.5
+16 December 2024
+
+## Components versions for DSE 6.9.5
+ * Apache Solr™ 6.0.1.5.2973
+ * Apache Spark™ 2.5.0.5
+ * Apache TinkerPop™ 3.4.15-20241206-b7790fff&ast;
+ * Apache Tomcat® 8.5.100
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.100.1.dse
+ * Spark JobServer 0.8.0.56
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.9.5 DSE Cassandra
+* Improved `libjemalloc` implementation to detect `libmalloc2` in Amazon Linux 2023 and RedHat-based platforms. This is a subsequent fix from `DSP-24402`. (DSP-24632)
+* Added configuration to warn or reject on wrong-topology single-partition local requests. These yaml configuration options are `log_out_of_token_range_requests` and `reject_out_of_token_range_requests`. They are not initially present in `cassandra.yaml` but can be added as desired. The defaults are `log_out_of_token_range_requests:true` and `reject_out_of_token_range_requests:false`. Enabling `reject_out_of_token_range_requests` is mutually exclusive with nodesync. That is, NodeSync must be disabled before enabling `reject_out_of_token_range_requests`. (DSP-24437)
+* Fixed gossip issue with gossip-only and bootstrapping nodes missing DC/Rack/Host ID endpoint state. (DSP-24567)
+* Added a new `nodetool` command: `nodetool checktokenmetadata`. This command verifies if the `TokenMetadata` is in sync with the Gossip `endpointState`.  To fix a node with `TokenMetadata` that is out of sync, restart the node. (DSP-24597)
+* Fixed an issue where the outbound connection pending messages counter, `numPendingMessages`, did not reset correctly. This fix prevents the connection from stalling, and keeps a node in a reachable state. (DSP-24617)
+
+## 6.9.5 DSE Platform
+* Added support for Amazon Linux 2023 (DSP-23827).
+
+## 6.9.5 DSE CVE
+* Removed some Apache ZooKeeper JAR files from the tarball to remove potential security vulnerabilities. (DSP-24531, [CVE-2023-44981](https://nvd.nist.gov/vuln/detail/CVE-2023-44981))
+
 # Release notes for 6.9.4
 13 November 2024
 
