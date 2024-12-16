@@ -3,6 +3,31 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 Release notes of versions prior to 5.1.20 can be found [here](https://docs.datastax.com/en/dse/5.1/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 5.1.47
+16 December 2024
+
+## Components versions for DSE 5.1.47
+ * Apache Solr™ 6.0.1.0.2961
+ * Apache Spark™ 2.0.2.43
+ * Apache TinkerPop™ 3.2.11-20230523-74d884e8
+ * Apache Tomcat® 8.5.100&ast;
+ * DSE Java Driver 1.8.3-dse+20201217 (DSE *internal-only* version)
+ * Netty 4.0.54.1.dse
+ * Spark JobServer 0.6.2.243
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 5.1.47 DSE Core
+* Upgraded JDK versions in DSE Docker images to `8u422` and `11.0.24`. (DSP-23997)
+
+## 5.1.47 DSE Cassandra
+* Improved `libjemalloc` implementation to detect `libmalloc2` in Amazon Linux 2023 and RedHat-based platforms. This is a subsequent fix from `DSP-24402`. (DSP-24632)
+
+## 5.1.47 DSE CVE
+* Upgraded Docker images to OpenJDK versions `1.8.0.422` and `11.0.24`. (DSP-24534, [CVE-2024-21147](https://nvd.nist.gov/vuln/detail/CVE-2024-21147))
+* Upgraded Apache Tika core to version `1.28.5`. (DSP-23425, [CVE-2022-30126](https://nvd.nist.gov/vuln/detail/CVE-2022-30126), [CVE-2022-30973](https://nvd.nist.gov/vuln/detail/CVE-2022-30973))
+
 # Release notes for 5.1.46
 9 September 2024
 
