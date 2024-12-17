@@ -30,6 +30,9 @@ If you're developing applications, please refer to the [Java Driver documentatio
 * Updated DSE Java Driver with fix for JAVA-2738. (DSP-24514)
 * Updated DSE Java Driver with fix for JAVA-3125. (DSP-24556)
 
+## 6.8.52 DSE Platform
+* Added support for Amazon Linux 2023 (DSP-23827).
+
 ## 6.8.52 DSE CVE
 * Updated the spark version to `2.4.0.31` to pull in the latest ivy library (vs 2.5.2) for a vulnerability fix. (DSP-23685, [CVE-2022-46751](https://nvd.nist.gov/vuln/detail/CVE-2022-46751))
 * Upgraded tomcat-embed-core to version `8.5.100`. (DSP-24013, [CVE-2023-46589](https://nvd.nist.gov/vuln/detail/CVE-2023-46589))
