@@ -4,6 +4,32 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.53
+6 January 2025
+
+## Components versions for DSE 6.8.53
+ * Apache Solr™ 6.0.1.4.2964
+ * Apache Spark™ 2.4.0.33
+ * Apache TinkerPop™ 3.4.14-20241206-5504ef11&ast;
+ * Apache Tomcat® 8.5.100
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.100.1.dse
+ * Spark JobServer 0.8.0.56
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.53 DSE Cassandra
+* Improved the implementation of `libjemalloc` to detect `libjemalloc2` in Amazon Linux 2023 and Red Hat-based platforms. This is a subsequent fix from `DSP-24402`. (DSP-24632)
+* Added a new `nodetool` command: `nodetool checktokenmetadata`. This command verifies if the `TokenMetadata` is in sync with the Gossip `endpointState`.  To fix a node with `TokenMetadata` that is out of sync, restart the node. (DSP-24597)
+* Fixed an issue where the outbound connection pending messages counter, `numPendingMessages`, did not reset correctly. This fix prevents the connection from stalling, and keeps a node in a reachable state. (DSP-24617)
+
+## 6.8.53 DSE SparkConnector
+* Improved the reliability of the DataStax Connector for Apache Spark to Apache Cassandra. The connector now retries queries when it receives connectivity errors and timeouts. (DSP-24651)
+
+## 6.8.53 DSE CVE
+* Removed some Apache ZooKeeper JAR files from the tarball to remove potential security vulnerabilities. (DSP-24531, [CVE-2023-44981](https://nvd.nist.gov/vuln/detail/CVE-2023-44981))
+
 # Release notes for 6.8.52
 13 November 2024
 
