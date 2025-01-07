@@ -22,6 +22,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
 ## 6.8.53 DSE Cassandra
 * Improved the implementation of `libjemalloc` to detect `libjemalloc2` in Amazon Linux 2023 and Red Hat-based platforms. This is a subsequent fix from `DSP-24402`. (DSP-24632)
 * Added a new `nodetool` command: `nodetool checktokenmetadata`. This command verifies if the `TokenMetadata` is in sync with the Gossip `endpointState`.  To fix a node with `TokenMetadata` that is out of sync, restart the node. (DSP-24597)
+* Added configuration to warn or reject on wrong-topology single-partition local requests. These yaml configuration options are `log_out_of_token_range_requests` and `reject_out_of_token_range_requests`. They are not initially present in `cassandra.yaml` but can be added as desired. The defaults are `log_out_of_token_range_requests:true` and `reject_out_of_token_range_requests:false`. Enabling `reject_out_of_token_range_requests` is mutually exclusive with nodesync. That is, NodeSync must be disabled before enabling `reject_out_of_token_range_requests`. (DSP-24437)
 * Fixed an issue where the outbound connection pending messages counter, `numPendingMessages`, did not reset correctly. This fix prevents the connection from stalling, and keeps a node in a reachable state. (DSP-24617)
 
 ## 6.8.53 DSE SparkConnector
