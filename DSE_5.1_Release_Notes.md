@@ -24,6 +24,9 @@ If you're developing applications, please refer to the [Java Driver documentatio
 ## 5.1.47 DSE Cassandra
 * Improved `libjemalloc` implementation to detect `libmalloc2` in Amazon Linux 2023 and RedHat-based platforms. This is a subsequent fix from `DSP-24402`. (DSP-24632)
 
+## 5.1.47 DSE Platform
+* Added support for Amazon Linux 2023 (DSP-23827).
+
 ## 5.1.47 DSE CVE
 * Upgraded Docker images to OpenJDK versions `1.8.0.422` and `11.0.24`. (DSP-24534, [CVE-2024-21147](https://nvd.nist.gov/vuln/detail/CVE-2024-21147))
 * Upgraded Apache Tika core to version `1.28.5`. (DSP-23425, [CVE-2022-30126](https://nvd.nist.gov/vuln/detail/CVE-2022-30126), [CVE-2022-30973](https://nvd.nist.gov/vuln/detail/CVE-2022-30973))
