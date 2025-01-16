@@ -2,6 +2,34 @@
 DSE 6.9.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.9.6
+16 January 2025
+
+## Components versions for DSE 6.9.6
+ * Apache Solr™ 6.0.1.5.2973
+ * Apache Spark™ 2.5.0.5
+ * Apache TinkerPop™ 3.4.15-20241206-b7790fff
+ * Apache Tomcat® 8.5.100
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.100.1.dse
+ * Spark JobServer 0.8.0.56
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.9.6 DSE Cassandra
+* Added functionality to compress the index status messages that the gossip protocol shares with other nodes. This enhancement ensures that the gossip message size guardrail allows an appropriate number of secondary indexes. (DSP-24654)
+
+## 6.9.6 DSE SparkConnector
+* Improved the reliability of the DataStax Connector for Apache Spark to Apache Cassandra. The connector now retries queries when it receives connectivity errors and timeouts. (DSP-24651)
+
+## 6.9.6 DSE Miscellaneous
+* Replaced the x86 System Information Gatherer And Reporter (Sigar) library with a Java-native Operating System and Hardware Information (OSHI) library. To provide compatibility with the OSHI library, this change also updates the Java Native Access (JNA) library version from `5.11.0` to `5.14.0`. (DSP-24647)
+
+## 6.9.6 DSE CVE
+* Upgraded the `ch.qos.logback` library to version `1.2.13`. (DSP-24016, [CVE-2023-6378](https://nvd.nist.gov/vuln/detail/CVE-2023-6378))
+* Upgraded the Apache MINA core library to version `2.0.27`. (DSP-24667, [CVE-2024-52046](https://nvd.nist.gov/vuln/detail/CVE-2024-52046))
+
 # Release notes for 6.9.5
 16 December 2024
 
