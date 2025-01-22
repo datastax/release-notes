@@ -122,9 +122,9 @@ This maintenance release includes important stability and security updates for L
 
 ### Most notable commits
 
-[7eba5b7](https://github.com/datastax/pulsar/commit/7eba5b7) fix docker cleanup in Github CI
-[b7502c0](https://github.com/datastax/pulsar/commit/b7502c0) fix cgget command not found
-[2fe7947](https://github.com/datastax/pulsar/commit/2fe7947) [fix][broker] Fix the bug that elected leader thinks it's a follower (#23138) 
+* [7eba5b7](https://github.com/datastax/pulsar/commit/7eba5b7) fix docker cleanup in Github CI
+* [b7502c0](https://github.com/datastax/pulsar/commit/b7502c0) fix cgget command not found
+* [2fe7947](https://github.com/datastax/pulsar/commit/2fe7947) [fix][broker] Fix the bug that elected leader thinks it's a follower (#23138) 
 
 ### `lunastreaming-all` distribution
 
