@@ -1,6 +1,7 @@
 # Release notes for OpsCenter
 
 # Release Notes for OpsCenter 6.8.42
+31 January 2025
 
 ## Backup Service
 * Added support for picking individual tables when creating a backup. (OPSC-17084)
