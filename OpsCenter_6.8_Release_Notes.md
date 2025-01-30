@@ -1,5 +1,14 @@
 # Release notes for OpsCenter
 
+# Release Notes for OpsCenter 6.8.42
+
+## Backup Service
+* Added support for picking individual tables when creating a backup. (OPSC-17084)
+* Updated aws sdk version. Aws cli will now be used for bucket validation if `use_s3_cli` is true. This resolves issues when using some generic S3 providers such as Cloudian. (OPSC-17639)
+
+## Core
+* Upgraded Apache Directory LDAP API to version `1.0.3` and Apache MINA to version `2.0.27` to address potential security vulnerability. (OPSC-17655)
+
 # Release Notes for OpsCenter 6.8.41
 26 November 2024
 
