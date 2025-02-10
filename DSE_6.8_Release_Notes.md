@@ -4,6 +4,31 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.54
+10 February 2025
+
+## Components versions for DSE 6.8.54
+ * Apache Solr™ 6.0.1.4.2964
+ * Apache Spark™ 2.4.0.33
+ * Apache TinkerPop™ 3.4.14-20250129-8982fe9c&ast;
+ * Apache Tomcat® 8.5.100
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.100.1.dse
+ * Spark JobServer 0.8.0.56
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.54 DSE Core
+* Updated the node startup process so that it verifies the minimum supported version of the Java Virtual Machine (JVM). If the current JVM version is not supported, the node startup process ends and notifies you of the minimum supported version. To view the latest recommended JVM patch version, see the DataStax Enterprise Release notes. To disable the node startup JVM verification check,  set the `CASSANDRA_JDK_UNSUPPORTED` environment variable. (DSP-24659)
+* Improved handling of 64-bit values defined in `/proc/self/limits` to prevent displaying an exception. Before the fix, if you set the `Max locked memory` field in `/proc/self/limits`  to a value larger than 2 GB, the DSE logs might report an exception in the description. (DSP-24705)
+
+## 6.8.54 DSE CVE
+* Upgraded the `ch.qos.logback` library to version `1.2.13`. (DSP-24016, [CVE-2023-6378](https://nvd.nist.gov/vuln/detail/CVE-2023-6378))
+* Upgraded the Apache MINA core library to version `2.0.27`. (DSP-24667, [CVE-2024-52046](https://nvd.nist.gov/vuln/detail/CVE-2024-52046))
+* Updated the Java Development Kit (JDK) versions to `8u432` and `11.0.25`. These JDKs help build and test DSE, and are available in DSE Docker images. For DSE versions that use JDK 8, this update also fixes known security vulnerabilities. (DSP-24611, [CVE-2024-21147](https://nvd.nist.gov/vuln/detail/CVE-2024-21147), [](https://nvd.nist.gov/vuln/detail/))
+* Added a redaction flag for Apache Solr to improve security.  (DSP-24474, [CVE-2023-50291](https://nvd.nist.gov/vuln/detail/CVE-2023-50291))
+
 # Release notes for 6.8.53
 6 January 2025
 
