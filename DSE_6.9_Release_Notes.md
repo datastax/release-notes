@@ -2,6 +2,33 @@
 DSE 6.9.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.9.7
+10 February 2025
+
+## Components versions for DSE 6.9.7
+ * Apache Solr™ 6.0.1.5.2973
+ * Apache Spark™ 2.5.0.5
+ * Apache TinkerPop™ 3.4.15-20250129-bd39a459&ast;
+ * Apache Tomcat® 8.5.100
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.100.1.dse
+ * Spark JobServer 0.8.0.56
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.9.7 DSE Core
+* Updated the node startup process so that it verifies the minimum supported version of the Java Virtual Machine (JVM). If the current JVM version is not supported, the node startup process ends and notifies you of the minimum supported version. To view the latest recommended JVM patch version, see the DataStax Enterprise Release notes.  To disable the node startup JVM verification check,  set the `CASSANDRA_JDK_UNSUPPORTED` environment variable. (DSP-24659)
+* Improved handling of 64-bit values defined in `/proc/self/limits` to prevent displaying an exception. Before the fix, if you set the `Max locked memory` field in `/proc/self/limits`  to a value larger than 2 GB, the DSE logs might report an exception in the description. (DSP-24705)
+
+## 6.9.7 DSE Cassandra
+* Introduced a transitional mode that enables both encrypted and unencrypted connections between nodes. This feature facilitates a seamless transition of node-to-node traffic from unencrypted to encrypted within a live cluster. (DSP-24610)
+* Fixed an issue where index entries were duplicated for tables with static columns and storage-attached indexing (SAI) on primary key components. Before the fix, the duplicated index entries would produce duplicated rows in SELECT queries using SAI indexes. After the fix, DSE prevents the creation of new duplicated index entries, but it doesn't remove the existing ones. If your tables contain duplicated index entries, rebuild the indexes in the affected tables. (DSP-24709)
+
+## 6.9.7 DSE CVE
+* Updated the Java Development Kit (JDK) versions to `8u432` and `11.0.25`. These JDKs help build and test DSE, and are available in DSE Docker images. For DSE versions that use JDK 8, this update also fixes known security vulnerabilities. (DSP-24611, [CVE-2024-21147](https://nvd.nist.gov/vuln/detail/CVE-2024-21147), [](https://nvd.nist.gov/vuln/detail/))
+* Added a redaction flag for Apache Solr to improve security.  (DSP-24474, [CVE-2023-50291](https://nvd.nist.gov/vuln/detail/CVE-2023-50291))
+
 # Release notes for 6.9.6
 16 January 2025
 
