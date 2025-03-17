@@ -22,7 +22,9 @@ If you're developing applications, please refer to the [Java Driver documentatio
 * Improved handling of 64-bit values defined in `/proc/self/limits` to prevent displaying an exception. Before the fix, if you set the `Max locked memory` field in `/proc/self/limits`  to a value larger than 2 GB, the DSE logs might report an exception in the description. (DSP-24705)
 
 ## 6.9.7 DSE Cassandra
-* Introduced a transitional mode that enables both encrypted and unencrypted connections between nodes. This feature facilitates a seamless transition of node-to-node traffic from unencrypted to encrypted within a live cluster. (DSP-24610)
+* Introduced a transitional mode that enables both encrypted and unencrypted connections between nodes. This feature facilitates a seamless transition of node-to-node traffic from unencrypted to encrypted within a live cluster. 
+**CAUTION**: To enable the cluster to continue to function during an upgrade, edit the `cassandra.yaml` file.
+In the `server_encryption_options` section, set the `enable_legacy_ssl_storage_port` option to `true`. This setting enables listening on the original `ssl_storage_port`. When you complete the upgrade for the cluster, disable listening by setting the `enable_legacy_ssl_storage_port` option to `false`. For more information, see [Configure transitional mode for node-to-node connections](https://docs.datastax.com/en/dse/6.9/securing/internode-transitional-mode.html)). (DSP-24610)
 * Fixed an issue where index entries were duplicated for tables with static columns and storage-attached indexing (SAI) on primary key components. Before the fix, the duplicated index entries would produce duplicated rows in SELECT queries using SAI indexes. After the fix, DSE prevents the creation of new duplicated index entries, but it doesn't remove the existing ones. If your tables contain duplicated index entries, rebuild the indexes in the affected tables. (DSP-24709)
 
 ## 6.9.7 DSE CVE
