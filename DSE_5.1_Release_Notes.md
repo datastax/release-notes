@@ -4,7 +4,7 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 Release notes of versions prior to 5.1.20 can be found [here](https://docs.datastax.com/en/dse/5.1/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
 # Release notes for 5.1.48
-10 March 2025
+17 March 2025
 
 ## Components versions for DSE 5.1.48
  * Apache Solr™ 6.0.1.0.2961
