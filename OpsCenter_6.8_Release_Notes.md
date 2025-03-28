@@ -1,5 +1,18 @@
 # Release notes for OpsCenter
 
+# Release Notes for OpsCenter 6.8.43
+
+## Core
+* Support for azure env HTTPS PROXY provided by addition of variables *azure_proxy_host* and *azure_proxy_port*  in *Opscenterd.conf* (OPSC-17645)
+* Added solr index searcher metrics for solr tables. (OPSC-17680)
+* To compress the backup data, select Enable compression. Compression reduces the amount of data going through your network and reduces the disk and data usage but increases the CPU load for the server. (OPSC-17654)
+
+## UI
+* Added 6 new configuration in Authentication that need document updates (OPSC-16260)
+
+## Backup Service
+* Fixed an issue that prevented the backup and restore of tables using storage attached indexes in DSE 6.9. (OPSC-17678)
+
 # Release Notes for OpsCenter 6.8.42
 31 January 2025
 
