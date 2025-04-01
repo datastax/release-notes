@@ -19,18 +19,18 @@
 ## Backup Service
 * Fixed a bug that prevented the deletion of compressed commit logs from the backup staging directory. (OPSC-17075)
 * Improved opscenterd error handling of backup status updates after a the backup for an agent has already been marked as complete. (OPSC-17641)
-* Support for azure env HTTPS PROXY provided by addition of variables {{azure_proxy_host}} and {{azure_proxy_port}}  in `opscenterd.conf`. (OPSC-17645)
+* Support for Azure env HTTPS PROXY provided by addition of variables `azure_proxy_host` and azure_proxy_port`  in `opscenterd.conf`. (OPSC-17645)
 * Updated rolling restarts during the point in time restore for a single datacenter so only the nodes in the specified datacenter will be restarted. (OPSC-16542)
 * Fixed a bug when handling special characters in dropped columns when restoring a table schema. (OPSC-17640)
 * Enabled the compression option for Azure backup destinations. (OPSC-17654)
-* Fixed an issue that prevented the backup and restore of tables using storage attached indexes in DSE 6.9. (OPSC-17678)
+* Fixed an issue that prevented the backup and restore of tables using Storage-Attached Indexes (SAI) in DSE 6.9. (OPSC-17678)
 
 ## Monitoring
-* Resolved a bug that caused html tags to appear in the description of triggered alerts. (OPSC-17624)
-* Added solr index searcher metrics for solr tables. (OPSC-17680)
+* Resolved a bug that caused HTML tags to appear in the description of triggered alerts. (OPSC-17624)
+* Added Solr index searcher metrics for Solr tables. (OPSC-17680)
 
 ## UI
-* Fixed an issue in the ui where several lists of keyspace would not display more than 25 items. (OPSC-17663)
+* Fixed an issue in the UI where several lists of keyspace would not display more than 25 items. (OPSC-17663)
 
 # Release Notes for OpsCenter 6.8.42
 31 January 2025
