@@ -13,12 +13,12 @@
   * `password_history_limit` - The number of previous passwords to check against when updating a password. Default is 0 (disabled).
 
 ## Best Practice Service
-* Fixed numerous bugs in the best practice service ui that were introduced when upgrading the ui framework version. (OPSC-17625)
-* Fixed a problem with the backup service ui that sometimes caused the config window for a different rule to be displayed when clicking a rule. (OPSC-17658)
+* Fixed numerous bugs in the best practice service ui that were introduced when upgrading the UI framework version. (OPSC-17625)
+* Fixed a problem with the backup service UI that sometimes caused the config window for a different rule to be displayed when clicking a rule. (OPSC-17658)
 
 ## Backup Service
 * Fixed a bug that prevented the deletion of compressed commit logs from the backup staging directory. (OPSC-17075)
-* Improved opscenterd error handling of backup status updates after a the backup for an agent has already been marked as complete. (OPSC-17641)
+* Improved opscenterd error handling of backup status updates after the backup for an agent has already been marked as complete. (OPSC-17641)
 * Support for Azure env HTTPS PROXY provided by addition of variables `azure_proxy_host` and azure_proxy_port`  in `opscenterd.conf`. (OPSC-17645)
 * Updated rolling restarts during the point in time restore for a single datacenter so only the nodes in the specified datacenter will be restarted. (OPSC-16542)
 * Fixed a bug when handling special characters in dropped columns when restoring a table schema. (OPSC-17640)
