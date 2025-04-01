@@ -2,7 +2,7 @@
 
 # Release Notes for OpsCenter 6.8.43
 31 March 2025
-
+ 
 ## Core
 * Added new configuration options to the `Authentication` section of `opscenterd.conf` to allow passwords to be handled in a more secure manner. (OPSC-16260)
   * `password_complexity_enabled` - Configures whether OpsCenter should check for password complexity. Default is False (disabled).
