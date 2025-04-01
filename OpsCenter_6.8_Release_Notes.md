@@ -4,33 +4,33 @@
 31 March 2025
 
 ## Core
-* Added new configuration options to the `Authentication` section of `opscenterd.conf` to allow passwords to be handled in a more secure manner. (OPSC-16260)
-  * `password_complexity_enabled` - Configures whether OpsCenter should check for password complexity. Default is False (disabled).
-  * `new_user_password_change` - Requires new users to change their password on first authentication. Default is False (disabled).
-  * `failed_login_attempts_limit` - Configures failed login attempts before user lockout. The default setting is 5.
-  * `user_lockout_timeout_in_seconds` - This sets user lockout after a number of failed login attempts. Defaults to 300 second (5 minutes).
-  * `user_password_expiration_days` - Sets the user password expiration period in days. Default is 0 (disabled).
-  * `password_history_limit` - The number of previous passwords to check against when updating a password. Default is 0 (disabled).
+* Added new configuration options to the `Authentication` section of the `opscenterd.conf` configuration file to allow passwords to be handled in a more secure manner. (OPSC-16260)
+  * `password_complexity_enabled` - Enables OpsCenter to check for password complexity. The default setting is `False` (disabled).
+  * `new_user_password_change` - Requires new users to change their password upon first authentication. The default setting is `False` (disabled).
+  * `failed_login_attempts_limit` - Sets the number of failed login attempts before OpsCenter locks out a user. The default setting is `5`.
+  * `user_lockout_timeout_in_seconds` - Sets the amount of time that a user is locked out from OpsCenter after exceeding the failed login attempt limit. The default setting is `300` seconds (5 minutes).
+  * `user_password_expiration_days` - Sets the user password expiration period in days. The default setting is `0` (disabled).
+  * `password_history_limit` - Specifies the number of previous passwords to review when updating a password. The default setting is `0` (disabled).
 
 ## Best Practice Service
-* Fixed numerous bugs in the best practice service UI that were introduced when upgrading the UI framework version. (OPSC-17625)
-* Fixed a problem with the backup service UI that sometimes caused the config window for a different rule to be displayed when clicking a rule. (OPSC-17658)
+* Fixed numerous issues in the best practice service UI that were introduced when upgrading the UI framework version. (OPSC-17625)
+* Fixed a problem with the backup service UI that sometimes caused the configuration window for a different rule to be displayed when clicking a rule. (OPSC-17658)
 
 ## Backup Service
-* Fixed a bug that prevented the deletion of compressed commit logs from the backup staging directory. (OPSC-17075)
-* Improved opscenterd error handling of backup status updates after the backup for an agent has already been marked as complete. (OPSC-17641)
-* Support for Azure env HTTPS PROXY provided by addition of variables `azure_proxy_host` and azure_proxy_port` in `opscenterd.conf`. (OPSC-17645)
-* Updated rolling restarts during the point in time restore for a single datacenter so only the nodes in the specified datacenter will be restarted. (OPSC-16542)
-* Fixed a bug when handling special characters in dropped columns when restoring a table schema. (OPSC-17640)
+* Fixed an issue that prevented the deletion of compressed commit logs from the backup staging directory. (OPSC-17075)
+* Improved `opscenterd` error handling of backup status updates after the backup for an agent was marked as complete. (OPSC-17641)
+* Added support for `HTTPS_PROXY` on Microsoft Azure by adding the `azure_proxy_host` and `azure_proxy_port` options in the `opscenterd.conf` configuration file. (OPSC-17645)
+* Updated rolling restarts during the point in time restore for a single datacenter so that only the nodes in the specified datacenter are restarted. (OPSC-16542)
+* Fixed an issue for handling special characters in dropped columns when restoring a table schema. (OPSC-17640)
 * Enabled the compression option for Azure backup destinations. (OPSC-17654)
 * Fixed an issue that prevented the backup and restore of tables using Storage-Attached Indexes (SAI) in DSE 6.9. (OPSC-17678)
 
 ## Monitoring
-* Resolved a bug that caused HTML tags to appear in the description of triggered alerts. (OPSC-17624)
-* Added Solr index searcher metrics for DSE Search (Solr) enabled tables. (OPSC-17680)
+* Resolved an issue that caused HTML tags to appear in the description of triggered alerts. (OPSC-17624)
+* Added Solr index searcher metrics for DSE Search (Solr)-enabled tables. (OPSC-17680)
 
 ## UI
-* Fixed an issue in the UI where several lists of keyspace would not display more than 25 items. (OPSC-17663)
+* Fixed a UI issue where several keyspace lists did not display more than 25 items. (OPSC-17663)
 
 # Release Notes for OpsCenter 6.8.42
 31 January 2025
