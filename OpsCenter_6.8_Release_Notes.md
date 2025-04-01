@@ -1,17 +1,36 @@
 # Release notes for OpsCenter
 
 # Release Notes for OpsCenter 6.8.43
+31 March 2025
 
 ## Core
-* Support for azure env HTTPS PROXY provided by addition of variables *azure_proxy_host* and *azure_proxy_port*  in *Opscenterd.conf* (OPSC-17645)
-* Added solr index searcher metrics for solr tables. (OPSC-17680)
-* To compress the backup data, select Enable compression. Compression reduces the amount of data going through your network and reduces the disk and data usage but increases the CPU load for the server. (OPSC-17654)
+* Added new configuration options to the `Authentication` section of `opscenterd.conf` to allow passwords to be handled in a more secure manner. (OPSC-16260)
+  * `password_complexity_enabled` - Configures whether OpsCenter should check for password complexity. Default is False (disabled).
+  * `new_user_password_change` - Requires new users to change their password on first authentication. Default is False (disabled).
+  * `failed_login_attempts_limit` - Configures failed login attempts before user lockout. The default setting is 5.
+  * `user_lockout_timeout_in_seconds` - This sets user lockout after a number of failed login attempts. Defaults to 300 second (5 minutes).
+  * `user_password_expiration_days` - Sets the user password expiration period in days. Default is 0 (disabled).
+  * `password_history_limit` - The number of previous passwords to check against when updating a password. Default is 0 (disabled).
 
-## UI
-* Added 6 new configuration in Authentication that need document updates (OPSC-16260)
+## Best Practice Service
+* Fixed numerous bugs in the best practice service ui that were introduced when upgrading the ui framework version. (OPSC-17625)
+* Fixed a problem with the backup service ui that sometimes caused the config window for a different rule to be displayed when clicking a rule. (OPSC-17658)
 
 ## Backup Service
+* Fixed a bug that prevented the deletion of compressed commit logs from the backup staging directory. (OPSC-17075)
+* Improved opscenterd error handling of backup status updates after a the backup for an agent has already been marked as complete. (OPSC-17641)
+* Support for azure env HTTPS PROXY provided by addition of variables {{azure_proxy_host}} and {{azure_proxy_port}}  in `opscenterd.conf`. (OPSC-17645)
+* Updated rolling restarts during the point in time restore for a single datacenter so only the nodes in the specified datacenter will be restarted. (OPSC-16542)
+* Fixed a bug when handling special characters in dropped columns when restoring a table schema. (OPSC-17640)
+* Enabled the compression option for Azure backup destinations. (OPSC-17654)
 * Fixed an issue that prevented the backup and restore of tables using storage attached indexes in DSE 6.9. (OPSC-17678)
+
+## Monitoring
+* Resolved a bug that caused html tags to appear in the description of triggered alerts. (OPSC-17624)
+* Added solr index searcher metrics for solr tables. (OPSC-17680)
+
+## UI
+* Fixed an issue in the ui where several lists of keyspace would not display more than 25 items. (OPSC-17663)
 
 # Release Notes for OpsCenter 6.8.42
 31 January 2025
