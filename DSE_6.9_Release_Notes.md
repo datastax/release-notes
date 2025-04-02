@@ -230,4 +230,4 @@ If you're developing applications, please refer to the [Java Driver documentatio
 
 ## 6.9.0 DSE Upgrade
 
-* To upgrade to DSE 6.9 from an earlier release, you need to install the Java Development Kit (JDK) version `11.0.19` or later, and Python `3.8` to `3.11`. For more information, see [Preparing to upgrade](https://docs.datastax.com/en/upgrading/datastax-enterprise/dse-68-to-69.html#preparing-to-upgrade).
+* To upgrade to DSE 6.9 from an earlier release, you need to install the Java Development Kit (JDK) version `11.0.2` or later, and Python `3.8` to `3.11`. In general, follow the guidance listed in the Release Notes and upgrade to the Java and Python versions recommended for a specific DSE 6.9 release. For more information, see [Preparing to upgrade](https://docs.datastax.com/en/upgrading/datastax-enterprise/dse-68-to-69.html#preparing-to-upgrade).
