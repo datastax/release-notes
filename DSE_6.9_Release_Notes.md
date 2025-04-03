@@ -227,3 +227,7 @@ This is the first version of DSE 6.9 having Java 11 and Vector support.
 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
 If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.9.0 DSE Upgrade
+
+* To upgrade to DSE 6.9 from an earlier release, you need to install the Java Development Kit (JDK) version `11.0.2` or later, and Python `3.8` to `3.11`. In general, follow the guidance listed in the Release Notes and upgrade to the JDK and Python versions recommended for a specific DSE 6.9 release. For more information, see [Preparing to upgrade](https://docs.datastax.com/en/upgrading/datastax-enterprise/dse-68-to-69.html#preparing-to-upgrade).
