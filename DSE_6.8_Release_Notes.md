@@ -4,6 +4,27 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.55
+7 April 2025
+
+## Components versions for DSE 6.8.55
+ * Apache Solr™ 6.0.1.4.2976&ast;
+ * Apache Spark™ 2.4.0.33
+ * Apache TinkerPop™ 3.4.14-20250129-8982fe9c
+ * Apache Tomcat® 8.5.100
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.100.1.dse
+ * Spark JobServer 0.8.0.56
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.55 DSE CVE
+* Improved permissions checking on system keyspaces to limit user privileges appropriately. (DSP-24657, [CVE-2025-23015](https://nvd.nist.gov/vuln/detail/CVE-2025-23015))
+* Removed Apache MINA from the DataStax Agent bundled with DSE Docker images. (DSP-24697, [CVE-2024-52046](https://nvd.nist.gov/vuln/detail/CVE-2024-52046))
+* Removed old jquery library from solr. (DSP-24777, [CVE-2020-11022](https://nvd.nist.gov/vuln/detail/CVE-2020-11022), [CVE-2020-11023](https://nvd.nist.gov/vuln/detail/CVE-2020-11023))
+* Removed demonstration code from Docker images that was being used for testing purposes, and resolved some potential vulnerabilities. (DSP-24782, [CVE-2024-52046](https://nvd.nist.gov/vuln/detail/CVE-2024-52046))
+
 # Release notes for 6.8.54
 10 February 2025
 
