@@ -17,7 +17,7 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
 If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
-## 6.9.8 DSE Miscellaneous
+## 6.9.8 DSE Indexing
 * Fixed a hybrid vector query issue that occurred when sstable had rows containing null vectors. (DSP-24798)
 
 ## 6.9.8 DSE CVE
