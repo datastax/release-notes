@@ -24,6 +24,7 @@
 * Fixed an issue for handling special characters in dropped columns when restoring a table schema. (OPSC-17640)
 * Enabled the compression option for Azure backup destinations. (OPSC-17654)
 * Fixed an issue that prevented the backup and restore of tables using Storage-Attached Indexes (SAI) in DSE 6.9. (OPSC-17678)
+* Introduced a new agent config option `azcopy_max_files` which controls the maximum number of files that will uploaded via azcopy at once. (OPSC-17614)
 
 ## Monitoring
 * Resolved an issue that caused HTML tags to appear in the description of triggered alerts. (OPSC-17624)
