@@ -23,7 +23,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
 ## 6.9.8 DSE CVE
 * Improved permissions checking on system keyspaces to limit user privileges appropriately. (DSP-24657, [CVE-2025-23015](https://nvd.nist.gov/vuln/detail/CVE-2025-23015))
 * Removed Apache MINA from the DataStax Agent bundled with DSE Docker images. (DSP-24697, [CVE-2024-52046](https://nvd.nist.gov/vuln/detail/CVE-2024-52046))
-* Removed old jquery library from solr. (DSP-24777, [CVE-2020-11022](https://nvd.nist.gov/vuln/detail/CVE-2020-11022), [CVE-2020-11023](https://nvd.nist.gov/vuln/detail/CVE-2020-11023))
+* Removed an old jquery library from Apache Solr. (DSP-24777, [CVE-2020-11022](https://nvd.nist.gov/vuln/detail/CVE-2020-11022), [CVE-2020-11023](https://nvd.nist.gov/vuln/detail/CVE-2020-11023))
 * Removed demonstration code from Docker images that was being used for testing purposes, and resolved some potential vulnerabilities. (DSP-24782, [CVE-2024-52046](https://nvd.nist.gov/vuln/detail/CVE-2024-52046))
 
 # Release notes for 6.9.7
