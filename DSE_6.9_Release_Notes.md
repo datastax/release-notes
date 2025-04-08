@@ -3,7 +3,7 @@ DSE 6.9.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
 # Release notes for 6.9.8
-10 March 2025
+7 April 2025
 
 ## Components versions for DSE 6.9.8
  * Apache Solr™ 6.0.1.5.2977&ast;
