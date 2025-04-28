@@ -7,9 +7,9 @@
 * Certified OpsCenter running on `Amazon Linux 2023`. (OPSC-17676)
 * Added a new configuration option `enable_curl` in `posturl.conf` to allow alerts to use the curl command (default is `False`). (OPSC-17177)
 
-
 ## Monitoring
-* Introduced a new variable `agent_log_location` under the agents section in `cluster.conf`. This complements the existing `log_location` under the cassandra section. Both variables should now be specified when customizing log directories, as they determine the respective log partitions for Cassandra and the Agent components. (OPSC-17650)
+* Added support for alerting on the disk partitions used for the DSE `cdc_raw_directory` and agent log directory. (OPSC-17650)
+* Fixed a bug that made LDAP authentication unusable. (OPSC-17688)
 
 # Release Notes for OpsCenter 6.8.43
 31 March 2025
