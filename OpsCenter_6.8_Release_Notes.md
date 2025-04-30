@@ -5,7 +5,7 @@
 
 ## Core
 * Added support for running OpsCenter on Amazon Linux 2023. (OPSC-17676)
-* Added a new configuration option `enable_curl` in `posturl.conf` to allow alerts to use the curl command (default is `False`). (OPSC-17177)
+* Added a new configuration option, `enable_curl`, in the `posturl.conf` file. This option enables alerts to use the `curl` command. The default setting is `False`, which disables this option. To enable this option, set `enable_curl` to `True`. (OPSC-17177)
 
 ## Monitoring
 * Added support for alerting on the disk partitions used for the DSE `cdc_raw_directory` and agent log directory. (OPSC-17650)
