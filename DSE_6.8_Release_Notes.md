@@ -4,6 +4,25 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.56
+30 April 2025
+
+## Components versions for DSE 6.8.56
+ * Apache Solr™ 6.0.1.4.2976
+ * Apache Spark™ 2.4.0.33
+ * Apache TinkerPop™ 3.4.14-20250129-8982fe9c
+ * Apache Tomcat® 8.5.100
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.100.1.dse
+ * Spark JobServer 0.8.0.56
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.56 DSE Cassandra
+* Fixed an issue to prevent a deadlock for some operator commands. (DSP-24701)
+* Added system properties `dse.bad_list_handling` and `dse.write_side_list_validation` to work around invalid list keys. You can set these properties in DSE or in DSE client tools (such as `sstabledump`). (DSP-24819)
+
 # Release notes for 6.8.55
 7 April 2025
 
