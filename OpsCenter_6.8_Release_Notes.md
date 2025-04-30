@@ -4,7 +4,7 @@
 25 April 2025
 
 ## Core
-* Certified OpsCenter running on `Amazon Linux 2023`. (OPSC-17676)
+* Added support for running OpsCenter on Amazon Linux 2023. (OPSC-17676)
 * Added a new configuration option `enable_curl` in `posturl.conf` to allow alerts to use the curl command (default is `False`). (OPSC-17177)
 
 ## Monitoring
