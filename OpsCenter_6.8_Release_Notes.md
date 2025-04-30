@@ -9,7 +9,7 @@
 
 ## Monitoring
 * Added support for alerting on the disk partitions used for the DSE `cdc_raw_directory` and agent log directory. (OPSC-17650)
-* Fixed a bug that made LDAP authentication unusable. (OPSC-17688)
+* Fixed an issue that made LDAP authentication unusable. (OPSC-17688)
 
 # Release Notes for OpsCenter 6.8.43
 31 March 2025
