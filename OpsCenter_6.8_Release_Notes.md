@@ -1,5 +1,16 @@
 # Release notes for OpsCenter
 
+# Release Notes for OpsCenter 6.8.44
+25 April 2025
+
+## Core
+* Added support for running OpsCenter on Amazon Linux 2023. (OPSC-17676)
+* Added a new configuration option, `enable_curl`, in the `posturl.conf` file. This option enables alerts to use the `curl` command. The default setting is `False`, which disables this option. To enable this option, set `enable_curl` to `True`. (OPSC-17177)
+
+## Monitoring
+* Added cassandra log, agent log, and the cdc_raw as options to alerts by partition function. (OPSC-17650)
+* Fixed an issue that made LDAP authentication unusable. (OPSC-17688)
+
 # Release Notes for OpsCenter 6.8.43
 31 March 2025
 
