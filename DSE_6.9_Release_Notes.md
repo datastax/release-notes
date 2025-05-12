@@ -2,6 +2,29 @@
 DSE 6.9.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.9.9
+12 May 2025
+
+## Components versions for DSE 6.9.9
+ * Apache Solr™ 6.0.1.5.2977
+ * Apache Spark™ 2.5.0.6&ast;
+ * Apache TinkerPop™ 3.4.15-20250129-bd39a459
+ * Apache Tomcat® 8.5.100
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.100.1.dse
+ * Spark JobServer 0.8.0.56
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.9.9 DSE Cassandra
+* Fixed an issue to prevent a deadlock for some operator commands. (DSP-24701)
+* Added expert-level system properties to work around invalid list keys. Contact DataStax Support to set these properties in DSE or in DSE client tools (such as `sstabledump`). (DSP-24819)
+* Added `--address-config`, an `sstableloader` option to configure IP addresses from a `cassandra.yaml` file. (DSP-24826)
+
+## 6.9.9 DSE CVE
+* Upgraded the Apache Parquet and Apache Avro libraries used by Apache Spark to version `1.15.1`. (DSP-24802, [CVE-2025-30065](https://nvd.nist.gov/vuln/detail/CVE-2025-30065))
+
 # Release notes for 6.9.8
 7 April 2025
 
