@@ -4,6 +4,27 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.57
+12 May 2025
+
+## Components versions for DSE 6.8.57
+ * Apache Solr™ 6.0.1.4.2976
+ * Apache Spark™ 2.4.0.34&ast;
+ * Apache TinkerPop™ 3.4.14-20250129-8982fe9c
+ * Apache Tomcat® 8.5.100
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.100.1.dse
+ * Spark JobServer 0.8.0.56
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.57 DSE Cassandra
+* Added `--address-config`, an `sstableloader` option to configure IP addresses from a `cassandra.yaml` file. (DSP-24826)
+
+## 6.8.57 DSE CVE
+* Upgraded the Apache Parquet and Apache Avro libraries used by Apache Spark to version `1.15.1`. (DSP-24802, [CVE-2025-30065](https://nvd.nist.gov/vuln/detail/CVE-2025-30065))
+
 # Release notes for 6.8.56
 30 April 2025
 
