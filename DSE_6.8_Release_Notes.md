@@ -4,6 +4,37 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.58
+12 June 2025
+
+## Components versions for DSE 6.8.58
+ * Apache Solr™ 6.0.1.4.2976
+ * Apache Spark™ 2.4.0.34
+ * Apache TinkerPop™ 3.4.14-20250603-79edee64&ast;
+ * Apache Tomcat® 8.5.100
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.119.1.dse&ast;
+ * Spark JobServer 0.8.0.57&ast;
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.58 DSE Core
+* Updated the Java Development Kit (JDK) versions to `8u452` and `11.0.27`. These JDKs help build and test DSE, and are available in DSE Docker images. (DSP-24710) The following exceptions for DSE UBI images apply:
+  * The DSE 6.9 UBI images use JDK version `11.0.25` (from registry.access.redhat.com/ubi8/ubi-minimal:8.10-1255).
+  * The DSE 6.8 UBI images use JDK versions `11.0.23` and `8u412` (from the deprecated registry.redhat.io/ubi7/ubi:7.9-1445).
+
+## 6.8.58 DSE Docker
+* Fixed the Red Hat-based Docker images to provide proper support for both the Java 8 JDK and the Java 11 JDK. (DSP-22445)
+
+## 6.8.58 DSE CVE
+* Upgraded the `net.minidev:json-smart` Java JSON parser package to version `2.5.2` to resolve a Denial of Service (DoS) vulnerability. (DSP-24851, [CVE-2024-57699](https://nvd.nist.gov/vuln/detail/CVE-2024-57699))
+* Upgraded Jetty to version `9.4.57.v20241219` and Apache Commons IO to version `2.19.0`. (DSP-24855, [CVE-2024-6763](https://nvd.nist.gov/vuln/detail/CVE-2024-6763), [CVE-2024-47554](https://nvd.nist.gov/vuln/detail/CVE-2024-47554))
+* Upgraded the Apache Commons BeanUtils library to version `1.11.0` to resolve a vulnerability. (DSP-24857, [CVE-2025-48734](https://nvd.nist.gov/vuln/detail/CVE-2025-48734))
+* Upgraded Netty to version `4.1.119.1.dse`, which is based on version `4.1.119.Final`. (DSP-24850, [CVE-2025-24970](https://nvd.nist.gov/vuln/detail/CVE-2025-24970))
+* Upgraded the protocol buffers (protobuf) to version `4.29.4` to support DSE core workloads. (DSP-24853, [CVE-2024-7254](https://nvd.nist.gov/vuln/detail/CVE-2024-7254))
+* Added a fix for [HADOOP-19031](https://issues.apache.org/jira/browse/HADOOP-19031) into the DSE Hadoop software codebase. (DSP-24859, [CVE-2024-23454](https://nvd.nist.gov/vuln/detail/CVE-2024-23454))
+
 # Release notes for 6.8.57
 12 May 2025
 
