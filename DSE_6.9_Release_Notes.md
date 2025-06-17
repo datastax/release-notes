@@ -17,7 +17,7 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 **NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
 If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
-## 6.8.58 DSE Core
+## 6.9.10 DSE Core
 * Updated the Java Development Kit (JDK) versions to `8u452` and `11.0.27`. These JDKs help build and test DSE, and are available in DSE Docker images. (DSP-24710) The following exceptions for DSE UBI images apply: (DSP-24710)
   * The DSE 6.9 UBI images use JDK version `11.0.25` (from registry.access.redhat.com/ubi8/ubi-minimal:8.10-1255).
   * The DSE 6.8 UBI images use JDK versions `11.0.23` and `8u412` (from the deprecated registry.redhat.io/ubi7/ubi:7.9-1445).
