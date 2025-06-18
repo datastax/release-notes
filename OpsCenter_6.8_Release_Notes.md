@@ -5,14 +5,14 @@
 
 ## Core
 * Added the {{node_ips}} option to monitor nodes for events. Setting this field limits alerts monitoring to the nodes specified in the list. For example: ["127.0.0.1","127.0.0.2"]. (OPSC-17644)
-* *Targeted Solr Core Fetching:* OpsCenter now optimizes how Solr core information is retrieved. Instead of fetching cores for _all_ keyspaces and tables, OpsCenter will now fetch only the cores associated with the {{selected keyspaces and tables}}. This improves performance and reduces unnecessary data processing. (OPSC-17704)
+* Improved the Solr core fetching process to be more targeted. OpsCenter now optimizes the retrieval of Solr core information. Instead of fetching cores for all keyspaces and tables, OpsCenter now fetches only the cores associated with selected keyspaces and tables. This improves performance and reduces unnecessary data processing. (OPSC-17704)
 * Added enhancements to authentication configuration and user lockout management. (OPSC-15418)
 * Upgraded the {{org.json:json}} library to version {{20230227}}. (OPSC-17628 OPSC-17629)
 * Added new options to the {{authentication}} section of {{opscenterd.conf}} to allow users to use {{password_db}} and {{passwd_db}} alias. (OPSC-17701)
 * Improved data insertion logic to handle duplicates, enhancing reliability and preventing insertion errors. (OPSC-17693)
 
 ## Backup Service
-* OpsCenter now compresses only the *differential SSTables* *when syncing a snapshot to a destination* and *compression is enabled*. Compression is applied *after* the differential SSTable calculation, significantly reducing temporary storage usage preventing temporary storage runout issues (OPSC-17694)
+* Revised the compression process. OpsCenter now compresses only the differential SSTables when you sync a snapshot to a destination and enable compression. The system applies compression after the differential SSTable calculation, significantly reducing temporary storage usage and preventing temporary storage runout issues. (OPSC-17694)
 
 ## UI
 * Provided the ability within the OpsCenter UI to generate diagnostics reports selectively for specific datacenters or nodes. This feature reduces the report size and improves performance when working with large clusters. (OPSC-17610)
