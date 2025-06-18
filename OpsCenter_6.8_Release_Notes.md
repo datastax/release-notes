@@ -4,12 +4,18 @@
 17th June,2025
 
 ## Core
-* Added the {{node_ips}} option to monitor nodes for events. Setting this field limits alerts monitoring to the nodes specified in the list. For example: ["127.0.0.1","127.0.0.2"]. (OPSC-17644)
-* Improved the Solr core fetching process to be more targeted. OpsCenter now optimizes the retrieval of Solr core information. Instead of fetching cores for all keyspaces and tables, OpsCenter now fetches only the cores associated with selected keyspaces and tables. This improves performance and reduces unnecessary data processing. (OPSC-17704)
-* Added enhancements to authentication configuration and user lockout management. (OPSC-15418)
-* Upgraded the {{org.json:json}} library to version {{20230227}}. (OPSC-17628 OPSC-17629)
-* Added new options to the {{authentication}} section of {{opscenterd.conf}} to allow users to use {{password_db}} and {{passwd_db}} alias. (OPSC-17701)
+* Added the `node_ips` option to monitor nodes for alerts. Setting this field limits alerts monitoring to the nodes specified in the list. For example: ["127.0.0.1","127.0.0.2"]. (OPSC-17644)
+* Enhanced Solr Core Retrieval and Configurable Solr Core Exclusion in Backups: (OPSC-17704)
+  * Improved the Solr core fetching process to be more targeted.OpsCenter now optimizes the retrieval of Solr core information. Instead of fetching cores for all keyspaces and tables, OpsCenter now fetches only the cores associated with `selected keyspaces and tables`. This improves performance and reduces unnecessary data processing. 
+  * Added support for the `ignore_solr_resources` Boolean option in the `backup_service` section of the `opscenterd.conf` configuration file. When enabled, this option skips fetching `Solr core` information during backup creation, allowing for faster and more efficient backups.
+* Introduced the following enhancements to authentication configuration and user lockout management: (OPSC-15418)
+  * Added the `permanent_lockout_limit` option to the `authentication` section of the `opscenterd.conf` configuration file. This option supports permanent user lockouts. You can configure the number of total failed login attempts before the system locks out the user permanently. By default, this option is disabled.
+  * Introduced two new API endpoints to manage permanently locked out users:
+    * `GET /users/permanent-lockouts`: This option retrieves a list of users who are permanently locked out.
+    * `GET /users/**USERNAME**/reset-permanent-lockout`: This option resets the permanent lockout status of a specified user. Only administrators can perform this operation.
+* Added new options to the `authentication` section of `opscenterd.conf` to allow users to use `password_db` and `passwd_db` alias. (OPSC-17701)
 * Improved data insertion logic to handle duplicates, enhancing reliability and preventing insertion errors. (OPSC-17693)
+* Upgraded the `org.json:json` library to version `20230227`. (OPSC-17628 OPSC-17629)
 
 ## Backup Service
 * Revised the compression process. OpsCenter now compresses only the differential SSTables when you sync a snapshot to a destination and enable compression. The system applies compression after the differential SSTable calculation, significantly reducing temporary storage usage and preventing temporary storage runout issues. (OPSC-17694)
