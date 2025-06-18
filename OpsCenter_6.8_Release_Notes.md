@@ -14,7 +14,7 @@
     * `GET /users/permanent-lockouts`: This option retrieves a list of users who are permanently locked out.
     * `GET /users/**USERNAME**/reset-permanent-lockout`: This option resets the permanent lockout status of a specified user. Only administrators can perform this operation.
 * Added new options to the `authentication` section of `opscenterd.conf` to allow users to use `password_db` and `passwd_db` alias. (OPSC-17701)
-* Improved data insertion logic to handle duplicates, enhancing reliability and preventing insertion errors. (OPSC-17693)
+* Addressed an issue that could cause errors when saving user role password history with previously used credentials. OpsCenter now handles these cases gracefully, improving the reliability of user role management.(OPSC-17693)
 * Upgraded the `org.json:json` library to version `20230227`. (OPSC-17628 OPSC-17629)
 
 ## Backup Service
