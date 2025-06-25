@@ -2,6 +2,24 @@
 DSE 6.9.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.9.11
+25 June 2025
+
+## Components versions for DSE 6.9.11
+ * Apache Solr™ 6.0.1.5.2977
+ * Apache Spark™ 2.5.0.6
+ * Apache TinkerPop™ 3.4.15-20250603-0956e859
+ * Apache Tomcat® 8.5.100
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.119.1.dse
+ * Spark JobServer 0.8.0.57
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.9.11 DSE Docker
+* Updated DSE 6.9 UBI 8 images Python 3 version to 3.9 required by `cqlsh`. (DSP-24707)
+
 # Release notes for 6.9.10
 12 June 2025
 
