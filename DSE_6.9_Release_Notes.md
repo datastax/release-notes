@@ -18,7 +18,7 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## 6.9.11 DSE Docker
-* Updated DSE 6.9 UBI 8 images Python 3 version to 3.9 required by `cqlsh`. (DSP-24707)
+* Updated the Python version of the DSE 6.9 UBI 8 image to 3.9, as required by `cqlsh`. (DSP-24707)
 
 # Release notes for 6.9.10
 12 June 2025
