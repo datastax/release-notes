@@ -4,6 +4,25 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.59
+26 June 2025
+
+## Components versions for DSE 6.8.59
+ * Apache Solr™ 6.0.1.4.2976
+ * Apache Spark™ 2.4.0.34
+ * Apache TinkerPop™ 3.4.14-20250603-79edee64
+ * Apache Tomcat® 8.5.100
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.119.1.dse
+ * Spark JobServer 0.8.0.57
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.59 DSE Cassandra
+* Fixed issues retaining data after memtable flushes. (DSP-24872)
+* Fixed column filtering to avoid querying cells of unselected complex columns. (DSP-24878)
+
 # Release notes for 6.8.58
 12 June 2025
 
