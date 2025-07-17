@@ -2,6 +2,26 @@
 DSE 6.9.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.9.12
+17 July 2025
+
+## Components versions for DSE 6.9.12
+ * Apache Solr™ 6.0.1.5.2977
+ * Apache Spark™ 2.5.0.6
+ * Apache TinkerPop™ 3.4.15-20250603-0956e859
+ * Apache Tomcat® 8.5.100
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.119.1.dse
+ * Spark JobServer 0.8.0.57
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.9.12 DSE Cassandra
+* Fixed issues related to retaining data after memtable flushes. (DSP-24872)
+* Fixed column filtering to avoid querying the cells of unselected complex columns. (DSP-24878)
+* Fixed a timeout issue for SAI and range queries. This fix prevents draining nodes from replying to echo messages, and stops these nodes from executing faulty requests. (DSP-24792)
+
 # Release notes for 6.9.11
 25 June 2025
 
