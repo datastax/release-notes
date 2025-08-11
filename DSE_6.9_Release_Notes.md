@@ -18,15 +18,15 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## 6.9.13 DSE Core
-* Fixed logic in the VERIFY BACKUP STORE command to remove blobs after failed read validation. (DSP-22975)
+* Fixed logic in the `VERIFY BACKUP STORE` command to remove blobs after read validation failed. (DSP-22975)
 
 ## 6.9.13 DSE Cassandra
-* Fixed the old ssl port disabling which might impact quorum based queries. (DSP-24871)
-* Fixed UCS major compaction triggered by nodetool compact to honour defined number of shards. (DSP-24886)
-* Fixed incremental repairs failure during compaction. (DSP-24922)
+* Fixed an issue that occurred when you disabled the old SSL port, which might have impacted quorum-based queries. (DSP-24871)
+* Fixed a UCS major compaction issue that occurred when you entered the `nodetool compact` command. (DSP-24886)
+* Fixed an issue where incremental repairs failed during compaction. (DSP-24922)
 
 ## 6.9.13 DSE Docker
-* Fixed docker images to correctly load client jvm properties. (DSP-24928)
+* Fixed Docker images to load client JVM properties correctly. (DSP-24928)
 
 # Release notes for 6.9.12
 17 July 2025
