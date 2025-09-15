@@ -4,6 +4,31 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.60
+15 September 2025
+
+## Components versions for DSE 6.8.60
+ * Apache Solr™ 6.0.1.4.2976
+ * Apache Spark™ 2.4.0.34
+ * Apache TinkerPop™ 3.4.14-20250910-1a1484e8
+ * Apache Tomcat® 8.5.100
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.127.1.dse
+ * Spark JobServer 0.8.0.57
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.60 DSE Core
+* Fixed logic in the VERIFY BACKUP STORE command to remove blobs after read validation failed. (DSP-22975)
+* Fixed the version.properties file to display the correct Cassandra and DSE versions. (DSP-24934)
+
+## 6.8.60 DSE Cassandra
+* Fixed an issue where SSTables with implicitly frozen UDTs, including those with dropped columns, became unreadable during upgrades. (DSP-24600)
+* Fixed a timeout issue for SAI and range queries. This fix prevents draining nodes from replying to echo messages and stops these nodes from executing faulty requests. (DSP-24792)
+* Fixed an issue where incremental repairs failed during compaction. (DSP-24922)
+
+
 # Release notes for 6.8.59
 26 June 2025
 
