@@ -8,7 +8,7 @@
 * Fixed S3 backup location validation failing when using AWS CLI for buckets in us-east-1 region due to incorrect handling of null LocationConstraint response. (OPSC-17730)
 
 ## UI
-* Introduced new configuration option `backup_tmp_dir` in address.yaml. This controls directory used to temporarily stage and compress backup data before uploading to destinations (S3, Azure, Swift). Defaults to the value of `tmp_dir`. (OPSC-17696)
+* Introduced new configuration option `backup_tmp_dir` in `address.yaml`. This controls the directory used to temporarily stage and compress backup data before uploading to destinations like S3, Azure, or Swift. Defaults to the value of `tmp_dir`. (OPSC-17696)
 
 # Release Notes for OpsCenter 6.8.45
 17th June,2025
