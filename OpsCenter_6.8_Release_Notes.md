@@ -1,6 +1,16 @@
 # Release notes for OpsCenter
 
 # Release Notes for OpsCenter 6.8.45
+20th September,2025
+
+## Backup Service
+* Fixed backup cleanup to respect allow_one_failure setting, causing old backups to be removed when one node is down. (OPSC-17732)
+* Fixed S3 backup location validation failing when using AWS CLI for buckets in us-east-1 region due to incorrect handling of null LocationConstraint response. (OPSC-17730)
+
+## UI
+* Introduced new configuration `backup_tmp_dir` option in address.yaml. This controls directory used to temporarily staging and compressing backup data before uploading to destinations (S3, Azure, Swift). When not set, defaults to the value of `tmp_dir`. (OPSC-17696)
+
+# Release Notes for OpsCenter 6.8.45
 17th June,2025
 
 ## Core
