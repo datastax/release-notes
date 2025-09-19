@@ -24,6 +24,10 @@ If you're developing applications, please refer to the [Java Driver documentatio
 ## 6.9.14 DSE Cassandra
 * Fixed an issue where SSTables with implicitly frozen UDTs, including those with dropped columns, became unreadable during upgrades. (DSP-24600)
 
+## 6.9.14 DSE CVE
+* Upgraded Netty to version `4.1.127.1.dse`, which is based on version `4.1.127.Final`. (DSP-24941, DSP-24942, [CVE-2505-55163](https://nvd.nist.gov/vuln/detail/CVE-2505-55163), [CVE-2025-58506](https://nvd.nist.gov/vuln/detail/CVE-2025-58056))
+* Upgraded Management API component to pick up version 3.18.0 of Apache commons-lang2. (DSP-24941, [CVE-2025-48924](https://nvd.nist.gov/vuln/detail/CVE-2025-48924))
+
 # Release notes for 6.9.13
 11 August 2025
 

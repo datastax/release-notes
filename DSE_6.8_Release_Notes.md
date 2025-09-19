@@ -28,6 +28,8 @@ If you're developing applications, please refer to the [Java Driver documentatio
 * Fixed a timeout issue for SAI and range queries. This fix prevents draining nodes from replying to echo messages and stops these nodes from executing faulty requests. (DSP-24792)
 * Fixed an issue where incremental repairs failed during compaction. (DSP-24922)
 
+## 6.8.60 DSE CVE
+* Upgraded Netty to version `4.1.127.1.dse`, which is based on version `4.1.127.Final`. (DSP-24941, DSP-24942, [CVE-2505-55163](https://nvd.nist.gov/vuln/detail/CVE-2505-55163), [CVE-2025-58506](https://nvd.nist.gov/vuln/detail/CVE-2025-58056))
 
 # Release notes for 6.8.59
 26 June 2025
