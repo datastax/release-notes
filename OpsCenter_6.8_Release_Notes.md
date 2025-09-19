@@ -1,7 +1,7 @@
 # Release notes for OpsCenter
 
 # Release Notes for OpsCenter 6.8.46
-19th September, 2025
+19 September 2025
 
 ## Backup Service
 * Fixed backup cleanup to respect `allow_one_failure setting`, causing old backups to be removed when one node is down. (OPSC-17732)
