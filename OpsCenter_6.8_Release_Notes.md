@@ -11,7 +11,7 @@
 * Introduced new configuration option `backup_tmp_dir` in `address.yaml`. This controls the directory used to temporarily stage and compress backup data before uploading to destinations like S3, Azure, or Swift. Defaults to the value of `tmp_dir`. (OPSC-17696)
 
 # Release Notes for OpsCenter 6.8.45
-17th June,2025
+17 June 2025
 
 ## Core
 * Added the `node_ips` option to monitor nodes for alerts. Setting this field limits alerts monitoring to the nodes specified in the list. For example: ["127.0.0.1","127.0.0.2"]. (OPSC-17644)
