@@ -4,13 +4,11 @@ DSE 6.0.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 :warning: **NOTE**: DSE `6.0.x` line has [EOSL date of November 30, 2022](https://www.datastax.com/legal/supported-software).
 Please consider upgrading to [DSE 6.8](./DSE_6.8_Release_Notes.md) for our latest features and patches.
 
-# Downloads migration: downloads.datastax.com no longer available
+## Downloads migration: downloads.datastax.com no longer available for DSE
 31 October 2025
 
-**Important:** The downloads.datastax.com website is no longer available.
-You must obtain all DataStax Enterprise downloads from IBM Fix Central.
+**Important:** DataStax Enterprise (DSE) downloads are no longer available on the downloads.datastax.com website.
 
-DataStax has decommissioned the DataStax Enterprise download portal at downloads.datastax.com.
 IBM Fix Central now distributes all DSE packages (binary tarballs, RPM packages, and DEB packages) exclusively.
 
 All package formats remain available through Fix Central:
@@ -20,7 +18,7 @@ All package formats remain available through Fix Central:
 - **DEB packages** (`dse-{version}-deb.zip`) - for Debian-based systems.
 - **cqlsh** - All package formats include cqlsh.
 
-## How to download from Fix Central
+### How to download from Fix Central
 
 1. Sign in to [IBM Fix Central](https://www.ibm.com/support/fixcentral).
 
@@ -36,11 +34,11 @@ All package formats remain available through Fix Central:
 
 7. Review the terms and conditions, and then click **I agree**.
 
-## Setting up local repositories for RPM and DEB installations
+### Setting up local repositories for RPM and DEB installations
 
 After downloading packages from Fix Central, you must set up a local repository for RPM and DEB installations:
 
-### RPM installations (RHEL-based systems)
+#### RPM installations (RHEL-based systems)
 
 1. Extract the RPM files from the zip file:
 
@@ -106,7 +104,7 @@ After downloading packages from Fix Central, you must set up a local repository 
        dse-libspark-{version}-1
    ```
 
-### DEB installations (Debian-based systems)
+#### DEB installations (Debian-based systems)
 
 1. Extract the DEB files from the zip file:
 
@@ -234,7 +232,7 @@ You do not need to set up a repository.
 **RPM and DEB installations:** Follow the repository setup instructions above, then proceed with the standard installation commands for your platform.
 
 **Note for automated deployments:** If you have scripts or CI/CD pipelines that reference downloads.datastax.com URLs, you must update them to use Fix Central download procedures.
-Fix Central requires authentication and manual download initiation, so you must adjust scripts that previously used direct download URLs accordingly
+Fix Central requires authentication and manual download initiation, so you must adjust scripts that previously used direct download URLs accordingly.
 
 # Release notes for 6.0.18
 31 May 2022
