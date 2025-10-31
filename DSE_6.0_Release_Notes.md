@@ -42,7 +42,7 @@ Before you download DSE packages from IBM Fix Central, you need an IBMid:
 
 7. Review the terms and conditions, and then click **I agree**.
 
-### Setting up local repositories for RPM and DEB installations
+### Set up local repositories for RPM and DEB installations
 
 After downloading packages from Fix Central, you must set up a local repository for RPM and DEB installations:
 
