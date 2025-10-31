@@ -25,9 +25,10 @@ Before you download DSE packages from IBM Fix Central, you need an IBMid:
 - If you don't have an IBMid, you can [create one](https://www.ibm.com/account/reg/us-en/signup?formid=urx-19776).
 - If your company uses Enterprise Federation (EF) for authentication with corporate credentials, see the [EF documentation](https://www.ibm.com/docs/en/ief).
 
-## How to download from Fix Central
+### How to download from Fix Central
 
 1. Sign in to [IBM Fix Central](https://www.ibm.com/support/fixcentral).
+brian-r-fisher marked this conversation as resolved.
 
 2. In the **Product selector** field, enter `DataStax Enterprise with IBM`.
 
@@ -183,9 +184,9 @@ After downloading packages from Fix Central, you must set up a local repository 
 
 **Note:** Replace `**REPOSITORY_DIRECTORY**` with your preferred repository directory path, and replace `**DOWNLOAD_DIRECTORY**` with the path where you extracted the downloaded packages.
 
-### Verifying repository setup
+### Verify repository setup
 
-After you set up your local repository, verify it's configured correctly:
+After you set up your local repository, verify that it's configured correctly:
 
 **RPM installations**
 
@@ -207,17 +208,15 @@ sudo apt-get update
 apt-cache search dse
 ```
 
-### Cleaning up old repository configurations
+### Clean up old repository configurations
 
 If you previously had repositories configured for downloads.datastax.com, remove those configurations:
 
-**RPM installations**
-- Remove or update any old repository files in `/etc/yum.repos.d/` that reference downloads.datastax.com.
+- **RPM installations**: Remove or update any old repository files in `/etc/yum.repos.d/` that reference downloads.datastax.com.
 
-**DEB installations**
-- Remove or update any old entries in `/etc/apt/sources.list` or files in `/etc/apt/sources.list.d/` that reference downloads.datastax.com.
+- **DEB installations**: Remove or update any old entries in `/etc/apt/sources.list` or files in `/etc/apt/sources.list.d/` that reference downloads.datastax.com.
 
-### Binary tarball installation
+## Binary tarball installation
 
 1. Download the tarball from Fix Central: `dse-{version}-bin.tar.gz`
 
@@ -231,7 +230,7 @@ If you previously had repositories configured for downloads.datastax.com, remove
 
 4. Follow your standard DSE configuration and startup procedures.
 
-### Impact on installation and automation
+## Impact on installation and automation
 
 **Binary tarball installations:** After downloading from Fix Central, extract and install as before.
 You do not need to set up a repository.
