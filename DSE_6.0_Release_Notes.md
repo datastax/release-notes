@@ -4,7 +4,7 @@ DSE 6.0.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 :warning: **NOTE**: DSE `6.0.x` line has [EOSL date of November 30, 2022](https://www.datastax.com/legal/supported-software).
 Please consider upgrading to [DSE 6.8](./DSE_6.8_Release_Notes.md) for our latest features and patches.
 
-## Downloads migration: downloads.datastax.com no longer available for DSE
+# Downloads migration: downloads.datastax.com no longer available for DSE
 31 October 2025
 
 **Important:** DataStax Enterprise (DSE) downloads are no longer available on the downloads.datastax.com website.
@@ -16,7 +16,15 @@ All package formats remain available through Fix Central:
 - **Binary tarball** (`dse-{version}-bin.tar.gz`) - for installations without package managers.
 - **RPM packages** (`dse-{version}-rpm.zip`) - for RHEL-based systems.
 - **DEB packages** (`dse-{version}-deb.zip`) - for Debian-based systems.
-- **cqlsh** - All package formats include cqlsh.
+- **cqlsh** - All package formats include `cqlsh`.
+
+## Prerequisites
+
+Before you download DSE packages from IBM Fix Central, you need an IBMid:
+
+- If you are an existing IBM customer with an IBMid, you can continue to use your established account.
+- If you don't have an IBMid, you can [create one](https://www.ibm.com/account/reg/us-en/signup?formid=urx-19776).
+- If your company uses Enterprise Federation (EF) for authentication with corporate credentials, see the [EF documentation](https://www.ibm.com/docs/en/ief).
 
 ### How to download from Fix Central
 
