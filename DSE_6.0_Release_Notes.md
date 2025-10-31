@@ -184,9 +184,9 @@ After downloading packages from Fix Central, you must set up a local repository 
 
 **Note:** Replace `**REPOSITORY_DIRECTORY**` with your preferred repository directory path, and replace `**DOWNLOAD_DIRECTORY**` with the path where you extracted the downloaded packages.
 
-### Verifying repository setup
+### Verify repository setup
 
-After you set up your local repository, verify it's configured correctly:
+After you set up your local repository, verify that it's configured correctly:
 
 **RPM installations**
 
@@ -208,17 +208,15 @@ sudo apt-get update
 apt-cache search dse
 ```
 
-### Cleaning up old repository configurations
+### Clean up old repository configurations
 
 If you previously had repositories configured for downloads.datastax.com, remove those configurations:
 
-**RPM installations**
-- Remove or update any old repository files in `/etc/yum.repos.d/` that reference downloads.datastax.com.
+- **RPM installations**: Remove or update any old repository files in `/etc/yum.repos.d/` that reference downloads.datastax.com.
 
-**DEB installations**
-- Remove or update any old entries in `/etc/apt/sources.list` or files in `/etc/apt/sources.list.d/` that reference downloads.datastax.com.
+- **DEB installations**: Remove or update any old entries in `/etc/apt/sources.list` or files in `/etc/apt/sources.list.d/` that reference downloads.datastax.com.
 
-### Binary tarball installation
+## Binary tarball installation
 
 1. Download the tarball from Fix Central: `dse-{version}-bin.tar.gz`
 
@@ -232,7 +230,7 @@ If you previously had repositories configured for downloads.datastax.com, remove
 
 4. Follow your standard DSE configuration and startup procedures.
 
-### Impact on installation and automation
+## Impact on installation and automation
 
 **Binary tarball installations:** After downloading from Fix Central, extract and install as before.
 You do not need to set up a repository.
