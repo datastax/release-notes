@@ -5,7 +5,8 @@ DSE 6.0.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 Please consider upgrading to [DSE 6.8](./DSE_6.8_Release_Notes.md) for our latest features and patches.
 
 # Downloads migration: downloads.datastax.com no longer available for DSE
-31 October 2025
+
+3 November 2025
 
 **Important:** DataStax Enterprise (DSE) downloads are no longer available on the downloads.datastax.com website.
 
@@ -29,17 +30,11 @@ Before you download DSE packages from IBM Fix Central, you need an IBMid:
 ### How to download from Fix Central
 
 1. Sign in to [IBM Fix Central](https://www.ibm.com/support/fixcentral).
-
 2. In the **Product selector** field, enter `DataStax Enterprise with IBM`.
-
 3. Select the DSE version you want to install from the **Select from DataStax Enterprise with IBM** list.
-
 4. Select **All** in the **Platform** list, and then click **Continue**.
-
 5. On the **Identify fixes** page, click **Continue** to use the default **Browse for fixes** option.
-
 6. Select the fixes (DSE version) you want to install, and then click **Continue**.
-
 7. Review the terms and conditions, and then click **I agree**.
 
 ### Set up local repositories for RPM and DEB installations
@@ -54,31 +49,11 @@ After downloading packages from Fix Central, you must set up a local repository 
    sudo unzip dse-{version}-rpm.zip
    ```
 
-2. Create a directory for the repository:
+2. Set up a local Yum repository to host the downloaded RPM files.
 
-   ```bash
-   sudo mkdir -p **REPOSITORY_DIRECTORY**
-   ```
+   For more information, see [Creating a Yum repository](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/6/html/deployment_guide/sec-yum_repository).
 
-3. Copy the downloaded RPM files to the repository directory:
-
-   ```bash
-   sudo cp /**DOWNLOAD_DIRECTORY**/*.rpm **REPOSITORY_DIRECTORY**/
-   ```
-
-4. Install `createrepo` to generate repository metadata:
-
-   ```bash
-   sudo yum install createrepo
-   ```
-
-5. Create the repository metadata:
-
-   ```bash
-   sudo createrepo **REPOSITORY_DIRECTORY**
-   ```
-
-6. Add the local Yum repository to `/etc/yum.repos.d/datastax.repo`:
+3. Add the local Yum repository to `/etc/yum.repos.d/datastax.repo`:
 
    ```ini
    [datastax]
@@ -88,13 +63,15 @@ After downloading packages from Fix Central, you must set up a local repository 
    gpgcheck=0
    ```
 
-7. Update the packages:
+   Replace `**REPOSITORY_DIRECTORY**` with the path to your repository directory.
+
+4. Update the packages:
 
    ```bash
    sudo yum update
    ```
 
-8. Install all required DSE packages (you must specify all packages):
+5. Install all required DSE packages (you must specify all packages):
 
    ```bash
    # For the latest version
@@ -120,50 +97,27 @@ After downloading packages from Fix Central, you must set up a local repository 
    sudo unzip dse-{version}-deb.zip
    ```
 
-2. Create a directory for the repository:
+2. Set up a local APT repository to host the downloaded Debian package.
 
-   ```bash
-   sudo mkdir -p **REPOSITORY_DIRECTORY**
-   ```
+   For more information, see [Setting up a Debian repository](https://wiki.debian.org/DebianRepository/Setup).
 
-3. Change to the repository directory:
-
-   ```bash
-   cd **REPOSITORY_DIRECTORY**
-   ```
-
-4. Copy the downloaded DEB files to the repository directory:
-
-   ```bash
-   sudo cp /**DOWNLOAD_DIRECTORY**/*.deb **REPOSITORY_DIRECTORY**/
-   ```
-
-5. Install `dpkg-dev` to generate repository metadata:
-
-   ```bash
-   sudo apt-get install dpkg-dev
-   ```
-
-6. Create the packages file:
-
-   ```bash
-   cd **REPOSITORY_DIRECTORY**
-   dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz
-   ```
-
-7. Add the APT repository file `/etc/apt/sources.list.d/datastax.sources.list`:
+3. Add the APT repository file `/etc/apt/sources.list.d/datastax.sources.list`:
 
    ```bash
    echo "deb [trusted=yes] file:**REPOSITORY_DIRECTORY** ./" | sudo tee -a /etc/apt/sources.list.d/datastax.sources.list
    ```
 
-8. Update the packages:
+   Replace `**REPOSITORY_DIRECTORY**` with the path to your repository directory.
+
+   The `[trusted=yes]` option allows APT to use the repository without GPG key verification.
+
+4. Update the packages:
 
    ```bash
    sudo apt-get update
    ```
 
-9. Install all required DSE packages (you must specify all packages):
+5. Install all required DSE packages (you must specify all packages):
 
    ```bash
    # For the latest version
@@ -213,7 +167,6 @@ apt-cache search dse
 If you previously had repositories configured for downloads.datastax.com, remove those configurations:
 
 - **RPM installations**: Remove or update any old repository files in `/etc/yum.repos.d/` that reference downloads.datastax.com.
-
 - **DEB installations**: Remove or update any old entries in `/etc/apt/sources.list` or files in `/etc/apt/sources.list.d/` that reference downloads.datastax.com.
 
 ## Binary tarball installation
@@ -232,13 +185,11 @@ If you previously had repositories configured for downloads.datastax.com, remove
 
 ## Impact on installation and automation
 
-**Binary tarball installations:** After downloading from Fix Central, extract and install as before.
-You do not need to set up a repository.
+**Binary tarball installations:** After downloading from Fix Central, extract and install as before. You do not need to set up a repository.
 
 **RPM and DEB installations:** Follow the repository setup instructions above, then proceed with the standard installation commands for your platform.
 
-**Note for automated deployments:** If you have scripts or CI/CD pipelines that reference downloads.datastax.com URLs, you must update them to use Fix Central download procedures.
-Fix Central requires authentication and manual download initiation, so you must adjust scripts that previously used direct download URLs accordingly.
+**Note for automated deployments:** If you have scripts or CI/CD pipelines that reference downloads.datastax.com URLs, you must update them to use Fix Central download procedures. Fix Central requires authentication and manual download initiation, so you must adjust scripts that previously used direct download URLs accordingly.
 
 # Release notes for 6.0.18
 31 May 2022
