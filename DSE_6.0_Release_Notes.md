@@ -15,8 +15,11 @@ IBM Fix Central now distributes all DSE packages (binary tarballs, RPM packages,
 All package formats remain available through Fix Central:
 
 - **Binary tarball** (`dse-{version}-bin.tar.gz`) - for installations without package managers.
+
 - **RPM packages** (`dse-{version}-rpm.zip`) - for RHEL-based systems.
+
 - **DEB packages** (`dse-{version}-deb.zip`) - for Debian-based systems.
+
 - **cqlsh** - All package formats include `cqlsh`.
 
 ## Prerequisites
@@ -24,17 +27,25 @@ All package formats remain available through Fix Central:
 Before you download DSE packages from IBM Fix Central, you need an IBMid:
 
 - If you are an existing IBM customer with an IBMid, you can continue to use your established account.
+
 - If you don't have an IBMid, you can [create one](https://www.ibm.com/account/reg/us-en/signup?formid=urx-19776).
+
 - If your company uses Enterprise Federation (EF) for authentication with corporate credentials, see the [EF documentation](https://www.ibm.com/docs/en/ief).
 
 ### How to download from Fix Central
 
 1. Sign in to [IBM Fix Central](https://www.ibm.com/support/fixcentral).
+
 2. In the **Product selector** field, enter `DataStax Enterprise with IBM`.
+
 3. Select the DSE version you want to install from the **Select from DataStax Enterprise with IBM** list.
+
 4. Select **All** in the **Platform** list, and then click **Continue**.
+
 5. On the **Identify fixes** page, click **Continue** to use the default **Browse for fixes** option.
+
 6. Select the fixes (DSE version) you want to install, and then click **Continue**.
+
 7. Review the terms and conditions, and then click **I agree**.
 
 ### Set up local repositories for RPM and DEB installations
@@ -51,7 +62,13 @@ After downloading packages from Fix Central, you must set up a local repository 
 
 2. Set up a local Yum repository to host the downloaded RPM files.
 
-   For more information, see [Creating a Yum repository](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/6/html/deployment_guide/sec-yum_repository).
+   Choose one of the following methods:
+
+   - **Apache**: See [Apache](https://www.redhat.com/en/blog/apache-yum-dnf-repo) in the Red Hat documentation for more information.
+
+   - **nginx**: See [nginx](https://www.redhat.com/en/blog/nginx-based-yum-dnf-repo) in the Red Hat documentation for more information.
+
+   - **Red Hat Satellite**: See [Uploading content to custom RPM repositories](https://docs.redhat.com/en/documentation/red_hat_satellite/6.17/html/managing_content/importing_content_content-management#Uploading_Content_to_custom_rpm_Repositories_content-management) in the Red Hat Satellite documentation for more information.
 
 3. Add the local Yum repository to `/etc/yum.repos.d/datastax.repo`:
 
@@ -167,6 +184,7 @@ apt-cache search dse
 If you previously had repositories configured for downloads.datastax.com, remove those configurations:
 
 - **RPM installations**: Remove or update any old repository files in `/etc/yum.repos.d/` that reference downloads.datastax.com.
+
 - **DEB installations**: Remove or update any old entries in `/etc/apt/sources.list` or files in `/etc/apt/sources.list.d/` that reference downloads.datastax.com.
 
 ## Binary tarball installation
