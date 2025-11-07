@@ -7,7 +7,7 @@
 * Added `alert_instance_id` configuration option to 'email.conf', 'hipchat_posturl.conf', and 'posturl.conf' files. When set to `True`, the instance ID of the OpsCenter sending the alert is included in the notification. (OPSC-17695)
 
 ## UI
-* Added a new button in alert UI to allow users to test email and posturl alert notifications. (OPSC-17695)
+* Added the ability to specify the alert level for the all clear notification when the alert is resolved. (OPSC-17695)
 * Added support for custom Azure Blob Storage endpoints. You can now choose Custom and enter any endpoint suffix. (OPSC-17749)
 
 # Release Notes for OpsCenter 6.8.46
