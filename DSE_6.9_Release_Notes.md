@@ -2,6 +2,30 @@
 DSE 6.9.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.9.16
+13 November 2025
+
+## Components versions for DSE 6.9.16
+ * Apache Solr™ 6.0.1.5.2980
+ * Apache Spark™ 2.5.0.6
+ * Apache TinkerPop™ 3.4.15-20251106-c1d743ea&ast;
+ * Apache Tomcat® 8.5.100
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.128.1.dse&ast;
+ * Spark JobServer 0.8.0.57
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.9.16 DSE Core
+* Fixed input_stream_channel_timeout_in_ms always being enforced. (DSP-24963)
+
+## 6.9.16 DSE Indexing
+* Fixed query planner to allow SAI indexes with OR operators when regular indexes are also present on the table. (DSP-24966)
+
+## 6.9.16 DSE CVE
+* Upgraded Netty to version `4.1.128.1.dse`, which is based on version `4.1.128.Final`. (DSP-24977, [CVE-2025-59419](https://nvd.nist.gov/vuln/detail/CVE-2025-59419))
+
 # Release notes for 6.9.15
 14 October 2025
 
