@@ -4,6 +4,32 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.61
+13 November 2025
+
+## Components versions for DSE 6.8.61
+ * Apache Solr™ 6.0.1.4.2979&ast;
+ * Apache Spark™ 2.4.0.34
+ * Apache TinkerPop™ 3.4.14-20251106-f107ffba&ast;
+ * Apache Tomcat® 8.5.100
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.128.1.dse&ast;
+ * Spark JobServer 0.8.0.57
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.61 DSE Core
+* Fixed the handling of assertion errors in messaging subsystem to ensure the connection closes correctly. (DSP-24925)
+* Fixed backpressure counters on overloaded nodes. (DSP-24944)
+* Fixed input_stream_channel_timeout_in_ms always being enforced. (DSP-24963)
+
+## 6.8.61 DSE Search
+* Fixed deadlock in real-time search index flushing. (DSP-24959)
+
+## 6.8.61 DSE CVE
+* Upgraded Netty to version `4.1.128.1.dse`, which is based on version `4.1.128.Final`. (DSP-24977, [CVE-2025-59419](https://nvd.nist.gov/vuln/detail/CVE-2025-59419))
+
 # Release notes for 6.8.60
 15 September 2025
 
