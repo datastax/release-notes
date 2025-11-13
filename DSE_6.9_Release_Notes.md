@@ -18,7 +18,7 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## 6.9.16 DSE Core
-* Fixed input_stream_channel_timeout_in_ms always being enforced. (DSP-24963)
+* Fixed `input_stream_channel_timeout_in_ms` always being enforced. (DSP-24963)
 
 ## 6.9.16 DSE Indexing
 * Fixed query planner to allow SAI indexes with OR operators when regular indexes are also present on the table. (DSP-24966)
