@@ -22,7 +22,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
 ## 6.8.61 DSE Core
 * Fixed the handling of assertion errors in messaging subsystem to ensure the connection closes correctly. (DSP-24925)
 * Fixed backpressure counters on overloaded nodes. (DSP-24944)
-* Fixed input_stream_channel_timeout_in_ms always being enforced. (DSP-24963)
+* Fixed `input_stream_channel_timeout_in_ms` always being enforced. (DSP-24963)
 
 ## 6.8.61 DSE Search
 * Fixed deadlock in real-time search index flushing. (DSP-24959)
