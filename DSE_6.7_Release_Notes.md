@@ -3,6 +3,211 @@ DSE 6.7.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 :warning: **NOTE**: DSE `6.7.x` line has [EOSL date of November 30, 2022](https://www.datastax.com/legal/supported-software).  Please consider upgrading to [DSE 6.8](./DSE_6.8_Release_Notes.md) for our latest features and patches.
 
+# Downloads migration: downloads.datastax.com no longer available for DSE
+
+3 November 2025
+
+**Important:** DataStax Enterprise (DSE) downloads are no longer available on the downloads.datastax.com website.
+
+IBM Fix Central now distributes all DSE packages (binary tarballs, RPM packages, and DEB packages) exclusively.
+
+All package formats remain available through Fix Central:
+
+- **Binary tarball** (`dse-{version}-bin.tar.gz`) - for installations without package managers.
+
+- **RPM packages** (`dse-{version}-rpm.zip`) - for RHEL-based systems.
+
+- **DEB packages** (`dse-{version}-deb.zip`) - for Debian-based systems.
+
+- **cqlsh** - All package formats include `cqlsh`.
+
+## Prerequisites
+
+Before you download DSE packages from IBM Fix Central, you need an IBMid:
+
+- If you are an existing IBM customer with an IBMid, you can continue to use your established account.
+
+- If you don't have an IBMid, you can [create one](https://www.ibm.com/account/reg/us-en/signup?formid=urx-19776).
+
+- If your company uses Enterprise Federation (EF) for authentication with corporate credentials, see the [EF documentation](https://www.ibm.com/docs/en/ief).
+
+### How to download from Fix Central
+
+1. Sign in to [IBM Fix Central](https://www.ibm.com/support/fixcentral).
+
+2. In the **Product selector** field, enter `DataStax Enterprise with IBM`.
+
+3. Select the DSE version you want to install from the **Select from DataStax Enterprise with IBM** list.
+
+4. Select **All** in the **Platform** list, and then click **Continue**.
+
+5. On the **Identify fixes** page, click **Continue** to use the default **Browse for fixes** option.
+
+6. Select the fixes (DSE version) you want to install, and then click **Continue**.
+
+7. Review the terms and conditions, and then click **I agree**.
+
+### Set up local repositories for RPM and DEB installations
+
+After downloading packages from Fix Central, you must set up a local repository for RPM and DEB installations:
+
+#### RPM installations (RHEL-based systems)
+
+1. Extract the RPM files from the zip file:
+
+   ```bash
+   sudo unzip dse-{version}-rpm.zip
+   ```
+
+2. Set up a local Yum repository to host the downloaded RPM files.
+
+   Choose one of the following methods:
+
+   - **Apache**: See [Apache](https://www.redhat.com/en/blog/apache-yum-dnf-repo) in the Red Hat documentation for more information.
+
+   - **nginx**: See [nginx](https://www.redhat.com/en/blog/nginx-based-yum-dnf-repo) in the Red Hat documentation for more information.
+
+   - **Red Hat Satellite**: See [Uploading content to custom RPM repositories](https://docs.redhat.com/en/documentation/red_hat_satellite/6.17/html/managing_content/importing_content_content-management#Uploading_Content_to_custom_rpm_Repositories_content-management) in the Red Hat Satellite documentation for more information.
+
+3. Add the local Yum repository to `/etc/yum.repos.d/datastax.repo`:
+
+   ```ini
+   [datastax]
+   name=DataStax Repo for DataStax Enterprise
+   baseurl=file://**REPOSITORY_DIRECTORY**
+   enabled=1
+   gpgcheck=0
+   ```
+
+   Replace `**REPOSITORY_DIRECTORY**` with the path to your repository directory.
+
+4. Update the packages:
+
+   ```bash
+   sudo yum update
+   ```
+
+5. Install all required DSE packages (you must specify all packages):
+
+   ```bash
+   # For the latest version
+   sudo yum install dse-full
+
+   # For a specific version (replace {version} with actual version, e.g., 6.0.15)
+   sudo yum install dse-{version}-1 \
+       dse-full-{version}-1 \
+       dse-libgraph-{version}-1 \
+       dse-libcassandra-{version}-1 \
+       dse-libhadoop2-client-{version}-1 \
+       dse-libsolr-{version}-1 \
+       dse-libtomcat-{version}-1 \
+       dse-liblog4j-{version}-1 \
+       dse-libspark-{version}-1
+   ```
+
+#### DEB installations (Debian-based systems)
+
+1. Extract the DEB files from the zip file:
+
+   ```bash
+   sudo unzip dse-{version}-deb.zip
+   ```
+
+2. Set up a local APT repository to host the downloaded Debian package.
+
+   For more information, see [Setting up a Debian repository](https://wiki.debian.org/DebianRepository/Setup).
+
+3. Add the APT repository file `/etc/apt/sources.list.d/datastax.sources.list`:
+
+   ```bash
+   echo "deb [trusted=yes] file:**REPOSITORY_DIRECTORY** ./" | sudo tee -a /etc/apt/sources.list.d/datastax.sources.list
+   ```
+
+   Replace `**REPOSITORY_DIRECTORY**` with the path to your repository directory.
+
+   The `[trusted=yes]` option allows APT to use the repository without GPG key verification.
+
+4. Update the packages:
+
+   ```bash
+   sudo apt-get update
+   ```
+
+5. Install all required DSE packages (you must specify all packages):
+
+   ```bash
+   # For the latest version
+   sudo apt-get install dse-full
+
+   # For a specific version (replace {version} with your version)
+   sudo apt-get install dse={version}-1 \
+       dse-full={version}-1 \
+       dse-libcassandra={version}-1 \
+       dse-libgraph={version}-1 \
+       dse-libhadoop2-client-native={version}-1 \
+       dse-libhadoop2-client={version}-1 \
+       dse-liblog4j={version}-1 \
+       dse-libsolr={version}-1 \
+       dse-libspark={version}-1 \
+       dse-libtomcat={version}-1
+   ```
+
+**Note:** Replace `**REPOSITORY_DIRECTORY**` with your preferred repository directory path, and replace `**DOWNLOAD_DIRECTORY**` with the path where you extracted the downloaded packages.
+
+### Verify repository setup
+
+After you set up your local repository, verify that it's configured correctly:
+
+**RPM installations**
+
+```bash
+# Verify the repository is listed
+sudo yum repolist
+
+# Search for DSE packages
+sudo yum search dse
+```
+
+**DEB installations**
+
+```bash
+# Update package lists
+sudo apt-get update
+
+# Check if DSE packages are available
+apt-cache search dse
+```
+
+### Clean up old repository configurations
+
+If you previously had repositories configured for downloads.datastax.com, remove those configurations:
+
+- **RPM installations**: Remove or update any old repository files in `/etc/yum.repos.d/` that reference downloads.datastax.com.
+
+- **DEB installations**: Remove or update any old entries in `/etc/apt/sources.list` or files in `/etc/apt/sources.list.d/` that reference downloads.datastax.com.
+
+## Binary tarball installation
+
+1. Download the tarball from Fix Central: `dse-{version}-bin.tar.gz`
+
+2. Extract the tarball to your installation directory:
+
+   ```bash
+   sudo tar -xzvf dse-{version}-bin.tar.gz -C /opt
+   ```
+
+3. The extraction creates a directory named `dse-{version}`.
+
+4. Follow your standard DSE configuration and startup procedures.
+
+## Impact on installation and automation
+
+**Binary tarball installations:** After downloading from Fix Central, extract and install as before. You do not need to set up a repository.
+
+**RPM and DEB installations:** Follow the repository setup instructions above, then proceed with the standard installation commands for your platform.
+
+**Note for automated deployments:** If you have scripts or CI/CD pipelines that reference downloads.datastax.com URLs, you must update them to use Fix Central download procedures. Fix Central requires authentication and manual download initiation, so you must adjust scripts that previously used direct download URLs accordingly.
+
 # Release notes for 6.7.17
 31 May 2022
 
