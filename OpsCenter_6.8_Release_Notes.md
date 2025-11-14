@@ -1,5 +1,16 @@
 # Release notes for OpsCenter
 
+# Release Notes for OpsCenter 6.8.47
+13 November 2025
+
+## Monitoring
+* Added the ability to specify the alert level for the all clear notification when the alert is resolved. (OPSC-17695)
+* Added `alert_instance_id` configuration option to 'email.conf', 'hipchat_posturl.conf', and 'posturl.conf' files. When set to `True`, the instance ID of the OpsCenter sending the alert is included in the notification. (OPSC-17695)
+
+## Backup Service
+* Added support for custom Azure Blob Storage endpoints. You can now choose Custom and enter any endpoint suffix. (OPSC-17749)
+* Fixed and issue that allowed scheduled backups to start before the previous backup completed. (OPSC-17740)
+
 # Release Notes for OpsCenter 6.8.46
 19 September 2025
 
