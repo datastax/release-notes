@@ -35,9 +35,9 @@ Before you download DSE packages from IBM Fix Central, you need an IBMid:
 
 1. Sign in to [IBM Fix Central](https://www.ibm.com/support/fixcentral).
 
-2. In the **Product selector** field, enter `DataStax Enterprise with IBM`.
+2. In the **Product selector** field, enter `IBM DataStax Enterprise`.
 
-3. Select the DSE version you want to install from the **Select from DataStax Enterprise with IBM** list.
+3. Select the DSE version you want to install from the **Select from IBM DataStax Enterprise** list.
 
 4. Select **All** in the **Platform** list, and then click **Continue**.
 
