@@ -75,6 +75,127 @@ both methods follow the same packaging patterns.
 
 # Releases
 
+## Luna Streaming Distribution 3.1 4.21
+This maintenance release of the DataStax Luna Streaming Distribution for 3.1 which includes important stability and security updates for Luna Streaming, as well as for the various connectors packaged alongside it, such as sinks, sources, functions, protocol extensions, proxy extensions, filters, and client extensions.
+
+### Most notable commits
+
+* [6a3b447](https://github.com/datastax/pulsar/commit/6a3b447) Update kinesis producer version to 1.0.6
+* [e4f26a9](https://github.com/datastax/pulsar/commit/e4f26a9) [fix][client] Fix deduplication for getPartitionedTopicMetadata to include method parameters (#24965)
+* [463ad53](https://github.com/datastax/pulsar/commit/463ad53) [fix][broker] Trigger topic creation event only once for non-existent topic (#24802)
+* [c74e273](https://github.com/datastax/pulsar/commit/c74e273) [fix][test] Fix flaky KeySharedSubscriptionBrokerCacheTest.testReplayQueueReadsGettingCached (#24955)
+* [0df2596](https://github.com/datastax/pulsar/commit/0df2596) [fix][test] Fix invalid test NonPersistentTopicTest.testProducerRateLimit (#24957)
+* [bd38d15](https://github.com/datastax/pulsar/commit/bd38d15) [fix][test] Fix flaky NonPersistentTopicTest.testProducerRateLimit (#24951)
+* [58e7414](https://github.com/datastax/pulsar/commit/58e7414) [cleanup][broker][branch-3.0] Remove no-op configurations caused by cherry-picking (#24960)
+* [ca9b26c](https://github.com/datastax/pulsar/commit/ca9b26c) [fix][txn] fix concurrent error cause txn stuck in TransactionBufferHandlerImpl#endTxn (#23551)
+* [df379e7](https://github.com/datastax/pulsar/commit/df379e7) [fix][broker] Avoid recursive update in ConcurrentHashMap during policy cache cleanup (#24939)
+* [37d84a0](https://github.com/datastax/pulsar/commit/37d84a0) [fix][admin] Set local policies overwrites "number of bundles" passed during namespace creation (#24762)
+* [4ddab9c](https://github.com/datastax/pulsar/commit/4ddab9c) [fix][test] Stabilize testMsgDropStat by reliably triggering non-persistent publisher drop (#24929)
+* [a52d40f](https://github.com/datastax/pulsar/commit/a52d40f) [fix][broker] Fix stack overflow caused by race condition when closing a connection (#24934)
+* [497ab0f](https://github.com/datastax/pulsar/commit/497ab0f) [fix][broker] fix getMaxReadPosition in TransactionBufferDisable should return latest (#24898)
+
+### `lunastreaming-all` distribution
+<details><summary>Sinks</summary>
+
+| Name                                                                     | Description                                                                                                  | Version | File                                          |
+|--------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|---------|-----------------------------------------------|
+| [cassandra-enhanced](https://github.com/datastax/pulsar-sink)            | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | 1.6.14  | cassandra-enhanced-pulsar-sink-1.6.14-nar.nar |
+| [cloud-storage](https://github.com/streamnative/pulsar-io-cloud-storage) | Writes data into cloud storage                                                                               | 3.2.4   | pulsar-io-cloud-storage-3.2.4.nar             |
+| [data-generator](https://pulsar.apache.org/docs/io-connectors)           | Test data generator source                                                                                   | 3.1.4.21 | pulsar-io-data-generator-3.1.4.21.nar          |
+| [elastic_search](https://pulsar.apache.org/docs/io-connectors)           | Writes data into Elastic Search                                                                              | 3.1.4.21 | pulsar-io-elastic-search-3.1.4.21.nar          |
+| [http](https://pulsar.apache.org/docs/io-connectors)                     | Writes data to an HTTP server (Webhook)                                                                      | 3.1.4.21 | pulsar-io-http-3.1.4.21.nar                    |
+| [jdbc-clickhouse](https://pulsar.apache.org/docs/io-connectors)          | JDBC sink for ClickHouse                                                                                     | 3.1.4.21 | pulsar-io-jdbc-clickhouse-3.1.4.21.nar         |
+| [jdbc-mariadb](https://pulsar.apache.org/docs/io-connectors)             | JDBC sink for MariaDB                                                                                        | 3.1.4.21 | pulsar-io-jdbc-mariadb-3.1.4.21.nar            |
+| [jdbc-openmldb](https://pulsar.apache.org/docs/io-connectors)            | JDBC sink for OpenMLDB                                                                                       | 3.1.4.21 | pulsar-io-jdbc-openmldb-3.1.4.21.nar           |
+| [jdbc-postgres](https://pulsar.apache.org/docs/io-connectors)            | JDBC sink for PostgreSQL                                                                                     | 3.1.4.21 | pulsar-io-jdbc-postgres-3.1.4.21.nar           |
+| [jdbc-sqlite](https://pulsar.apache.org/docs/io-connectors)              | JDBC sink for SQLite                                                                                         | 3.1.4.21 | pulsar-io-jdbc-sqlite-3.1.4.21.nar             |
+| [kafka](https://pulsar.apache.org/docs/io-connectors)                    | Kafka source and sink connector                                                                              | 3.1.4.21 | pulsar-io-kafka-3.1.4.21.nar                   |
+| [kinesis](https://pulsar.apache.org/docs/io-connectors)                  | Kinesis connectors                                                                                           | 3.1.4.21 | pulsar-io-kinesis-3.1.4.21.nar                 |
+| [snowflake](https://github.com/datastax/snowflake-connector)             | Snowflake Connector                                                                                          | 0.2.1  | pulsar-snowflake-connector-0.2.1.nar         |
+| [lakehouse](https://github.com/streamnative/pulsar-io-lakehouse)         | Lakehouse Connector                                                                                          | 3.3.3.1 | pulsar-io-lakehouse-3.3.3.1.nar               |
+| [lakehouse-cloud](https://github.com/streamnative/pulsar-io-lakehouse)   | Lakehouse Cloud Connector                                                                                    | 3.3.3.1 | pulsar-io-lakehouse-3.3.3.1-cloud.nar         |
+</details>
+<details><summary>Sources</summary>
+
+| Name                                                                     | Description                          | Version | File                                    |
+|--------------------------------------------------------------------------|--------------------------------------|---------|-----------------------------------------|
+| [cassandra-source](https://github.com/datastax/cdc-for-apache-cassandra) | Read data from Cassandra             | 2.3.1   | pulsar-cassandra-source-2.3.1.nar       |
+| [data-generator](https://pulsar.apache.org/docs/io-connectors)           | Test data generator source           | 3.1.4.21 | pulsar-io-data-generator-3.1.4.21.nar    |
+| [debezium-mongodb](https://pulsar.apache.org/docs/io-connectors)         | Debezium MongoDb Source              | 3.1.4.21 | pulsar-io-debezium-mongodb-3.1.4.21.nar  |
+| [debezium-mssql](https://pulsar.apache.org/docs/io-connectors)           | Debezium Microsoft SQL Server Source | 3.1.4.21 | pulsar-io-debezium-mssql-3.1.4.21.nar    |
+| [debezium-mysql](https://pulsar.apache.org/docs/io-connectors)           | Debezium MySql Source                | 3.1.4.21 | pulsar-io-debezium-mysql-3.1.4.21.nar    |
+| [debezium-oracle](https://pulsar.apache.org/docs/io-connectors)          | Debezium Oracle Source               | 3.1.4.21 | pulsar-io-debezium-oracle-3.1.4.21.nar   |
+| [debezium-postgres](https://pulsar.apache.org/docs/io-connectors)        | Debezium Postgres Source             | 3.1.4.21 | pulsar-io-debezium-postgres-3.1.4.21.nar |
+| [kafka](https://pulsar.apache.org/docs/io-connectors)                    | Kafka source and sink connector      | 3.1.4.21 | pulsar-io-kafka-3.1.4.21.nar             |
+| [kinesis](https://pulsar.apache.org/docs/io-connectors)                  | Kinesis connectors                   | 3.1.4.21 | pulsar-io-kinesis-3.1.4.21.nar           |
+</details>
+<details><summary>Proxy extensions</summary>
+
+| Name                                                           | Description                            | Version  | File                            |
+|----------------------------------------------------------------|----------------------------------------|----------|---------------------------------|
+| [kafka](https://github.com/datastax/starlight-for-kafka)       | Kafka Proxy Extension                  | 3.1.0.5  | pulsar-kafka-proxy-3.1.0.5.nar  |
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.1 | starlight-rabbitmq-2.10.1.1.nar |
+</details>
+<details><summary>Protocol handlers</summary>
+
+| Name                                                           | Description                            | Version  | File                                      |
+|----------------------------------------------------------------|----------------------------------------|----------|-------------------------------------------|
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 2.10.1.1 | starlight-rabbitmq-2.10.1.1.nar           |
+| [kafka](https://github.com/datastax/starlight-for-kafka)       | Kafka Protocol Handler                 | 3.1.0.5  | pulsar-protocol-handler-kafka-3.1.0.5.nar |
+</details>
+<details><summary>CLI extensions</summary>
+
+| Name                                                          | Description                                      | Version | File                                 |
+|---------------------------------------------------------------|--------------------------------------------------|---------|--------------------------------------|
+| [cassandra-cdc](https://pulsar.apache.org/docs/io-connectors) | Cassandra CDC - Pulsar Admin Custom Commands     | 2.3.2   | pulsar-cassandra-admin-2.3.2-nar.nar |
+| [jms](https://pulsar.apache.org/docs/io-connectors)           | Starlight for JMS - Pulsar Admin Custom Commands | 6.0.6   | pulsar-jms-admin-6.0.6-nar.nar       |
+</details>
+<details><summary>Filters</summary>
+
+| Name                                                | Description                                         | Version | File                     |
+|-----------------------------------------------------|-----------------------------------------------------|---------|--------------------------|
+| [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - support for server side filters | 6.0.6   | pulsar-jms-6.0.6-nar.nar |
+</details>
+<details><summary>Functions</summary>
+
+| Name                                                       | Description             | Version | File                             |
+|------------------------------------------------------------|-------------------------|---------|----------------------------------|
+| [ai-tools](https://pulsar.apache.org/docs/io-connectors)   | Generative AI tools     | 3.2.1   | pulsar-ai-tools-3.2.1.nar        |
+| [transforms](https://pulsar.apache.org/docs/io-connectors) | Transformation function | 3.2.1   | pulsar-transformations-3.2.1.nar |
+</details>
+
+
+## Environment (Connectors, Protocol Handlers, Proxy Extensions, extra libraries)
+See the [environment variables](https://github.com/riptano/pulsar-distro/blob/ls_3.1.4_21/build.json) used for the build
+
+
+### Builtin connectors
+
+- cassandra-enhanced-pulsar-sink-1.6.14-nar.nar
+- pulsar-cassandra-source-2.3.2.nar
+- pulsar-io-cloud-storage-3.2.4.nar
+- pulsar-io-debezium-mongodb-3.1.4.21.nar 
+- pulsar-io-jdbc-sqlite-3.1.4.21.nar
+- pulsar-io-kinesis-3.1.4.21.nar
+- pulsar-io-data-generator-3.1.4.21.nar
+- pulsar-io-elastic-search-3.1.4.21.nar
+- pulsar-io-jdbc-clickhouse-3.1.4.21.nar
+- pulsar-io-debezium-oracle-3.1.4.21.nar
+- pulsar-io-jdbc-openmldb-3.1.4.21.nar
+- pulsar-io-jdbc-postgres-3.1.4.21.nar
+- pulsar-io-debezium-mssql-3.1.4.21.nar
+- pulsar-io-debezium-mysql-3.1.4.21.nar
+- pulsar-io-jdbc-mariadb-3.1.4.21.nar
+- pulsar-io-debezium-postgres-3.1.4.21.nar
+- pulsar-io-http-3.1.4.21.nar
+- pulsar-io-kafka-3.1.4.21.nar 
+- pulsar-snowflake-connector-0.2.1.nar
+- pulsar-protocol-handler-kafka-3.1.0.4.nar
+- starlight-rabbitmq-2.10.1.1.nar
+- pulsar-kafka-proxy-3.1.0.4.nar
+- pulsar-jms-6.0.6-nar.nar
+
+
 ## Luna Streaming Distribution  3.1.4 20
 This is a maintenance release containing important security updates.
 ### Most notable commits
