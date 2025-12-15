@@ -8,9 +8,9 @@ Please consider upgrading to [DSE 6.8](./DSE_6.8_Release_Notes.md) for our lates
 
 3 November 2025
 
-**Important:** DataStax Enterprise (DSE) downloads are no longer available on the downloads.datastax.com website.
+**Important:** Beginning January 2026, DataStax Enterprise (DSE) downloads will no longer be available on the downloads.datastax.com website.
 
-IBM Fix Central now distributes all DSE packages (binary tarballs, RPM packages, and DEB packages) exclusively.
+IBM Fix Central will distribute all DSE packages (binary tarballs, RPM packages, and DEB packages) exclusively.
 
 All package formats remain available through Fix Central:
 
