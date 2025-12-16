@@ -2,6 +2,32 @@
 DSE 6.9.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.9.17
+15 December 2025
+
+## Components versions for DSE 6.9.17
+ * Apache Solr™ 6.0.1.5.2980
+ * Apache Spark™ 2.5.0.8&ast;
+ * Apache TinkerPop™ 3.4.15-20251209-8cac84f1&ast;
+ * Apache Tomcat® 8.5.100
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.128.1.dse
+ * Spark JobServer 0.8.0.57
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.9.17 DSE Cassandra
+* Added logging to print the last recovered row during the restore process. (DSP-24760)
+* Fixed the broken timeout for the size estimation call that affects impacts consistent node replacement stability. (DSP-25000)
+
+## 6.9.17 DSE CVE
+* Upgraded the commons-lang3 library to version 3.20.0. (DSP-25001, [CVE-2025-48924](https://nvd.nist.gov/vuln/detail/CVE-2025-48924))
+* Upgraded the lz4 library to version 1.8.1. (DSP-25002, [CVE-2025-12183](https://nvd.nist.gov/vuln/detail/CVE-2025-12183))
+* Upgraded the okhttp library to version 4.9.2. (DSP-25004, [CVE-2021-0341](https://nvd.nist.gov/vuln/detail/CVE-2021-0341))
+* Upgraded the jetty library to version 9.4.58.v20250814. (DSP-25005, [CVE-2025-5115](https://nvd.nist.gov/vuln/detail/CVE-2025-5115))
+* Removed the unused tika-core 1.2.5 library. (DSP-25008, [CVE-2025-66516](https://nvd.nist.gov/vuln/detail/CVE-2025-66516))
+
 # Release notes for 6.9.16
 13 November 2025
 
