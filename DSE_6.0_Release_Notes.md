@@ -46,7 +46,14 @@ Before you download DSE packages from IBM Fix Central, you need an IBMid:
 
 6. Select the fixes (DSE version) you want to install, and then click **Continue**.
 
-7. Review the terms and conditions, and then click **I agree**.
+7. On the **Download options** page, select the **Download using your browser (HTTPS)**, and then click **Continue**.
+
+   This step is only required the first time you download a file using Fix Central.
+   If you need to change your download method for subsequent downloads, use the **Change download options** link in the **Download options** section of Fix Central pages.
+
+8. Review the terms and conditions, and then click **I agree**.
+
+9. From the file list, click the file you want to download.
 
 ### Set up local repositories for RPM and DEB installations
 
