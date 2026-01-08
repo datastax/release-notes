@@ -24,7 +24,7 @@ All package formats remain available through Fix Central:
 
 ## Prerequisites
 
-Before you download DSE packages from IBM Fix Central, you need an IBMid:
+Before you download DSE packages from IBM Fix Central, you need an IBMid with MFA enabled:
 
 - If you are an existing IBM customer with an IBMid, you can continue to use your established account.
 
