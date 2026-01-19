@@ -3,6 +3,30 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 Release notes of versions prior to 5.1.20 can be found [here](https://docs.datastax.com/en/dse/5.1/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 5.1.49
+19 January 2026
+
+## Components versions for DSE 5.1.49
+ * Apache Solr™ 6.0.1.0.2983&ast;
+ * Apache Spark™ 2.0.2.43
+ * Apache TinkerPop™ 3.2.11-20230523-74d884e8
+ * Apache Tomcat® 9.0.113&ast;
+ * DSE Java Driver 1.8.3-dse+20201217 (DSE *internal-only* version)
+ * Netty 4.0.54.1.dse
+ * Spark JobServer 0.6.2.243
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 5.1.49 DSE Core
+* Updated the Java Development Kit (JDK) version to 8u452. This JDKs help build and test DSE and are available in DSE Docker images. (DSP-24710)
+
+## 5.1.49 DSE CVE
+* Removed Apache MINA from the DataStax Agent bundled with DSE Docker images. (DSP-24697, [CVE-2024-52046](https://nvd.nist.gov/vuln/detail/CVE-2024-52046))
+* Removed the unused tika-core 1.2.5 library. (DSP-25008, [CVE-2025-66516](https://nvd.nist.gov/vuln/detail/CVE-2025-66516))
+* Upgraded tomcat to version 9.0.113. (DSP-25009, [CVE-2025-24813](https://nvd.nist.gov/vuln/detail/CVE-2025-24813))
+* Removed demonstration code from Docker images that was being used for testing purposes, and resolved some potential vulnerabilities. (DSP-24782, [CVE-2024-52046](https://nvd.nist.gov/vuln/detail/CVE-2024-52046))
+
 # Release notes for 5.1.48
 17 March 2025
 
