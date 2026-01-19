@@ -2,6 +2,28 @@
 DSE 6.9.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.9.18
+19 January 2026
+
+## Components versions for DSE 6.9.18
+ * Apache Solr™ 6.0.1.5.2980
+ * Apache Spark™ 2.5.0.9&ast;
+ * Apache TinkerPop™ 3.4.15-20251209-8cac84f1
+ * Apache Tomcat® 9.0.113&ast;
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.128.1.dse
+ * Spark JobServer 0.8.0.57
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.9.18 DSE Cassandra
+* Added a metric to track sizes of read responses. (DSP-25035)
+
+## 6.9.18 DSE CVE
+* Upgrade lz4-java library to 1.10.2. (DSP-25027, [CVE-2025-66566](https://nvd.nist.gov/vuln/detail/CVE-2025-66566))
+* Upgraded tomcat to version 9.0.113. (DSP-25009, [CVE-2025-24813](https://nvd.nist.gov/vuln/detail/CVE-2025-24813))
+
 # Release notes for 6.9.17
 15 December 2025
 
