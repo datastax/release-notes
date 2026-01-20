@@ -29,7 +29,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
 
 ## 6.8.62 DSE CVE
 * Upgraded the commons-lang3 library to version 3.20.0. (DSP-25001, [CVE-2025-48924](https://nvd.nist.gov/vuln/detail/CVE-2025-48924))
-* Upgrade lz4-java library to 1.10.2. (DSP-25027, [CVE-2025-66566](https://nvd.nist.gov/vuln/detail/CVE-2025-66566))
+* Upgraded the lz4-java library to version 1.10.2. (DSP-25027, [CVE-2025-66566](https://nvd.nist.gov/vuln/detail/CVE-2025-66566))
 * Upgraded the lz4 library to version 1.8.1. (DSP-25002, [CVE-2025-12183](https://nvd.nist.gov/vuln/detail/CVE-2025-12183))
 * Upgraded the okhttp library to version 4.9.2. (DSP-25004, [CVE-2021-0341](https://nvd.nist.gov/vuln/detail/CVE-2021-0341))
 * Upgraded the jetty library to version 9.4.58.v20250814. (DSP-25005, [CVE-2025-5115](https://nvd.nist.gov/vuln/detail/CVE-2025-5115))
