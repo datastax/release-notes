@@ -4,6 +4,38 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.62
+20 January 2026
+
+## Components versions for DSE 6.8.62
+ * Apache Solr™ 6.0.1.4.2979
+ * Apache Spark™ 2.4.0.37&ast;
+ * Apache TinkerPop™ 3.4.14-20251209-29b22637&ast;
+ * Apache Tomcat® 9.0.113&ast;
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.128.1.dse
+ * Spark JobServer 0.8.0.57
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.62 DSE Core
+* Hardened cluster foreign node checks. (DSP-24965)
+
+## 6.8.62 DSE Cassandra
+* Added a metric to track sizes of read responses. (DSP-25035)
+* Added logging to print the last recovered row during the restore process. (DSP-24760)
+* Fixed the broken timeout for the size estimation call that affects consistent node replacement stability. (DSP-25000)
+
+## 6.8.62 DSE CVE
+* Upgraded the commons-lang3 library to version 3.20.0. (DSP-25001, [CVE-2025-48924](https://nvd.nist.gov/vuln/detail/CVE-2025-48924))
+* Upgraded the lz4-java library to version 1.10.2. (DSP-25027, [CVE-2025-66566](https://nvd.nist.gov/vuln/detail/CVE-2025-66566))
+* Upgraded the lz4 library to version 1.8.1. (DSP-25002, [CVE-2025-12183](https://nvd.nist.gov/vuln/detail/CVE-2025-12183))
+* Upgraded the okhttp library to version 4.9.2. (DSP-25004, [CVE-2021-0341](https://nvd.nist.gov/vuln/detail/CVE-2021-0341))
+* Upgraded the jetty library to version 9.4.58.v20250814. (DSP-25005, [CVE-2025-5115](https://nvd.nist.gov/vuln/detail/CVE-2025-5115))
+* Removed the unused tika-core 1.2.5 library. (DSP-25008, [CVE-2025-66516](https://nvd.nist.gov/vuln/detail/CVE-2025-66516))
+* Upgraded tomcat to version 9.0.113. (DSP-25009, [CVE-2025-24813](https://nvd.nist.gov/vuln/detail/CVE-2025-24813))
+
 # Release notes for 6.8.61
 13 November 2025
 
