@@ -21,7 +21,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
 * Added a metric to track sizes of read responses. (DSP-25035)
 
 ## 6.9.18 DSE CVE
-* Upgrade lz4-java library to 1.10.2. (DSP-25027, [CVE-2025-66566](https://nvd.nist.gov/vuln/detail/CVE-2025-66566))
+* Upgraded the lz4-java library to version 1.10.2. (DSP-25027, [CVE-2025-66566](https://nvd.nist.gov/vuln/detail/CVE-2025-66566))
 * Upgraded tomcat to version 9.0.113. (DSP-25009, [CVE-2025-24813](https://nvd.nist.gov/vuln/detail/CVE-2025-24813))
 
 # Release notes for 6.9.17
