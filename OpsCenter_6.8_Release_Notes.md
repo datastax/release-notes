@@ -1,5 +1,24 @@
 # Release notes for OpsCenter
 
+# Release Notes for OpsCenter 6.8.48
+19 January 2026
+
+## Backup Service
+* Fixed OpsCenter OOM issue by clearing backup status tracking data after each backup finishes. (OPSC-17773)
+* Updated the version of the java aws sdk used by OpsCenter. (OPSC-17745)
+
+## Best Practice Service
+* The authentication error triggered when a cluster connection attempt is initiated by a Best Practice rule has been downgraded to a non-blocking debug message, preventing false failure notifications. (OPSC-16230)
+
+## Core
+* Added a new configuration parameter, `extra_user_search_bases`, in the [ldap] section of the opscenterd.conf file. This parameter allows specifying additional LDAP user search bases for authentication, enabling users from multiple Organizational Units (OUs) to authenticate. The parameter accepts a semicolon-separated list of LDAP search bases. This parameter is optional and backward-compatible with existing configurations. (OPSC-17753)
+
+## Monitoring
+* Fixed an issue where hints-on-disk alerts triggered continuously even with zero hints, disabled alerts, or deleted alerts. (OPSC-17763)
+
+## UI
+* Removed the deprecated DataStax public repository option from LCM as the service is being shutdown. (OPSC-17766)
+
 # Release Notes for OpsCenter 6.8.47
 13 November 2025
 
