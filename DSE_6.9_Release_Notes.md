@@ -217,7 +217,6 @@ If you're developing applications, please refer to the [Java Driver documentatio
 
 ## 6.9.10 DSE CVE
 * Upgraded the `net.minidev:json-smart` Java JSON parser package to version `2.5.2`. (DSP-24851, [CVE-2024-57699](https://nvd.nist.gov/vuln/detail/CVE-2024-57699))
-* Upgraded Jetty to version `9.4.57.v20241219` and Apache Commons IO to version `2.19.0`. (DSP-24855, [CVE-2024-6763](https://nvd.nist.gov/vuln/detail/CVE-2024-6763), [CVE-2024-47554](https://nvd.nist.gov/vuln/detail/CVE-2024-47554))
 * Upgraded the Apache Commons BeanUtils library to version `1.11.0` to resolve a vulnerability. (DSP-24857, [CVE-2025-48734](https://nvd.nist.gov/vuln/detail/CVE-2025-48734))
 * Upgraded Netty to version `4.1.119.1.dse`, which is based on version `4.1.119.Final`. (DSP-24850, [CVE-2025-24970](https://nvd.nist.gov/vuln/detail/CVE-2025-24970))
 * Upgraded the protocol buffers (protobuf) to version `4.29.4` to support DSE core workloads. (DSP-24853, [CVE-2024-7254](https://nvd.nist.gov/vuln/detail/CVE-2024-7254))
