@@ -74,7 +74,7 @@ the offloading feature.
 # Releases
 
 ## Luna Streaming Distribution  4.0.7 4
-This maintenance release of the DataStax Luna Streaming Distribution for 4.0 which includes important stability and security updates for Luna Streaming, as well as for the various connectors packaged alongside it, such as sinks, sources, functions, protocol extensions, proxy extensions, filters, and client extensions.
+This is a maintenance release of the DataStax Luna Streaming Distribution for 4.0 which includes important stability and security updates for Luna Streaming, as well as for the various connectors packaged alongside it, such as sinks, sources, functions, protocol extensions, proxy extensions, filters, and client extensions.
 
 ### Most notable commits
 
@@ -158,7 +158,7 @@ This maintenance release of the DataStax Luna Streaming Distribution for 4.0 whi
 See the [environment variables](https://github.com/riptano/pulsar-distro/blob/ls_4.0.7_4/build.json) used for the build
 
 ## Luna Streaming Distribution  4.0.7 3
-This maintenance release of the DataStax Luna Streaming Distribution for 4.0 which includes important stability and security updates for Luna Streaming, as well as for the various connectors packaged alongside it, such as sinks, sources, functions, protocol extensions, proxy extensions, filters, and client extensions.
+This is a maintenance release of the DataStax Luna Streaming Distribution for 4.0 which includes important stability and security updates for Luna Streaming, as well as for the various connectors packaged alongside it, such as sinks, sources, functions, protocol extensions, proxy extensions, filters, and client extensions.
 
 ### Most notable commits
 
