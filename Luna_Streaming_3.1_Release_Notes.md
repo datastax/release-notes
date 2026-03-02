@@ -76,9 +76,12 @@ both methods follow the same packaging patterns.
 # Releases
 
 ## Luna Streaming Distribution  3.1.4 25
-This is a maintenance release containing important security updates.
+This is a maintenance release of the DataStax Luna Streaming Distribution for 3.1 which includes important stability and security updates for Luna Streaming, as well as for the various connectors packaged alongside it, such as sinks, sources, functions, protocol extensions, proxy extensions, filters, and client extensions.
+
 ### Most notable commits
+
 ### `lunastreaming-all` distribution
+
 <details><summary>Sinks</summary>
 
 | Name                                                                     | Description                                                                                                  | Version  | File                                          |
@@ -148,7 +151,6 @@ This is a maintenance release containing important security updates.
 | [transforms](https://github.com/datastax/pulsar-transformations) | Transformation function | 3.2.3   | pulsar-transformations-3.2.3.nar |
 </details>
 
-
 ## Environment (Connectors, Protocol Handlers, Proxy Extensions, extra libraries)
 See the [environment variables](https://github.com/riptano/pulsar-distro/blob/ls_3.1.4_25/build.json) used for the build
 
@@ -179,9 +181,12 @@ See the [environment variables](https://github.com/riptano/pulsar-distro/blob/ls
 - pulsar-jms-6.0.7-nar.nar
 
 ## Luna Streaming Distribution  3.1.4 24
-This is a maintenance release containing important security updates.
+This is a maintenance release of the DataStax Luna Streaming Distribution for 3.1 which includes important stability and security updates for Luna Streaming, as well as for the various connectors packaged alongside it, such as sinks, sources, functions, protocol extensions, proxy extensions, filters, and client extensions.
+
 ### Most notable commits
+
 ### `lunastreaming-all` distribution
+
 <details><summary>Sinks</summary>
 
 | Name                                                                     | Description                                                                                                  | Version | File                                          |
@@ -254,7 +259,6 @@ This is a maintenance release containing important security updates.
 
 ## Environment (Connectors, Protocol Handlers, Proxy Extensions, extra libraries)
 See the [environment variables](https://github.com/riptano/pulsar-distro/blob/ls_3.1.4_24/build.json) used for the build
-
 
 ### Builtin connectors
 
