@@ -181,8 +181,6 @@ See the [environment variables](https://github.com/riptano/pulsar-distro/blob/ls
 ## Luna Streaming Distribution  3.1.4 24
 This is a maintenance release containing important security updates.
 ### Most notable commits
-* [0d774d126c2](https://github.com/datastax/pulsar/commit/0d774d126c2) Release 3.1.4.24
-* [db6a4248194](https://github.com/datastax/pulsar/commit/db6a4248194) Start release 3.1.4.24-SNAPSHOT
 ### `lunastreaming-all` distribution
 <details><summary>Sinks</summary>
 
