@@ -4,7 +4,7 @@
 5 March 2026 
 
 ## Backup Service
-* Updated the version of the Java AWS SDK that OpsCenter uses. (OPSC-17745)
+* Updated the version of the Java AWS SDK that OpsCenter uses due to EOL of the previous version. WARNING: Some generic s3 providers only support the older version of the SDK. OpsCenter will not be able to back up to those providers. A work around is planned for OpsCenter 6.8.49. (OPSC-17745)
 * Fixed a bug that could cause the backup status of a node to be switched from “completed” to “running” and thus prevent cleanup from running. (OPSC-17775)
 * Fixed an issue where backup location validation would fail for non-Azure locations. (OPSC-17780)
 
