@@ -1,5 +1,37 @@
 # Release notes for OpsCenter
 
+# Release Notes for OpsCenter 6.8.48
+5 March 2026 
+
+## Backup Service
+* Updated the version of the Java AWS SDK that OpsCenter uses due to EOL of the previous version. WARNING: Some generic s3 providers only support the older version of the SDK. OpsCenter is not yet able to back up to providers using the older SDK version. (OPSC-17745)
+* Fixed a bug that could cause the backup status of a node to be switched from “completed” to “running” and thus prevent cleanup from running. (OPSC-17775)
+* Fixed an issue where backup location validation would fail for non-Azure locations. (OPSC-17780)
+
+## Best Practice Service
+* The authentication error triggered when a cluster connection attempt is initiated by a Best Practice rule is downgraded to a non-blocking debug message to prevent false failure notifications. (OPSC-16230)
+* The "Use prepared statements" best practice rule is updated to correctly handle bind markers and prevent false failures when querying the OpsCenter events table. (OPSC-17777)
+
+## Monitoring
+* Fixed an issue where 'hints-on-disk' alerts triggered continuously even with zero hints, disabled alerts, or deleted alerts. (OPSC-17763)
+* Fixed an issue with notification emails sent with TLS disabled. (OPSC-17735)
+
+## UI
+* Removed the deprecated "DataStax public repository" option from LCM as the service is being shut down. (OPSC-17766)
+
+## Core
+* Fixed CVE-2023-6378 by upgrading logback library to v1.2.13. (OPSC-17791)
+* Fixed CVE-2023-2976 by upgrading Google Guava to version 32.0.0-jre. (OPSC-17792)
+* Fixed CVE-2025-48924 by upgrading org.apache.commons:commons-lang to version 3:3.20.0. (OPSC-17784)
+* Fixed CVE-2025-5115 and CVE-2024-6763 by upgrading the jetty-server version pulled in by ring-jetty-adapter to 9.4.58.v20250814. (DSP-24855)
+* Upgraded the Cassandra driver used by 'opscenterd' and the agent to v4.x. Local datacenter is now auto-detected. If auto-detection fails, configure `local_dc_pref` in the cluster configuration or through the new "Data Center" field in the User Interface (UI). (OPSC-17253)
+* Added SSL truststore and client certificate support to the PostUrl event plugin for secure integration with external HTTPS alerting systems. For full SSL support including SNI, set `enable_curl=True`. (OPSC-17422)
+* Added `azcopy_upload_with_sync` to the agent configuration with a default of 'false'. When set to 'true' an 'azcopy' upload uses a 'sync' rather than a 'copy. This adds another layer of insurance that no files are uploaded if they are already present on the destination. When using this option it is strongly recommended that the `backup_tmp_dir` be on the 'cassandra' data partition because limitations with 'azcopy' prevent the use of symlinks when staging the files for upload. (OPSC-17716)
+* Fixed an issue where an agent would continuously retry startup if the API port was already in use. (OPSC-17204)
+* Fixed an issue where sessions configured with 'timeout=0' were unexpectedly garbage-collected under heap pressure. (OPSC-17762)
+* Added a new configuration parameter, `extra_user_search_bases`, in the [ldap] section of the 'opscenterd.conf' file. Specify additional LDAP user search bases for authentication with this parameter to enable users from multiple Organizational Units (OUs) to authenticate. The parameter accepts a semicolon-separated list of LDAP search bases. This parameter is optional and backward-compatible with existing configurations. (OPSC-17753)
+* Fixed an issue where OpsCenter crashed with “index out of range: 1” when agents sent IPs in a single-element list format. (OPSC-17779)
+
 # Release Notes for OpsCenter 6.8.47
 13 November 2025
 
