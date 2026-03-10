@@ -2,6 +2,40 @@
 DSE 6.9.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.9.19
+9 March 2026
+
+## Components versions for DSE 6.9.19
+ * Apache Solr™ 6.0.1.5.2983&ast;
+ * Apache Spark™ 2.5.0.11&ast;
+ * Apache TinkerPop™ 3.4.15-20260213-0bc240bd&ast;
+ * Apache Tomcat® 9.0.113
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.128.1.dse
+ * Spark JobServer 0.8.0.57
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.9.19 DSE Core
+* Updated the JDK used to build and test DSE to versions 8u472 and 11.0.29. (DSP-25044)
+* Fixed a bug where message starvation occurred after an assertion failed during query validation. (DSP-25032)
+
+## 6.9.19 DSE Cassandra
+* Fixed a deadlock on node shutdown during an upgrade when a node tries to pull schema from a node on a different DSE or HCD version. (DSP-25058)
+
+## 6.9.19 DSE Classic
+* Added metrics tracking for out-of-range token operations to improve observability and troubleshooting of misrouted requests. (DSP-25013)
+
+## 6.9.19 DSE DSEFS
+* Fixed a bug which stopped Cassandra from starting if it had an empty preexisting keyspace. (DSP-24946)
+
+## 6.9.19 DSE CVE
+* Upgraded Apache Commons IO to version 2.19.0. (DSP-24855, [CVE-2024-47554](https://nvd.nist.gov/vuln/detail/CVE-2024-47554), [CVE-2021-28168](https://nvd.nist.gov/vuln/detail/CVE-2021-28168))
+* Upgraded `jackson-dataformat-msgpack` to version 0.9.11 and `jackson-databind` to version 2.18.4. (DSP-25026, [CVE-2026-21452](https://nvd.nist.gov/vuln/detail/CVE-2026-21452))
+* Upgraded Jersey libraries to version 2.46. (DSP-24722, [CVE-2021-28168](https://nvd.nist.gov/vuln/detail/CVE-2021-28168))
+* Upgraded 'commons-fileupload' to version 1.6.0 and 'commons-io' to version 2.19.0. (DSP-25043, [CVE-2025-48976](https://nvd.nist.gov/vuln/detail/CVE-2025-48976), [CVE-2024-47554](https://nvd.nist.gov/vuln/detail/CVE-2024-47554))
+
 # Release notes for 6.9.18
 19 January 2026
 
