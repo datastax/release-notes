@@ -3,6 +3,29 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 Release notes of versions prior to 5.1.20 can be found [here](https://docs.datastax.com/en/dse/5.1/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 5.1.50
+17 March 2026
+
+## Components versions for DSE 5.1.50
+* Apache Solr™ 6.0.1.0.2988&ast;
+* Apache Spark™ 2.0.2.44&ast;
+* Apache TinkerPop™ 3.2.11-20260306-140b7dfc&ast;
+* Apache Tomcat® 9.0.113
+* DSE Java Driver 1.8.3-dse+20201217 (DSE *internal-only* version)
+* Netty 4.0.54.1.dse
+* Spark JobServer 0.6.2.243
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 5.1.50 DSE Core
+* Updated the JDK used to build and test DSE to versions 8u472 and 11.0.29. (DSP-25044)
+
+## 5.1.50 DSE CVE
+* Upgraded jackson-databind, jackson-core, jackson-annotations, jackson-module-scala_2.11  and other Jackson libraries to version 2.15.2. (DSP-24487, [CVE-2020-36518](https://nvd.nist.gov/vuln/detail/CVE-2020-36518), [CVE-2022-42003](https://nvd.nist.gov/vuln/detail/CVE-2022-42003), [CVE-2022-42004](https://nvd.nist.gov/vuln/detail/CVE-2022-42004))
+* Upgraded Apache Commons FileUpload to version 1.6.0 and Apache Commons IO to version 2.19.0. (DSP-25043, [CVE-2025-48976](https://nvd.nist.gov/vuln/detail/CVE-2025-48976), [CVE-2024-47554](https://nvd.nist.gov/vuln/detail/CVE-2024-47554))
+
+
 # Release notes for 5.1.49
 19 January 2026
 
