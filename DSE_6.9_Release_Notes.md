@@ -2,6 +2,24 @@
 DSE 6.9.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.9.20
+16 March 2026
+
+## Components versions for DSE 6.9.20
+ * Apache Solr™ 6.0.1.5.2983
+ * Apache Spark™ 2.5.0.11
+ * Apache TinkerPop™ 3.4.15-20260213-0bc240bd
+ * Apache Tomcat® 9.0.113
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.128.1.dse
+ * Spark JobServer 0.8.0.57
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.9.20 DSE Cassandra
+* Fixed bug with MIN() and MAX() functions when using DESC in column clustering definitions. (DSP-25080)
+
 # Release notes for 6.9.19
 9 March 2026
 
