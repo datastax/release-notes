@@ -80,7 +80,6 @@ This is a maintenance release of the DataStax Luna Streaming Distribution for 3.
 
 ### Most notable commits
 
-* [33e93ced2ed](https://github.com/datastax/pulsar/commit/33e93ced2ed) Release 3.1.4.26
 * [1fe54e28a59](https://github.com/datastax/pulsar/commit/1fe54e28a59) [improve][misc] Upgrading multiple dependencies to fix CVEs in 3.1_ds (#637)
 * [e351b7755f4](https://github.com/datastax/pulsar/commit/e351b7755f4) [fix][sec] Upgrade OpenSearch to 2.19.4 to remediate CVE-2025-9624 (#25206)
 * [98bfe1b7a9d](https://github.com/datastax/pulsar/commit/98bfe1b7a9d) Bump hadoop and bcprov-jdk18on dependencies to resolve CVEs
@@ -96,7 +95,6 @@ This is a maintenance release of the DataStax Luna Streaming Distribution for 3.
 * [f67438f7d93](https://github.com/datastax/pulsar/commit/f67438f7d93) [fix][sec] Upgrade Python protobuf version to 6.33.5 to address CVE-2026-0994 (#25250)
 * [b798a28739d](https://github.com/datastax/pulsar/commit/b798a28739d) [improve] Upgrade Netty to 4.1.131.Final (#25232)
 * [545342ee964](https://github.com/datastax/pulsar/commit/545342ee964) [improve][misc] Change bookkeeper from apache to datastax (#616)
-* [c94f03eb81d](https://github.com/datastax/pulsar/commit/c94f03eb81d) Start release 3.1.4.26-SNAPSHOT
 
 ### `lunastreaming-all` distribution
 
