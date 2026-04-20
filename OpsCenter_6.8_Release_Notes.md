@@ -1,5 +1,40 @@
 # Release notes for OpsCenter
 
+# Release Notes for OpsCenter 6.8.49
+23 April 2026
+
+## Backup Service
+* Fixed OpsCenter OOM issue caused by accumulated backup status tracking data (SnapshotStatus.details) not being released after backup completion. Repeated scheduled backups no longer cause unbounded memory growth. (OPSC-17773)
+* Added Google Cloud Storage (GCS) as a backup destination provider. Users can now configure GCS buckets for storing OpsCenter backups with support for Service Account JSON authentication or Application Default Credentials (ADC). (OPSC-4776)
+* Fixed Azure backup destination failing with 'base64Key' was not a valid Base64 scheme error when JMX SSL is enabled. When configured, OpsCenter agent can use the JVM's default CA certificates (cacerts) for cloud provider SSL connections, bypassing the JMX truststore override. (OPSC-17613)
+* Fixed an issue in the Backup Service where the on-server backup status would display as "running" until all external destination uploads completed. Local snapshots now correctly display as "completed" immediately. (OPSC-17729)
+* Added the `skip_initial_backup_file_diff` config parameter to address.yaml. If set to `true` the agent will no longer attempt to compare the files on the remote system with the backup to avoid duplicating uploads. We strongly recommend only enabling this when using a backup method that will do the comparison like `rsync` with a local filesystem destination or the azure cli configured to use sync. (OPSC-17816)
+* Fixed a bug where backups showed incorrect keyspace counts (e.g. 9/31 instead of 31/31) in the UI. (OPSC-17836)
+* Fix bug where schema mismatched. (OPSC-17799)
+* Improved memory usage of snapshot cleanup. Introduced `focused-tag-cleanup` in address.yaml to allow prioritization of optimizing memory usage over cleaning up snapshots no longer included in the metadata of any backup. (OPSC-17838)
+* Fixed a UnicodeEncodeError when saving or validating Azure backup destinations containing an invisible UTF-8 BOM (Byte Order Mark) character in the SAS token or other fields. The BOM can be introduced when copy-pasting values from Windows editors, Azure Portal, or PowerShell. Destination string values are now sanitized on input to strip BOM characters. (OPSC-17793)
+
+## Provisioning
+* Made the meld location on the remote machine configurable in opscenterd.conf [lifecycle_manager] remote_meld_exec_path. Meld will not be uploaded during a job if this value is set. (OPSC-11286)
+
+## Repair Service
+* Fixed an issue where the OpsCenter repair dashboard displayed the "Remaining" time in scientific notation (e.g., 2.84e+50h 0m 0s) during idle periods of subrange repair. The display now correctly shows a human-readable duration. (OPSC-17746)
+
+## Security
+* Update vulnerabilities in commons-text, commons-beanutils, commons-configuration2, jackson-core, c3p0, and xmlunit-core. (OPSC-17826)
+* Update Apache Directory API + Apache MINA, Upgraded BouncyCastle, migrate from commons-lang to commons-lang3 (OPSC-17862)
+* Upgraded clj-commons:fs from 1.6.310 to 1.6.312, which brings commons-compress 1.28.0, addressing CVE-2024-25710 (CWE-835: Infinite Loop) and CVE-2024-26308 (CWE-770: Uncontrolled Resource Consumption). (OPSC-17864)
+* Upgraded com.esri.geometry:esri-geometry-api from 1.2.1 to 2.2.4, which removes the transitive org.json dependency entirely, addressing CVE-2023-5072 (CWE-770: Uncontrolled Resource Consumption). (OPSC-17865)
+* Upgraded org.slf4j:slf4j-reload4j from 1.7.36 to 2.0.7, which brings reload4j 1.2.22, addressing CVE-2022-45868 (CWE-200: Information Exposure) in the log4j 1.2.x fork. (OPSC-17866)
+* Upgraded org.apache.mina:mina-core to 2.2.5, addressing CVE-2024-52046 (CWE-502: Deserialization of Untrusted Data). (OPSC-17869)
+* Upgraded lodash and lodash-amd to 4.18.1, addressing CVE-2021-23337 (CWE-94: Improper Control of Generation of Code) and prototype-pollution advisories in earlier lodash releases. (OPSC-17870)
+* Upgraded ua-parser-js to 0.7.41, addressing CVE-2020-7793 and CVE-2020-7733 (CWE-1333: Inefficient Regular Expression Complexity — Regular Expression Denial of Service). (OPSC-17871)
+* Upgraded dojo, dijit, dojox, and dojo-util to 1.17.3, addressing CVE-2021-23450 (CWE-1321: Improperly Controlled Modification of Object Prototype Attributes Prototype Pollution). (OPSC-17872)
+* Update version of jackson-core, lz4-java and awssdk to resolve security vulnerabilities. (OPSC-17846)
+
+## Monitoring
+* Fix Tiered Storage alerts to handle Java Driver 4.x (OPSC-17794)
+
 # Release Notes for OpsCenter 6.8.48
 5 March 2026 
 
