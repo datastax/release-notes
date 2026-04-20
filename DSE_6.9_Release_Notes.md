@@ -2,6 +2,36 @@
 DSE 6.9.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.9.21
+20 April 2026
+
+## Components versions for DSE 6.9.21
+* Apache Solr™ 6.0.1.5.2988&ast;
+* Apache Spark™ 2.5.0.12&ast;
+* Apache TinkerPop™ 3.4.15-20260327-330bc330&ast;
+* Apache Tomcat® 9.0.113
+* DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+* Netty 4.1.128.1.dse
+* Spark JobServer 0.8.0.57
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.9.21 DSE Core
+* Fixed compaction level reporting in logs. (DSP-25086)
+* Changed cleanup behavior to delete $TMPDIR/dse directories when DSE is stopped. (DSP-24998)
+* Added the ability to remove time to live (TTL) settings from SSTables. (DSP-25046)
+* Fixed DSE startup script to correctly detect container memory limits in Kubernetes pods instead of using free -m, preventing memory miscalculation and OOM kills in containerized deployments. (DSP-25063)
+
+## 6.9.21 DSE Cassandra
+* Fixed time window compaction strategy (TWCS) overlap handling to prevent indefinite SSTable reference retention when aggressive expiration is enabled. (DSP-25062)
+
+## 6.9.21 DSE Management API
+* Updated Management API for DSE 6.9. (DSP-25078)
+
+## 6.9.21 DSE CVE
+* Upgraded jackson-core to version 2.18.6 to address several security vulnerabilities. (DSP-25082, [CWE-770](https://nvd.nist.gov/vuln/detail/CWE-770))
+
 # Release notes for 6.9.20
 16 March 2026
 
