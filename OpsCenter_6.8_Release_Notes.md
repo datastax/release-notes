@@ -29,7 +29,6 @@
 * Upgraded org.apache.mina:mina-core to 2.2.5, addressing CVE-2024-52046 (CWE-502: Deserialization of Untrusted Data). (OPSC-17869)
 * Upgraded lodash and lodash-amd to 4.18.1, addressing CVE-2021-23337 (CWE-94: Improper Control of Generation of Code) and prototype-pollution advisories in earlier lodash releases. (OPSC-17870)
 * Upgraded ua-parser-js to 0.7.41, addressing CVE-2020-7793 and CVE-2020-7733 (CWE-1333: Inefficient Regular Expression Complexity — Regular Expression Denial of Service). (OPSC-17871)
-* Upgraded dojo, dijit, dojox, and dojo-util to 1.17.3, addressing CVE-2021-23450 (CWE-1321: Improperly Controlled Modification of Object Prototype Attributes Prototype Pollution). (OPSC-17872)
 * Update version of jackson-core, lz4-java and awssdk to resolve security vulnerabilities. (OPSC-17846)
 
 ## Monitoring
@@ -42,6 +41,7 @@
 * Updated the version of the Java AWS SDK that OpsCenter uses due to EOL of the previous version. WARNING: Some generic s3 providers only support the older version of the SDK. OpsCenter is not yet able to back up to providers using the older SDK version. (OPSC-17745)
 * Fixed a bug that could cause the backup status of a node to be switched from “completed” to “running” and thus prevent cleanup from running. (OPSC-17775)
 * Fixed an issue where backup location validation would fail for non-Azure locations. (OPSC-17780)
+* Fixed an issue where a backup failure during early setup could block subsequent scheduled backups from being triggered, resulting in missed backup executions. (OPSC-17837)
 
 ## Best Practice Service
 * The authentication error triggered when a cluster connection attempt is initiated by a Best Practice rule is downgraded to a non-blocking debug message to prevent false failure notifications. (OPSC-16230)
@@ -66,6 +66,7 @@
 * Fixed an issue where sessions configured with 'timeout=0' were unexpectedly garbage-collected under heap pressure. (OPSC-17762)
 * Added a new configuration parameter, `extra_user_search_bases`, in the [ldap] section of the 'opscenterd.conf' file. Specify additional LDAP user search bases for authentication with this parameter to enable users from multiple Organizational Units (OUs) to authenticate. The parameter accepts a semicolon-separated list of LDAP search bases. This parameter is optional and backward-compatible with existing configurations. (OPSC-17753)
 * Fixed an issue where OpsCenter crashed with “index out of range: 1” when agents sent IPs in a single-element list format. (OPSC-17779)
+* Fixed an issue where `connection_pool_size` in opscenterd.conf was silently ignored after the Java driver 4.x upgrade causing slowdowns at scale. The setting is now honored for local and remote DC connections. (OPSC-17863)
 
 # Release Notes for OpsCenter 6.8.47
 13 November 2025
