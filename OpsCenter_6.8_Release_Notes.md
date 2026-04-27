@@ -22,7 +22,7 @@
 
 ## Security
 * Updated 'commons-text', 'commons-beanutils', 'commons-configuration2', 'jackson-core', 'c3p0', and 'xmlunit-core' to remove vulnerabilities. (OPSC-17826)
-* Update Apache Directory API + Apache MINA, Upgraded BouncyCastle, migrate from commons-lang to commons-lang3 (OPSC-17862)
+* Updated Apache Directory API and Apache MINA, upgraded BouncyCastle, and migrated from 'commons-lang' to 'commons-lang3 '. (OPSC-17862)
 * Upgraded 'clj-commons:fs' from v1.6.310 to v1.6.312, which brings commons-compress v1.28.0 to address CVE-2024-25710 (CWE-835: Infinite Loop) and CVE-2024-26308 (CWE-770: Uncontrolled Resource Consumption). (OPSC-17864)
 * Upgraded 'com.esri.geometry:esri-geometry-api' from v1.2.1 to v2.2.4, which removes the transitive org.json dependency entirely and addresses  CVE-2023-5072 (CWE-770: Uncontrolled Resource Consumption). (OPSC-17865)
 * Upgraded org.slf4j:slf4j-reload4j from v1.7.36 to v2.0.7, which brings reload4j v1.2.22 to address CVE-2022-45868 (CWE-200: Information Exposure) in the log4j 1.2.x fork. (OPSC-17866)
