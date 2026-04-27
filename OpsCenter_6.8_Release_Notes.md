@@ -1,5 +1,40 @@
 # Release notes for OpsCenter
 
+# Release Notes for OpsCenter 6.8.49
+23 April 2026
+
+## Backup Service
+* Fixed OpsCenter OOM issue caused by accumulated backup status tracking data (SnapshotStatus.details) not being released after backup completion. Repeated scheduled backups no longer cause unbounded memory growth. (OPSC-17773)
+* Added Google Cloud Storage (GCS) as a backup destination provider. Users can now configure GCS buckets for storing OpsCenter backups with support for Service Account JSON authentication or Application Default Credentials (ADC). (OPSC-4776)
+* Fixed Azure backup destination failing with a 'base64Key was not a valid Base64 scheme' misleading error when JMX SSL is enabled. When configured, OpsCenter agent uses the JVM's default CA certificates (cacerts) for cloud provider SSL connections, bypassing the JMX truststore override. (OPSC-17613)
+* Fixed an issue in the Backup Service where the on-server backup status would display as 'running' until all external destination uploads completed. Local snapshots now correctly display a backup status of 'completed' immediately. (OPSC-17729)
+* Added the `skip_initial_backup_file_diff` configration parameter to 'address.yaml'. When set to `true` the agent no longer attempts to compare the files on the remote system with the backup to avoid duplicating uploads. We strongly recommend only enabling this when using a backup method that performs the comparison. Example backup methods are `rsync` with a local filesystem destination or the Azure command line interface (cli) configured to use sync. (OPSC-17816)
+* Fixed a bug where backups displayed incorrect keyspace counts (e.g., 9/31 instead of 31/31) in the user interface (UI). (OPSC-17836)
+* Fixed bug where schema mismatched. (OPSC-17799)
+* Improved memory usage of snapshot cleanup. Introduced `focused-tag-cleanup` in 'address.yaml' to allow prioritization of optimizing memory usage over cleaning up snapshots no longer included in the metadata of any backup. (OPSC-17838)
+* Fixed a UnicodeEncodeError when saving or validating Azure backup destinations containing an invisible UTF-8 BOM (Byte Order Mark) character in the SAS token or other fields. The BOM can be introduced when copy-pasting values from Windows editors, Azure Portal, or PowerShell. Destination string values are now sanitized on input to strip BOM characters. (OPSC-17793)
+
+## Provisioning
+* Made the Meld location on the remote machine configurable in the 'opscenterd.conf' file. Setting the '[lifecycle_manager] remote_meld_exec_path' prevents Meld from being uploaded during a job. (OPSC-11286)
+
+## Repair Service
+* Fixed an issue where the OpsCenter repair dashboard displayed the 'Remaining' time in scientific notation (e.g., 2.84e+50h 0m 0s) during idle periods of subrange repair. The display now correctly shows a human-readable duration. (OPSC-17746)
+
+## Security
+* Updated 'commons-text', 'commons-beanutils', 'commons-configuration2', 'jackson-core', 'c3p0', and 'xmlunit-core' to remove vulnerabilities. (OPSC-17826)
+* Updated Apache Directory API and Apache MINA, upgraded BouncyCastle, and migrated from 'commons-lang' to 'commons-lang3 '. (OPSC-17862)
+* Upgraded 'clj-commons:fs' from v1.6.310 to v1.6.312, which brings commons-compress v1.28.0 to address CVE-2024-25710 (CWE-835: Infinite Loop) and CVE-2024-26308 (CWE-770: Uncontrolled Resource Consumption). (OPSC-17864)
+* Upgraded 'com.esri.geometry:esri-geometry-api' from v1.2.1 to v2.2.4, which removes the transitive org.json dependency entirely and addresses  CVE-2023-5072 (CWE-770: Uncontrolled Resource Consumption). (OPSC-17865)
+* Upgraded org.slf4j:slf4j-reload4j from v1.7.36 to v2.0.7, which brings reload4j v1.2.22 to address CVE-2022-45868 (CWE-200: Information Exposure) in the log4j 1.2.x fork. (OPSC-17866)
+* Upgraded org.apache.mina:mina-core to v2.2.5 to address CVE-2024-52046 (CWE-502: Deserialization of Untrusted Data). (OPSC-17869)
+* Upgraded lodash and lodash-amd to v4.18.1, to address CVE-2021-23337 (CWE-94: Improper Control of Generation of Code) and prototype-pollution advisories occurring in earlier lodash releases. (OPSC-17870)
+* Upgraded ua-parser-js to v0.7.41 to address CVE-2020-7793 and CVE-2020-7733 (CWE-1333: Inefficient Regular Expression Complexity — Regular Expression Denial of Service). (OPSC-17871)
+* Updated Apache Directory API and Apache MINA, upgraded BouncyCastle, and migrated from 'commons-lang' to 'commons-lang3 '. (OPSC-17862)
+* Updated versions of jackson-core, lz4-java, and awssdk to resolve security vulnerabilities. (OPSC-17846)
+
+## Monitoring
+* Fixed Tiered Storage alerts to handle Java Driver 4.x (OPSC-17794)
+
 # Release Notes for OpsCenter 6.8.48
 5 March 2026 
 
@@ -7,6 +42,7 @@
 * Updated the version of the Java AWS SDK that OpsCenter uses due to EOL of the previous version. WARNING: Some generic s3 providers only support the older version of the SDK. OpsCenter is not yet able to back up to providers using the older SDK version. (OPSC-17745)
 * Fixed a bug that could cause the backup status of a node to be switched from “completed” to “running” and thus prevent cleanup from running. (OPSC-17775)
 * Fixed an issue where backup location validation would fail for non-Azure locations. (OPSC-17780)
+* Fixed an issue where a backup failure during early setup could block the triggering of subsequent scheduled backups, resulting in missed backup runs. (OPSC-17837)
 
 ## Best Practice Service
 * The authentication error triggered when a cluster connection attempt is initiated by a Best Practice rule is downgraded to a non-blocking debug message to prevent false failure notifications. (OPSC-16230)
@@ -31,6 +67,7 @@
 * Fixed an issue where sessions configured with 'timeout=0' were unexpectedly garbage-collected under heap pressure. (OPSC-17762)
 * Added a new configuration parameter, `extra_user_search_bases`, in the [ldap] section of the 'opscenterd.conf' file. Specify additional LDAP user search bases for authentication with this parameter to enable users from multiple Organizational Units (OUs) to authenticate. The parameter accepts a semicolon-separated list of LDAP search bases. This parameter is optional and backward-compatible with existing configurations. (OPSC-17753)
 * Fixed an issue where OpsCenter crashed with “index out of range: 1” when agents sent IPs in a single-element list format. (OPSC-17779)
+* Fixed an issue where `connection_pool_size` in `opscenterd.conf` was silently ignored after the Java driver 4.x upgrade, causing slowdowns at scale. The setting is now honored for local and remote DC connections. (OPSC-17863)
 
 # Release Notes for OpsCenter 6.8.47
 13 November 2025
