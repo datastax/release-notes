@@ -15,13 +15,6 @@
 * Fixed a UnicodeEncodeError when saving or validating Azure backup destinations containing an invisible UTF-8 BOM (Byte Order Mark) character in the SAS token or other fields. The BOM can be introduced when copy-pasting values from Windows editors, Azure Portal, or PowerShell. Destination string values are now sanitized on input to strip BOM characters. (OPSC-17793)
 * Fixed an issue where a backup failure during early setup could block the triggering of subsequent scheduled backups, resulting in missed backup runs. (OPSC-17837)
 
-  **Required Configuration:**
-  To prevent multiple backups from running simultaneously, ensure the following configuration is set:
-
-  ```ini
-  [backup_service]
-  auto_sync_retry_attempts = 0
-
 ## Provisioning
 * Made the Meld location on the remote machine configurable in the 'opscenterd.conf' file. Setting the '[lifecycle_manager] remote_meld_exec_path' prevents Meld from being uploaded during a job. (OPSC-11286)
 
