@@ -13,6 +13,7 @@
 * Fixed bug where schema mismatched. (OPSC-17799)
 * Improved memory usage of snapshot cleanup. Introduced `focused-tag-cleanup` in 'address.yaml' to allow prioritization of optimizing memory usage over cleaning up snapshots no longer included in the metadata of any backup. (OPSC-17838)
 * Fixed a UnicodeEncodeError when saving or validating Azure backup destinations containing an invisible UTF-8 BOM (Byte Order Mark) character in the SAS token or other fields. The BOM can be introduced when copy-pasting values from Windows editors, Azure Portal, or PowerShell. Destination string values are now sanitized on input to strip BOM characters. (OPSC-17793)
+* Fixed an issue where a backup failure during early setup could block the triggering of subsequent scheduled backups, resulting in missed backup runs. (OPSC-17837)
 
 ## Provisioning
 * Made the Meld location on the remote machine configurable in the 'opscenterd.conf' file. Setting the '[lifecycle_manager] remote_meld_exec_path' prevents Meld from being uploaded during a job. (OPSC-11286)
@@ -42,7 +43,6 @@
 * Updated the version of the Java AWS SDK that OpsCenter uses due to EOL of the previous version. WARNING: Some generic s3 providers only support the older version of the SDK. OpsCenter is not yet able to back up to providers using the older SDK version. (OPSC-17745)
 * Fixed a bug that could cause the backup status of a node to be switched from “completed” to “running” and thus prevent cleanup from running. (OPSC-17775)
 * Fixed an issue where backup location validation would fail for non-Azure locations. (OPSC-17780)
-* Fixed an issue where a backup failure during early setup could block the triggering of subsequent scheduled backups, resulting in missed backup runs. (OPSC-17837)
 
 ## Best Practice Service
 * The authentication error triggered when a cluster connection attempt is initiated by a Best Practice rule is downgraded to a non-blocking debug message to prevent false failure notifications. (OPSC-16230)
