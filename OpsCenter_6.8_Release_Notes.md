@@ -4,22 +4,22 @@
 13 May 2026
 
 ## Security
-* Upgraded mina-core from version 2.2.5 to 2.2.7 addressing  CVE-2026-42779 (CWE-502 Deserialization of Untrusted Data) (OPSC-17893)
-* Upgraded BouncyCastle (bcpkix-jdk18on, bcprov-jdk18on) to 1.84 to address CVE-2026-5588, CVE-2025-14813, CVE-2026-5598. (OPSC-17881)
-* Upgraded Jackson libraries to 2.21.2 to address CVE-2025-52999, CVE-2020-28491, CVE-2025-49128. (OPSC-17882)
-* Upgraded Logback to 1.3.16 and SLF4J to 2.0.17 to address CVE-2024-12798, CVE-2025-10226. (OPSC-17885)
-* Upgraded commons-lang3 to 3.20.0 in the common module to address CVE-2025-48924. (OPSC-17883)
+* Upgraded Apache mina-core version 2.2.5 to 2.2.7, addressing  CVE-2026-42779 (CWE-502 Deserialization of Untrusted Data).(OPSC-17893)
+* Upgraded to BouncyCastle (bcpkix-jdk18on, bcprov-jdk18on) version 1.84 to address CVE-2026-5588, CVE-2025-14813, and CVE-2026-5598. (OPSC-17881)
+* Upgraded Jackson libraries to version 2.21.2 to address CVE-2025-52999, CVE-2020-28491, and CVE-2025-49128. (OPSC-17882)
+* Upgraded to Logback version 1.3.16 and to SLF4J version 2.0.17 to address CVE-2024-12798 and CVE-2025-10226. (OPSC-17885)
+* Upgraded to commons-lang3 version 3.20.0 in the common module to address CVE-2025-48924. (OPSC-17883)
 
 
 ## Backup Service
-* Fixed an issue that prevented post backup scripts from executing. (OPSC-17889)
+* Fixed an issue that prevented post backup scripts from running. (OPSC-17889)
 
 ## Core
-* Use `--dereference` when creating tarballs to archive symlink targets instead of the symlinks themselves. (OPSC-17802)
-* DSE 6.9 installations via LCM no longer fail with jvm8-server.options not found. DSE 6.9 requires Java 11 and does not ship this file, LCM now correctly skips it during config deployment. (OPSC-17867)
+* Used the `--dereference` option when creating tarballs to archive symlink targets instead of the actual symlinks. (OPSC-17802)
+* Fixed installations failing with jvm8-server.options not found when using LCM to install DSE version 6.9. Because DSE 6.9 requires but does not ship Java 11, LCM now correctly skips it during a configuration  deployment. (OPSC-17867)
 
 ## Dashboard
-* Fixed a regression introduced in the Java Driver 4.x migration where new-metrics requests took several minutes on large clusters. WrappedDriver.prepare() no longer issued a real PREPARE to Cassandra, so every metrics query ran unprepared and paid full parse + plan cost. Prepared-statement execution has been restored, and a related CqlSession leak during coordinator reconnect has been closed. (OPSC-17887)
+* Fixed a regression introduced in the Java Driver 4.x migration where new-metrics requests took several minutes on large clusters. WrappedDriver.prepare() no longer issued a `PREPARE` command  to Cassandra, resulting in every metrics query running unprepared and paying full parse + plan cost. Restored proper running of the prepared-statement, and closed a related CqlSession leak during coordinator reconnect. (OPSC-17887)
 
 # Release Notes for OpsCenter 6.8.49
 23 April 2026
