@@ -18,7 +18,7 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## 6.9.22 DSE Cassandra
-* Improved the ability to troubleshoot ‘sstableloader’ command runs by adding file-level progress logging. Logging during bulk load operations tracks file in-process or complete status. (DSP-25007)
+* Improved the ability to troubleshoot `sstableloader` command runs by adding file-level progress logging. Logging during bulk load operations tracks file in-process or complete status. (DSP-25007)
 
 ## 6.9.22 DSE Build
 * Updated `.rpm` package signature key adding updated public key as part of the rpm packages bundle download in Fix Central. (DSP-25133)
