@@ -2,6 +2,34 @@
 DSE 6.9.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.9.22
+18 May 2026
+
+## Components versions for DSE 6.9.22
+* Apache Solr™ 6.0.1.5.2988
+* Apache Spark™ 2.5.0.12
+* Apache TinkerPop™ 3.4.15-20260327-330bc330
+* Apache Tomcat® 9.0.117&ast;
+* DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+* Netty 4.1.128.1.dse
+* Spark JobServer 0.8.0.57
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.9.22 DSE Cassandra
+* Improved the ability to troubleshoot ‘sstableloader’ command runs by adding file-level progress logging. Logging during bulk load operations tracks file in-process or complete status. (DSP-25007)
+
+## 6.9.22 DSE Build
+* Updated `.rpm` package signature key adding updated public key as part of the rpm packages bundle download in Fix Central. (DSP-25133)
+
+## 6.9.22 DSE Miscellaneous
+* Fix a bug that could allow duplicate startup parameters for GC logs, overriding intended settings with defaults. (DSP-25126)
+
+## 6.9.22 DSE CVE
+* Upgraded Management API Netty to v4.1.132. Upgraded Final and Jackson to v2.21.2. (DSP-25106, [CVE-2026-3387](https://nvd.nist.gov/vuln/detail/CVE-2026-3387), [CVE-2026-33870](https://nvd.nist.gov/vuln/detail/CVE-2026-33870))
+* The Apache Mina Core library was upgraded to 2.0.28 version to address several security vulnerabilities. (DSP-25120, [CVE-2026-42779](https://nvd.nist.gov/vuln/detail/CVE-2026-42779), [CVE-2026-42778](https://nvd.nist.gov/vuln/detail/CVE-2026-42778), [CVE-2026-41409](https://nvd.nist.gov/vuln/detail/CVE-2026-41409), [CVE-2026-41635](https://nvd.nist.gov/vuln/detail/CVE-2026-41635))
+
 # Release notes for 6.9.21
 20 April 2026
 
