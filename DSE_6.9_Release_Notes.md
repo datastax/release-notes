@@ -24,7 +24,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
 * Updated `.rpm` package signature key adding updated public key as part of the rpm packages bundle download in Fix Central. (DSP-25133)
 
 ## 6.9.22 DSE Miscellaneous
-* Fix a bug that could allow duplicate startup parameters for GC logs, overriding intended settings with defaults. (DSP-25126)
+* Fixed a bug that could allow duplicate startup parameters for GC logs, overriding intended settings with defaults. (DSP-25126)
 
 ## 6.9.22 DSE CVE
 * Upgraded Management API Netty to v4.1.132. Upgraded Final and Jackson to v2.21.2. (DSP-25106, [CVE-2026-3387](https://nvd.nist.gov/vuln/detail/CVE-2026-3387), [CVE-2026-33870](https://nvd.nist.gov/vuln/detail/CVE-2026-33870))
