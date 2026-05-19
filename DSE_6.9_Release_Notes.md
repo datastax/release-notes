@@ -29,6 +29,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
 ## 6.9.22 DSE CVE
 * Upgraded Management API Netty to v4.1.132. Upgraded Final and Jackson to v2.21.2. (DSP-25106, [CVE-2026-3387](https://nvd.nist.gov/vuln/detail/CVE-2026-3387), [CVE-2026-33870](https://nvd.nist.gov/vuln/detail/CVE-2026-33870))
 * Upgraded the Apache Mina Core library to version 2.0.28 to address several security vulnerabilities. (DSP-25120, [CVE-2026-42779](https://nvd.nist.gov/vuln/detail/CVE-2026-42779), [CVE-2026-42778](https://nvd.nist.gov/vuln/detail/CVE-2026-42778), [CVE-2026-41409](https://nvd.nist.gov/vuln/detail/CVE-2026-41409), [CVE-2026-41635](https://nvd.nist.gov/vuln/detail/CVE-2026-41635))
+* Upgraded Tomcat version to 9.0.117. (DSP-25116, [CVE-2026-29145](https://nvd.nist.gov/vuln/detail/CVE-2026-29145))
 
 # Release notes for 6.9.21
 20 April 2026
