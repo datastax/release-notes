@@ -1,6 +1,14 @@
 # Release notes for OpsCenter
 
-# Release Notes for OpsCenter 6.8.50
+Due to numerous errors and customers reporting performance problems with the versions of OpsCenter released with the updated 
+java driver, we are going to release OpsCenter 6.8.51 with the driver update reverted as soon as possible. We will be removing 
+the OpsCenter versions with the driver issue and other significant issues from FixCentral. Those are 6.8.47, 6.8.48, 6.8.49, 
+and 6.8.50. We recommend customers encountering issues go back to 6.8.46 until a fixed version of OpsCenter is released. All 
+updates since 6.8.46 that are not related to the driver upgrade will remain in place.
+
+The OpsCenter team is making significant improvements to the QA process to avoid mistakes like this in the future.
+
+# (Retracted) Release Notes for OpsCenter 6.8.50
 13 May 2026
 
 ## Security
@@ -21,7 +29,7 @@
 ## Dashboard
 * Fixed a regression introduced in the Java Driver 4.x migration where new-metrics requests took several minutes on large clusters. WrappedDriver.prepare() no longer issued a `PREPARE` command  to Cassandra, resulting in every metrics query running unprepared and paying full parse + plan cost. Restored proper running of the prepared-statement, and closed a related CqlSession leak during coordinator reconnect. (OPSC-17887)
 
-# Release Notes for OpsCenter 6.8.49
+# (Retracted) Release Notes for OpsCenter 6.8.49
 23 April 2026
 
 ## Backup Service
@@ -57,7 +65,7 @@
 ## Monitoring
 * Fixed Tiered Storage alerts to handle Java Driver 4.x (OPSC-17794)
 
-# Release Notes for OpsCenter 6.8.48
+# (Retracted) Release Notes for OpsCenter 6.8.48
 5 March 2026 
 
 ## Backup Service
@@ -90,7 +98,7 @@
 * Fixed an issue where OpsCenter crashed with “index out of range: 1” when agents sent IPs in a single-element list format. (OPSC-17779)
 * Fixed an issue where `connection_pool_size` in `opscenterd.conf` was silently ignored after the Java driver 4.x upgrade, causing slowdowns at scale. The setting is now honored for local and remote DC connections. (OPSC-17863)
 
-# Release Notes for OpsCenter 6.8.47
+# (Retracted) Release Notes for OpsCenter 6.8.47
 13 November 2025
 
 ## Monitoring
