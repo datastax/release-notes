@@ -1,12 +1,25 @@
 # Release notes for OpsCenter
 
 Due to numerous errors and customers reporting performance problems with the versions of OpsCenter released with the updated 
-java driver, we are going to release OpsCenter 6.8.51 with the driver update reverted as soon as possible. We will be removing 
+java driver, we have released OpsCenter 6.8.51 with the driver update reverted. We removed
 the OpsCenter versions with the driver issue and other significant issues from FixCentral. Those are 6.8.47, 6.8.48, 6.8.49, 
-and 6.8.50. We recommend customers encountering issues go back to 6.8.46 until a fixed version of OpsCenter is released. All 
+and 6.8.50. We recommend customers encountering issues go to 6.8.51. All 
 updates since 6.8.46 that are not related to the driver upgrade will remain in place.
 
 The OpsCenter team is making significant improvements to the QA process to avoid mistakes like this in the future.
+
+# Release Notes for OpsCenter 6.8.51
+28 May 2026
+
+## Backup Service
+* Added option to select AWS SDK version for compatibility with older versions. (OPSC-17823)
+
+## Core
+* Reverted the upgrade of the cassandra driver and associated bug fixes. This also required the revert of the guava security update. That issue will be addressed in a future release. (OPSC-17905)
+
+## Security
+* Added Netty dependency to overwrite external dependencies addressing CVE-2026-42583 ( (OPSC-17895)
+* Upgraded dojo, dijit, dojox, and dojo-util to 1.17.3, addressing CVE-2021-23450 (CWE-1321: Improperly Controlled Modification of Object Prototype Attributes Prototype Pollution). (OPSC-17877)
 
 # (Retracted) Release Notes for OpsCenter 6.8.50
 13 May 2026
