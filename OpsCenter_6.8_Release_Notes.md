@@ -1,12 +1,12 @@
 # Release notes for OpsCenter
 
 Due to numerous errors and customers reporting performance problems with the versions of OpsCenter released with the updated 
-java driver, we have released OpsCenter 6.8.51 with the driver update reverted. We removed
-the OpsCenter versions with the driver issue and other significant issues from FixCentral. Those are 6.8.47, 6.8.48, 6.8.49, 
-and 6.8.50. We recommend customers encountering issues go to 6.8.51. All 
-updates since 6.8.46 that are not related to the driver upgrade will remain in place.
+java driver, the release of OpsCenter 6.8.51 reverts the driver update. 
+FixCentral no longer offers the OpsCenter versions with the driver issue and other significant issues. Those are 6.8.47, 6.8.48, 6.8.49, 
+and 6.8.50. We recommend customers encountering issues migrate to version 6.8.51. All 
+valid updates since 6.8.46 that are not related to the driver upgrade will remain in place.
 
-The OpsCenter team is making significant improvements to the QA process to avoid mistakes like this in the future.
+Significant QA process improvements are in process to avoid similar future issues.
 
 # Release Notes for OpsCenter 6.8.51
 28 May 2026
