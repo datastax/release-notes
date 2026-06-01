@@ -20,7 +20,7 @@ Release notes of versions prior to 6.8.4 can be found [here](https://docs.datast
 If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
 
 ## 6.8.64 DSE Core
-* Migrated production code to AWS SDK version 2. Added an option for S3 backup services to use either legacy or new AWS SDK API. Added an option to create a backup service that utilizes a session token for its connection. (DSP-24763)
+* Migrated production code to AWS SDK version 2. Added an option for S3 backup services to use either legacy or new AWS SDK API. Added an option to create a backup service that utilizes a session token for its connection.  Upgrading from this version 6.8.64, or later, to DSE 6.9 requires a minimum of version 6.9.23, and should wait until its release to avoid a mismatch of this function.(DSP-24763)
 * Changed cleanup behavior to delete $TMPDIR/dse directories when DSE is stopped. (DSP-24998)
 * Improved the ability to troubleshoot ‘sstableloader’ command runs by adding file-level progress logging. Logging during bulk load operations tracks file in-process or complete status. (DSP-25007)
 * Fixed time window compaction strategy (TWCS) overlap handling to prevent indefinite SSTable reference retention when aggressive expiration is enabled. (DSP-25062)
