@@ -4,6 +4,41 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.64
+11 May 2026
+
+## Components versions for DSE 6.8.64
+ * Apache Solr™ 6.0.1.4.2990&ast;
+ * Apache Spark™ 2.4.0.40&ast;
+ * Apache TinkerPop™ 3.4.14-20260326-c367d392&ast;
+ * Apache Tomcat® 9.0.118&ast;
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.128.1.dse
+ * Spark JobServer 0.8.0.57
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.64 DSE Core
+* Migrated production code to AWS SDK version 2. Added an option for S3 backup services to use either legacy or new AWS SDK API. Added an option to create a backup service that utilizes a session token for its connection. (DSP-24763)
+* Changed cleanup behavior to delete $TMPDIR/dse directories when DSE is stopped. (DSP-24998)
+* Improved the ability to troubleshoot ‘sstableloader’ command runs by adding file-level progress logging. Logging during bulk load operations tracks file in-process or complete status. (DSP-25007)
+* Fixed time window compaction strategy (TWCS) overlap handling to prevent indefinite SSTable reference retention when aggressive expiration is enabled. (DSP-25062)
+* Increased heap memory allocation for Java 11+ across multiple command-line tools to accommodate garbage-first (G1) garbage collector (GC) memory requirements. (DSP-24808)
+* Fixed a bug that could allow duplicate startup parameters for GC logs, overriding intended settings with defaults. (DSP-25126)
+* Fixed a bug in Server Side Backup and Restore (SSBR) to prevent corruption on restores that use parallel download. Added resumable retry to improve the resiliency of the restore procedure. (DSP-25130)
+* Fixed validation of primary key types with nested frozen subtypes. (DSP-25132)
+
+## 6.8.64 DSE Build
+* Updated `.rpm` package signature key to add an updated public key as part of the rpm packages bundle download in Fix Central. (DSP-25133)
+
+## 6.8.64 DSE CVE
+* Upgraded Tomcat version from 9.0.117 to 9.0.118. (DSP-25155, [CVE-2026-41284](https://nvd.nist.gov/vuln/detail/CVE-2026-41284), [CVE-2026-42498](https://nvd.nist.gov/vuln/detail/CVE-2026-42498), [CVE-2026-43514](https://nvd.nist.gov/vuln/detail/CVE-2026-43514), [CVE-2026-41293](https://nvd.nist.gov/vuln/detail/CVE-2026-41293), [CVE-2026-43512](https://nvd.nist.gov/vuln/detail/CVE-2026-43512), [CVE-2026-43513](https://nvd.nist.gov/vuln/detail/CVE-2026-43513), [CVE-2026-43515](https://nvd.nist.gov/vuln/detail/CVE-2026-43515))
+* Upgraded Bouncy Castle to version 1.84 to address several security vulnerabilities. (DSP-25123, [CVE-2025-14813](https://nvd.nist.gov/vuln/detail/CVE-2025-14813), [CVE-2026-5598](https://nvd.nist.gov/vuln/detail/CVE-2026-5598), [CVE-2026-0636](https://nvd.nist.gov/vuln/detail/CVE-2026-0636))
+* Upgraded Tomcat to version 9.0.117. (DSP-25116, [CVE-2026-29145](https://nvd.nist.gov/vuln/detail/CVE-2026-29145))
+* Upgraded Apache Mina Core library to version 2.0.28 to address several security vulnerabilities. (DSP-25120, [CVE-2026-42779](https://nvd.nist.gov/vuln/detail/CVE-2026-42779), [CVE-2026-42778](https://nvd.nist.gov/vuln/detail/CVE-2026-42778), [CVE-2026-41409](https://nvd.nist.gov/vuln/detail/CVE-2026-41409), [CVE-2026-41635](https://nvd.nist.gov/vuln/detail/CVE-2026-41635))
+* Upgraded jackson-core to version 2.18.6 to address several security vulnerabilities. (DSP-25082, [CWE-770](https://nvd.nist.gov/vuln/detail/CWE-770))
+
 # Release notes for 6.8.63
 16 March 2026
 
