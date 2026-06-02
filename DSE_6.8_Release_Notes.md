@@ -5,7 +5,7 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
 # Release notes for 6.8.64
-11 May 2026
+1 June 2026
 
 ## Components versions for DSE 6.8.64
  * Apache Solr™ 6.0.1.4.2990&ast;
