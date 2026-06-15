@@ -2,6 +2,35 @@
 DSE 6.9.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.9.23
+15 June 2026
+
+## Components versions for DSE 6.9.23
+ * Apache Solr™ 6.0.1.5.2988
+ * Apache Spark™ 2.5.0.12
+ * Apache TinkerPop™ 3.4.15-20260327-330bc330
+ * Apache Tomcat® 9.0.118&ast;
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.128.1.dse
+ * Spark JobServer 0.8.0.57
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.9.23 DSE Core
+* Migrated production code to AWS SDK version 2. Added an option for S3 backup services to use either legacy or new AWS SDK API. Added an option to create a backup service that utilizes a session token for its connection. (DSP-24763)
+* Fixed automatic cleanup of stale hint files and the handling of the hints window across node restarts. (DSP-25113)
+* Fixed a bug in Server Side Backup and Restore (SSBR) to prevent corruption on restores that use parallel download. Added resumable retry to improve the resiliency of the restore procedure. (DSP-25130)
+* Fixed validation of primary key types with nested frozen subtypes. (DSP-25132)
+
+## 6.9.23 DSE Node/DseTool
+* Fixed documentation for `dsetool unload_core` command. (DSP-24784)
+
+## 6.9.23 DSE CVE
+* Upgraded Bouncy Castle to version 1.84 to address several security vulnerabilities. (DSP-25123, [CVE-2025-14813](https://nvd.nist.gov/vuln/detail/CVE-2025-14813), [CVE-2026-5598](https://nvd.nist.gov/vuln/detail/CVE-2026-5598), [CVE-2026-0636](https://nvd.nist.gov/vuln/detail/CVE-2026-0636))
+* Upgraded Tomcat version to 9.0.118. (DSP-25155, [CVE-2026-41284](https://nvd.nist.gov/vuln/detail/CVE-2026-41284), [CVE-2026-42498](https://nvd.nist.gov/vuln/detail/CVE-2026-42498), [CVE-2026-43514](https://nvd.nist.gov/vuln/detail/CVE-2026-43514), [CVE-2026-41293](https://nvd.nist.gov/vuln/detail/CVE-2026-41293), [CVE-2026-43512](https://nvd.nist.gov/vuln/detail/CVE-2026-43512), [CVE-2026-43513](https://nvd.nist.gov/vuln/detail/CVE-2026-43513), [CVE-2026-43515](https://nvd.nist.gov/vuln/detail/CVE-2026-43515))
+* Upgraded Mina to version 2.0.29.  (DSP-25180, [CVE-2026-47065](https://nvd.nist.gov/vuln/detail/CVE-2026-47065), [CVE-2026-47321](https://nvd.nist.gov/vuln/detail/CVE-2026-47321))
+
 # Release notes for 6.9.22
 18 May 2026
 
