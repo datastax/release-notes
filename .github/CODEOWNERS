@@ -1,0 +1,12 @@
+##############################################################
+#
+# List of approvers for IBM DataStax Product's release notes
+#
+##############################################################
+
+# DataStax Enterprise
+DSE_*.md @annieden @brian-r-fisher
+3rd-party-software/DSE_*.md @annieden @brian-r-fisher
+
+# DataStax OpsCenter
+OpsCenter_*.md @annieden @brian-r-fisher
