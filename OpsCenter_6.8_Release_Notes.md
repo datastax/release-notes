@@ -19,11 +19,11 @@ Significant QA process improvements are in process to avoid similar future issue
 * Fixed a bug where disk alerts could be triggered when disk usage data was unavailable. (OPSC-17699)
 
 ## Provisioning
-* Fixed an issue where LCM configuration jobs (install/configure/upgrade) overwrote custom SSL settings in OpsCenter's cluster.conf. The [agents] section's ssl_truststore was incorrectly set to the keystore path. For the [cassandra] section, a new per-cluster setting, "Manage Cassandra SSL" (enabled by default), lets users opt out of LCM managing those SSL settings, preserving any values configured directly in cluster.conf. The setting appears as a checkbox in the Add/Edit Cluster dialog when client encryption is enabled, or can be set via the manage-opsc-cassandra-ssl property in the LCM API. (OPSC-17677)
+* Fixed an issue where LCM install, configure, and upgrade configuration jobs overwrote custom SSL settings in OpsCenter's `cluster.conf`. The `[agents]` section's `ssl_truststore` was incorrectly set to the keystore path. Created a new per-cluster setting, `Manage Cassandra SSL`, enabled by default, in the `[cassandra]` section. This setting allows users to opt out of LCM managing custom SSL settings and preserve any values configured directly in `cluster.conf`. The setting appears as a checkbox in the `Add/Edit Cluster` dialog when client encryption is enabled, or can be set via the `manage-opsc-cassandra-ssl` property in the LCM API. (OPSC-17677)
 
 ## Security
-* Upgraded dojo, dijit, dojox, and dojo-util to 1.17.3, addressing CVE-2021-23450 (CWE-1321: Improperly Controlled Modification of Object Prototype Attributes Prototype Pollution). (OPSC-17877)
-* Updated jackson to version 2.21.4 to address CVE-2026-54512. (OPSC-17976)
+* Upgraded `dojo`, `dijit`, `dojox`, and `dojo-util` to version 1.17.3, addressing CVE-2021-23450 (CWE-1321: Improperly Controlled Modification of Object Prototype Attributes Prototype Pollution). (OPSC-17877)
+* Updated `jackson` to version 2.21.4 to address CVE-2026-54512. (OPSC-17976)
 
 # Release Notes for OpsCenter 6.8.51
 28 May 2026
