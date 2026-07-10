@@ -24,6 +24,7 @@ Significant QA process improvements are in process to avoid similar future issue
 ## Security
 * Upgraded `dojo`, `dijit`, `dojox`, and `dojo-util` to version 1.17.3, addressing CVE-2021-23450 (CWE-1321: Improperly Controlled Modification of Object Prototype Attributes Prototype Pollution). (OPSC-17877)
 * Updated `jackson` to version 2.21.4 to address CVE-2026-54512. (OPSC-17976)
+* Upgraded `netty` from version 4.1.133 to 4.1.135 addressing CVE-2026-44249 (OPSC-17970)
 
 # Release Notes for OpsCenter 6.8.51
 28 May 2026
