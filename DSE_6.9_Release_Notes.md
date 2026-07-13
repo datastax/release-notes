@@ -22,8 +22,8 @@ If you're developing applications, please refer to the [Java Driver documentatio
 * Changed uploaded parts metadata validation logic during multipart upload to always sort the parts in ascending order during validation. (DSP-25205)
 
 ## 6.9.24 DSE Security
-* Updates package signatures to use IBM official package signature keys. (DSP-25017)
-* Upgraded snappy-java library to version 1.1.10.8. (DSP-25140)
+* Updated package signatures to use IBM official package signature keys. (DSP-25017)
+* Upgraded the `snappy-java` library to version 1.1.10.8. (DSP-25140)
 
 ## 6.9.24 DSE Build
 * Removed duplicate jarfiles and LOCALE warnings in Docker images. (DSP-25200)
@@ -32,7 +32,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
 * Changed backup store creation/alteration logic to raise a warning instead of an error when passing a settings map with unknown flags. Changed backup store creation/alteration to save all passed flags in the database instead of only the familiar ones. (DSP-25181)
 
 ## 6.9.24 DSE Node/DseTool
-* Added ability to dynamically reload certificates for inter-node connections, it eliminates the need for restarts. The reload can be triggered manually via `nodetool reloadssl`. (DSP-25085)
+* Added the ability to dynamically reload certificates for inter-node connections to eliminate the need for restarts. The reload can be triggered manually via `nodetool reloadssl`. (DSP-25085)
 
 ## 6.9.24 DSE Miscellaneous
 * Added a consistency level field in the `ROWS_RETURNED_COUNT` event type in the audit logs. (DSP-25118)
@@ -43,10 +43,10 @@ If you're developing applications, please refer to the [Java Driver documentatio
 * Added an option to configure the locations to load from and where to save cqlsh history. (DSP-25099, [CVE-2026-27315](https://nvd.nist.gov/vuln/detail/CVE-2026-27315))
 * Added a configurable minimum interval between password changes per role (default: 5 seconds) to prevent authenticated denial-of-service attacks through rapid password changes. (DSP-25098, [CVE-2026-32588](https://nvd.nist.gov/vuln/detail/CVE-2026-32588))
 * Upgraded Netty to version 4.1.135.1.dse, which is based on version 4.1.135.Final. (DSP-25065, [CVE-2025-67735](https://nvd.nist.gov/vuln/detail/CVE-2025-67735), [CVE-2026-46340](https://nvd.nist.gov/vuln/detail/CVE-2026-46340), [CVE-2026-45536](https://nvd.nist.gov/vuln/detail/CVE-2026-45536), [CVE-2026-45673](https://nvd.nist.gov/vuln/detail/CVE-2026-45673), [CVE-2026-45674](https://nvd.nist.gov/vuln/detail/CVE-2026-45674), [CVE-2026-47691](https://nvd.nist.gov/vuln/detail/CVE-2026-47691), [CVE-2026-44249](https://nvd.nist.gov/vuln/detail/CVE-2026-44249), [CVE-2026-45416](https://nvd.nist.gov/vuln/detail/CVE-2026-45416), [CVE-2026-48006](https://nvd.nist.gov/vuln/detail/CVE-2026-48006), [CVE-2026-44893](https://nvd.nist.gov/vuln/detail/CVE-2026-44893), [CVE-2026-48059](https://nvd.nist.gov/vuln/detail/CVE-2026-48059), [CVE-2026-44249](https://nvd.nist.gov/vuln/detail/CVE-2026-44249))
-* Upgraded opentelemetry to version 1.62.0. (DSP-25162, [CVE-2026-45292](https://nvd.nist.gov/vuln/detail/CVE-2026-45292))
-* Upgraded tomcat version to 9.0.119. (DSP-25210, [CVE-2026-55276](https://nvd.nist.gov/vuln/detail/CVE-2026-55276))
-* Removed the older and unused Netty version3.10.6 that was flagged in a security scanning tool. (DSP-25141, [CVE-2016-4970](https://nvd.nist.gov/vuln/detail/CVE-2016-4970), [CVE-2019-20444](https://nvd.nist.gov/vuln/detail/CVE-2019-20444), [CVE-2019-20445](https://nvd.nist.gov/vuln/detail/CVE-2019-20445), [CVE-2020-7238](https://nvd.nist.gov/vuln/detail/CVE-2020-7238), [CVE-2021-21290](https://nvd.nist.gov/vuln/detail/CVE-2021-21290), [CVE-2021-21295](https://nvd.nist.gov/vuln/detail/CVE-2021-21295), [CVE-2021-21409](https://nvd.nist.gov/vuln/detail/CVE-2021-21409), [CVE-2021-37136](https://nvd.nist.gov/vuln/detail/CVE-2021-37136), [CVE-2021-37137](https://nvd.nist.gov/vuln/detail/CVE-2021-37137), [CVE-2021-43797](https://nvd.nist.gov/vuln/detail/CVE-2021-43797), [CVE-2022-24823](https://nvd.nist.gov/vuln/detail/CVE-2022-24823), [CVE-2023-34462](https://nvd.nist.gov/vuln/detail/CVE-2023-34462), [CVE-2025-58057](https://nvd.nist.gov/vuln/detail/CVE-2025-58057))
-* Upgraded aircompressor to 2.0.3. (DSP-25158, [CVE-2025-67721](https://nvd.nist.gov/vuln/detail/CVE-2025-67721))
+* Upgraded OpenTelemetry to version 1.62.0. (DSP-25162, [CVE-2026-45292](https://nvd.nist.gov/vuln/detail/CVE-2026-45292))
+* Upgraded Tomcat version to 9.0.119. (DSP-25210, [CVE-2026-55276](https://nvd.nist.gov/vuln/detail/CVE-2026-55276))
+* Removed the earlier and unused Netty version 3.10.6 that was flagged in a security scanning tool. (DSP-25141, [CVE-2016-4970](https://nvd.nist.gov/vuln/detail/CVE-2016-4970), [CVE-2019-20444](https://nvd.nist.gov/vuln/detail/CVE-2019-20444), [CVE-2019-20445](https://nvd.nist.gov/vuln/detail/CVE-2019-20445), [CVE-2020-7238](https://nvd.nist.gov/vuln/detail/CVE-2020-7238), [CVE-2021-21290](https://nvd.nist.gov/vuln/detail/CVE-2021-21290), [CVE-2021-21295](https://nvd.nist.gov/vuln/detail/CVE-2021-21295), [CVE-2021-21409](https://nvd.nist.gov/vuln/detail/CVE-2021-21409), [CVE-2021-37136](https://nvd.nist.gov/vuln/detail/CVE-2021-37136), [CVE-2021-37137](https://nvd.nist.gov/vuln/detail/CVE-2021-37137), [CVE-2021-43797](https://nvd.nist.gov/vuln/detail/CVE-2021-43797), [CVE-2022-24823](https://nvd.nist.gov/vuln/detail/CVE-2022-24823), [CVE-2023-34462](https://nvd.nist.gov/vuln/detail/CVE-2023-34462), [CVE-2025-58057](https://nvd.nist.gov/vuln/detail/CVE-2025-58057))
+* Upgraded aircompressor to version 2.0.3. (DSP-25158, [CVE-2025-67721](https://nvd.nist.gov/vuln/detail/CVE-2025-67721))
 
 # Release notes for 6.9.23
 15 June 2026
