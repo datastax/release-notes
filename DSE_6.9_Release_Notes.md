@@ -2,6 +2,52 @@
 DSE 6.9.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.9.24
+13 July 2026
+
+## Components versions for DSE 6.9.24
+ * Apache Solr™ 6.0.1.4.2996&ast;
+ * Apache Spark™ 2.5.0.13&ast;
+ * Apache TinkerPop™ 3.4.15-20260626-9f600128&ast;
+ * Apache Tomcat® 9.0.119&ast;
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.135.1.dse&ast;
+ * Spark JobServer 0.8.0.57
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.9.24 DSE Cassandra
+* Fixed a collision of table identifiers on secondary indices causing "Memory was freed" errors. (DSP-24879)
+* Changed uploaded parts metadata validation logic during multipart upload to always sort the parts in ascending order during validation. (DSP-25205)
+
+## 6.9.24 DSE Security
+* Updated package signatures to use IBM official package signature keys. (DSP-25017)
+* Upgraded the `snappy-java` library to version 1.1.10.8. (DSP-25140)
+
+## 6.9.24 DSE Build
+* Removed duplicate jarfiles and LOCALE warnings in Docker images. (DSP-25200)
+
+## 6.9.24 DSE Upgrade
+* Changed backup store creation/alteration logic to raise a warning instead of an error when passing a settings map with unknown flags. Changed backup store creation/alteration to save all passed flags in the database instead of only the familiar ones. (DSP-25181)
+
+## 6.9.24 DSE Node/DseTool
+* Added the ability to dynamically reload certificates for inter-node connections to eliminate the need for restarts. The reload can be triggered manually via `nodetool reloadssl`. (DSP-25085)
+
+## 6.9.24 DSE Miscellaneous
+* Added a consistency level field in the `ROWS_RETURNED_COUNT` event type in the audit logs. (DSP-25118)
+* Added `AzureBlobStore` and `CompositeBlobStore` to the auto-fill options for a blob store class on backup store creation. (DSP-25186)
+* Fixed vector index building to allocate a minimum of 1000 posting entries when the estimated size of the vector index is zero, preventing potential index creation failures. (DSP-25161)
+
+## 6.9.24 DSE CVE
+* Added an option to configure the locations to load from and where to save cqlsh history. (DSP-25099, [CVE-2026-27315](https://nvd.nist.gov/vuln/detail/CVE-2026-27315))
+* Added a configurable minimum interval between password changes per role (default: 5 seconds) to prevent authenticated denial-of-service attacks through rapid password changes. (DSP-25098, [CVE-2026-32588](https://nvd.nist.gov/vuln/detail/CVE-2026-32588))
+* Upgraded Netty to version 4.1.135.1.dse, which is based on version 4.1.135.Final. (DSP-25065, [CVE-2025-67735](https://nvd.nist.gov/vuln/detail/CVE-2025-67735), [CVE-2026-46340](https://nvd.nist.gov/vuln/detail/CVE-2026-46340), [CVE-2026-45536](https://nvd.nist.gov/vuln/detail/CVE-2026-45536), [CVE-2026-45673](https://nvd.nist.gov/vuln/detail/CVE-2026-45673), [CVE-2026-45674](https://nvd.nist.gov/vuln/detail/CVE-2026-45674), [CVE-2026-47691](https://nvd.nist.gov/vuln/detail/CVE-2026-47691), [CVE-2026-44249](https://nvd.nist.gov/vuln/detail/CVE-2026-44249), [CVE-2026-45416](https://nvd.nist.gov/vuln/detail/CVE-2026-45416), [CVE-2026-48006](https://nvd.nist.gov/vuln/detail/CVE-2026-48006), [CVE-2026-44893](https://nvd.nist.gov/vuln/detail/CVE-2026-44893), [CVE-2026-48059](https://nvd.nist.gov/vuln/detail/CVE-2026-48059), [CVE-2026-44249](https://nvd.nist.gov/vuln/detail/CVE-2026-44249))
+* Upgraded OpenTelemetry to version 1.62.0. (DSP-25162, [CVE-2026-45292](https://nvd.nist.gov/vuln/detail/CVE-2026-45292))
+* Upgraded Tomcat version to 9.0.119. (DSP-25210, [CVE-2026-55276](https://nvd.nist.gov/vuln/detail/CVE-2026-55276))
+* Removed the earlier and unused Netty version 3.10.6 that was flagged in a security scanning tool. (DSP-25141, [CVE-2016-4970](https://nvd.nist.gov/vuln/detail/CVE-2016-4970), [CVE-2019-20444](https://nvd.nist.gov/vuln/detail/CVE-2019-20444), [CVE-2019-20445](https://nvd.nist.gov/vuln/detail/CVE-2019-20445), [CVE-2020-7238](https://nvd.nist.gov/vuln/detail/CVE-2020-7238), [CVE-2021-21290](https://nvd.nist.gov/vuln/detail/CVE-2021-21290), [CVE-2021-21295](https://nvd.nist.gov/vuln/detail/CVE-2021-21295), [CVE-2021-21409](https://nvd.nist.gov/vuln/detail/CVE-2021-21409), [CVE-2021-37136](https://nvd.nist.gov/vuln/detail/CVE-2021-37136), [CVE-2021-37137](https://nvd.nist.gov/vuln/detail/CVE-2021-37137), [CVE-2021-43797](https://nvd.nist.gov/vuln/detail/CVE-2021-43797), [CVE-2022-24823](https://nvd.nist.gov/vuln/detail/CVE-2022-24823), [CVE-2023-34462](https://nvd.nist.gov/vuln/detail/CVE-2023-34462), [CVE-2025-58057](https://nvd.nist.gov/vuln/detail/CVE-2025-58057))
+* Upgraded aircompressor to version 2.0.3. (DSP-25158, [CVE-2025-67721](https://nvd.nist.gov/vuln/detail/CVE-2025-67721))
+
 # Release notes for 6.9.23
 15 June 2026
 
