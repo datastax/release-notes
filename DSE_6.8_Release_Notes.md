@@ -4,6 +4,38 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.65
+3 July 2026
+
+## 6.8.65 DSE Core
+* Fixed automatic cleanup of stale hint files and the handling of the hints window across node restarts. (DSP-25113)
+
+## 6.8.65 DSE Cassandra
+* Fixed a collision of table identifiers on secondary indices causing "Memory was freed" errors. (DSP-24879)
+* Changed uploaded parts metadata validation logic during multipart upload to always sort the parts in ascending order during validation. (DSP-25205)
+
+## 6.8.65 DSE Security
+* Updated package signatures to use IBM official package signature keys. (DSP-25017)
+* Upgraded the `snappy-java` library to version 1.1.10.8. (DSP-25140)
+
+## 6.8.65 DSE Upgrade
+* Changed backup store creation/alteration logic to raise a warning instead of an error when passing a settings map with unknown flags. Changed backup store creation/alteration to save all passed flags in the database instead of only the familiar ones. (DSP-25181)
+
+## 6.8.65 DSE Node/DseTool
+* Added the ability to dynamically reload certificates for inter-node connections to eliminate the need for restarts. The reload can be triggered manually with `nodetool reloadssl`. (DSP-25085)
+
+## 6.8.65 DSE Miscellaneous
+* Added `AzureBlobStore` and `CompositeBlobStore` to the auto-fill options for a blob store class on backup store creation. (DSP-25186)
+
+## 6.8.65 DSE CVE
+* Added an option to configure the locations to load from and where to save cqlsh history. (DSP-25099, [CVE-2026-27315](https://nvd.nist.gov/vuln/detail/CVE-2026-27315))
+* Added a configurable minimum interval between password changes per role (default: 5 seconds) to prevent authenticated denial-of-service attacks through rapid password changes. (DSP-25098, [CVE-2026-32588](https://nvd.nist.gov/vuln/detail/CVE-2026-32588))
+* Upgraded Mina to version 2.0.29. (DSP-25180, [CVE-2026-47065](https://nvd.nist.gov/vuln/detail/CVE-2026-47065), [CVE-2026-47321](https://nvd.nist.gov/vuln/detail/CVE-2026-47321))
+* Upgraded Netty to version 4.1.135.1.dse, which is based on version 4.1.135.Final. (DSP-25065, [CVE-2025-67735](https://nvd.nist.gov/vuln/detail/CVE-2025-67735), [CVE-2026-46340](https://nvd.nist.gov/vuln/detail/CVE-2026-46340), [CVE-2026-45536](https://nvd.nist.gov/vuln/detail/CVE-2026-45536), [CVE-2026-45673](https://nvd.nist.gov/vuln/detail/CVE-2026-45673), [CVE-2026-45674](https://nvd.nist.gov/vuln/detail/CVE-2026-45674), [CVE-2026-47691](https://nvd.nist.gov/vuln/detail/CVE-2026-47691), [CVE-2026-44249](https://nvd.nist.gov/vuln/detail/CVE-2026-44249), [CVE-2026-45416](https://nvd.nist.gov/vuln/detail/CVE-2026-45416), [CVE-2026-48006](https://nvd.nist.gov/vuln/detail/CVE-2026-48006), [CVE-2026-44893](https://nvd.nist.gov/vuln/detail/CVE-2026-44893), [CVE-2026-48059](https://nvd.nist.gov/vuln/detail/CVE-2026-48059), [CVE-2026-44249](https://nvd.nist.gov/vuln/detail/CVE-2026-44249))
+* Upgraded OpenTelemetry to version 1.62.0. (DSP-25162, [CVE-2026-45292](https://nvd.nist.gov/vuln/detail/CVE-2026-45292))
+* Upgraded Tomcat version to 9.0.119. (DSP-25210, [CVE-2026-55276](https://nvd.nist.gov/vuln/detail/CVE-2026-55276))
+* Upgraded aircompressor to 2.0.3. (DSP-25158, [CVE-2025-67721](https://nvd.nist.gov/vuln/detail/CVE-2025-67721))
+
 # Release notes for 6.8.64
 1 June 2026
 
