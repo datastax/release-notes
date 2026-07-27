@@ -3,6 +3,34 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 Release notes of versions prior to 5.1.20 can be found [here](https://docs.datastax.com/en/dse/5.1/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 5.1.51
+27 July 2026
+
+## Components versions for DSE 5.1.51
+ * Apache Solr™ 6.0.1.0.2988
+ * Apache Spark™ 2.0.2.44
+ * Apache TinkerPop™ 3.2.11-20260306-140b7dfc
+ * Apache Tomcat® 9.0.113
+ * DSE Java Driver 1.8.3-dse+20201217 (DSE *internal-only* version)
+ * Netty 4.0.54.1.dse
+ * Spark JobServer 0.6.2.243
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 5.1.51 DSE Security
+* Updated package signatures to use IBM’s official package signature keys. (DSP-25017)
+
+## 5.1.51 DSE Build
+* Updated the `.rpm` package signature key to add an updated public key as part of the RPM packages bundle download in Fix Central. (DSP-25133)
+
+## 5.1.51 DSE Node/DseTool
+* Added the ability to dynamically reload certificates for internode connections, eliminating the need for restarts. Run `nodetool reloadssl` to manually trigger an immediate reload of CA certificate modifications. (DSP-25085)
+* Fixed the help description for `dsetool unload_core` command. (DSP-24784)
+
+## 5.1.51 DSE CVE
+* Upgraded Bouncy Castle to version 1.84 to address several security vulnerabilities. (DSP-25123, [CVE-2025-14813](https://nvd.nist.gov/vuln/detail/CVE-2025-14813), [CVE-2026-5598](https://nvd.nist.gov/vuln/detail/CVE-2026-5598), [CVE-2026-0636](https://nvd.nist.gov/vuln/detail/CVE-2026-0636))
+
 # Release notes for 5.1.50
 17 March 2026
 
