@@ -48,7 +48,7 @@
 | Apache MINA Core | 2.0.27 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Apache ServiceMix :: Bundles :: ANTRL | 2.7.7_5 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Apache Solr (module: Solrj) | 6.0.1.0.2988 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
-| Apache Solr Web UI | 6.0.1.0.2988 | UNKNOWN |
+| Apache Solr Web UI | 6.0.1.0.2988 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Apache Thrift | 0.9.2, 0.9.3 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Apache TinkerPop :: Gremlin Console | 3.2.11-20260306-140b7dfc | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
 | Apache TinkerPop :: Gremlin Core | 3.2.11-20260306-140b7dfc, 3.2.2 | [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) |
