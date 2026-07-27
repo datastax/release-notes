@@ -26,7 +26,7 @@ If you're developing applications, please refer to the [Java Driver documentatio
 
 ## 5.1.51 DSE Node/DseTool
 * Added the ability to dynamically reload certificates for internode connections, eliminating the need for restarts. Run `nodetool reloadssl` to manually trigger an immediate reload of CA certificate modifications. (DSP-25085)
-* Fixed the help description for `dsetool unload_core` command. (DSP-24784)
+* Fixed the help description for the `dsetool unload_core` command. (DSP-24784)
 
 ## 5.1.51 DSE CVE
 * Upgraded Bouncy Castle to version 1.84 to address several security vulnerabilities. (DSP-25123, [CVE-2025-14813](https://nvd.nist.gov/vuln/detail/CVE-2025-14813), [CVE-2026-5598](https://nvd.nist.gov/vuln/detail/CVE-2026-5598), [CVE-2026-0636](https://nvd.nist.gov/vuln/detail/CVE-2026-0636))
