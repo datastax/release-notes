@@ -73,6 +73,208 @@ the offloading feature.
 
 # Releases
 
+## Luna Streaming Distribution  4.0.13 0
+This is a maintenance release containing important security updates and bug fixes for Luna streaming, as well as for the various connectors packaged alongside it, such as sinks, sources, functions, protocol extensions, proxy extensions, filters, and client extensions.
+
+### Most notable commits
+
+* [eda2c066768](https://github.com/datastax/pulsar/commit/eda2c066768) Release 4.0.13.0
+* [6f218d0e199](https://github.com/datastax/pulsar/commit/6f218d0e199) License: Updated the required opentelemetry package version in LICENSE.bin.txt
+* [7169a542387](https://github.com/datastax/pulsar/commit/7169a542387) License: Added the required yawk version to the LICENSE.bin.txt
+* [319fc7b9037](https://github.com/datastax/pulsar/commit/319fc7b9037) Upgrade bookkeeper to 4.17.1.0.0.7
+* [54c2633ccc9](https://github.com/datastax/pulsar/commit/54c2633ccc9) [fix][meta][branch-4.0] Tolerate concurrent creation of the underreplication LAYOUT node (#26248)
+* [43e27d9e2df](https://github.com/datastax/pulsar/commit/43e27d9e2df) [fix][broker] Release entry on GetLastMessageId when parseMessageMetadata throws (#26089)
+* [d9fad851b8d](https://github.com/datastax/pulsar/commit/d9fad851b8d) [fix][broker] Prevent stale service unit callbacks from dropping active lookup and cleanup jobs (#26146)
+* [739bcde8cf5](https://github.com/datastax/pulsar/commit/739bcde8cf5) [fix][broker] Fix TableViewLoadDataStoreImpl close deadlock that stalls broker shutdown (#26243)
+* [60217386591](https://github.com/datastax/pulsar/commit/60217386591) [fix][client] Fix unAckedMessageTracker cleanup on multi-topics batch ack (#26001)
+* [1ba9b7bc40e](https://github.com/datastax/pulsar/commit/1ba9b7bc40e) [fix][fn] Forward source message properties in Python runtime (#26191)
+* [5f3a59ec261](https://github.com/datastax/pulsar/commit/5f3a59ec261) [fix][broker] Fix silently dropped acknowledgement failures in PulsarMetadataEventSynchronizer (#26237)
+* [df8ec2aed22](https://github.com/datastax/pulsar/commit/df8ec2aed22) [fix][broker] Fix delayed message index data loss when trimming overlapping bucket snapshots (#26240)
+* [589f1038947](https://github.com/datastax/pulsar/commit/589f1038947) [fix][broker] Fix incorrect listener URLs returned by ModularLoadManager lookups (#26245)
+* [5c787de2af0](https://github.com/datastax/pulsar/commit/5c787de2af0) [fix][build][branch-4.0] Fix spotbugs failure in OffloadPoliciesImpl
+* [39d92eca7d4](https://github.com/datastax/pulsar/commit/39d92eca7d4) [fix][broker] Prevent completing replicated snapshot before marker publish (#26119)
+* [a2a06a32113](https://github.com/datastax/pulsar/commit/a2a06a32113) [fix][broker] Prevent stale topic unload cleanup from removing active cache entries (#26145)
+* [7f20ff5a664](https://github.com/datastax/pulsar/commit/7f20ff5a664) [fix][broker] Fix Key_Shared delivery stall when look-ahead triggers at the end of the topic (#26236)
+* [e57fe3629f8](https://github.com/datastax/pulsar/commit/e57fe3629f8) [fix][ml] Preserve ledger entries/size when transformLedgerInfo callback completes after a concurrent close (#26228)
+* [79197d19d46](https://github.com/datastax/pulsar/commit/79197d19d46) [fix][broker] Prevent stale read completions from stranding Failover subscriptions (#26174)
+* [10706e627df](https://github.com/datastax/pulsar/commit/10706e627df) [fix][meta] Complete handleMetadataEvent future exceptionally when the initial get fails (#26199)
+* [0f0e9fdfbc2](https://github.com/datastax/pulsar/commit/0f0e9fdfbc2) [fix][meta] Record get op stats on the correct completion branch in AbstractMetadataStore (#26201)
+* [c203013afb2](https://github.com/datastax/pulsar/commit/c203013afb2) [fix][meta] Fix RocksdbMetadataStore instanceId not advancing across restarts (#26218)
+* [744395c601a](https://github.com/datastax/pulsar/commit/744395c601a) [improve][offload] Support credentials from offload policies for S3 and Aliyun OSS drivers (#26232)
+* [29ad2619703](https://github.com/datastax/pulsar/commit/29ad2619703) [improve][misc] Upgrade Jetty to 12.1.11 (#26233)
+* [380033b8726](https://github.com/datastax/pulsar/commit/380033b8726) [fix][broker] Trigger max read position callback for messages published during transaction buffer recovery (#26234)
+* [ef5cfa7ec5e](https://github.com/datastax/pulsar/commit/ef5cfa7ec5e) [fix][broker] Check deliverAt before containsMessage in bucket addMessage (#26230)
+* [8866ef0d798](https://github.com/datastax/pulsar/commit/8866ef0d798) [improve][build] Upgrade docker base image Alpine to 3.24 (#26225)
+* [73e8244d263](https://github.com/datastax/pulsar/commit/73e8244d263) [improve][misc] Upgrade to Alpine 3.23 (#25180)
+* [55f2abb5bf3](https://github.com/datastax/pulsar/commit/55f2abb5bf3) [improve][build] Upgrade slog to 0.10.0 (#26226)
+* [bd9f79c5753](https://github.com/datastax/pulsar/commit/bd9f79c5753) [improve][broker][branch-4.0] Trace the asynchronous tasks in logs when loading topics (#26163) (#26224)
+* [5c0058d5e4a](https://github.com/datastax/pulsar/commit/5c0058d5e4a) [improve][misc][branch-4.0] Add CustomLog config for slog
+* [2733c5abe00](https://github.com/datastax/pulsar/commit/2733c5abe00) [fix][test] Fix flaky test `testCompactionPriority ` (#26198)
+* [b7bd9dcdd4c](https://github.com/datastax/pulsar/commit/b7bd9dcdd4c) [fix][misc][branch-4.0] Make log4j pattern compatible with slog which got pulled in by Oxia client upgrade
+* [31cf0ff316b](https://github.com/datastax/pulsar/commit/31cf0ff316b) License: Updated the required opentelemetry package version in LICENSE.bin.txt
+* [06d7a426c84](https://github.com/datastax/pulsar/commit/06d7a426c84) Checkstyle: Removed Ununused import of GenericRecord
+* [f218dfb3957](https://github.com/datastax/pulsar/commit/f218dfb3957) Fix binary license
+* [c52324dd188](https://github.com/datastax/pulsar/commit/c52324dd188) [fix][ci][branch-4.0] Fix OpenTelemetrySanityTest after Otel library upgrade
+* [c08d4442d7d](https://github.com/datastax/pulsar/commit/c08d4442d7d) [fix][broker][branch-4.2] Fix admin API HTTP 400 FAIL_ON_TRAILING_TOKENS when a broker interceptor is loaded (#26223)
+* [1cb25a1ecfb](https://github.com/datastax/pulsar/commit/1cb25a1ecfb) [fix][fn] Return inputSpecs consumerProperties in function GET info (#26217)
+* [1b0886a0ec6](https://github.com/datastax/pulsar/commit/1b0886a0ec6) [fix][meta] Fix NPE in shouldIgnoreEvent when MetadataEvent options is null (#26200)
+* [1ce63b71080](https://github.com/datastax/pulsar/commit/1ce63b71080) [fix][broker] Prevent partition expansion from inheriting delayed-delivery bucket state (#26179)
+* [41f14aa46bd](https://github.com/datastax/pulsar/commit/41f14aa46bd) [improve][broker] Skip system cursor when check inactive cursor. (#26149)
+* [3f4f21f0163](https://github.com/datastax/pulsar/commit/3f4f21f0163) [fix][client] Fix lookup permit double-release, waiting queue starvation and timeout-response races in ClientCnx (#26143)
+* [962d2fe0f38](https://github.com/datastax/pulsar/commit/962d2fe0f38) [improve][meta] Upgrade Oxia client to 0.9.4 (#26193)
+* [0a445bc2292](https://github.com/datastax/pulsar/commit/0a445bc2292) [improve][meta] Upgrade Oxia client to 0.8.0 (#25964)
+* [ffa661742c9](https://github.com/datastax/pulsar/commit/ffa661742c9) [fix][broker] Fix bucket delayed message index metrics reset on scrape (#26171)
+* [943284bc81f](https://github.com/datastax/pulsar/commit/943284bc81f) [fix][broker] Read subscription properties directly from cursor (#26159)
+* [306cd87aed3](https://github.com/datastax/pulsar/commit/306cd87aed3) [fix][client] Fix UnAckedMessageRedeliveryTracker to skip cancelled timeouts (#26043)
+* [fecf4e6a7dd](https://github.com/datastax/pulsar/commit/fecf4e6a7dd) [fix][client] Sync ackSet in client with broker to stop acked messages reaching the DLQ (#26135)
+* [c9e2f2442c4](https://github.com/datastax/pulsar/commit/c9e2f2442c4) [fix][ci] Upgrade sandboxed-trivy-action to approved sha (#26169)
+* [16a43b1f13d](https://github.com/datastax/pulsar/commit/16a43b1f13d) [improve][ci] Replace trivy-action with sandboxed-trivy-action (#25480)
+* [54daf296803](https://github.com/datastax/pulsar/commit/54daf296803) [fix][client] Fix lookup request semaphore not release problem (#25038)
+* [ce5e90c33f3](https://github.com/datastax/pulsar/commit/ce5e90c33f3) Fix compile issue
+* [585b43eb3b7](https://github.com/datastax/pulsar/commit/585b43eb3b7) Fix compile issue
+* [c980f669fa5](https://github.com/datastax/pulsar/commit/c980f669fa5) [fix][broker] Fix `getEstimatedSizeSinceMarkDeletePosition` throw `IllegalArgumentException` (#26184)
+* [29df16fc584](https://github.com/datastax/pulsar/commit/29df16fc584) [fix][client] Preserve null values in pulsar-admin schema output (#26196)
+* [dff48923f3b](https://github.com/datastax/pulsar/commit/dff48923f3b) [fix][sec][branch-4.0] Upgrade Hadoop to 3.5.0 (#26195)
+* [7f8114ad554](https://github.com/datastax/pulsar/commit/7f8114ad554) [improve][monitor][branch-4.0] Upgrade OpenTelemetry libraries (#26165)
+* [1d880e7994a](https://github.com/datastax/pulsar/commit/1d880e7994a) [improve][monitor] Upgrade OpenTelemetry to 1.56.0, Otel instrumentation to 2.21.0 and Otel semconv to 1.37.0 (#24994)
+* [5a9ecd92474](https://github.com/datastax/pulsar/commit/5a9ecd92474) [fix][sec][branch-4.0] Upgrade Netty to 4.1.136.Final (#26170)
+* [643223e5348](https://github.com/datastax/pulsar/commit/643223e5348) [fix][ci][branch-4.0] Skip testMarkReplicatedDeletesEmptyParentNodes for Etcd
+* [fe02bc0ab30](https://github.com/datastax/pulsar/commit/fe02bc0ab30) [fix][metadata] Fix orphaned UR parent nodes not cleaned up with Oxia metadata backend (#26158)
+* [16a14239608](https://github.com/datastax/pulsar/commit/16a14239608) [fix][broker][branch-4.0] Fix NOT_FOUND for topic policy operations on idle non-persistent topics
+* [0485493ca7f](https://github.com/datastax/pulsar/commit/0485493ca7f) [fix][sec] Bump github.com/go-jose/go-jose/v4 from 4.1.3 to 4.1.4 in /pulsar-function-go (#26142)
+* [a4da1de0610](https://github.com/datastax/pulsar/commit/a4da1de0610) [fix][fn] Reorder Function Worker shutdown to stop scheduler before runtime manager (#26136)
+* [c6054a96db5](https://github.com/datastax/pulsar/commit/c6054a96db5) [fix][sec] Upgrade pulsar-client-go to v0.20.0 in pulsar-function-go, also address CVEs (#26140)
+* [cefe9eb19be](https://github.com/datastax/pulsar/commit/cefe9eb19be) [improve][fn] Upgrade pulsar-client-python to 3.13.0 (#26139)
+* [4ee98ed74d7](https://github.com/datastax/pulsar/commit/4ee98ed74d7) [improve][broker] Load topic policies on non-persistent topic load and gate the policy replay (#26134)
+* [6bbbc6f39a3](https://github.com/datastax/pulsar/commit/6bbbc6f39a3) [fix][broker] Don't let a closing topic-policies reader abort a concurrent cache-init reload (#26132)
+* [da1a60ae95a](https://github.com/datastax/pulsar/commit/da1a60ae95a) [fix][test] Run makeReadEntryProbFail's errorOrNot on a caller-provided executor (#26123)
+* [84df92fd477](https://github.com/datastax/pulsar/commit/84df92fd477) [fix][test] Fix flaky PersistentTopicsTest setup caused by concurrent Mockito stubbing (#26083)
+* [2afd6bf3307](https://github.com/datastax/pulsar/commit/2afd6bf3307) [fix][test] Fix flaky SchemaServiceTest.testSchemaRegistryMetrics (#25645)
+* [842d00e08e0](https://github.com/datastax/pulsar/commit/842d00e08e0) [fix][test] Fix flaky AuditorBookieTest.testBookieClusterRestart (#26122)
+* [eeab93a6a33](https://github.com/datastax/pulsar/commit/eeab93a6a33) [fix][broker] Fix replication stall when a cursor rewind skips an in-flight read (#26106)
+* [eb9375d571e](https://github.com/datastax/pulsar/commit/eb9375d571e) Revert "[improve][test]Add test: test/testTopicPartitionCannotBeCreatedAfterTopicDeleted (#26038)"
+* [415d6d7d097](https://github.com/datastax/pulsar/commit/415d6d7d097) [fix][broker] Forward topic policy updates after init failures (#26110)
+* [0ba46a0aba7](https://github.com/datastax/pulsar/commit/0ba46a0aba7) [fix][broker] Fix replicator getting stuck under rate limiter throttling and honor readBatchSize/maxReadSizeBytes on the default read path (#26005)
+* [ffde42ad6d2](https://github.com/datastax/pulsar/commit/ffde42ad6d2) [improve][broker] Improve dispatch performance by summing entry bytes with a loop (#26055)
+* [de472dcba7e](https://github.com/datastax/pulsar/commit/de472dcba7e) [fix][broker] Guard BucketDelayedDeliveryTracker.nextDeliveryTime against empty queues (#26080)
+* [ae736acfe88](https://github.com/datastax/pulsar/commit/ae736acfe88) [improve][broker] Trim orphaned bucket snapshots when ledgers are deleted (#25984)
+* [f16c8c50a7b](https://github.com/datastax/pulsar/commit/f16c8c50a7b) [fix][broker]Do not trigger topic GC if replication is still active (#25915)
+* [bbf0c9f41ed](https://github.com/datastax/pulsar/commit/bbf0c9f41ed) [feat][broker] Expose managed ledger properties via topic internal stats (#26079)
+* [9aae6c65a8e](https://github.com/datastax/pulsar/commit/9aae6c65a8e) [fix][broker] Avoid attaching a consumer to a migrated non-persistent topic on subscribe (#26075)
+* [67212580617](https://github.com/datastax/pulsar/commit/67212580617) [fix][meta] Run ledger-underreplication notification callbacks off the metadata-store listener thread (#26065)
+* [83efe1f957a](https://github.com/datastax/pulsar/commit/83efe1f957a) [fix][client] Run the failover health probe off the Netty event-loop thread (#26064)
+* [ec4cda2d0c7](https://github.com/datastax/pulsar/commit/ec4cda2d0c7) [fix][test] Make SameAuthParamsLookupAutoClusterFailoverTest less timing-sensitive (#25675)
+* [057c1c1a1c4](https://github.com/datastax/pulsar/commit/057c1c1a1c4) [improve][test]Add test: test/testTopicPartitionCannotBeCreatedAfterTopicDeleted (#26038)
+* [fcd2bf3b5ea](https://github.com/datastax/pulsar/commit/fcd2bf3b5ea) [fix][broker] Fix geo-replication stuck after a failed publish to the remote cluster (#26002)
+* [f855f0c359d](https://github.com/datastax/pulsar/commit/f855f0c359d) [fix] functions: Run worker leader-election off the consumer event-listener thread (#26059)
+* [3c779c451fc](https://github.com/datastax/pulsar/commit/3c779c451fc) [fix][sec] Upgrade jline to 4.2.1 and picocli to 4.7.7, drop unused jline2 (#26068)
+* [8390f8f8241](https://github.com/datastax/pulsar/commit/8390f8f8241) [fix][broker] Avoid blocking the bundle-throughput lookup on per-bundle metadata reads (#26054)
+* [0b8ae2595bb](https://github.com/datastax/pulsar/commit/0b8ae2595bb) [fix][broker] Avoid blocking the dispatcher close path on delayed-delivery tracker close (#26053)
+* [3c9f35d567e](https://github.com/datastax/pulsar/commit/3c9f35d567e) [fix][proxy] Avoid blocking the proxy IO thread on a cold broker cache (#26052)
+* [81e12abadae](https://github.com/datastax/pulsar/commit/81e12abadae) [fix][broker] Avoid blocking metadata read on the IO thread when redirecting migrated producers/consumers (#26051)
+* [effd427cc83](https://github.com/datastax/pulsar/commit/effd427cc83) [fix][broker] Prevent topic policy initialization race with a buffering listener wrapper (#26044)
+* [5cc4afbb3d9](https://github.com/datastax/pulsar/commit/5cc4afbb3d9) [fix][test] Fix flaky testPrepareInitPoliciesCacheAsyncThrowExceptionAfterCreateReader (#26049)
+* [ada7ecd6b6a](https://github.com/datastax/pulsar/commit/ada7ecd6b6a) [fix][broker] Run the message expiry check off the topic policy update path (#26040)
+* [8fcb18db6e5](https://github.com/datastax/pulsar/commit/8fcb18db6e5) [fix][broker] Run topic policy notifications on the topic-ordered executor (#26042)
+* [9e7371b30cc](https://github.com/datastax/pulsar/commit/9e7371b30cc) [fix][fn] Make exclusiveLeaderProducer volatile in FunctionMetaDataManager (#26046)
+* [f214c5380ea](https://github.com/datastax/pulsar/commit/f214c5380ea) [improve][fn] Upgrade pulsar-client-python to 3.12.0 (#26033)
+* [4b98f9c2785](https://github.com/datastax/pulsar/commit/4b98f9c2785) [fix][broker] Fail fast for load balancer misconfigurations instead of falling back to SimpleLoadManagerImpl (#26031)
+* [315c6729b83](https://github.com/datastax/pulsar/commit/315c6729b83) [fix][broker] Don't let a stuck or aborted topic policies cache init make a namespace's topics unloadable (#26025)
+* [735fa7c82d1](https://github.com/datastax/pulsar/commit/735fa7c82d1) [fix][broker] Fix forced topic/namespace deletion still hanging when the compaction reader reconnect stalls (#26026)
+* [04c9a5ba5fe](https://github.com/datastax/pulsar/commit/04c9a5ba5fe) [fix][broker] Fix forced topic/namespace deletion hanging or failing when compaction is in progress (#26016)
+* [59e2e770608](https://github.com/datastax/pulsar/commit/59e2e770608) [fix][broker] Prevent subscribe rate limit from stalling compaction and blocking forced deletion (#26015)
+* [97493733edd](https://github.com/datastax/pulsar/commit/97493733edd) [fix][build][branch-4.0] Upgrade docker/setup-qemu-action to v4.1.0
+* [a18d9ad8b10](https://github.com/datastax/pulsar/commit/a18d9ad8b10) [fix][meta] Keep the leader value in the election cycle and make leader reads authoritative (#26000)
+* [bd8965bb7e0](https://github.com/datastax/pulsar/commit/bd8965bb7e0) [fix][broker] Fix compacted read could be stuck forever or message loss due to cursor mark delete (#25998)
+* [245aa92592d](https://github.com/datastax/pulsar/commit/245aa92592d) [fix][test][branch-4.0] Backport configurable read/add delays in PulsarMockBookKeeper
+* [70f1c697701](https://github.com/datastax/pulsar/commit/70f1c697701) [fix][sec][4.0_ds] Fixing kotlin-stdlib dependency version for pulsar-io-kinesis with CVE-2020-29582 (#765)
+* [1ecfa8b00c5](https://github.com/datastax/pulsar/commit/1ecfa8b00c5) Fix license headers after version upgrade
+* [6c7100fb7e3](https://github.com/datastax/pulsar/commit/6c7100fb7e3) [fix][sec][branch-4.2] Upgrade Jackson version to 2.18.9 (#26186)
+* [f80f3f4233d](https://github.com/datastax/pulsar/commit/f80f3f4233d) [fix][test][branch-4.0] Adapt ConfigurationDataUtilsTest to Jackson 2.18.8 InetSocketAddress deserialization
+* [9a4d89b736f](https://github.com/datastax/pulsar/commit/9a4d89b736f) [fix][sec][branch-4.0] Upgrade Jackson version to 2.18.8 (#26098)
+* [8505ada4063](https://github.com/datastax/pulsar/commit/8505ada4063) Start release 4.0.11.1-SNAPSHOT
+
+### `lunastreaming-all` distribution
+
+<details>
+<summary>CLI extensions</summary>
+
+| Name | Description | Version | File |
+| ---- | ----------- |---------|------|
+| [cassandra-cdc](https://pulsar.apache.org/docs/io-connectors) | Cassandra CDC - Pulsar Admin Custom Commands | 2.3.10 | pulsar-cassandra-admin-2.3.10-nar.nar |
+| [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - Pulsar Admin Custom Commands | 9.0.3 | pulsar-jms-admin-9.0.3-nar.nar |
+</details>
+<details>
+<summary>Filters</summary>
+
+| Name | Description | Version | File |
+| ---- | ----------- |---------|------|
+| [jms](https://pulsar.apache.org/docs/io-connectors) | Starlight for JMS - support for server side filters | 9.0.3 | pulsar-jms-9.0.3-nar.nar |
+</details>
+<details>
+<summary>Protocol handlers</summary>
+
+| Name | Description | Version | File |
+| ---- | ----------- |---------|------|
+| [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Protocol Handler | 4.0.3.8 | pulsar-protocol-handler-kafka-4.0.3.8.nar |
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 4.0.0.4 | starlight-rabbitmq-4.0.0.4.nar |
+</details>
+<details>
+<summary>Proxy extensions</summary>
+
+| Name | Description | Version | File |
+| ---- | ----------- |---------|------|
+| [rabbitmq](https://github.com/datastax/starlight-for-rabbitmq) | Starlight for RabbitMQ Proxy Extension | 4.0.0.4 | starlight-rabbitmq-4.0.0.4.nar |
+| [kafka](https://github.com/datastax/starlight-for-kafka) | Kafka Proxy Extension | 4.0.3.8 | pulsar-kafka-proxy-4.0.3.8.nar |
+</details>
+<details>
+<summary>Sinks</summary>
+
+| Name | Description | Version | File |
+| ---- | ----------- |---------|------|
+| [cassandra-enhanced](https://github.com/datastax/pulsar-sink) | A DataStax Pulsar Sink to load records from Pulsar topics to Apache Cassandra(R) or DataStax Enterprise(DSE) | 1.6.17 | cassandra-enhanced-pulsar-sink-1.6.17-nar.nar |
+| [cloud-storage](https://github.com/streamnative/pulsar-io-cloud-storage) | Writes data into cloud storage | 3.2.10 | pulsar-io-cloud-storage-3.2.10.nar |
+| [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 4.0.13.0 | pulsar-io-data-generator-4.0.13.0.nar |
+| [elastic_search](https://pulsar.apache.org/docs/io-connectors) | Writes data into Elastic Search | 4.0.13.0 | pulsar-io-elastic-search-4.0.13.0.nar |
+| [http](https://pulsar.apache.org/docs/io-connectors) | Writes data to an HTTP server (Webhook) | 4.0.13.0 | pulsar-io-http-4.0.13.0.nar |
+| [jdbc-clickhouse](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for ClickHouse | 4.0.13.0 | pulsar-io-jdbc-clickhouse-4.0.13.0.nar |
+| [jdbc-mariadb](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for MariaDB | 4.0.13.0 | pulsar-io-jdbc-mariadb-4.0.13.0.nar |
+| [jdbc-openmldb](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for OpenMLDB | 4.0.13.0 | pulsar-io-jdbc-openmldb-4.0.13.0.nar |
+| [jdbc-postgres](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for PostgreSQL | 4.0.13.0 | pulsar-io-jdbc-postgres-4.0.13.0.nar |
+| [jdbc-sqlite](https://pulsar.apache.org/docs/io-connectors) | JDBC sink for SQLite | 4.0.13.0 | pulsar-io-jdbc-sqlite-4.0.13.0.nar |
+| [kafka](https://pulsar.apache.org/docs/io-connectors) | Kafka source and sink connector | 4.0.13.0 | pulsar-io-kafka-4.0.13.0.nar |
+| [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 4.0.13.0 | pulsar-io-kinesis-4.0.13.0.nar |
+| [lakehouse](https://pulsar.apache.org/docs/io-connectors) | Lakehouse connectors | 3.3.5.7 | pulsar-io-lakehouse-3.3.5.7-cloud.nar |
+| [snowflake](https://github.com/datastax/snowflake-connector) | Snowflake Connector | 0.2.6 | pulsar-snowflake-connector-0.2.6.nar |
+</details>
+<details>
+<summary>Sources</summary>
+
+| Name | Description | Version | File |
+| ---- | ----------- |---------|------|
+| [cassandra-source](https://github.com/datastax/cdc-for-apache-cassandra) | Read data from Cassandra | 2.3.10 | pulsar-cassandra-source-2.3.10.nar |
+| [data-generator](https://pulsar.apache.org/docs/io-connectors) | Test data generator source | 4.0.13.0 | pulsar-io-data-generator-4.0.13.0.nar |
+| [debezium-mongodb](https://pulsar.apache.org/docs/io-connectors) | Debezium MongoDb Source | 4.0.13.0 | pulsar-io-debezium-mongodb-4.0.13.0.nar |
+| [debezium-mssql](https://pulsar.apache.org/docs/io-connectors) | Debezium Microsoft SQL Server Source | 4.0.13.0 | pulsar-io-debezium-mssql-4.0.13.0.nar |
+| [debezium-mysql](https://pulsar.apache.org/docs/io-connectors) | Debezium MySql Source | 4.0.13.0 | pulsar-io-debezium-mysql-4.0.13.0.nar |
+| [debezium-oracle](https://pulsar.apache.org/docs/io-connectors) | Debezium Oracle Source | 4.0.13.0 | pulsar-io-debezium-oracle-4.0.13.0.nar |
+| [debezium-postgres](https://pulsar.apache.org/docs/io-connectors) | Debezium Postgres Source | 4.0.13.0 | pulsar-io-debezium-postgres-4.0.13.0.nar |
+| [kafka](https://pulsar.apache.org/docs/io-connectors) | Kafka source and sink connector | 4.0.13.0 | pulsar-io-kafka-4.0.13.0.nar |
+| [kinesis](https://pulsar.apache.org/docs/io-connectors) | Kinesis connectors | 4.0.13.0 | pulsar-io-kinesis-4.0.13.0.nar |
+| [lakehouse](https://pulsar.apache.org/docs/io-connectors) | Lakehouse connectors | 3.3.5.7 | pulsar-io-lakehouse-3.3.5.7-cloud.nar |
+</details>
+<details>
+<summary>Functions</summary>
+
+| Name | Description | Version | File |
+| ---- | ----------- |---------|------|
+| [ai-tools](https://pulsar.apache.org/docs/io-connectors) | Generative AI tools | 3.2.6 | pulsar-ai-tools-3.2.6.nar |
+| [transforms](https://pulsar.apache.org/docs/io-connectors) | Transformation function | 3.2.6 | pulsar-transformations-3.2.6.nar |
+</details>
+
+See the [environment variables](https://github.com/riptano/pulsar-distro/blob/ls_4.0.13_0/build.json) used for the build
+
+
 ## Luna Streaming Distribution  4.0.11 0
 This is a maintenance release of the DataStax Luna Streaming Distribution for 4.0 which includes important stability and security updates for Luna Streaming, as well as for the various connectors packaged alongside it, such as sinks, sources, functions, protocol extensions, proxy extensions, filters, and client extensions.
 
