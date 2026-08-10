@@ -13,10 +13,10 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 * Upgraded Management API to version 0.1.124. (DSP-25241)
 
 ## 6.9.25 DSE Node/DseTool
-* Replaced obsolete command egrep with grep -E in scripts and tools. (DSP-25222)
+* Replaced obsolete command `egrep` with `grep -E` in scripts and tools. (DSP-25222)
 
 ## 6.9.25 DSE Miscellaneous
-* Fixed incorrect Detected corrupted type log errors for legacy secondary indexes on user-defined type (UDT) columns. (DSP-25213)
+* Fixed incorrect issuance of "Detected corrupted type" log errors for legacy secondary indexes on user-defined type (UDT) columns. (DSP-25213)
 
 ## 6.9.25 DSE CVE
 * Upgraded Apache Tomcat to version 9.0.120. (DSP-25226, [CVE-2026-59083](https://nvd.nist.gov/vuln/detail/CVE-2026-59083), [CVE-2026-59084](https://nvd.nist.gov/vuln/detail/CVE-2026-59084))
