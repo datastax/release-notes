@@ -8,6 +8,16 @@ valid updates since 6.8.46 that are not related to the driver upgrade will remai
 
 Significant QA process improvements are in process to avoid similar future issues.
 
+# Release Notes for OpsCenter 6.8.53
+13 Aug 2026
+
+## Security
+* Updated version of mchange to address CVE-2026-55153. (OPSC-17985)
+* Updated version of org.apache.commons:commons-configuration2 to address CVE-2026-45205. (OPSC-17986)
+* Upgraded commons-compress from 1.10 to 1.27.1 (bundled inside jython-standalone). Upgraded Go from 1.24.2 to 1.26.5 to resolve 33 Go stdlib CVEs. (OPSC-17995)
+* Upgraded jackson to 2.21.5 to address CVE-2026-54515. (OPSC-17998)
+* Upgraded Netty from 4.1.135 to 4.1.136 to address CVEs. (OPSC-18009)
+
 # Release Notes for OpsCenter 6.8.52
 30 June 2026
 
