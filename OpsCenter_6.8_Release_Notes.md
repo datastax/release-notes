@@ -22,7 +22,7 @@ Significant QA process improvements are in process to avoid similar future issue
 30 June 2026
 
 ## Backup Service
-* Fixed a bug that made OpsCenter unable to work with tables containing vector columns. (OPSC-17965)
+* Fixed a mismatch between the driver versions used by `opscenterd` and the agents. The mismatch caused backups to fail in multiple situations. This fix also officially adds backup support for tables with vector columns. (OPSC-17965)
 
 ## Monitoring
 * Reduced the agent logging of the missing metrics from warn to trace. (OPSC-17919)
