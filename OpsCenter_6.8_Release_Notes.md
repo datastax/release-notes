@@ -25,7 +25,7 @@ Significant QA process improvements are in process to avoid similar future issue
 * Fixed two issues that could contribute to opscenterd having too many open files. (OPSC-18023)
 
 ## Provisioning
-* When installing the DataStax Agent via LCM, meld will now retry up to 3 times (waiting 5 minutes between attempts) if the dpkg/apt package lock is held by another process, improving reliability on systems where background package management activity may be running concurrently. (OPSC-18031)
+* When installing the DataStax Agent with LCM, meld will now retry up to 3 times (waiting 5 minutes between attempts) if the dpkg/apt package lock is held by another process. This enhancement improves reliability on systems where background package management activity might run concurrently. (OPSC-18031)
 
 # Release Notes for OpsCenter 6.8.53
 13 Aug 2026
