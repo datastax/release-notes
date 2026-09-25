@@ -8,6 +8,25 @@ valid updates since 6.8.46 that are not related to the driver upgrade will remai
 
 Significant QA process improvements are in process to avoid similar future issues.
 
+# Release Notes for OpsCenter 6.8.54
+24 Sept 2026
+
+## Security
+* Added OAuth2/OIDC support to pluggable authentication methods. (OPSC-16791)
+* Fixed an issue where the truststore was not correctly used for certificate validation on the STOMP connection. (OPSC-18018)
+* Replaced the Jetty HTTP server (EOL, unfixable CVEs on Java 8) with Aleph/Netty in the agent and LCM components. Addresses CVE-2023-40167, CVE-2025-11143, CVE-2024-6763, CVE-2019-10247, CVE-2021-28165, CVE-2023-36478, CVE-2024-8184, CVE-2024-13009, CVE-2020-27223, CVE-2023-26048, CVE-2026-2332, CVE-2020-27218. (OPSC-17880)
+* Upgraded `org.bouncycastle` from `1.84` to `1.85` to address CVE-2026-8763. (OPSC-18021)
+* Upgraded `reactor-core` to version `3.8.7` to address CVE-2026-47857. (OPSC-18027)
+* Upgraded `jackson-databind` to version `2.21.6` to address CVE-2026-68497. (OPSC-18035)
+* Upgraded `jsch` to version `2.28.6` to address CVE-2026-86231. (OPSC-18036)
+* Upgraded `Netty` to version `4.1.138.Final` to address CVE-2026-89044. (OPSC-18037)
+
+## Core
+* Fixed two issues that could contribute to opscenterd having too many open files. (OPSC-18023)
+
+## Provisioning
+* When installing the DataStax Agent with LCM, meld will now retry up to 3 times (waiting 5 minutes between attempts) if the dpkg/apt package lock is held by another process. This enhancement improves reliability on systems where background package management activity might run concurrently. (OPSC-18031)
+
 # Release Notes for OpsCenter 6.8.53
 13 Aug 2026
 
