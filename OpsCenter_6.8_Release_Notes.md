@@ -33,9 +33,10 @@ Significant QA process improvements are in process to avoid similar future issue
 ## Security
 * Updated to `mchange-commons-java` version 0.6.0 to address CVE-2026-55153. (OPSC-17985)
 * Updated to `org.apache.commons:commons-configuration2` version 2.15.0 to address CVE-2026-45205. (OPSC-17986)
-* Upgraded `commons-compress` version from 1.10 to 1.27.1 (bundled inside `jython-standalone`). Upgraded `Go` version from 1.24.2 to 1.26.5 to resolve 33 Go `stdlib` CVEs. (OPSC-17995)
+* Upgraded `commons-compress` from version 1.10 to 1.27.1 (embedded inside `jython-standalone`) to address CVE-2021-35515, CVE-2021-35516, CVE-2021-35517, CVE-2021-36090, and CVE-2024-25710. Confirmed that CVE-2016-4000 (arbitrary code execution via crafted serialized `PyFunction` object) is addressed in the bundled `jython-standalone` by the existing fix that disables `PyFunction` deserialization. (OPSC-17995, OPSC-18029)
+* Upgraded `Go` from version 1.24.2 to 1.26.5 to address Go `stdlib` CVEs affecting the LCM `meld` component: CVE-2025-0913, CVE-2025-22873, CVE-2025-22874, CVE-2025-4673, CVE-2025-47906, CVE-2025-47907, CVE-2025-47912, CVE-2025-58183, CVE-2025-58185, CVE-2025-58186, CVE-2025-58187, CVE-2025-58188, CVE-2025-58189, CVE-2025-61723, CVE-2025-61724, CVE-2025-61725, CVE-2025-61726, CVE-2025-61727, CVE-2025-61728, CVE-2025-61729, CVE-2025-61730, CVE-2025-68121, CVE-2026-25679, CVE-2026-27139, CVE-2026-27142, CVE-2026-27145, CVE-2026-32280, CVE-2026-32281, CVE-2026-32282, CVE-2026-32283, CVE-2026-32288, CVE-2026-32289, CVE-2026-33811, CVE-2026-33814, CVE-2026-39819, CVE-2026-39820, CVE-2026-39822, CVE-2026-39823, CVE-2026-39825, CVE-2026-39826, CVE-2026-39836, CVE-2026-42499, CVE-2026-42504, CVE-2026-42505, CVE-2026-42507. (OPSC-17995)
 * Upgraded `jackson` to version 2.21.5 to address CVE-2026-54515. (OPSC-17998)
-* Upgraded `Netty` version from 4.1.135 to 4.1.136 to address CVEs. (OPSC-18009)
+* Upgraded `Netty` from version 4.1.135 to 4.1.136 to address CVE-2026-55831. (OPSC-18009)
 
 # Release Notes for OpsCenter 6.8.52
 30 June 2026
