@@ -2,6 +2,42 @@
 DSE 6.9.x is compatible with Apache Cassandra&trade; 3.11 and adds additional production-certified changes, if any.
 Components that are indicated with an asterisk (&ast;) (if any) are known to be updated since the prior patch version.
 
+# Release notes for 6.9.26
+5 October 2026
+
+## Components versions for DSE 6.9.26
+ * Apache Solr™ 6.0.1.5.2994&ast;
+ * Apache Spark™ 2.5.0.19&ast;
+ * Apache TinkerPop™ 3.4.15-20260904-054eb244&ast;
+ * Apache Tomcat® 9.0.120
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.137.1.dse&ast;
+ * Spark JobServer 0.8.0.57
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.9.26 DSE Core
+* Added Python version 3.13 support in `cqlsh`. (DSP-25207)
+* Enabled Transparent Data Encryption (TDE) on secondary indexes after executing `nodetool upgradesstables`, ensuring proper index data rekeying by subsequently running `nodetool rebuild_index`. (DSP-24957)
+* Reduced snapshot disk utilization by processing the largest snapshots first and deleting them immediately after upload, rather than waiting for all files to finish uploading. (DSP-25231)
+* sstableloader can now bulk-load AstraDB Serverless SSTable dumps into a DSE 6.9 cluster. (DSP-25246)
+* Fixed the scrubbing mechanism for SSTables that have static columns with overflowed TTL. (DSP-25097)
+
+## 6.9.26 DSE Cassandra
+* Improved the resiliency of the GCS backup uploads by extending the retry strategy. Each uploaded chunk is now retried independently. (DSP-25256)
+* Fixed an issue where node decommissioning failed during data streaming when the node neared completing the handover of its owned ranges. (DSP-25264)
+
+## 6.9.26 DSE Security
+* Validate SSL certificates on hot reload and log warnings when invalid/expired certificates are found. (DSP-25237)
+
+## 6.9.26 DSE CVE
+* Upgraded okio to version 1.17.6. (DSP-25277, [CVE-2023-3635](https://nvd.nist.gov/vuln/detail/CVE-2023-3635))
+* Upgraded Logback to version 1.6.3 and SLF4J to version 2.0.18. (DSP-24862, [CVE-2024-12798](https://nvd.nist.gov/vuln/detail/CVE-2024-12798), [CVE-2024-12801](https://nvd.nist.gov/vuln/detail/CVE-2024-12801), [CVE-2025-11226](https://nvd.nist.gov/vuln/detail/CVE-2025-11226), [CVE-2026-1225](https://nvd.nist.gov/vuln/detail/CVE-2026-1225), [CVE-2026-9828](https://nvd.nist.gov/vuln/detail/CVE-2026-9828), [CVE-2026-10532](https://nvd.nist.gov/vuln/detail/CVE-2026-10532), [CVE-2026-19880](https://nvd.nist.gov/vuln/detail/CVE-2026-19880))
+* Upgraded to jQuery version 3.5.1 in Apache Spark Core. (DSP-25227, [CVE-2020-11022](https://nvd.nist.gov/vuln/detail/CVE-2020-11022))
+* Upgraded Jackson FasterXML to version 2.18.9. (DSP-25228, [CVE-2026-59888](https://nvd.nist.gov/vuln/detail/CVE-2026-59888), [CVE-2026-77310](https://nvd.nist.gov/vuln/detail/CVE-2026-77310), [CVE-2026-54512](https://nvd.nist.gov/vuln/detail/CVE-2026-54512), [CVE-2026-54513](https://nvd.nist.gov/vuln/detail/CVE-2026-54513), [CVE-2026-54514](https://nvd.nist.gov/vuln/detail/CVE-2026-54514), [CVE-2026-54515](https://nvd.nist.gov/vuln/detail/CVE-2026-54515), [CVE-2026-59889](https://nvd.nist.gov/vuln/detail/CVE-2026-59889))
+* Upgraded Netty to version 4.1.137.Final. (DSP-25260, [CVE-2026-59901](https://nvd.nist.gov/vuln/detail/CVE-2026-59901), [CVE-2026-56745](https://nvd.nist.gov/vuln/detail/CVE-2026-56745), [CVE-2026-56822](https://nvd.nist.gov/vuln/detail/CVE-2026-56822), [CVE-2026-56821](https://nvd.nist.gov/vuln/detail/CVE-2026-56821), [CVE-2026-56820](https://nvd.nist.gov/vuln/detail/CVE-2026-56820), [CVE-2026-56817](https://nvd.nist.gov/vuln/detail/CVE-2026-56817), [CVE-2026-55851](https://nvd.nist.gov/vuln/detail/CVE-2026-55851), [CVE-2026-59921](https://nvd.nist.gov/vuln/detail/CVE-2026-59921), [CVE-2026-59920](https://nvd.nist.gov/vuln/detail/CVE-2026-59920), [CVE-2026-59919](https://nvd.nist.gov/vuln/detail/CVE-2026-59919), [CVE-2026-59900](https://nvd.nist.gov/vuln/detail/CVE-2026-59900), [CVE-2026-59899](https://nvd.nist.gov/vuln/detail/CVE-2026-59899), [CVE-2026-59898](https://nvd.nist.gov/vuln/detail/CVE-2026-59898), [CVE-2026-56819](https://nvd.nist.gov/vuln/detail/CVE-2026-56819), [CVE-2026-56818](https://nvd.nist.gov/vuln/detail/CVE-2026-56818), [CVE-2026-56746](https://nvd.nist.gov/vuln/detail/CVE-2026-56746))
+
 # Release notes for 6.9.25
 10 August 2026
 
