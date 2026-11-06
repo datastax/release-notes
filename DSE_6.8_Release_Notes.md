@@ -4,6 +4,38 @@ Components that are indicated with an asterisk (&ast;) (if any) are known to be 
 
 Release notes of versions prior to 6.8.4 can be found [here](https://docs.datastax.com/en/dse/6.8/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 6.8.67
+9 November 2026
+
+## Components versions for DSE 6.8.67
+ * Apache Solr™ 6.0.1.4.2998
+ * Apache Spark™ 2.4.0.47&ast;
+ * Apache TinkerPop™ 3.4.14-20260904-0b8cd768
+ * Apache Tomcat® 9.0.123&ast;
+ * DSE Java Driver 1.10.0-dse-20241015 (DSE *internal-only* version)
+ * Netty 4.1.137.1.dse
+ * Spark JobServer 0.8.0.57
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 6.8.67 DSE Core
+* Improved logging/monitoring for commit log replay. (DSP-25212)
+* Added metrics and StatusLogger diagnostics to track and identify write stalls waiting in TPC queues during memtable flushes. (DSP-25242)
+* Fixed an issue where a table whose bloom filter would exceed 16GB made background compaction fail and retry in an endless loop. (DSP-25293)
+
+## 6.8.67 DSE Docker
+* Added missing numactl utilities to Docker images for performance improvements when running on NUMA nodes. (DSP-25369)
+
+## 6.8.67 DSE CVE
+* Upgraded Bouncy Castle to version 1.86. (DSP-25294, [Was too long. Amend manually during release.](https://nvd.nist.gov/vuln/detail/Was too long. Amend manually during release.))
+* Upgraded apache mina core to 2.0.31. (DSP-25311, [CVE-2026-94301](https://nvd.nist.gov/vuln/detail/CVE-2026-94301))
+* Upgraded Tomcat to version 9.0.122. (DSP-25319, [CVE-2026-73581](https://nvd.nist.gov/vuln/detail/CVE-2026-73581), [CVE-2026-75973](https://nvd.nist.gov/vuln/detail/CVE-2026-75973), [CVE-2026-77756](https://nvd.nist.gov/vuln/detail/CVE-2026-77756), [CVE-2026-77762](https://nvd.nist.gov/vuln/detail/CVE-2026-77762), [CVE-2026-78383](https://nvd.nist.gov/vuln/detail/CVE-2026-78383), [CVE-2026-78437](https://nvd.nist.gov/vuln/detail/CVE-2026-78437), [CVE-2026-86350](https://nvd.nist.gov/vuln/detail/CVE-2026-86350), [CVE-2026-65182](https://nvd.nist.gov/vuln/detail/CVE-2026-65182), [CVE-2026-65183](https://nvd.nist.gov/vuln/detail/CVE-2026-65183), [CVE-2026-65637](https://nvd.nist.gov/vuln/detail/CVE-2026-65637), [CVE-2026-65905](https://nvd.nist.gov/vuln/detail/CVE-2026-65905), [CVE-2026-65927](https://nvd.nist.gov/vuln/detail/CVE-2026-65927), [CVE-2026-66422](https://nvd.nist.gov/vuln/detail/CVE-2026-66422), [CVE-2026-68525](https://nvd.nist.gov/vuln/detail/CVE-2026-68525), [CVE-2026-68569](https://nvd.nist.gov/vuln/detail/CVE-2026-68569), [CVE-2026-68763](https://nvd.nist.gov/vuln/detail/CVE-2026-68763))
+* Upgraded org.ow2.asm:asm and related libraries to version 9.11. (DSP-25365, [CVE-2026-110257](https://nvd.nist.gov/vuln/detail/CVE-2026-110257), [CVE-2026-110258](https://nvd.nist.gov/vuln/detail/CVE-2026-110258), [CVE-2026-110259](https://nvd.nist.gov/vuln/detail/CVE-2026-110259), [CVE-2026-110260](https://nvd.nist.gov/vuln/detail/CVE-2026-110260), [CVE-2026-110261](https://nvd.nist.gov/vuln/detail/CVE-2026-110261), [CVE-2026-110263](https://nvd.nist.gov/vuln/detail/CVE-2026-110263), [CVE-2026-110591](https://nvd.nist.gov/vuln/detail/CVE-2026-110591), [CVE-2026-110262](https://nvd.nist.gov/vuln/detail/CVE-2026-110262), [CVE-2026-110270](https://nvd.nist.gov/vuln/detail/CVE-2026-110270))
+* Upgraded compress-lzf to version 1.2.0. (DSP-25373, [CVE-2026-109395](https://nvd.nist.gov/vuln/detail/CVE-2026-109395))
+* Upgraded Tomcat to version 9.0.123. (DSP-25379, [CVE-2026-101296](https://nvd.nist.gov/vuln/detail/CVE-2026-101296), [CVE-2026-101356](https://nvd.nist.gov/vuln/detail/CVE-2026-101356), [CVE-2026-74048](https://nvd.nist.gov/vuln/detail/CVE-2026-74048), [CVE-2026-80353](https://nvd.nist.gov/vuln/detail/CVE-2026-80353), [CVE-2026-88041](https://nvd.nist.gov/vuln/detail/CVE-2026-88041), [CVE-2026-93446](https://nvd.nist.gov/vuln/detail/CVE-2026-93446))
+* Upgraded opentelemetry-java from 1.62.0 to 1.67.0. (DSP-25387, [CVE-2026-118259](https://nvd.nist.gov/vuln/detail/CVE-2026-118259))
+
 # Release notes for 6.8.66
 1 October 2026
 
