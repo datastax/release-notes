@@ -3,6 +3,32 @@ DSE 5.1.x is compatible with Apache Cassandra&trade; 3.11 and adds additional pr
 
 Release notes of versions prior to 5.1.20 can be found [here](https://docs.datastax.com/en/dse/5.1/dse-admin/datastax_enterprise/releaseNotes/RNdse.html).
 
+# Release notes for 5.1.52
+9 November 2026
+
+## Components versions for DSE 5.1.52
+ * Apache Solr™ 6.0.1.0.2990&ast;
+ * Apache Spark™ 2.0.2.44
+ * Apache TinkerPop™ 3.2.11-20260306-140b7dfc
+ * Apache Tomcat® 9.0.123&ast;
+ * DSE Java Driver 1.8.3-dse+20201217 (DSE *internal-only* version)
+ * Netty 4.0.54.1.dse
+ * Spark JobServer 0.6.2.243
+
+**NOTE**: above-listed DSE Java Driver is an _internal-version_ only.
+If you're developing applications, please refer to the [Java Driver documentation](https://docs.datastax.com/en/driver-matrix/doc/java-drivers.html) to choose an appropriate version.
+
+## 5.1.52 DSE Search
+* Fixed inconsistent data when performing SOLR range queries on string fields. (DSP-25233)
+
+## 5.1.52 DSE Security
+* Validate SSL certificates on hot reload and log warnings when invalid/expired certificates are found. (DSP-25237)
+* Fixed the hot reloading initialisation. (DSP-25360)
+
+## 5.1.52 DSE CVE
+* Fixed multiple CVEs found in tomcat. (DSP-25319, [CVE-2026-73581](https://nvd.nist.gov/vuln/detail/CVE-2026-73581), [CVE-2026-75973](https://nvd.nist.gov/vuln/detail/CVE-2026-75973), [CVE-2026-77756](https://nvd.nist.gov/vuln/detail/CVE-2026-77756), [CVE-2026-77762](https://nvd.nist.gov/vuln/detail/CVE-2026-77762), [CVE-2026-78383](https://nvd.nist.gov/vuln/detail/CVE-2026-78383), [CVE-2026-78437](https://nvd.nist.gov/vuln/detail/CVE-2026-78437), [CVE-2026-86350](https://nvd.nist.gov/vuln/detail/CVE-2026-86350), [CVE-2026-65182](https://nvd.nist.gov/vuln/detail/CVE-2026-65182), [CVE-2026-65183](https://nvd.nist.gov/vuln/detail/CVE-2026-65183), [CVE-2026-65637](https://nvd.nist.gov/vuln/detail/CVE-2026-65637), [CVE-2026-65905](https://nvd.nist.gov/vuln/detail/CVE-2026-65905), [CVE-2026-65927](https://nvd.nist.gov/vuln/detail/CVE-2026-65927), [CVE-2026-66422](https://nvd.nist.gov/vuln/detail/CVE-2026-66422), [CVE-2026-68525](https://nvd.nist.gov/vuln/detail/CVE-2026-68525), [CVE-2026-68569](https://nvd.nist.gov/vuln/detail/CVE-2026-68569), [CVE-2026-68763](https://nvd.nist.gov/vuln/detail/CVE-2026-68763))
+* Upgraded Tomcat to version 9.0.123. (DSP-25379, [CVE-2026-101296](https://nvd.nist.gov/vuln/detail/CVE-2026-101296), [CVE-2026-101356](https://nvd.nist.gov/vuln/detail/CVE-2026-101356), [CVE-2026-74048](https://nvd.nist.gov/vuln/detail/CVE-2026-74048), [CVE-2026-80353](https://nvd.nist.gov/vuln/detail/CVE-2026-80353), [CVE-2026-88041](https://nvd.nist.gov/vuln/detail/CVE-2026-88041), [CVE-2026-93446](https://nvd.nist.gov/vuln/detail/CVE-2026-93446))
+
 # Release notes for 5.1.51
 27 July 2026
 
