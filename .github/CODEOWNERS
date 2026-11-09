@@ -5,8 +5,8 @@
 ##############################################################
 
 # DataStax Enterprise
-DSE_*.md @annieden @brian-r-fisher
-3rd-party-software/DSE_*.md @annieden @brian-r-fisher
+DSE_*.md @drchung5 @brian-r-fisher
+3rd-party-software/DSE_*.md @drchung5 @brian-r-fisher
 
 # DataStax OpsCenter
-OpsCenter_*.md @annieden @brian-r-fisher
+OpsCenter_*.md @drchung5 @brian-r-fisher
